@@ -1,0 +1,11 @@
+node_modules/
+dist/
+scripts/
+.env
+.claude
+.cursor
+.vscode
+TODO.md
+*.txt
+public/
+src/data/
