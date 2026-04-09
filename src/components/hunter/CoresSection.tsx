@@ -1,10 +1,18 @@
 import { useState } from 'preact/hooks'
 import coresData from '../../data/cores/cores.json'
 import { CORE_SLOTS } from './constants'
-import type { Core, CoreBuild, CoreStats } from './types'
 import { StatsPanel } from './EquipmentSection'
+import type { Core, CoreBuild, CoreStats } from './types'
 
-export function CoresSection({ coreBuild, coreStats, showDetails = true }: { coreBuild?: CoreBuild; coreStats?: CoreStats; showDetails?: boolean }) {
+export function CoresSection({
+	coreBuild,
+	coreStats,
+	showDetails = true,
+}: {
+	coreBuild?: CoreBuild
+	coreStats?: CoreStats
+	showDetails?: boolean
+}) {
 	const [slots, setSlots] = useState<Record<'mind' | 'body' | 'spirit', string | null>>({
 		mind: coreBuild?.mind ?? null,
 		body: coreBuild?.body ?? null,
@@ -92,14 +100,18 @@ export function CoresSection({ coreBuild, coreStats, showDetails = true }: { cor
 										src={selected.icon}
 										alt={selected.name}
 										class='w-12 h-12 rounded-lg object-cover flex-shrink-0 bg-zinc-700/40'
-										onError={(e) => { ;(e.target as HTMLImageElement).style.display = 'none' }}
+										onError={(e) => {
+											;(e.target as HTMLImageElement).style.display = 'none'
+										}}
 									/>
 								) : isFreeChoice ? (
 									<img
 										src='/assets/cores/Core_Set.png'
 										alt='Au choix'
 										class='w-12 h-12 rounded-lg object-cover flex-shrink-0 bg-zinc-700/40'
-										onError={(e) => { ;(e.target as HTMLImageElement).style.display = 'none' }}
+										onError={(e) => {
+											;(e.target as HTMLImageElement).style.display = 'none'
+										}}
 									/>
 								) : (
 									<div class='w-12 h-12 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-lg flex-shrink-0'>
@@ -110,7 +122,9 @@ export function CoresSection({ coreBuild, coreStats, showDetails = true }: { cor
 									<p class='text-[10px] text-zinc-500 uppercase tracking-wider leading-none mb-0.5'>
 										{emoji} {label}
 									</p>
-									<p class={`text-sm truncate ${selected ? 'text-zinc-100 font-medium' : isFreeChoice ? 'text-zinc-400 italic' : 'text-zinc-500'}`}>
+									<p
+										class={`text-sm truncate ${selected ? 'text-zinc-100 font-medium' : isFreeChoice ? 'text-zinc-400 italic' : 'text-zinc-500'}`}
+									>
 										{selected ? selected.name : isFreeChoice ? 'Au choix' : '—'}
 									</p>
 								</div>
@@ -118,7 +132,10 @@ export function CoresSection({ coreBuild, coreStats, showDetails = true }: { cor
 									<button
 										type='button'
 										tabIndex={0}
-										onClick={(e) => { e.stopPropagation(); selectCore(key, null) }}
+										onClick={(e) => {
+											e.stopPropagation()
+											selectCore(key, null)
+										}}
 										class='text-zinc-500 hover:text-red-400 transition-colors text-lg leading-none flex-shrink-0 cursor-pointer'
 										aria-label='Vider le slot'
 									>
@@ -151,7 +168,9 @@ export function CoresSection({ coreBuild, coreStats, showDetails = true }: { cor
 												src={core.icon}
 												alt={core.name}
 												class='w-8 h-8 rounded-lg object-cover flex-shrink-0 bg-zinc-700/40'
-												onError={(e) => { ;(e.target as HTMLImageElement).style.display = 'none' }}
+												onError={(e) => {
+													;(e.target as HTMLImageElement).style.display = 'none'
+												}}
 											/>
 											<span class='text-sm text-zinc-200 text-left'>{core.name}</span>
 										</button>

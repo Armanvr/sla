@@ -1,49 +1,107 @@
 # SLA Guide
 
-Guide statique pour **Solo Leveling: ARISE** — stats, compétences, équipements, cores et builds recommandés pour chaque chasseur.
+An interactive guide for **Solo Leveling: ARISE** — stats, skills, equipment, cores, weapons, and team guides by element.
+This project has no affiliation with Netmarble Corporation or its affiliates.
 
-## Stack technique
+## Tech Stack
 
-| Domaine | Technologie |
-|---------|-------------|
+| Area | Technology |
+|------|------------|
 | UI | [Preact](https://preactjs.com/) |
-| Langage | TypeScript |
+| Language | TypeScript |
 | Bundler | [Vite](https://vite.dev/) (via rolldown-vite) |
 | CSS | [Tailwind CSS v4](https://tailwindcss.com/) |
 | Linter / Formatter | [Biome](https://biomejs.dev/) |
 
-## Structure du projet
+## Project Structure
 
 ```
 src/
-├── main.tsx                   # Point d'entrée Preact
-├── app.tsx                    # État de navigation (accueil / profil chasseur)
-├── index.css                  # Import Tailwind
+├── main.tsx                          # Preact entry point
+├── app.tsx                           # SPA router (home / profile / team guides)
+├── index.css                         # Tailwind import
 ├── pages/
-│   └── HomePage.tsx           # Grille de chasseurs, sections Team & Workshop
+│   ├── HomePage.tsx                  # Hunter grid, navigation to Team Guides
+│   ├── TeamGuideDungeons.tsx         # Team Guide — Dungeons
+│   ├── TeamGuidePowerDestruction.tsx # Team Guide — Power & Destruction
+│   └── TeamGuideGuildBoss.tsx        # Team Guide — Guild Boss
 ├── components/
-│   └── HunterProfile.tsx      # Profil détaillé d'un chasseur
+│   ├── HunterProfile.tsx             # Detailed hunter profile
+│   └── hunter/
+│       ├── HeroSection.tsx           # Header (image, stats, elements)
+│       ├── EquipmentSection.tsx      # Interactive armor & jewelry slots
+│       ├── CoresSection.tsx          # Mind / Body / Spirit slots
+│       └── types.ts                  # Shared types (Build, CoreBuild, HunterData…)
 └── data/
-    ├── sung-jinwoo.json       # Données par chasseur
-    ├── alicia-blanche.json
-    ├── christopher-reed.json
-    ├── artifacts.json          # Sets d'artefacts (armure, bijoux, complets)
-    └── cores.json              # Cores (Mind, Body, Spirit)
+    ├── hunters/                      # 49 JSON files — one per hunter
+    ├── shadows/                      # 14 JSON files — Sung Jinwoo's shadows
+    ├── artifacts/
+    │   └── artifacts.json            # Artifact sets (armor, jewelry, full sets)
+    ├── cores/
+    │   └── cores.json                # Cores (Mind, Body, Spirit)
+    └── teams/
+        ├── power-destruction.json    # Team compositions by element (P&D)
+        └── guild-boss.json           # Team compositions by element (Guild Boss)
 
-public/assets/                  # Images (chasseurs, artefacts, cores, armes)
-scripts/                        # Scripts Python de téléchargement d'assets depuis le wiki Fandom
+public/assets/
+├── hunters/                          # Portraits and renders
+│   └── _icons/                       # Hunter profile icons
+├── shadows/                          # Shadow images
+├── artifacts/                        # Artifact set icons
+├── cores/                            # Core icons
+└── weapons/                          # 120+ weapon icons + manifest.json
+
 ```
 
-## Fonctionnalités
+## Features
 
-- **Hunter Guides** — Stats de base, compétences (basic / core / skill / support / QTE / ultimate), passif, avancements et costumes.
-- **Équipements** — Slots armure et bijoux interactifs, calcul des bonus de set, presets de build par chasseur.
-- **Cores** — Slots Mind / Body / Spirit avec effet légendaire, build recommandé et réinitialisation.
-- **Team Guides** / **Workshop Guides** — Sections prévues (coming soon).
+### Hunter Guides
+- Base stats, elements, and rarity
+- Skills (Basic / Core / Skill / Support / QTE / Ultimate) with descriptions and icons
+- Passives, advancements, and costumes
+- Equipment builds by level (armor + jewelry presets)
+- Recommended core build (Mind / Body / Spirit)
+
+### Team Guides — Dungeons
+- Fixed Sung Jinwoo slot with Equipment and Core builds
+- **Weapons section** — 2 weapon selection slots with search (120+ weapons)
+- 3 interactive hunter slots (dropdown with mini-loadout)
+- 3 interactive shadow slots
+
+### Team Guides — Power & Destruction
+- Tabs by element (Wind / Water / Fire / Light / Dark)
+  - Wind team: fixed composition from JSON data
+  - Other elements: **random team generation** on click (hunters + shadows)
+- Sung Jinwoo slot with **Weapons section** (2 slots), Equipment and Cores
+- 3 hunter slots and 3 shadow slots, all editable
+
+### Team Guides — Guild Boss
+- Element tabs with same Wind active / others random logic
+- Sung Jinwoo slot with **Weapons section** (2 slots), Equipment and Cores
+- 6 hunter slots with roles (Striker × 2, Breaker, Elemental Stacker, Supporter × 2)
+
+### Weapon Selector
+- Searchable dropdown (search by name)
+- 120+ weapons with icons from local assets
+- Resets on element change
+
+## Roadmap
+
+- [ ] **Techniques & Runes** section in all Team Guides
+- [ ] Water / Fire / Light / Dark Team Guides with finalized compositions
+- [ ] **Damage score** calculation per team composition
+- [ ] Build comparison (A vs B) per hunter
+- [ ] **Filters** on the home grid (by element, rarity, role)
+- [ ] **Favorites** / saved teams in localStorage
+- [ ] **Workshop Guides** pages (Interlude, Special Dungeon…)
+- [ ] Multilingual support (EN / KR)
+- [ ] Detailed **shadow** pages (skills, shadow authority, ranks)
+- [ ] Detailed **weapon** pages (stats, passive effects, recommendations)
+- [ ] Dynamic tier list by game mode
 
 ## Installation
 
-**Prérequis** : Node.js (LTS recommandé) et npm.
+**Prerequisites**: Node.js (LTS recommended) and npm.
 
 ```bash
 npm install
@@ -51,26 +109,13 @@ npm install
 
 ## Scripts
 
-| Commande | Description |
-|----------|-------------|
-| `npm run dev` | Serveur de développement Vite |
-| `npm run build` | Compilation TypeScript + build de production |
-| `npm run preview` | Prévisualisation du build de production |
-| `npm run lint` | Vérification du code avec Biome |
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Vite development server |
+| `npm run build` | TypeScript check + production build |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Code linting with Biome |
 
-## Téléchargement des assets (optionnel)
+## Deployment
 
-Les images et métadonnées proviennent du [wiki Fandom Solo Leveling: ARISE](https://solo-leveling-arise.fandom.com). Des scripts Python (nécessitant `requests`) permettent de les régénérer :
-
-```bash
-python scripts/download_assets.py      # Portraits de chasseurs
-python scripts/download_artifacts.py   # Artefacts
-python scripts/download_cores.py       # Cores
-python scripts/download_weapons.py     # Armes
-```
-
-Ces scripts respectent un rate-limit de 0.5s entre chaque appel à l'API MediaWiki.
-
-## Déploiement
-
-Le dossier `dist/` généré par `npm run build` est un site statique déployable sur n'importe quel hébergeur (Netlify, Vercel, GitHub Pages, S3, etc.).
+The `dist/` folder generated by `npm run build` is a static site deployable on any host (Netlify, Vercel, GitHub Pages, S3, etc.).

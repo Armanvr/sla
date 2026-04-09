@@ -45,16 +45,6 @@ export interface Passive {
 	icon?: string | null
 }
 
-export interface Costume {
-	name: string
-	rarity: string
-	default?: boolean
-	chromas?: number
-	image?: string | null
-	fullBody?: string | null
-	free?: boolean
-}
-
 export interface ArtifactSet {
 	id: string
 	name: string
@@ -124,7 +114,8 @@ export interface HunterData {
 	mainAbility?: string
 	exclusiveWeapon?: string
 	releaseDate?: string
-	relatives: Relative[]
+	relatives?: Relative[]
+	weapon?: { name: string; icon: string }
 	stats: Stat[]
 	baseStats?: {
 		level1: BaseStats
@@ -142,7 +133,6 @@ export interface HunterData {
 	}
 	passive?: Passive
 	advancements?: string[]
-	costumes?: Costume[]
 	builds?: Build[]
 	coreBuild?: CoreBuild
 	equipmentStats?: EquipmentStats

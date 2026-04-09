@@ -1,0 +1,230 @@
+{
+	"name": "Woo Jinchul",
+	"category": "Breaker",
+	"alias": null,
+	"title": "Chief Inspector of the Korean Hunters Association Surveillance Team",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Wind",
+	"class": "Tank",
+	"country": "Korea",
+	"guild": "Hunters Association",
+	"mainAbility": "Outstanding physical ability / Unarmed Fighting (Boxing)",
+	"exclusiveWeapon": "Another Level",
+	"releaseDate": "2024-03-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["Hunters Association"],
+	"gender": "Male",
+	"age": 30,
+	"species": "Human",
+	"image": "/assets/hunters/Woo_Jinchul.png",
+	"icon": "/assets/hunters/_icons/Woo_Jinchul_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1487,
+			"attack": 778,
+			"defense": 876,
+			"totalPower": 3983
+		},
+		"maxLevel": {
+			"hp": 10351,
+			"attack": 5009,
+			"defense": 5640,
+			"totalPower": 43391
+		},
+		"primaryStat": "Defense"
+	},
+	"elements": [
+		{
+			"name": "Wind",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Fist of Justice",
+				"description": "Jinchul attacks by mixing jabs and hooks. Deals Wind elemental damage. Deals weak Break damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "200–300% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "204–306% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "209–313.5% DEF"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Suppress",
+				"description": "Jinchul charges and throws a straight right hand punch. Deals Wind elemental damage. Deals weak Break damage. Super Armor applied during use. When this skill hits, inflicts Stun effect on the target (Cooldown: 20 seconds, Duration: 3 seconds).",
+				"damage": "534–356% DEF",
+				"element": "Wind",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Meditation of Power",
+				"description": "While ducking, Jinchul quickly approaches the enemy and throws a two-handed hook. After, he backs away with a quick backstep. Deals Wind elemental damage. Deals weak Break damage. Grants Super Armor. Usable up to 2 times. When first hit lands, decreases cooldown of Iron Fist by 3 seconds. When used, grants Shield equal to 2% of Woo Jinchul's Defense to team members for 20 seconds (stacks up to 3 times).",
+				"damage": "366–549% DEF",
+				"cooldown": 8,
+				"mpCost": "60–79",
+				"effects": ["Super Armor", "Shield (2% DEF, 20s, stacks 3x)", "Iron Fist Cooldown -3s"],
+				"icon": ""
+			},
+			{
+				"name": "Iron Fist",
+				"description": "After performing a double jab with his left hand, he throws a powerful hook with his right hand. Deals Wind elemental damage. Deals medium Break damage. When used, charges Dash 1 time. Super Armor applied.",
+				"damage": "1240–1860% DEF",
+				"cooldown": 12,
+				"mpCost": "160–211",
+				"effects": ["Medium Break", "Super Armor", "Dash Charge +1"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Justice Enforcement",
+				"description": "After landing a quick two-handed hook, he throws a powerful straight punch. Deals Wind elemental damage. Deals medium Break damage. When used, increases max number of Dash instances by 2 and charges for 20 seconds.",
+				"damage": "843–1732.83% DEF",
+				"cooldown": 25,
+				"effects": ["Medium Break", "Dash Max +2 (20s)"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Judgement",
+				"description": "Jinchul approaches the enemy with a lightning-like weaving and performs a powerful uppercut. Deals Wind elemental damage. Deals medium Break damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind.",
+				"damage": "840–1260% DEF",
+				"cooldown": 20,
+				"effects": ["Medium Break"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Energy Field",
+				"description": "Jinchul performs an uppercut with all his heart. Deals Wind elemental damage.",
+				"damage": "3028–4542% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": [],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Dash Enhancement",
+		"description": "When the user uses Dash, increases the damage of Suppress, Meditation of Power, and Iron Fist by 30% for 6 seconds and grants them Super Armor. Decreases the cooldown of Dash by 1 second.",
+		"icon": null
+	},
+	"advancements": [
+		"Meditation of Power Skill Effect Change: Increases Break effect and damage by 100%. Can be used up to 3 times.",
+		"The user's Defense Penetration increases by 10%.",
+		"When the user uses Dash, Extreme Evasion, or Judgement, it decreases the cooldown of Meditation of Power and Iron Fist by 2 seconds and activates the user's Core Attack. When Judgement is used, it activates Basic Passive and enhances the effect: damage increase enhances to 35%; duration increases to 7 seconds.",
+		"The user's Wind damage increases by 16%.",
+		"When the user uses their Basic Attack 4 times, it activates their Tier 3 Passive. When Meditation of Power is used, increases Defense by 5% (stacking up to 12 times)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Damage Increase", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Additional Defense", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Additional Defense"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Wind Damage (%)",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Another Level",
+		"icon": "/assets/weapons/woo-jinchul/Another_Level_Icon.png"
+	}
+}

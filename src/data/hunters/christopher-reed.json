@@ -1,0 +1,204 @@
+{
+	"name": "Christopher Reed",
+	"category": "Elemental Stacker",
+	"alias": null,
+	"title": "The Arrogant Strategist",
+	"rarity": "SSR",
+	"rank": "National Level",
+	"element": "Fire",
+	"class": "Fighter",
+	"country": "USA",
+	"guild": "Federal Bureau of Hunters",
+	"mainAbility": "Body Enhancement, Telekinesis, Golden Flames",
+	"exclusiveWeapon": "Strategy for Victory",
+	"releaseDate": "2025-12-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["Federal Bureau of Hunters"],
+	"gender": "Male",
+	"age": 38,
+	"species": "Human",
+	"image": "/assets/hunters/Christopher_Reed.png",
+	"icon": "/assets/hunters/_icons/Christopher_Reed_Icon.png",
+	"stats": [],
+	"baseStats": {
+		"level1": {
+			"hp": 1518,
+			"attack": 800,
+			"defense": 838,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 12692,
+			"attack": 6161,
+			"defense": 6457,
+			"totalPower": 52582
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Fire",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Rising Star",
+				"description": "Multiple punches finished with a kick. Applies Fire Elemental Accumulation and inflicts Airborne.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "187–280.5% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "240–360% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "300–450% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Christopher_Reed/Hunter_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Offensive Pass",
+				"description": "Gathers mana and fires a magic bullet. Applies Fire Elemental Accumulation and grants Super Armor.",
+				"damage": "1047–1570.5% ATK",
+				"element": "Fire",
+				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Nitro Kick",
+				"description": "Knee kick into spinning aerial slam kick. Applies medium Fire Elemental Accumulation. First hit inflicts Airborne, final hit inflicts Knockdown. Grants Super Armor.",
+				"damage": "2720–4080% ATK",
+				"cooldown": 15,
+				"mpCost": "75–99",
+				"effects": ["Airborne", "Knockdown", "Super Armor", "Elemental Accumulation"],
+				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Skill_1.png"
+			},
+			{
+				"name": "Foul Play",
+				"description": "Hurls a large magic sphere. Applies medium Fire Elemental Accumulation. Final hit inflicts Airborne. Grants Super Armor.",
+				"damage": "3364–5046% ATK",
+				"cooldown": 18,
+				"mpCost": "100–132",
+				"effects": ["Airborne", "Super Armor", "Elemental Accumulation"],
+				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Rapid Kick",
+				"description": "Spinning aerial slam kick. Applies heavy Fire Elemental Accumulation. First hit inflicts Airborne, final hit inflicts Knockdown.",
+				"damage": "630–1295% ATK",
+				"cooldown": 25,
+				"effects": ["Airborne", "Knockdown", "Elemental Accumulation"],
+				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Rising Performance",
+				"description": "Leaps into the air and strikes downward with elbow. Applies weak Fire Elemental Accumulation and inflicts Airborne. Triggers on Extreme Evasion, Core Attack, Ultimate, Stun/Blind, or Shadow Skill.",
+				"damage": "2290–3435% ATK",
+				"cooldown": 20,
+				"effects": ["Airborne", "Elemental Accumulation"],
+				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Zero to a Hundred",
+				"description": "Hurls a massive meteor-like concentrated ball of magic. Applies heavy Fire Elemental Accumulation. First hit inflicts Airborne, final hit inflicts Knockdown.",
+				"damage": "4610–6915% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne", "Knockdown", "Elemental Accumulation"],
+				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Spiritual Body Manifestation",
+		"description": "Charged by Rising Star, Offensive Pass, Nitro Kick, Foul Play. At 100%, Special Core Attack activates automatically: Enhanced Basic Attack, Core Attack and Basic Skill. All cooldowns reset, Fire Elemental Accumulation +25%, Damage increase +150%. Duration: 30s (removed upon using Zero to a Hundred). Also inflicts Burn (200% DEF damage every 3s, 10s) via Rising Performance, Rapid Kick, and Zero to a Hundred.",
+		"icon": null
+	},
+	"advancements": [
+		"If Fire Elemental Accumulation Immunity is active, hits charge Spiritual Body Manifestation Gauge (CD: 15s). Fire team members' Basic/Ultimate skills charge the gauge. Finishing Catch damage +25% vs Burn targets.",
+		"Fire Elemental Accumulation effect +20%.",
+		"Spiritual Body Manifestation activation recovers 30% HP and grants Shield (100% DEF, 20s). Hitting Burn targets grants Competitive Spirit (CD: 2s): Fire damage +165%, Finishing Catch damage +15%, 15s.",
+		"+5% Fire damage per Fire ally in party (all Fire team members).",
+		"Fire Overload triggers recover 20% Power Gauge and reset Zero to a Hundred CD (CD: 30s). Hitting Fire Overload targets inflicts Blazing Shock (Fire Overload damage taken +20%, Unrecoverable, 30s). Spiritual Body Manifestation activates Victor's Spirit (Zero to a Hundred damage +250%, 60s)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"],
+			"jewelry": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-curse", "burning-curse", "burning-curse", "burning-curse"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Fire Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Strategy for Victory",
+		"icon": "/assets/weapons/christopher-reed/Strategy_for_Victory_Icon.png"
+	}
+}

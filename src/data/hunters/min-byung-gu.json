@@ -1,0 +1,238 @@
+{
+	"name": "Min Byung-Gu",
+	"category": "Supporter",
+	"alias": null,
+	"title": "",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Light",
+	"class": "Healer",
+	"country": "Korea",
+	"guild": "Hunters Association",
+	"mainAbility": "Healing & Enchantment Magic / Disguise",
+	"exclusiveWeapon": "Eternal Slumber",
+	"releaseDate": "2024-03-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["Hunters Association"],
+	"gender": "Male",
+	"age": 28,
+	"species": "Human",
+	"image": "/assets/hunters/Min_Byung-Gu.png",
+	"icon": "/assets/hunters/_icons/Min_Byung-Gu_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1734,
+			"attack": 761,
+			"defense": 767,
+			"totalPower": 3979
+		},
+		"maxLevel": {
+			"hp": 12069,
+			"attack": 4903,
+			"defense": 4937,
+			"totalPower": 43520
+		},
+		"primaryStat": "HP"
+	},
+	"elements": [
+		{
+			"name": "Light",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Judgment of Light",
+				"description": "Byung-Gu attacks the enemy by swinging his mace powerfully. Deals Light elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "53–79.5% Max HP"
+					},
+					{
+						"stage": 2,
+						"damage": "55–82.5% Max HP"
+					},
+					{
+						"stage": 3,
+						"damage": "57–85.5% Max HP"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Holy Mace",
+				"description": "Byung-Gu attacks the enemy by powerfully striking down with his mace. Deals Light elemental damage. Knocks Down the target. When Disguised, the user's damage is increased by 50%.",
+				"damage": "172–258% Max HP",
+				"element": "Light",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Light's Glimmer",
+				"description": "Byung-Gu attacks the enemy and recovers allies' HP by unlocking the power of light. Deals Light elemental damage. Knocks Down the target. Applies [Light's Glimmer]: entire team recovers HP equal to 0.5% of Min Byung-Gu's Max HP every second (10 seconds). When Disguised, Recovery Rate increases by 100%.",
+				"damage": "203–304.5% Max HP",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": ["Knock Down", "Light's Glimmer (HP Recovery 0.5% per sec, 10s)"],
+				"icon": ""
+			},
+			{
+				"name": "Conviction of Light",
+				"description": "The summoned divination circle of light moves forward slowly and attacks the enemy. Deals Light elemental damage. Applies [Punishment] effect: enemy's damage taken increases by 5% (20 seconds). When Disguised, the Punishment effect increases to 15%.",
+				"damage": "333–499.5% Max HP",
+				"cooldown": 12,
+				"mpCost": "200–264",
+				"effects": ["Punishment (Damage Taken +5%, 20s)"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Judgment of Righteousness",
+				"description": "Byung-Gu attacks the enemy by creating a divination circle with his mace, and grants additional effects to allies. Deals Light elemental damage. Knocks Down the target. Applies [Light's Glimmer] and [Punishment] effects. [Heavenly Voice]: entire team recovers HP equal to 1.2% of Min Byung-Gu's Max HP every second (10 seconds). [Song of the Battlefield]: increases damage taken by 18% (20 seconds).",
+				"damage": "76–156.22% Max HP",
+				"cooldown": 25,
+				"effects": ["Knock Down", "Light's Glimmer", "Punishment", "Heavenly Voice", "Song of the Battlefield"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Divine Punishment",
+				"description": "Byung-Gu attacks the enemy with multiple flashes and divination circles. Deals Light elemental damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind. Recharges Power Gauge by 50%.",
+				"damage": "220–330% Max HP",
+				"cooldown": 20,
+				"effects": ["Power Gauge +50%"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Heavenly Blessing",
+				"description": "Byung-Gu attacks the enemy by creating a large divination circle of light, and grants additional effects to allies. Deals Light elemental damage. Applies [Heavenly Blessing] to entire team: damage dealt and Critical Hit Rate increase by 12% (12 seconds). When Disguised, applies [Critical Hit Damage Increase]: team's Critical Hit damage increases equal to 40% of the amount exceeding Min Byung-Gu's basic Critical Hit damage (12 seconds).",
+				"damage": "284–426% Max HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": [
+					"Heavenly Blessing (Damage +12%, Crit Rate +12%, 12s)",
+					"Critical Hit Damage Increase (when Disguised)"
+				],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Disguise",
+		"description": "When tagging in or using Divine Punishment, applies the [Disguise] effect. [Disguise]: Decreases damage taken by 50%; Enhances specific skills' effects; When hit, removes [Disguise]. Duration: 10 seconds.",
+		"icon": null
+	},
+	"advancements": [
+		"All team members' Critical Hit Rate and Critical Hit damage increase by 12%.",
+		"The user's HP increases by 8%.",
+		"When Light's Glimmer is used, the entire team instantly recovers HP equal to 2% of Min Byung-Gu's Max HP.",
+		"Byung-Gu's Power Gauge Acquisition Rate increases by 10%.",
+		"When the user uses Heavenly Blessing, increases the damage of the next Ultimate Skill of the team member with the highest Total Power by 50%."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120 (A)",
+			"armor": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"],
+			"jewelry": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"]
+		},
+		{
+			"name": "Build Niv. 120 (B)",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"],
+			"jewelry": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Additional HP", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Additional HP"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Defense Penetration", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Light Damage (%)",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Eternal Slumber",
+		"icon": "/assets/weapons/min-byung-gu/Eternal_Slumber_Icon.png"
+	}
+}

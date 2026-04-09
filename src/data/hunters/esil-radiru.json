@@ -1,0 +1,230 @@
+{
+	"name": "Esil Radiru",
+	"category": "Breaker",
+	"alias": null,
+	"title": "",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Fire",
+	"class": "Ranger",
+	"country": "Demon Realm",
+	"guild": "Ahjin Guild",
+	"mainAbility": "Outstanding Spearmanship / Mana Spear Creation",
+	"exclusiveWeapon": "Glorious Demise",
+	"releaseDate": "2025-01-16",
+	"occupation": ["Hunter"],
+	"affiliation": ["Ahjin Guild"],
+	"gender": "Female",
+	"age": 205,
+	"species": "Demon",
+	"image": "/assets/hunters/Esil_Radiru.png",
+	"icon": "/assets/hunters/_icons/Esil_Radiru_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1493,
+			"attack": 877,
+			"defense": 774,
+			"totalPower": 3983
+		},
+		"maxLevel": {
+			"hp": 13321,
+			"attack": 7196,
+			"defense": 6355,
+			"totalPower": 55529
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Fire",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Radiru Spearmanship",
+				"description": "Esil swings her double-edged sword dealing Fire elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "216–324% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "225–337.5% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "237–355.5% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Esil_Radiru/Hunter_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Stabbing Spikes",
+				"description": "Esil quickly leaps and then strikes down towards enemies on the ground, manifesting spikes beneath them. Knocks down targets on hit.",
+				"damage": "1200–1800% ATK",
+				"element": "Fire",
+				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Glorious Wounds",
+				"description": "Esil jumps towards the target, strikes quickly, and then hurls them upward. Applies Airborne. User gains Super Armor.",
+				"damage": "1378–2067% ATK",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": ["Airborne", "Super Armor"],
+				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Skill_1.png"
+			},
+			{
+				"name": "Death's Rush",
+				"description": "After jumping and using a single slash to throw the enemy upward, Esil endows her spear with Lance power and rockets forward to quickly stab the enemy again. Applies Airborne. User gains Super Armor.",
+				"damage": "2298–3447% ATK",
+				"cooldown": 14,
+				"mpCost": "250–330",
+				"effects": ["Airborne", "Super Armor"],
+				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Support Fire",
+				"description": "Esil manifests supporting fire from her Demons' Castle allies. Activates Prey effect. Increases subsequent Radiru Family Longbow damage by 24%.",
+				"damage": "953–1958.94% ATK",
+				"cooldown": 25,
+				"effects": ["Prey"],
+				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Cascading Glory",
+				"description": "After unleashing a barrage of manifested weapons, Esil jumps between them and stabs downward. Triggers via Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Knocks down targets.",
+				"damage": "1173–1759.5% ATK",
+				"cooldown": 20,
+				"effects": ["Knock Down"],
+				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Foretold Victory",
+				"description": "A barrage of arrows from the Demons' Castle rains down on the heads of her enemies, firing for 10 seconds.",
+				"damage": "3920–5880% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": [],
+				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Lance Throw",
+		"description": "Extends Break state duration by 3s. Activates Lance Throw via Death's Rush or Extreme Evasion: deals 800% ATK, applies Prey (max 5 stacks). Enhanced Lance Throw increases damage and Break effectiveness by 160% per stack (up to 5). Prey converts to Prey on the Weak on Break: +0.3% Fire and general damage taken per stack (max 50 stacks, 60s).",
+		"icon": null
+	},
+	"advancements": [
+		"During Foretold Victory, Lance Throw damage increases 100%; inflicts Prey twice (max 10 stacks).",
+		"All team members gain 3% Attack per Fire ally (stacks up to 3).",
+		"Battle starts with full Power Gauge. Lance Throw hits charge gauge 1% and reduce Foretold Victory cooldown 1s. Instant Break on enemies below 10% Break Gauge.",
+		"Defense Penetration increases 4% per Fire team member (stacks to 3).",
+		"Death's Rush triggers enhanced Lance Throw once additionally. Triggers Prey on the Weak instead within 10s of Break state. Extends Prey on the Weak to 90s (stacks to 100)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "ferocious-protectors-claw"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Fire Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Radiru Clan's Double-edged Spear",
+		"icon": "/assets/weapons/esil-radiru/Radiru_Clan's_Double-edged_Spear_Icon.png"
+	}
+}

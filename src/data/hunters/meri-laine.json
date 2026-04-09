@@ -1,0 +1,230 @@
+{
+	"name": "Meri Laine",
+	"category": "Elemental Stacker",
+	"alias": "Milliana Shelley",
+	"title": "Meri Laine",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Water",
+	"class": "Elemental Stacker",
+	"country": "Germany",
+	"guild": "Richter Guild",
+	"mainAbility": "Outstanding physical ability / Ice Magic",
+	"exclusiveWeapon": "Winterbreaker",
+	"releaseDate": "2026-02-12",
+	"occupation": ["Hunter"],
+	"affiliation": ["Richter Guild"],
+	"gender": "Female",
+	"age": 18,
+	"species": "Human",
+	"image": "/assets/hunters/Meri_Laine.png",
+	"icon": "/assets/hunters/_icons/Meri_Laine_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1675,
+			"attack": 784,
+			"defense": 774,
+			"totalPower": 3980
+		},
+		"maxLevel": {
+			"hp": 14947,
+			"attack": 6436,
+			"defense": 6357,
+			"totalPower": 55669
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Water",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Shredding Up",
+				"description": "After slashing enemies multiple times, Meri jumps and performs a powerful downward strike.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "238-357% of Max HP"
+					},
+					{
+						"stage": 2,
+						"damage": "248-372% of Max HP"
+					},
+					{
+						"stage": 3,
+						"damage": "258-387% of Max HP"
+					}
+				],
+				"icon": "/assets/hunters/Meri_Laine/Meri_Laine_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Ascending Slam",
+				"description": "Meri leaps lightly forward to slash enemies in front with precision.",
+				"damage": "967-1450.5% of Max HP",
+				"element": "Water",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Grinding Rush",
+				"description": "Meri quickly charges forward, then performs an upward slash in an instant.",
+				"damage": "1648-2472% of Max HP",
+				"cooldown": 15,
+				"mpCost": "150-198",
+				"effects": ["Medium Elemental Accumulation", "Airborne on final hit"],
+				"icon": ""
+			},
+			{
+				"name": "Blade Sweep",
+				"description": "Meri spins to strike nearby enemies.",
+				"damage": "2262-3393% of Max HP",
+				"cooldown": 15,
+				"mpCost": "150-198",
+				"effects": ["Medium Elemental Accumulation"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Cyclone Spin",
+				"description": "Meri spins multiple times to strike nearby enemies.",
+				"damage": "1080-2220% of Max HP",
+				"cooldown": 25,
+				"effects": ["Heavy Elemental Accumulation"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Aerial Cutter",
+				"description": "Meri performs a forward aerial spin, slashing enemies multiple times.",
+				"damage": "916-1374% of Max HP",
+				"cooldown": 20,
+				"effects": ["Medium Elemental Accumulation", "Knocks Down"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Frozen Drive",
+				"description": "Meri spins her ice saw's blade at extremely high speed, summoning a blizzard and cutting down enemies with devastating force.",
+				"damage": "4884-7326% of Max HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Heavy Elemental Accumulation", "Airborne", "Freeze"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Pengqueen",
+		"description": "[Pengqueen Normal Mode] activates at the start of the stage. The user's Power Gauge cannot be charged, but if the [Pengqueen Booster] Gauge reaches 100%, their Power Gauge charges 100%, and the cooldown of Frozen Drive is reset. When Grinding Rush hits, it inflicts 1 instance of [Winter Chill] on a target. When Ascending Slam hits a target affected by [Winter Chill], it activates [Memories of Winter].",
+		"icon": null
+	},
+	"advancements": [
+		"When Grinding Rush hits, it changes to inflict 2 [Winter Chill] instances on the target. Each time Blade Sweep or Raging Sweep hits a target inflicted with [Winter Chill], it activates [Freezing Blood]. Significantly increases Blade Sweep and Raging Sweep Attack Speed. Increases Raging Sweep hit count by 25%.",
+		"Increases Water Elemental Accumulation effect by 20%.",
+		"The [Memories of Winter] effect is enhanced. Using Frozen Drive activates the [Pengqueen Ice Cream] effect.",
+		"For every Water ally in the party, Water team members' Defense Penetration increases by 5%.",
+		"The [Pengqueen Booster Mode] and [Freezing Blood] effects are enhanced. When Raging Sweep hits, it inflicts 3 [Winter Chill] instances on the target."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"],
+			"jewelry": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-curse", "burning-curse", "burning-curse", "burning-curse"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Winterbreaker",
+		"icon": "/assets/weapons/meri-laine/Winterbreaker_Icon.png"
+	}
+}

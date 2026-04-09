@@ -1,0 +1,240 @@
+{
+	"name": "Fern",
+	"category": "Striker",
+	"alias": null,
+	"title": null,
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Fire",
+	"class": "Striker",
+	"country": null,
+	"guild": "Journey Companions",
+	"mainAbility": "Demon-killing Magic (Zoltraak)",
+	"exclusiveWeapon": "Fern's Staff",
+	"releaseDate": "2025-10-23",
+	"occupation": ["Mage"],
+	"affiliation": ["Journey Companions"],
+	"gender": "Female",
+	"age": null,
+	"species": "Human",
+	"image": "/assets/hunters/Fern.png",
+	"icon": "/assets/hunters/_icons/Fern_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1518,
+			"attack": 879,
+			"defense": 759,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 12690,
+			"attack": 6770,
+			"defense": 5848,
+			"totalPower": 54104
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Fire",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Demon-killing Magic (Zoltraak) - Weak",
+				"description": "Three consecutive Zoltraak strikes that deal Fire elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "150–225% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "160–240% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "164–246% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Fern/Hunter_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Demon-killing Magic (Zoltraak) - Balanced",
+				"description": "Fires a piercing Zoltraak that passes through enemies.",
+				"damage": "1060–1590% ATK",
+				"element": "Fire",
+				"icon": "/assets/hunters/Fern/Fern_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Demon-killing Magic (Zoltraak) - Barrage",
+				"description": "Unleashes a rapid barrage of Zoltraak shots that knock down the target.",
+				"damage": "1866–2799% ATK",
+				"cooldown": 8,
+				"mpCost": "300–396",
+				"effects": ["Knockdown"],
+				"icon": "/assets/hunters/Fern/Fern_Skill_1.png"
+			},
+			{
+				"name": "Demon-killing Magic (Zoltraak) - Rapid Fire",
+				"description": "Fires a rapid sequence of Zoltraak shots. The final hit launches the target airborne.",
+				"damage": "1962–2943% ATK",
+				"cooldown": 12,
+				"mpCost": "300–396",
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Fern/Fern_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Demon-killing Magic (Zoltraak) - Burst",
+				"description": "Releases an omnidirectional Zoltraak burst that launches nearby enemies airborne.",
+				"damage": "2282–4690% ATK",
+				"cooldown": 25,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Fern/Fern_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Demon-killing Magic (Zoltraak) - Chain Attack",
+				"description": "Follows up with a chain of Zoltraak shots, launching the target airborne.",
+				"damage": "1836–2754% ATK",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Fern/Fern_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Demon-killing Magic (Zoltraak) - Mighty",
+				"description": "Concentrates all magical power into a single massive Zoltraak blast that knocks down the target.",
+				"damage": "3566–5349% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Knockdown"],
+				"icon": "/assets/hunters/Fern/Fern_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Magical Prodigy",
+		"description": "Initiates consecutive Basic Attack stages, triggering Core Attack afterward. Grants +10% Attack (additional +10% when MP ≥50%) and -5% skill MP consumption. Also grants +30% damage to bosses and +5% Precision.",
+		"icon": null
+	},
+	"advancements": [
+		"Enhances Attack Speed and reduces cooldowns for Zoltraak skills.",
+		"Increases Fire damage amplification.",
+		"Boosts Critical Hit Rate and Critical Hit Damage.",
+		"Provides team support buffs when using ultimate.",
+		"Greatly increases Fire damage multipliers and grants Defense Penetration."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "nameless-demons-magisphere"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Fern Staff",
+		"icon": "/assets/weapons/fern/Fern_Staff_Icon.png"
+	}
+}

@@ -1,0 +1,230 @@
+{
+	"name": "Sugimoto Reiji",
+	"category": "Elemental Stacker",
+	"alias": null,
+	"title": "Sugimoto Reiji",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Wind",
+	"class": "Elemental Stacker",
+	"country": "Japan",
+	"guild": "Blade Guild",
+	"mainAbility": "Swift Swordsmanship / Iaido",
+	"exclusiveWeapon": "Etched to the Bone",
+	"releaseDate": "2026-03-12",
+	"occupation": ["Hunter"],
+	"affiliation": ["Blade Guild"],
+	"gender": "Male",
+	"age": 28,
+	"species": "Human",
+	"image": "/assets/hunters/Sugimoto_Reiji.png",
+	"icon": "/assets/hunters/_icons/Sugimoto_Reiji_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1675,
+			"attack": 784,
+			"defense": 774,
+			"totalPower": 3980
+		},
+		"maxLevel": {
+			"hp": 14947,
+			"attack": 6436,
+			"defense": 6357,
+			"totalPower": 55669
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Wind",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Quickblade - Origin",
+				"description": "Reiji draws his blade and swiftly cuts down his enemy with elegance.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "245-367.5% of Max HP"
+					},
+					{
+						"stage": 2,
+						"damage": "291-436.5% of Max HP"
+					},
+					{
+						"stage": 3,
+						"damage": "323-484.5% of Max HP"
+					}
+				],
+				"icon": "/assets/hunters/Sugimoto_Reiji/Sugimoto_Reiji_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Flash of Steel",
+				"description": "Reiji performs a flash-draw, slashing his enemies as he passes before his blade returns to its sheath.",
+				"damage": "1027-1540.5% of Max HP",
+				"element": "Wind",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Punisher",
+				"description": "Reiji channels power into his blade to summon wind that pulls enemies closer.",
+				"damage": "1404-2106% of Max HP",
+				"cooldown": 15,
+				"mpCost": "150-198",
+				"effects": ["Medium Elemental Accumulation", "Super Armor"],
+				"icon": ""
+			},
+			{
+				"name": "Unbroken Focus",
+				"description": "Reiji calms his mind and adjusts his stance, readying for battle.",
+				"damage": "2695-4042.5% of Max HP",
+				"cooldown": 15,
+				"mpCost": "200-264",
+				"effects": ["Medium Elemental Accumulation", "Super Armor", "Extreme Evasion on hit"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Quickblade - Zenith",
+				"description": "Reiji slashes through enemies at a blinding speed, then disengages.",
+				"damage": "1030-2117.22% of Max HP",
+				"cooldown": 25,
+				"effects": ["Heavy Elemental Accumulation", "Airborne on final hit"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Blossomfall",
+				"description": "With blinding speed that leaves behind afterimages, Reiji cuts down his enemies.",
+				"damage": "1076-1614% of Max HP",
+				"cooldown": 20,
+				"effects": ["Medium Elemental Accumulation", "Airborne on final hit"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Quickblade - Oblivion",
+				"description": "Too fast to be seen, Reiji strikes enemies in the path.",
+				"damage": "3453-5179.5% of Max HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Heavy Elemental Accumulation", "Knocks Down on final hit"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Sword-fighting",
+		"description": "[Sword-fighting] remains active and is divided into three states: [Initiation], [Acceleration], [Finale]. [Initiation] activates on stage entry. Using Flash of Steel, Returning Edge, or Revolving Edge activates [Flash Draw]. Using Unbroken Focus activates [Sword Dance]. When Punisher hits, it inflicts [Winter's Edge] on the target. Eclipse Slash or Extinction Blade inflict [Winter's Edge] 2 times.",
+		"icon": null
+	},
+	"advancements": [
+		"Using Unbroken Focus or Quickblade - Oblivion activates the [Flash Draw] effect and the user's Core Attack. Consuming [Flash Draw] decreases the cooldown of Quickblade - Oblivion by 10s and restores 35% of the user's Power Gauge.",
+		"Wind Elemental Accumulation effectiveness increases by 20%.",
+		"When Sugimoto Reiji or an ally successfully inflicts the Wind Overload effect, it grants Sung Jinwoo and Wind team members the [Tempest Blade] effect.",
+		"The Critical Hit damage of Wind team members increases by 10% for every Wind ally.",
+		"Using Quickblade - Oblivion activates the [Stormflash] effect. The [Sword Dance] effect is enhanced."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"],
+			"jewelry": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-curse", "burning-curse", "burning-curse", "burning-curse"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Wind Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Etched to the Bone",
+		"icon": "/assets/weapons/sugimoto-reiji/Etched_to_the_Bone_Icon.png"
+	}
+}

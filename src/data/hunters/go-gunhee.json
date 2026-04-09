@@ -1,0 +1,230 @@
+{
+	"name": "Go Gunhee",
+	"category": "Breaker",
+	"alias": "Heaven Beyond the Sky",
+	"title": "Chairman of the Korean Hunters Association",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Light",
+	"class": "Breaker",
+	"country": "Korea",
+	"guild": "Hunters Association",
+	"mainAbility": "Outstanding Physical Ability / Telekinesis",
+	"exclusiveWeapon": "A Conviction and a Calling",
+	"releaseDate": "2024-08-29",
+	"occupation": ["Hunter"],
+	"affiliation": ["Hunters Association"],
+	"gender": "Male",
+	"age": 87,
+	"species": "Human",
+	"image": "/assets/hunters/Go_Gunhee.png",
+	"icon": "/assets/hunters/_icons/Go_Gunhee_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1536,
+			"attack": 762,
+			"defense": 866,
+			"totalPower": 3981
+		},
+		"maxLevel": {
+			"hp": 10695,
+			"attack": 4909,
+			"defense": 5578,
+			"totalPower": 43416
+		},
+		"primaryStat": "Defense"
+	},
+	"elements": [
+		{
+			"name": "Light",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Chairman's Will",
+				"description": "Gunhee gathers the Power of Brilliant Light to attack the enemy.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "157–235.5% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "164–246% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "173–259.5% DEF"
+					}
+				],
+				"icon": "/assets/hunters/Go_Gunhee/Go_Gunhee_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Abdominal Crush",
+				"description": "Gunhee punches upward and then strikes downward. Inflicts [Airborne] on first hit; [Knocks Down] on final hit. Becomes Heavy Attack: Abdominal Crush when [Fragment of Brilliant Light] is active.",
+				"damage": "1047–1570.5% DEF",
+				"element": "Light",
+				"icon": "/assets/hunters/Go_Gunhee/Go_Gunhee_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Fighting Spirit",
+				"description": "Gunhee attacks the enemy by enveloping his entire body with the Energy of Brilliant Light. Inflicts [Airborne] on hit. Becomes Heavy Attack: Fighting Spirit when [Fragment of Brilliant Light] is active.",
+				"damage": "1058–1587% DEF",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Go_Gunhee/Go_Gunhee_Skill_1.png"
+			},
+			{
+				"name": "Power of Brilliant Light",
+				"description": "Gunhee gathers Energy of Brilliant Light and lets it spread across his entire body, then punches the ground to release the energy in all directions. Inflicts [Airborne] on final hit. Applies [Fragment of Brilliant Light] effect.",
+				"damage": "1487–2230.5% DEF",
+				"cooldown": 12,
+				"mpCost": "200–264",
+				"effects": ["Airborne", "Fragment of Brilliant Light"],
+				"icon": "/assets/hunters/Go_Gunhee/Go_Gunhee_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Instant Destruction",
+				"description": "Gunhee attacks by releasing a high-speed blast of brilliant light. Applies [Aura of Brilliant Light] (Defense +20%, Shield equal to 10% of Sung Jinwoo's Defense, Light damage +20%, 20 seconds).",
+				"damage": "650–1336.11% DEF",
+				"cooldown": 25,
+				"effects": ["Aura of Brilliant Light"],
+				"icon": "/assets/hunters/Go_Gunhee/Go_Gunhee_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Clean Sweep",
+				"description": "Gunhee jumps forward, focuses the Energy of Brilliant Light on the ground, and releases it. Knocks Down on first hit; inflicts [Airborne] on final hit.",
+				"damage": "840–1260% DEF",
+				"cooldown": 20,
+				"effects": ["Knock Down", "Airborne"],
+				"icon": "/assets/hunters/Go_Gunhee/Go_Gunhee_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Supernova",
+				"description": "Gunhee gathers the Power of Brilliant Light into one fist and releases it in front of himself. Inflicts [Airborne] on hit.",
+				"damage": "2798–4197% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Go_Gunhee/Go_Gunhee_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Broken Vessel",
+		"description": "[Broken Vessel] applies when the user enters a stage (decreases received HP Recovery Rate by 50%, infinite). When the user uses Clean Sweep or Fighting Spirit it applies [Ruler's Aura] (Defense +30%, Shield equal to 20% of Go Gunhee's Defense, 10 seconds). When the user uses Power of Brilliant Light it applies [Fragment of Brilliant Light] (activates Core Attack 1 time; Core Attack becomes Heavy Attack: Abdominal Crush with 75% damage increase; Fighting Spirit becomes Heavy Attack: Fighting Spirit with 80% damage increase, 15 seconds).",
+		"icon": null
+	},
+	"advancements": [
+		"When the user uses Fighting Spirit or Heavy Attack: Fighting Spirit it activates their Core Attack and Core Attack becomes Heavy Attack: Abdominal Crush for 15 seconds. When the user uses Power of Brilliant Light, it applies [Will of Brilliant Light] to all team members (Light damage +8% and Critical Hit Damage +8% per Light team member, 20 seconds).",
+		"Increases Break effectiveness by 20%.",
+		"When the user uses Supernova it deals almighty Break damage. [Ruler's Aura] is enhanced (Defense +50%, Shield equal to 20% of Go Gunhee's Defense, Damage Taken -25%, 15 seconds).",
+		"Increases the user's Defense by 16%.",
+		"The damage of Supernova increases by 60% when dealt to targets that possess a Break Gauge. When Supernova hits a target without a Break Gauge it grants [Will of the Fragment] to team members (Critical Hit Damage +30% and QTE damage +200%, 20 seconds)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Damage Increase", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Additional Defense", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Additional Defense"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Light Damage (%)",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "A Conviction and a Calling",
+		"icon": "/assets/weapons/go-gunhee/A_Conviction_and_a_Calling_Icon.png"
+	}
+}

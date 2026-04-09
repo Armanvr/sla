@@ -1,0 +1,240 @@
+{
+	"name": "Cha Hae-In",
+	"category": "Striker",
+	"alias": null,
+	"title": "Pure Sword Princess",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Water",
+	"class": "Fighter",
+	"country": "Korea",
+	"guild": "Valkyrie",
+	"mainAbility": "Mana-imbued sword skills",
+	"exclusiveWeapon": "Valkyrie's Oath",
+	"releaseDate": "2025-05-08",
+	"occupation": ["Hunter"],
+	"affiliation": ["Valkyrie"],
+	"gender": "Female",
+	"age": 23,
+	"species": "Human",
+	"image": "/assets/hunters/Cha_Hae-In_the_Pure_Sword_Princess.png",
+	"icon": "/assets/hunters/_icons/Cha_Hae-In,_the_Pure_Sword_Princess_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1495,
+			"attack": 821,
+			"defense": 829,
+			"totalPower": 3983
+		},
+		"maxLevel": {
+			"hp": 13337,
+			"attack": 6740,
+			"defense": 6801,
+			"totalPower": 55523
+		},
+		"primaryStat": "Defense"
+	},
+	"elements": [
+		{
+			"name": "Water",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Shadow Blade",
+				"description": "Hae-In swiftly attacks with Heavenly Swords across three stages, dealing Water elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "147–220.5% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "150–225% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "158–237% DEF"
+					}
+				],
+				"icon": "/assets/hunters/Cha_Hae-In_Pure_Sword_Princess/Hunter_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Sword Princess's Dance",
+				"description": "Hae-In controls the Heavenly swords, slashing at enemies without mercy. Inflicts Airborne on final hit.",
+				"damage": "468–702% DEF",
+				"element": "Water",
+				"icon": "/assets/hunters/Cha_Hae-In_Pure_Sword_Princess/Cha_Hae-In_Pure_Sword_Princess_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Heavenly Strike",
+				"description": "Hae-In leaps and delivers a powerful downward strike with nearby slash. Applies Airborne on hit and Knock Down on final hit.",
+				"damage": "1154–1731% DEF",
+				"cooldown": 16,
+				"mpCost": "250–330",
+				"effects": ["Airborne", "Knock Down"],
+				"icon": "/assets/hunters/Cha_Hae-In_Pure_Sword_Princess/Cha_Hae-In_Pure_Sword_Princess_Skill_1.png"
+			},
+			{
+				"name": "Swordstorm",
+				"description": "After slicing enemies in her Sword Princess zone with blinding speed, Hae-In commands Heavenly Swords to strike simultaneously. Grants Super Armor during use. Applies Airborne and Unrecoverable (30s).",
+				"damage": "1157–1735.5% DEF",
+				"cooldown": 10,
+				"mpCost": "250–330",
+				"effects": ["Airborne", "Unrecoverable", "Super Armor"],
+				"icon": "/assets/hunters/Cha_Hae-In_Pure_Sword_Princess/Cha_Hae-In_Pure_Sword_Princess_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Victory Strike",
+				"description": "Spinning quick attack followed by powerful downward strike. Applies Airborne on hit, Knock Down and Unrecoverable on final hit. Activates Sword Princess's Oath (+5% damage, +10% Water damage, 15s).",
+				"damage": "2070–4255% DEF",
+				"cooldown": 25,
+				"effects": ["Airborne", "Knock Down", "Unrecoverable", "Sword Princess's Oath"],
+				"icon": "/assets/hunters/Cha_Hae-In_Pure_Sword_Princess/Cha_Hae-In_Pure_Sword_Princess_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Sword of Judgement",
+				"description": "Hae-In summons massive Heavenly Swords from the sky, delivering a powerful strike. Triggers via Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Applies Knock Down and activates Sword Princess's Oath.",
+				"damage": "1355–2032.5% DEF",
+				"cooldown": 20,
+				"effects": ["Knock Down", "Sword Princess's Oath"],
+				"icon": "/assets/hunters/Cha_Hae-In_Pure_Sword_Princess/Cha_Hae-In_Pure_Sword_Princess_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Sword of Destiny",
+				"description": "A sword made of pure light cuts through the sky as Hae-In charges through enemy lines. Applies Knock Down on final hit.",
+				"damage": "3510–5265% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Knock Down"],
+				"icon": "/assets/hunters/Cha_Hae-In_Pure_Sword_Princess/Cha_Hae-In_Pure_Sword_Princess_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Will of the Sword",
+		"description": "When Sword Princess's Dance or Heavenly Swords hit, they activate Heavenly Swords (0.5s cooldown). Using Sword Princess's Dance or Heavenly Strike recharges Will of the Sword gauge (max 6 stacks, 15s): Defense +5%, Critical Hit Rate +2%, Critical Hit Damage +2% per stack. Each Heavenly Sword blade deals 175% DEF Water damage.",
+		"icon": null
+	},
+	"advancements": [
+		"Swordstorm becomes Quick Attack: Swordstorm (+60% damage). Heavenly Strike activates Blade Master (Core Attack transforms to Dance of Scattered Blades with Super Armor, no Core Gauge consumption, 5s). Will of the Sword enhanced to Defense +10% per level.",
+		"Heavenly Strike applies Unrecoverable (30s). Sword of Destiny applies Paralyze (3s interrupt duration).",
+		"At 100% Will of the Sword gauge, activates Sword's Resolve (6s). Heavenly Strike becomes Heavy Attack: Heavenly Strike (+170% damage). Consumes Will of the Sword gauge upon duration end.",
+		"Per Water team member (max 3 stacks): Critical Hit Rate +7%, Critical Hit Damage +7%. In Guild Boss mode, stacks once per ally with no limit.",
+		"Will of the Sword enhanced: Defense +10%, Critical Rate +4%, Critical Damage +4% per level (max 6 stacks). Pure Sword Princess effect on stage entry: Sword of Destiny damage +60%, Heavenly Strike and Heavy Attack damage +60%, infinite duration."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["iron-will", "iron-will", "iron-will", "iron-will"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "eyes-of-the-watcher",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Damage Increase", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Additional Defense", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Additional Defense"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Valkyrie's Oath",
+		"icon": "/assets/weapons/cha-hae-in-pure-sword-princess/Valkyrie's_Oath_Icon.png"
+	}
+}

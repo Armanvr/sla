@@ -1,0 +1,235 @@
+{
+	"name": "Isla Wright",
+	"category": "Supporter",
+	"alias": null,
+	"title": "",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Dark",
+	"class": "Healer",
+	"country": "England",
+	"guild": "Helpers Guild",
+	"mainAbility": "Tarot card-based buffs/debuffs/healing",
+	"exclusiveWeapon": "Unexpected Luck",
+	"releaseDate": "2024-10-31",
+	"occupation": ["Hunter"],
+	"affiliation": ["Helpers Guild"],
+	"gender": "Female",
+	"age": 18,
+	"species": "Human",
+	"image": "/assets/hunters/Isla_Wright.png",
+	"icon": "/assets/hunters/_icons/Isla_Wright_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 0,
+			"attack": 0,
+			"defense": 0,
+			"totalPower": 0
+		},
+		"maxLevel": {
+			"hp": 10210,
+			"attack": 5046,
+			"defense": 5670,
+			"totalPower": 43382
+		},
+		"primaryStat": "Defense"
+	},
+	"elements": [
+		{
+			"name": "Dark",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Arcana",
+				"description": "Isla attacks with tarot card magic dealing Dark elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "138–207% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "144–216% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "153–229.5% DEF"
+					}
+				],
+				"icon": "/assets/hunters/Isla_Wright/Hunter_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Horoscope",
+				"description": "Isla attacks and grants one random buff to the entire team: Strength (+12% damage, 12s), The Magician (Shield equal to 12% DEF, 12s), or Wheel of Fortune (+12% Critical Hit Rate and Damage, 12s).",
+				"damage": "600–900% DEF",
+				"element": "Dark",
+				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Cosmic Emergence",
+				"description": "Inflicts Airborne. Activates The Star: instantly restores HP equal to 8% of Isla Wright's DEF to the entire team and removes all debuffs.",
+				"damage": "800–1200% DEF",
+				"cooldown": 15,
+				"mpCost": "200–264",
+				"effects": ["Airborne", "The Star (team heal + debuff removal)"],
+				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Skill_1.png"
+			},
+			{
+				"name": "Death Nova",
+				"description": "Knocks down target. Activates The Tower: increases Dark damage of Dark members by 5% (10s).",
+				"damage": "800–1200% DEF",
+				"cooldown": 15,
+				"mpCost": "200–264",
+				"effects": ["Knock Down", "The Tower"],
+				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Crossing Stars",
+				"description": "Inflicts Airborne. Removes Debuff Zones. Activates The Star (team heal + debuff removal) and grants one random buff (Strength, The Magician, or Wheel of Fortune).",
+				"damage": "600–1233.33% DEF",
+				"cooldown": 25,
+				"effects": ["Airborne", "The Star", "Random Buff"],
+				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Celestial Discord",
+				"description": "Triggers via Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Knocks down target. Grants one random buff.",
+				"damage": "600–900% DEF",
+				"cooldown": 20,
+				"effects": ["Knock Down", "Random Buff"],
+				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Arcana: The World / Arcana: Death",
+				"description": "Alternates between The World and Death based on last skill used. Inflicts Airborne. The World: restores HP equal to 15% DEF and grants Shield equal to 15% DEF (8s). Death: increases team Damage Increase by 6% of Isla's Damage Increase stat; Dark hunters gain +12% Ultimate Skill damage (16s).",
+				"damage": "1300–1950% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne", "The World / Death"],
+				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Tarot Mastery",
+		"description": "Determines ultimate variant (The World or Death) based on the last skill used. Stage 3 basic attack charges Power Gauge fully.",
+		"icon": null
+	},
+	"advancements": [
+		"Death Nova charges second character's Power Gauge by 60% and reduces ultimate cooldown by 20s. Enhances Tower effect to +10% Dark damage (16s).",
+		"Team Speed increases 10%, immunity to Slow, Defense increases 12%.",
+		"Horoscope and Crossing Stars activate all three random buffs simultaneously.",
+		"Dark damage increases 3% and damage taken decreases 3% (stacks up to 3) for every Dark Element hunter on the team.",
+		"Enhanced World: grants Shield/healing of 25% DEF. Enhanced Death: grants 12% Damage Increase and 32% Ultimate damage boost for Dark hunters, plus Death Shepherd (+0.2% damage per 1% reduction to target's HP, stacks up to 16%)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120 (A)",
+			"armor": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"],
+			"jewelry": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"]
+		},
+		{
+			"name": "Build Niv. 120 (B)",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"],
+			"jewelry": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Damage Increase", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Additional Defense", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Additional Defense"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Dark Damage (%)",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Unexpected Luck",
+		"icon": "/assets/weapons/isla-wright/Unexpected_Luck_Icon.png"
+	}
+}

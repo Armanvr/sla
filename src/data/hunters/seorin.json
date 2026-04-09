@@ -1,0 +1,230 @@
+{
+	"name": "Seorin",
+	"category": "Breaker",
+	"alias": null,
+	"title": "",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Water",
+	"class": "Ranger",
+	"country": "Korea",
+	"guild": null,
+	"mainAbility": "Mana-propelled Ice-magic Bullets",
+	"exclusiveWeapon": "Melody of Iron and Blood",
+	"releaseDate": "2025-04-10",
+	"occupation": ["Hunter"],
+	"affiliation": ["Korean Hunters Association"],
+	"gender": "Female",
+	"age": 27,
+	"species": "Human",
+	"image": "/assets/hunters/Seorin.png",
+	"icon": "/assets/hunters/_icons/Seorin_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 0,
+			"attack": 0,
+			"defense": 0,
+			"totalPower": 0
+		},
+		"maxLevel": {
+			"hp": 15422,
+			"attack": 6191,
+			"defense": 6375,
+			"totalPower": 55696
+		},
+		"primaryStat": "HP"
+	},
+	"elements": [
+		{
+			"name": "Water",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Ice Blitz",
+				"description": "Fires high-speed ice bullets dealing Water elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "148–222% Max HP"
+					},
+					{
+						"stage": 2,
+						"damage": "150–225% Max HP"
+					},
+					{
+						"stage": 3,
+						"damage": "152–228% Max HP"
+					}
+				],
+				"icon": "/assets/hunters/Seorin/Hunter_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Ice Shard Magnum",
+				"description": "Uses bike to fire ice bullets with Airborne effect. User gains Super Armor.",
+				"damage": "550–825% Max HP",
+				"element": "Water",
+				"icon": "/assets/hunters/Seorin/Seorin_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Frozen Spin",
+				"description": "Spinning attack with evasion mechanic. Inflicts Airborne. Triggers Extreme Evasion if hit during rotation. User gains Super Armor.",
+				"damage": "963–1444.5% Max HP",
+				"cooldown": 15,
+				"mpCost": "300–396",
+				"effects": ["Airborne", "Super Armor", "Extreme Evasion (if hit)"],
+				"icon": "/assets/hunters/Seorin/Seorin_Skill_1.png"
+			},
+			{
+				"name": "Polar Surge",
+				"description": "Vertical ascent with ground bombardment. Inflicts Airborne. User gains Super Armor.",
+				"damage": "957–1435.5% Max HP",
+				"cooldown": 10,
+				"mpCost": "400–528",
+				"effects": ["Airborne", "Super Armor"],
+				"icon": "/assets/hunters/Seorin/Seorin_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Frozen Drift",
+				"description": "Circular motion attack triggering Elegant Charisma: extends Break duration +3s and activates Limited Break (+33% damage, 20s).",
+				"damage": "570–1171.67% Max HP",
+				"cooldown": 25,
+				"effects": ["Elegant Charisma", "Limited Break"],
+				"icon": "/assets/hunters/Seorin/Seorin_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Glacier Spin",
+				"description": "Braking maneuver with barrage. Triggers via Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Inflicts Airborne.",
+				"damage": "715–1072.5% Max HP",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Seorin/Seorin_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Frost Chaser",
+				"description": "Full missile barrage with icy shockwave. Inflicts Airborne.",
+				"damage": "1634–2451% Max HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Seorin/Seorin_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Pinpoint Missiles",
+		"description": "Extends Break state duration +3s. Activates Pinpoint Missiles via Frozen Spin, Polar Surge, Ice Shard Magnum, or Frozen Drift. Frozen Spin/Ice Shard Magnum/Glacier Spin fire 2 missiles; Polar Surge fires 4. Each missile deals 150% Max HP Water damage and inflicts Subzero (+1% Water damage taken, max 10 stacks, 30s).",
+		"icon": null
+	},
+	"advancements": [
+		"Frozen Spin fires 4 missiles. Overtake on stage entry: +50% Break effectiveness, -30% damage (15s; 30s in Workshop). Limited Break on Break state (120s cooldown): resets skill cooldowns, restores gauges 100%.",
+		"Ice Shard Magnum or Glacier Spin fire 4 missiles simultaneously.",
+		"Black Tea? on team entry: +35% Defense, +35% Max HP, +3% MP recovery per 5s (infinite duration).",
+		"Water team members gain +10% Water damage per Water ally (max 3 stacks; Guild Boss: unlimited stacks).",
+		"Missiles gain +100% Critical Hit Rate, +30% Critical Hit damage. Enhanced Subzero: +2% Water damage taken. Enhanced Limited Break: -30% Break effectiveness, +50% damage, +50% missile/Critical damage."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Additional HP", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Additional HP"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Defense Penetration", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Melody of Iron and Blood",
+		"icon": "/assets/weapons/seorin/Melody_of_Iron_and_Blood_Icon.png"
+	}
+}

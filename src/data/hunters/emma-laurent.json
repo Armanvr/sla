@@ -1,0 +1,230 @@
+{
+	"name": "Emma Laurent",
+	"category": "Breaker",
+	"alias": null,
+	"title": "Emma Laurent",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Fire",
+	"class": "Breaker",
+	"country": "France",
+	"guild": "The Justitia Guild",
+	"mainAbility": "Fire Magic Swordsmanship",
+	"exclusiveWeapon": "Night-Thoughts",
+	"releaseDate": "2024-03-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["The Justitia Guild"],
+	"gender": "Female",
+	"age": 18,
+	"species": "Human",
+	"image": "/assets/hunters/Emma_Laurent.png",
+	"icon": "/assets/hunters/_icons/Emma_Laurent_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1728,
+			"attack": 769,
+			"defense": 762,
+			"totalPower": 3979
+		},
+		"maxLevel": {
+			"hp": 12027,
+			"attack": 4950,
+			"defense": 4909,
+			"totalPower": 43515
+		},
+		"primaryStat": "HP"
+	},
+	"elements": [
+		{
+			"name": "Fire",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Sword of Revenge",
+				"description": "Emma thrusts at the enemy with her flaming sword.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "96–144% HP"
+					},
+					{
+						"stage": 2,
+						"damage": "99–148.5% HP"
+					},
+					{
+						"stage": 3,
+						"damage": "106–159% HP"
+					}
+				],
+				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Flare Strike",
+				"description": "Emma attacks with a flaming strike. Applies [Burn] (damage equal to 17.77% of Max HP every 3 seconds for 30 seconds) and inflicts [Airborne] on hit.",
+				"damage": "777–1165.5% HP",
+				"element": "Fire",
+				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Burn Up",
+				"description": "Emma attacks with a fiery swing. Deals medium Break damage. Bonus 10% damage against [Burned] targets.",
+				"damage": "777–1165.5% HP",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": ["Burn bonus damage"],
+				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Skill_1.png"
+			},
+			{
+				"name": "Flame Cleave",
+				"description": "Emma slashes with a powerful condensed flame. Deals heavy Break damage with [Airborne] effect. Bonus 10% damage against [Burned] targets.",
+				"damage": "777–1165.5% ATK",
+				"cooldown": 12,
+				"mpCost": "150–198",
+				"effects": ["Airborne", "Burn bonus damage"],
+				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Roaring Flames",
+				"description": "Emma unleashes roaring flames. Applies [Flame's Blessing] and [Flame's Wrath] effects.",
+				"damage": "555–1140.83% HP",
+				"cooldown": 25,
+				"effects": ["Flame's Blessing", "Flame's Wrath"],
+				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Flame Judgment",
+				"description": "Emma executes a flame-infused judgment strike.",
+				"damage": "777–1165.5% HP",
+				"cooldown": 20,
+				"effects": [],
+				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Burning Pride",
+				"description": "Emma releases her full burning pride in a devastating flaming attack.",
+				"damage": "1777–2665.5% HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": [],
+				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Heat Absorption / Heat Emission",
+		"description": "Emma builds [Heat Absorption] stacks from combat actions (Basic Attacks or taking damage: 2 instances; Core Attack, Burn Up, Flame Judgment, or Extreme Evasion: 5 instances; Burning Pride: 10 instances). At 5 stacks: Defense +7.77%. At 10 stacks: recovers HP equal to 7.77% of damage taken. At 15 stacks: gains a Shield equal to 7.77% of Max HP (duration 15 seconds). When Heat Emission activates, Heat Absorption instances are removed. [Heat Emission] at 5 stacks: Defense Penetration +7.77%. At 10 stacks: Fire damage +7.77%. At 15 stacks: Fire damage +7.77% applied to team members (duration 20 seconds).",
+		"icon": null
+	},
+	"advancements": [
+		"Increases the Break damage of Burn Up by 77.77%.",
+		"Increases the user's Break effect by 10%. Increases damage dealt to targets affected by the Break effect by 20%.",
+		"Grants [Heat Absorption] to team members. Applies 5 instances of [Heat Absorption] when entering the stage.",
+		"The user's HP increases by 10%.",
+		"When the target enters the Break state, resets the cooldown of all skills. Recovers Core Gauge and Power Gauge by 100%. Applies a Damage Increase effect granting 77.77% increased damage for 15 seconds."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "nameless-demons-deception",
+		"body": "nameless-demons-horn",
+		"spirit": "ferocious-protectors-claw"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Additional HP", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Additional HP"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Defense Penetration", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Fire Damage (%)",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Night-Thoughts",
+		"icon": "/assets/weapons/emma-laurent/Night-Thoughts_Icon.png"
+	}
+}

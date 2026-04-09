@@ -38,9 +38,20 @@ interface ShadowData {
 }
 
 const SHADOWS: ShadowData[] = [
-	beruData, besteData, bigrockData, bladesData, brutData,
-	cerbieData, igrisData, ironData, jimaData, kaiselData,
-	skullData, tankData, tuskData, urosData,
+	beruData,
+	besteData,
+	bigrockData,
+	bladesData,
+	brutData,
+	cerbieData,
+	igrisData,
+	ironData,
+	jimaData,
+	kaiselData,
+	skullData,
+	tankData,
+	tuskData,
+	urosData,
 ]
 
 const elementColors: Record<string, string> = {
@@ -211,7 +222,9 @@ function ShadowCard({ shadow }: { shadow: ShadowData }) {
 						src={img}
 						alt={shadow.name}
 						class='w-48 h-48 object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-xl'
-						onError={(e) => { ;(e.target as HTMLImageElement).style.display = 'none' }}
+						onError={(e) => {
+							;(e.target as HTMLImageElement).style.display = 'none'
+						}}
 					/>
 				) : (
 					<span class='text-5xl select-none opacity-30'>👥</span>
@@ -231,7 +244,9 @@ function ShadowCard({ shadow }: { shadow: ShadowData }) {
 							src={shadow.weapon.icon}
 							alt={shadow.weapon.name}
 							class='w-4 h-4 object-contain flex-shrink-0 opacity-70'
-							onError={(e) => { ;(e.target as HTMLImageElement).style.display = 'none' }}
+							onError={(e) => {
+								;(e.target as HTMLImageElement).style.display = 'none'
+							}}
 						/>
 						<span class='text-[10px] text-zinc-500 truncate'>{shadow.weapon.name}</span>
 					</div>
@@ -285,9 +300,9 @@ export function HomePage({
 					SLA <span class='text-purple-400'>Guide</span>
 				</h1>
 				<span class='text-xs font-mono text-zinc-500 border border-zinc-700/60 rounded px-1.5 py-0.5'>
-					v1.0.0
+					v1.0.1
 				</span>
-				<span class='text-xs text-zinc-500 ml-auto'>Mis à jour le 17 mars 2026</span>
+				<span class='text-xs text-zinc-500 ml-auto'>Mis à jour le 9 avril 2026</span>
 			</header>
 
 			<main class='max-w-6xl mx-auto px-4 py-12 space-y-16'>
@@ -297,7 +312,7 @@ export function HomePage({
 						title='Team Guides'
 						description="Composition d'équipe optimisées par type de contenu."
 					/>
-					<div class='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+					<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
 						<TeamGuideCard title='Dungeons' icon='⚔️' onClick={() => onSelectTeamGuide('team-dungeons')} />
 						<TeamGuideCard
 							title='Power & Destruction'
@@ -309,6 +324,7 @@ export function HomePage({
 							icon='🏰'
 							onClick={() => onSelectTeamGuide('team-guild-boss')}
 						/>
+						<TeamGuideCard title='Compare' icon='📊' onClick={() => onSelectTeamGuide('compare')} />
 					</div>
 				</section>
 

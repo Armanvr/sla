@@ -1,0 +1,516 @@
+{
+	"armor": [
+		{
+			"id": "high-ranking-demon",
+			"name": "High-ranking Demon",
+			"icons": {
+				"head": "/assets/artifacts/High-ranking_Demon's_Helmet.png",
+				"chest": "/assets/artifacts/High-ranking_Demon's_Body_Armor.png",
+				"gloves": "/assets/artifacts/High-ranking_Demon's_Gloves.png",
+				"boots": "/assets/artifacts/High-ranking_Demon's_Boots.png"
+			},
+			"bonuses": {
+				"2": "Increases Power Gauge Acquisition Rate by 20%.",
+				"4": "At the start of battle, charges the Power Gauge by 50%. Additionally increases the team's Power Gauge Acquisition Rate by 20%."
+			}
+		},
+		{
+			"id": "dragon-knight",
+			"name": "Dragon Knight",
+			"icons": {
+				"head": "/assets/artifacts/Dragon_Knight's_Helmet.png",
+				"chest": "/assets/artifacts/Dragon_Knight's_Body_Armor.png",
+				"gloves": "/assets/artifacts/Dragon_Knight's_Gloves.png",
+				"boots": "/assets/artifacts/Dragon_Knight's_Boots.png"
+			},
+			"bonuses": {
+				"2": "Increases the user's Basic Attack damage by 18%.",
+				"4": "Increases Core Attack damage by 18%. When Core Attacks hit an enemy, charges the Core Gauge by 60."
+			}
+		},
+		{
+			"id": "black-lion",
+			"name": "Black Lion",
+			"icons": {
+				"head": "/assets/artifacts/Black_Lion's_Helmet.png",
+				"chest": "/assets/artifacts/Black_Lion's_Body_Armor.png",
+				"gloves": "/assets/artifacts/Black_Lion's_Gloves.png",
+				"boots": "/assets/artifacts/Black_Lion's_Boots.png"
+			},
+			"bonuses": {
+				"2": "Increases the user's Attack by 5%.",
+				"4": "When attacking enemies, ignores 15% of the target's Defense."
+			}
+		},
+		{
+			"id": "almighty-kargalgan",
+			"name": "Almighty Kargalgan",
+			"icons": {
+				"head": "/assets/artifacts/Almighty_Kargalgan's_Hat.png",
+				"chest": "/assets/artifacts/Almighty_Kargalgan's_Robe.png",
+				"gloves": "/assets/artifacts/Almighty_Kargalgan's_Gloves.png",
+				"boots": "/assets/artifacts/Almighty_Kargalgan's_Boots.png"
+			},
+			"bonuses": {
+				"2": "Increases Ultimate Skill damage by 25%.",
+				"4": "Decreases the Ultimate Skill cooldown by 40%."
+			}
+		},
+		{
+			"id": "holy",
+			"name": "Holy",
+			"icons": {
+				"head": "/assets/artifacts/Holy_Hat.png",
+				"chest": "/assets/artifacts/Holy_Robe.png",
+				"gloves": "/assets/artifacts/Holy_Gloves.png",
+				"boots": "/assets/artifacts/Holy_Boots.png"
+			},
+			"bonuses": {
+				"2": "The user's HP increases by 8%.",
+				"4": "Reduces the user's Attack by 8%, but increases all team members' Attack by 8%."
+			}
+		},
+		{
+			"id": "palace-guard",
+			"name": "Palace Guard",
+			"icons": {
+				"head": "/assets/artifacts/Palace_Guard's_Helmet.png",
+				"chest": "/assets/artifacts/Palace_Guard's_Body_Armor.png",
+				"gloves": "/assets/artifacts/Palace_Guard's_Gloves.png",
+				"boots": "/assets/artifacts/Palace_Guard's_Boots.png"
+			},
+			"bonuses": {
+				"2": "The Shield effects of the user increase by 30%.",
+				"4": "When a team member activates a Shield, increases damage dealt by 10% for 10 second(s)."
+			}
+		},
+		{
+			"id": "new-hunter",
+			"name": "New Hunter",
+			"icons": {
+				"head": "/assets/artifacts/New_Hunter's_Helmet.png",
+				"chest": "/assets/artifacts/New_Hunter's_Body_Armor.png",
+				"gloves": "/assets/artifacts/New_Hunter's_Gloves.png",
+				"boots": "/assets/artifacts/New_Hunter's_Boots.png"
+			},
+			"bonuses": {
+				"2": "The user's damage dealt to enemies in the Break state increases by 15%.",
+				"4": "The Break effect increases by 30%. When attacking enemies that are weak to the element, increases damage by 30%."
+			}
+		},
+		{
+			"id": "hard-leather",
+			"name": "Hard Leather",
+			"icons": {
+				"head": "/assets/artifacts/Hard_Leather_Helmet.png",
+				"chest": "/assets/artifacts/Hard_Leather_Body_Armor.png",
+				"gloves": "/assets/artifacts/Hard_Leather_Gloves.png",
+				"boots": "/assets/artifacts/Hard_Leather_Boots.png"
+			},
+			"bonuses": {
+				"2": "The user's Critical Hit Rate increases by 8%.",
+				"4": "The user's Critical Hit damage increases by 32%."
+			}
+		},
+		{
+			"id": "cleric",
+			"name": "Cleric",
+			"icons": {
+				"head": "/assets/artifacts/Cleric's_Hat.png",
+				"chest": "/assets/artifacts/Cleric's_Robe.png",
+				"gloves": "/assets/artifacts/Cleric's_Gloves.png",
+				"boots": "/assets/artifacts/Cleric's_Boots.png"
+			},
+			"bonuses": {
+				"2": "The user's HP increases by 8%.",
+				"4": "Increases healing given by 8%. The team member with the highest Total Power receives an 8% damage increase."
+			}
+		},
+		{
+			"id": "crimson-knights",
+			"name": "Crimson Knight's",
+			"icons": {
+				"head": "/assets/artifacts/Crimson_Knight's_Helmet.png",
+				"chest": "/assets/artifacts/Crimson_Knight's_Body_Armor.png",
+				"gloves": "/assets/artifacts/Crimson_Knight's_Gloves.png",
+				"boots": "/assets/artifacts/Crimson_Knight's_Boots.png"
+			},
+			"bonuses": {
+				"2": "Increases the user's Attack and Defense by 4%.",
+				"4": "When the user's attacks hit, their Attack and Defense increases by 3% for 6 second(s). Can be stacked up to 5 times."
+			}
+		},
+		{
+			"id": "hot-summer",
+			"name": "Hot Summer",
+			"icons": {
+				"head": "/assets/artifacts/Hot_Summer_Sunglasses.png",
+				"chest": "/assets/artifacts/Hot_Summer_Shirt.png",
+				"gloves": "/assets/artifacts/Hot_Summer_Watch.png",
+				"boots": "/assets/artifacts/Hot_Summer_Sandals.png"
+			},
+			"bonuses": {
+				"2": "The user's Critical Hit Rate increases by 8%.",
+				"4": "The user's Critical Hit damage increases by 32%."
+			}
+		},
+		{
+			"id": "iron-will",
+			"name": "Iron Will",
+			"icons": {
+				"head": "/assets/artifacts/Iron_Will_Helmet.png",
+				"chest": "/assets/artifacts/Iron_Will_Body_Armor.png",
+				"gloves": "/assets/artifacts/Iron_Will_Gloves.png",
+				"boots": "/assets/artifacts/Iron_Will_Boots.png"
+			},
+			"bonuses": {
+				"2": "Increases the user's Defense by 8%.",
+				"4": "When using an Ultimate Skill, Defense increases by 5% (stacks up to 5 times). Reduces Ultimate Skill damage received once."
+			}
+		}
+	],
+	"jewelry": [
+		{
+			"id": "viridescent",
+			"name": "Viridescent",
+			"icons": {
+				"necklace": "/assets/artifacts/Viridescent_Necklace.png",
+				"ring": "/assets/artifacts/Viridescent_Ring.png",
+				"bracelet": "/assets/artifacts/Viridescent_Bracelet.png",
+				"earrings": "/assets/artifacts/Viridescent_Earrings.png"
+			},
+			"bonuses": {
+				"2": "Increases Skill MP Consumption Rate by 20%, but increases the user's damage dealt by 5%.",
+				"4": "Increases the user's damage dealt by 18%. Decreases Basic Skill cooldown by 18%."
+			}
+		},
+		{
+			"id": "aquamarine",
+			"name": "Aquamarine",
+			"icons": {
+				"necklace": "/assets/artifacts/Aquamarine_Necklace.png",
+				"ring": "/assets/artifacts/Aquamarine_Ring.png",
+				"bracelet": "/assets/artifacts/Aquamarine_Bracelet.png",
+				"earrings": "/assets/artifacts/Aquamarine_Earrings.png"
+			},
+			"bonuses": {
+				"2": "When tagging out, increases the user and their team members' Attack by 12% for 10 second(s).",
+				"4": "The Attack boost increases to 28% and the duration increases to 15 second(s)."
+			}
+		},
+		{
+			"id": "beast",
+			"name": "Beast",
+			"icons": {
+				"necklace": "/assets/artifacts/Beast_Necklace.png",
+				"ring": "/assets/artifacts/Beast_Ring.png",
+				"bracelet": "/assets/artifacts/Beast_Bracelet.png",
+				"earrings": "/assets/artifacts/Beast_Earrings.png"
+			},
+			"bonuses": {
+				"2": "When landing a Critical Hit, the user has a 25% chance to increase Attack by 0.8%.",
+				"4": "The activation rate becomes 50% and the Attack increase rises to 1.6%."
+			}
+		},
+		{
+			"id": "skeleton",
+			"name": "Skeleton",
+			"icons": {
+				"necklace": "/assets/artifacts/Skeleton_Necklace.png",
+				"ring": "/assets/artifacts/Skeleton_Ring.png",
+				"bracelet": "/assets/artifacts/Skeleton_Bracelet.png",
+				"earrings": "/assets/artifacts/Skeleton_Earrings.png"
+			},
+			"bonuses": {
+				"2": "When the user has 50% HP or less, their damage dealt increases by 15%.",
+				"4": "The HP threshold changes to 70% and the damage boost rises to 30%."
+			}
+		},
+		{
+			"id": "behemoth",
+			"name": "Behemoth",
+			"icons": {
+				"necklace": "/assets/artifacts/Behemoth's_Necklace.png",
+				"ring": "/assets/artifacts/Behemoth's_Ring.png",
+				"bracelet": "/assets/artifacts/Behemoth's_Bracelet.png",
+				"earrings": "/assets/artifacts/Behemoth's_Earrings.png"
+			},
+			"bonuses": {
+				"2": "When attacking enemies with 40% or less HP, increases the user's damage dealt by 8%.",
+				"4": "The HP threshold changes to 70% and the damage increase rises to 20%."
+			}
+		},
+		{
+			"id": "red-eyed",
+			"name": "Red-eyed",
+			"icons": {
+				"necklace": "/assets/artifacts/Red-eyed_Necklace.png",
+				"ring": "/assets/artifacts/Red-eyed_Ring.png",
+				"bracelet": "/assets/artifacts/Red-eyed_Bracelet.png",
+				"earrings": "/assets/artifacts/Red-eyed_Earrings.png"
+			},
+			"bonuses": {
+				"2": "Increases the user's Attack by 5% for 4 second(s) when landing a Critical Hit.",
+				"4": "The Attack boost can stack up to 4 instances."
+			}
+		},
+		{
+			"id": "romantic-seashell",
+			"name": "Romantic Seashell",
+			"icons": {
+				"necklace": "/assets/artifacts/Romantic_Seashell_Necklace.png",
+				"ring": "/assets/artifacts/Romantic_Seashell_Ring.png",
+				"bracelet": "/assets/artifacts/Romantic_Seashell_Bracelet.png",
+				"earrings": "/assets/artifacts/Romantic_Seashell_Earrings.png"
+			},
+			"bonuses": {
+				"2": "When landing a Critical Hit, the user has a 25% chance to increase Attack by 0.8%.",
+				"4": "The activation rate becomes 50% and the Attack increase rises to 1.6%."
+			}
+		},
+		{
+			"id": "peridot",
+			"name": "Peridot",
+			"icons": {
+				"necklace": "/assets/artifacts/Peridot_Necklace.png",
+				"ring": "/assets/artifacts/Peridot_Ring.png",
+				"bracelet": "/assets/artifacts/Peridot_Bracelet.png",
+				"earrings": "/assets/artifacts/Peridot_Earrings.png"
+			},
+			"bonuses": {
+				"2": "When using QTE/Support/Ultimate Skills, elemental weakness damage increases by 5% for the team.",
+				"4": "The duration extends to 60 second(s) and the maximum stack count becomes 3."
+			}
+		},
+		{
+			"id": "obsidian",
+			"name": "Obsidian",
+			"icons": {
+				"necklace": "/assets/artifacts/Obsidian_Necklace.png",
+				"ring": "/assets/artifacts/Obsidian_Ring.png",
+				"bracelet": "/assets/artifacts/Obsidian_Bracelet.png",
+				"earrings": "/assets/artifacts/Obsidian_Earrings.png"
+			},
+			"bonuses": {
+				"2": "When the user has 70% or more of their MP, their damage dealt increases by 30%.",
+				"4": "The damage boost increases to 60% at 40% MP or higher."
+			}
+		},
+		{
+			"id": "destructive-instinct",
+			"name": "Destructive Instinct",
+			"icons": {
+				"necklace": "/assets/artifacts/Destructive_Instinct_Necklace.png",
+				"ring": "/assets/artifacts/Destructive_Instinct_Ring.png",
+				"bracelet": "/assets/artifacts/Destructive_Instinct_Bracelet.png",
+				"earrings": "/assets/artifacts/Destructive_Instinct_Earrings.png"
+			},
+			"bonuses": {
+				"2": "The damage of user skills with the Break effect increases by 30%.",
+				"4": "The skill damage increase rises to 60%."
+			}
+		},
+		{
+			"id": "shining-star",
+			"name": "Shining Star",
+			"icons": {
+				"necklace": "/assets/artifacts/Shining_Star_Necklace.png",
+				"ring": "/assets/artifacts/Shining_Star_Ring.png",
+				"bracelet": "/assets/artifacts/Shining_Star_Bracelet.png",
+				"earrings": "/assets/artifacts/Shining_Star_Earrings.png"
+			},
+			"bonuses": {
+				"2": "When the user or a team member tags in, it increases their Attack by 12%.",
+				"4": "The Attack boost increases to 28% for 15 second(s)."
+			}
+		}
+	],
+	"complete": [
+		{
+			"id": "burning-blessing",
+			"name": "Burning Blessing",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Burning_Blessing.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Burning_Blessing.png",
+				"gloves": "/assets/artifacts/Gloves_of_Burning_Blessing.png",
+				"boots": "/assets/artifacts/Boots_of_Burning_Blessing.png",
+				"necklace": "/assets/artifacts/Necklace_of_Burning_Blessing.png",
+				"ring": "/assets/artifacts/Ring_of_Burning_Blessing.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Burning_Blessing.png",
+				"earrings": "/assets/artifacts/Earrings_of_Burning_Blessing.png"
+			},
+			"bonuses": {
+				"2": "When tagging out, applies the [Blessing] effect to the user and their team members. Increases damage dealt by 8%.",
+				"4": "[Blessing] becomes [Enhanced Blessing]. Duration and effect are enhanced.",
+				"8": "[Enhanced Blessing] becomes Burning Blessing. Further increases damage dealt."
+			}
+		},
+		{
+			"id": "burning-greed",
+			"name": "Burning Greed",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Burning_Greed.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Burning_Greed.png",
+				"gloves": "/assets/artifacts/Gloves_of_Burning_Greed.png",
+				"boots": "/assets/artifacts/Boots_of_Burning_Greed.png",
+				"necklace": "/assets/artifacts/Necklace_of_Burning_Greed.png",
+				"ring": "/assets/artifacts/Ring_of_Burning_Greed.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Burning_Greed.png",
+				"earrings": "/assets/artifacts/Earrings_of_Burning_Greed.png"
+			},
+			"bonuses": {
+				"2": "When hitting with a Break damage attack, applies the [Greed] effect. Increases Critical Hit Rate by 1% (stacks up to 10 times).",
+				"4": "When [Greed] stacks 10 times, it becomes [Enhanced Greed].",
+				"8": "Attacking enemies at their elemental weakness increases the [Break] effect by 30%. [Enhanced Greed] becomes Burning Greed."
+			}
+		},
+		{
+			"id": "burning-curse",
+			"name": "Burning Curse",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Burning_Curse.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Burning_Curse.png",
+				"gloves": "/assets/artifacts/Gloves_of_Burning_Curse.png",
+				"boots": "/assets/artifacts/Boots_of_Burning_Curse.png",
+				"necklace": "/assets/artifacts/Necklace_of_Burning_Curse.png",
+				"ring": "/assets/artifacts/Ring_of_Burning_Curse.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Burning_Curse.png",
+				"earrings": "/assets/artifacts/Earrings_of_Burning_Curse.png"
+			},
+			"bonuses": {
+				"2": "Applies the [Curse] effect: damage taken increases by 20%, but damage dealt increases by 10% and by an additional 0.1% every 1 second(s) (stacks up to 100 times).",
+				"4": "Applies the [Rescue] effect: if HP falls to 25% or less, recovers 25% HP. Activates once per dungeon.",
+				"8": "[Curse] becomes [Burning Curse]: damage dealt increases by 30% and by an additional 0.2% every 1 second(s) (stacks up to 100 times)."
+			}
+		},
+		{
+			"id": "chaotic-wish",
+			"name": "Chaotic Wish",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Chaotic_Wish.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Chaotic_Wish.png",
+				"gloves": "/assets/artifacts/Gloves_of_Chaotic_Wish.png",
+				"boots": "/assets/artifacts/Boots_of_Chaotic_Wish.png",
+				"necklace": "/assets/artifacts/Necklace_of_Chaotic_Wish.png",
+				"ring": "/assets/artifacts/Ring_of_Chaotic_Wish.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Chaotic_Wish.png",
+				"earrings": "/assets/artifacts/Earrings_of_Chaotic_Wish.png"
+			},
+			"bonuses": {
+				"2": "When the user uses their Ultimate Skill, grants the [Wish] effect to the user and team. [Wish]: +8% Attack. Cooldown: 25s.",
+				"4": "[Wish] becomes [Enhanced Wish]: triggers on Ultimate or Support Skill. +10% Attack and Defense, +0.2% HP recovery/s. Duration: 10s. Cooldown: 25s.",
+				"8": "Skill MP Consumption Rate +20%, but Basic Skill cooldown -10%. [Enhanced Wish] becomes Chaotic Wish: triggers on Ultimate, Support, or Core Attack. +15% Attack and Defense, +0.2% HP recovery/s. Duration: 20s. Cooldown: 25s."
+			}
+		},
+		{
+			"id": "chaotic-desire",
+			"name": "Chaotic Desire",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Chaotic_Desire.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Chaotic_Desire.png",
+				"gloves": "/assets/artifacts/Gloves_of_Chaotic_Desire.png",
+				"boots": "/assets/artifacts/Boots_of_Chaotic_Desire.png",
+				"necklace": "/assets/artifacts/Necklace_of_Chaotic_Desire.png",
+				"ring": "/assets/artifacts/Ring_of_Chaotic_Desire.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Chaotic_Desire.png",
+				"earrings": "/assets/artifacts/Earrings_of_Chaotic_Desire.png"
+			},
+			"bonuses": {
+				"2": "When a Break damage attack hits, applies the [Desire] effect: +0.5% elemental damage per stack (max 20). Cooldown: 1.5s. Duration: Permanent.",
+				"4": "At 20 stacks, [Desire] becomes [Enhanced Desire]: +30% Break skill damage, +20% elemental damage for user and team. Duration: Permanent.",
+				"8": "Attacking enemies at their elemental weakness increases Break by 30%. [Enhanced Desire] becomes Chaotic Desire: +50% Break skill damage, +40% elemental damage for user and team."
+			}
+		},
+		{
+			"id": "chaotic-infamy",
+			"name": "Chaotic Infamy",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Chaotic_Infamy.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Chaotic_Infamy.png",
+				"gloves": "/assets/artifacts/Gloves_of_Chaotic_Infamy.png",
+				"boots": "/assets/artifacts/Boots_of_Chaotic_Infamy.png",
+				"necklace": "/assets/artifacts/Necklace_of_Chaotic_Infamy.png",
+				"ring": "/assets/artifacts/Ring_of_Chaotic_Infamy.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Chaotic_Infamy.png",
+				"earrings": "/assets/artifacts/Earrings_of_Chaotic_Infamy.png"
+			},
+			"bonuses": {
+				"2": "Using a skill grants the [Infamy] effect: +1.5% Basic Skill damage per stack (max 20), +1% damage taken per stack (max 20).",
+				"4": "[Infamy] becomes [Enhanced Infamy]: +2.5% Basic Skill damage per stack (max 20). Basic Skill use recovers 5% MP. Cooldown: 30s.",
+				"8": "In Teamfight mode, damage dealt +40%. At 10 [Enhanced Infamy] stacks, becomes Chaotic Infamy: +100% Basic and Ultimate Skill damage, removes damage taken penalty."
+			}
+		},
+		{
+			"id": "glorious-arrogance",
+			"name": "Glorious Arrogance",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Glorious_Arrogance.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Glorious_Arrogance.png",
+				"gloves": "/assets/artifacts/Gloves_of_Glorious_Arrogance.png",
+				"boots": "/assets/artifacts/Boots_of_Glorious_Arrogance.png",
+				"necklace": "/assets/artifacts/Necklace_of_Glorious_Arrogance.png",
+				"ring": "/assets/artifacts/Ring_of_Glorious_Arrogance.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Glorious_Arrogance.png",
+				"earrings": "/assets/artifacts/Earrings_of_Glorious_Arrogance.png"
+			},
+			"bonuses": {
+				"4": "Applies the [Arrogance] effect. [Arrogance]: Increases the damage of skills with the [Break] effect by 30%. When an attack that deals Break damage hits, the user and their team members' Critical Hit damage increases by 15% (Cooldown: 40s). Duration: 40s.",
+				"8": "Increases [Break] effectiveness by 30%. Enhances [Arrogance] to [Brilliant Arrogance]. [Brilliant Arrogance]: Increases the damage of skills with the [Break] effect by 50%. When an attack that deals Break damage hits, Critical Hit damage increases by 25% for user and team (Cooldown: 40s). Duration: 40s. When [Sung Jinwoo] or a [Breaker] equips this, Critical Hit damage increases by 40%. When [Sung Jinwoo] or a [Breaker] uses their Ultimate Skill, Critical Hit Rate increases by 15% for user and team (Cooldown: 60s). Duration: 60s. [Arrogance] cannot be activated."
+			}
+		},
+		{
+			"id": "kamish-obsession",
+			"name": "Kamish's Obsession",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Kamish's_Obession.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Kamish's_Obession.png",
+				"gloves": "/assets/artifacts/Gloves_of_Kamish's_Obession.png",
+				"boots": "/assets/artifacts/Boots_of_Kamish's_Obession.png",
+				"necklace": "/assets/artifacts/Necklace_of_Kamish's_Obession.png",
+				"ring": "/assets/artifacts/Ring_of_Kamish's_Obession.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Kamish's_Obession.png",
+				"earrings": "/assets/artifacts/Earrings_of_Kamish's_Obession.png"
+			},
+			"bonuses": {
+				"4": "Applies the [Obession] effect. [Obession]: Increases the user and team members' Overload damage by 15%. Increases Basic Skill and Ultimate Skill damage by 25% when successfully inflicting Overload damage (Cooldown: 20s). Duration: 20s.",
+				"8": "Enhances [Obession] to [Burning Obession]. [Burning Obession]: Increases the user and team members' Overload damage by 30%. Increases Basic Skill and Ultimate Skill damage by 40% when successfully inflicting Overload damage (Cooldown: 20s). Duration: 20s. When [Sung Jinwoo] or an [Elemental Stacker] equips this, Overload damage increases by 50% and Elemental Weakness damage by 20%. [Obession] cannot be activated."
+			}
+		},
+		{
+			"id": "noble-flesh",
+			"name": "Noble Flesh",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Noble_Flesh.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Noble_Flesh.png",
+				"gloves": "/assets/artifacts/Gloves_of_Noble_Flesh.png",
+				"boots": "/assets/artifacts/Boots_of_Noble_Flesh.png",
+				"necklace": "/assets/artifacts/Necklace_of_Noble_Flesh.png",
+				"ring": "/assets/artifacts/Ring_of_Noble_Flesh.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Noble_Flesh.png",
+				"earrings": "/assets/artifacts/Earrings_of_Noble_Flesh.png"
+			},
+			"bonuses": {
+				"4": "Applies [Fortification] when a Basic Skill or Ultimate Skill hits. [Fortification]: Increases user and team members' Elemental Weakness damage by 15% (Cooldown: 45s). Duration: 45s. Applies [Brilliant Light] when the user tags out or uses an Ultimate Skill. [Brilliant Light]: Increases user and team members' damage dealt by 10% (Cooldown: 20s). Duration: 20s.",
+				"8": "Enhances [Fortification] to [Iron Body] and [Brilliant Light] to [Glory]. [Iron Body]: Increases Elemental Weakness damage by 25% for user and team (Cooldown: 45s). Duration: 45s. [Glory]: Increases damage dealt by 20% for user and team (Cooldown: 20s), restores 10% MP (Cooldown: 20s). Duration: 20s. When [Sung Jinwoo] or a [Supporter] equips this, Basic Skill damage increases by 30% and Attack/Defense/HP by 15%. When [Sung Jinwoo] or a [Supporter] uses their Ultimate Skill, recovers 0.25% HP every 1s (Cooldown: 30s). Duration: 16s. [Fortification] and [Brilliant Light] cannot be activated."
+			}
+		},
+		{
+			"id": "architects-blue-poison",
+			"name": "The Architect's Blue Poison",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_The_Architect's_Blue_Poison.png",
+				"chest": "/assets/artifacts/Body_Armor_of_The_Architect's_Blue_Poison.png",
+				"gloves": "/assets/artifacts/Gloves_of_The_Architect's_Blue_Poison.png",
+				"boots": "/assets/artifacts/Boots_of_The_Architect's_Blue_Poison.png",
+				"necklace": "/assets/artifacts/Necklace_of_The_Architect's_Blue_Poison.png",
+				"ring": "/assets/artifacts/Ring_of_The_Architect's_Blue_Poison.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_The_Architect's_Blue_Poison.png",
+				"earrings": "/assets/artifacts/Earrings_of_The_Architect's_Blue_Poison.png"
+			},
+			"bonuses": {
+				"4": "Applies the [Poison] effect. [Poison]: Increases Basic Skill damage by 20%. Increases Attack and Defense by 1% every 1s (stacking up to 30 times). Duration: Permanent.",
+				"8": "Enhances [Poison] to [Blue Poison]. [Blue Poison]: Increases Defense Penetration by 20%. Increases Basic Skill damage by 30%. Increases Attack and Defense by 2.5% every 1s (stacks up to 30 times). Duration: Permanent. When [Sung Jinwoo] or a [Striker] equips this, damage dealt increases by 50%. [Poison] cannot be activated."
+			}
+		}
+	]
+}

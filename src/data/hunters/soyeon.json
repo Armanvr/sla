@@ -1,0 +1,226 @@
+{
+	"name": "SOYEON",
+	"category": "Breaker",
+	"alias": null,
+	"title": "The Weight of Being a Leader",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Wind",
+	"class": "Breaker",
+	"country": "Neverland",
+	"guild": "Forever",
+	"mainAbility": "High-speed Dual-wielding Pistols",
+	"exclusiveWeapon": "Blazing Flash",
+	"releaseDate": "2025-08-28",
+	"occupation": ["Hunter"],
+	"affiliation": ["Forever", "i-dle"],
+	"gender": "Female",
+	"age": 27,
+	"species": "Human",
+	"image": "/assets/hunters/SOYEON.png",
+	"icon": "/assets/hunters/_icons/SOYEON_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1507,
+			"attack": 872,
+			"defense": 773,
+			"totalPower": 3984
+		},
+		"maxLevel": {
+			"hp": 12598,
+			"attack": 6720,
+			"defense": 5957,
+			"totalPower": 52105
+		},
+		"primaryStat": "Defense"
+	},
+	"elements": [
+		{
+			"name": "Wind",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Rapid Verse",
+				"description": "SOYEON effortlessly draws her weapon and fires. Deals Wind elemental damage. Deals weak Break damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "167–250.5% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "210–315% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "262–393% DEF"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Remix Shot",
+				"description": "SOYEON blasts enemies with her firearms crossed. Deals Wind elemental damage. Deals weak Break damage. When this skill hits it [Knocks Down] the target. Enhanced version: Remix Shot Ver. 2 (damage +50%).",
+				"damage": "635–952.5% DEF",
+				"element": "Wind",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Kill the Mic",
+				"description": "SOYEON leaps into a curved arc and fires toward the ground from the apex. Deals Wind elemental damage. Deals medium Break damage. When this skill hits it inflicts the [Airborne] effect. The user gains [Super Armor] while using this skill. Enhanced version: Kill the Mic Ver. 2 (damage +100%).",
+				"damage": "1584–2376% DEF",
+				"cooldown": 20,
+				"mpCost": "80",
+				"effects": ["Airborne", "Super Armor"],
+				"icon": ""
+			},
+			{
+				"name": "Hook and Chain",
+				"description": "SOYEON fires a special homing bullet that tracks the enemy. Deals Wind elemental damage. Deals medium Break damage. Enhanced version: Hook and Chain Ver. 2 (damage +50%).",
+				"damage": "2020–3030% DEF",
+				"cooldown": 20,
+				"mpCost": "110",
+				"effects": [],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Trigger Flow",
+				"description": "SOYEON rapidly appears and moves around the battlefield while firing bullets. Deals Wind elemental damage. Deals medium Break damage. When this skill hits it inflicts the [Airborne] effect. Using this skill activates the [Lockdown] effect (Break duration +3s when putting a target in Break state, Duration: Infinite). When this skill hits it triggers [Underdog] on the target: Wind damage taken +8%, damage taken +8%, Duration: 20s.",
+				"damage": "890–1829.44% DEF",
+				"cooldown": 25,
+				"effects": ["Airborne", "Lockdown", "Underdog"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Cypher Flow",
+				"description": "SOYEON moves quickly through her enemies while unleashing a barrage of bullets. Deals Wind elemental damage. Deals medium Break damage. When this skill hits it inflicts the [Airborne] effect. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Blind] effects, or a Shadow Skill.",
+				"damage": "1100–1650% DEF",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Killing Verse",
+				"description": "SOYEON unleashes a rapid barrage of bullets, almost invisible to the eye. Deals Wind elemental damage. Deals heavy Break damage. When this skill hits it inflicts the [Airborne] effect.",
+				"damage": "5312–7968% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Beat Maker / Drop the Beat / Magnum",
+		"description": "The entire team gains [FOREVER] (+5% damage dealt, stacks up to 3 times, Infinite) when entering the Encore Mission and Instance Dungeon modes. Using Kill the Mic, Hook and Chain, Kill the Mic Ver. 2, or Hook and Chain Ver. 2 loads the [Magnum] with 1 round. Using Hook and Chain triggers [Beat Maker] (Kill the Mic → Ver. 2 +100% dmg; Hook and Chain → Ver. 2 +50% dmg; Super Armor while using them; Duration: 10s). Using Kill the Mic within 20s after Beat Maker is removed triggers [Drop the Beat]: activates Core Attack and changes Remix Shot to Remix Shot Ver. 2 (+50% damage); every fire after using Remix Shot Ver. 2 consumes 1 Magnum round and triggers [Magnum Chain] (Core Attack damage +15%, Power Gauge +1.2%, Duration: 3s, stacks up to 6 times); Duration: 20s.",
+		"icon": null
+	},
+	"advancements": [
+		"When SOYEON or an ally successfully puts the target in [Break], the Break duration increases by 3s. Using Kill the Mic, Hook and Chain, or their Ver. 2 versions loads 2 rounds into the [Magnum]. Each time Hook and Chain or Hook and Chain Ver. 2 hits, it triggers [Diss Battle] on the target: Wind damage taken +1%, damage taken +1%, Duration: 30s, stacks up to 5 times.",
+		"[Break] effectiveness increases by 20%.",
+		"[Beat Boost] effect applied to entire team when entering a stage: Ultimate Skill damage +15%, Wind damage +10%, Duration: Infinite. When loading the [Magnum], if the third hunter is Wind element, that hunter regains 10% Power Gauge.",
+		"The Wind damage of team members increases by 3% for every Wind ally.",
+		"[Magnum Chain] enhanced: Core Attack damage +30%, restores 8 MP, Power Gauge +1.2%, Duration: 3s, stacks up to 6 times. [Diss Battle] enhanced: Wind damage taken +1%, damage taken +1%, Duration: 30s, stacks up to 10 times."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Damage Increase", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Additional Defense", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Additional Defense"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Wind Damage (%)",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	}
+}

@@ -1,0 +1,240 @@
+{
+	"name": "Cha Hae-In",
+	"category": "Striker",
+	"alias": null,
+	"title": "Battlefield Dancer",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Light",
+	"class": "Fighter",
+	"country": "Korea",
+	"guild": "Hunters Guild",
+	"mainAbility": "Light Magic Swordsmanship",
+	"exclusiveWeapon": "Sword of Light",
+	"releaseDate": "2024-05-08",
+	"occupation": ["Hunter"],
+	"affiliation": ["Hunters Guild"],
+	"gender": "Female",
+	"age": 23,
+	"species": "Human",
+	"image": "/assets/hunters/Cha_Hae-In.png",
+	"icon": "/assets/hunters/_icons/Cha_Hae-In_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1500,
+			"attack": 875,
+			"defense": 772,
+			"totalPower": 3983
+		},
+		"maxLevel": {
+			"hp": 10443,
+			"attack": 5633,
+			"defense": 4973,
+			"totalPower": 43398
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Light",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Swift Sword",
+				"description": "Hae-In attacks the enemy by swinging her sword quickly.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "210–315% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "222–333% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "237–355.5% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Cha_Hae-In/Cha_Hae-In_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Sword Dance",
+				"description": "Hae-In performs a series of slashes at incredible speed. Final hit inflicts [Airborne].",
+				"damage": "1137–1705.5% ATK",
+				"element": "Light",
+				"icon": "/assets/hunters/Cha_Hae-In/Cha_Hae-In_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "The Dancer",
+				"description": "Hae-In attacks by charging in and stabbing the target. Applies [Waltz of the Sword] (The Dancer usable unlimited times for 3s). Applies [The Dancer] effect (Attack and Critical Hit Damage +8%, stacks x3, 10s). Inflicts [Unrecoverable] (target cannot recover HP, 30s).",
+				"damage": "1328–1992% ATK",
+				"cooldown": 12,
+				"mpCost": "25–33",
+				"effects": ["Waltz of the Sword", "The Dancer", "Unrecoverable"],
+				"icon": "/assets/hunters/Cha_Hae-In/Cha_Hae-In_Skill_1.png"
+			},
+			{
+				"name": "Sword of Light",
+				"description": "Hae-In slashes the enemy continuously with a large sword of light, then finishes with a powerful strike. Knocks Down on final hit. Damage to [Brand] targets +15%. Applies [Unrecoverable] on final hit.",
+				"damage": "2950–4425% ATK",
+				"cooldown": 12,
+				"mpCost": "200–264",
+				"effects": ["Knock Down", "Unrecoverable", "+15% damage vs Brand"],
+				"icon": "/assets/hunters/Cha_Hae-In/Cha_Hae-In_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Light Strike",
+				"description": "Hae-In attacks the enemy by unleashing a powerful downward slash with her Sword of Light. Knocks Down, applies [Unrecoverable] and [Brand] (Critical Hit Rate and Critical Hit Damage +12%, 15s).",
+				"damage": "956–1956.11% ATK",
+				"cooldown": 25,
+				"effects": ["Knock Down", "Unrecoverable", "Brand"],
+				"icon": "/assets/hunters/Cha_Hae-In/Cha_Hae-In_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Rampant of Light",
+				"description": "Hae-In approaches the enemy quickly and launches them into the air, then attacks with a large slash of her Sword of Light.",
+				"damage": "1170–1755% ATK",
+				"cooldown": 20,
+				"effects": ["Airborne", "Brand"],
+				"icon": "/assets/hunters/Cha_Hae-In/Cha_Hae-In_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Light of the End",
+				"description": "Hae-In takes a mighty swing at the enemy with a sword imbued with the power of light. Inflicts [Airborne]. Damage vs [Brand] targets increased by 30%.",
+				"damage": "3756–5634% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne", "+30% damage vs Brand"],
+				"icon": "/assets/hunters/Cha_Hae-In/Cha_Hae-In_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Brand",
+		"description": "When The Dancer hits, 66% chance to [Brand] the target. [Brand]: Increases Critical Hit Rate and Critical Hit Damage by 12% to targets hit by this skill (15s).",
+		"icon": null
+	},
+	"advancements": [
+		"[The Dancer] effect can now stack up to 5 times. Grants [Super Armor] while [Waltz of the Sword] is active.",
+		"Critical Hit Rate increases by 16%.",
+		"When attacking a [Branded] target, The Dancer and Sword of Light damage increases by 100%.",
+		"Critical Hit Damage increases by 16%.",
+		"Damage and Critical Rate of Light of the End increases by 20% and 2% respectively per stack of [The Dancer] (up to 5 stacks)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["behemoth", "behemoth", "behemoth", "behemoth"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Light Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Sword of Light",
+		"icon": "/assets/weapons/cha-hae-in/Sword_of_Light_Icon.png"
+	}
+}

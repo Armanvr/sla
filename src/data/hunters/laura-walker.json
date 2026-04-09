@@ -1,0 +1,235 @@
+{
+	"name": "Laura Walker",
+	"category": "Supporter",
+	"alias": null,
+	"title": "Scavenger Guild's Unspoken Second-in-Command",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Light",
+	"class": "Supporter",
+	"country": "USA",
+	"guild": "Scavenger Guild",
+	"mainAbility": "Black Lightning",
+	"exclusiveWeapon": "Night-cleaving Flash",
+	"releaseDate": "2025-11-20",
+	"occupation": ["Hunter"],
+	"affiliation": ["Scavenger Guild"],
+	"gender": "Female",
+	"age": 28,
+	"species": "Human",
+	"image": "/assets/hunters/Laura_Walker.png",
+	"icon": "/assets/hunters/_icons/Laura_Walker_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1518,
+			"attack": 879,
+			"defense": 759,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 12690,
+			"attack": 6770,
+			"defense": 5848,
+			"totalPower": 54104
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Light",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Workflow",
+				"description": "Laura swings her whip and uses the end of it to deliver a powerful stab. Deals Light elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "146–219% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "210–315% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "216–324% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Deadline",
+				"description": "Laura delivers a powerful downward whip strike. Deals Light elemental damage. When this skill hits it Knocks Down the target.",
+				"damage": "874–1311% ATK",
+				"element": "Light",
+				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Checkpoint",
+				"description": "Laura strikes down with her whip to summon lightning. Deals Light elemental damage. When this skill hits it Knocks Down the target.",
+				"damage": "940–1410% ATK",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": ["Knock Down"],
+				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Skill_1.png"
+			},
+			{
+				"name": "Task Loop",
+				"description": "Laura swings her whip repeatedly while the Skill Button is held down. Deals Light elemental damage. When the last attack in the combo hits it Knocks Down the target.",
+				"damage": "2028–3042% ATK",
+				"cooldown": 12,
+				"mpCost": "200–264",
+				"effects": ["Knock Down"],
+				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Corporate Escort",
+				"description": "After a short jump, Laura swings her whip repeatedly in midair. Deals Light elemental damage. When this skill hits it inflicts Airborne and Paralyze (3s interrupt) on the target. Using this skill grants the [Develop] effect (+15% damage dealt, removes debuffs, 30s) to the entire team.",
+				"damage": "615–1264.17% ATK",
+				"cooldown": 25,
+				"effects": ["Airborne", "Paralyze", "Develop"],
+				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Conference Call",
+				"description": "Laura swings her whip repeatedly while in midair. Deals Light elemental damage. Triggers via Extreme Evasion, Core Attack, Ultimate Skill, Stun, Blind, or Shadow Skill. When the final hit lands it Knocks Down the target.",
+				"damage": "930–1395% ATK",
+				"cooldown": 20,
+				"effects": ["Knock Down"],
+				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Apex Administrator",
+				"description": "Laura manifests a giant leopard enveloped in lightning. Deals Light elemental damage. When this skill hits it inflicts Airborne on the target.",
+				"damage": "3022–4533% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Black Lightning Protocol",
+		"description": "Using Checkpoint activates the [Deadline] effect 1 time. Using Corporate Escort or Apex Administrator when the entire team is comprised of Light members grants [Momentum] (+10% Defense Penetration, -10% damage taken, 60s) to the entire team. Using Task Loop grants the [Scout] effect on Light team members (restores HP equal to 2% of Laura's ATK every 3s, grants Shield equal to 3% of Laura's ATK every 3s; when Shield is active activates [Assistant]: ATK and DEF +1% per stack up to 10 stacks, 10s).",
+		"icon": null
+	},
+	"advancements": [
+		"When the user tags out, grants [Business] to Light team members after 3.5s (excluding Laura Walker): when a Light attack hits, activates [Off the Record] (Laura appears and deals 1000% ATK Light damage, removes debuffs from entire team, 5s cooldown). Each time Deadline, Task Loop, or Off the Record hit, they inflict [Cutoff] on the target (increases Light damage taken by 1%, 60s, stacks up to 20 times). Using Corporate Escort enhances [Develop] to +30% damage dealt.",
+		"All team members' Attack and Defense increases by 9%.",
+		"The [Scout] and [Assistant] effects are enhanced: Scout restores HP equal to 4% of Laura's ATK every 3s and grants Shield equal to 6% of Laura's ATK every 3s. Assistant increases ATK and DEF by 1.7% per stack (up to 10). Using Checkpoint restores 50% of the user's Power Gauge.",
+		"Light team members' damage dealt increases by 30%.",
+		"The [Professional] effect is activated when the user enters the stage (Task Loop damage +250%, damage dealt +200%, using Task Loop grants Shield equal to 10% of Laura's ATK for 3s, infinite duration). [Cutoff] enhanced to +1.5% Light damage taken per stack. [Momentum] enhanced to +20% Defense Penetration and -20% damage taken."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120 (A)",
+			"armor": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"],
+			"jewelry": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"]
+		},
+		{
+			"name": "Build Niv. 120 (B)",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"],
+			"jewelry": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Light Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Night-cleaving Flash",
+		"icon": "/assets/weapons/laura-walker/Night-cleaving_Flash_Icon.png"
+	}
+}

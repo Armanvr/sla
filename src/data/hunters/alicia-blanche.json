@@ -1,0 +1,240 @@
+{
+	"name": "Alicia Blanche",
+	"category": "Striker",
+	"alias": null,
+	"title": "Ice Witch",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Water",
+	"class": "Mage",
+	"country": "France",
+	"guild": "The Justitia Guild",
+	"mainAbility": "Ice Magic",
+	"exclusiveWeapon": "Ice Witch",
+	"releaseDate": "2024-05-29",
+	"occupation": ["Hunter"],
+	"affiliation": ["The Justitia Guild"],
+	"gender": "Female",
+	"age": 21,
+	"species": "Human",
+	"image": "/assets/hunters/Alicia_Blanche.png",
+	"icon": "/assets/hunters/_icons/Alicia_Blanche_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1529,
+			"attack": 872,
+			"defense": 760,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 10647,
+			"attack": 5615,
+			"defense": 4894,
+			"totalPower": 43413
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Water",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Touch of Winter",
+				"description": "Summons ice crystals that deal Water elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "190–285% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "195–292.5% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "200–300% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Alicia_Blanche/Hunter_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Frost Arrow",
+				"description": "Fires an ice arrow that pierces through enemies with ice fragments.",
+				"damage": "1050–1575% ATK",
+				"element": "Water",
+				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Winter Storm",
+				"description": "Unleashes a storm of ice that has a 30% chance to Freeze. Grants Ice Body Armor (6% ATK as shield, 8s).",
+				"damage": "1040–1560% ATK",
+				"cooldown": 5,
+				"mpCost": "200–264",
+				"effects": ["Freeze (30%)", "Ice Body Armor"],
+				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Skill_1.png"
+			},
+			{
+				"name": "Ice Needle",
+				"description": "Launches a barrage of ice needles that launch enemies into the air.",
+				"damage": "1850–2775% ATK",
+				"cooldown": 12,
+				"mpCost": "250–330",
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Ice Detonation",
+				"description": "Detonates ice to deal damage and send enemies airborne. Grants Ice Body Armor.",
+				"damage": "600–1233.33% ATK",
+				"cooldown": 25,
+				"effects": ["Airborne", "Freeze", "Ice Body Armor"],
+				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Eternal Frost",
+				"description": "Triggers on Extreme Evasion, Core, Ultimate, Stun, or Blind. Sends enemies airborne and grants Ice Body Armor.",
+				"damage": "1000–1500% ATK",
+				"cooldown": 20,
+				"effects": ["Airborne", "Ice Body Armor"],
+				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Absolute Zero",
+				"description": "Drops the temperature to absolute zero, dealing massive damage. Inflicts Airborne, Freeze, and applies 5 Frost stacks.",
+				"damage": "3100–4650% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne", "Freeze", "5× Frost"],
+				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Frost Accumulation",
+		"description": "Eternal Frost, Winter Storm, and Ice Needle apply Frost stacks. Each stack boosts Core Attack (Bitter Cold Spear) damage by 60% (max 180% at 5 stacks).",
+		"icon": null
+	},
+	"advancements": [
+		"Shield grants +20% Critical Rate and Critical Damage. Absolute Zero applies Winter Chill (100% ATK every 3s, 30s, max 10 stacks).",
+		"Eternal Frost, Winter Storm, and Ice Needle each grant +1 Frost stack.",
+		"+30% damage to Frozen targets. Frost Arrow on Winter Chill targets increases Attack +12% for 60s (max 3 stacks).",
+		"+16% Water damage.",
+		"Bitter Cold Spear deals +50% damage and inflicts Freeze. +10% per Winter Chill stack to affected targets."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["burning-curse", "burning-curse", "burning-curse", "burning-curse"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "nameless-demons-magisphere"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Ice Witch",
+		"icon": "/assets/weapons/alicia-blanche/Ice_Witch_Icon.png"
+	}
+}

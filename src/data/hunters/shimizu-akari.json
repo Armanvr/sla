@@ -1,0 +1,235 @@
+{
+	"name": "Shimizu Akari",
+	"category": "Supporter",
+	"alias": null,
+	"title": "",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Light",
+	"class": "Healer",
+	"country": "Japan",
+	"guild": "Blade Guild",
+	"mainAbility": "Greataxe Skills / Power of the Sun",
+	"exclusiveWeapon": "The Price of a Promise",
+	"releaseDate": "2024-12-19",
+	"occupation": ["Hunter"],
+	"affiliation": ["Blade Guild"],
+	"gender": "Female",
+	"age": 20,
+	"species": "Human",
+	"image": "/assets/hunters/Shimizu_Akari.png",
+	"icon": "/assets/hunters/_icons/Shimizu_Akari_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1727,
+			"attack": 781,
+			"defense": 750,
+			"totalPower": 3977
+		},
+		"maxLevel": {
+			"hp": 12025,
+			"attack": 5028,
+			"defense": 4832,
+			"totalPower": 43515
+		},
+		"primaryStat": "HP"
+	},
+	"elements": [
+		{
+			"name": "Light",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Axe of Punishment",
+				"description": "Akari swings her axe to attack, dealing Light elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "116–174% Max HP"
+					},
+					{
+						"stage": 2,
+						"damage": "120–180% Max HP"
+					},
+					{
+						"stage": 3,
+						"damage": "124–186% Max HP"
+					}
+				],
+				"icon": "/assets/hunters/Shimizu_Akari/Hunter_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Judgement Strike",
+				"description": "Akari charges, penetrates the enemy, and strikes down powerfully. Inflicts Airborne on final hit.",
+				"damage": "465–697.5% Max HP",
+				"element": "Light",
+				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Devastate",
+				"description": "Akari swings her axe twice, does a follow-up attack, then finally does a diagonal slash. Knock Down on final hit, Airborne from bursting flame.",
+				"damage": "624–936% Max HP",
+				"cooldown": 20,
+				"mpCost": "250–330",
+				"effects": ["Knock Down", "Airborne"],
+				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Skill_1.png"
+			},
+			{
+				"name": "Light of Dawn",
+				"description": "Akari uses the power of the sun to light her axe on fire, then attacks. Activates Holy Fire on Light team members (charges Power Gauge 0.6%/s, 24s). Holy Fire grants Echo of Light: 2% Max HP Shield (stacks 15x).",
+				"damage": "1156–1734% Max HP",
+				"cooldown": 20,
+				"mpCost": "250–300",
+				"effects": ["Holy Fire", "Echo of Light"],
+				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Guiding Light",
+				"description": "After gathering enemies, Akari releases a powerful attack with her fiery axe. Applies Halo of Light: +10% damage, +10% Critical Rate (Basic/Ultimate), restores 10% Max HP (24s).",
+				"damage": "270–555% Max HP",
+				"cooldown": 25,
+				"effects": ["Halo of Light"],
+				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Heart Strike of Blazing Fire",
+				"description": "Akari rushes forward and releases a powerful upward diagonal strike. Triggers on Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Activates Divine Flame: +1% Light damage taken (stacks 10x, 24s).",
+				"damage": "952–1428% Max HP",
+				"cooldown": 20,
+				"effects": ["Divine Flame"],
+				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Ring of Fire",
+				"description": "Akari gathers sun power, creates annular eclipse, splits the world. Knock Down on hit. Grants Brilliance to Light members (+8% damage, +8% Crit Rate, 8% Max HP restore, 24s). Applies Ring of Fire: +12% Light damage taken (24s).",
+				"damage": "1523–2284.5% Max HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Knock Down", "Brilliance", "Ring of Fire"],
+				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Truth-seeker of Divine Flame",
+		"description": "Activates at battle start. When using Light of Dawn, Devastate becomes Heavy Attack: Devastate (+100% damage). Dash hit activates Extreme Evasion, deals damage, and inflicts Stun.",
+		"icon": null
+	},
+	"advancements": [
+		"Enhances Truth-seeker of Divine Flame and Holy Fire. Divine Flame inflicts 2x stacks; Light attacks activate Echo of Light (20s cooldown). Holy Fire charges Power Gauge 1.6%/s, reduces damage 12%.",
+		"+5% Max HP; +5% Shield for Light members.",
+		"Divine Flame enhanced to 1.6% damage. Auto-triggers Ring of Fire at max stacks. Ring of Fire increases Light damage taken 20% (60s duration).",
+		"+3% Light damage per Light member; +3% Defense for highest Defense member.",
+		"Brilliance enhanced: +16% damage, +16% Crit Rate, 16% Max HP restore."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120 (A)",
+			"armor": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"],
+			"jewelry": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"]
+		},
+		{
+			"name": "Build Niv. 120 (B)",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"],
+			"jewelry": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Additional HP", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Additional HP"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Defense Penetration", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Light Damage (%)",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "The Price of a Promise",
+		"icon": "/assets/weapons/shimizu-akari/The_Price_of_a_Promise_Icon.png"
+	}
+}

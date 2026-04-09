@@ -22,7 +22,7 @@ function InfoRow({ label, value }: { label: string; value: string }) {
 	)
 }
 
-function StatCard({ stat, primary }: { stat: { key: string; label: string; description: string }; primary: boolean }) {
+function _StatCard({ stat, primary }: { stat: { key: string; label: string; description: string }; primary: boolean }) {
 	const icon = statIcons[stat.key] ?? '✦'
 	return (
 		<div
@@ -65,7 +65,7 @@ export function StatBar({
 export function HeroSection({ data }: { data: HunterData }) {
 	return (
 		<div class='flex flex-col lg:flex-row gap-8'>
-			<div class='lg:w-1/3 flex justify-center'>
+			<div class='lg:w-1/3 flex flex-col items-center gap-4'>
 				<div class='relative'>
 					<div class='absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl blur-3xl' />
 					<img
@@ -74,6 +74,19 @@ export function HeroSection({ data }: { data: HunterData }) {
 						class='relative w-72 lg:w-full max-w-sm rounded-2xl border border-zinc-700/50 object-cover'
 					/>
 				</div>
+				{data.weapon && (
+					<div class='flex items-center gap-3 bg-zinc-800/50 border border-zinc-700/50 rounded-xl px-4 py-3 w-full max-w-sm'>
+						<img
+							src={data.weapon.icon}
+							alt={data.weapon.name}
+							class='w-12 h-12 rounded-lg border border-zinc-700/50 object-contain flex-shrink-0'
+						/>
+						<div>
+							<p class='text-[10px] text-zinc-500 uppercase tracking-widest mb-0.5'>Weapon</p>
+							<p class='text-sm text-zinc-200 font-medium leading-tight'>{data.weapon.name}</p>
+						</div>
+					</div>
+				)}
 			</div>
 
 			<div class='lg:w-2/3 space-y-6'>
@@ -113,23 +126,6 @@ export function HeroSection({ data }: { data: HunterData }) {
 					{data.exclusiveWeapon && <InfoRow label='Weapon' value={data.exclusiveWeapon} />}
 					{data.releaseDate && <InfoRow label='Release' value={data.releaseDate} />}
 				</div>
-
-				{data.relatives.length > 0 && (
-					<div>
-						<h3 class='text-lg font-semibold mb-3'>Relatives</h3>
-						<div class='flex flex-wrap gap-2'>
-							{data.relatives.map((rel) => (
-								<span
-									key={rel.name}
-									class='bg-zinc-800 border border-zinc-700/50 rounded-lg px-3 py-1.5 text-sm'
-								>
-									<span class='text-zinc-400'>{rel.relation}:</span>{' '}
-									<span class='text-zinc-200'>{rel.name}</span>
-								</span>
-							))}
-						</div>
-					</div>
-				)}
 			</div>
 		</div>
 	)

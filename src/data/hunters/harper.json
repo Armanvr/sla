@@ -1,0 +1,230 @@
+{
+	"name": "Harper",
+	"category": "Breaker",
+	"alias": null,
+	"title": "Harper",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Dark",
+	"class": "Breaker",
+	"country": "England",
+	"guild": "Helpers",
+	"mainAbility": "Condense, amplify, and project mana power onto objects",
+	"exclusiveWeapon": "Mischievous",
+	"releaseDate": "2024-09-12",
+	"occupation": ["Hunter"],
+	"affiliation": ["Helpers"],
+	"gender": "Female",
+	"age": 16,
+	"species": "Human",
+	"image": "/assets/hunters/Harper.png",
+	"icon": "/assets/hunters/_icons/Harper_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1711,
+			"attack": 769,
+			"defense": 771,
+			"totalPower": 3980
+		},
+		"maxLevel": {
+			"hp": 11910,
+			"attack": 4952,
+			"defense": 4962,
+			"totalPower": 43506
+		},
+		"primaryStat": "HP"
+	},
+	"elements": [
+		{
+			"name": "Dark",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Hammer Attack",
+				"description": "After riding her hammer to charge the enemy, Harper spins once to attack.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "193–289.5% HP"
+					},
+					{
+						"stage": 2,
+						"damage": "197–295.5% HP"
+					},
+					{
+						"stage": 3,
+						"damage": "204–306% HP"
+					}
+				],
+				"icon": "/assets/hunters/Harper/Harper_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Hammer Dash!",
+				"description": "After dashing a short distance, Harper strikes down with her hammer. Inflicts [Airborne] and [Paralyze] (interrupts target for 3 seconds) on hit.",
+				"damage": "626–939% HP",
+				"element": "Dark",
+				"icon": "/assets/hunters/Harper/Harper_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Hammer Drift!",
+				"description": "Harper draws a circle while riding her hammer and charges to attack. Knocks Down on first hit; inflicts [Airborne] on final hit.",
+				"damage": "824–1236% HP",
+				"cooldown": 15,
+				"mpCost": "250–330",
+				"effects": ["Knock Down", "Airborne"],
+				"icon": "/assets/hunters/Harper/Harper_Skill_1.png"
+			},
+			{
+				"name": "The Tenderizer!",
+				"description": "Harper strikes down her hammer rapidly while the Skill button is held. Inflicts [Airborne] and [Porkchopped] (increases Ultimate Skill damage taken from Dark hunters by 1%, stacks up to 12 times, 20 seconds) on each hit.",
+				"damage": "1467–2200.5% HP",
+				"cooldown": 15,
+				"mpCost": "250–330",
+				"effects": ["Airborne", "Porkchopped"],
+				"icon": "/assets/hunters/Harper/Harper_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Harper's Thunder",
+				"description": "Harper jumps towards the enemy with all her might, attacks as swift as a bolt of lightning, and finally strikes down with her hammer. Inflicts [Airborne] and [Paralyze] (3 seconds) on hit.",
+				"damage": "360–740% HP",
+				"cooldown": 25,
+				"effects": ["Airborne", "Paralyze"],
+				"icon": "/assets/hunters/Harper/Harper_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Hammer Rush",
+				"description": "Harper jumps towards the enemy with all her might and strikes down with her hammer. Inflicts [Airborne] on hit.",
+				"damage": "327–490.5% HP",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Harper/Harper_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Harper's Mjölnr",
+				"description": "Harper jumps into the air and throws her hammer powerfully to attack. Knocks Down on first hit; inflicts [Airborne] on final hit.",
+				"damage": "1923–2884.5% HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Knock Down", "Airborne"],
+				"icon": "/assets/hunters/Harper/Harper_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Super Magic Booster",
+		"description": "[Super Magic Booster] is activated at the start of battle: when the user uses Hammer Drift! it increases their Critical Hit Rate and Critical Hit Damage by 5% (stacks up to 4 times, infinite duration). When the user uses Hammer Drift! it activates [London Drift]: increases damage dealt by 20% for 10 seconds.",
+		"icon": null
+	},
+	"advancements": [
+		"A [Shield] equal to 50% of the user's HP is granted while using The Tenderizer!. The max number of hits for The Tenderizer! increases by 4 and the skill damage increases by 160%.",
+		"Break effectiveness increases by 20%.",
+		"When using Hammer Drift!, the user instantly attacks enemies within 5m range. [London Drift] is enhanced (60% damage increase for 15 seconds). Harper's Mjölnr changes to Harper & Charlotte's Mjölnr. The user's Ultimate Skill damage increases by 70%.",
+		"All team members' Defense and HP increase by 8%.",
+		"[Porkchopped] is enhanced (2% stacking up to 32 times, 30 seconds). [Super Magic Booster] becomes [Twin Super Magic Booster] (Critical Hit Rate and Critical Hit Damage +6%, stacks up to 7 times, infinite duration)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "nameless-demons-deception",
+		"body": "nameless-demons-horn",
+		"spirit": "ferocious-protectors-claw"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Additional HP", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Additional HP"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Defense Penetration", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Dark Damage (%)",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Mischievous",
+		"icon": "/assets/weapons/harper/Mischievous_Icon.png"
+	}
+}

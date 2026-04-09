@@ -31,8 +31,18 @@ function BonusText({ text }: { text: string }) {
 	return (
 		<>
 			{parts.map((part, i) => {
-				if (/^\[/.test(part)) return <span key={i} class='text-blue-400'>{part}</span>
-				if (part === 'Attack' || part === 'Defense') return <span key={i} class='text-orange-400 font-semibold'>{part}</span>
+				if (/^\[/.test(part))
+					return (
+						<span key={i} class='text-blue-400'>
+							{part}
+						</span>
+					)
+				if (part === 'Attack' || part === 'Defense')
+					return (
+						<span key={i} class='text-orange-400 font-semibold'>
+							{part}
+						</span>
+					)
 				return <span key={i}>{part}</span>
 			})}
 		</>
@@ -55,7 +65,9 @@ export function StatsPanel({ main, secondary }: { main?: string | null; secondar
 				<div class='mt-1 bg-zinc-800/20 border border-zinc-700/30 rounded-lg px-3 py-2 space-y-0.5'>
 					{main && <p class='text-xs font-bold text-zinc-200'>{main}</p>}
 					{secondary.map((s) => (
-						<p key={s} class='text-xs text-zinc-400'>{s}</p>
+						<p key={s} class='text-xs text-zinc-400'>
+							{s}
+						</p>
 					))}
 				</div>
 			)}
@@ -63,26 +75,47 @@ export function StatsPanel({ main, secondary }: { main?: string | null; secondar
 	)
 }
 
-function ArtifactIcon({ src, name, sizeClass = 'w-10 h-10' }: { src?: string | null; name: string; sizeClass?: string }) {
+function ArtifactIcon({
+	src,
+	name,
+	sizeClass = 'w-10 h-10',
+}: {
+	src?: string | null
+	name: string
+	sizeClass?: string
+}) {
 	if (src) {
 		return (
 			<img
 				src={src}
 				alt={name}
 				class={`${sizeClass} rounded-lg object-cover flex-shrink-0 bg-zinc-700/40`}
-				onError={(e) => { ;(e.target as HTMLImageElement).style.display = 'none' }}
+				onError={(e) => {
+					;(e.target as HTMLImageElement).style.display = 'none'
+				}}
 			/>
 		)
 	}
 	return (
-		<div class={`${sizeClass} rounded-lg bg-zinc-700/40 flex items-center justify-center text-zinc-500 text-xs flex-shrink-0`}>
+		<div
+			class={`${sizeClass} rounded-lg bg-zinc-700/40 flex items-center justify-center text-zinc-500 text-xs flex-shrink-0`}
+		>
 			?
 		</div>
 	)
 }
 
 function EquipmentSlot({
-	slotLabel, iconKey, value, availableSets, allSets, isOpen, onToggle, onSelect, onClear, stats,
+	slotLabel,
+	iconKey,
+	value,
+	availableSets,
+	allSets,
+	isOpen,
+	onToggle,
+	onSelect,
+	onClear,
+	stats,
 }: {
 	slotLabel: string
 	iconKey: string
@@ -123,7 +156,10 @@ function EquipmentSlot({
 					<button
 						type='button'
 						tabIndex={0}
-						onClick={(e) => { e.stopPropagation(); onClear() }}
+						onClick={(e) => {
+							e.stopPropagation()
+							onClear()
+						}}
 						// biome-ignore lint/complexity/noCommaOperator: Quick fix
 						onKeyDown={(e) => e.key === 'Enter' && (e.stopPropagation(), onClear())}
 						class='text-zinc-500 hover:text-red-400 transition-colors text-lg leading-none flex-shrink-0 cursor-pointer'
@@ -166,10 +202,22 @@ function EquipmentSlot({
 	)
 }
 
-export function EquipmentSection({ builds, equipmentStats, showDetails = true }: { builds?: Build[]; equipmentStats?: EquipmentStats; showDetails?: boolean }) {
+export function EquipmentSection({
+	builds,
+	equipmentStats,
+	showDetails = true,
+}: {
+	builds?: Build[]
+	equipmentStats?: EquipmentStats
+	showDetails?: boolean
+}) {
 	const defaultBuild = builds?.[0] ?? null
-	const [armorSlots, setArmorSlots] = useState<(string | null)[]>(defaultBuild ? [...defaultBuild.armor] : [null, null, null, null])
-	const [jewelrySlots, setJewelrySlots] = useState<(string | null)[]>(defaultBuild ? [...defaultBuild.jewelry] : [null, null, null, null])
+	const [armorSlots, setArmorSlots] = useState<(string | null)[]>(
+		defaultBuild ? [...defaultBuild.armor] : [null, null, null, null],
+	)
+	const [jewelrySlots, setJewelrySlots] = useState<(string | null)[]>(
+		defaultBuild ? [...defaultBuild.jewelry] : [null, null, null, null],
+	)
 	const [openPicker, setOpenPicker] = useState<{ type: 'armor' | 'jewelry'; index: number } | null>(null)
 	const [activeBuildName, setActiveBuildName] = useState<string | null>(defaultBuild?.name ?? null)
 
@@ -186,7 +234,12 @@ export function EquipmentSection({ builds, equipmentStats, showDetails = true }:
 		...getActiveBonuses(allSlots, completeSets),
 	]
 
-	const updateSlot = (slots: (string | null)[], setSlots: (s: (string | null)[]) => void, index: number, value: string | null) => {
+	const updateSlot = (
+		slots: (string | null)[],
+		setSlots: (s: (string | null)[]) => void,
+		index: number,
+		value: string | null,
+	) => {
 		const next = [...slots]
 		next[index] = value
 		setSlots(next)
@@ -298,7 +351,9 @@ export function EquipmentSection({ builds, equipmentStats, showDetails = true }:
 
 				{showDetails && (
 					<div class='lg:w-1/3'>
-						<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3'>Bonus de sets actifs</p>
+						<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3'>
+							Bonus de sets actifs
+						</p>
 						{activeBonuses.length === 0 ? (
 							<div class='bg-zinc-800/30 border border-zinc-700/40 rounded-xl p-4 text-sm text-zinc-500 italic'>
 								Équipez 2 pièces du même set pour activer un bonus.
@@ -306,7 +361,10 @@ export function EquipmentSection({ builds, equipmentStats, showDetails = true }:
 						) : (
 							<div class='space-y-3'>
 								{activeBonuses.map((active) => (
-									<div key={active.name} class='bg-zinc-800/40 border border-purple-500/20 rounded-xl p-4 space-y-2'>
+									<div
+										key={active.name}
+										class='bg-zinc-800/40 border border-purple-500/20 rounded-xl p-4 space-y-2'
+									>
 										<div class='flex items-center justify-between gap-2'>
 											<span class='font-semibold text-sm text-zinc-100'>{active.name}</span>
 											<span class='text-[10px] bg-purple-700/40 text-purple-300 border border-purple-600/30 rounded-full px-2 py-0.5 font-medium'>

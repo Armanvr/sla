@@ -1,0 +1,235 @@
+{
+	"name": "Frieren",
+	"category": "Supporter",
+	"alias": null,
+	"title": "Elf Mage / Demon Slayer",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Water",
+	"class": "Mage",
+	"country": "Unknown",
+	"guild": "Journey Companions",
+	"mainAbility": "Unknown",
+	"exclusiveWeapon": "Frieren's Staff",
+	"releaseDate": "2025-10-23",
+	"occupation": ["Hunter"],
+	"affiliation": ["Journey Companions"],
+	"gender": "Female",
+	"age": 0,
+	"species": "Elf",
+	"image": "/assets/hunters/Frieren.png",
+	"icon": null,
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1507,
+			"attack": 810,
+			"defense": 833,
+			"totalPower": 3981
+		},
+		"maxLevel": {
+			"hp": 13448,
+			"attack": 6652,
+			"defense": 6838,
+			"totalPower": 55534
+		},
+		"primaryStat": "Defense"
+	},
+	"elements": [
+		{
+			"name": "Water",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Ordinary Offensive Magic (Zoltraak) - Multi-Hit",
+				"description": "Frieren unleashes blasts of Zoltraak consecutively. Deals Water elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "257–385.5% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "266–399% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "270–405% DEF"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Ordinary Offensive Magic (Zoltraak) - Concentrated",
+				"description": "Frieren unleashes a blast of Zoltraak infused with concentrated mana power. Deals Water elemental damage.",
+				"damage": "1515–2272.5% DEF",
+				"element": "Water",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Destructive Lightning Magic (Judradjim)",
+				"description": "Frieren uses magic that unleashes destructive lightning. Deals Water elemental damage. When the final hit lands it inflicts the Airborne effect.",
+				"damage": "3020–4530% DEF",
+				"cooldown": 16,
+				"mpCost": "150",
+				"effects": ["Airborne"],
+				"icon": ""
+			},
+			{
+				"name": "Hellish Flame Magic (Vollzanbel)",
+				"description": "Frieren uses magic to unleash hellfire. Deals Water elemental damage. When the final hit lands it inflicts the Airborne effect.",
+				"damage": "3542–5313% DEF",
+				"cooldown": 16,
+				"mpCost": "200",
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Defense Magic",
+				"description": "Frieren uses Defense Magic. If the entire team (excluding Sung Jinwoo) consists of Water team members, Sung Jinwoo's Attack and Defense increase by 15–20%. Grants [Defense Magic] effect on entire team: Shield equal to 20% of Frieren's Defense; Decreases damage taken by 5%. Duration: 30 seconds.",
+				"damage": "",
+				"cooldown": 25,
+				"effects": ["Defense Magic (Shield 20% DEF, Damage Taken -5%, 30s)"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Ordinary Offensive Magic (Zoltraak) - Penetration",
+				"description": "Frieren moves at high speed and unleashes a Zoltraak blast. Deals Water elemental damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills inflicting Stun or Bind, or a Shadow Skill. When this skill hits it inflicts the Airborne effect.",
+				"damage": "2254–3381% DEF",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Ordinary Offensive Magic (Zoltraak) - Ultimate",
+				"description": "Frieren releases mana power to unleash a massive Zoltraak blast. Deals Water elemental damage. When this skill hits it inflicts the Airborne effect. Activates the [Mana Power Liberation] effect while active.",
+				"damage": "4366–6549% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne", "Mana Power Liberation"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Mana Power Control",
+		"description": "Stage 1, Stage 2, and Stage 3 of Ordinary Offensive Magic (Zoltraak) - Multi-Hit activate consecutively. Stage 3 activates Ordinary Offensive Magic (Zoltraak) - Concentrated once. [Mana Power Control] and [Defense Magic] effects activate when the user enters the stage. [Mana Power Control]: Increases user's Defense by 25%; When user has 50% or more MP, increases Defense by additional 25%; Skill Mana Consumption decreases by 20%; Duration: Infinite. [Mana Power Liberation]: Grants [Defense Magic] effect on entire team; Increases Critical Hit Rate by 100%; Removes [Mana Power Control] effect; When removed, [Mana Power Control] reactivates. Duration: Infinite. [Defense Magic]: Shield equal to 20% of Frieren's Defense; Decreases damage taken by 5%; Duration: 30 seconds.",
+		"icon": null
+	},
+	"advancements": [
+		"When Ordinary Offensive Magic (Zoltraak) - Ultimate hits, removes target's Shield. When Defense Magic activates, instantly restores HP equal to 20% of Frieren's Defense to entire team (Cooldown: 10 seconds). When Destructive Lightning Magic (Judradjim) hits, activates [Paralyze] effect on target (3 seconds). When Hellish Flame Magic (Vollzanbel) hits, activates [Vollzanbel] effect: Defense -5%, Critical Hit chance +5%, Critical Hit damage taken +5%, damage taken from Frieren +35% (20 seconds).",
+		"The entire team's Attack, Defense, and HP increase by 9%.",
+		"[Mana Power Control] and [Defense Magic] effects are enhanced. Enhanced Mana Power Control: Defense +50%; At 50% MP, Defense +50%; Mana Consumption -30%; Duration: Infinite. Enhanced Defense Magic: Shield equal to 30% of Frieren's Defense; Damage taken -10%; Duration: 60 seconds.",
+		"The entire team's Critical Hit damage increases by 20%.",
+		"[Vollzanbel] effects are enhanced: Defense -10%, Critical Hit chance +15%, Critical Hit damage taken +15%, damage taken from Frieren +70% (30 seconds). Using Destructive Lightning Magic (Judradjim) restores 80% of the user's Power Gauge."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120 (A)",
+			"armor": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"],
+			"jewelry": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"]
+		},
+		{
+			"name": "Build Niv. 120 (B)",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"],
+			"jewelry": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Damage Increase", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Additional Defense", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Additional Defense"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Light Damage (%)",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Frieren Staff",
+		"icon": "/assets/weapons/frieren/Frieren_Staff_Icon.png"
+	}
+}

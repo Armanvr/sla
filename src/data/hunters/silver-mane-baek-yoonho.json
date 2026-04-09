@@ -1,0 +1,240 @@
+{
+	"name": "Silver Mane Baek Yoonho",
+	"category": "Striker",
+	"alias": "Silver Mane",
+	"title": "Guild Master of the White Tiger Guild",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Dark",
+	"class": "Striker",
+	"country": "Korea",
+	"guild": "White Tiger Guild",
+	"mainAbility": "Beast Transformation",
+	"exclusiveWeapon": "Howling White Tiger's Soul",
+	"releaseDate": "2024-04-17",
+	"occupation": ["Hunter"],
+	"affiliation": ["White Tiger Guild"],
+	"gender": "Male",
+	"age": 37,
+	"species": "Human",
+	"image": "/assets/hunters/Silver_Mane_Baek_Yoonho.png",
+	"icon": "/assets/hunters/_icons/Silver_Mane_Baek_Yoonho_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1513,
+			"attack": 869,
+			"defense": 771,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 10523,
+			"attack": 5597,
+			"defense": 4967,
+			"totalPower": 43403
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Dark",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Magic Beast's Claws",
+				"description": "Yoonho tears the enemies apart with sharp steel claws.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "457–685.5% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "465–697.5% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "475–712.5% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Slaughter",
+				"description": "Yoonho tears the enemy apart using the steel claws on his hands.",
+				"damage": "847–1270.5% ATK",
+				"element": "Dark",
+				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Violent Approach",
+				"description": "Yoonho cuts enemies into pieces by quickly swinging the steel claws on his hands.",
+				"damage": "1907–2860.5% ATK",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": [],
+				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Skill_1.png"
+			},
+			{
+				"name": "Extreme Attack: Beast Form",
+				"description": "Yoonho strengthens himself with a White Tiger roar. Activates [Extreme Attack: Beast Form] (Super Armor; Attack +100%; Attack Speed +30%; damage taken +15% for 12 seconds).",
+				"damage": "390–585% ATK",
+				"cooldown": 15,
+				"mpCost": "250–330",
+				"effects": ["Super Armor", "Extreme Attack: Beast Form"],
+				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Magic Beast's Instinct",
+				"description": "Yoonho awakens his magic beast instincts and roars. Applies [Quick Attack: Beast Form] (Attack +30%, damage taken +10%, 15 seconds).",
+				"damage": "1486–3054.56% ATK",
+				"cooldown": 25,
+				"effects": ["Quick Attack: Beast Form"],
+				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Magic Beast's Ambush",
+				"description": "Yoonho lunges at the enemy in midair and tears them apart.",
+				"damage": "1420–2130% ATK",
+				"cooldown": 20,
+				"effects": [],
+				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Divinity",
+				"description": "Yoonho scrapes the ground and makes a powerful upward slash, tearing the enemy apart. Silver Mane Baek Yoonho's damage increases by 30% for every 10% of his HP lost.",
+				"damage": "4345–6517.5% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": [],
+				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Magic Beast's Rage",
+		"description": "The user's skills deal additional damage equal to 100% of their HP lost. When Slaughter or Violent Approach hits, inflicts [Bleed] on the target (damage equal to 1% of current HP every 3 seconds for 30 seconds). Inflicts [Curse of the Magic Beast] to targets immune to [Bleed] (damage equal to 1000% of Silver Mane Baek Yoonho's Max HP every 3 seconds for 30 seconds). Increases the damage of Magic Beast's Claws and Slaughter by 60% when dealing damage to targets with [Bleed or Curse of the Magic Beast] applied.",
+		"icon": null
+	},
+	"advancements": [
+		"Using Extreme Attack: Beast Form increases the user's Critical Hit Rate and Critical Hit Damage by 3% every second for 12 seconds. While using Extreme Attack: Beast Form, the user takes damage equal to 10% of their current HP, but gains a [Shield] equal to 30% of Max HP for 12 seconds. The user's damage taken decreases by 15% when HP is at 30% or fewer.",
+		"The user's HP increases by 50%.",
+		"The user starts the battle with HP reduced by 50%. When the battle starts the user gains a [Shield] equal to 60% of their Max HP (infinite duration).",
+		"The user's Basic Attack and Core Attack damage increases by 100%.",
+		"Changes the user's Skill Damage Increase equal to 200% of lost HP ratio."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Dark Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Howling White Tiger's Soul",
+		"icon": "/assets/weapons/silver-mane-baek-yoonho/Howling_White_Tiger's_Soul_Icon.png"
+	}
+}

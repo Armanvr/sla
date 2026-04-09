@@ -1,0 +1,235 @@
+{
+	"name": "Lee Bora",
+	"category": "Supporter",
+	"alias": null,
+	"title": "",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Dark",
+	"class": "Mage",
+	"country": "Korea",
+	"guild": "Hunters Guild",
+	"mainAbility": "Summoning Magic",
+	"exclusiveWeapon": "Solid Logic",
+	"releaseDate": "2024-03-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["Hunters Guild"],
+	"gender": "Female",
+	"age": 23,
+	"species": "Human",
+	"image": "/assets/hunters/Lee_Bora.png",
+	"icon": "/assets/hunters/_icons/Lee_Bora_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1517,
+			"attack": 870,
+			"defense": 768,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 10562,
+			"attack": 5605,
+			"defense": 4944,
+			"totalPower": 43405
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Dark",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Darkness Emission",
+				"description": "Bora swings her staff and unleashes the power of darkness. Deals Dark elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "256–384% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "265–397.5% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "278–417% ATK"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Tracking Charm",
+				"description": "Bora attacks the enemy by throwing numerous explosive charms. Deals Dark elemental damage. Applies Airborne effect on hit.",
+				"damage": "1163–1744.5% ATK",
+				"element": "Dark",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Strengthening Charm",
+				"description": "Bora throws a strengthening charm and unfolds an Enhancement Circle that enhances her Phantom Foxes. Deals Dark elemental damage. Creates Enhancement Circle zone for 210 seconds. Removes Debuff Zone in landing area. Enhancement Circle: +10% Dark damage for team; +20% Phantom Fox magic arrow damage with penetration.",
+				"damage": "1920–2880% ATK",
+				"cooldown": 8,
+				"mpCost": "80–105",
+				"effects": ["Enhancement Circle", "Debuff Zone Removal"],
+				"icon": ""
+			},
+			{
+				"name": "Summoning Charm: Phantom Foxes",
+				"description": "Bora summons Phantom Foxes that fire magic arrows. Deals Dark elemental damage. Phantom Foxes deal 400–600% ATK magic arrow damage, lasting 12 seconds.",
+				"damage": "400–600% ATK (per Phantom Fox arrow)",
+				"cooldown": 12,
+				"mpCost": "250–330",
+				"effects": ["Phantom Foxes Summon"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Quick Attack: Tempest",
+				"description": "Bora summons a binding divination circle and pulls enemies into its center. Deals Dark elemental damage. Applies Charm effect (15% increased damage taken, 15-second duration). Removes Debuff Zone in area.",
+				"damage": "1402–2881.89% ATK",
+				"cooldown": 25,
+				"effects": ["Charm (15% Damage Taken Increase, 15s)", "Debuff Zone Removal"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Tempest",
+				"description": "Bora summons a binding divination circle and pulls enemies into its center. Deals Dark elemental damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind. Applies Airborne effect.",
+				"damage": "1144–1716% ATK",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Dark Charm: Meg",
+				"description": "Bora uses the sealed Dark Charm to free the giant summoned beast, Meg. Deals Dark elemental damage. Final hit applies Knock Down.",
+				"damage": "3715–5572.5% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Knock Down"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Charm",
+		"description": "When Core Attack or Tempest hits, the user applies the [Charm] effect to the target. [Charm]: The target's damage taken increases by 15%. Duration: 15 seconds.",
+		"icon": null
+	},
+	"advancements": [
+		"[Phantom Foxes] effect change: 3 foxes summoned with 80% increased damage each.",
+		"+6% Critical Hit Rate and Critical Hit damage; +2% Dark team members' Critical Hit damage per Dark ally.",
+		"[Strengthening Charm] usable 2 times with 40% range/damage increase; grants 5% Attack and 5% max HP to Dark team for 10 sec (stacks 2x).",
+		"25% [Dark Charm: Meg] cooldown reduction; 30% damage reduction for Dark team members.",
+		"75% small Meg damage increase; [Immortal] for 2 sec if HP ≤1 within [Enhancement Circle]; regains 50% Attack HP when ending (once per battle)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120 (A)",
+			"armor": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"],
+			"jewelry": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"]
+		},
+		{
+			"name": "Build Niv. 120 (B)",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"],
+			"jewelry": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Dark Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Solid Logic",
+		"icon": "/assets/weapons/lee-bora/Solid_Logic_Icon.png"
+	}
+}

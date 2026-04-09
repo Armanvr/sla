@@ -1,0 +1,230 @@
+{
+	"name": "Baek Yoonho",
+	"category": "Breaker",
+	"alias": null,
+	"title": "Guild Master of the White Tiger Guild",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Light",
+	"class": "Breaker",
+	"country": "Korea",
+	"guild": "White Tiger Guild",
+	"mainAbility": "Beast Transformation",
+	"exclusiveWeapon": "Suppressed White Tiger's Soul",
+	"releaseDate": "2024-03-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["White Tiger Guild"],
+	"gender": "Male",
+	"age": 37,
+	"species": "Human",
+	"image": "/assets/hunters/Baek_Yoonho.png",
+	"icon": "/assets/hunters/_icons/Baek_Yoonho_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1533,
+			"attack": 773,
+			"defense": 857,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 10674,
+			"attack": 4977,
+			"defense": 5520,
+			"totalPower": 43414
+		},
+		"primaryStat": "Defense"
+	},
+	"elements": [
+		{
+			"name": "Light",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "White Flame Strike",
+				"description": "Yoonho attacks the enemy by combining his fists and feet.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "184–276% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "193–289.5% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "205–307.5% DEF"
+					}
+				],
+				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "White Flame Pummel",
+				"description": "Yoonho strikes quickly with his fists and feet and then performs a powerful upward strike.",
+				"damage": "820–1230% DEF",
+				"element": "Light",
+				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Ferocious Spirit",
+				"description": "After charging towards the front, Yoonho leaps and punches upward with his fist enveloped in white flames. Yoonho then gathers his strength and strikes down.",
+				"damage": "926–1389% DEF",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": [],
+				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Skill_1.png"
+			},
+			{
+				"name": "White Flame Gale Kick",
+				"description": "After wrapping white flames around his feet, Yoonho leaps to attack. After leaping, he strikes with a powerfully condensed white flame.",
+				"damage": "1730–2595% DEF",
+				"cooldown": 12,
+				"mpCost": "200–264",
+				"effects": [],
+				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "White Flame Storm Kick",
+				"description": "Yoonho spins once and performs a powerful downward strike with a foot enveloped in white flames. Deals Violent Explosion damage equal to 400% of Defense and applies [Defense Decrease] (Defense -20%, 12 seconds) to the target.",
+				"damage": "654–1344.33% DEF",
+				"cooldown": 25,
+				"effects": ["Violent Explosion", "Defense Decrease"],
+				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Damnation",
+				"description": "Yoonho moves forward quickly, performs a spinning kick, spins once, and strikes down powerfully.",
+				"damage": "1052–1578% DEF",
+				"cooldown": 20,
+				"effects": [],
+				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Truth: White Flame Strike",
+				"description": "Yoonho releases a barely-controlled torrent of power and unleashes a concentrated white flame strike towards the front. Deals Violent Explosion damage equal to 400% of Defense and applies [Defense Decrease] (Defense -20%, 12 seconds) to the target.",
+				"damage": "3456–5184% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Violent Explosion", "Defense Decrease"],
+				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "White Flames",
+		"description": "The [White Flames] effect is applied to the last hit of all skills, excluding Basic Attacks. When [White Flames] reaches 3 stacks, it activates [Violent Explosion] (damage equal to 400% of Defense, inflicts [Defense Decrease] -20% for 12 seconds). While [White Flames] is active the target's Defense decreases by an additional 2.5% (stacks up to 2 times, infinite duration).",
+		"icon": null
+	},
+	"advancements": [
+		"Increases the damage of White Flame Gale Kick by 150%.",
+		"Increases the user's Break effectiveness by 20%.",
+		"When Bottomless Pit or White Flame Gale Kick is used, applies [Unlock White Flames] (Light damage +40%, grants Super Armor, 15 seconds).",
+		"Increases the user's Critical Hit Rate by 16%.",
+		"When the user enters the stage, recovers Power Gauge by 100% and increases the damage of Violent Explosion by 400%."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Damage Increase", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Additional Defense", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Additional Defense"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Light Damage (%)",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Suppressed White Tiger's Soul",
+		"icon": "/assets/weapons/baek-yoonho/Suppressed_White_Tiger's_Soul_Icon.png"
+	}
+}

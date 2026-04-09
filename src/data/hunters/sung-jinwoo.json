@@ -1,0 +1,140 @@
+{
+	"name": "Sung Jinwoo",
+	"alias": "The Weakest Hunter of All Mankind",
+	"title": "Shadow Monarch",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"class": "Fighter",
+	"country": "South Korea",
+	"releaseDate": "2024-05-08",
+	"occupation": ["Hunter", "Guild Master", "Shadow Monarch"],
+	"affiliation": ["Ahjin Guild", "Hunters Association"],
+	"gender": "Male",
+	"age": 24,
+	"species": "Human",
+	"image": "/assets/hunters/Sung_Jinwoo.png",
+	"icon": null,
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"elements": [
+		{
+			"name": "Dark",
+			"primary": true
+		},
+		{
+			"name": "Water",
+			"primary": false
+		},
+		{
+			"name": "Fire",
+			"primary": false
+		},
+		{
+			"name": "Light",
+			"primary": false
+		},
+		{
+			"name": "Wind",
+			"primary": false
+		}
+	],
+	"skills": {
+		"basic": [],
+		"core": [],
+		"skill": [],
+		"support": [],
+		"qte": [],
+		"ultimate": []
+	},
+	"builds": [
+		{
+			"name": "Build Niv. 120 (A)",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 120 (B)",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "arrogant-rulers-will",
+		"spirit": "nameless-demons-magisphere"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Dark Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	}
+}

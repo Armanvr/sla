@@ -1,0 +1,230 @@
+{
+	"name": "Goto Ryuji",
+	"category": "Breaker",
+	"alias": null,
+	"title": "Guild Master of the Blade Guild",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Wind",
+	"class": "Breaker",
+	"country": "Japan",
+	"guild": "Blade Guild",
+	"mainAbility": "Mana-powered sword wielding",
+	"exclusiveWeapon": "Distorted Dreams",
+	"releaseDate": "2025-03-13",
+	"occupation": ["Hunter"],
+	"affiliation": ["Blade Guild"],
+	"gender": "Male",
+	"age": 32,
+	"species": "Human",
+	"image": "/assets/hunters/Goto_Ryuji.png",
+	"icon": "/assets/hunters/_icons/Goto_Ryuji_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1720,
+			"attack": 760,
+			"defense": 775,
+			"totalPower": 3980
+		},
+		"maxLevel": {
+			"hp": 11976,
+			"attack": 4894,
+			"defense": 4990,
+			"totalPower": 43515
+		},
+		"primaryStat": "HP"
+	},
+	"elements": [
+		{
+			"name": "Wind",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Shiver Storm",
+				"description": "Goto attacks enemies with movements as imperceptible as a slight shiver. Deals Wind elemental damage and inflicts Airborne.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": ""
+					},
+					{
+						"stage": 2,
+						"damage": ""
+					},
+					{
+						"stage": 3,
+						"damage": ""
+					}
+				],
+				"icon": "/assets/hunters/Goto_Ryuji/Hunter_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Death Gale",
+				"description": "Charges forward to strike enemies. Deals medium Break damage.",
+				"damage": "588–882% Max HP",
+				"element": "Wind",
+				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Phantom's Heavenly Hurricane",
+				"description": "Usable 6 times consecutively with 10% damage increase per use. Grants Super Armor and reduces damage taken by 30%. Triggers Exorcise effect (stacks up to 5).",
+				"damage": "",
+				"cooldown": null,
+				"mpCost": "",
+				"effects": ["Super Armor", "Damage Reduction (30%)", "Exorcise (max 5 stacks)"],
+				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Skill_1.png"
+			},
+			{
+				"name": "Reverse Tempest",
+				"description": "Large AOE attack. Grants Super Armor and boosts Phantom's Heavenly Hurricane damage by 30% for 15 seconds.",
+				"damage": "850–1275% Max HP",
+				"cooldown": null,
+				"mpCost": "",
+				"effects": ["Super Armor", "Phantom's Heavenly Hurricane +30% (15s)"],
+				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Cyclone Blade",
+				"description": "Quick draw from crouched position. Triggers Invincible King effects.",
+				"damage": "620–1274% Max HP",
+				"cooldown": null,
+				"effects": ["Invincible King"],
+				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Divine Wind",
+				"description": "Quick draw attack. Triggered by Extreme Evasion or crowd control effects.",
+				"damage": "780–1170% Max HP",
+				"cooldown": null,
+				"effects": [],
+				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Devastate Prey",
+				"description": "Goto unlocks a series of doors to a gate hidden within his spirit and unleashes demonic fury to eliminate his prey. Deals heavy Break damage.",
+				"damage": "1856–2784% Max HP",
+				"cooldown": null,
+				"powerGaugeCost": 100,
+				"effects": [],
+				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Invincible King",
+		"description": "Basic Skill hits recover 50 MP. Critical Hit Rate increases equal to 20% of Critical Hit Damage stat. Exorcise stacking triggers Arrogance effect for Wind team members.",
+		"icon": null
+	},
+	"advancements": [
+		"Extends Break duration by 3 seconds; enhances Reverse Tempest with Demonic Soul transformation.",
+		"Break effectiveness increases 20%.",
+		"Divine Wind and Devastate Prey increase Critical Damage by 20% for 12 seconds.",
+		"Third team member gains 24% damage boost but takes 12% more damage.",
+		"Skills hit 2 additional times; Devastate Prey damage increases 60% when player HP exceeds enemy HP."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Additional HP", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Additional HP"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Defense Penetration", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Wind Damage (%)",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Distorted Dreams",
+		"icon": "/assets/weapons/goto-ryuji/Distorted_Dreams_Icon.png"
+	}
+}

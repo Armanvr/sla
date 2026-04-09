@@ -1,0 +1,59 @@
+{
+	"teams": [
+		{
+			"element": "Wind",
+			"status": "active",
+			"jinwooWeapons": ["Stormbringer", "Demon King's Daggers"],
+			"hunters": [
+				{ "id": "lennart-niermann", "build": "Build Niv. 120" },
+				{ "id": "sung-jinah", "build": "Build Niv. 120 (A)" },
+				{ "id": "sugimoto-reiji", "build": "Build Niv. 120" }
+			],
+			"shadows": ["beste", "cerbie", "skull"]
+		},
+		{
+			"element": "Water",
+			"status": "active",
+			"jinwooWeapons": ["Allon's Orb", "Winter Fang"],
+			"hunters": [
+				{ "id": "frieren", "build": "Build Niv. 120 (A)" },
+				{ "id": "meri-laine", "build": "Build Niv. 120" },
+				{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+			],
+			"shadows": ["brute", "cerbie", "skull"]
+		},
+		{
+			"element": "Fire",
+			"status": "active",
+			"jinwooWeapons": ["Glorious Demise", "Ennio's Roar"],
+			"hunters": [
+				{ "id": "christopher-reed", "build": "Build Niv. 120" },
+				{ "id": "gina", "build": "Build Niv. 120 (A)" },
+				{ "id": "yuqi", "build": "Build Niv. 120" }
+			],
+			"shadows": ["beste", "cerbie", "skull"]
+		},
+		{
+			"element": "Light",
+			"status": "active",
+			"jinwooWeapons": ["Phantomblade", "Hero's Sword"],
+			"hunters": [
+				{ "id": "go-gunhee", "build": "Build Niv. 120" },
+				{ "id": "laura-walker", "build": "Build Niv. 120 (A)" },
+				{ "id": "thomas-andre", "build": "Build Niv. 120" }
+			],
+			"shadows": ["beste", "cerbie", "skull"]
+		},
+		{
+			"element": "Dark",
+			"status": "active",
+			"jinwooWeapons": ["Demonic Plum Flower Sword", "Transfiguration Key"],
+			"hunters": [
+				{ "id": "sian-halat", "build": "Build Niv. 120" },
+				{ "id": "isla-wright", "build": "Build Niv. 120 (A)" },
+				{ "id": "sung-il-hwan", "build": "Build Niv. 120" }
+			],
+			"shadows": ["uros", "cerbie", "skull"]
+		}
+	]
+}

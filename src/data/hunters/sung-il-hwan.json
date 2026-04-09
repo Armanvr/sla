@@ -1,0 +1,240 @@
+{
+	"name": "Sung Il-Hwan",
+	"category": "Striker",
+	"alias": null,
+	"title": "Daddy Woo",
+	"rarity": "SSR",
+	"rank": "Unknown",
+	"element": "Dark",
+	"class": "Striker",
+	"country": "Korea",
+	"guild": null,
+	"mainAbility": "Outstanding Physical / Outstanding Speed",
+	"exclusiveWeapon": "Unbreakable Will",
+	"releaseDate": "2025-09-25",
+	"occupation": ["Hunter"],
+	"affiliation": [],
+	"gender": "Male",
+	"age": 52,
+	"species": "Human",
+	"image": "/assets/hunters/Sung_Il-Hwan.png",
+	"icon": "/assets/hunters/_icons/Sung_Il-Hwan_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1517,
+			"attack": 861,
+			"defense": 778,
+			"totalPower": 3984
+		},
+		"maxLevel": {
+			"hp": 12683,
+			"attack": 6631,
+			"defense": 5992,
+			"totalPower": 52076
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Dark",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Sword of Punishment",
+				"description": "Il-Hwan cuts the enemies with his dual blades, delivering a series of rapid attacks, and finishes with an extra-powerful strike. Deals Dark elemental damage. When the final hit lands it inflicts Airborne.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "233–349.5% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "250–375% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "290–435% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Sky Piercer",
+				"description": "Il-Hwan rushes forward and strikes upward with his leg. Deals Dark elemental damage. When this skill hits it inflicts Airborne.",
+				"damage": "1130–1695% ATK",
+				"element": "Dark",
+				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Phantom Slash",
+				"description": "Il-Hwan charges behind the target, delivers a series of slashes, and finishes the motion with a powerful strike. Deals Dark elemental damage. When the first attack lands it inflicts Airborne. When the final hit lands it Knocks Down the target.",
+				"damage": "751–1126.5% / 827–1240.5% / 902–1353% ATK",
+				"cooldown": 15,
+				"mpCost": "350–462 / 280–369 / 200–264",
+				"effects": ["Airborne", "Knock Down"],
+				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Skill_1.png"
+			},
+			{
+				"name": "Wrath of Condemnation",
+				"description": "Il-Hwan charges up while the Skill button is held down, then strikes downward with a massive spectral palm, creating a shockwave. Deals Dark elemental damage. When the first attack hits it Knocks Down the target. When the final hit lands it inflicts Airborne.",
+				"damage": "1246–1869% ATK",
+				"cooldown": 15,
+				"mpCost": "300–396",
+				"effects": ["Knock Down", "Airborne"],
+				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Death Strike",
+				"description": "Il-Hwan strikes downward with a massive spectral palm, creating a shockwave. Deals Dark elemental damage. When the first attack hits it Knocks Down the target. When the final hit lands it inflicts Airborne.",
+				"damage": "3578–7354.78% ATK",
+				"cooldown": 25,
+				"effects": ["Knock Down", "Airborne"],
+				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Dark Finale",
+				"description": "Il-Hwan swiftly weaves through enemies to strike. Deals Dark elemental damage. Triggers via Extreme Evasion, Core Attack, Ultimate Skill, Stun, Blind, or Shadow Skill. When the final hit lands it inflicts Airborne.",
+				"damage": "2290–3435% ATK",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Apocalyptic Might",
+				"description": "Il-Hwan unleashes a series of slashes and finishes with a brutal finishing strike. Deals Dark elemental damage. When the final hit lands it inflicts Airborne.",
+				"damage": "2838–4257% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Ruler's Scale",
+		"description": "When Phantom Slash hits, activates [Ruler's Scale] effect (Wrath of Condemnation damage +1% per stack up to 160, removed upon use). MP cannot be recovered naturally or by Basic Attack/Core Attack. Using Apocalyptic Might restores MP equal to 14% of current MP proportional to [Ruler's Upgrade] stacks, then all stacks are removed. Using Phantom Slash or Wrath of Condemnation activates [Ruler's Upgrade] (Basic Skill damage +5%, Ultimate Skill damage +25%, infinite, stacks up to 7). When team members excluding Il-Hwan use Basic Skill, he recovers 2% MP and 1% Power Gauge.",
+		"icon": null
+	},
+	"advancements": [
+		"Using Basic Attack or Core Attack decreases Phantom Slash cooldown by 1s. Using Apocalyptic Might resets active buff durations (30s cooldown). Dark damage +150% for 15s when tagging in during Hunter Mode (allies' QTE auto-use disabled for 15s). Dark Finale or Apocalyptic Might apply [Marked] on target (+35% damage taken from Il-Hwan; becomes [Suppressed] on Break: +50% damage taken from Il-Hwan and +20% Dark Ultimate damage taken, 30s).",
+		"Dark damage increases by 30%.",
+		"The number of attacks for Phantom Slash, Wrath of Condemnation, and Apocalyptic Might are doubled. If there's an enemy within 5m when the user uses Sky Piercer, the user instantly attacks.",
+		"For every Dark ally in the party, Dark team members' Attack increases by 10%.",
+		"Using Basic Attack or Core Attack decreases Phantom Slash cooldown by 1.7s. Using Wrath of Condemnation activates [Ruler's Protection] (Shield equal to 100% of Il-Hwan's ATK, 20s). User gains a Shield, ATK and Critical Hit Rate +12% for 30s (stacks up to 3 times). When a Dark team member (excluding Il-Hwan) uses Basic Skill, Il-Hwan recovers 8% MP and additionally 4% Power Gauge."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Dark Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Unbreakable Will",
+		"icon": "/assets/weapons/sung-il-hwan/Unbreakable_Will_Icon.png"
+	}
+}

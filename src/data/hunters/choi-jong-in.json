@@ -1,0 +1,240 @@
+{
+	"name": "Choi Jong-In",
+	"category": "Striker",
+	"alias": "The Ultimate Hunter",
+	"title": "The Ultimate Hunter",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Fire",
+	"class": "Mage",
+	"country": "Korea",
+	"guild": "Hunters Guild",
+	"mainAbility": "Fire Magic",
+	"exclusiveWeapon": "Equivalent Exchange",
+	"releaseDate": "2024-03-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["Hunters Guild"],
+	"gender": "Male",
+	"age": 38,
+	"species": "Human",
+	"image": "/assets/hunters/Choi_Jong-In.png",
+	"icon": "/assets/hunters/_icons/Choi_Jong-In_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1539,
+			"attack": 879,
+			"defense": 749,
+			"totalPower": 3983
+		},
+		"maxLevel": {
+			"hp": 10714,
+			"attack": 5658,
+			"defense": 4821,
+			"totalPower": 43422
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Fire",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Spark",
+				"description": "Jong-In attacks the enemy with flame bullets and flame spears.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "140–210% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "166–249% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "176–264% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Blast",
+				"description": "Jong-In attacks the enemy by detonating the ground in front of him. Inflicts [Airborne] and [Burn] (100% ATK every 3s, 15s).",
+				"damage": "682–1023% ATK",
+				"element": "Fire",
+				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Rain of Flames",
+				"description": "Jong-In attacks the enemy by firing multiple summoned flame bullets forward.",
+				"damage": "1550–2325% ATK",
+				"cooldown": 15,
+				"mpCost": "150–198",
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Skill_1.png"
+			},
+			{
+				"name": "Flame Spear",
+				"description": "Jong-In attacks the enemy by continuously summoning flame spears in front of him.",
+				"damage": "1550–2325% ATK",
+				"cooldown": 15,
+				"mpCost": "150–198",
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Fire Barrage",
+				"description": "Jong-In attacks the enemy by summoning multiple flame spears at once. Knocks Down, inflicts [Burn] (100% ATK every 3s, 15s) and [Defense Decrease] (-15% Defense, 15s).",
+				"damage": "802–1648.56% ATK",
+				"cooldown": 25,
+				"effects": ["Knock Down", "Burn", "Defense Decrease -15%"],
+				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Celestial Fire Dragon",
+				"description": "Jong-In attacks the enemy by summoning a burning dragon. Knocks Down, inflicts [Burn] and [Defense Decrease] (-15% Defense, 15s).",
+				"damage": "936–1404% ATK",
+				"cooldown": 20,
+				"effects": ["Knock Down", "Burn", "Defense Decrease -15%"],
+				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "End of Days",
+				"description": "Jong-In attacks the enemy by summoning a large burning spear from the sky. Inflicts [Airborne].",
+				"damage": "2370–3555% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "The Ultimate Hunter",
+		"description": "Choi Jong-In cannot deal Critical Hits, but his Attack increases by 50%. When End of Days is used, applies [The Ultimate Hunter] (resets cooldown of Rain of Flames and Flame Spear, Attack and Defense Penetration +20%, 15s).",
+		"icon": null
+	},
+	"advancements": [
+		"Rain of Flames damage triples during [The Ultimate Hunter] and changes to Mega Crater.",
+		"Attack increases by 12%.",
+		"End of Days damage increases by 60%.",
+		"Burn damage increases by 100%. Fire damage increases by 16%.",
+		"While tagging out, End of Days cooldown passes 3x faster and Power Gauge recovers 0.8% every second. In Team Fight mode, End of Days, Rain of Flames, and Flame Spear cooldowns pass 2x faster and Power Gauge recharges 0.4% per second."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Equivalent Exchange",
+		"icon": "/assets/weapons/choi-jong-in/Equivalent_Exchange_Icon.png"
+	}
+}

@@ -1,0 +1,236 @@
+{
+	"name": "Elena Renault",
+	"category": "Supporter",
+	"alias": null,
+	"title": "Elena Renault",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Water",
+	"class": "Supporter",
+	"country": "France",
+	"guild": "The Justitia Guild",
+	"mainAbility": "Body Enhancement / Mercury Magic",
+	"exclusiveWeapon": "The Embodiment of Obsession",
+	"releaseDate": "2026-04-09",
+	"occupation": ["Hunter"],
+	"affiliation": ["The Justitia Guild"],
+	"gender": "Female",
+	"age": 20,
+	"species": "Human",
+	"image": "/assets/hunters/Elena_Renault.png",
+	"icon": "/assets/hunters/_icons/Elena_Renault_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1479,
+			"attack": 823,
+			"defense": 835,
+			"totalPower": 3984
+		},
+		"maxLevel": {
+			"hp": 13198,
+			"attack": 6755,
+			"defense": 6852,
+			"totalPower": 55514
+		},
+		"primaryStat": "Defense"
+	},
+	"elements": [
+		{
+			"name": "Water",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Danse d'Argent",
+				"description": "Elena attacks enemies in front with her mercury.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "220–330% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "240–360% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "246–369% DEF"
+					}
+				],
+				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Trahison d'Argent",
+				"description": "Elena slashes the enemy, then moves behind her target and creates an additional mercury sword to strike again.",
+				"damage": "1096–1644% DEF",
+				"element": "Water",
+				"effects": ["Super Armor"],
+				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Piège d'Argent",
+				"description": "Elena leaps at the enemy and strikes downward, causing mercury droplets to splash upward and explode, damaging nearby enemies.",
+				"damage": "970–1455% DEF",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": ["Super Armor", "Airborne on final hit"],
+				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Skill_1.png"
+			},
+			{
+				"name": "Furie d'Argent",
+				"description": "Elena quickly slashes the enemy multiple times then steps back and throws a mercury sword. Grants [Tide of Silver] to the entire team: Water damage +10%, Water Overload damage +15% (40s).",
+				"damage": "1901–2851.5% ATK",
+				"cooldown": 12,
+				"mpCost": "200–264",
+				"effects": ["Super Armor", "Tide of Silver (team)"],
+				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Triple Estoc",
+				"description": "Elena moves swiftly, stabs the enemy twice, then finishes with a powerful jab. Grants [Fatal Obsession] to the entire team: Water damage +15%, Water Overload damage +20%, Shield equal to 30% of Elena's DEF, Power Gauge +10% (30s).",
+				"damage": "767–1576.61% DEF",
+				"cooldown": 25,
+				"effects": ["Airborne on hit", "Fatal Obsession (team)"],
+				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Éclat de Folie",
+				"description": "Elena creates a mercury shield in front of herself, then detonates it to damage nearby enemies. Grants [Obsession's Grasp] to the entire team: Shield, HP recovery, and MP recovery based on Elena's DEF. Triggers via Extreme Evasion, Core Attack, Ultimate Skill, Stun, Blind, or Shadow Skill.",
+				"damage": "1015–1522.5% DEF",
+				"cooldown": 20,
+				"effects": ["Airborne on final hit", "Obsession's Grasp (team)"],
+				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Prison d'Argent",
+				"description": "Elena manifests her inner emotions as mercury, trapping enemies with the constructs before detonating them to deal damage.",
+				"damage": "3628–5442% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne on final hit"],
+				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Mercury Arts",
+		"description": "Using Danse d'Argent activates Trahison d'Argent once. When Danse d'Argent hits, inflicts 1 instance of [Winter Chill] (100% DEF damage every 3s for 30s, stacks up to 10 times). Using Furie d'Argent grants the entire team [Tide of Silver]: Water damage +10%, Water Overload damage +15% (40s). Using Éclat de Folie grants the entire team [Obsession's Grasp]: Shield, HP restoration, and MP restoration based on Elena's DEF.",
+		"icon": null
+	},
+	"advancements": [
+		"The entire team gains [Feral Gaze] at the start of the stage (Critical Hit Rate +5%, Critical Hit Damage +10%, Infinite). When an ally inflicts Water Overload damage, increases all Water team members' Water Overload damage by 15% for 40s. Using Prison d'Argent restores the entire team's Power Gauge by 10%. When Furie d'Argent hits a target with [Winter Chill], inflicts [Mercury Drip] on the target (Water damage taken +10%, Water Overload damage taken +15%, 40s).",
+		"The entire team's Attack, Defense, and Max HP increases by 9%.",
+		"[Tide of Silver] and [Obsession's Grasp] effects are enhanced. Piège d'Argent hits now inflict 2 instances of [Winter Chill]. When the user or a Water team member uses a Core Attack or Basic Skill, restores 10% of Elena Renault's Power Gauge (Cooldown: 1s). Enhanced [Tide of Silver]: Water damage +20%, Water Overload damage +30% (40s). Enhanced [Obsession's Grasp]: Shield (30% DEF), HP restoration (5% DEF every 3s), 30 MP restored every 3s (40s).",
+		"The entire team's Water Overload damage increases by 20%.",
+		"[Feral Gaze] and [Mercury Drip] effects are enhanced. When an ally inflicts Water Overload damage, all Water team members' Water Overload damage increases by 30% for 40s. 80% of the user's Power Gauge is charged at the start of the stage. Prison d'Argent inflicts 3 instances of [Winter Chill] on the target. Enhanced [Feral Gaze]: Critical Hit Rate +25%, Critical Hit Damage +32% (Infinite). Enhanced [Mercury Drip]: Water damage taken +15%, Water Overload damage taken +20% (40s)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120 (A)",
+			"armor": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"],
+			"jewelry": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"]
+		},
+		{
+			"name": "Build Niv. 120 (B)",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"],
+			"jewelry": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Damage Increase", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Additional Defense", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Additional Defense"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Defense (%)", "Defense Penetration", "Critical Hit Damage", "Additional Defense"]
+		},
+		"ring": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "The Embodiment of Obsession",
+		"icon": "/assets/weapons/elena-renault/The_Embodiment_of_Obsession_Icon.png"
+	}
+}

@@ -8,6 +8,7 @@ import chaHaeInPspData from './data/hunters/cha-hae-in-pure-sword-princess.json'
 import charlotteData from './data/hunters/charlotte.json'
 import choiData from './data/hunters/choi-jong-in.json'
 import christopherData from './data/hunters/christopher-reed.json'
+import elenaData from './data/hunters/elena-renault.json'
 import emmaData from './data/hunters/emma-laurent.json'
 import esilData from './data/hunters/esil-radiru.json'
 import fernData from './data/hunters/fern.json'
@@ -46,10 +47,11 @@ import thomasData from './data/hunters/thomas-andre.json'
 import wooData from './data/hunters/woo-jinchul.json'
 import yooData from './data/hunters/yoo-soohyun.json'
 import yuqiData from './data/hunters/yuqi.json'
+import { ComparePage } from './pages/ComparePage'
+import { HomePage } from './pages/HomePage'
 import { TeamGuideDungeons } from './pages/TeamGuideDungeons'
 import { TeamGuideGuildBoss } from './pages/TeamGuideGuildBoss'
 import { TeamGuidePowerDestruction } from './pages/TeamGuidePowerDestruction'
-import { HomePage } from './pages/HomePage'
 
 const hunters = [
 	{ id: 'sung-jinwoo', data: jinwooData },
@@ -61,6 +63,7 @@ const hunters = [
 	{ id: 'charlotte', data: charlotteData },
 	{ id: 'choi-jong-in', data: choiData },
 	{ id: 'christopher-reed', data: christopherData },
+	{ id: 'elena-renault', data: elenaData },
 	{ id: 'emma-laurent', data: emmaData },
 	{ id: 'esil-radiru', data: esilData },
 	{ id: 'fern', data: fernData },
@@ -105,21 +108,42 @@ export function App() {
 
 	const activeHunter = page ? hunters.find((h) => h.id === page) : null
 
+	const goBack = () => {
+		window.scrollTo(0, 0)
+		setPage(null)
+	}
+
 	if (activeHunter) {
-		return <HunterProfile data={activeHunter.data} onBack={() => setPage(null)} />
+		return <HunterProfile data={activeHunter.data} onBack={goBack} />
 	}
 
 	if (page === 'team-dungeons') {
-		return <TeamGuideDungeons hunters={hunters} onBack={() => setPage(null)} />
+		return <TeamGuideDungeons hunters={hunters} onBack={goBack} />
 	}
 
 	if (page === 'team-power-destruction') {
-		return <TeamGuidePowerDestruction onBack={() => setPage(null)} />
+		return <TeamGuidePowerDestruction hunters={hunters} onBack={goBack} />
 	}
 
 	if (page === 'team-guild-boss') {
-		return <TeamGuideGuildBoss onBack={() => setPage(null)} />
+		return <TeamGuideGuildBoss hunters={hunters} onBack={goBack} />
 	}
 
-	return <HomePage hunters={hunters} onSelect={(id) => setPage(id)} onSelectTeamGuide={(id) => setPage(id)} />
+	if (page === 'compare') {
+		return <ComparePage hunters={hunters} onBack={goBack} />
+	}
+
+	return (
+		<HomePage
+			hunters={hunters}
+			onSelect={(id) => {
+				window.scrollTo(0, 0)
+				setPage(id)
+			}}
+			onSelectTeamGuide={(id) => {
+				window.scrollTo(0, 0)
+				setPage(id)
+			}}
+		/>
+	)
 }

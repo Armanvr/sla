@@ -7,5 +7,3 @@ scripts/
 .vscode
 TODO.md
 *.txt
-public/
-src/data/

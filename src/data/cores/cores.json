@@ -1,0 +1,188 @@
+{
+	"mind": [
+		{
+			"id": "ferocious-protectors-desire",
+			"name": "Ferocious Protector's Desire",
+			"icon": "/assets/cores/Ferocious_Protector's_Desire.png",
+			"effects": {
+				"rare": "Critical Hit Rate increases by 6%.",
+				"heroic": "Critical Hit Rate increases by 8%.",
+				"legendary": "Critical Hit Rate increases by 10%."
+			}
+		},
+		{
+			"id": "arrogant-rulers-reflection",
+			"name": "Arrogant Ruler's Reflection",
+			"icon": "/assets/cores/Arrogant_Ruler's_Reflection.png",
+			"effects": {
+				"rare": "Ultimate Skill damage increases by 15%.",
+				"heroic": "Ultimate Skill damage increases by 20%.",
+				"legendary": "Ultimate Skill damage increases by 25%."
+			}
+		},
+		{
+			"id": "hunger-of-the-crimson-apex",
+			"name": "Hunger of the Crimson Apex",
+			"icon": "/assets/cores/Hunger_of_the_Crimson_Apex.png",
+			"effects": {
+				"rare": "Increases Attack by 4% when MP is 50% or below.",
+				"heroic": "Increases Attack by 5% when MP is 50% or below.",
+				"legendary": "Increases Attack by 6% when MP is 50% or below."
+			}
+		},
+		{
+			"id": "eyes-of-the-watcher",
+			"name": "Eyes of the Watcher",
+			"icon": "/assets/cores/Eyes_of_the_Watcher.png",
+			"effects": {
+				"rare": "Increases Critical Hit damage of Core Attacks by 6%.",
+				"heroic": "Increases Critical Hit damage of Core Attacks by 12%.",
+				"legendary": "Increases Critical Hit damage of Core Attacks by 20%."
+			}
+		},
+		{
+			"id": "nameless-demons-deception",
+			"name": "Nameless Demon's Deception",
+			"icon": "/assets/cores/Nameless_Demon's_Deception.png",
+			"effects": {
+				"rare": "Using Ultimate Skill increases Basic Skill Critical Hit Damage by 6% for 8 seconds.",
+				"heroic": "Using Ultimate Skill increases Basic Skill Critical Hit Damage by 12% for 8 seconds.",
+				"legendary": "Using Ultimate Skill increases Basic Skill Critical Hit Damage by 20% for 8 seconds."
+			}
+		},
+		{
+			"id": "ancient-wraiths-obession",
+			"name": "Ancient Wraith's Obession",
+			"icon": "/assets/cores/Ancient_Wraith's_Obession.png",
+			"effects": {
+				"rare": "Increases user's Attack by 2%.",
+				"heroic": "Increases user's Attack by 3%.",
+				"legendary": "Increases user's Attack by 5%."
+			}
+		}
+	],
+	"body": [
+		{
+			"id": "ferocious-protectors-armor",
+			"name": "Ferocious Protector's Armor",
+			"icon": "/assets/cores/Ferocious_Protector's_Armor.png",
+			"effects": {
+				"rare": "At 30% HP or fewer, recover 10% Max HP (Cooldown: 60s).",
+				"heroic": "At 30% HP or fewer, recover 15% Max HP (Cooldown: 60s).",
+				"legendary": "At 30% HP or fewer, recover 20% Max HP (Cooldown: 60s)."
+			}
+		},
+		{
+			"id": "arrogant-rulers-will",
+			"name": "Arrogant Ruler's Will",
+			"icon": "/assets/cores/Arrogant_Ruler's_Will.png",
+			"effects": {
+				"rare": "Basic Skill grants Shield equal to 6% of Attack for 10s (Cooldown: 45s).",
+				"heroic": "Basic Skill grants Shield equal to 8% of Attack for 10s (Cooldown: 45s).",
+				"legendary": "Basic Skill grants Shield equal to 10% of Attack for 10s (Cooldown: 45s)."
+			}
+		},
+		{
+			"id": "desires-of-the-crimson-apex",
+			"name": "Desires of the Crimson Apex",
+			"icon": "/assets/cores/Desires_of_the_Crimson_Apex.png",
+			"effects": {
+				"rare": "Increases Defense by 4% when MP is 50% or below.",
+				"heroic": "Increases Defense by 5% when MP is 50% or below.",
+				"legendary": "Increases Defense by 6% when MP is 50% or below."
+			}
+		},
+		{
+			"id": "limbs-of-the-watcher",
+			"name": "Limbs of the Watcher",
+			"icon": "/assets/cores/Limbs_of_the_Watcher.png",
+			"effects": {
+				"rare": "Increases Defense by 4% at 70% or fewer HP.",
+				"heroic": "Increases Defense by 5% at 70% or fewer HP.",
+				"legendary": "Increases Defense by 6% at 70% or fewer HP."
+			}
+		},
+		{
+			"id": "nameless-demons-horn",
+			"name": "Nameless Demon's Horn",
+			"icon": "/assets/cores/Nameless_Demon's_Horn.png",
+			"effects": {
+				"rare": "Using Ultimate Skill grants Shield equal to 3% Max HP for 8s.",
+				"heroic": "Using Ultimate Skill grants Shield equal to 6% Max HP for 8s.",
+				"legendary": "Using Ultimate Skill grants Shield equal to 10% Max HP for 8s."
+			}
+		},
+		{
+			"id": "ancient-wraiths-right-hand",
+			"name": "Ancient Wraith's Right Hand",
+			"icon": "/assets/cores/Ancient_Wraith's_Right_Hand.png",
+			"effects": {
+				"rare": "When hit, damage reduction increases by 3% for 10s (Cooldown: 25s).",
+				"heroic": "When hit, damage reduction increases by 6% for 10s (Cooldown: 25s).",
+				"legendary": "When hit, damage reduction increases by 10% for 10s (Cooldown: 25s)."
+			}
+		}
+	],
+	"spirit": [
+		{
+			"id": "ferocious-protectors-claw",
+			"name": "Ferocious Protector's Claw",
+			"icon": "/assets/cores/Ferocious_Protector's_Claw.png",
+			"effects": {
+				"rare": "Healing given increases by 4%.",
+				"heroic": "Healing given increases by 6%.",
+				"legendary": "Healing given increases by 8%."
+			}
+		},
+		{
+			"id": "arrogant-rulers-gaze",
+			"name": "Arrogant Ruler's Gaze",
+			"icon": "/assets/cores/Arrogant_Ruler's_Gaze.png",
+			"effects": {
+				"rare": "Break effectiveness increases by 6%.",
+				"heroic": "Break effectiveness increases by 8%.",
+				"legendary": "Break effectiveness increases by 10%."
+			}
+		},
+		{
+			"id": "punishment-of-the-crimson-apex",
+			"name": "Punishment of the Crimson Apex",
+			"icon": "/assets/cores/Punishment_of_the_Crimson_Apex.png",
+			"effects": {
+				"rare": "At 20% MP or less, recover 20% Max MP (once per combat).",
+				"heroic": "At 20% MP or less, recover 25% Max MP (once per combat).",
+				"legendary": "At 20% MP or less, recover 30% Max MP (once per combat)."
+			}
+		},
+		{
+			"id": "teeth-of-the-watcher",
+			"name": "Teeth of the Watcher",
+			"icon": "/assets/cores/Teeth_of_the_Watcher.png",
+			"effects": {
+				"rare": "Decreases MP Recovery Rate by 10% and Basic Skill MP Consumption by 6%.",
+				"heroic": "Decreases MP Recovery Rate by 10% and Basic Skill MP Consumption by 9%.",
+				"legendary": "Decreases MP Recovery Rate by 10% and Basic Skill MP Consumption by 12%."
+			}
+		},
+		{
+			"id": "nameless-demons-magisphere",
+			"name": "Nameless Demon's Magisphere",
+			"icon": "/assets/cores/Nameless_Demon's_Magisphere.png",
+			"effects": {
+				"rare": "Using Ultimate Skill recovers 2% Max MP (Cooldown: 20s).",
+				"heroic": "Using Ultimate Skill recovers 3% Max MP (Cooldown: 20s).",
+				"legendary": "Using Ultimate Skill recovers 5% Max MP (Cooldown: 20s)."
+			}
+		},
+		{
+			"id": "ancient-wraiths-mana-power",
+			"name": "Ancient Wraith's Mana Power",
+			"icon": "/assets/cores/Ancient_Wraith's_Mana_Power.png",
+			"effects": {
+				"rare": "After Basic Attack hits 3 times, restores 1% Power Gauge (Cooldown: 10s).",
+				"heroic": "After Basic Attack hits 3 times, restores 2% Power Gauge (Cooldown: 10s).",
+				"legendary": "After Basic Attack hits 3 times, restores 3% Power Gauge (Cooldown: 10s)."
+			}
+		}
+	]
+}

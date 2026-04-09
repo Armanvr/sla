@@ -1,0 +1,230 @@
+{
+	"name": "Sian Halat",
+	"category": "Elemental Stacker",
+	"alias": null,
+	"title": "Sian Halat",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Dark",
+	"class": "Elemental Stacker",
+	"country": "Unknown",
+	"guild": "Ahjin Guild",
+	"mainAbility": "Body Enhancement / Swordsmanship",
+	"exclusiveWeapon": "Crimson Shadow",
+	"releaseDate": "2026-01-15",
+	"occupation": ["Hunter"],
+	"affiliation": ["Ahjin Guild"],
+	"gender": "Male",
+	"age": null,
+	"species": "Human",
+	"image": "/assets/hunters/Sian_Halat.png",
+	"icon": "/assets/hunters/_icons/Sian_Halat_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1477,
+			"attack": 855,
+			"defense": 774,
+			"totalPower": 3983
+		},
+		"maxLevel": {
+			"hp": 13179,
+			"attack": 7264,
+			"defense": 6352,
+			"totalPower": 55512
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Dark",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Royal Swordsmanship: Chain Attack",
+				"description": "Sian swings his broadsword quickly to attack enemies.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "196-294% of Attack"
+					},
+					{
+						"stage": 2,
+						"damage": "214-321% of Attack"
+					},
+					{
+						"stage": 3,
+						"damage": "177-265.5% of Attack"
+					}
+				],
+				"icon": "/assets/hunters/Sian_Halat/Sian_Halat_Basic_Skill.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Royal Swordsmanship: Judgment",
+				"description": "Sian spins to slash enemies, then leaps and slams his broadsword downward towards the front.",
+				"damage": "1020-1530% of Attack",
+				"element": "Dark",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Royal Swordsmanship: Black Flash",
+				"description": "Sian attacks by unleashing a razor-sharp strike of concentrated mana from his sword.",
+				"damage": "2290-3435% of Attack",
+				"cooldown": 10,
+				"mpCost": "75-99",
+				"effects": ["Medium Elemental Accumulation", "Airborne", "Super Armor"],
+				"icon": ""
+			},
+			{
+				"name": "Royal Swordsmanship: Rush",
+				"description": "Sian swiftly slashes across a wide area and delivers a powerful strike, destroying the enemy's formation.",
+				"damage": "3132-4698% of Attack",
+				"cooldown": 22,
+				"mpCost": "100-132",
+				"effects": ["Medium Elemental Accumulation", "Airborne", "Super Armor"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Royal Swordsmanship: Scarlet Moon",
+				"description": "Sian unleashes sword energy shaped like a giant crescent moon to attack enemies.",
+				"damage": "1815-3730.83% of Attack",
+				"cooldown": 25,
+				"effects": ["Heavy Elemental Accumulation", "Airborne"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Royal Swordsmanship: Judgment Strike",
+				"description": "Sian rushes into the battlefield and strikes at the enemy's weak point.",
+				"damage": "1902-2853% of Attack",
+				"cooldown": 20,
+				"effects": ["Medium Elemental Accumulation", "Airborne"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Knight's Pride",
+				"description": "Sian channels his inner strength into his broadsword and performs a powerful strike towards the front, leading the battlefield to victory.",
+				"damage": "5190-7785% of Attack",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Heavy Elemental Accumulation", "Airborne"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Flawless Swordsmanship",
+		"description": "Each time Royal Swordsmanship: Judgment, Black Flash, or Rush hit, they charge the [Flawless Swordsmanship] Gauge. When the gauge reaches 50% or more, it activates [Crimson Sword Dance]. When Black Flash or Rush hit, they activate the [Crimson Fury] effect.",
+		"icon": null
+	},
+	"advancements": [
+		"When [Flawless Swordsmanship] Gauge reaches 50%+, Black Flash and Rush become Royal Swordsmanship: Full Moon and Bloodstorm, increasing their damage by 100%. Using Full Moon or Bloodstorm removes 50% of the Gauge. When those skills hit, they inflict [Scarlet Domination] on the target. [Crimson Fury] becomes [Undying Fury]. When Sian has 1 or fewer HP, he becomes [Immortal] for 2s.",
+		"The [Oath of Victory] effect is granted to the entire team at the start of the stage. Increases Dark Overload effect by 20%.",
+		"The [Crimson Sword Dance] effect is enhanced. When Black Flash, Rush, Full Moon, or Bloodstorm hit they activate the [Guardian's Resolve] effect.",
+		"For every Dark ally in the party, Dark team members' Defense Penetration increases by 3%.",
+		"[Scarlet Domination and Undying Fury] effects are enhanced. [Flawless Swordsmanship] Gauge charge rate increases by 100%. When Black Flash, Rush, Full Moon, or Bloodstorm hit they restore 20% of the user's Power Gauge and decrease Knight's Pride cooldown by 3s. When Knight's Pride hits it grants [Zenith Sword] to Dark team members."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"],
+			"jewelry": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-curse", "burning-curse", "burning-curse", "burning-curse"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Dark Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Crimson Shadow",
+		"icon": "/assets/weapons/sian-halat/Crimson_Shadow_Icon.png"
+	}
+}

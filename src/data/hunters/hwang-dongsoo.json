@@ -1,0 +1,240 @@
+{
+	"name": "Hwang Dongsoo",
+	"category": "Striker",
+	"alias": null,
+	"title": "",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Wind",
+	"class": "Fighter",
+	"country": "USA",
+	"guild": "Scavenger Guild",
+	"mainAbility": "Outstanding Physicality / Unarmed Fighting (Boxing)",
+	"exclusiveWeapon": "A Gentle Touch",
+	"releaseDate": "2024-03-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["Scavenger Guild"],
+	"gender": "Male",
+	"age": 32,
+	"species": "Human",
+	"image": "/assets/hunters/Hwang_Dongsoo.png",
+	"icon": "/assets/hunters/_icons/Hwang_Dongsoo_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1521,
+			"attack": 772,
+			"defense": 864,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 10585,
+			"attack": 4973,
+			"defense": 5567,
+			"totalPower": 43413
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Wind",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "S-Rank Fist",
+				"description": "Dongsoo swings his fist violently. Deals Wind elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "224–336% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "232–348% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "243–364.5% DEF"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "S-Rank Influence",
+				"description": "Dongsoo rotates and swings his fist powerfully to strike the enemy. Deals Wind elemental damage.",
+				"damage": "950–1425% DEF",
+				"element": "Wind",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Urge to Kill",
+				"description": "Dongsoo stomps the ground hard and detonates it. Deals Wind elemental damage. Can be used up to 3 times. When the final hit lands, Knocks Down the target. When this skill hits, it removes the target's Shield.",
+				"damage": "816–1224% DEF",
+				"cooldown": 8,
+				"mpCost": "30–39",
+				"effects": ["Knock Down", "Shield Removal"],
+				"icon": ""
+			},
+			{
+				"name": "Greed Scavenger",
+				"description": "Hwang Dongsoo charges violently and punches with his fist. Deals Wind elemental damage. When the final hit lands, inflicts the Airborne effect.",
+				"damage": "2053–3597% DEF",
+				"cooldown": 12,
+				"mpCost": "200–264",
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Cold-blooded Connection",
+				"description": "Dongsoo charges violently, punches with his fist, and stomps on the ground hard to make it explode. Deals Wind elemental damage. When the final hit lands, inflicts Airborne. Stuns the target (4 seconds).",
+				"damage": "1232–2532.44% DEF",
+				"cooldown": 25,
+				"effects": ["Airborne", "Stun (4s)"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Steel Blow",
+				"description": "Dongsoo appears with a steel frame and strikes the enemy in front of him. Deals Wind elemental damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind. When this skill hits, it Knocks Down the target.",
+				"damage": "1640–2460% DEF",
+				"cooldown": 20,
+				"effects": ["Knock Down"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Merciless",
+				"description": "Dongsoo swings his fist at incredible speed and strikes the enemy. Deals Wind elemental damage. When the final hit lands, inflicts the Airborne effect.",
+				"damage": "4640–6960% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Impulse / Impulsive Revenge",
+		"description": "When Urge to Kill, Steel Blow, or S-Rank Influence is used, it applies the [Impulse] effect. [Impulse]: Increases the user's Defense by 3% (stacks up to 5 times), Duration: Infinite. When the [Impulse] effect stack reaches its limit, it applies the [Impulsive Revenge] effect. [Impulsive Revenge]: Removes [Impulse] when active; Increases user's Defense by 24%; Creates a Shield equal to 12% of the user's Defense; When applied for the first time, Greed Scavenger is enhanced, the damage is doubled, and the cooldown resets. Duration: 10 seconds.",
+		"icon": null
+	},
+	"advancements": [
+		"Greed Scavenger can be charged up to Tier 2 and its damage increases up to 150% depending on the charge time. Super Armor is applied while using Greed Scavenger.",
+		"Increases the user's Defense by 8%.",
+		"Each time the user uses Urge to Kill or Greed Scavenger, it grants the [Madness] effect. [Madness]: Increases the user's Defense and Defense Penetration by 4% (stacking up to 3 times), Duration: 6 seconds.",
+		"Increases the user's Urge to Kill or Greed Scavenger damage by 40%.",
+		"Increases the user's Urge to Kill or Greed Scavenger damage to be 80% while Impulsive Revenge is active."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Wind Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "A Gentle Touch",
+		"icon": "/assets/weapons/hwang-dongsoo/A_Gentle_Touch_Icon.png"
+	}
+}

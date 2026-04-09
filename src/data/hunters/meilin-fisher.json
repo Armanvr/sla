@@ -1,0 +1,235 @@
+{
+	"name": "Meilin Fisher",
+	"category": "Supporter",
+	"alias": "Bella Fisher",
+	"title": "Companion",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Water",
+	"class": "Healer",
+	"country": "USA",
+	"guild": "The Federal Bureau of Hunters",
+	"mainAbility": "Water Manipulation / Feline Summon",
+	"exclusiveWeapon": "Hook, Line, and Sinker",
+	"releaseDate": "2024-06-19",
+	"occupation": ["Hunter"],
+	"affiliation": ["The Federal Bureau of Hunters"],
+	"gender": "Female",
+	"age": 22,
+	"species": "Human",
+	"image": "/assets/hunters/Meilin_Fisher.png",
+	"icon": "/assets/hunters/_icons/Meilin_Fisher_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1527,
+			"attack": 854,
+			"defense": 779,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 10630,
+			"attack": 5502,
+			"defense": 5015,
+			"totalPower": 43411
+		},
+		"primaryStat": "HP"
+	},
+	"elements": [
+		{
+			"name": "Water",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Pre-Casting",
+				"description": "Meilin swings her whip in front of herself.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "50–75% HP"
+					},
+					{
+						"stage": 2,
+						"damage": "54–81% HP"
+					},
+					{
+						"stage": 3,
+						"damage": "60–90% HP"
+					}
+				],
+				"icon": "/assets/hunters/Meilin_Fisher/Meilin_Fisher_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Side Whip",
+				"description": "Meilin sweeps the surrounding area with her water whip. Final hit inflicts [Airborne].",
+				"damage": "212–318% HP",
+				"element": "Water",
+				"icon": "/assets/hunters/Meilin_Fisher/Meilin_Fisher_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Rear Lash",
+				"description": "Meilin swings her whip down on top of enemies, then throws them into the air, pulling them towards her. Restores HP to all team members equal to 5% of Meilin Fisher's HP on hit.",
+				"damage": "234–351% HP",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": ["Airborne", "Team HP Restore 5%"],
+				"icon": "/assets/hunters/Meilin_Fisher/Meilin_Fisher_Skill_1.png"
+			},
+			{
+				"name": "Up!",
+				"description": "Meilin jumps and summons giant Berry paws that come together to strike enemies. Grants [So Cute!] (Core Attack damage +8%, 8s) to all team members. Removes target's [Shield].",
+				"damage": "475–712.5% ATK",
+				"cooldown": 12,
+				"mpCost": "200–264",
+				"effects": ["Airborne", "So Cute! (team)", "Remove Shield"],
+				"icon": "/assets/hunters/Meilin_Fisher/Meilin_Fisher_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Help, Berry!",
+				"description": "Berry's giant paws strike enemies multiple times. Restores user's HP by 8% of Meilin's Max HP. Grants [Berry, I'm Pumped Up!] (Attack +16%, Damage Taken -16%, 16s). Removes target's Shield.",
+				"damage": "162–333% HP",
+				"cooldown": 25,
+				"effects": ["Airborne", "Remove Shield", "HP Restore 8%", "Berry I'm Pumped Up!"],
+				"icon": "/assets/hunters/Meilin_Fisher/Meilin_Fisher_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Cat Rush",
+				"description": "Meilin runs forward, reeling Berry in from underground. Berry leaps up from the ground, flies straight ahead, and dives back into the ground with a splash.",
+				"damage": "390–585% HP",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": "/assets/hunters/Meilin_Fisher/Meilin_Fisher_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Big Meow!",
+				"description": "Meilin reels Berry in and flings him up high. Berry does a belly flop and crushes everything around him. Grants [Pumped Up!] (Attack +8%, Defense +8%, Critical Rate +8%, Core Attack damage +8%, Damage Taken -8%, 24s) to all team members.",
+				"damage": "874–1311% HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Knock Down", "Pumped Up! (team)"],
+				"icon": "/assets/hunters/Meilin_Fisher/Meilin_Fisher_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Cuddle Puddle / Bye, Meow!",
+		"description": "Rear Lash or Cat Rush hitting inflicts [Cuddle Puddle] on target (Water damage taken +8%, 16s). Using Side Whip or Up! or tagging out grants [Bye, Meow!] to all team members (Attack +8%, Defense +8%, 16s, stacks x3).",
+		"icon": null
+	},
+	"advancements": [
+		"Up! damage increases by 64%. Using Side Whip or Up! grants [Cat Butler] to the team member with the highest Attack (takes 64% of their damage, Super Armor, 8s). [So Cute!] upgraded: Core Attack damage +32%.",
+		"Increases all team members' Attack and Defense by 8%. Additionally increases Attack and Defense of Water element team members by 8%.",
+		"When Rear Lash hits, all team members' Power Gauges charge by 8%. When Rear Lash hits Elite or higher monsters, Power Gauges charge by an additional 8%.",
+		"User's HP increases by 12%.",
+		"[Pumped Up!] upgraded: Attack +16%, Defense +16%, Critical Rate +16%, Core Attack damage +16%, Damage Taken -16%, 24s."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120 (A)",
+			"armor": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"],
+			"jewelry": ["noble-flesh", "noble-flesh", "noble-flesh", "noble-flesh"]
+		},
+		{
+			"name": "Build Niv. 120 (B)",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"],
+			"jewelry": ["chaotic-wish", "chaotic-wish", "chaotic-wish", "chaotic-wish"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["cleric", "cleric", "cleric", "cleric"],
+			"jewelry": ["peridot", "peridot", "peridot", "peridot"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Additional HP", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Additional HP"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Defense Penetration", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Hook, Line, and Sinker",
+		"icon": "/assets/weapons/meilin-fisher/Hook,_Line,_and_Sinker_Icon.png"
+	}
+}

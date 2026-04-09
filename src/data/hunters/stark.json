@@ -1,0 +1,230 @@
+{
+	"name": "Stark",
+	"category": "Breaker",
+	"alias": null,
+	"title": "Warrior of the Journey Companions",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Fire",
+	"class": "Breaker",
+	"country": "Unknown",
+	"guild": "Journey Companions",
+	"mainAbility": "Unknown",
+	"exclusiveWeapon": "Stark's Axe",
+	"releaseDate": "2025-10-23",
+	"occupation": ["Hunter"],
+	"affiliation": ["Journey Companions"],
+	"gender": "Male",
+	"age": 0,
+	"species": "Human",
+	"image": "/assets/hunters/Stark.png",
+	"icon": null,
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1635,
+			"attack": 800,
+			"defense": 778,
+			"totalPower": 3980
+		},
+		"maxLevel": {
+			"hp": 14586,
+			"attack": 6566,
+			"defense": 6392,
+			"totalPower": 55629
+		},
+		"primaryStat": "HP"
+	},
+	"elements": [
+		{
+			"name": "Fire",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Chain Attack",
+				"description": "Stark swings his axe to attack. Deals Fire elemental damage. Deals weak Break damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "184–276% Max HP"
+					},
+					{
+						"stage": 2,
+						"damage": "205–307.5% Max HP"
+					},
+					{
+						"stage": 3,
+						"damage": "253–379.5% Max HP"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Whirlwind Strike",
+				"description": "Stark swings his axe while spinning. Deals Fire elemental damage. Deals weak Break damage. When this skill hits it inflicts the [Airborne] effect.",
+				"damage": "555–832.5% Max HP",
+				"element": "Fire",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Spiral Strike",
+				"description": "Stark spins swiftly and swings his axe. Deals Fire elemental damage. Deals medium Break damage. When the final hit lands it inflicts the [Airborne] effect.",
+				"damage": "850–1275% Max HP",
+				"cooldown": 16,
+				"mpCost": "150",
+				"effects": ["Airborne"],
+				"icon": ""
+			},
+			{
+				"name": "Lightning Strike",
+				"description": "Stark strikes forward with his axe in a powerful downward swing. Deals Fire elemental damage. Deals medium Break damage. When this skill hits, it [Knocks Down] the target. Using this skill grants the user a [Shield]. Enhanced versions: Lightning Strike: Heavy Attack and Lightning Strike: Extreme Attack.",
+				"damage": "786–1179% Max HP",
+				"cooldown": 16,
+				"mpCost": "150",
+				"effects": ["Knock Down", "Shield"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Warrior's Strike",
+				"description": "After jumping towards the front, Stark performs a powerful downward swing using his axe. Deals Fire elemental damage. Deals medium Break damage. When the final hit lands, it [Knocks Down] the target.",
+				"damage": "988–2030.89% Max HP",
+				"cooldown": 25,
+				"effects": ["Knock Down"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Pulverize",
+				"description": "Stark charges forward rapidly, jumps, and delivers a powerful downward axe strike. Deals Fire elemental damage. Deals weak Break damage. When this skill hits, it inflicts the [Airborne] effect. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Bind] effects, or a Shadow Skill.",
+				"damage": "954–1431% DEF",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Lightning Strike - Annihilation",
+				"description": "Stark descends from the air and strikes the ground powerfully with his axe. Deals Fire elemental damage. Deals almighty Break damage. When this skill hits, it inflicts the [Airborne] effect.",
+				"damage": "2226–3339% Max HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Reserved / Confidence / Courage",
+		"description": "The user gains the [Reserved] effect when entering any stage. When Stark or an ally successfully puts an enemy into the [Break] state, the [Break] state duration increases by 3 seconds. The user's Power Gauge cannot be charged normally, but if the [Courage] effect is active, their Power Gauge gains 100% charge. [Reserved]: Using Spiral Strike, Lightning Strike, Lightning Strike: Heavy Attack, or Lightning Strike: Extreme Attack activates the [Confidence] effect and triggers Whirling Strike. [Determination] effect activates when Whirling Strike is used. When [Courage] is activated, [Reserved] is removed. Duration: Infinite. [Confidence]: Increases Fire damage by 3%, Defense Penetration by 3%. At max stacks (4), removed and [Courage] activates. Duration: Infinite. [Determination]: Increases Lightning Strike variants damage by 10%, Critical Hit Rate by 10%. Duration: 3s. [Courage]: Fire damage +20%, Defense Penetration +20%. [Confidence] cannot activate while active. When removed, [Reserved] reactivates. Duration: 5s.",
+		"icon": null
+	},
+	"advancements": [
+		"[Fighting Spirit] effect activates when the user enters a story battle. When Whirling Strike hits it inflicts [Warrior's Aura] on the enemy (+15% damage taken from Stark, 15s). [Determination] enhanced: Basic Skill damage +15%, Critical Hit Rate +15%, Duration: 10s.",
+		"The user's HP increases by 15%.",
+		"[Warrior's Aura] enhanced: damage taken from Stark +30% (15s). The entire team's Defense Penetration increases equal to 20% of Stark's extra base Defense Penetration stat.",
+		"The user's [Break] effectiveness increases by 36%.",
+		"Using Spiral Strike activates [Determination]. When Whirling Strike, Lightning Strike variants hit, they decrease the cooldown of Lightning Strike - Annihilation by 4s (Cooldown: 0.5s). [Confidence] enhanced: Fire damage +5%, Defense Penetration +5%, stacks up to 4 times. [Courage] enhanced: Fire damage +30%, Defense Penetration +30%, Lightning Strike - Annihilation damage +50%. Duration: 5s."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "nameless-demons-horn",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Additional HP", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["HP (%)", "Critical Hit Rate", "Damage Increase", "Additional HP"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Defense Penetration", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional HP",
+			"secondary": ["HP (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Fire Damage (%)",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Stark Axe",
+		"icon": "/assets/weapons/stark/Stark_Axe_Icon.png"
+	}
+}

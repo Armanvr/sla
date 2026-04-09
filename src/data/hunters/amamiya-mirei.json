@@ -1,0 +1,240 @@
+{
+	"name": "Amamiya Mirei",
+	"category": "Striker",
+	"alias": "Oni Kuroha",
+	"title": "Oni Kuroha",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Wind",
+	"class": "Assassin",
+	"country": "Japan",
+	"guild": "Japanese Hunters Association",
+	"mainAbility": "Soul-Powered Swordsmanship",
+	"exclusiveWeapon": "Bunny Bunbun",
+	"releaseDate": "2024-07-31",
+	"occupation": ["Hunter"],
+	"affiliation": ["Japanese Hunters Association"],
+	"gender": "Female",
+	"age": 17,
+	"species": "Human",
+	"image": "/assets/hunters/Amamiya_Mirei.png",
+	"icon": "/assets/hunters/_icons/Amamiya_Mirei_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1517,
+			"attack": 885,
+			"defense": 753,
+			"totalPower": 3983
+		},
+		"maxLevel": {
+			"hp": 10557,
+			"attack": 5702,
+			"defense": 4850,
+			"totalPower": 43407
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Wind",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Kuroha's Sword Technique Type 1: One-Winged",
+				"description": "Mirei demonstrates her swordsmanship, combining precise and continuous movements.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "202–303% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "210–315% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "225–337.5% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Sword Technique Type 2: Dance of the Raven",
+				"description": "Mirei performs a deadly sword technique with quick and elegant movements.",
+				"damage": "920–1380% ATK",
+				"element": "Wind",
+				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Kuroha's Sword Technique Type 3: Wings of Night",
+				"description": "Mirei quickly approaches, performs a series of slashes, then distances herself from the enemy. Lastly, she delivers a deep slashing attack with eerie calm.",
+				"damage": "1550–2325% ATK",
+				"cooldown": 15,
+				"mpCost": "110–145",
+				"effects": ["Airborne", "Power Gauge +15%"],
+				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Skill_1.png"
+			},
+			{
+				"name": "Kuroha's Sword Technique Type 4: Raven's Cry",
+				"description": "Mirei soars through the air as fast as lightning and delivers a powerful final blow.",
+				"damage": "1550–2325% ATK",
+				"cooldown": 15,
+				"mpCost": "110–145",
+				"effects": ["Knock Down"],
+				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Kuroha's Sword Technique Type 6: Storm Raven",
+				"description": "Mirei appears with movements as fluid as a shadow and delivers a powerful final blow.",
+				"damage": "2330–4583.89% ATK",
+				"cooldown": 25,
+				"effects": ["Knock Down"],
+				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Kuroha's Sword Technique Type 5: Shadow Waltz",
+				"description": "Mirei strikes by rotating her katana in a rapid, storm-like spiral.",
+				"damage": "920–1380% ATK",
+				"cooldown": 20,
+				"effects": ["MP Recovery 10%"],
+				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Kuroha's Sword Technique Lethal Move: Moonless Night Overture",
+				"description": "Oni Kuroha's soul takes over, completely turning the tide of battle. Applies [Possessed] effect, resets skill cooldowns, removes all debuffs from team members.",
+				"damage": "1150–1725% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Possessed", "Remove all debuffs from team"],
+				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Kuroha's Darkness",
+		"description": "When the user has 30% or more of their maximum MP, applies [Kuroha's Darkness] effect. Increases Attack by 6% for every additional 150 MP (up to 90%). [Kuroha's Darkness]: Increases damage of Wings of Night and Raven's Cry by 30%.",
+		"icon": null
+	},
+	"advancements": [
+		"Moonless Night Overture applies [Winter's Edge] on target (100% ATK every 3s, 30s, stacks x10). While [Possessed]: +20% Critical Hit Damage. Using Wings of Night while [Possessed] applies [Deep Darkness] (+12% ATK and Crit Rate, stacks x2, 10s).",
+		"On stage entry, Power Gauge charges by 40% and Critical Hit Damage increases by 40%.",
+		"Basic Attack or Core Attack restores 2% MP and 1% Power Gauge, reduces Moonless Night Overture cooldown by 2s. Attacking a [Winter's Edge] target grants [Midnight Gale] (Defense Penetration +0.2%, Wind Overload damage +1%, infinite, stacks x100).",
+		"Increases Wind damage by 12% for every Wind team member in the party (stacks up to 3 times).",
+		"While [Possessed], grants [Raven's Confession]: Wings of Night and Raven's Cry damage +80%, back attack damage +30%."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["behemoth", "behemoth", "behemoth", "behemoth"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["behemoth", "behemoth", "behemoth", "behemoth"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "nameless-demons-magisphere"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Wind Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Bunny Bunbun",
+		"icon": "/assets/weapons/amamiya-mirei/Bunny_Bunbun_Icon.png"
+	}
+}

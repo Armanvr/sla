@@ -1,0 +1,236 @@
+{
+	"name": "MIYEON",
+	"category": "Striker",
+	"alias": null,
+	"title": "Endless Dream",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Light",
+	"class": "Striker",
+	"country": "Neverland",
+	"guild": "Forever",
+	"mainAbility": "Longsword and Crystal Magic",
+	"exclusiveWeapon": "The Battlefield's Guiding Star",
+	"releaseDate": "2025-07-03",
+	"occupation": ["Hunter"],
+	"affiliation": ["Forever", "i-dle"],
+	"gender": "Female",
+	"age": 28,
+	"species": "Human",
+	"image": "/assets/hunters/MIYEON.png",
+	"icon": "/assets/hunters/_icons/MIYEON_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1510,
+			"attack": 774,
+			"defense": 868,
+			"totalPower": 3983
+		},
+		"maxLevel": {
+			"hp": 12625,
+			"attack": 5690,
+			"defense": 6689,
+			"totalPower": 52067
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Light",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Echo Strike",
+				"description": "MIYEON teleports to the enemy to land consecutive strikes. Deals Light elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "126–189% DEF"
+					},
+					{
+						"stage": 2,
+						"damage": "130–195% DEF"
+					},
+					{
+						"stage": 3,
+						"damage": "140–210% DEF"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Midtone Slash",
+				"description": "MIYEON moves forward and delivers a powerful upward strike. Deals Light elemental damage. When this skill hits it inflicts the [Airborne] effect.",
+				"damage": "876–1314% DEF",
+				"element": "Light",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Descending Glissando",
+				"description": "MIYEON leaps forward to perform two counterclockwise spins while slashing, then delivers a powerful downward strike. Deals Light elemental damage. When the final hit lands it [Knocks Down] the target. Places [Green Mana Power Crystals] on the ground (damage: 250% of Descending Glissando's damage).",
+				"damage": "1316–1974% DEF",
+				"cooldown": 12,
+				"mpCost": "300",
+				"effects": ["Knock Down", "Green Mana Power Crystals"],
+				"icon": ""
+			},
+			{
+				"name": "Doubletime Lunge",
+				"description": "MIYEON channels her mana power to launch the enemy into the air, focuses energy into her sword to deliver a powerful slash, and then detonates mana power crystals. Deals Light elemental damage. When this skill hits it inflicts the [Airborne] effect. Places [Yellow Mana Power Crystals] on the ground (damage: 250% of Doubletime Lunge's damage). Activates Critical Slash for 10s. Critical Slash: same damage as Doubletime Lunge; activates [Breath] (Power Gauge +10%, Shield 5% Max HP, 5s), [Vocalization] (Ultimate Skill damage +10%, Shield 5% Max HP, 5s), [Reverberation] (Core Attack damage +10%, Shield 5% Max HP, 5s) while held.",
+				"damage": "3730–5595% DEF",
+				"cooldown": 15,
+				"mpCost": "100",
+				"effects": ["Airborne", "Yellow Mana Power Crystals", "Critical Slash"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Reverberating Strike",
+				"description": "MIYEON leaps forward to perform two counterclockwise spins while slashing, then delivers a powerful downward strike. Deals Light elemental damage. When the final hit lands it [Knocks Down] the target.",
+				"damage": "2036–4185.11% DEF",
+				"cooldown": 25,
+				"effects": ["Knock Down"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Dual Aria",
+				"description": "MIYEON lands from the air with a downward strike. Deals Light elemental damage. When this skill hits it inflicts the [Airborne] effect. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Blind] effects, or a Shadow Skill.",
+				"damage": "1140–1710% DEF",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Headliner",
+				"description": "After enveloping her weapon with power, MIYEON delivers a powerful slash to finish her attack. Deals Light elemental damage. When this skill hits it inflicts the [Airborne] effect. Disables currently active Critical Slash. Resets the cooldown of Descending Glissando and Doubletime Lunge.",
+				"damage": "3191–4786.5% DEF",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Highlight / Mana Power Crystals",
+		"description": "The entire team gains [FOREVER] (+5% damage dealt, stacks up to 3 times, Infinite) when entering the Encore Mission and Instance Dungeon. Using Headliner activates [Highlight]: Using Core Attack causes the user to place a [Black Mana Power Crystal] (damage: 250% of Core Attack damage); Light damage +15%; Shield equal to 5% of MIYEON's Max HP; Defense +30%; Duration: 15s.",
+		"icon": null
+	},
+	"advancements": [
+		"When the user enters the stage it charges their Power Gauge by 50%. Using Headliner activates their Core Attack and restores 600 MP.",
+		"Increases Light damage by 15%.",
+		"Using Descending Glissando, Doubletime Lunge, or Critical Slash grants the user a Shield equal to 5% of MIYEON's Max HP for 15s (stacks up to 10 times). When the Shield effect is activated the user's Defense increases by 6% for 30s (stacks up to 10 times).",
+		"For every Light ally, the Defense of Light team members increases by 3%.",
+		"Using Headliner: Critical Hit Rate +10%, Critical Hit damage +20% for 15s. When the user uses Descending Glissando, Doubletime Lunge, or Critical Slash it charges MIYEON's Power Gauge by 3% and reduces the cooldown of Headliner by 4.5s."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Light Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	}
+}

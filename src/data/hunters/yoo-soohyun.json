@@ -1,0 +1,240 @@
+{
+	"name": "Yoo Soohyun",
+	"category": "Striker",
+	"alias": "Time Bomb",
+	"title": "Superstar",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Fire",
+	"class": "Mage",
+	"country": "Korea",
+	"guild": "Ahjin Guild",
+	"mainAbility": "Otherworldly Magic",
+	"exclusiveWeapon": "Overdrive",
+	"releaseDate": "2024-07-10",
+	"occupation": ["Hunter", "Model"],
+	"affiliation": ["Ahjin Guild"],
+	"gender": "Female",
+	"age": 25,
+	"species": "Human",
+	"image": "/assets/hunters/Yoo_Soohyun.png",
+	"icon": "/assets/hunters/_icons/Yoo_Soohyun_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1533,
+			"attack": 879,
+			"defense": 752,
+			"totalPower": 3983
+		},
+		"maxLevel": {
+			"hp": 10671,
+			"attack": 5658,
+			"defense": 4840,
+			"totalPower": 43414
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Fire",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Model Markswoman",
+				"description": "Soohyun gathers magical energy and releases a beam to the front.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "148–222% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "158–237% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "172–258% ATK"
+					}
+				],
+				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Basic.png"
+			}
+		],
+		"core": [
+			{
+				"name": "Perfect Shot",
+				"description": "Soohyun rotates her firearm, gathers magical energy, and fires a powerful shot.",
+				"damage": "800–1200% ATK",
+				"element": "Fire",
+				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Core.png"
+			}
+		],
+		"skill": [
+			{
+				"name": "Trick Shot",
+				"description": "Soohyun somersaults backwards and fires bullets at targets in front of her.",
+				"damage": "800–1200% ATK",
+				"cooldown": 10,
+				"mpCost": "150–198",
+				"effects": [],
+				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Skill_1.png"
+			},
+			{
+				"name": "Kill Shot",
+				"description": "Soohyun gathers magical energy to fire multiple high-powered beams. Always deals Fire elemental damage as if it is the target's weakness.",
+				"damage": "1450–2175% ATK",
+				"cooldown": 15,
+				"mpCost": "150–198",
+				"effects": ["Airborne", "Fire Weakness Override"],
+				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Skill_2.png"
+			}
+		],
+		"support": [
+			{
+				"name": "Pulse Fire",
+				"description": "Soohyun gathers magical energy to fire multiple high-powered beams at enemies. Grants [Spotlight] (Defense Penetration +18%, Damage +18% of Defense Penetration, 18s) to Sung Jinwoo.",
+				"damage": "800–1200% ATK",
+				"cooldown": 25,
+				"effects": ["Spotlight (Sung Jinwoo)"],
+				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Support.png"
+			}
+		],
+		"qte": [
+			{
+				"name": "Firing Swarm",
+				"description": "Soohyun creates four drones nearby, uses the drones to gather energy in the air, and unleashes a beam.",
+				"damage": "800–1200% ATK",
+				"cooldown": 20,
+				"effects": ["Knock Down"],
+				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_QTE.png"
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Zeroed-in Blast",
+				"description": "Soohyun deploys magic firearms simultaneously around her, gathers magical energy, and releases it all at once.",
+				"damage": "2750–4125% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": [],
+				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Ultimate.png"
+			}
+		]
+	},
+	"passive": {
+		"name": "Spotlight / Magic Firearm",
+		"description": "Using Trick Shot or Firing Swarm grants [Spotlight] (Defense Penetration +24%, Damage +24% of Defense Penetration, 24s). Using Firing Swarm or Zeroed-in Blast grants [Magic Firearm] (magic firearms deal 160% ATK; inflicts [Magic Reaction]: Fire damage taken +1%, Recovery Rate -4%, 60s, stacks x20).",
+		"icon": null
+	},
+	"advancements": [
+		"Kill Shot activates Core Attack and increases Core Attack damage by 40% for 6s (CD: 16s). Core Attack hit grants [Madness] (CD: 16s): resets Kill Shot cooldown, Kill Shot becomes Hell Fire (+40% damage), Super Armor while using Hell Fire, applies Magic Firearm.",
+		"Defense Penetration increases by 12%.",
+		"Using Trick Shot grants [Attack Increase] (+24% ATK, 12s).",
+		"Attack increases by 12%.",
+		"Kill Shot and Hell Fire damage increases by 6% for each [Magic Reaction] stack on the target (up to 120%)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Fire Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Overdrive",
+		"icon": "/assets/weapons/yoo-soohyun/Overdrive_Icon.png"
+	}
+}

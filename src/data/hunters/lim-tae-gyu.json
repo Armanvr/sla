@@ -1,0 +1,230 @@
+{
+	"name": "Lim Tae-Gyu",
+	"category": "Breaker",
+	"alias": null,
+	"title": "Guild Master of the Fiend Guild",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Dark",
+	"class": "Ranger",
+	"country": "Korea",
+	"guild": "Fiend Guild",
+	"mainAbility": "Light Magic Arrows",
+	"exclusiveWeapon": "Intercept",
+	"releaseDate": "2024-03-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["Fiend Guild"],
+	"gender": "Male",
+	"age": 36,
+	"species": "Human",
+	"image": "/assets/hunters/Lim_Tae-Gyu.png",
+	"icon": "/assets/hunters/_icons/Lim_Tae-Gyu_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1480,
+			"attack": 874,
+			"defense": 783,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 10305,
+			"attack": 5629,
+			"defense": 5041,
+			"totalPower": 43385
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Dark",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Dark Shot",
+				"description": "Tae-Gyu fires an arrow imbued with the power of darkness. Deals Dark elemental damage. Deals weak Break damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "194–291% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "202–303% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "214–321% ATK"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Volley Fire",
+				"description": "Tae-Gyu fires multiple arrows simultaneously. Deals Dark elemental damage. Deals weak Break damage.",
+				"damage": "663–994.5% ATK",
+				"element": "Dark",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Shoot and Maneuver",
+				"description": "Tae-Gyu slides to the side and fires. Deals Dark elemental damage. Deals weak Break damage. Usable 2 times. Activates Core Attack.",
+				"damage": "503–984% ATK",
+				"cooldown": 8,
+				"mpCost": "150–198",
+				"effects": ["Core Attack Activation"],
+				"icon": ""
+			},
+			{
+				"name": "Typhoon Fire",
+				"description": "Tae-Gyu gathers powerful energy into an arrow and strikes. Deals Dark elemental damage. Deals heavy Break damage.",
+				"damage": "1920–2880% ATK",
+				"cooldown": 12,
+				"mpCost": "200–264",
+				"effects": ["Heavy Break"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Heavy Attack: Typhoon Fire",
+				"description": "Tae-Gyu gathers powerful energy into an arrow and strikes. Deals Dark elemental damage. Deals medium Break damage. Applies Magic Boost effect: increases Core Attack damage by 50% for 15 seconds.",
+				"damage": "680–1397.78% ATK",
+				"cooldown": 25,
+				"effects": ["Magic Boost (Core Attack +50%, 15s)"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Airborne Burst",
+				"description": "Tae-Gyu jumps into the air and shoots explosive arrows. Deals Dark elemental damage. Deals weak Break damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind.",
+				"damage": "1070–1605% ATK",
+				"cooldown": 20,
+				"effects": ["Weak Break"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Quick Attack: Typhoon Fire",
+				"description": "Tae-Gyu spins once, adjusts his stance, and gets into Sniper Mode. Deals Dark elemental damage. Sniper Mode: Changes Basic Attack to Quick Attack: Typhoon Fire dealing 1640–2460% ATK damage, fires up to 8 projectiles, medium Break damage, lasts 10 seconds.",
+				"damage": "1640–2460% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Sniper Mode (10s)", "Medium Break"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Magic Boost",
+		"description": "When Airborne Burst is used, applies Magic Boost effect. When skill hits, fires 3 Magic Arrows. When Basic Attack hits, fires 2 Magic Arrows. Magic Arrow damage equals 1050% of Attack per arrow. Increases Core Attack, Typhoon Fire, Quick Fire: Typhoon Fire damage by 30%. Duration: 15 seconds.",
+		"icon": null
+	},
+	"advancements": [
+		"Shoot and Maneuver enhanced: 25% speed and damage increase, usable 3 times. Volley Fire or Quick Attack: Typhoon Fire increases all team members' Critical Hit Rate by 0.7% and Critical Hit Damage by 1% for 10 seconds (stacks up to 8 times).",
+		"Increases Break effectiveness by 20%.",
+		"When Magic Boost active, increases Core Attack, Typhoon Fire, Quick Attack: Typhoon Fire effects by 80%. Shoot and Maneuver grants Magic Boost (15 sec cooldown). Typhoon Fire hit increases target's Critical Hit damage received by 7% for 12 seconds.",
+		"Increases Attack by 12%.",
+		"Entering stage regains 100% Power Gauge. Attack increases 4% per Volley Fire hit (stacks to 30 times, infinite duration)."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "ferocious-protectors-claw"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Dark Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Intercept",
+		"icon": "/assets/weapons/lim-tae-gyu/Intercept_Icon.png"
+	}
+}

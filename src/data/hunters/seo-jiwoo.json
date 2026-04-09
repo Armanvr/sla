@@ -1,0 +1,230 @@
+{
+	"name": "Seo Jiwoo",
+	"category": "Breaker",
+	"alias": null,
+	"title": "",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Water",
+	"class": "Tank",
+	"country": "Korea",
+	"guild": "Hunters Guild",
+	"mainAbility": "Hand-to-hand combat / Superhuman Strength",
+	"exclusiveWeapon": "Unparalleled Bravery",
+	"releaseDate": "2024-03-18",
+	"occupation": ["Hunter"],
+	"affiliation": ["Hunters Guild"],
+	"gender": "Female",
+	"age": 23,
+	"species": "Human",
+	"image": "/assets/hunters/Seo_Jiwoo.png",
+	"icon": "/assets/hunters/_icons/Seo_Jiwoo_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1666,
+			"attack": 776,
+			"defense": 786,
+			"totalPower": 3460
+		},
+		"maxLevel": {
+			"hp": 11596,
+			"attack": 4999,
+			"defense": 5063,
+			"totalPower": 43483
+		},
+		"primaryStat": "Defense"
+	},
+	"elements": [
+		{
+			"name": "Water",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Water Dragon Strike",
+				"description": "Jiwoo punches with her fist that's full of energy. Deals Water elemental damage. Deals weak Break damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "99–148.5% Max HP"
+					},
+					{
+						"stage": 2,
+						"damage": "103–154.5% Max HP"
+					},
+					{
+						"stage": 3,
+						"damage": "106–159% Max HP"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Twin Dragon Strike",
+				"description": "Jiwoo strikes powerfully with both fists charged with the Water Dragon's energy. Deals Water elemental damage. Deals weak Break damage. Inflicts Airborne effect on hit.",
+				"damage": "420–630% Max HP",
+				"element": "Water",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Water Dragon Rush",
+				"description": "Jiwoo jumps towards the enemy with all her might and strikes down. [Heavy Attack: Water Dragon Rush]: Jiwoo strikes the ground with the Water Dragon. Deals Water elemental damage. Deals weak Break damage. Knocks Down target. Heavy Attack applies Shield to entire team (5% of user's HP, 25 seconds). Super Armor applied during use.",
+				"damage": "730–1095% Max HP",
+				"cooldown": 12,
+				"mpCost": "100–132",
+				"effects": ["Knock Down", "Shield (5% HP, 25s) on Heavy Attack", "Super Armor"],
+				"icon": ""
+			},
+			{
+				"name": "Lightning Kick",
+				"description": "Jiwoo lifts her feet vertically and strikes down in front of her. [Heavy Attack: Lightning Kick]: Jiwoo punches upward with a surging Water Dragon. Deals Water elemental damage. Deals weak Break damage. Knocks Down target. Heavy Attack increases Break effectiveness by 50%. Super Armor applied during use.",
+				"damage": "730–1095% Max HP",
+				"cooldown": 12,
+				"mpCost": "100–132",
+				"effects": ["Knock Down", "Break Effectiveness +50% on Heavy Attack", "Super Armor"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Short Attack: Water Dragon Lightning Kick",
+				"description": "The user jumps towards the enemy with all her might and strikes down. Deals Water elemental damage. Deals medium Break damage. Knocks Down target. Applies Shield to entire team (10% of user's HP, 25 seconds).",
+				"damage": "420–863.33% Max HP",
+				"cooldown": 25,
+				"effects": ["Knock Down", "Shield (10% HP, 25s)"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Burst Punch",
+				"description": "Jiwoo gathers all her energy into her fist and releases it while charging forward. Deals Water elemental damage. Deals weak Break damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill. Inflicts Airborne effect on hit.",
+				"damage": "730–1095% Max HP",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Lethal Move: Water Dragon Transformation Strike",
+				"description": "Jiwoo gathers the Water Dragon's energy, jumps into the air, and slams down her fist with the power of the Water Dragon, devastating her surroundings. Deals Water elemental damage. Inflicts Airborne effect on hit.",
+				"damage": "1484–2226% Max HP",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "Water Dragon Training",
+		"description": "When Twin Dragon Strike, Water Dragon Rush, Lightning Kick, or Burst Punch is used, it applies [Training] 1 time. When 3 instances of [Training] have been applied, [Water Dragon Training] is applied. When [Water Dragon Training] is active, it resets the cooldowns of Water Dragon Rush and Lightning Kick and changes them to Heavy Attack: Water Dragon Rush and Heavy Attack: Lightning Kick. [Training] has Infinite duration (stacking up to 3 times). [Water Dragon Training] effects are removed when Heavy Attack: Water Dragon Rush or Heavy Attack: Lightning Kick is used. Duration: Infinite.",
+		"icon": null
+	},
+	"advancements": [
+		"Increases the damage of Heavy Attack: Water Dragon Rush and Heavy Attack: Lightning Kick by 150%.",
+		"Increases the user's Break effectiveness by 15%. Increases the user's Break effectiveness when using Heavy Attack: Lightning Kick by 50%.",
+		"The user recovers 50 MP upon applying [Water Dragon Training].",
+		"Increases the user's Max HP equal to 15% of their additional Critical Hit damage.",
+		"The Critical Hit Rate and Skill Damage of Heavy Attack: Water Dragon Rush, Heavy Attack: Lightning Kick, and Lethal Move: Water Dragon Transformation Strike increases by 32%."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
+			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"],
+			"jewelry": ["chaotic-desire", "chaotic-desire", "chaotic-desire", "chaotic-desire"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"],
+			"jewelry": ["burning-greed", "burning-greed", "burning-greed", "burning-greed"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ferocious-protectors-desire",
+		"body": "desires-of-the-crimson-apex",
+		"spirit": "arrogant-rulers-gaze"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Damage Increase", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Additional Defense", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Defense (%)", "Critical Hit Rate", "Damage Increase", "Additional Defense"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Defense",
+			"secondary": ["Defense (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Defense (%)", "Additional Defense", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Unparalleled Bravery",
+		"icon": "/assets/weapons/seo-jiwoo/Unparalleled_Bravery_Icon.png"
+	}
+}

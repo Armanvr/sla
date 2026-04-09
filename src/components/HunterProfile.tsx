@@ -31,9 +31,13 @@ export function HunterProfile({ data, onBack }: { data: HunterData; onBack?: () 
 						← Back
 					</button>
 				)}
-				<h1 class='text-xl font-bold tracking-wide'>
+				<button
+					type='button'
+					onClick={onBack}
+					class={`text-xl font-bold tracking-wide ${onBack ? 'hover:opacity-80 transition-opacity cursor-pointer' : ''}`}
+				>
 					SLA <span class='text-purple-400'>Guide</span>
-				</h1>
+				</button>
 				{data.rarity && (
 					<span
 						class={`ml-auto text-sm font-bold border px-2 py-0.5 rounded ${rarityColors[data.rarity] ?? 'text-zinc-400 border-zinc-600'}`}
@@ -149,54 +153,6 @@ export function HunterProfile({ data, onBack }: { data: HunterData; onBack?: () 
 										{'★'.repeat(i + 1)}
 									</span>
 									<p class='text-sm text-zinc-300'>{adv}</p>
-								</div>
-							))}
-						</div>
-					</CollapsibleSection>
-				)}
-
-				{data.costumes && data.costumes.length > 0 && (
-					<CollapsibleSection title='Costumes'>
-						<div class='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4'>
-							{data.costumes.map((costume) => (
-								<div
-									key={costume.name}
-									class='bg-zinc-800/30 border border-zinc-700/50 rounded-xl overflow-hidden hover:border-zinc-600/60 transition-colors'
-								>
-									{costume.image && (
-										<div class='aspect-square bg-zinc-900/50 overflow-hidden'>
-											<img
-												src={costume.image}
-												alt={costume.name}
-												class='w-full h-full object-cover object-top'
-												onError={(e) => {
-													const parent = (e.target as HTMLImageElement).parentElement
-													if (parent) parent.style.display = 'none'
-												}}
-											/>
-										</div>
-									)}
-									<div class='px-3 py-2'>
-										<div class='flex items-center gap-1.5 flex-wrap mb-0.5'>
-											<span class='font-medium text-sm leading-tight'>{costume.name}</span>
-										</div>
-										<div class='flex items-center gap-1.5 flex-wrap'>
-											<span class='text-xs text-zinc-400'>{costume.rarity}</span>
-											{costume.chromas ? (
-												<span class='text-xs text-zinc-500'>· {costume.chromas} chromas</span>
-											) : null}
-											{costume.default && (
-												<span class='text-[10px] text-zinc-500 uppercase tracking-wide'>
-													Default
-												</span>
-											)}
-											{costume.free && (
-												<span class='text-[10px] text-emerald-400 uppercase tracking-wide'>
-													Free
-												</span>
-											)}
-										</div>
-									</div>
 								</div>
 							))}
 						</div>

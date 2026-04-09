@@ -1,0 +1,236 @@
+{
+	"name": "SHUHUA",
+	"category": "Striker",
+	"alias": null,
+	"title": "A Star's Dream",
+	"rarity": "SSR",
+	"rank": "A-Rank",
+	"element": "Water",
+	"class": "Striker",
+	"country": "Neverland",
+	"guild": "Forever",
+	"mainAbility": "Power of the Wolf / Melee Combat",
+	"exclusiveWeapon": "The Place Bathed in Moonlight",
+	"releaseDate": "2025-07-03",
+	"occupation": ["Hunter"],
+	"affiliation": ["Forever", "i-dle"],
+	"gender": "Female",
+	"age": 25,
+	"species": "Human",
+	"image": "/assets/hunters/SHUHUA.png",
+	"icon": "/assets/hunters/_icons/SHUHUA_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1504,
+			"attack": 883,
+			"defense": 762,
+			"totalPower": 3982
+		},
+		"maxLevel": {
+			"hp": 12576,
+			"attack": 6803,
+			"defense": 5871,
+			"totalPower": 52069
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Water",
+			"primary": true
+		}
+	],
+	"skills": {
+		"basic": [
+			{
+				"name": "Do-Re-Mi Glitch",
+				"description": "SHUHUA controls her mana orbs to attack. Deals Water elemental damage.",
+				"stages": [
+					{
+						"stage": 1,
+						"damage": "153–229.5% ATK"
+					},
+					{
+						"stage": 2,
+						"damage": "160–240% ATK"
+					},
+					{
+						"stage": 3,
+						"damage": "165–247.5% ATK"
+					}
+				],
+				"icon": ""
+			}
+		],
+		"core": [
+			{
+				"name": "Rhythmic Beatdown",
+				"description": "SHUHUA controls her mana orbs to attack in two directions at once. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect. Enhanced version: High-energy Beat (damage +50% base, +100% at A1).",
+				"damage": "800–1200% ATK",
+				"element": "Water",
+				"icon": ""
+			}
+		],
+		"skill": [
+			{
+				"name": "Pop Star Landing",
+				"description": "SHUHUA performs an arching high jump and then strikes down into the ground to create a special effect zone. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect.",
+				"damage": "1060–1590% ATK",
+				"cooldown": 20,
+				"mpCost": "134",
+				"effects": ["Airborne", "On the Stage"],
+				"icon": ""
+			},
+			{
+				"name": "Starlight Bark",
+				"description": "SHUHUA controls her mana orbs to unleash violent, chaotic slashes of mana. Deals Water elemental damage. When the final hit lands it inflicts the [Airborne] effect. Changes to Starlight Howl at A2 (damage +100%).",
+				"damage": "895–1342.5% ATK",
+				"cooldown": 20,
+				"mpCost": "235",
+				"effects": ["Airborne", "High-energy"],
+				"icon": ""
+			}
+		],
+		"support": [
+			{
+				"name": "Showtime",
+				"description": "SHUHUA jumps and lands with a theatrical flair, creating a special effect zone upon landing. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect. Using this skill grants [Start the Music]: Shield equal to 12% of ATK, Duration: 8s.",
+				"damage": "1195–2456.39% ATK",
+				"cooldown": 25,
+				"effects": ["Airborne", "Start the Music (Shield 12% ATK, 8s)"],
+				"icon": ""
+			}
+		],
+		"qte": [
+			{
+				"name": "Twinkling Arpeggio",
+				"description": "SHUHUA appears above the battlefield and creates an \"X\" with her mana orbs while pointing them ahead and towards the ground, performing a slashing attack. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Blind] effects, or a Shadow Skill.",
+				"damage": "910–1365% ATK",
+				"cooldown": 20,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		],
+		"ultimate": [
+			{
+				"name": "Catharsis in the Harmony",
+				"description": "SHUHUA is magically imbued with the power of a wolf and unleashes a fierce claw attack. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect.",
+				"damage": "3048–4572% ATK",
+				"cooldown": 45,
+				"powerGaugeCost": 100,
+				"effects": ["Airborne"],
+				"icon": ""
+			}
+		]
+	},
+	"passive": {
+		"name": "On the Stage / High-energy / Performance",
+		"description": "The entire team gains [FOREVER] (+5% damage dealt, stacks up to 3 times, Infinite) when entering the Encore Mission and Instance Dungeon. Using Pop Star Landing activates [On the Stage]: activates [Performance] effect every 3s, Duration: 15s. [Performance]: Core Attack damage +50%, grants Shield (10% ATK), Duration: 3s. Using Starlight Bark/Howl activates [High-energy]: Rhythmic Beatdown → High-energy Beat (+50% damage); when Core Attack activates and High-energy Beat is used it doesn't consume Core Gauge; when Core Attack hits, cooldowns of Pop Star Landing, Starlight Bark/Howl reduced by 3s (Cooldown: 1s); can only apply to up to 6 consecutive Core Attacks; Duration: 3.5s.",
+		"icon": null
+	},
+	"advancements": [
+		"[High-energy] enhanced: High-energy Beat damage +100%, cooldown reduction on Core Attack hit +5s. Each time High-energy Beat hits it inflicts [Tension Drop] on target: Water damage taken from SHUHUA +1%, Duration: 30s, stacks up to 10 times.",
+		"Starlight Bark changes to Starlight Howl, increasing the user's damage by 100%.",
+		"[Performance] enhanced: Core Attack damage +55%, Shield (15% ATK), Power Gauge +10%, activates [Tension Up]: Water damage +20%, Duration: 3s.",
+		"Attack increases by 16%.",
+		"Using Starlight Howl activates [Volume Up]: damage dealt +30%, Critical Hit Rate +30%, Duration: 10s. Attack speed of High-energy Beat significantly increases."
+	],
+	"builds": [
+		{
+			"name": "Build Niv. 120",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		},
+		{
+			"name": "Build Niv. 100",
+			"armor": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"],
+			"jewelry": ["chaotic-infamy", "chaotic-infamy", "chaotic-infamy", "chaotic-infamy"]
+		},
+		{
+			"name": "Build Niv. 75",
+			"armor": ["black-lion", "black-lion", "black-lion", "black-lion"],
+			"jewelry": ["obsidian", "obsidian", "obsidian", "obsidian"]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "teeth-of-the-watcher"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Water Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	}
+}
