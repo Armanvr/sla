@@ -25,16 +25,16 @@ interface ShadowData {
 	title: string
 	shadowAuthority: string
 	image: string | null
-	render: string | null
-	ranks: {
+	render?: string | null
+	ranks?: {
 		common: string | null
 		elite: string | null
 		knight: string | null
 		eliteKnight: string | null
 		general: string | null
 	}
-	weapon: { name: string; icon: string } | null
-	skills: { icon: string; name: string | null; description: string | null }[]
+	weapon?: { name: string; icon: string } | null
+	skills?: { icon: string; name: string | null; description: string | null }[]
 }
 
 const SHADOWS: ShadowData[] = [
@@ -210,7 +210,7 @@ function HunterCard({ hunter, onClick }: { hunter: HunterCard; onClick: () => vo
 // ─── Shadow Card ─────────────────────────────────────────────────────────────
 
 function ShadowCard({ shadow }: { shadow: ShadowData }) {
-	const img = shadow.render ?? shadow.image ?? shadow.ranks.general
+	const img = shadow.render ?? shadow.image ?? shadow.ranks?.general
 
 	return (
 		<div class='relative group bg-gradient-to-b from-purple-950/60 to-zinc-900 border border-purple-900/40 hover:border-purple-600/60 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl'>

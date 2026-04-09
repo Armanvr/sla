@@ -174,7 +174,7 @@ function HunterSearchSelect({
 
 // ─── Score ring ───────────────────────────────────────────────────────────────
 
-function ScoreRing({ percent, color }: { percent: number; color: string }) {
+function ScoreRing({ percent }: { percent: number }) {
 	const r = 52
 	const circ = 2 * Math.PI * r
 	const offset = circ - (percent / 100) * circ
@@ -699,7 +699,7 @@ export function ComparePage({ hunters, onBack }: { hunters: Hunter[]; onBack: ()
 							</div>
 
 							{/* Score ring */}
-							{hasRecommendedBuild && <ScoreRing percent={percent} color='' />}
+							{hasRecommendedBuild && <ScoreRing percent={percent} />}
 						</div>
 					</div>
 				)}

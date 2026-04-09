@@ -95,7 +95,7 @@ export interface CoreStats {
 
 export interface HunterData {
 	name: string
-	category?: 'Elemental Stacker' | 'Breaker' | 'Supporter' | 'Striker'
+	category?: string
 	alias?: string | null
 	title?: string
 	rarity?: string

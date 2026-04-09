@@ -13,7 +13,7 @@ export function ShadowSlot({
 	onSelect: (s: ShadowData | null) => void
 }) {
 	const [open, setOpen] = useState(false)
-	const img = selected ? (selected.render ?? selected.image ?? selected.ranks.general) : null
+	const img = selected ? (selected.render ?? selected.image ?? selected.ranks?.general) : null
 
 	return (
 		<div class='relative'>
@@ -97,7 +97,7 @@ export function ShadowSlot({
 					</button>
 					<div class='border-t border-zinc-700/50' />
 					{shadows.map((s) => {
-						const thumb = s.render ?? s.image ?? s.ranks.general
+						const thumb = s.render ?? s.image ?? s.ranks?.general
 						return (
 							<button
 								key={s.name}

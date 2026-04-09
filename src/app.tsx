@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks'
 import { HunterProfile } from './components/HunterProfile'
+import type { HunterData } from './components/hunter/types'
 import aliciaData from './data/hunters/alicia-blanche.json'
 import amamiyaData from './data/hunters/amamiya-mirei.json'
 import baekYoonhoData from './data/hunters/baek-yoonho.json'
@@ -53,7 +54,7 @@ import { TeamGuideDungeons } from './pages/TeamGuideDungeons'
 import { TeamGuideGuildBoss } from './pages/TeamGuideGuildBoss'
 import { TeamGuidePowerDestruction } from './pages/TeamGuidePowerDestruction'
 
-const hunters = [
+const hunters: Array<{ id: string; data: HunterData }> = ([
 	{ id: 'sung-jinwoo', data: jinwooData },
 	{ id: 'alicia-blanche', data: aliciaData },
 	{ id: 'amamiya-mirei', data: amamiyaData },
@@ -101,7 +102,7 @@ const hunters = [
 	{ id: 'woo-jinchul', data: wooData },
 	{ id: 'yoo-soohyun', data: yooData },
 	{ id: 'yuqi', data: yuqiData },
-]
+]) as unknown as Array<{ id: string; data: HunterData }>
 
 export function App() {
 	const [page, setPage] = useState<string | null>(null)

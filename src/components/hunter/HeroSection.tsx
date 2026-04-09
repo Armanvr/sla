@@ -1,4 +1,4 @@
-import { classColors, elementColors, statIcons } from './constants'
+import { classColors, elementColors } from './constants'
 import type { HunterData } from './types'
 
 function ElementBadge({ element }: { element: { name: string; primary: boolean } }) {
@@ -22,20 +22,6 @@ function InfoRow({ label, value }: { label: string; value: string }) {
 	)
 }
 
-function _StatCard({ stat, primary }: { stat: { key: string; label: string; description: string }; primary: boolean }) {
-	const icon = statIcons[stat.key] ?? '✦'
-	return (
-		<div
-			class={`bg-zinc-800/50 border rounded-lg p-4 transition-colors ${primary ? 'border-amber-500/40 hover:border-amber-400/60' : 'border-zinc-700/50 hover:border-purple-500/30'}`}
-		>
-			<div class='flex items-center gap-2 mb-1'>
-				<span class='text-lg'>{icon}</span>
-				<span class={`font-semibold ${primary ? 'text-amber-400' : 'text-zinc-100'}`}>{stat.label}</span>
-			</div>
-			<p class={`text-sm ${primary ? 'text-amber-300/70' : 'text-zinc-400'}`}>{stat.description}</p>
-		</div>
-	)
-}
 
 export function StatBar({
 	label,
