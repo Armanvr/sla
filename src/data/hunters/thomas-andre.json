@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "The True King",
 		"icon": "/assets/weapons/thomas-andre/The_True_King_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

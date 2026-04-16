@@ -231,5 +231,6 @@
 	"weapon": {
 		"name": "Blue Monsoon",
 		"icon": "/assets/weapons/sung-jinah/Blue_Monsoon_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

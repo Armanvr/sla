@@ -232,5 +232,6 @@
 	"weapon": {
 		"name": "The Embodiment of Obsession",
 		"icon": "/assets/weapons/elena-renault/The_Embodiment_of_Obsession_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

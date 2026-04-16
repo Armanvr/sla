@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Winterbreaker",
 		"icon": "/assets/weapons/meri-laine/Winterbreaker_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

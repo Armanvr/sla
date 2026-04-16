@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Melody of Iron and Blood",
 		"icon": "/assets/weapons/seorin/Melody_of_Iron_and_Blood_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

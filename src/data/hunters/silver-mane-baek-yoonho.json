@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "Howling White Tiger's Soul",
 		"icon": "/assets/weapons/silver-mane-baek-yoonho/Howling_White_Tiger's_Soul_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

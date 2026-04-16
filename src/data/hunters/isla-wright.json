@@ -231,5 +231,6 @@
 	"weapon": {
 		"name": "Unexpected Luck",
 		"icon": "/assets/weapons/isla-wright/Unexpected_Luck_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

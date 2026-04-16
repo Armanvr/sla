@@ -53,8 +53,9 @@ import { HomePage } from './pages/HomePage'
 import { TeamGuideDungeons } from './pages/TeamGuideDungeons'
 import { TeamGuideGuildBoss } from './pages/TeamGuideGuildBoss'
 import { TeamGuidePowerDestruction } from './pages/TeamGuidePowerDestruction'
+import { TeamGuideWorkshop } from './pages/TeamGuideWorkshop'
 
-const hunters: Array<{ id: string; data: HunterData }> = ([
+const hunters: Array<{ id: string; data: HunterData }> = [
 	{ id: 'sung-jinwoo', data: jinwooData },
 	{ id: 'alicia-blanche', data: aliciaData },
 	{ id: 'amamiya-mirei', data: amamiyaData },
@@ -102,7 +103,7 @@ const hunters: Array<{ id: string; data: HunterData }> = ([
 	{ id: 'woo-jinchul', data: wooData },
 	{ id: 'yoo-soohyun', data: yooData },
 	{ id: 'yuqi', data: yuqiData },
-]) as unknown as Array<{ id: string; data: HunterData }>
+] as unknown as Array<{ id: string; data: HunterData }>
 
 export function App() {
 	const [page, setPage] = useState<string | null>(null)
@@ -128,6 +129,11 @@ export function App() {
 
 	if (page === 'team-guild-boss') {
 		return <TeamGuideGuildBoss hunters={hunters} onBack={goBack} />
+	}
+
+	if (page?.startsWith('team-workshop:')) {
+		const raidName = page.slice('team-workshop:'.length)
+		return <TeamGuideWorkshop hunters={hunters} raidName={raidName} onBack={goBack} />
 	}
 
 	if (page === 'compare') {

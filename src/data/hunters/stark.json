@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Stark Axe",
 		"icon": "/assets/weapons/stark/Stark_Axe_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

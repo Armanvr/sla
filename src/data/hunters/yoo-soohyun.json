@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "Overdrive",
 		"icon": "/assets/weapons/yoo-soohyun/Overdrive_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

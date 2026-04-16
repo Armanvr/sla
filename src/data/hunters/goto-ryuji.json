@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Distorted Dreams",
 		"icon": "/assets/weapons/goto-ryuji/Distorted_Dreams_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

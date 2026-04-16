@@ -231,5 +231,6 @@
 	"weapon": {
 		"name": "The Glamour of Self-worth",
 		"icon": "/assets/weapons/gina/The_Glamour_of_Self-worth_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

@@ -137,4 +137,5 @@ export interface HunterData {
 	coreBuild?: CoreBuild
 	equipmentStats?: EquipmentStats
 	coreStats?: CoreStats
+	recommendedStats?: string[]
 }

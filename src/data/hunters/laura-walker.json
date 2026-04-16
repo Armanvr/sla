@@ -231,5 +231,6 @@
 	"weapon": {
 		"name": "Night-cleaving Flash",
 		"icon": "/assets/weapons/laura-walker/Night-cleaving_Flash_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

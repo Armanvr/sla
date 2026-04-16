@@ -234,5 +234,6 @@
 	"weapon": {
 		"name": "Eternal Slumber",
 		"icon": "/assets/weapons/min-byung-gu/Eternal_Slumber_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Radiru Clan's Double-edged Spear",
 		"icon": "/assets/weapons/esil-radiru/Radiru_Clan's_Double-edged_Spear_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

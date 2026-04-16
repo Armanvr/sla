@@ -61,7 +61,7 @@ export function TeamGuideDungeons({ hunters, onBack }: { hunters: Hunter[]; onBa
 				</h1>
 			</header>
 
-			<main class='max-w-6xl mx-auto px-4 py-10 space-y-10'>
+			<main class='max-w-6xl mx-auto px-4 py-6 space-y-6'>
 				<JinwooPanel selectedWeapons={selectedWeapons} onWeaponSelect={setWeaponSlot} />
 
 				<hr class='border-zinc-800' />

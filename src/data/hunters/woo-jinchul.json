@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Another Level",
 		"icon": "/assets/weapons/woo-jinchul/Another_Level_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Unparalleled Bravery",
 		"icon": "/assets/weapons/seo-jiwoo/Unparalleled_Bravery_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

@@ -231,5 +231,6 @@
 	"weapon": {
 		"name": "The Price of a Promise",
 		"icon": "/assets/weapons/shimizu-akari/The_Price_of_a_Promise_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

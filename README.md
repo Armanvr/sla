@@ -24,14 +24,22 @@ src/
 │   ├── HomePage.tsx                  # Hunter grid, navigation to Team Guides
 │   ├── TeamGuideDungeons.tsx         # Team Guide — Dungeons
 │   ├── TeamGuidePowerDestruction.tsx # Team Guide — Power & Destruction
-│   └── TeamGuideGuildBoss.tsx        # Team Guide — Guild Boss
+│   ├── TeamGuideGuildBoss.tsx        # Team Guide — Guild Boss
+│   └── TeamGuideWorkshop.tsx         # Team Guide — Workshop (raid floors & blessings)
 ├── components/
 │   ├── HunterProfile.tsx             # Detailed hunter profile
-│   └── hunter/
-│       ├── HeroSection.tsx           # Header (image, stats, elements)
-│       ├── EquipmentSection.tsx      # Interactive armor & jewelry slots
-│       ├── CoresSection.tsx          # Mind / Body / Spirit slots
-│       └── types.ts                  # Shared types (Build, CoreBuild, HunterData…)
+│   ├── hunter/
+│   │   ├── HeroSection.tsx           # Header (image, stats, elements)
+│   │   ├── EquipmentSection.tsx      # Interactive armor & jewelry slots
+│   │   ├── CoresSection.tsx          # Mind / Body / Spirit slots
+│   │   └── types.ts                  # Shared types (Build, CoreBuild, HunterData…)
+│   └── team/
+│       ├── ElementTabs.tsx           # Element tab selector with weekly indicators
+│       ├── HunterSlot.tsx            # Interactive hunter slot
+│       ├── ShadowSlot.tsx            # Interactive shadow slot
+│       ├── WeaponSlot.tsx            # Interactive weapon slot
+│       ├── JinwooPanel.tsx           # Sung Jinwoo panel (weapons, equipment, cores)
+│       └── types.ts                  # Shared team types
 └── data/
     ├── hunters/                      # 49 JSON files — one per hunter
     ├── shadows/                      # 14 JSON files — Sung Jinwoo's shadows
@@ -40,8 +48,9 @@ src/
     ├── cores/
     │   └── cores.json                # Cores (Mind, Body, Spirit)
     └── teams/
-        ├── power-destruction.json    # Team compositions by element (P&D)
-        └── guild-boss.json           # Team compositions by element (Guild Boss)
+        ├── power-destruction.json    # Team compositions + weekly elemental rotation
+        ├── guild-boss.json           # Team compositions + active boss weaknesses
+        └── workshop.json             # Workshop raid floors, blessings, and boss data
 
 public/assets/
 ├── hunters/                          # Portraits and renders
@@ -49,7 +58,10 @@ public/assets/
 ├── shadows/                          # Shadow images
 ├── artifacts/                        # Artifact set icons
 ├── cores/                            # Core icons
-└── weapons/                          # 120+ weapon icons + manifest.json
+├── weapons/                          # 120+ weapon icons + manifest.json
+├── guild-boss/                       # Guild boss icons
+├── workshop/                         # Workshop raid boss icons (per raid/section)
+└── sections/                         # Section cover images (coming-soon, etc.)
 
 ```
 
@@ -69,16 +81,25 @@ public/assets/
 - 3 interactive shadow slots
 
 ### Team Guides — Power & Destruction
-- Tabs by element (Wind / Water / Fire / Light / Dark)
-  - Wind team: fixed composition from JSON data
-  - Other elements: **random team generation** on click (hunters + shadows)
+- **Weekly rotation banner** — automatically detects the current game week (starts Thursday) and displays elemental weaknesses and resistances
+- Element tabs with **recommended** (★) and **resistance** (✗) indicators for the current week
+- Default element auto-selected based on the active weekly rotation
 - Sung Jinwoo slot with **Weapons section** (2 slots), Equipment and Cores
 - 3 hunter slots and 3 shadow slots, all editable
 
 ### Team Guides — Guild Boss
-- Element tabs with same Wind active / others random logic
+- **Active boss banner** — displays the current boss image, name, and elemental weaknesses
+- Element tabs with **recommended** (★) indicators based on boss weaknesses
+- Default element auto-selected to the first recommended weakness
 - Sung Jinwoo slot with **Weapons section** (2 slots), Equipment and Cores
 - 6 hunter slots with roles (Striker × 2, Breaker, Elemental Stacker, Supporter × 2)
+
+### Team Guides — Workshop
+- Per-raid navigation (sections → floors → blessings, each in their own tab row)
+- **Boss card** with elemental weaknesses and resistances (large icons, colored glow)
+- Dual-team selector (Primaire / Secondaire) per floor
+- Sung Jinwoo panel with weapon selection on `with-jinwoo` floors
+- **Coming soon** placeholder for raids not yet available
 
 ### Weapon Selector
 - Searchable dropdown (search by name)
@@ -88,12 +109,8 @@ public/assets/
 ## Roadmap
 
 - [ ] **Techniques & Runes** section in all Team Guides
-- [ ] Water / Fire / Light / Dark Team Guides with finalized compositions
 - [ ] **Damage score** calculation per team composition
-- [ ] Build comparison (A vs B) per hunter
-- [ ] **Filters** on the home grid (by element, rarity, role)
 - [ ] **Favorites** / saved teams in localStorage
-- [ ] **Workshop Guides** pages (Interlude, Special Dungeon…)
 - [ ] Multilingual support (EN / KR)
 - [ ] Detailed **shadow** pages (skills, shadow authority, ranks)
 - [ ] Detailed **weapon** pages (stats, passive effects, recommendations)

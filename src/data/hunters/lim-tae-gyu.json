@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Intercept",
 		"icon": "/assets/weapons/lim-tae-gyu/Intercept_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

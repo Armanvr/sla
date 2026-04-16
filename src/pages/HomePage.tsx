@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks'
 import type { HunterData } from '../components/HunterProfile'
+import workshopConfig from '../data/teams/workshop.json'
 import beruData from '../data/shadows/beru.json'
 import besteData from '../data/shadows/beste.json'
 import bigrockData from '../data/shadows/bigrock.json'
@@ -73,31 +74,31 @@ const elementAccent: Record<string, string> = {
 const elementHeading: Record<string, { label: string; icon: string; bar: string; badge: string }> = {
 	Dark: {
 		label: 'Ténèbres',
-		icon: '🌑',
+		icon: '/assets/utils/Dark_Element.png',
 		bar: 'bg-purple-500',
 		badge: 'bg-purple-500/15 border-purple-500/40 text-purple-300',
 	},
 	Fire: {
 		label: 'Feu',
-		icon: '🔥',
+		icon: '/assets/utils/Fire_Element.png',
 		bar: 'bg-red-500',
 		badge: 'bg-red-500/15 border-red-500/40 text-red-300',
 	},
 	Water: {
 		label: 'Eau',
-		icon: '💧',
+		icon: '/assets/utils/Water_Element.png',
 		bar: 'bg-blue-500',
 		badge: 'bg-blue-500/15 border-blue-500/40 text-blue-300',
 	},
 	Light: {
 		label: 'Lumière',
-		icon: '✨',
+		icon: '/assets/utils/Light_Element.png',
 		bar: 'bg-yellow-400',
 		badge: 'bg-yellow-400/15 border-yellow-400/40 text-yellow-300',
 	},
 	Wind: {
 		label: 'Vent',
-		icon: '🍃',
+		icon: '/assets/utils/Wind_Element.png',
 		bar: 'bg-emerald-500',
 		badge: 'bg-emerald-500/15 border-emerald-500/40 text-emerald-300',
 	},
@@ -227,7 +228,7 @@ function ShadowCard({ shadow }: { shadow: ShadowData }) {
 						}}
 					/>
 				) : (
-					<span class='text-5xl select-none opacity-30'>👥</span>
+					<img src='/assets/utils/Hunter_Icon.png' alt='' class='w-16 h-16 object-contain opacity-20' />
 				)}
 			</div>
 
@@ -258,16 +259,43 @@ function ShadowCard({ shadow }: { shadow: ShadowData }) {
 
 // ─── Team Guide Card ──────────────────────────────────────────────────────────
 
-function TeamGuideCard({ title, icon, onClick }: { title: string; icon: string; onClick: () => void }) {
+function TeamGuideCard({
+	title,
+	imgSrc,
+	imgSize = 'cover',
+	onClick,
+}: {
+	title: string
+	imgSrc?: string
+	imgSize?: 'cover' | 'contain-md' | 'contain-lg'
+	onClick: () => void
+}) {
+	const imgClass = {
+		cover: 'w-full h-full object-cover',
+		'contain-md': 'w-28 h-28 object-contain drop-shadow-xl',
+		'contain-lg': 'w-42 h-42 object-contain drop-shadow-xl',
+	}[imgSize]
+
 	return (
 		<button
 			type='button'
 			onClick={onClick}
 			class='text-left bg-zinc-800/50 border border-zinc-700/50 rounded-2xl overflow-hidden hover:border-zinc-600/70 transition-colors cursor-pointer group w-full'
 		>
-			{/* Placeholder image zone */}
-			<div class='h-36 bg-zinc-800/80 flex items-center justify-center text-5xl select-none'>{icon}</div>
-			{/* Info */}
+			<div class='h-36 bg-zinc-800/80 flex items-center justify-center overflow-hidden'>
+				{imgSrc ? (
+					<img
+						src={imgSrc}
+						alt={title}
+						class={`transition-transform duration-300 group-hover:scale-105 ${imgClass}`}
+						onError={(e) => {
+							;(e.target as HTMLImageElement).style.display = 'none'
+						}}
+					/>
+				) : (
+					<div class='w-16 h-16 rounded-xl bg-zinc-700/40 border border-zinc-600/30' />
+				)}
+			</div>
 			<div class='px-4 py-3'>
 				<h3 class='font-semibold text-zinc-100'>{title}</h3>
 				<div class='mt-2 flex items-center gap-1 text-xs text-zinc-400 group-hover:text-zinc-200 transition-colors'>
@@ -300,9 +328,9 @@ export function HomePage({
 					SLA <span class='text-purple-400'>Guide</span>
 				</h1>
 				<span class='text-xs font-mono text-zinc-500 border border-zinc-700/60 rounded px-1.5 py-0.5'>
-					v1.0.1
+					v2.0.0
 				</span>
-				<span class='text-xs text-zinc-500 ml-auto'>Mis à jour le 9 avril 2026</span>
+				<span class='text-xs text-zinc-500 ml-auto'>Mis à jour le 16 avril 2026</span>
 			</header>
 
 			<main class='max-w-6xl mx-auto px-4 py-12 space-y-16'>
@@ -313,18 +341,53 @@ export function HomePage({
 						description="Composition d'équipe optimisées par type de contenu."
 					/>
 					<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
-						<TeamGuideCard title='Dungeons' icon='⚔️' onClick={() => onSelectTeamGuide('team-dungeons')} />
+						<TeamGuideCard
+							title='Dungeons'
+							imgSrc='/assets/sections/dungeons.png'
+							onClick={() => onSelectTeamGuide('team-dungeons')}
+						/>
 						<TeamGuideCard
 							title='Power & Destruction'
-							icon='🌀'
+							imgSrc='/assets/sections/power-of-destruction.png'
 							onClick={() => onSelectTeamGuide('team-power-destruction')}
 						/>
 						<TeamGuideCard
 							title='Guild Boss'
-							icon='🏰'
+							imgSrc='/assets/sections/guild-boss.png'
 							onClick={() => onSelectTeamGuide('team-guild-boss')}
 						/>
-						<TeamGuideCard title='Compare' icon='📊' onClick={() => onSelectTeamGuide('compare')} />
+						<TeamGuideCard
+							title='Compare'
+							imgSrc='/assets/sections/compare.png'
+							onClick={() => onSelectTeamGuide('compare')}
+						/>
+					</div>
+				</section>
+
+				<hr class='border-zinc-800' />
+
+				{/* ── Workshop Guides ── */}
+				<section>
+					<SectionHeader
+						title='Workshop Guides'
+						description="Optimise ton atelier et tes améliorations d'équipement."
+					/>
+					<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+						{(workshopConfig as { raids: { name: string; icon: string }[] }).raids.map((raid) => {
+							const label = raid.name
+								.split('-')
+								.map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+								.join(' ')
+							return (
+								<TeamGuideCard
+									key={raid.name}
+									title={label}
+									imgSrc={`/assets/workshop/${raid.name}/${raid.icon}.png`}
+									imgSize='contain-lg'
+									onClick={() => onSelectTeamGuide(`team-workshop:${raid.name}`)}
+								/>
+							)
+						})}
 					</div>
 				</section>
 
@@ -365,7 +428,7 @@ export function HomePage({
 								<div>
 									<div class='flex items-center gap-3 mb-4'>
 										<span class='w-1 h-6 bg-amber-400 rounded-full flex-shrink-0' />
-										<span class='text-lg select-none'>👤</span>
+										<img src='/assets/utils/Player_Icon.png' alt='Joueur' class='w-5 h-5 object-contain' />
 										<h3 class='text-base font-bold text-zinc-100'>Joueur</h3>
 										<span class='text-[10px] font-bold border px-2 py-0.5 rounded-full bg-amber-400/15 border-amber-400/40 text-amber-300'>
 											Unique
@@ -392,7 +455,7 @@ export function HomePage({
 								<div key={el}>
 									<div class='flex items-center gap-3 mb-4'>
 										<span class={`w-1 h-6 ${meta.bar} rounded-full flex-shrink-0`} />
-										<span class='text-lg select-none'>{meta.icon}</span>
+										<img src={meta.icon} alt={el} class='w-5 h-5 object-contain' />
 										<h3 class='text-base font-bold text-zinc-100'>{meta.label}</h3>
 										<span
 											class={`text-[10px] font-bold border px-2 py-0.5 rounded-full ${meta.badge}`}
@@ -427,20 +490,6 @@ export function HomePage({
 						{SHADOWS.map((shadow) => (
 							<ShadowCard key={shadow.name} shadow={shadow} />
 						))}
-					</div>
-				</section>
-
-				<hr class='border-zinc-800' />
-
-				{/* ── Workshop Guides ── */}
-				<section>
-					<SectionHeader
-						title='Workshop Guides'
-						description="Optimise ton atelier et tes améliorations d'équipement."
-					/>
-					<div class='bg-zinc-800/30 border border-zinc-700/40 rounded-2xl px-8 py-14 text-center'>
-						<span class='text-4xl mb-4 block select-none'>🔧</span>
-						<p class='text-zinc-500 text-sm font-medium uppercase tracking-wider'>Coming Soon</p>
 					</div>
 				</section>
 			</main>

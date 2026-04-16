@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "Bunny Bunbun",
 		"icon": "/assets/weapons/amamiya-mirei/Bunny_Bunbun_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

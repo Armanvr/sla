@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Mischievous",
 		"icon": "/assets/weapons/harper/Mischievous_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Crimson Shadow",
 		"icon": "/assets/weapons/sian-halat/Crimson_Shadow_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

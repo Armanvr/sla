@@ -8,10 +8,12 @@ export function CoresSection({
 	coreBuild,
 	coreStats,
 	showDetails = true,
+	compact = false,
 }: {
 	coreBuild?: CoreBuild
 	coreStats?: CoreStats
 	showDetails?: boolean
+	compact?: boolean
 }) {
 	const [slots, setSlots] = useState<Record<'mind' | 'body' | 'spirit', string | null>>({
 		mind: coreBuild?.mind ?? null,
@@ -79,7 +81,7 @@ export function CoresSection({
 
 			{openPicker && <button type='button' class='fixed inset-0 z-40' onClick={() => setOpenPicker(null)} />}
 
-			<div class='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+			<div class={`grid gap-3 ${compact ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-3'}`}>
 				{CORE_SLOTS.map(({ key, label, emoji }) => {
 					const selectedId = slots[key]
 					const selected = selectedId ? coreById.get(selectedId) : null

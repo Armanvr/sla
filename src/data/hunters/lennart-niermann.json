@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "The Weight of Responsibility",
 		"icon": "/assets/weapons/lennart-niermann/The_Weight_of_Responsibility_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

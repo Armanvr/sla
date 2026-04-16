@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "Sword of Light",
 		"icon": "/assets/weapons/cha-hae-in/Sword_of_Light_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Etched to the Bone",
 		"icon": "/assets/weapons/sugimoto-reiji/Etched_to_the_Bone_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

@@ -1,4 +1,24 @@
 {
+	"weaknessRotation": [
+		{
+			"weakness": [],
+			"name": "Fachtna, the King of the Desert",
+			"icon": "assets/guild-boss/Boss_Fachtna__the_King_of_the_Desert_Icon.png",
+			"active": false
+		},
+		{
+			"weakness": ["Wind", "Fire", "Water"],
+			"name": "Manticore, the Eager Engager",
+			"icon": "assets/guild-boss/Boss_Manticore__the_Eager_Engager_Icon.png",
+			"active": true
+		},
+		{
+			"weakness": [],
+			"name": "Queen Ant",
+			"icon": "assets/guild-boss/Boss_Queen_Ant_Icon.png",
+			"active": false
+		}
+	],
 	"teams": [
 		{
 			"element": "Wind",
@@ -19,10 +39,10 @@
 			"jinwooWeapons": ["Allon's Orb", "Thetis' Grimoire"],
 			"hunters": [
 				{ "id": "meri-laine", "role": "Elemental Stacker", "build": "Build Niv. 120" },
-				{ "id": "frieren", "role": "Supporter", "build": "Build Niv. 120 (A)" },
+				{ "id": "frieren", "role": "Supporter", "build": "Build Niv. 120 (B)" },
 				{ "id": "cha-hae-in-pure-sword-princess", "role": "Striker", "build": "Build Niv. 120" },
 				{ "id": "seorin", "role": "Breaker", "build": "Build Niv. 120" },
-				{ "id": "meilin-fisher", "role": "Supporter", "build": "Build Niv. 120 (B)" },
+				{ "id": "elena-renault", "role": "Supporter", "build": "Build Niv. 120 (A)" },
 				{ "id": "alicia-blanche", "role": "Striker", "build": "Build Niv. 120" }
 			]
 		},
@@ -44,7 +64,7 @@
 			"status": "active",
 			"jinwooWeapons": ["Phantomblade", "Hero's Sword"],
 			"hunters": [
-				{ "id": "go-gunhee", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+				{ "id": "go-gunhee", "role": "Breaker", "build": "Build Niv. 120" },
 				{ "id": "laura-walker", "role": "Supporter", "build": "Build Niv. 120 (A)" },
 				{ "id": "thomas-andre", "role": "Striker", "build": "Build Niv. 120" },
 				{ "id": "min-byung-gu", "role": "Supporter", "build": "Build Niv. 120 (B)" },

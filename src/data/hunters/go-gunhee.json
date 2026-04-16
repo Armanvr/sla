@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "A Conviction and a Calling",
 		"icon": "/assets/weapons/go-gunhee/A_Conviction_and_a_Calling_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Night-Thoughts",
 		"icon": "/assets/weapons/emma-laurent/Night-Thoughts_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

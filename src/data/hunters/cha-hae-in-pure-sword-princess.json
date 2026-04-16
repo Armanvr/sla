@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "Valkyrie's Oath",
 		"icon": "/assets/weapons/cha-hae-in-pure-sword-princess/Valkyrie's_Oath_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

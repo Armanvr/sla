@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Iron Resolve",
 		"icon": "/assets/weapons/son-kihoon/Iron_Resolve_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

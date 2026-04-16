@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2.0.0] — 2026-04-16
+
+### Added
+- **Workshop Guide** — nouvelle page interactive par raid (Monarch of Steel, Monarch of Transfiguration, Monarch of White Flames)
+  - Navigation par section, étage principal, et bénédictions (listes séparées)
+  - Carte boss avec faiblesses et résistances élémentaires mises en valeur (icônes larges, glow coloré, fond vert/rouge)
+  - Sélecteur d'équipe (Primaire / Secondaire) et panneau Sung Jinwoo avec armes
+  - Affichage "Coming soon" pour les raids non encore disponibles (image + message)
+- **Rotation hebdomadaire Power & Destruction** — bandeau automatique affichant le boss de la semaine, ses faiblesses et résistances selon la semaine ISO courante
+  - Calcul basé sur des semaines jeu démarrant le jeudi
+  - Sélection automatique de l'élément recommandé au chargement
+- **Boss actif Guild Boss** — bannière affichant l'image, le nom et les faiblesses élémentaires du boss en cours
+  - Sélection automatique du premier élément faible au chargement
+- **Indicateurs élémentaires sur les onglets** (ElementTabs) — badge vert "★ recommandé" et badge rouge "✗ résistance" sur les onglets correspondants
+
+### Changed
+- Couleur de sélection des onglets élémentaires unifiée (couleur unique au lieu d'une couleur par élément)
+- Onglets de bénédictions séparés des étages principaux dans le Workshop (section dédiée avec label "Bénédictions")
+
 ## [1.0.1] — 2026-04-09
 
 ### Added

@@ -231,5 +231,6 @@
 	"weapon": {
 		"name": "Hook, Line, and Sinker",
 		"icon": "/assets/weapons/meilin-fisher/Hook,_Line,_and_Sinker_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

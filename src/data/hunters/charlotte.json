@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "Prankster",
 		"icon": "/assets/weapons/charlotte/Prankster_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

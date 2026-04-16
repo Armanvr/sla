@@ -200,5 +200,6 @@
 	"weapon": {
 		"name": "Strategy for Victory",
 		"icon": "/assets/weapons/christopher-reed/Strategy_for_Victory_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

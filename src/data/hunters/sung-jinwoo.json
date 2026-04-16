@@ -91,6 +91,11 @@
 			"name": "Build Niv. 120 (B)",
 			"armor": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"],
 			"jewelry": ["glorious-arrogance", "glorious-arrogance", "glorious-arrogance", "glorious-arrogance"]
+		},
+		{
+			"name": "Build Niv. 120 (C)",
+			"armor": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"],
+			"jewelry": ["kamish-obsession", "kamish-obsession", "kamish-obsession", "kamish-obsession"]
 		}
 	],
 	"coreBuild": {
@@ -136,5 +141,13 @@
 		"mind": ["Additional Attack", "Critical Hit Damage"],
 		"body": ["Additional Defense", "Critical Hit Damage"],
 		"spirit": ["Additional HP", "Defense Penetration"]
-	}
+	},
+	"recommendedStats": [
+		"Attack (%)",
+		"Additional Attack",
+		"Critical Hit Rate",
+		"Critical Hit Damage",
+		"Damage Increase",
+		"Defense Penetration"
+	]
 }

@@ -222,5 +222,6 @@
 		"mind": ["Additional Attack", "Critical Hit Damage"],
 		"body": ["Additional Defense", "Critical Hit Damage"],
 		"spirit": ["Additional HP", "Defense Penetration"]
-	}
+	},
+	"recommendedStats": []
 }

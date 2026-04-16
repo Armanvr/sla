@@ -1,4 +1,31 @@
 {
+	"weaknessRotation": [
+		{
+			"weakness": ["Water", "Dark"],
+			"resistance": ["Fire"],
+			"activeWeeks": [3, 8, 13, 18, 23, 28, 33, 38, 43, 48]
+		},
+		{
+			"weakness": ["Fire", "Water"],
+			"resistance": ["Light"],
+			"activeWeeks": [4, 9, 14, 19, 24, 29, 34, 39, 44, 49]
+		},
+		{
+			"weakness": ["Dark", "Wind"],
+			"resistance": ["Water"],
+			"activeWeeks": [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+		},
+		{
+			"weakness": ["Wind", "Light"],
+			"resistance": ["Dark"],
+			"activeWeeks": [1, 6, 11, 16, 21, 26, 31, 36, 41, 46, 51]
+		},
+		{
+			"weakness": ["Light", "Fire"],
+			"resistance": ["Wind"],
+			"activeWeeks": [2, 7, 12, 17, 22, 27, 32, 37, 42, 47, 52]
+		}
+	],
 	"teams": [
 		{
 			"element": "Wind",

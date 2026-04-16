@@ -226,5 +226,6 @@
 	"weapon": {
 		"name": "Suppressed White Tiger's Soul",
 		"icon": "/assets/weapons/baek-yoonho/Suppressed_White_Tiger's_Soul_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

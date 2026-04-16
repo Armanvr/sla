@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "Ice Witch",
 		"icon": "/assets/weapons/alicia-blanche/Ice_Witch_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

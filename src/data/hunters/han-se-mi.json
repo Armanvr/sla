@@ -231,5 +231,6 @@
 	"weapon": {
 		"name": "Coming of Age",
 		"icon": "/assets/weapons/han-se-mi/Coming_of_Age_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

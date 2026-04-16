@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "Unbreakable Will",
 		"icon": "/assets/weapons/sung-il-hwan/Unbreakable_Will_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

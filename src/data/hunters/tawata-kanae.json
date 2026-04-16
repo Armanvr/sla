@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "The Path a Hero Must Take",
 		"icon": "/assets/weapons/tawata-kanae/The_Path_a_Hero_Must_Take_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

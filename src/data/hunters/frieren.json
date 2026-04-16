@@ -231,5 +231,6 @@
 	"weapon": {
 		"name": "Frieren Staff",
 		"icon": "/assets/weapons/frieren/Frieren_Staff_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

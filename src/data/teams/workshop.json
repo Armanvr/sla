@@ -1,0 +1,994 @@
+{
+	"raids": [
+		{
+			"name": "monarch-of-white-flames",
+			"icon": "monarch-of-white-flames",
+			"status": "coming-soon",
+			"sections": [
+				{
+					"name": "lower-floors",
+					"floors": [
+						{
+							"name": "Demons' Castle Entrance",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Gatekeeper of the Abyss, Cerberus",
+								"icon": "monarch-of-white-flames/lower-floors/1_Boss_Gatekeeper_of_the_Abyss,_Cerberus_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"jinwooWeapons": [
+								{ "team": "Primaire", "weapons": [] },
+								{ "team": "Secondaire", "weapons": [] }
+							],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "Demons' Castle 25F",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Lavillette, the Scorched Earth",
+								"icon": "monarch-of-white-flames/lower-floors/2_Boss_Lavillette,_the_Scorched_Earth_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "Demons' Castle 50F",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Avaricious Vulcan",
+								"icon": "monarch-of-white-flames/lower-floors/3_Boss_Avaricious_Vulcan_Icon_copy.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"jinwooWeapons": [
+								{ "team": "Primaire", "weapons": [] },
+								{ "team": "Secondaire", "weapons": [] }
+							],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "Demons' Castle 50F",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Avaricious Vulcan",
+								"icon": "monarch-of-white-flames/lower-floors/4_Boss_Avaricious_Vulcan_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "upper-floors",
+					"floors": [
+						{
+							"name": "Demons' Castle 75F",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Soul Shepherd, Metus",
+								"icon": "monarch-of-white-flames/upper-floors/1_Boss_Soul_Shepherd,_Metus_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "Demons' Castle 80F",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Esil Radiru",
+								"icon": "monarch-of-white-flames/upper-floors/2_Boss_Esil_Radiru_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"jinwooWeapons": [
+								{ "team": "Primaire", "weapons": [] },
+								{ "team": "Secondaire", "weapons": [] }
+							],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "Demons' Castle Spire",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Baran of White Flames",
+								"icon": "monarch-of-white-flames/upper-floors/3_Boss_Baran_of_White_Flames_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "Demons' Castle 100F",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Baran, the Demon King",
+								"icon": "monarch-of-white-flames/upper-floors/4_Boss_Baran,_the_Demon_King_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"jinwooWeapons": [
+								{ "team": "Primaire", "weapons": [] },
+								{ "team": "Secondaire", "weapons": [] }
+							],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "monarch-of-transfiguration",
+			"icon": "monarch-of-transfiguration",
+			"status": "coming-soon",
+			"sections": [
+				{
+					"name": "spire-of-transfiguration",
+					"floors": [
+						{
+							"name": "",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Arch Lich, the Master of Twilight",
+								"icon": "monarch-of-transfiguration/spire-of-transfiguration/1_Boss_Arch_Lich,_the_Master_of_Twilight_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Judge of Death, Deimos",
+								"icon": "monarch-of-transfiguration/spire-of-transfiguration/2_Boss_Judge_of_Death,_Deimos_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Deimos, the Commander of Transfiguration",
+								"icon": "monarch-of-transfiguration/spire-of-transfiguration/3_Boss_Deimos,_the_Commander_of_Transfiguration_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						}
+					],
+					"blessings": [
+						{
+							"name": "Warding Soul Harvester",
+							"bosses": {
+								"name": "Warding Soul Harvester",
+								"icon": "monarch-of-transfiguration/spire-of-transfiguration/blessings/1_Boss_Warding_Soul_Harvester_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"type": "hunters-only",
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "Katell, the Guide of Death",
+							"bosses": {
+								"name": "Katell, the Guide of Death",
+								"icon": "monarch-of-transfiguration/spire-of-transfiguration/blessings/2_Boss_Katell,_the_Guide_of_Death_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"type": "hunters-only",
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "the-distorted-sanctuary",
+					"floors": [
+						{
+							"name": "",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Enchanting Apex Bedelia",
+								"icon": "monarch-of-transfiguration/the-distorted-sanctuary/1_Boss_Enchanting_Apex_Bedelia_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"jinwooWeapons": [
+								{ "team": "Primaire", "weapons": [] },
+								{ "team": "Secondaire", "weapons": [] }
+							],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Soul Executioner Davorka",
+								"icon": "monarch-of-transfiguration/the-distorted-sanctuary/2_Boss_Soul_Executioner_Davorka_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"jinwooWeapons": [
+								{ "team": "Primaire", "weapons": [] },
+								{ "team": "Secondaire", "weapons": [] }
+							],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Monarach of Transfiguration Yogumunt",
+								"icon": "monarch-of-transfiguration/the-distorted-sanctuary/3_Boss_Monarach_of_Transfiguration_Yogumunt_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"jinwooWeapons": [
+								{ "team": "Primaire", "weapons": [] },
+								{ "team": "Secondaire", "weapons": [] }
+							],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Monarach of Transfiguration Yogumunt",
+								"icon": "monarch-of-transfiguration/the-distorted-sanctuary/4_Boss_Monarach_of_Transfiguration_Yogumunt_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						}
+					],
+					"blessings": [
+						{
+							"name": "Evil Eyes",
+							"bosses": {
+								"name": "Evil Eyes",
+								"icon": "monarch-of-transfiguration/the-distorted-sanctuary/blessings/1_Boss_Evil_Eyes_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"type": "hunters-only",
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						},
+						{
+							"name": "Quirke, the Malevolent Heart",
+							"bosses": {
+								"name": "Quirke, the Malevolent Heart",
+								"icon": "monarch-of-transfiguration/the-distorted-sanctuary/blessings/2_Boss_Quirke,_the_Malevolent_Heart_Icon.png",
+								"weaknesses": [],
+								"resistances": []
+							},
+							"type": "hunters-only",
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" },
+										{ "id": "", "build": "" }
+									],
+									"shadows": ["", "", ""]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "monarch-of-steel",
+			"icon": "monarch-of-steel",
+			"status": "active",
+			"sections": [
+				{
+					"name": "the-puppeteer-s-theater",
+					"floors": [
+						{
+							"name": "Shattered Blade's Nest",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Kargot, the Dominated Leader",
+								"icon": "monarch-of-steel/the-puppeteer-s-theater/1_Boss_Kargot,_the_Dominated_Leader_Icon.png",
+								"weaknesses": ["Water", "Dark"],
+								"resistances": ["Wind"]
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "seorin", "build": "Build Niv. 120" },
+										{ "id": "frieren", "build": "Build Niv. 120 (A)" },
+										{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+									],
+									"shadows": ["brute", "cerbie", "skull"]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "son-kihoon", "build": "Build Niv. 120" },
+										{ "id": "sian-halat", "build": "Build Niv. 120" },
+										{ "id": "sung-il-hwan", "build": "Build Niv. 120" }
+									],
+									"shadows": ["uros", "cerbie", "skull"]
+								}
+							]
+						},
+						{
+							"name": "Blind Recluse's Land",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Lanor, the Dominated Recluse",
+								"icon": "monarch-of-steel/the-puppeteer-s-theater/2_Boss_Lanor,_the_Dominated_Recluse_Icon.png",
+								"weaknesses": ["Water", "Light"],
+								"resistances": ["Wind"]
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "seorin", "build": "Build Niv. 120" },
+										{ "id": "frieren", "build": "Build Niv. 120 (A)" },
+										{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+									],
+									"shadows": ["brute", "cerbie", "skull"]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "go-gunhee", "build": "Build Niv. 120" },
+										{ "id": "laura-walker", "build": "Build Niv. 120 (A)" },
+										{ "id": "thomas-andre", "build": "Build Niv. 120" }
+									],
+									"shadows": ["beste", "cerbie", "skull"]
+								}
+							]
+						},
+						{
+							"name": "Puppet Show of Arrogance",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Valtair, the Commander of Arrogance",
+								"icon": "monarch-of-steel/the-puppeteer-s-theater/3_Boss_Valtair,_the_Commander_of_Arrogance_Icon_copy.png",
+								"weaknesses": ["Light", "Fire"],
+								"resistances": ["Wind"]
+							},
+							"jinwooWeapons": [
+								{ "team": "Primaire", "weapons": ["Glorious Demise", "Ennio's Roar"] },
+								{ "team": "Secondaire", "weapons": ["Phantomblade", "Hero's Sword"] }
+							],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "christopher-reed", "build": "Build Niv. 120" },
+										{ "id": "gina", "build": "Build Niv. 120 (A)" },
+										{ "id": "yuqi", "build": "Build Niv. 120" }
+									],
+									"shadows": ["beste", "cerbie", "skull"]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "go-gunhee", "build": "Build Niv. 120" },
+										{ "id": "laura-walker", "build": "Build Niv. 120 (A)" },
+										{ "id": "thomas-andre", "build": "Build Niv. 120" }
+									],
+									"shadows": ["beste", "cerbie", "skull"]
+								}
+							]
+						},
+						{
+							"name": "Puppet Show of Arrogance",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Valtair, the Commander of Arrogance",
+								"icon": "monarch-of-steel/the-puppeteer-s-theater/4_Boss_Valtair,_the_Commander_of_Arrogance_Icon.png",
+								"weaknesses": ["Light", "Fire"],
+								"resistances": ["Wind"]
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "christopher-reed", "build": "Build Niv. 120" },
+										{ "id": "gina", "build": "Build Niv. 120 (A)" },
+										{ "id": "yuqi", "build": "Build Niv. 120" }
+									],
+									"shadows": ["beste", "cerbie", "skull"]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "go-gunhee", "build": "Build Niv. 120" },
+										{ "id": "laura-walker", "build": "Build Niv. 120 (A)" },
+										{ "id": "thomas-andre", "build": "Build Niv. 120" }
+									],
+									"shadows": ["beste", "cerbie", "skull"]
+								}
+							]
+						}
+					],
+					"blessings": [
+						{
+							"name": "Orc Puppet Spellmaster",
+							"bosses": {
+								"name": "Orc Puppet Spellmaster",
+								"icon": "monarch-of-steel/the-puppeteer-s-theater/blessings/1_Boss_Orc_Puppet_Spellmaster_Icon.png",
+								"weaknesses": ["Water", "Dark"],
+								"resistances": ["Wind"]
+							},
+							"type": "hunters-only",
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "seorin", "build": "Build Niv. 120" },
+										{ "id": "frieren", "build": "Build Niv. 120 (A)" },
+										{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+									],
+									"shadows": ["brute", "cerbie", "skull"]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "son-kihoon", "build": "Build Niv. 120" },
+										{ "id": "sian-halat", "build": "Build Niv. 120" },
+										{ "id": "sung-il-hwan", "build": "Build Niv. 120" }
+									],
+									"shadows": ["uros", "cerbie", "skull"]
+								}
+							]
+						},
+						{
+							"name": "Naga Puppet Commander",
+							"bosses": {
+								"name": "Naga Puppet Commander",
+								"icon": "monarch-of-steel/the-puppeteer-s-theater/blessings/2_Boss_Naga_Puppet_Commander_Icon.png",
+								"weaknesses": ["Water", "Light"],
+								"resistances": ["Wind"]
+							},
+							"type": "hunters-only",
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "seorin", "build": "Build Niv. 120" },
+										{ "id": "frieren", "build": "Build Niv. 120 (A)" },
+										{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+									],
+									"shadows": ["brute", "cerbie", "skull"]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "go-gunhee", "build": "Build Niv. 120" },
+										{ "id": "laura-walker", "build": "Build Niv. 120 (A)" },
+										{ "id": "thomas-andre", "build": "Build Niv. 120" }
+									],
+									"shadows": ["beste", "cerbie", "skull"]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "arena-of-madnesss",
+					"floors": [
+						{
+							"name": "Test of Honor",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Brutrock, the Earth-shaking Mace",
+								"icon": "monarch-of-steel/arena-of-madnesss/1_Boss_Brutrock,_the_Earth-shaking_Mace_Icon.png",
+								"weaknesses": ["Dark"],
+								"resistances": ["Light"]
+							},
+							"jinwooWeapons": [{ "team": "Primaire", "weapons": ["Moonshadow", "Transfiguration Key"] }],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "lee-bora", "build": "Build Niv. 120 (B)" },
+										{ "id": "sian-halat", "build": "Build Niv. 120" },
+										{ "id": "isla-wright", "build": "Build Niv. 120 (A)" }
+									],
+									"shadows": ["uros", "cerbie", "skull"]
+								}
+							]
+						},
+						{
+							"name": "Steel Overseer",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Cuimin",
+								"icon": "monarch-of-steel/arena-of-madnesss/2_Boss_Cuimin_Icon.png",
+								"weaknesses": ["Water"],
+								"resistances": ["Light"]
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "meri-laine", "build": "Build Niv. 120" },
+										{ "id": "elena-renault", "build": "Build Niv. 120 (A)" },
+										{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+									],
+									"shadows": ["brute", "cerbie", "skull"]
+								}
+							]
+						},
+						{
+							"name": "Fighter's Zenith",
+							"type": "with-jinwoo",
+							"bosses": {
+								"name": "Rockpasa, the Monarch of Steel",
+								"icon": "monarch-of-steel/arena-of-madnesss/3_Boss_Rockpasa,_the_Monarch_of_Steel_Icon.png",
+								"weaknesses": ["Dark", "Wind"],
+								"resistances": ["Light"]
+							},
+							"jinwooWeapons": [
+								{ "team": "Primaire", "weapons": ["Moonshadow", "Transfiguration Key"] },
+								{ "team": "Secondaire", "weapons": ["Stormbringer", "Thetis' Grimoire"] }
+							],
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "lee-bora", "build": "Build Niv. 120 (B)" },
+										{ "id": "sian-halat", "build": "Build Niv. 120" },
+										{ "id": "isla-wright", "build": "Build Niv. 120 (A)" }
+									],
+									"shadows": ["uros", "cerbie", "skull"]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "sugimoto-reiji", "build": "Build Niv. 120" },
+										{ "id": "sung-jinah", "build": "Build Niv. 120 (A)" },
+										{ "id": "lennart-niermann", "build": "Build Niv. 120" }
+									],
+									"shadows": ["beste", "cerbie", "skull"]
+								}
+							]
+						},
+						{
+							"name": "Fighter's Zenith",
+							"type": "hunters-only",
+							"bosses": {
+								"name": "Rockpasa, the Monarch of Steel",
+								"icon": "monarch-of-steel/arena-of-madnesss/4_Boss_Rockpasa,_the_Monarch_of_Steel_Icon.png",
+								"weaknesses": ["Dark", "Wind"],
+								"resistances": ["Light"]
+							},
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "isla-wright", "build": "Build Niv. 120 (A)" },
+										{ "id": "sian-halat", "build": "Build Niv. 120" },
+										{ "id": "sung-il-hwan", "build": "Build Niv. 120" }
+									],
+									"shadows": ["uros", "cerbie", "skull"]
+								},
+								{
+									"team": "Secondaire",
+									"hunters": [
+										{ "id": "sugimoto-reiji", "build": "Build Niv. 120" },
+										{ "id": "sung-jinah", "build": "Build Niv. 120 (A)" },
+										{ "id": "lennart-niermann", "build": "Build Niv. 120" }
+									],
+									"shadows": ["beste", "cerbie", "skull"]
+								}
+							]
+						}
+					],
+					"blessings": [
+						{
+							"name": "Orc Rumblefoot Ogre Captain",
+							"bosses": {
+								"name": "Orc Rumblefoot Ogre Captain",
+								"icon": "monarch-of-steel/arena-of-madnesss/blessings/1_Boss_Orc_Rumblefoot_Ogre_Captain_Icon.png",
+								"weaknesses": ["Water"],
+								"resistances": ["Light", "Fire"]
+							},
+							"type": "hunters-only",
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "meri-laine", "build": "Build Niv. 120" },
+										{ "id": "elena-renault", "build": "Build Niv. 120 (A)" },
+										{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+									],
+									"shadows": ["brute", "cerbie", "skull"]
+								}
+							]
+						},
+						{
+							"name": "Misty Swamp Troll Sentinel",
+							"bosses": {
+								"name": "Misty Swamp Troll Sentinel",
+								"icon": "monarch-of-steel/arena-of-madnesss/blessings/2_Boss_Misty_Swamp_Troll_Sentinel_Icon.png",
+								"weaknesses": ["Water"],
+								"resistances": ["Light", "Fire"]
+							},
+							"type": "hunters-only",
+							"hunters": [
+								{
+									"team": "Primaire",
+									"hunters": [
+										{ "id": "meri-laine", "build": "Build Niv. 120" },
+										{ "id": "elena-renault", "build": "Build Niv. 120 (A)" },
+										{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+									],
+									"shadows": ["brute", "cerbie", "skull"]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

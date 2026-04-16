@@ -231,5 +231,6 @@
 	"weapon": {
 		"name": "Solid Logic",
 		"icon": "/assets/weapons/lee-bora/Solid_Logic_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }

@@ -28,47 +28,43 @@ export function WeaponSlot({
 		<div class='relative'>
 			{open && <button type='button' class='fixed inset-0 z-40' onClick={close} aria-label='Fermer' />}
 
-			<div
-				class={`bg-zinc-800/50 border rounded-2xl p-4 transition-colors ${open ? 'border-amber-500/60' : 'border-amber-900/40 hover:border-amber-600/50'}`}
+			<button
+				type='button'
+				onClick={() => setOpen((p) => !p)}
+				class={`w-full flex items-center gap-3 bg-zinc-800/50 border rounded-xl px-3 py-2 transition-colors ${open ? 'border-amber-500/60' : 'border-amber-900/40 hover:border-amber-600/50'}`}
 			>
-				<button
-					type='button'
-					onClick={() => setOpen((p) => !p)}
-					class='w-full flex flex-col items-center gap-2 text-center'
-				>
-					{selected ? (
-						<>
-							<img
-								src={selected.icon}
-								alt={selected.name}
-								class='w-20 h-20 object-contain rounded-xl bg-zinc-700/30 drop-shadow-lg'
-								onError={(e) => {
-									;(e.target as HTMLImageElement).style.display = 'none'
-								}}
-							/>
-							<p class='text-sm font-semibold text-zinc-100 leading-tight'>{selected.name}</p>
-							<button
-								type='button'
-								onClick={(e) => {
-									e.stopPropagation()
-									onSelect(null)
-								}}
-								class='text-zinc-600 hover:text-red-400 transition-colors text-base leading-none'
-								aria-label='Retirer cette arme'
-							>
-								×
-							</button>
-						</>
-					) : (
-						<>
-							<div class='w-20 h-20 rounded-xl bg-amber-900/10 border border-dashed border-amber-800/40 flex items-center justify-center text-zinc-500 text-3xl'>
-								⚔️
-							</div>
-							<p class='text-xs text-zinc-500'>Arme {slot}</p>
-						</>
-					)}
-				</button>
-			</div>
+				{selected ? (
+					<>
+						<img
+							src={selected.icon}
+							alt={selected.name}
+							class='w-10 h-10 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
+							onError={(e) => {
+								;(e.target as HTMLImageElement).style.display = 'none'
+							}}
+						/>
+						<p class='flex-1 text-sm font-medium text-zinc-100 text-left truncate leading-tight'>
+							{selected.name}
+						</p>
+						<button
+							type='button'
+							onClick={(e) => {
+								e.stopPropagation()
+								onSelect(null)
+							}}
+							class='text-zinc-600 hover:text-red-400 transition-colors text-lg leading-none flex-shrink-0'
+							aria-label='Retirer cette arme'
+						>
+							×
+						</button>
+					</>
+				) : (
+					<>
+						<div class='w-10 h-10 rounded-lg bg-amber-900/10 border border-dashed border-amber-800/40 flex-shrink-0' />
+						<p class='text-xs text-zinc-500'>Arme {slot}</p>
+					</>
+				)}
+			</button>
 
 			{open && (
 				<div class='absolute z-50 top-full mt-1 left-0 w-64 bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl flex flex-col'>

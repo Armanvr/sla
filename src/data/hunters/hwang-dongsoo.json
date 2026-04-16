@@ -236,5 +236,6 @@
 	"weapon": {
 		"name": "A Gentle Touch",
 		"icon": "/assets/weapons/hwang-dongsoo/A_Gentle_Touch_Icon.png"
-	}
+	},
+	"recommendedStats": []
 }
