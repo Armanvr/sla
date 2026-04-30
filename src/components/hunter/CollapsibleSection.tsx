@@ -11,17 +11,40 @@ export function CollapsibleSection({
 }) {
 	const [open, setOpen] = useState(defaultOpen)
 	return (
-		<section>
+		<section class='sla-anim-in'>
 			<button
 				type='button'
 				onClick={() => setOpen((o) => !o)}
-				class='w-full flex items-center gap-2 text-left hover:opacity-80 transition-opacity'
+				class='w-full flex items-center gap-3 text-left'
+				style={{
+					background: 'transparent',
+					border: 'none',
+					padding: '8px 0',
+					cursor: 'pointer',
+					borderBottom: '1px solid var(--sla-border-bright)',
+				}}
 			>
-				<span class='w-1 h-6 bg-purple-500 rounded-full flex-shrink-0' />
-				<h3 class='text-2xl font-bold flex-1'>{title}</h3>
-				<span class='text-zinc-400 text-sm font-mono'>{open ? '▲' : '▼'}</span>
+				<span class='sla-elem-bar sla-elem-bar-ember' style={{ height: 24 }} />
+				<span class='sla-tag'>{'// SECTION'}</span>
+				<h3
+					style={{
+						flex: 1,
+						margin: 0,
+						fontFamily: 'var(--sla-font-hud)',
+						fontSize: 'var(--sla-text-lg)',
+						fontWeight: 700,
+						textTransform: 'uppercase',
+						letterSpacing: 'var(--sla-ls-normal)',
+						color: 'var(--sla-text-primary)',
+					}}
+				>
+					{title}
+				</h3>
+				<span style={{ fontFamily: 'var(--sla-font-mono)', color: 'var(--sla-ember)' }}>
+					{open ? '▲' : '▼'}
+				</span>
 			</button>
-			{open && <div class='mt-6'>{children}</div>}
+			{open && <div style={{ marginTop: 24 }}>{children}</div>}
 		</section>
 	)
 }

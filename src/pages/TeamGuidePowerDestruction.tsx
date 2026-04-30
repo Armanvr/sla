@@ -1,4 +1,6 @@
 import { useState } from 'preact/hooks'
+import { BackLink } from '../components/sla/BackLink'
+import { SectionHeader } from '../components/sla/SectionHeader'
 import { ElementTabs } from '../components/team/ElementTabs'
 import { HunterSlot } from '../components/team/HunterSlot'
 import { JinwooPanel } from '../components/team/JinwooPanel'
@@ -67,9 +69,7 @@ interface RotationEntry {
 
 function getCurrentRotation(): RotationEntry | null {
 	const week = getGameWeek(new Date())
-	return (
-		(teamsConfig.weaknessRotation as RotationEntry[]).find((r) => r.activeWeeks.includes(week)) ?? null
-	)
+	return (teamsConfig.weaknessRotation as RotationEntry[]).find((r) => r.activeWeeks.includes(week)) ?? null
 }
 
 function getDefaultElement(rotation: RotationEntry | null): string {
@@ -148,7 +148,7 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 
 // ── Main Page ──────────────────────────────────────────────────────────────────
 
-export function TeamGuidePowerDestruction({ hunters, onBack }: { hunters: Hunter[]; onBack: () => void }) {
+export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 	const hunterById = new Map(hunters.map((h) => [h.id, h]))
 	const otherHunters = hunters.filter((h) => h.id !== 'sung-jinwoo')
 
@@ -279,17 +279,17 @@ export function TeamGuidePowerDestruction({ hunters, onBack }: { hunters: Hunter
 	// ── Render ────────────────────────────────────────────────────────────────
 
 	return (
-		<div class='min-h-screen bg-zinc-900 text-zinc-100'>
-			<header class='sticky top-0 z-10 border-b border-zinc-800 bg-zinc-900/80 backdrop-blur px-6 py-4 flex items-center gap-4'>
-				<button type='button' onClick={onBack} class='text-zinc-400 hover:text-zinc-100 transition-colors'>
-					← Retour
-				</button>
-				<h1 class='text-lg font-bold'>
-					Team Guides — <span class='text-emerald-400'>Power &amp; Destruction</span>
-				</h1>
-			</header>
+		<div class='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
+			<BackLink />
+			<div style={{ marginTop: 24 }}>
+				<SectionHeader
+					tag='// TEAM GUIDE'
+					title='Power & Destruction'
+					description='Composition par élément actif.'
+				/>
+			</div>
 
-			<main class='max-w-6xl mx-auto px-4 py-6 space-y-6'>
+			<main style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
 				<WeekRotationBanner rotation={rotation} />
 
 				<ElementTabs
@@ -302,10 +302,12 @@ export function TeamGuidePowerDestruction({ hunters, onBack }: { hunters: Hunter
 
 				<JinwooPanel selectedWeapons={selectedWeapons} onWeaponSelect={setWeaponSlot} />
 
-				<hr class='border-zinc-800' />
+				<hr class='sla-divider' />
 
 				<section>
-					<p class='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>Chasseurs</p>
+					<p class='sla-label' style='margin-bottom: 16px'>
+						Chasseurs
+					</p>
 					<div class='grid grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<HunterSlot
@@ -320,10 +322,12 @@ export function TeamGuidePowerDestruction({ hunters, onBack }: { hunters: Hunter
 					</div>
 				</section>
 
-				<hr class='border-zinc-800' />
+				<hr class='sla-divider' />
 
 				<section>
-					<p class='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>Ombres</p>
+					<p class='sla-label' style='margin-bottom: 16px'>
+						Ombres
+					</p>
 					<div class='grid grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<ShadowSlot

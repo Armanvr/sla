@@ -1,6 +1,10 @@
 import { useState } from 'preact/hooks'
 import type { HunterData } from '../components/HunterProfile'
-import workshopConfig from '../data/teams/workshop.json'
+import { Badge } from '../components/sla/Badge'
+import { ELEMENTS, ElementBar } from '../components/sla/ElementBadge'
+import { Panel } from '../components/sla/Panel'
+import { SectionHeader } from '../components/sla/SectionHeader'
+import { Ticker } from '../components/sla/Ticker'
 import beruData from '../data/shadows/beru.json'
 import besteData from '../data/shadows/beste.json'
 import bigrockData from '../data/shadows/bigrock.json'
@@ -15,6 +19,7 @@ import skullData from '../data/shadows/skull.json'
 import tankData from '../data/shadows/tank.json'
 import tuskData from '../data/shadows/tusk.json'
 import urosData from '../data/shadows/uros.json'
+import workshopConfig from '../data/teams/workshop.json'
 
 interface HunterCard {
 	id: string
@@ -55,156 +60,155 @@ const SHADOWS: ShadowData[] = [
 	urosData,
 ]
 
-const elementColors: Record<string, string> = {
-	Dark: 'from-purple-900/60 to-zinc-900',
-	Water: 'from-blue-900/60 to-zinc-900',
-	Fire: 'from-red-900/60 to-zinc-900',
-	Light: 'from-yellow-900/60 to-zinc-900',
-	Wind: 'from-emerald-900/60 to-zinc-900',
+const elementMeta: Record<string, { label: string; icon: string; slug: string }> = {
+	Dark: { label: 'Ténèbres', icon: '/assets/utils/Dark_Element.png', slug: 'dark' },
+	Fire: { label: 'Feu', icon: '/assets/utils/Fire_Element.png', slug: 'fire' },
+	Water: { label: 'Eau', icon: '/assets/utils/Water_Element.png', slug: 'water' },
+	Light: { label: 'Lumière', icon: '/assets/utils/Light_Element.png', slug: 'light' },
+	Wind: { label: 'Vent', icon: '/assets/utils/Wind_Element.png', slug: 'wind' },
 }
-
-const elementAccent: Record<string, string> = {
-	Dark: 'border-purple-500/40 hover:border-purple-400/70',
-	Water: 'border-blue-500/40 hover:border-blue-400/70',
-	Fire: 'border-red-500/40 hover:border-red-400/70',
-	Light: 'border-yellow-500/40 hover:border-yellow-400/70',
-	Wind: 'border-emerald-500/40 hover:border-emerald-400/70',
-}
-
-const elementHeading: Record<string, { label: string; icon: string; bar: string; badge: string }> = {
-	Dark: {
-		label: 'Ténèbres',
-		icon: '/assets/utils/Dark_Element.png',
-		bar: 'bg-purple-500',
-		badge: 'bg-purple-500/15 border-purple-500/40 text-purple-300',
-	},
-	Fire: {
-		label: 'Feu',
-		icon: '/assets/utils/Fire_Element.png',
-		bar: 'bg-red-500',
-		badge: 'bg-red-500/15 border-red-500/40 text-red-300',
-	},
-	Water: {
-		label: 'Eau',
-		icon: '/assets/utils/Water_Element.png',
-		bar: 'bg-blue-500',
-		badge: 'bg-blue-500/15 border-blue-500/40 text-blue-300',
-	},
-	Light: {
-		label: 'Lumière',
-		icon: '/assets/utils/Light_Element.png',
-		bar: 'bg-yellow-400',
-		badge: 'bg-yellow-400/15 border-yellow-400/40 text-yellow-300',
-	},
-	Wind: {
-		label: 'Vent',
-		icon: '/assets/utils/Wind_Element.png',
-		bar: 'bg-emerald-500',
-		badge: 'bg-emerald-500/15 border-emerald-500/40 text-emerald-300',
-	},
-}
-
-const ELEMENT_ORDER = ['Dark', 'Fire', 'Water', 'Light', 'Wind']
 
 const CATEGORIES = ['Elemental Stacker', 'Breaker', 'Supporter', 'Striker'] as const
 type Category = (typeof CATEGORIES)[number]
 
-const rarityColors: Record<string, string> = {
-	SSR: 'text-amber-400 border-amber-400/40 bg-amber-400/10',
-	SR: 'text-purple-400 border-purple-400/40 bg-purple-400/10',
-	R: 'text-blue-400 border-blue-400/40 bg-blue-400/10',
+const rarityClass: Record<string, string> = {
+	SSR: 'sla-rarity sla-rarity-ssr',
+	SR: 'sla-rarity sla-rarity-sr',
+	R: 'sla-rarity sla-rarity-r',
 }
 
-// ─── Section Header ───────────────────────────────────────────────────────────
+// ─── Hero ─────────────────────────────────────────────────────────────────────
 
-function SectionHeader({ title, description }: { title: string; description: string }) {
+function Hero() {
 	return (
-		<div class='flex items-center gap-3 mb-8'>
-			<span class='w-1 h-8 bg-purple-500 rounded-full flex-shrink-0' />
-			<div>
-				<h2 class='text-2xl font-bold'>{title}</h2>
-				<p class='text-zinc-400 text-sm mt-0.5'>{description}</p>
+		<section class='sla-anim-in' style={{ padding: '64px 0 48px' }}>
+			<div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+				<span class='sla-tag'>{'SLA // Network'}</span>
+				<span class='sla-label'>{'// Solo Leveling: ARISE Codex'}</span>
 			</div>
-		</div>
+			<h1 class='sla-title-hero sla-text-glow'>
+				ARISE
+				<br />
+				<span class='sla-text-ember'>EMBERFALL</span>
+			</h1>
+			<p
+				style={{
+					marginTop: 20,
+					color: 'var(--sla-text-secondary)',
+					maxWidth: 720,
+					fontFamily: 'var(--sla-font-body)',
+					fontSize: 'var(--sla-text-md)',
+				}}
+			>
+				Codex tactique des chasseurs, ombres, builds et compositions d'équipe. Mis à jour le{' '}
+				<span class='sla-text-ember'>30 avril 2026</span>.
+			</p>
+		</section>
 	)
 }
 
 // ─── Hunter Card ──────────────────────────────────────────────────────────────
 
-function HunterCard({ hunter, onClick }: { hunter: HunterCard; onClick: () => void }) {
-	const primaryElement = hunter.data.elements.find((e) => e.primary) ?? hunter.data.elements[0]
-	const gradient = primaryElement
-		? (elementColors[primaryElement.name] ?? 'from-zinc-800 to-zinc-900')
-		: 'from-zinc-800 to-zinc-900'
-	const accent = primaryElement
-		? (elementAccent[primaryElement.name] ?? 'border-zinc-600/40 hover:border-zinc-500/70')
-		: 'border-zinc-600/40 hover:border-zinc-500/70'
+function HunterCardItem({ hunter }: { hunter: HunterCard }) {
+	const primary = hunter.data.elements.find((e) => e.primary) ?? hunter.data.elements[0]
+	const slug = primary ? (elementMeta[primary.name]?.slug ?? 'ember') : 'ember'
 
 	return (
-		<button
-			type='button'
-			onClick={onClick}
-			class={`relative group w-full text-left bg-gradient-to-b ${gradient} border ${accent} rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl`}
+		<a
+			href={`/hunter/${hunter.id}`}
+			class='sla-panel sla-clickable'
+			style={{ display: 'block', textDecoration: 'none', overflow: 'hidden' }}
 		>
-			{/* Character image */}
-			<div class='relative h-44 flex items-center justify-center overflow-hidden'>
-				<div class='absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent z-10' />
+			<div
+				class={`sla-elem-tint-${slug}`}
+				style={{
+					position: 'relative',
+					height: 200,
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+					overflow: 'hidden',
+				}}
+			>
+				<div
+					style={{
+						position: 'absolute',
+						inset: 0,
+						background: 'linear-gradient(to top, var(--sla-bg-deep), transparent 70%)',
+						zIndex: 1,
+					}}
+				/>
 				<img
 					src={hunter.data.icon ?? hunter.data.image}
 					alt={hunter.data.name}
-					class='w-64 h-64 object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-xl'
+					style={{
+						width: 240,
+						height: 240,
+						objectFit: 'contain',
+						filter: 'drop-shadow(0 0 20px rgba(255,74,28,0.2))',
+					}}
 				/>
 			</div>
-
-			{/* Info overlay */}
-			<div class='relative z-10 -mt-10 px-3 pb-3'>
-				<div class='flex items-start justify-between gap-2 mb-1.5'>
-					<div class='min-w-0'>
+			<div style={{ padding: 16, position: 'relative', zIndex: 2 }}>
+				<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', gap: 8 }}>
+					<div style={{ minWidth: 0 }}>
 						{hunter.data.title && (
-							<p class='text-[10px] text-zinc-400 uppercase tracking-widest mb-0.5 truncate'>
+							<div class='sla-label' style={{ marginBottom: 4 }}>
 								{hunter.data.title}
-							</p>
+							</div>
 						)}
-						<h2 class='text-base font-bold text-white leading-tight'>{hunter.data.name}</h2>
-					</div>
-					{hunter.data.rarity && (
-						<span
-							class={`text-[10px] font-bold border px-1.5 py-0.5 rounded-md flex-shrink-0 mt-0.5 ${rarityColors[hunter.data.rarity] ?? 'text-zinc-400 border-zinc-600 bg-zinc-800'}`}
+						<h3
+							style={{
+								fontFamily: 'var(--sla-font-hud)',
+								fontSize: 'var(--sla-text-md)',
+								fontWeight: 700,
+								letterSpacing: 'var(--sla-ls-normal)',
+								textTransform: 'uppercase',
+								color: 'var(--sla-text-primary)',
+								margin: 0,
+								lineHeight: 1.2,
+							}}
 						>
-							{hunter.data.rarity}
-						</span>
+							{hunter.data.name}
+						</h3>
+					</div>
+					{hunter.data.rarity && rarityClass[hunter.data.rarity] && (
+						<span class={rarityClass[hunter.data.rarity]}>{hunter.data.rarity}</span>
 					)}
 				</div>
-
-				{/* Tags */}
-				<div class='flex flex-wrap gap-1.5'>
-					{hunter.data.elements.map((el) => (
-						<span
-							key={el.name}
-							class='text-[10px] px-1.5 py-0.5 rounded-full bg-white/10 text-white/80 font-medium'
-						>
-							{el.name}
-						</span>
-					))}
+				<div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 12 }}>
+					{hunter.data.elements.map((el) => {
+						const s = elementMeta[el.name]?.slug ?? 'ember'
+						return (
+							<span
+								key={el.name}
+								class={`sla-elem-badge sla-elem-badge-${s}`}
+								style={{ fontSize: 'var(--sla-text-xs)' }}
+							>
+								{el.name}
+							</span>
+						)
+					})}
 					{hunter.data.class && (
-						<span class='text-[10px] px-1.5 py-0.5 rounded-full bg-white/10 text-white/80 font-medium'>
+						<span class='sla-label' style={{ alignSelf: 'center' }}>
 							{hunter.data.class}
 						</span>
 					)}
-					{hunter.data.rank && (
-						<span class='text-[10px] px-1.5 py-0.5 rounded-full bg-white/10 text-white/80 font-medium'>
-							{hunter.data.rank}
-						</span>
-					)}
 				</div>
-
-				{/* CTA */}
-				<div class='mt-3 flex items-center gap-1 text-xs text-zinc-400 group-hover:text-zinc-200 transition-colors'>
-					<span>View guide</span>
-					<span class='transition-transform group-hover:translate-x-1'>→</span>
+				<div
+					style={{
+						marginTop: 12,
+						fontFamily: 'var(--sla-font-mono)',
+						fontSize: 'var(--sla-text-xs)',
+						letterSpacing: 'var(--sla-ls-wider)',
+						color: 'var(--sla-ember)',
+						textTransform: 'uppercase',
+					}}
+				>
+					Open dossier ▸
 				</div>
 			</div>
-		</button>
+		</a>
 	)
 }
 
@@ -212,48 +216,84 @@ function HunterCard({ hunter, onClick }: { hunter: HunterCard; onClick: () => vo
 
 function ShadowCard({ shadow }: { shadow: ShadowData }) {
 	const img = shadow.render ?? shadow.image ?? shadow.ranks?.general
-
 	return (
-		<div class='relative group bg-gradient-to-b from-purple-950/60 to-zinc-900 border border-purple-900/40 hover:border-purple-600/60 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl'>
-			{/* Image */}
-			<div class='relative h-44 flex items-center justify-center overflow-hidden'>
-				<div class='absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/10 to-transparent z-10' />
+		<Panel class='sla-clickable sla-elem-tint-dark' style={{ overflow: 'hidden' }}>
+			<div
+				style={{
+					position: 'relative',
+					height: 180,
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+					overflow: 'hidden',
+				}}
+			>
+				<div
+					style={{
+						position: 'absolute',
+						inset: 0,
+						background: 'linear-gradient(to top, var(--sla-bg-deep), transparent 70%)',
+						zIndex: 1,
+					}}
+				/>
 				{img ? (
 					<img
 						src={img}
 						alt={shadow.name}
-						class='w-48 h-48 object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-xl'
+						style={{ width: 200, height: 200, objectFit: 'contain' }}
 						onError={(e) => {
 							;(e.target as HTMLImageElement).style.display = 'none'
 						}}
 					/>
 				) : (
-					<img src='/assets/utils/Hunter_Icon.png' alt='' class='w-16 h-16 object-contain opacity-20' />
+					<img src='/assets/utils/Hunter_Icon.png' alt='' style={{ width: 64, height: 64, opacity: 0.2 }} />
 				)}
 			</div>
-
-			{/* Info */}
-			<div class='relative z-10 -mt-6 px-3 pb-3'>
-				<p class='text-[10px] text-purple-400 uppercase tracking-widest mb-0.5 truncate'>{shadow.title}</p>
-				<h2 class='text-base font-bold text-white leading-tight mb-2'>{shadow.name}</h2>
-
-				<p class='text-[11px] text-zinc-400 leading-relaxed line-clamp-2'>{shadow.shadowAuthority}</p>
-
+			<div style={{ padding: 16 }}>
+				<div class='sla-label' style={{ color: 'var(--sla-elem-dark)' }}>
+					{shadow.title}
+				</div>
+				<h3
+					style={{
+						fontFamily: 'var(--sla-font-hud)',
+						fontSize: 'var(--sla-text-md)',
+						fontWeight: 700,
+						textTransform: 'uppercase',
+						color: 'var(--sla-text-primary)',
+						margin: '4px 0 8px',
+					}}
+				>
+					{shadow.name}
+				</h3>
+				<p
+					style={{
+						fontSize: 'var(--sla-text-sm)',
+						color: 'var(--sla-text-secondary)',
+						margin: 0,
+						lineHeight: 1.5,
+						display: '-webkit-box',
+						WebkitLineClamp: 2,
+						WebkitBoxOrient: 'vertical',
+						overflow: 'hidden',
+					}}
+				>
+					{shadow.shadowAuthority}
+				</p>
 				{shadow.weapon && (
-					<div class='flex items-center gap-1.5 mt-2'>
+					<div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 12 }}>
 						<img
 							src={shadow.weapon.icon}
 							alt={shadow.weapon.name}
-							class='w-4 h-4 object-contain flex-shrink-0 opacity-70'
+							style={{ width: 16, height: 16, opacity: 0.7 }}
 							onError={(e) => {
 								;(e.target as HTMLImageElement).style.display = 'none'
 							}}
 						/>
-						<span class='text-[10px] text-zinc-500 truncate'>{shadow.weapon.name}</span>
+						<span class='sla-label'>{shadow.weapon.name}</span>
 					</div>
 				)}
 			</div>
-		</div>
+		</Panel>
 	)
 }
 
@@ -261,118 +301,140 @@ function ShadowCard({ shadow }: { shadow: ShadowData }) {
 
 function TeamGuideCard({
 	title,
+	href,
 	imgSrc,
 	imgSize = 'cover',
-	onClick,
 }: {
 	title: string
+	href: string
 	imgSrc?: string
 	imgSize?: 'cover' | 'contain-md' | 'contain-lg'
-	onClick: () => void
 }) {
-	const imgClass = {
-		cover: 'w-full h-full object-cover',
-		'contain-md': 'w-28 h-28 object-contain drop-shadow-xl',
-		'contain-lg': 'w-42 h-42 object-contain drop-shadow-xl',
-	}[imgSize]
-
+	const imgStyle: Record<string, preact.JSX.CSSProperties> = {
+		cover: { width: '100%', height: '100%', objectFit: 'cover' },
+		'contain-md': { width: 112, height: 112, objectFit: 'contain' },
+		'contain-lg': { width: 168, height: 168, objectFit: 'contain' },
+	}
 	return (
-		<button
-			type='button'
-			onClick={onClick}
-			class='text-left bg-zinc-800/50 border border-zinc-700/50 rounded-2xl overflow-hidden hover:border-zinc-600/70 transition-colors cursor-pointer group w-full'
-		>
-			<div class='h-36 bg-zinc-800/80 flex items-center justify-center overflow-hidden'>
-				{imgSrc ? (
+		<a href={href} class='sla-panel sla-clickable' style={{ display: 'block', textDecoration: 'none' }}>
+			<div
+				style={{
+					height: 144,
+					background: 'var(--sla-bg-mid)',
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+					overflow: 'hidden',
+				}}
+			>
+				{imgSrc && (
 					<img
 						src={imgSrc}
 						alt={title}
-						class={`transition-transform duration-300 group-hover:scale-105 ${imgClass}`}
+						style={imgStyle[imgSize]}
 						onError={(e) => {
 							;(e.target as HTMLImageElement).style.display = 'none'
 						}}
 					/>
-				) : (
-					<div class='w-16 h-16 rounded-xl bg-zinc-700/40 border border-zinc-600/30' />
 				)}
 			</div>
-			<div class='px-4 py-3'>
-				<h3 class='font-semibold text-zinc-100'>{title}</h3>
-				<div class='mt-2 flex items-center gap-1 text-xs text-zinc-400 group-hover:text-zinc-200 transition-colors'>
-					<span>View guide</span>
-					<span class='transition-transform group-hover:translate-x-1'>→</span>
+			<div style={{ padding: '14px 16px' }}>
+				<h3
+					style={{
+						fontFamily: 'var(--sla-font-hud)',
+						fontSize: 'var(--sla-text-base)',
+						fontWeight: 700,
+						textTransform: 'uppercase',
+						letterSpacing: 'var(--sla-ls-normal)',
+						color: 'var(--sla-text-primary)',
+						margin: 0,
+					}}
+				>
+					{title}
+				</h3>
+				<div
+					style={{
+						marginTop: 8,
+						fontFamily: 'var(--sla-font-mono)',
+						fontSize: 'var(--sla-text-xs)',
+						letterSpacing: 'var(--sla-ls-wider)',
+						color: 'var(--sla-ember)',
+						textTransform: 'uppercase',
+					}}
+				>
+					Open ▸
 				</div>
 			</div>
-		</button>
+		</a>
 	)
 }
 
 // ─── Home Page ────────────────────────────────────────────────────────────────
 
-export function HomePage({
-	hunters,
-	onSelect,
-	onSelectTeamGuide,
-}: {
-	hunters: HunterCard[]
-	onSelect: (id: string) => void
-	onSelectTeamGuide: (id: string) => void
-}) {
+export function HomePage({ hunters }: { hunters: HunterCard[] }) {
 	const [activeCategory, setActiveCategory] = useState<Category | null>(null)
 
 	return (
-		<div class='min-h-screen bg-zinc-900 text-zinc-100'>
-			{/* Header */}
-			<header class='border-b border-zinc-800 px-6 py-4 flex items-center gap-3'>
-				<h1 class='text-xl font-bold tracking-wide'>
-					SLA <span class='text-purple-400'>Guide</span>
-				</h1>
-				<span class='text-xs font-mono text-zinc-500 border border-zinc-700/60 rounded px-1.5 py-0.5'>
-					v2.0.0
-				</span>
-				<span class='text-xs text-zinc-500 ml-auto'>Mis à jour le 16 avril 2026</span>
-			</header>
+		<>
+			<div class='sla-container'>
+				<Hero />
+			</div>
 
-			<main class='max-w-6xl mx-auto px-4 py-12 space-y-16'>
-				{/* ── Team Guides ── */}
+			<Ticker
+				label='// LIVE FEED"'
+				items={[
+					'PATCH 2.0.0 // Refonte design Emberfall',
+					`HUNTERS INDEXED // ${hunters.length}`,
+					'NEW HUNTER // Elena Renault',
+					'STATUS // Online',
+					'WORKSHOP // 6 raids actifs',
+				]}
+			/>
+
+			<div class='sla-container' style={{ padding: '64px 0', display: 'flex', flexDirection: 'column', gap: 80 }}>
+				{/* Team Guides */}
 				<section>
 					<SectionHeader
+						tag='// SECTION 01'
 						title='Team Guides'
-						description="Composition d'équipe optimisées par type de contenu."
+						description="Compositions d'équipe optimisées par type de contenu."
 					/>
-					<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
-						<TeamGuideCard
-							title='Dungeons'
-							imgSrc='/assets/sections/dungeons.png'
-							onClick={() => onSelectTeamGuide('team-dungeons')}
-						/>
+					<div
+						style={{
+							display: 'grid',
+							gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+							gap: 16,
+						}}
+					>
+						<TeamGuideCard title='Dungeons' href='/team/dungeons' imgSrc='/assets/sections/dungeons.png' />
 						<TeamGuideCard
 							title='Power & Destruction'
+							href='/team/power-destruction'
 							imgSrc='/assets/sections/power-of-destruction.png'
-							onClick={() => onSelectTeamGuide('team-power-destruction')}
 						/>
 						<TeamGuideCard
 							title='Guild Boss'
+							href='/team/guild-boss'
 							imgSrc='/assets/sections/guild-boss.png'
-							onClick={() => onSelectTeamGuide('team-guild-boss')}
 						/>
-						<TeamGuideCard
-							title='Compare'
-							imgSrc='/assets/sections/compare.png'
-							onClick={() => onSelectTeamGuide('compare')}
-						/>
+						<TeamGuideCard title='Compare' href='/compare' imgSrc='/assets/sections/compare.png' />
 					</div>
 				</section>
 
-				<hr class='border-zinc-800' />
-
-				{/* ── Workshop Guides ── */}
+				{/* Workshop Guides */}
 				<section>
 					<SectionHeader
+						tag='// SECTION 02'
 						title='Workshop Guides'
 						description="Optimise ton atelier et tes améliorations d'équipement."
 					/>
-					<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+					<div
+						style={{
+							display: 'grid',
+							gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+							gap: 16,
+						}}
+					>
 						{(workshopConfig as { raids: { name: string; icon: string }[] }).raids.map((raid) => {
 							const label = raid.name
 								.split('-')
@@ -382,67 +444,80 @@ export function HomePage({
 								<TeamGuideCard
 									key={raid.name}
 									title={label}
+									href={`/team/workshop/${raid.name}`}
 									imgSrc={`/assets/workshop/${raid.name}/${raid.icon}.png`}
 									imgSize='contain-lg'
-									onClick={() => onSelectTeamGuide(`team-workshop:${raid.name}`)}
 								/>
 							)
 						})}
 					</div>
 				</section>
 
-				<hr class='border-zinc-800' />
-
-				{/* ── Hunter Guides ── */}
+				{/* Hunter Guides */}
 				<section>
 					<SectionHeader
+						tag='// SECTION 03'
 						title='Hunter Guides'
-						description='Retrouve les stats, compétences et builds recommandés pour chaque chasseur.'
+						description='Stats, compétences et builds recommandés pour chaque chasseur.'
+						right={<Badge variant='active'>{hunters.length} indexés</Badge>}
 					/>
 
-					{/* Category filter buttons */}
-					<div class='flex flex-wrap gap-2 mb-10'>
-						{CATEGORIES.map((cat) => (
-							<button
-								key={cat}
-								type='button'
-								onClick={() => setActiveCategory((prev) => (prev === cat ? null : cat))}
-								class={`px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider border transition-colors cursor-pointer select-none ${
-									activeCategory === cat
-										? 'bg-purple-600 border-purple-500 text-white'
-										: 'bg-zinc-800/60 border-zinc-600/60 text-zinc-400 hover:border-zinc-500/60 hover:text-zinc-300'
-								}`}
-							>
-								{cat}
-							</button>
-						))}
+					<div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 32 }}>
+						{CATEGORIES.map((cat) => {
+							const active = activeCategory === cat
+							return (
+								<button
+									key={cat}
+									type='button'
+									onClick={() => setActiveCategory((prev) => (prev === cat ? null : cat))}
+									class={`sla-btn ${active ? 'sla-btn-primary' : 'sla-btn-ghost'}`}
+									style={{ padding: '8px 18px', fontSize: 'var(--sla-text-xs)' }}
+								>
+									{cat}
+								</button>
+							)
+						})}
 					</div>
 
-					{/* Cards grouped by element */}
-					<div class='space-y-10'>
-						{/* ── Joueur ── */}
+					<div style={{ display: 'flex', flexDirection: 'column', gap: 48 }}>
 						{(() => {
 							const jinwoo = hunters.find((h) => h.id === 'sung-jinwoo')
 							if (!jinwoo) return null
 							return (
 								<div>
-									<div class='flex items-center gap-3 mb-4'>
-										<span class='w-1 h-6 bg-amber-400 rounded-full flex-shrink-0' />
-										<img src='/assets/utils/Player_Icon.png' alt='Joueur' class='w-5 h-5 object-contain' />
-										<h3 class='text-base font-bold text-zinc-100'>Joueur</h3>
-										<span class='text-[10px] font-bold border px-2 py-0.5 rounded-full bg-amber-400/15 border-amber-400/40 text-amber-300'>
-											Unique
-										</span>
+									<div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+										<span class='sla-elem-bar sla-elem-bar-ember' style={{ height: 24 }} />
+										<img
+											src='/assets/utils/Player_Icon.png'
+											alt='Joueur'
+											style={{ width: 20, height: 20 }}
+										/>
+										<h3
+											style={{
+												fontFamily: 'var(--sla-font-hud)',
+												textTransform: 'uppercase',
+												margin: 0,
+												color: 'var(--sla-text-primary)',
+											}}
+										>
+											Joueur
+										</h3>
+										<span class='sla-elem-badge sla-elem-badge-ember'>Unique</span>
 									</div>
-									<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-										<HunterCard hunter={jinwoo} onClick={() => onSelect(jinwoo.id)} />
+									<div
+										style={{
+											display: 'grid',
+											gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+											gap: 16,
+										}}
+									>
+										<HunterCardItem hunter={jinwoo} />
 									</div>
 								</div>
 							)
 						})()}
 
-						{/* ── Par élément ── */}
-						{ELEMENT_ORDER.map((el) => {
+						{ELEMENTS.map((el) => {
 							const group = hunters.filter(
 								(h) =>
 									h.id !== 'sung-jinwoo' &&
@@ -450,26 +525,35 @@ export function HomePage({
 									(activeCategory === null || h.data.category === activeCategory),
 							)
 							if (group.length === 0) return null
-							const meta = elementHeading[el]
+							const meta = elementMeta[el]
 							return (
 								<div key={el}>
-									<div class='flex items-center gap-3 mb-4'>
-										<span class={`w-1 h-6 ${meta.bar} rounded-full flex-shrink-0`} />
-										<img src={meta.icon} alt={el} class='w-5 h-5 object-contain' />
-										<h3 class='text-base font-bold text-zinc-100'>{meta.label}</h3>
-										<span
-											class={`text-[10px] font-bold border px-2 py-0.5 rounded-full ${meta.badge}`}
+									<div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+										<ElementBar element={el} />
+										<img src={meta.icon} alt={el} style={{ width: 20, height: 20 }} />
+										<h3
+											style={{
+												fontFamily: 'var(--sla-font-hud)',
+												textTransform: 'uppercase',
+												margin: 0,
+												color: 'var(--sla-text-primary)',
+											}}
 										>
+											{meta.label}
+										</h3>
+										<span class={`sla-elem-badge sla-elem-badge-${meta.slug}`}>
 											{group.length} chasseur{group.length > 1 ? 's' : ''}
 										</span>
 									</div>
-									<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-										{group.map((hunter) => (
-											<HunterCard
-												key={hunter.id}
-												hunter={hunter}
-												onClick={() => onSelect(hunter.id)}
-											/>
+									<div
+										style={{
+											display: 'grid',
+											gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+											gap: 16,
+										}}
+									>
+										{group.map((h) => (
+											<HunterCardItem key={h.id} hunter={h} />
 										))}
 									</div>
 								</div>
@@ -478,21 +562,26 @@ export function HomePage({
 					</div>
 				</section>
 
-				<hr class='border-zinc-800' />
-
-				{/* ── Shadow Guides ── */}
+				{/* Shadow Guides */}
 				<section>
 					<SectionHeader
+						tag='// SECTION 04'
 						title='Shadow Guides'
-						description='Découvre les ombres disponibles, leurs stats et leur utilité en combat.'
+						description='Ombres invocables, leurs stats et leur utilité au combat.'
 					/>
-					<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+					<div
+						style={{
+							display: 'grid',
+							gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+							gap: 16,
+						}}
+					>
 						{SHADOWS.map((shadow) => (
 							<ShadowCard key={shadow.name} shadow={shadow} />
 						))}
 					</div>
 				</section>
-			</main>
-		</div>
+			</div>
+		</>
 	)
 }

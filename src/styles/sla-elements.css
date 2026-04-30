@@ -1,0 +1,239 @@
+/*
+ * ═══════════════════════════════════════════════════════════════
+ *  SLA — Elemental palette extension
+ *  Element-coded hues resaturated to fit the SLA Emberfall mood.
+ * ═══════════════════════════════════════════════════════════════
+ */
+
+:root {
+	--sla-elem-dark: #8b5cf6; /* purple */
+	--sla-elem-fire: #ef4444; /* red */
+	--sla-elem-water: #3b82f6; /* blue */
+	--sla-elem-light: #facc15; /* amber-yellow */
+	--sla-elem-wind: #10b981; /* emerald */
+
+	--sla-rarity-ssr: #f59e0b;
+	--sla-rarity-sr: #a855f7;
+	--sla-rarity-r: #3b82f6;
+}
+
+/* Element accent bar (left border on section headers) */
+.sla-elem-bar {
+	width: 3px;
+	align-self: stretch;
+}
+.sla-elem-bar-dark {
+	background: var(--sla-elem-dark);
+}
+.sla-elem-bar-fire {
+	background: var(--sla-elem-fire);
+}
+.sla-elem-bar-water {
+	background: var(--sla-elem-water);
+}
+.sla-elem-bar-light {
+	background: var(--sla-elem-light);
+}
+.sla-elem-bar-wind {
+	background: var(--sla-elem-wind);
+}
+.sla-elem-bar-ember {
+	background: var(--sla-ember);
+}
+
+/* Element badge (tag with element color) */
+.sla-elem-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-family: var(--sla-font-mono);
+	font-size: var(--sla-text-xs);
+	letter-spacing: var(--sla-ls-wider);
+	text-transform: uppercase;
+	padding: 3px 10px;
+	border: 1px solid currentColor;
+	clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%);
+	background: rgba(0, 0, 0, 0.3);
+}
+.sla-elem-badge-dark {
+	color: var(--sla-elem-dark);
+}
+.sla-elem-badge-fire {
+	color: var(--sla-elem-fire);
+}
+.sla-elem-badge-water {
+	color: var(--sla-elem-water);
+}
+.sla-elem-badge-light {
+	color: var(--sla-elem-light);
+}
+.sla-elem-badge-wind {
+	color: var(--sla-elem-wind);
+}
+.sla-elem-badge-ember {
+	color: var(--sla-ember);
+}
+
+/* Element panel tint (subtle gradient overlay on cards) */
+.sla-elem-tint-dark {
+	background-image: linear-gradient(180deg, rgba(139, 92, 246, 0.1), transparent 60%);
+}
+.sla-elem-tint-fire {
+	background-image: linear-gradient(180deg, rgba(239, 68, 68, 0.1), transparent 60%);
+}
+.sla-elem-tint-water {
+	background-image: linear-gradient(180deg, rgba(59, 130, 246, 0.1), transparent 60%);
+}
+.sla-elem-tint-light {
+	background-image: linear-gradient(180deg, rgba(250, 204, 21, 0.1), transparent 60%);
+}
+.sla-elem-tint-wind {
+	background-image: linear-gradient(180deg, rgba(16, 185, 129, 0.1), transparent 60%);
+}
+
+/* Rarity badges */
+.sla-rarity {
+	display: inline-block;
+	font-family: var(--sla-font-hud);
+	font-size: var(--sla-text-xs);
+	font-weight: 700;
+	letter-spacing: var(--sla-ls-wide);
+	padding: 2px 8px;
+	border: 1px solid currentColor;
+	clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%);
+}
+.sla-rarity-ssr {
+	color: var(--sla-rarity-ssr);
+}
+.sla-rarity-sr {
+	color: var(--sla-rarity-sr);
+}
+.sla-rarity-r {
+	color: var(--sla-rarity-r);
+}
+
+/* Global resets to enforce angular aesthetic */
+.sla-app,
+.sla-app * {
+	border-radius: 0;
+}
+
+/* Nav bar (used by Nav.tsx) */
+.sla-nav {
+	position: sticky;
+	top: 0;
+	z-index: var(--sla-z-nav);
+	display: flex;
+	align-items: center;
+	gap: var(--sla-space-6);
+	padding: var(--sla-space-3) var(--sla-space-6);
+	background: rgba(7, 5, 8, 0.85);
+	backdrop-filter: blur(8px);
+	border-bottom: 1px solid var(--sla-border-bright);
+}
+.sla-nav-logo {
+	font-family: var(--sla-font-hud);
+	font-weight: 900;
+	font-size: var(--sla-text-md);
+	letter-spacing: var(--sla-ls-wider);
+	color: var(--sla-text-primary);
+	text-transform: uppercase;
+}
+.sla-nav-logo-accent {
+	color: var(--sla-ember);
+}
+.sla-nav-link {
+	font-family: var(--sla-font-hud);
+	font-size: var(--sla-text-sm);
+	font-weight: 700;
+	letter-spacing: var(--sla-ls-wider);
+	color: var(--sla-text-secondary);
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 6px 12px;
+	border: 1px solid transparent;
+	transition: all var(--sla-duration-base);
+}
+.sla-nav-link:hover {
+	color: var(--sla-ember);
+}
+.sla-nav-link.active {
+	color: var(--sla-ember);
+	border-left: 3px solid var(--sla-ember);
+	background: rgba(255, 74, 28, 0.06);
+}
+.sla-nav-clock {
+	font-family: var(--sla-font-mono);
+	font-size: var(--sla-text-xs);
+	color: var(--sla-text-secondary);
+	letter-spacing: var(--sla-ls-wider);
+}
+.sla-status-dot {
+	width: 8px;
+	height: 8px;
+	background: var(--sla-ember);
+	box-shadow: 0 0 8px var(--sla-ember);
+	animation: sla-pulse 1.5s ease-in-out infinite;
+	display: inline-block;
+}
+
+/* Back-button helper (used by every secondary page) */
+.sla-back-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-family: var(--sla-font-hud);
+	font-size: var(--sla-text-sm);
+	font-weight: 700;
+	letter-spacing: var(--sla-ls-wider);
+	color: var(--sla-ember);
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 6px 0;
+	cursor: pointer;
+	background: none;
+	border: none;
+	transition: color var(--sla-duration-base);
+}
+.sla-back-link:hover {
+	color: var(--sla-ember-glow);
+}
+
+/* Section title block (combo .sla-tag + .sla-title-section + divider) */
+.sla-section-head {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sla-space-2);
+	margin-bottom: var(--sla-space-8);
+}
+.sla-section-head-row {
+	display: flex;
+	align-items: center;
+	gap: var(--sla-space-3);
+}
+.sla-section-head .sla-divider {
+	margin-top: var(--sla-space-2);
+}
+
+/* Container helper */
+.sla-container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 var(--sla-space-6);
+}
+
+/* Card grid utility */
+.sla-grid {
+	display: grid;
+	gap: var(--sla-space-4);
+}
+
+/* Glow on hover for clickable panels */
+.sla-clickable {
+	cursor: pointer;
+	transition: all var(--sla-duration-base);
+}
+.sla-clickable:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--sla-glow-md);
+}

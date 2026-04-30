@@ -1,1 +1,79 @@
+@import "./styles/sla-tokens.css";
+@import "./styles/sla-elements.css";
 @import "tailwindcss";
+
+@theme {
+  --color-ember: #6b9ac4;
+  --color-ember-dim: #4059ad;
+  --color-ember-glow: #d9fff5;
+  --color-crimson: #c0192a;
+  --color-amber-sla: #4c2c72;
+  --color-bg-deep: #070508;
+  --color-bg-mid: #0e0b10;
+  --color-bg-panel: #120d15;
+  --color-text-sla: #f0e8dc;
+  --color-text-sla-secondary: #9a8a78;
+  --color-text-sla-dim: #4a3f35;
+  --color-border-sla: #2a1f18;
+  --color-border-sla-bright: #77b6ea;
+
+  --font-hud: "Orbitron", monospace;
+  --font-mono-sla: "Share Tech Mono", monospace;
+  --font-body-sla: "Rajdhani", sans-serif;
+}
+
+html,
+body {
+	background: var(--sla-bg-deep);
+	color: var(--sla-text-primary);
+	font-family: var(--sla-font-body);
+	font-size: var(--sla-text-md);
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 2px,
+		rgba(255, 74, 28, 0.025) 2px,
+		rgba(255, 74, 28, 0.025) 4px
+	);
+	pointer-events: none;
+	z-index: var(--sla-z-scanline);
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+::-webkit-scrollbar-track {
+	background: var(--sla-bg-deep);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--sla-ember-dim);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--sla-ember);
+}
+
+#app {
+	min-height: 100vh;
+}
+
+a {
+	color: var(--sla-ember);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--sla-ember-glow);
+}
+
+button {
+	font-family: inherit;
+}

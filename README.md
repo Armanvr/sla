@@ -18,16 +18,34 @@ This project has no affiliation with Netmarble Corporation or its affiliates.
 ```
 src/
 ├── main.tsx                          # Preact entry point
-├── app.tsx                           # SPA router (home / profile / team guides)
-├── index.css                         # Tailwind import
+├── app.tsx                           # App shell
+├── router.tsx                        # Centralized SPA router (AppRouter)
+├── index.css                         # Tailwind @theme tokens + global styles
+├── styles/
+│   ├── sla-tokens.css                # Design tokens (colors, typography, spacing, glow…)
+│   └── sla-elements.css              # Utility CSS classes (panel, badge, button, tag…)
 ├── pages/
 │   ├── HomePage.tsx                  # Hunter grid, navigation to Team Guides
 │   ├── TeamGuideDungeons.tsx         # Team Guide — Dungeons
 │   ├── TeamGuidePowerDestruction.tsx # Team Guide — Power & Destruction
 │   ├── TeamGuideGuildBoss.tsx        # Team Guide — Guild Boss
-│   └── TeamGuideWorkshop.tsx         # Team Guide — Workshop (raid floors & blessings)
+│   ├── TeamGuideWorkshop.tsx         # Team Guide — Workshop (raid floors & blessings)
+│   ├── ComparePage.tsx               # Side-by-side hunter comparison
+│   └── DesignSystemPage.tsx          # Design system gallery (/design-system)
 ├── components/
 │   ├── HunterProfile.tsx             # Detailed hunter profile
+│   ├── sla/                          # SLA component library (built on design tokens)
+│   │   ├── Nav.tsx                   # Navigation bar with real-time clock and version
+│   │   ├── Panel.tsx                 # Clipped-corner panel with gradient background
+│   │   ├── Badge.tsx                 # Status badges (active / pending / critical / success)
+│   │   ├── Button.tsx                # Primary and ghost buttons
+│   │   ├── ElementBadge.tsx          # Element badges and bars with icons
+│   │   ├── BackLink.tsx              # Back navigation link
+│   │   ├── Progress.tsx              # HUD progress bar
+│   │   ├── Readout.tsx               # Data readout (label + value)
+│   │   ├── SectionHeader.tsx         # Section title with decorative line
+│   │   ├── Tag.tsx                   # Tag and Label primitives
+│   │   └── Ticker.tsx                # Scrolling ticker banner
 │   ├── hunter/
 │   │   ├── HeroSection.tsx           # Header (image, stats, elements)
 │   │   ├── EquipmentSection.tsx      # Interactive armor & jewelry slots
@@ -41,6 +59,7 @@ src/
 │       ├── JinwooPanel.tsx           # Sung Jinwoo panel (weapons, equipment, cores)
 │       └── types.ts                  # Shared team types
 └── data/
+    ├── hunters.ts                    # Typed hunter registry (HunterEntry[] + findHunter)
     ├── hunters/                      # 49 JSON files — one per hunter
     ├── shadows/                      # 14 JSON files — Sung Jinwoo's shadows
     ├── artifacts/
@@ -66,6 +85,11 @@ public/assets/
 ```
 
 ## Features
+
+### Design System
+- **SLA Emberfall design tokens** — palette, typographie, espacement, effets glow, animations, définis dans `sla-tokens.css`
+- **Bibliothèque de composants** — `Nav`, `Panel`, `Badge`, `Button`, `ElementBadge`, `Progress`, `Readout`, `SectionHeader`, `Tag`, `Ticker`, `BackLink`
+- **Page Design System** (`/design-system`) — galerie interactive de toutes les couleurs, composants et tokens
 
 ### Hunter Guides
 - Base stats, elements, and rarity

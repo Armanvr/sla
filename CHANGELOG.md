@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [3.0.0] — 2026-04-30
+
+### Added
+- **SLA Design System** — nouveau système de design complet (`src/styles/sla-tokens.css` + `src/styles/sla-elements.css`)
+  - Tokens de couleur, typographie, espacement, bordures, ombres/glow et animations
+  - Thème "Emberfall" : palette redéfinie (ember → bleu acier `#6b9ac4`, amber → violet `#4c2c72`, border-bright → `#77b6ea`)
+- **Bibliothèque de composants SLA** (`src/components/sla/`) — 11 composants Preact réutilisables construits sur les tokens :
+  - `Nav` — barre de navigation unifiée avec horloge temps réel et version
+  - `Panel` — conteneur avec coins coupés et fond dégradé
+  - `Badge` — badges de statut (active, pending, critical, success)
+  - `Button` / `ButtonLink` — boutons primaires et ghost
+  - `ElementBadge` / `ElementBar` — badges et barres d'éléments avec icônes
+  - `BackLink`, `Progress`, `Readout`, `SectionHeader`, `Tag`, `Ticker`
+- **Page Design System** — route `/design-system` : galerie interactive de toutes les couleurs, typographies et composants
+- **Router centralisé** (`src/router.tsx`) — `AppRouter` avec `Nav` intégré, scroll-to-top automatique, et page 404 dédiée
+- **Registre des chasseurs** (`src/data/hunters.ts`) — `HunterEntry[]` typé avec helper `findHunter()`
+
+### Changed
+- Toutes les pages et composants migrés vers les composants SLA (remplace les classes Tailwind utilitaires inline)
+- `HomePage` — suppression des `elementColors` / `elementAccent` / `elementHeading` hardcodés ; utilisation de `ElementBadge`, `Panel`, `SectionHeader`, `Ticker`
+- `HunterProfile` et guides d'équipe refactorisés pour utiliser `Panel`, `Badge`, `SectionHeader`, `BackLink`
+- `src/index.css` — couleurs `@theme` Tailwind synchronisées avec les tokens du design system
+- Navigation extraite de `app.tsx` vers le composant `Nav` dédié
+
 ## [2.0.0] — 2026-04-16
 
 ### Added

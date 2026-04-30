@@ -2,6 +2,8 @@ import type { ComponentChildren } from 'preact'
 import { useMemo, useRef, useState } from 'preact/hooks'
 import { ARMOR_SLOTS, CORE_SLOTS, JEWELRY_SLOTS } from '../components/hunter/constants'
 import type { CoreStats, EquipmentStats } from '../components/hunter/types'
+import { BackLink } from '../components/sla/BackLink'
+import { SectionHeader } from '../components/sla/SectionHeader'
 import type { Hunter } from '../components/team/types'
 
 // ─── Stat pools ───────────────────────────────────────────────────────────────
@@ -537,7 +539,7 @@ function CoreCompare({
 
 // ─── Main page ────────────────────────────────────────────────────────────────
 
-export function ComparePage({ hunters, onBack }: { hunters: Hunter[]; onBack: () => void }) {
+export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 	const [selectedId, setSelectedId] = useState<string | null>(null)
 	const [userEquip, setUserEquip] = useState<Record<string, UserEquipSlot>>({})
 	const [userCore, setUserCore] = useState<Record<string, UserCoreSlot>>({})
@@ -625,22 +627,17 @@ export function ComparePage({ hunters, onBack }: { hunters: Hunter[]; onBack: ()
 					: 'Build à améliorer'
 
 	return (
-		<div class='min-h-screen bg-zinc-900 text-zinc-100'>
-			<header class='sticky top-0 z-10 border-b border-zinc-800 bg-zinc-900/80 backdrop-blur px-6 py-4 flex items-center gap-4'>
-				<button type='button' onClick={onBack} class='text-zinc-400 hover:text-zinc-100 transition-colors'>
-					← Retour
-				</button>
-				<button
-					type='button'
-					onClick={onBack}
-					class='text-xl font-bold tracking-wide hover:opacity-80 transition-opacity'
-				>
-					SLA <span class='text-purple-400'>Guide</span>
-				</button>
-				<span class='text-sm text-zinc-500'>— Compare</span>
-			</header>
+		<div class='sla-container' style={{ paddingTop: 32, paddingBottom: 64, maxWidth: 1024 }}>
+			<BackLink />
+			<div style={{ marginTop: 24 }}>
+				<SectionHeader
+					tag='// COMPARE'
+					title='Optimiseur de build'
+					description='Compare ton équipement à la build recommandée.'
+				/>
+			</div>
 
-			<main class='max-w-5xl mx-auto px-4 py-8 space-y-4'>
+			<main style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
 				{/* ── Selector ── */}
 				<div class='relative z-20'>
 					<HunterSearchSelect hunters={sortedHunters} selectedId={selectedId} onSelect={handleHunterSelect} />

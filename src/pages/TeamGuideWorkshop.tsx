@@ -1,4 +1,5 @@
 import { useState } from 'preact/hooks'
+import { BackLink } from '../components/sla/BackLink'
 import { HunterSlot } from '../components/team/HunterSlot'
 import { JinwooPanel } from '../components/team/JinwooPanel'
 import { ShadowSlot } from '../components/team/ShadowSlot'
@@ -150,13 +151,21 @@ function BossCard({ boss }: { boss: BossConfig }) {
 			{(hasWeaknesses || hasResistances) && (
 				<div class='flex border-t border-zinc-700/40'>
 					{hasWeaknesses && (
-						<div class={`flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40 ${hasResistances ? 'border-r border-zinc-700/40' : ''}`}>
-							<span class='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>Faiblesses</span>
+						<div
+							class={`flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40 ${hasResistances ? 'border-r border-zinc-700/40' : ''}`}
+						>
+							<span class='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>
+								Faiblesses
+							</span>
 							<div class='flex gap-2 flex-wrap justify-center'>
 								{boss.weaknesses.map((el) =>
 									ELEMENT_ICON[el] ? (
 										<div key={el} class='flex flex-col items-center gap-1'>
-											<img src={ELEMENT_ICON[el]} alt={el} class='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]' />
+											<img
+												src={ELEMENT_ICON[el]}
+												alt={el}
+												class='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
+											/>
 											<span class='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
 										</div>
 									) : null,
@@ -166,12 +175,18 @@ function BossCard({ boss }: { boss: BossConfig }) {
 					)}
 					{hasResistances && (
 						<div class='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-red-950/40'>
-							<span class='text-[11px] font-bold text-red-400 uppercase tracking-widest'>Résistances</span>
+							<span class='text-[11px] font-bold text-red-400 uppercase tracking-widest'>
+								Résistances
+							</span>
 							<div class='flex gap-2 flex-wrap justify-center'>
 								{boss.resistances.map((el) =>
 									ELEMENT_RESISTANCE_ICON[el] ? (
 										<div key={el} class='flex flex-col items-center gap-1'>
-											<img src={ELEMENT_RESISTANCE_ICON[el]} alt={el} class='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(248,113,113,0.5)]' />
+											<img
+												src={ELEMENT_RESISTANCE_ICON[el]}
+												alt={el}
+												class='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(248,113,113,0.5)]'
+											/>
 											<span class='text-[9px] text-red-300/80 font-medium'>{el}</span>
 										</div>
 									) : null,
@@ -187,15 +202,7 @@ function BossCard({ boss }: { boss: BossConfig }) {
 
 // ── Main Page ──────────────────────────────────────────────────────────────────
 
-export function TeamGuideWorkshop({
-	hunters,
-	raidName,
-	onBack,
-}: {
-	hunters: Hunter[]
-	raidName: string
-	onBack: () => void
-}) {
+export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; raidName: string }) {
 	const raids = (workshopConfig as { raids: RaidConfig[] }).raids
 	const raid = raids.find((r) => r.name === raidName) ?? raids[0]
 
@@ -347,7 +354,7 @@ export function TeamGuideWorkshop({
 
 	const sectionLabels = raid.sections.map((s) => formatLabel(s.name))
 
-	const floorLabels = section.floors.map((f, i) => f.name.trim() ? f.name.trim() : `Étage ${i + 1}`)
+	const floorLabels = section.floors.map((f, i) => (f.name.trim() ? f.name.trim() : `Étage ${i + 1}`))
 	const blessingLabels = blessings.map((b, i) => `Béné. ${i + 1} — ${b.bosses.name}`)
 
 	const teamLabels = teamGroups.map((g) => g.team)
@@ -355,27 +362,26 @@ export function TeamGuideWorkshop({
 	// ── Render ────────────────────────────────────────────────────────────────
 
 	return (
-		<div class='min-h-screen bg-zinc-900 text-zinc-100'>
-			<header class='sticky top-0 z-10 border-b border-zinc-800 bg-zinc-900/80 backdrop-blur px-6 py-4 flex items-center gap-4'>
-				<button type='button' onClick={onBack} class='text-zinc-400 hover:text-zinc-100 transition-colors'>
-					← Retour
-				</button>
-				<div class='flex items-center gap-3'>
-					<img
-						src={`/assets/workshop/${raid.name}/${raid.icon}.png`}
-						alt={raidLabel}
-						class='w-7 h-7 object-contain'
-						onError={(e) => {
-							;(e.target as HTMLImageElement).style.display = 'none'
-						}}
-					/>
-					<h1 class='text-lg font-bold'>
-						Workshop — <span class='text-orange-400'>{raidLabel}</span>
+		<div class='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
+			<BackLink />
+			<div style={{ marginTop: 24, display: 'flex', alignItems: 'center', gap: 16, marginBottom: 32 }}>
+				<img
+					src={`/assets/workshop/${raid.name}/${raid.icon}.png`}
+					alt={raidLabel}
+					style={{ width: 48, height: 48, objectFit: 'contain' }}
+					onError={(e) => {
+						;(e.target as HTMLImageElement).style.display = 'none'
+					}}
+				/>
+				<div>
+					<div class='sla-tag'>{'// WORKSHOP'}</div>
+					<h1 class='sla-title-section sla-text-glow' style={{ marginTop: 4 }}>
+						{raidLabel}
 					</h1>
 				</div>
-			</header>
+			</div>
 
-			<main class='max-w-6xl mx-auto px-4 py-6 space-y-5'>
+			<main style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
 				{/* Section tabs */}
 				<Tabs labels={sectionLabels} active={activeSectionIdx} onSwitch={switchSection} color='orange' />
 
@@ -405,7 +411,9 @@ export function TeamGuideWorkshop({
 						{/* Blessing tabs */}
 						{blessingLabels.length > 0 && (
 							<div class='space-y-2'>
-								<p class='text-[11px] font-bold text-amber-400/80 uppercase tracking-widest'>Bénédictions</p>
+								<p class='text-[11px] font-bold text-amber-400/80 uppercase tracking-widest'>
+									Bénédictions
+								</p>
 								<Tabs
 									labels={blessingLabels}
 									active={viewType === 'blessing' ? activeBlessingIdx : -1}

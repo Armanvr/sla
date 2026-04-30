@@ -1,14 +1,20 @@
 import { CollapsibleSection } from './hunter/CollapsibleSection'
 import { CoresSection } from './hunter/CoresSection'
-import { rarityColors } from './hunter/constants'
 import { EquipmentSection } from './hunter/EquipmentSection'
 import { HeroSection, StatBar } from './hunter/HeroSection'
 import { SkillsSection } from './hunter/SkillsSection'
 import type { HunterData } from './hunter/types'
+import { BackLink } from './sla/BackLink'
 
 export type { HunterData }
 
-export function HunterProfile({ data, onBack }: { data: HunterData; onBack?: () => void }) {
+const rarityVariant: Record<string, string> = {
+	SSR: 'sla-rarity sla-rarity-ssr',
+	SR: 'sla-rarity sla-rarity-sr',
+	R: 'sla-rarity sla-rarity-r',
+}
+
+export function HunterProfile({ data }: { data: HunterData }) {
 	const hasDetailedStats = !!data.baseStats
 	const maxStat = hasDetailedStats
 		? Math.max(
@@ -19,35 +25,17 @@ export function HunterProfile({ data, onBack }: { data: HunterData; onBack?: () 
 		: 0
 
 	return (
-		<div class='min-h-screen bg-zinc-900 text-zinc-100'>
-			<header class='sticky top-0 z-10 border-b border-zinc-800 bg-zinc-900/80 backdrop-blur px-6 py-4 flex items-center gap-4'>
-				{onBack && (
-					<button
-						type='button'
-						onClick={onBack}
-						class='text-zinc-400 hover:text-zinc-100 transition-colors'
-						aria-label='Back'
-					>
-						← Back
-					</button>
-				)}
-				<button
-					type='button'
-					onClick={onBack}
-					class={`text-xl font-bold tracking-wide ${onBack ? 'hover:opacity-80 transition-opacity cursor-pointer' : ''}`}
-				>
-					SLA <span class='text-purple-400'>Guide</span>
-				</button>
-				{data.rarity && (
-					<span
-						class={`ml-auto text-sm font-bold border px-2 py-0.5 rounded ${rarityColors[data.rarity] ?? 'text-zinc-400 border-zinc-600'}`}
-					>
+		<div class='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
+			<div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 24 }}>
+				<BackLink />
+				{data.rarity && rarityVariant[data.rarity] && (
+					<span class={rarityVariant[data.rarity]} style={{ marginLeft: 'auto' }}>
 						{data.rarity}
 					</span>
 				)}
-			</header>
+			</div>
 
-			<main class='max-w-6xl mx-auto px-4 py-8 flex flex-col gap-8'>
+			<main class='flex flex-col gap-8'>
 				<HeroSection data={data} />
 
 				{hasDetailedStats && (

@@ -1,0 +1,530 @@
+/*
+ * ═══════════════════════════════════════════════════════════════
+ *  SLA EMBERFALL — DESIGN TOKENS v1.0
+ *  À importer en premier dans votre projet :
+ *  @import url('./sla-tokens.css');
+ * ═══════════════════════════════════════════════════════════════
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600&display=swap");
+
+/* ── COULEURS ────────────────────────────────────────────────── */
+:root {
+	/* Fonds */
+	--sla-bg-deep: #070508; /* fond principal, le plus sombre */
+	--sla-bg-mid: #0e0b10; /* fond secondaire */
+	--sla-bg-panel: #120d15; /* fond des panneaux/cartes */
+
+	/* Ember (accent principal) */
+	--sla-ember: #6b9ac4; /* couleur principale */
+	--sla-ember-dim: #4059ad; /* variante sombre */
+	--sla-ember-glow: #d9fff5; /* variante lumineuse / hover */
+
+	/* Danger */
+	--sla-crimson: #c0192a; /* rouge critique / alerte */
+
+	/* Ambre */
+	--sla-amber: #4c2c72; /* highlight secondaire */
+
+	/* Texte */
+	--sla-text-primary: #f0e8dc; /* texte principal */
+	--sla-text-secondary: #9a8a78; /* texte secondaire / labels */
+	--sla-text-dim: #4a3f35; /* texte très atténué */
+
+	/* Bordures */
+	--sla-border: #2a1f18; /* bordure par défaut */
+	--sla-border-bright: #77b6ea; /* bordure active / hover */
+
+	/* ── TYPOGRAPHIE ─────────────────────────────────────────── */
+
+	--sla-font-hud: "Orbitron", monospace; /* titres, labels HUD */
+	--sla-font-mono: "Share Tech Mono", monospace; /* codes, données, identifiants */
+	--sla-font-body: "Rajdhani", sans-serif; /* texte courant */
+
+	/* Tailles */
+	--sla-text-xs: 9px;
+	--sla-text-sm: 11px;
+	--sla-text-base: 14px;
+	--sla-text-md: 16px;
+	--sla-text-lg: 20px;
+	--sla-text-xl: 28px;
+	--sla-text-2xl: 40px;
+	--sla-text-hero: clamp(52px, 8vw, 110px);
+
+	/* Espacements lettres courants */
+	--sla-ls-tight: 0.02em;
+	--sla-ls-normal: 0.05em;
+	--sla-ls-wide: 0.1em;
+	--sla-ls-wider: 0.2em;
+	--sla-ls-widest: 0.4em;
+
+	/* ── ESPACEMENT ──────────────────────────────────────────── */
+
+	--sla-space-1: 4px;
+	--sla-space-2: 8px;
+	--sla-space-3: 12px;
+	--sla-space-4: 16px;
+	--sla-space-5: 20px;
+	--sla-space-6: 24px;
+	--sla-space-8: 32px;
+	--sla-space-10: 40px;
+	--sla-space-12: 48px;
+	--sla-space-16: 64px;
+	--sla-space-20: 80px;
+	--sla-space-24: 96px;
+
+	/* ── BORDURES / ANGLES ───────────────────────────────────── */
+
+	/* clip-path angulaires (couper coin) */
+	--sla-cut-sm: 6px;
+	--sla-cut-md: 10px;
+	--sla-cut-lg: 16px;
+
+	/* Épaisseur bordures */
+	--sla-border-width: 1px;
+	--sla-border-accent-width: 3px;
+
+	/* ── OMBRES / GLOW ───────────────────────────────────────── */
+
+	--sla-glow-sm: 0 0 10px rgba(107, 154, 196, 0.3);
+	--sla-glow-md: 0 0 20px rgba(107, 154, 196, 0.4), 0 0 40px rgba(107, 154, 196, 0.15);
+	--sla-glow-lg: 0 0 30px rgba(107, 154, 196, 0.5), 0 0 60px rgba(107, 154, 196, 0.2);
+
+	--sla-glow-text-sm: 0 0 10px rgba(107, 154, 196, 0.5);
+	--sla-glow-text-md: 0 0 20px rgba(107, 154, 196, 0.6), 0 0 40px rgba(107, 154, 196, 0.3);
+
+	/* ── ANIMATIONS ──────────────────────────────────────────── */
+
+	--sla-duration-fast: 150ms;
+	--sla-duration-base: 200ms;
+	--sla-duration-slow: 400ms;
+	--sla-ease-default: ease;
+
+	/* ── Z-INDEX ─────────────────────────────────────────────── */
+
+	--sla-z-base: 1;
+	--sla-z-panel: 10;
+	--sla-z-nav: 100;
+	--sla-z-overlay: 200;
+	--sla-z-scanline: 9998;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+ *  COMPOSANTS UTILITAIRES
+ * ═══════════════════════════════════════════════════════════════ */
+
+/* ── BASE ────────────────────────────────────────────────────── */
+.sla-reset *,
+.sla-reset *::before,
+.sla-reset *::after {
+	box-sizing: border-box;
+}
+.sla-body {
+	background: var(--sla-bg-deep);
+	color: var(--sla-text-primary);
+	font-family: var(--sla-font-body);
+	font-size: var(--sla-text-md);
+	line-height: 1.6;
+}
+
+/* ── SCROLLBAR ───────────────────────────────────────────────── */
+.sla-body ::-webkit-scrollbar {
+	width: 4px;
+}
+.sla-body ::-webkit-scrollbar-track {
+	background: var(--sla-bg-deep);
+}
+.sla-body ::-webkit-scrollbar-thumb {
+	background: var(--sla-ember-dim);
+}
+
+/* ── SCANLINES OVERLAY ───────────────────────────────────────── */
+.sla-scanlines::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 2px,
+		rgba(107, 154, 196, 0.025) 2px,
+		rgba(107, 154, 196, 0.025) 4px
+	);
+	pointer-events: none;
+	z-index: var(--sla-z-scanline);
+}
+
+/* ── SWEEP LINE ──────────────────────────────────────────────── */
+.sla-sweep-line {
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, rgba(107, 154, 196, 0.4), transparent);
+	pointer-events: none;
+	z-index: calc(var(--sla-z-scanline) - 2);
+	animation: sla-scan-sweep 8s ease-in-out infinite;
+}
+
+/* ── GRID BACKGROUND ─────────────────────────────────────────── */
+.sla-grid-bg {
+	background-image:
+		linear-gradient(rgba(107, 154, 196, 0.04) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(107, 154, 196, 0.04) 1px, transparent 1px);
+	background-size: 60px 60px;
+}
+
+/* ── PANEL ───────────────────────────────────────────────────── */
+.sla-panel {
+	position: relative;
+	background: linear-gradient(135deg, rgba(18, 13, 21, 0.95) 0%, rgba(14, 11, 16, 0.95) 100%);
+	border: var(--sla-border-width) solid var(--sla-border-bright);
+	clip-path: polygon(
+		0 0,
+		calc(100% - var(--sla-cut-lg)) 0,
+		100% var(--sla-cut-lg),
+		100% 100%,
+		var(--sla-cut-lg) 100%,
+		0 calc(100% - var(--sla-cut-lg))
+	);
+}
+.sla-panel::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	clip-path: inherit;
+	background: linear-gradient(135deg, rgba(107, 154, 196, 0.04) 0%, transparent 50%);
+	pointer-events: none;
+}
+
+/* ── HUD CORNERS ─────────────────────────────────────────────── */
+.sla-corners {
+	position: relative;
+}
+.sla-corners::before,
+.sla-corners::after,
+.sla-corners > .sla-corner-bl,
+.sla-corners > .sla-corner-br {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-color: var(--sla-ember);
+	border-style: solid;
+}
+.sla-corners::before {
+	top: -1px;
+	left: -1px;
+	border-width: 2px 0 0 2px;
+}
+.sla-corners::after {
+	top: -1px;
+	right: -1px;
+	border-width: 2px 2px 0 0;
+}
+.sla-corners > .sla-corner-bl {
+	bottom: -1px;
+	left: -1px;
+	border-width: 0 0 2px 2px;
+}
+.sla-corners > .sla-corner-br {
+	bottom: -1px;
+	right: -1px;
+	border-width: 0 2px 2px 0;
+}
+
+/* ── BUTTONS ─────────────────────────────────────────────────── */
+.sla-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--sla-space-2);
+	padding: 14px 32px;
+	font-family: var(--sla-font-hud);
+	font-size: var(--sla-text-sm);
+	font-weight: 700;
+	letter-spacing: var(--sla-ls-wider);
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	transition: all var(--sla-duration-base);
+	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+.sla-btn-primary {
+	background: var(--sla-ember);
+	color: #0a0000;
+}
+.sla-btn-primary:hover {
+	background: var(--sla-ember-glow);
+	box-shadow: var(--sla-glow-lg);
+	transform: translateY(-1px);
+}
+.sla-btn-ghost {
+	background: transparent;
+	color: var(--sla-ember);
+	border: var(--sla-border-width) solid var(--sla-ember-dim);
+}
+.sla-btn-ghost:hover {
+	background: rgba(107, 154, 196, 0.08);
+	border-color: var(--sla-ember);
+	box-shadow: var(--sla-glow-md);
+	transform: translateY(-1px);
+}
+
+/* ── TYPOGRAPHY ──────────────────────────────────────────────── */
+.sla-title-hero {
+	font-family: var(--sla-font-hud);
+	font-weight: 900;
+	font-size: var(--sla-text-hero);
+	line-height: 0.9;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	color: var(--sla-text-primary);
+}
+.sla-title-section {
+	font-family: var(--sla-font-hud);
+	font-size: clamp(24px, 3vw, 36px);
+	font-weight: 700;
+	letter-spacing: var(--sla-ls-normal);
+	text-transform: uppercase;
+	color: var(--sla-text-primary);
+}
+.sla-label {
+	font-family: var(--sla-font-mono);
+	font-size: var(--sla-text-xs);
+	letter-spacing: var(--sla-ls-wider);
+	color: var(--sla-text-dim);
+	text-transform: uppercase;
+}
+.sla-tag {
+	font-family: var(--sla-font-mono);
+	font-size: var(--sla-text-xs);
+	letter-spacing: var(--sla-ls-wide);
+	color: var(--sla-ember);
+	text-transform: uppercase;
+	border: var(--sla-border-width) solid var(--sla-ember-dim);
+	padding: 4px 12px;
+	clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
+}
+.sla-text-ember {
+	color: var(--sla-ember);
+	animation: sla-ember-flicker 4s ease-in-out infinite;
+}
+.sla-text-glow {
+	text-shadow: var(--sla-glow-text-md);
+}
+
+/* ── STATUS BADGES ───────────────────────────────────────────── */
+.sla-badge {
+	display: inline-block;
+	font-family: var(--sla-font-mono);
+	font-size: var(--sla-text-xs);
+	letter-spacing: var(--sla-ls-wider);
+	text-transform: uppercase;
+	padding: 3px 10px;
+	border: var(--sla-border-width) solid currentColor;
+	clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%);
+}
+.sla-badge-active {
+	color: var(--sla-ember);
+}
+.sla-badge-pending {
+	color: var(--sla-text-dim);
+}
+.sla-badge-critical {
+	color: var(--sla-crimson);
+	animation: sla-pulse 1.5s ease-in-out infinite;
+}
+.sla-badge-success {
+	color: #3a8a4a;
+}
+
+/* ── PROGRESS BAR ────────────────────────────────────────────── */
+.sla-progress {
+	height: 3px;
+	background: var(--sla-border);
+	position: relative;
+	overflow: hidden;
+}
+.sla-progress-fill {
+	height: 100%;
+	background: linear-gradient(90deg, var(--sla-ember-dim), var(--sla-ember));
+	position: relative;
+	transition: width 0.6s ease;
+}
+.sla-progress-fill::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 10px;
+	background: var(--sla-ember-glow);
+	filter: blur(3px);
+	animation: sla-pulse 2s ease-in-out infinite;
+}
+
+/* ── DATA READOUT ────────────────────────────────────────────── */
+.sla-readout {
+	padding: var(--sla-space-3) var(--sla-space-5);
+	background: rgba(18, 13, 21, 0.8);
+	border: var(--sla-border-width) solid var(--sla-border-bright);
+	border-left: var(--sla-border-accent-width) solid var(--sla-ember-dim);
+}
+.sla-readout-label {
+	font-family: var(--sla-font-mono);
+	font-size: var(--sla-text-xs);
+	letter-spacing: var(--sla-ls-wider);
+	color: var(--sla-text-dim);
+	text-transform: uppercase;
+	margin-bottom: 4px;
+}
+.sla-readout-value {
+	font-family: var(--sla-font-hud);
+	font-size: var(--sla-text-base);
+	font-weight: 700;
+	color: var(--sla-text-primary);
+	letter-spacing: var(--sla-ls-normal);
+}
+
+/* ── DIVIDER ─────────────────────────────────────────────────── */
+.sla-divider {
+	height: 1px;
+	background: linear-gradient(90deg, var(--sla-border-bright), transparent);
+	border: none;
+}
+.sla-divider-center {
+	background: linear-gradient(90deg, transparent, var(--sla-ember-dim), transparent);
+}
+
+/* ── TICKER ──────────────────────────────────────────────────── */
+.sla-ticker {
+	position: relative;
+	overflow: hidden;
+	height: 36px;
+	background: rgba(107, 154, 196, 0.05);
+	border-top: var(--sla-border-width) solid rgba(107, 154, 196, 0.15);
+	border-bottom: var(--sla-border-width) solid rgba(107, 154, 196, 0.15);
+	display: flex;
+	align-items: center;
+}
+.sla-ticker-label {
+	position: absolute;
+	left: 0;
+	padding: 0 24px 0 16px;
+	background: var(--sla-ember);
+	color: #000;
+	font-family: var(--sla-font-mono);
+	font-size: var(--sla-text-xs);
+	letter-spacing: var(--sla-ls-wider);
+	text-transform: uppercase;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	z-index: 2;
+	clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+}
+.sla-ticker-content {
+	display: flex;
+	gap: 80px;
+	padding-left: 120px;
+	white-space: nowrap;
+	font-family: var(--sla-font-mono);
+	font-size: var(--sla-text-xs);
+	color: var(--sla-text-secondary);
+	letter-spacing: var(--sla-ls-wide);
+	animation: sla-ticker-scroll 40s linear infinite;
+}
+
+/* ── KEYFRAMES ───────────────────────────────────────────────── */
+@keyframes sla-pulse {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+}
+@keyframes sla-ember-flicker {
+	0%,
+	100% {
+		text-shadow:
+			0 0 20px rgba(107, 154, 196, 0.5),
+			0 0 40px rgba(107, 154, 196, 0.25);
+	}
+	33% {
+		text-shadow:
+			0 0 30px rgba(107, 154, 196, 0.7),
+			0 0 60px rgba(107, 154, 196, 0.4);
+	}
+	66% {
+		text-shadow:
+			0 0 15px rgba(107, 154, 196, 0.4),
+			0 0 30px rgba(107, 154, 196, 0.2);
+	}
+}
+@keyframes sla-scan-sweep {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(100vh);
+		opacity: 0;
+	}
+}
+@keyframes sla-hud-in {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes sla-ticker-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+@keyframes sla-ember-rise {
+	0% {
+		transform: translateY(100%) scale(0.8);
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-20px) scale(1);
+		opacity: 0;
+	}
+}
+
+/* ── ENTRANCE ANIMATIONS ─────────────────────────────────────── */
+.sla-anim-in {
+	animation: sla-hud-in 0.6s ease both;
+}
+.sla-anim-in-1 {
+	animation: sla-hud-in 0.6s 0.1s ease both;
+}
+.sla-anim-in-2 {
+	animation: sla-hud-in 0.6s 0.2s ease both;
+}
+.sla-anim-in-3 {
+	animation: sla-hud-in 0.6s 0.3s ease both;
+}
+.sla-anim-in-4 {
+	animation: sla-hud-in 0.6s 0.4s ease both;
+}

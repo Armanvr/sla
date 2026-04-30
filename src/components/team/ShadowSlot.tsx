@@ -42,7 +42,11 @@ export function ShadowSlot({
 								/>
 							) : (
 								<div class='w-20 h-20 rounded-xl bg-purple-900/20 border border-purple-700/30 flex items-center justify-center'>
-									<img src='/assets/utils/Hunter_Icon.png' alt='' class='w-10 h-10 object-contain opacity-40' />
+									<img
+										src='/assets/utils/Hunter_Icon.png'
+										alt=''
+										class='w-10 h-10 object-contain opacity-40'
+									/>
 								</div>
 							)}
 							<div>
@@ -66,7 +70,11 @@ export function ShadowSlot({
 					) : (
 						<>
 							<div class='w-20 h-20 rounded-xl bg-purple-900/10 border border-dashed border-purple-800/40 flex items-center justify-center'>
-								<img src='/assets/utils/Hunter_Icon.png' alt='' class='w-10 h-10 object-contain opacity-30' />
+								<img
+									src='/assets/utils/Hunter_Icon.png'
+									alt=''
+									class='w-10 h-10 object-contain opacity-30'
+								/>
 							</div>
 							<p class='text-xs text-zinc-500'>Ombre {slot}</p>
 						</>
@@ -119,7 +127,11 @@ export function ShadowSlot({
 									/>
 								) : (
 									<div class='w-8 h-8 rounded-lg bg-purple-900/20 flex items-center justify-center flex-shrink-0'>
-										<img src='/assets/utils/Hunter_Icon.png' alt='' class='w-5 h-5 object-contain opacity-40' />
+										<img
+											src='/assets/utils/Hunter_Icon.png'
+											alt=''
+											class='w-5 h-5 object-contain opacity-40'
+										/>
 									</div>
 								)}
 								<div class='text-left min-w-0'>

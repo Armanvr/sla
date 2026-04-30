@@ -1,7 +1,7 @@
 {
 	"name": "sla",
 	"private": true,
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Interactive guide for Solo Leveling: ARISE",
 	"type": "module",
 	"scripts": {
@@ -15,12 +15,13 @@
 		"preact": "^10.29.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.12",
+		"@biomejs/biome": "^2.4.13",
 		"@preact/preset-vite": "^2.10.5",
-		"@tailwindcss/vite": "^4.2.2",
+		"@tailwindcss/vite": "^4.2.4",
 		"@types/node": "^25.6.0",
-		"tailwindcss": "^4.2.2",
-		"typescript": "^6.0.2",
-		"vite": "^8.0.0"
+		"preact-iso": "^2.11.1",
+		"tailwindcss": "^4.2.4",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.10"
 	}
 }
