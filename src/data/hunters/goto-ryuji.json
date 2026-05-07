@@ -12,6 +12,7 @@
 	"mainAbility": "Mana-powered sword wielding",
 	"exclusiveWeapon": "Distorted Dreams",
 	"releaseDate": "2025-03-13",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Blade Guild"],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Shiver Storm",
-				"description": "Goto attacks enemies with movements as imperceptible as a slight shiver. Deals Wind elemental damage and inflicts Airborne.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": ""
-					},
-					{
-						"stage": 2,
-						"damage": ""
-					},
-					{
-						"stage": 3,
-						"damage": ""
-					}
-				],
-				"icon": "/assets/hunters/Goto_Ryuji/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Death Gale",
-				"description": "Charges forward to strike enemies. Deals medium Break damage.",
-				"damage": "588–882% Max HP",
-				"element": "Wind",
-				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Phantom's Heavenly Hurricane",
-				"description": "Usable 6 times consecutively with 10% damage increase per use. Grants Super Armor and reduces damage taken by 30%. Triggers Exorcise effect (stacks up to 5).",
-				"damage": "",
-				"cooldown": null,
-				"mpCost": "",
-				"effects": ["Super Armor", "Damage Reduction (30%)", "Exorcise (max 5 stacks)"],
-				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Skill_1.png"
-			},
-			{
-				"name": "Reverse Tempest",
-				"description": "Large AOE attack. Grants Super Armor and boosts Phantom's Heavenly Hurricane damage by 30% for 15 seconds.",
-				"damage": "850–1275% Max HP",
-				"cooldown": null,
-				"mpCost": "",
-				"effects": ["Super Armor", "Phantom's Heavenly Hurricane +30% (15s)"],
-				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Cyclone Blade",
-				"description": "Quick draw from crouched position. Triggers Invincible King effects.",
-				"damage": "620–1274% Max HP",
-				"cooldown": null,
-				"effects": ["Invincible King"],
-				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Divine Wind",
-				"description": "Quick draw attack. Triggered by Extreme Evasion or crowd control effects.",
-				"damage": "780–1170% Max HP",
-				"cooldown": null,
-				"effects": [],
-				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Devastate Prey",
-				"description": "Goto unlocks a series of doors to a gate hidden within his spirit and unleashes demonic fury to eliminate his prey. Deals heavy Break damage.",
-				"damage": "1856–2784% Max HP",
-				"cooldown": null,
-				"powerGaugeCost": 100,
-				"effects": [],
-				"icon": "/assets/hunters/Goto_Ryuji/Goto_Ryuji_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Invincible King",
 		"description": "Basic Skill hits recover 50 MP. Critical Hit Rate increases equal to 20% of Critical Hit Damage stat. Exorcise stacking triggers Arrogance effect for Wind team members.",

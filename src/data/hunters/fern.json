@@ -12,6 +12,7 @@
 	"mainAbility": "Demon-killing Magic (Zoltraak)",
 	"exclusiveWeapon": "Fern's Staff",
 	"releaseDate": "2025-10-23",
+	"newHunter": false,
 	"occupation": ["Mage"],
 	"affiliation": ["Journey Companions"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Demon-killing Magic (Zoltraak) - Weak",
-				"description": "Three consecutive Zoltraak strikes that deal Fire elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "150–225% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "160–240% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "164–246% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Fern/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Demon-killing Magic (Zoltraak) - Balanced",
-				"description": "Fires a piercing Zoltraak that passes through enemies.",
-				"damage": "1060–1590% ATK",
-				"element": "Fire",
-				"icon": "/assets/hunters/Fern/Fern_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Demon-killing Magic (Zoltraak) - Barrage",
-				"description": "Unleashes a rapid barrage of Zoltraak shots that knock down the target.",
-				"damage": "1866–2799% ATK",
-				"cooldown": 8,
-				"mpCost": "300–396",
-				"effects": ["Knockdown"],
-				"icon": "/assets/hunters/Fern/Fern_Skill_1.png"
-			},
-			{
-				"name": "Demon-killing Magic (Zoltraak) - Rapid Fire",
-				"description": "Fires a rapid sequence of Zoltraak shots. The final hit launches the target airborne.",
-				"damage": "1962–2943% ATK",
-				"cooldown": 12,
-				"mpCost": "300–396",
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Fern/Fern_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Demon-killing Magic (Zoltraak) - Burst",
-				"description": "Releases an omnidirectional Zoltraak burst that launches nearby enemies airborne.",
-				"damage": "2282–4690% ATK",
-				"cooldown": 25,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Fern/Fern_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Demon-killing Magic (Zoltraak) - Chain Attack",
-				"description": "Follows up with a chain of Zoltraak shots, launching the target airborne.",
-				"damage": "1836–2754% ATK",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Fern/Fern_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Demon-killing Magic (Zoltraak) - Mighty",
-				"description": "Concentrates all magical power into a single massive Zoltraak blast that knocks down the target.",
-				"damage": "3566–5349% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Knockdown"],
-				"icon": "/assets/hunters/Fern/Fern_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Magical Prodigy",
 		"description": "Initiates consecutive Basic Attack stages, triggering Core Attack afterward. Grants +10% Attack (additional +10% when MP ≥50%) and -5% skill MP consumption. Also grants +30% damage to bosses and +5% Precision.",

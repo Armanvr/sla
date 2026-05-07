@@ -12,6 +12,7 @@
 	"mainAbility": "Outstanding physical ability / Ice Magic",
 	"exclusiveWeapon": "Winterbreaker",
 	"releaseDate": "2026-02-12",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Richter Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Shredding Up",
-				"description": "After slashing enemies multiple times, Meri jumps and performs a powerful downward strike.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "238-357% of Max HP"
-					},
-					{
-						"stage": 2,
-						"damage": "248-372% of Max HP"
-					},
-					{
-						"stage": 3,
-						"damage": "258-387% of Max HP"
-					}
-				],
-				"icon": "/assets/hunters/Meri_Laine/Meri_Laine_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Ascending Slam",
-				"description": "Meri leaps lightly forward to slash enemies in front with precision.",
-				"damage": "967-1450.5% of Max HP",
-				"element": "Water",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Grinding Rush",
-				"description": "Meri quickly charges forward, then performs an upward slash in an instant.",
-				"damage": "1648-2472% of Max HP",
-				"cooldown": 15,
-				"mpCost": "150-198",
-				"effects": ["Medium Elemental Accumulation", "Airborne on final hit"],
-				"icon": ""
-			},
-			{
-				"name": "Blade Sweep",
-				"description": "Meri spins to strike nearby enemies.",
-				"damage": "2262-3393% of Max HP",
-				"cooldown": 15,
-				"mpCost": "150-198",
-				"effects": ["Medium Elemental Accumulation"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Cyclone Spin",
-				"description": "Meri spins multiple times to strike nearby enemies.",
-				"damage": "1080-2220% of Max HP",
-				"cooldown": 25,
-				"effects": ["Heavy Elemental Accumulation"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Aerial Cutter",
-				"description": "Meri performs a forward aerial spin, slashing enemies multiple times.",
-				"damage": "916-1374% of Max HP",
-				"cooldown": 20,
-				"effects": ["Medium Elemental Accumulation", "Knocks Down"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Frozen Drive",
-				"description": "Meri spins her ice saw's blade at extremely high speed, summoning a blizzard and cutting down enemies with devastating force.",
-				"damage": "4884-7326% of Max HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Heavy Elemental Accumulation", "Airborne", "Freeze"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Pengqueen",
 		"description": "[Pengqueen Normal Mode] activates at the start of the stage. The user's Power Gauge cannot be charged, but if the [Pengqueen Booster] Gauge reaches 100%, their Power Gauge charges 100%, and the cooldown of Frozen Drive is reset. When Grinding Rush hits, it inflicts 1 instance of [Winter Chill] on a target. When Ascending Slam hits a target affected by [Winter Chill], it activates [Memories of Winter].",

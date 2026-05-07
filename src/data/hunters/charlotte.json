@@ -12,6 +12,7 @@
 	"mainAbility": "Dark Magic/Doll Summoning",
 	"exclusiveWeapon": "Prankster",
 	"releaseDate": "2024-09-19",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Helpers"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Meeh!",
-				"description": "Charlotte attacks using dolls and magic.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "382–573% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "395–592.5% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "410–615% DEF"
-					}
-				],
-				"icon": "/assets/hunters/Charlotte/Charlotte_Basic.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Twinkle☆",
-				"description": "Charlotte attacks with her doll, inflicting [Airborne] on hit.",
-				"damage": "1488–2232% DEF",
-				"element": "Dark",
-				"icon": "/assets/hunters/Charlotte/Charlotte_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Isla's Dance☆",
-				"description": "Charlotte throws an Isla-shaped doll that splits into three and explodes. Inflicts [Airborne] on final hit. Additional explosion damage equal to 1050% of Defense.",
-				"damage": "1524–2286% DEF",
-				"cooldown": 15,
-				"mpCost": "250–330",
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Charlotte/Charlotte_Skill_1.png"
-			},
-			{
-				"name": "Harper! Help!",
-				"description": "Charlotte rides a controllable doll and attacks. Inflicts [Airborne] on final hit.",
-				"damage": "3227–4840.5% DEF",
-				"cooldown": 15,
-				"mpCost": "250–330",
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Charlotte/Charlotte_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Tricked Ya!",
-				"description": "An Isla-shaped doll splits and explodes, dealing additional damage equal to 1050% of Defense.",
-				"damage": "1583–3253.94% DEF",
-				"cooldown": 25,
-				"effects": [],
-				"icon": "/assets/hunters/Charlotte/Charlotte_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Sparkle☆",
-				"description": "Charlotte attacks with a doll. Knocks Down on first hit; inflicts [Airborne] on final hit.",
-				"damage": "1320–1980% DEF",
-				"cooldown": 20,
-				"effects": ["Knock Down", "Airborne"],
-				"icon": "/assets/hunters/Charlotte/Charlotte_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Take This!",
-				"description": "Charlotte unleashes a powerful doll attack. Inflicts [Airborne]. Ultimate charges after 2 Tier 3 Basic Attacks (40-second cooldown) with no normal Power Gauge requirement. Using Ultimate increases Harper! Help! damage by 50% for 10 seconds.",
-				"damage": "3803–6846% DEF",
-				"cooldown": 40,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Charlotte/Charlotte_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Doll's Bond",
 		"description": "Dash becomes chargeable with directional control and grants a 20% Defense Shield while active. Ultimate charges after 2 Tier 3 Basic Attacks (40-second cooldown) without normal Power Gauge. Using Ultimate increases Harper! Help! damage by 50% for 10 seconds. Critical Hit damage increases by 20% of increased Defense stat. Team Fight mode grants 30% damage increase.",

@@ -12,6 +12,7 @@
 	"mainAbility": "Outstanding Spearmanship / Mana Spear Creation",
 	"exclusiveWeapon": "Glorious Demise",
 	"releaseDate": "2025-01-16",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Ahjin Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Radiru Spearmanship",
-				"description": "Esil swings her double-edged sword dealing Fire elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "216–324% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "225–337.5% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "237–355.5% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Esil_Radiru/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Stabbing Spikes",
-				"description": "Esil quickly leaps and then strikes down towards enemies on the ground, manifesting spikes beneath them. Knocks down targets on hit.",
-				"damage": "1200–1800% ATK",
-				"element": "Fire",
-				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Glorious Wounds",
-				"description": "Esil jumps towards the target, strikes quickly, and then hurls them upward. Applies Airborne. User gains Super Armor.",
-				"damage": "1378–2067% ATK",
-				"cooldown": 8,
-				"mpCost": "150–198",
-				"effects": ["Airborne", "Super Armor"],
-				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Skill_1.png"
-			},
-			{
-				"name": "Death's Rush",
-				"description": "After jumping and using a single slash to throw the enemy upward, Esil endows her spear with Lance power and rockets forward to quickly stab the enemy again. Applies Airborne. User gains Super Armor.",
-				"damage": "2298–3447% ATK",
-				"cooldown": 14,
-				"mpCost": "250–330",
-				"effects": ["Airborne", "Super Armor"],
-				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Support Fire",
-				"description": "Esil manifests supporting fire from her Demons' Castle allies. Activates Prey effect. Increases subsequent Radiru Family Longbow damage by 24%.",
-				"damage": "953–1958.94% ATK",
-				"cooldown": 25,
-				"effects": ["Prey"],
-				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Cascading Glory",
-				"description": "After unleashing a barrage of manifested weapons, Esil jumps between them and stabs downward. Triggers via Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Knocks down targets.",
-				"damage": "1173–1759.5% ATK",
-				"cooldown": 20,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Foretold Victory",
-				"description": "A barrage of arrows from the Demons' Castle rains down on the heads of her enemies, firing for 10 seconds.",
-				"damage": "3920–5880% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": [],
-				"icon": "/assets/hunters/Esil_Radiru/Esil_Radiru_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Lance Throw",
 		"description": "Extends Break state duration by 3s. Activates Lance Throw via Death's Rush or Extreme Evasion: deals 800% ATK, applies Prey (max 5 stacks). Enhanced Lance Throw increases damage and Break effectiveness by 160% per stack (up to 5). Prey converts to Prey on the Weak on Break: +0.3% Fire and general damage taken per stack (max 50 stacks, 60s).",

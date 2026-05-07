@@ -12,6 +12,7 @@
 	"mainAbility": "Body Enhancement / Mercury Magic",
 	"exclusiveWeapon": "The Embodiment of Obsession",
 	"releaseDate": "2026-04-09",
+	"newHunter": true,
 	"occupation": ["Hunter"],
 	"affiliation": ["The Justitia Guild"],
 	"gender": "Female",
@@ -67,90 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Danse d'Argent",
-				"description": "Elena attacks enemies in front with her mercury.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "220–330% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "240–360% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "246–369% DEF"
-					}
-				],
-				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Basic.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Trahison d'Argent",
-				"description": "Elena slashes the enemy, then moves behind her target and creates an additional mercury sword to strike again.",
-				"damage": "1096–1644% DEF",
-				"element": "Water",
-				"effects": ["Super Armor"],
-				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Piège d'Argent",
-				"description": "Elena leaps at the enemy and strikes downward, causing mercury droplets to splash upward and explode, damaging nearby enemies.",
-				"damage": "970–1455% DEF",
-				"cooldown": 8,
-				"mpCost": "150–198",
-				"effects": ["Super Armor", "Airborne on final hit"],
-				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Skill_1.png"
-			},
-			{
-				"name": "Furie d'Argent",
-				"description": "Elena quickly slashes the enemy multiple times then steps back and throws a mercury sword. Grants [Tide of Silver] to the entire team: Water damage +10%, Water Overload damage +15% (40s).",
-				"damage": "1901–2851.5% ATK",
-				"cooldown": 12,
-				"mpCost": "200–264",
-				"effects": ["Super Armor", "Tide of Silver (team)"],
-				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Triple Estoc",
-				"description": "Elena moves swiftly, stabs the enemy twice, then finishes with a powerful jab. Grants [Fatal Obsession] to the entire team: Water damage +15%, Water Overload damage +20%, Shield equal to 30% of Elena's DEF, Power Gauge +10% (30s).",
-				"damage": "767–1576.61% DEF",
-				"cooldown": 25,
-				"effects": ["Airborne on hit", "Fatal Obsession (team)"],
-				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Éclat de Folie",
-				"description": "Elena creates a mercury shield in front of herself, then detonates it to damage nearby enemies. Grants [Obsession's Grasp] to the entire team: Shield, HP recovery, and MP recovery based on Elena's DEF. Triggers via Extreme Evasion, Core Attack, Ultimate Skill, Stun, Blind, or Shadow Skill.",
-				"damage": "1015–1522.5% DEF",
-				"cooldown": 20,
-				"effects": ["Airborne on final hit", "Obsession's Grasp (team)"],
-				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Prison d'Argent",
-				"description": "Elena manifests her inner emotions as mercury, trapping enemies with the constructs before detonating them to deal damage.",
-				"damage": "3628–5442% DEF",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne on final hit"],
-				"icon": "/assets/hunters/Elena_Renault/Elena_Renault_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Mercury Arts",
 		"description": "Using Danse d'Argent activates Trahison d'Argent once. When Danse d'Argent hits, inflicts 1 instance of [Winter Chill] (100% DEF damage every 3s for 30s, stacks up to 10 times). Using Furie d'Argent grants the entire team [Tide of Silver]: Water damage +10%, Water Overload damage +15% (40s). Using Éclat de Folie grants the entire team [Obsession's Grasp]: Shield, HP restoration, and MP restoration based on Elena's DEF.",

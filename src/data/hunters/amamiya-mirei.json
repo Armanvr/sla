@@ -12,6 +12,7 @@
 	"mainAbility": "Soul-Powered Swordsmanship",
 	"exclusiveWeapon": "Bunny Bunbun",
 	"releaseDate": "2024-07-31",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Japanese Hunters Association"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Kuroha's Sword Technique Type 1: One-Winged",
-				"description": "Mirei demonstrates her swordsmanship, combining precise and continuous movements.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "202–303% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "210–315% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "225–337.5% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Basic.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Sword Technique Type 2: Dance of the Raven",
-				"description": "Mirei performs a deadly sword technique with quick and elegant movements.",
-				"damage": "920–1380% ATK",
-				"element": "Wind",
-				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Kuroha's Sword Technique Type 3: Wings of Night",
-				"description": "Mirei quickly approaches, performs a series of slashes, then distances herself from the enemy. Lastly, she delivers a deep slashing attack with eerie calm.",
-				"damage": "1550–2325% ATK",
-				"cooldown": 15,
-				"mpCost": "110–145",
-				"effects": ["Airborne", "Power Gauge +15%"],
-				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Skill_1.png"
-			},
-			{
-				"name": "Kuroha's Sword Technique Type 4: Raven's Cry",
-				"description": "Mirei soars through the air as fast as lightning and delivers a powerful final blow.",
-				"damage": "1550–2325% ATK",
-				"cooldown": 15,
-				"mpCost": "110–145",
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Kuroha's Sword Technique Type 6: Storm Raven",
-				"description": "Mirei appears with movements as fluid as a shadow and delivers a powerful final blow.",
-				"damage": "2330–4583.89% ATK",
-				"cooldown": 25,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Kuroha's Sword Technique Type 5: Shadow Waltz",
-				"description": "Mirei strikes by rotating her katana in a rapid, storm-like spiral.",
-				"damage": "920–1380% ATK",
-				"cooldown": 20,
-				"effects": ["MP Recovery 10%"],
-				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Kuroha's Sword Technique Lethal Move: Moonless Night Overture",
-				"description": "Oni Kuroha's soul takes over, completely turning the tide of battle. Applies [Possessed] effect, resets skill cooldowns, removes all debuffs from team members.",
-				"damage": "1150–1725% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Possessed", "Remove all debuffs from team"],
-				"icon": "/assets/hunters/Amamiya_Mirei/Amamiya_Mirei_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Kuroha's Darkness",
 		"description": "When the user has 30% or more of their maximum MP, applies [Kuroha's Darkness] effect. Increases Attack by 6% for every additional 150 MP (up to 90%). [Kuroha's Darkness]: Increases damage of Wings of Night and Raven's Cry by 30%.",

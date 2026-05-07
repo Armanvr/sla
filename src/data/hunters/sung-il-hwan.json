@@ -12,6 +12,7 @@
 	"mainAbility": "Outstanding Physical / Outstanding Speed",
 	"exclusiveWeapon": "Unbreakable Will",
 	"releaseDate": "2025-09-25",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": [],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Sword of Punishment",
-				"description": "Il-Hwan cuts the enemies with his dual blades, delivering a series of rapid attacks, and finishes with an extra-powerful strike. Deals Dark elemental damage. When the final hit lands it inflicts Airborne.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "233–349.5% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "250–375% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "290–435% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Sky Piercer",
-				"description": "Il-Hwan rushes forward and strikes upward with his leg. Deals Dark elemental damage. When this skill hits it inflicts Airborne.",
-				"damage": "1130–1695% ATK",
-				"element": "Dark",
-				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Phantom Slash",
-				"description": "Il-Hwan charges behind the target, delivers a series of slashes, and finishes the motion with a powerful strike. Deals Dark elemental damage. When the first attack lands it inflicts Airborne. When the final hit lands it Knocks Down the target.",
-				"damage": "751–1126.5% / 827–1240.5% / 902–1353% ATK",
-				"cooldown": 15,
-				"mpCost": "350–462 / 280–369 / 200–264",
-				"effects": ["Airborne", "Knock Down"],
-				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Skill_1.png"
-			},
-			{
-				"name": "Wrath of Condemnation",
-				"description": "Il-Hwan charges up while the Skill button is held down, then strikes downward with a massive spectral palm, creating a shockwave. Deals Dark elemental damage. When the first attack hits it Knocks Down the target. When the final hit lands it inflicts Airborne.",
-				"damage": "1246–1869% ATK",
-				"cooldown": 15,
-				"mpCost": "300–396",
-				"effects": ["Knock Down", "Airborne"],
-				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Death Strike",
-				"description": "Il-Hwan strikes downward with a massive spectral palm, creating a shockwave. Deals Dark elemental damage. When the first attack hits it Knocks Down the target. When the final hit lands it inflicts Airborne.",
-				"damage": "3578–7354.78% ATK",
-				"cooldown": 25,
-				"effects": ["Knock Down", "Airborne"],
-				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Dark Finale",
-				"description": "Il-Hwan swiftly weaves through enemies to strike. Deals Dark elemental damage. Triggers via Extreme Evasion, Core Attack, Ultimate Skill, Stun, Blind, or Shadow Skill. When the final hit lands it inflicts Airborne.",
-				"damage": "2290–3435% ATK",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Apocalyptic Might",
-				"description": "Il-Hwan unleashes a series of slashes and finishes with a brutal finishing strike. Deals Dark elemental damage. When the final hit lands it inflicts Airborne.",
-				"damage": "2838–4257% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Sung_Il-Hwan/Sung_Il-Hwan_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Ruler's Scale",
 		"description": "When Phantom Slash hits, activates [Ruler's Scale] effect (Wrath of Condemnation damage +1% per stack up to 160, removed upon use). MP cannot be recovered naturally or by Basic Attack/Core Attack. Using Apocalyptic Might restores MP equal to 14% of current MP proportional to [Ruler's Upgrade] stacks, then all stacks are removed. Using Phantom Slash or Wrath of Condemnation activates [Ruler's Upgrade] (Basic Skill damage +5%, Ultimate Skill damage +25%, infinite, stacks up to 7). When team members excluding Il-Hwan use Basic Skill, he recovers 2% MP and 1% Power Gauge.",

@@ -12,6 +12,7 @@
 	"mainAbility": "Outstanding Physical Ability / Advanced Sword & Shield Techniques",
 	"exclusiveWeapon": "Iron Resolve",
 	"releaseDate": "2026-01-15",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Hunters Guild"],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Valiant Sword Strike",
-				"description": "Kihoon attacks enemies in front of him using his sword and shield.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "246-369% of Max HP"
-					},
-					{
-						"stage": 2,
-						"damage": "260-390% of Max HP"
-					},
-					{
-						"stage": 3,
-						"damage": "274-411% of Max HP"
-					}
-				],
-				"icon": "/assets/hunters/Son_Kihoon/Son_Kihoon_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Drive",
-				"description": "Kihoon swings his shield forward to attack enemies.",
-				"damage": "870-1305% of Max HP",
-				"element": "Dark",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Flag of Authority",
-				"description": "Kihoon summons a flag in the air and drives it into the ground with great force.",
-				"damage": "2688-4032% of Max HP",
-				"cooldown": 15,
-				"mpCost": "75-99",
-				"effects": ["Medium Break", "Knocks Down", "Weakened Fighting Spirit Zone for 30s"],
-				"icon": ""
-			},
-			{
-				"name": "Fierce Charge",
-				"description": "Kihoon scrapes the ground with his sword and performs a powerful upward slash.",
-				"damage": "3730-5595% of Max HP",
-				"cooldown": 15,
-				"mpCost": "100-132",
-				"effects": ["Medium Break", "Airborne"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Flag of Domination",
-				"description": "Kihoon summons a flag in the air and drives it into the ground with great force.",
-				"damage": "1200-2466.67% of Max HP",
-				"cooldown": 25,
-				"effects": ["Medium Break", "Knocks Down", "Fighting Spirit Abatement Zone for 30s"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Fierce Pursuit",
-				"description": "Kihoon appears in a crouching stance and swings his sword and shield to attack.",
-				"damage": "1016-1524% of Max HP",
-				"cooldown": 20,
-				"effects": ["Weak Break", "Airborne"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Thrilling Fighting Spirit",
-				"description": "A powerful fighting spirit will spread to those nearby.",
-				"damage": "5074-7611% of Max HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Almighty Break"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Battle Stance",
 		"description": "[Battle Stance] activates when the user enters a stage. When an attack lands on a target with a [Break] Gauge, it activates the [Guard Stance] effect. If Son Kihoon or an ally successfully puts the target in the [Break] state, it increases the [Break] duration by 3s, restores 100% of Kihoon's Core Gauge and Power Gauge, and activates [Battle Stance].",

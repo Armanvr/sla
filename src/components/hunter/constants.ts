@@ -22,11 +22,11 @@ export const classColors: Record<string, string> = {
 }
 
 export const statIcons: Record<string, string> = {
-	strength: '⚔️',
-	vitality: '🛡️',
-	agility: '💨',
-	intelligence: '🧠',
-	perception: '👁️',
+	strength: '⚔',
+	vitality: '◈',
+	agility: '◃',
+	intelligence: '◇',
+	perception: '◎',
 }
 
 export const skillSectionLabels: Record<string, string> = {
@@ -53,7 +53,7 @@ export const JEWELRY_SLOTS = [
 ] as const
 
 export const CORE_SLOTS = [
-	{ key: 'mind' as const, label: 'Mind', emoji: '🧠' },
-	{ key: 'body' as const, label: 'Body', emoji: '🛡️' },
-	{ key: 'spirit' as const, label: 'Spirit', emoji: '✨' },
+	{ key: 'mind' as const, label: 'Mind', emoji: '◇' },
+	{ key: 'body' as const, label: 'Body', emoji: '◈' },
+	{ key: 'spirit' as const, label: 'Spirit', emoji: '✦' },
 ] as const

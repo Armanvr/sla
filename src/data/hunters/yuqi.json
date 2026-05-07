@@ -12,6 +12,7 @@
 	"mainAbility": "Martial arts with explosive gauntlets",
 	"exclusiveWeapon": "Righteous Sun",
 	"releaseDate": "2025-08-28",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Forever", "i-dle"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Surrounding Hit",
-				"description": "YUQI attacks swiftly using her fists and feet. Deals Fire elemental damage. Deals weak Break damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "217–325.5% Max HP"
-					},
-					{
-						"stage": 2,
-						"damage": "234–351% Max HP"
-					},
-					{
-						"stage": 3,
-						"damage": "270–405% Max HP"
-					}
-				],
-				"icon": ""
-			}
-		],
-		"core": [
-			{
-				"name": "Shouting Kick",
-				"description": "YUQI jumps forward and delivers a powerful knee strike. Deals Fire elemental damage. Deals weak Break damage. When this skill hits it inflicts the [Airborne] effect.",
-				"damage": "980–1470% Max HP",
-				"element": "Fire",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Amp Crash",
-				"description": "After dodging the enemy's attack, YUQI quickly strikes with her fists. Deals Fire elemental damage. Deals heavy Break damage. When this skill hits it inflicts the [Airborne] effect. When the final hit lands it [Knocks Down] the target. When the user is hit while weaving during skill use, it activates Extreme Evasion. Enhanced version: Crescendo Scream.",
-				"damage": "1228–1842% Max HP",
-				"cooldown": 20,
-				"mpCost": "100",
-				"effects": ["Airborne", "Knock Down", "Extreme Evasion on weave hit"],
-				"icon": ""
-			},
-			{
-				"name": "Rising Spin Kick",
-				"description": "After dodging the enemy's attack, YUQI spins and delivers a roundhouse kick. Deals Fire elemental damage. Deals medium Break damage. When this skill hits, it inflicts the [Airborne] effect. When the user is hit while weaving during skill use, it activates Extreme Evasion. Enhanced version: Unlimited Shout.",
-				"damage": "2306–3459% Max HP",
-				"cooldown": 20,
-				"mpCost": "120",
-				"effects": ["Airborne", "Extreme Evasion on weave hit"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "High-Pitch Scream",
-				"description": "After attacking with her elbows, YUQI performs a powerful downward strike. Deals Fire elemental damage. Deals medium Break damage. When the final hit lands, it [Knocks Down] the target. When this skill hits, it activates [Dance Time] (Break duration +3s when putting enemy in Break, Duration: Infinite) and [Breakdance] (Basic Skill damage +10%, Fire damage +10%, damage to Broken enemies +30%, Duration: 20s) on the entire team.",
-				"damage": "850–1747.22% Max HP",
-				"cooldown": 25,
-				"effects": ["Knock Down", "Dance Time", "Breakdance"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Beatdown Rush",
-				"description": "YUQI jumps forward, attacks with her knee, then follows up with a powerful punch. Deals Fire elemental damage. Deals medium Break damage. When this skill hits, it inflicts the [Airborne] effect. When the final hit lands, it [Knocks Down] the target. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Blind] effects, or a Shadow Skill.",
-				"damage": "1154–1731% Max HP",
-				"cooldown": 20,
-				"effects": ["Airborne", "Knock Down"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Kill the Stage",
-				"description": "YUQI unleashes the power of her gauntlets and delivers a powerful uppercut. Deals Fire elemental damage. Deals almighty Break damage. When this skill hits, it inflicts the [Airborne] effect.",
-				"damage": "4648–6972% Max HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Full Burst / Tempo",
 		"description": "The [FOREVER] effect is activated on the entire team when entering the Encore Mission and Instance Dungeon (+5% damage dealt, stacks up to 3 times, Infinite). When YUQI or an ally successfully puts an enemy into [Break], Break duration increases by 3s. Using Amp Crash, Crescendo Scream, Rising Spin Kick, or Unlimited Shout activates Shouting Kick. Each time Shouting Kick, Amp Crash, or Rising Spin Kick hits, the user activates [Tempo] (Max HP +0.5%, Shouting Kick damage +0.5%, Duration: 10s, stacks up to 15 times) and recharges the [Full Burst] gauge. When [Full Burst] gauge reaches 100%, [Full Burst] activates: Amp Crash → Crescendo Scream, Rising Spin Kick → Unlimited Shout (cooldowns reset); Break effectiveness of Shouting Kick +25%; Shouting Kick damage +10%; Max HP +10%; [Super Armor] while active; [Tempo] removed and cannot activate; Duration: 10s.",

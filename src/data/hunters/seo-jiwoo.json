@@ -12,6 +12,7 @@
 	"mainAbility": "Hand-to-hand combat / Superhuman Strength",
 	"exclusiveWeapon": "Unparalleled Bravery",
 	"releaseDate": "2024-03-18",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Hunters Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Water Dragon Strike",
-				"description": "Jiwoo punches with her fist that's full of energy. Deals Water elemental damage. Deals weak Break damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "99–148.5% Max HP"
-					},
-					{
-						"stage": 2,
-						"damage": "103–154.5% Max HP"
-					},
-					{
-						"stage": 3,
-						"damage": "106–159% Max HP"
-					}
-				],
-				"icon": ""
-			}
-		],
-		"core": [
-			{
-				"name": "Twin Dragon Strike",
-				"description": "Jiwoo strikes powerfully with both fists charged with the Water Dragon's energy. Deals Water elemental damage. Deals weak Break damage. Inflicts Airborne effect on hit.",
-				"damage": "420–630% Max HP",
-				"element": "Water",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Water Dragon Rush",
-				"description": "Jiwoo jumps towards the enemy with all her might and strikes down. [Heavy Attack: Water Dragon Rush]: Jiwoo strikes the ground with the Water Dragon. Deals Water elemental damage. Deals weak Break damage. Knocks Down target. Heavy Attack applies Shield to entire team (5% of user's HP, 25 seconds). Super Armor applied during use.",
-				"damage": "730–1095% Max HP",
-				"cooldown": 12,
-				"mpCost": "100–132",
-				"effects": ["Knock Down", "Shield (5% HP, 25s) on Heavy Attack", "Super Armor"],
-				"icon": ""
-			},
-			{
-				"name": "Lightning Kick",
-				"description": "Jiwoo lifts her feet vertically and strikes down in front of her. [Heavy Attack: Lightning Kick]: Jiwoo punches upward with a surging Water Dragon. Deals Water elemental damage. Deals weak Break damage. Knocks Down target. Heavy Attack increases Break effectiveness by 50%. Super Armor applied during use.",
-				"damage": "730–1095% Max HP",
-				"cooldown": 12,
-				"mpCost": "100–132",
-				"effects": ["Knock Down", "Break Effectiveness +50% on Heavy Attack", "Super Armor"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Short Attack: Water Dragon Lightning Kick",
-				"description": "The user jumps towards the enemy with all her might and strikes down. Deals Water elemental damage. Deals medium Break damage. Knocks Down target. Applies Shield to entire team (10% of user's HP, 25 seconds).",
-				"damage": "420–863.33% Max HP",
-				"cooldown": 25,
-				"effects": ["Knock Down", "Shield (10% HP, 25s)"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Burst Punch",
-				"description": "Jiwoo gathers all her energy into her fist and releases it while charging forward. Deals Water elemental damage. Deals weak Break damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill. Inflicts Airborne effect on hit.",
-				"damage": "730–1095% Max HP",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Lethal Move: Water Dragon Transformation Strike",
-				"description": "Jiwoo gathers the Water Dragon's energy, jumps into the air, and slams down her fist with the power of the Water Dragon, devastating her surroundings. Deals Water elemental damage. Inflicts Airborne effect on hit.",
-				"damage": "1484–2226% Max HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Water Dragon Training",
 		"description": "When Twin Dragon Strike, Water Dragon Rush, Lightning Kick, or Burst Punch is used, it applies [Training] 1 time. When 3 instances of [Training] have been applied, [Water Dragon Training] is applied. When [Water Dragon Training] is active, it resets the cooldowns of Water Dragon Rush and Lightning Kick and changes them to Heavy Attack: Water Dragon Rush and Heavy Attack: Lightning Kick. [Training] has Infinite duration (stacking up to 3 times). [Water Dragon Training] effects are removed when Heavy Attack: Water Dragon Rush or Heavy Attack: Lightning Kick is used. Duration: Infinite.",

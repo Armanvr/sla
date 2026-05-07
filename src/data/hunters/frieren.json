@@ -12,6 +12,7 @@
 	"mainAbility": "Unknown",
 	"exclusiveWeapon": "Frieren's Staff",
 	"releaseDate": "2025-10-23",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Journey Companions"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Ordinary Offensive Magic (Zoltraak) - Multi-Hit",
-				"description": "Frieren unleashes blasts of Zoltraak consecutively. Deals Water elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "257–385.5% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "266–399% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "270–405% DEF"
-					}
-				],
-				"icon": ""
-			}
-		],
-		"core": [
-			{
-				"name": "Ordinary Offensive Magic (Zoltraak) - Concentrated",
-				"description": "Frieren unleashes a blast of Zoltraak infused with concentrated mana power. Deals Water elemental damage.",
-				"damage": "1515–2272.5% DEF",
-				"element": "Water",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Destructive Lightning Magic (Judradjim)",
-				"description": "Frieren uses magic that unleashes destructive lightning. Deals Water elemental damage. When the final hit lands it inflicts the Airborne effect.",
-				"damage": "3020–4530% DEF",
-				"cooldown": 16,
-				"mpCost": "150",
-				"effects": ["Airborne"],
-				"icon": ""
-			},
-			{
-				"name": "Hellish Flame Magic (Vollzanbel)",
-				"description": "Frieren uses magic to unleash hellfire. Deals Water elemental damage. When the final hit lands it inflicts the Airborne effect.",
-				"damage": "3542–5313% DEF",
-				"cooldown": 16,
-				"mpCost": "200",
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Defense Magic",
-				"description": "Frieren uses Defense Magic. If the entire team (excluding Sung Jinwoo) consists of Water team members, Sung Jinwoo's Attack and Defense increase by 15–20%. Grants [Defense Magic] effect on entire team: Shield equal to 20% of Frieren's Defense; Decreases damage taken by 5%. Duration: 30 seconds.",
-				"damage": "",
-				"cooldown": 25,
-				"effects": ["Defense Magic (Shield 20% DEF, Damage Taken -5%, 30s)"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Ordinary Offensive Magic (Zoltraak) - Penetration",
-				"description": "Frieren moves at high speed and unleashes a Zoltraak blast. Deals Water elemental damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills inflicting Stun or Bind, or a Shadow Skill. When this skill hits it inflicts the Airborne effect.",
-				"damage": "2254–3381% DEF",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Ordinary Offensive Magic (Zoltraak) - Ultimate",
-				"description": "Frieren releases mana power to unleash a massive Zoltraak blast. Deals Water elemental damage. When this skill hits it inflicts the Airborne effect. Activates the [Mana Power Liberation] effect while active.",
-				"damage": "4366–6549% DEF",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne", "Mana Power Liberation"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Mana Power Control",
 		"description": "Stage 1, Stage 2, and Stage 3 of Ordinary Offensive Magic (Zoltraak) - Multi-Hit activate consecutively. Stage 3 activates Ordinary Offensive Magic (Zoltraak) - Concentrated once. [Mana Power Control] and [Defense Magic] effects activate when the user enters the stage. [Mana Power Control]: Increases user's Defense by 25%; When user has 50% or more MP, increases Defense by additional 25%; Skill Mana Consumption decreases by 20%; Duration: Infinite. [Mana Power Liberation]: Grants [Defense Magic] effect on entire team; Increases Critical Hit Rate by 100%; Removes [Mana Power Control] effect; When removed, [Mana Power Control] reactivates. Duration: Infinite. [Defense Magic]: Shield equal to 20% of Frieren's Defense; Decreases damage taken by 5%; Duration: 30 seconds.",

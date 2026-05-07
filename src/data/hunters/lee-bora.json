@@ -12,6 +12,7 @@
 	"mainAbility": "Summoning Magic",
 	"exclusiveWeapon": "Solid Logic",
 	"releaseDate": "2024-03-18",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Hunters Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Darkness Emission",
-				"description": "Bora swings her staff and unleashes the power of darkness. Deals Dark elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "256–384% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "265–397.5% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "278–417% ATK"
-					}
-				],
-				"icon": ""
-			}
-		],
-		"core": [
-			{
-				"name": "Tracking Charm",
-				"description": "Bora attacks the enemy by throwing numerous explosive charms. Deals Dark elemental damage. Applies Airborne effect on hit.",
-				"damage": "1163–1744.5% ATK",
-				"element": "Dark",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Strengthening Charm",
-				"description": "Bora throws a strengthening charm and unfolds an Enhancement Circle that enhances her Phantom Foxes. Deals Dark elemental damage. Creates Enhancement Circle zone for 210 seconds. Removes Debuff Zone in landing area. Enhancement Circle: +10% Dark damage for team; +20% Phantom Fox magic arrow damage with penetration.",
-				"damage": "1920–2880% ATK",
-				"cooldown": 8,
-				"mpCost": "80–105",
-				"effects": ["Enhancement Circle", "Debuff Zone Removal"],
-				"icon": ""
-			},
-			{
-				"name": "Summoning Charm: Phantom Foxes",
-				"description": "Bora summons Phantom Foxes that fire magic arrows. Deals Dark elemental damage. Phantom Foxes deal 400–600% ATK magic arrow damage, lasting 12 seconds.",
-				"damage": "400–600% ATK (per Phantom Fox arrow)",
-				"cooldown": 12,
-				"mpCost": "250–330",
-				"effects": ["Phantom Foxes Summon"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Quick Attack: Tempest",
-				"description": "Bora summons a binding divination circle and pulls enemies into its center. Deals Dark elemental damage. Applies Charm effect (15% increased damage taken, 15-second duration). Removes Debuff Zone in area.",
-				"damage": "1402–2881.89% ATK",
-				"cooldown": 25,
-				"effects": ["Charm (15% Damage Taken Increase, 15s)", "Debuff Zone Removal"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Tempest",
-				"description": "Bora summons a binding divination circle and pulls enemies into its center. Deals Dark elemental damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind. Applies Airborne effect.",
-				"damage": "1144–1716% ATK",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Dark Charm: Meg",
-				"description": "Bora uses the sealed Dark Charm to free the giant summoned beast, Meg. Deals Dark elemental damage. Final hit applies Knock Down.",
-				"damage": "3715–5572.5% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Knock Down"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Charm",
 		"description": "When Core Attack or Tempest hits, the user applies the [Charm] effect to the target. [Charm]: The target's damage taken increases by 15%. Duration: 15 seconds.",

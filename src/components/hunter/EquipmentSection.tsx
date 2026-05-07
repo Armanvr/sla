@@ -301,56 +301,9 @@ export function EquipmentSection({
 
 			{openPicker && <button type='button' class='fixed inset-0 z-40' onClick={() => setOpenPicker(null)} />}
 
-			<div class='flex flex-col lg:flex-row gap-6'>
-				<div class={showDetails ? 'lg:w-2/3 space-y-6' : 'w-full space-y-6'}>
-					<div>
-						<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
-							<span class='text-base'>🛡️</span> Armure
-						</p>
-						<div class='grid grid-cols-2 gap-3'>
-							{ARMOR_SLOTS.map(({ label, iconKey }, i) => (
-								<EquipmentSlot
-									key={iconKey}
-									slotLabel={label}
-									iconKey={iconKey}
-									value={armorSlots[i]}
-									availableSets={armorSlotSets}
-									allSets={armorSlotSets}
-									isOpen={openPicker?.type === 'armor' && openPicker?.index === i}
-									onToggle={() => handleToggle('armor', i)}
-									onSelect={(id) => handleSelect('armor', i, id)}
-									onClear={() => handleSelect('armor', i, null)}
-									stats={showDetails ? equipmentStats?.[iconKey as keyof EquipmentStats] : undefined}
-								/>
-							))}
-						</div>
-					</div>
-					<div>
-						<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
-							<span class='text-base'>💍</span> Bijoux
-						</p>
-						<div class='grid grid-cols-2 gap-3'>
-							{JEWELRY_SLOTS.map(({ label, iconKey }, i) => (
-								<EquipmentSlot
-									key={iconKey}
-									slotLabel={label}
-									iconKey={iconKey}
-									value={jewelrySlots[i]}
-									availableSets={jewelrySlotSets}
-									allSets={jewelrySlotSets}
-									isOpen={openPicker?.type === 'jewelry' && openPicker?.index === i}
-									onToggle={() => handleToggle('jewelry', i)}
-									onSelect={(id) => handleSelect('jewelry', i, id)}
-									onClear={() => handleSelect('jewelry', i, null)}
-									stats={showDetails ? equipmentStats?.[iconKey as keyof EquipmentStats] : undefined}
-								/>
-							))}
-						</div>
-					</div>
-				</div>
-
+			<div class='flex flex-col gap-6'>
 				{showDetails && (
-					<div class='lg:w-1/3'>
+					<div>
 						<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3'>
 							Bonus de sets actifs
 						</p>
@@ -387,6 +340,52 @@ export function EquipmentSection({
 						)}
 					</div>
 				)}
+
+				<div>
+					<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
+						<span>◈</span> Armure
+					</p>
+					<div class='grid grid-cols-2 gap-3'>
+						{ARMOR_SLOTS.map(({ label, iconKey }, i) => (
+							<EquipmentSlot
+								key={iconKey}
+								slotLabel={label}
+								iconKey={iconKey}
+								value={armorSlots[i]}
+								availableSets={armorSlotSets}
+								allSets={armorSlotSets}
+								isOpen={openPicker?.type === 'armor' && openPicker?.index === i}
+								onToggle={() => handleToggle('armor', i)}
+								onSelect={(id) => handleSelect('armor', i, id)}
+								onClear={() => handleSelect('armor', i, null)}
+								stats={showDetails ? equipmentStats?.[iconKey as keyof EquipmentStats] : undefined}
+							/>
+						))}
+					</div>
+				</div>
+
+				<div>
+					<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
+						<span>◇</span> Bijoux
+					</p>
+					<div class='grid grid-cols-2 gap-3'>
+						{JEWELRY_SLOTS.map(({ label, iconKey }, i) => (
+							<EquipmentSlot
+								key={iconKey}
+								slotLabel={label}
+								iconKey={iconKey}
+								value={jewelrySlots[i]}
+								availableSets={jewelrySlotSets}
+								allSets={jewelrySlotSets}
+								isOpen={openPicker?.type === 'jewelry' && openPicker?.index === i}
+								onToggle={() => handleToggle('jewelry', i)}
+								onSelect={(id) => handleSelect('jewelry', i, id)}
+								onClear={() => handleSelect('jewelry', i, null)}
+								stats={showDetails ? equipmentStats?.[iconKey as keyof EquipmentStats] : undefined}
+							/>
+						))}
+					</div>
+				</div>
 			</div>
 		</div>
 	)

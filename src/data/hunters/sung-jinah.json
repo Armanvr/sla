@@ -12,6 +12,7 @@
 	"mainAbility": "Wind and Rain based Abilities",
 	"exclusiveWeapon": "Blue Monsoon",
 	"releaseDate": "2025-07-31",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["White Tiger Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Storm Dance",
-				"description": "Jinah stabs fiercely, expelling air from the tip of her spear to create a shockwave for additional damage. Deals Wind elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "110–165% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "145–217.5% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "184–276% DEF"
-					}
-				],
-				"icon": "/assets/hunters/Sung_Jinah/Sung_Jinah_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Torrent",
-				"description": "[Lance Form] Jinah opens her umbrella, unleashing a concentrated blast of wind across a wide area. [Umbrella Form] Jinah quickly opens her umbrella while still in the air to unleash a wide-reaching blast of wind towards the ground. Deals Wind elemental damage. Using this skill grants the user a Shield. In Umbrella Form becomes Umbrella: Torrent (150% of Torrent damage, activates Wind Damage Taken Increase on target).",
-				"damage": "988–1482% DEF",
-				"element": "Wind",
-				"icon": "/assets/hunters/Sung_Jinah/Sung_Jinah_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Reverse Tempest Cleave",
-				"description": "[Lance Form] Jinah jabs forward with her lance to cause a burst of wind that launches her into the air and opens her umbrella. [Umbrella Form] Jinah closes her umbrella into a lance and performs a diagonal downward dive attack. Deals Wind elemental damage. Grants Shield (10% DEF, stacks up to 3, 30s). Inflicts Airborne. In Umbrella Form becomes Umbrella: Reverse Tempest Cleave (150% damage, user switches to Lance Form after diving).",
-				"damage": "1774–2661% DEF",
-				"cooldown": 20,
-				"mpCost": "235–310",
-				"effects": ["Airborne", "Shield"],
-				"icon": "/assets/hunters/Sung_Jinah/Sung_Jinah_Skill_1.png"
-			},
-			{
-				"name": "Converging Wind",
-				"description": "[Lance Form] Jinah raises her lance to summon a small typhoon and strikes it, causing it to grow and sweep across the battlefield. [Umbrella Form] While in the air, Jinah throws her umbrella to summon a massive typhoon. Deals Wind elemental damage. Grants Shield (10% DEF, stacks up to 3, 30s). Inflicts Airborne. In Umbrella Form becomes Umbrella: Converging Wind (150% damage, inflicts Wind Damage Taken Increase per hit).",
-				"damage": "1774–2661% DEF",
-				"cooldown": 20,
-				"mpCost": "235–310",
-				"effects": ["Airborne", "Shield", "Wind Damage Taken Increase"],
-				"icon": "/assets/hunters/Sung_Jinah/Sung_Jinah_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Typhoon",
-				"description": "Jinah throws her umbrella into the air to summon a massive typhoon that engulfs the surrounding area. Deals Wind elemental damage. Inflicts Airborne. When all 3 team members are Wind, Jinwoo's ATK and DEF +15%. Grants 4 instances of [Quick Attack: Gale Wings]. When this skill hits it inflicts Unrecoverable (30s) on the target.",
-				"damage": "600–1233.33% DEF",
-				"cooldown": 25,
-				"effects": ["Airborne", "Unrecoverable", "Quick Attack: Gale Wings"],
-				"icon": "/assets/hunters/Sung_Jinah/Sung_Jinah_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Aero Disruption",
-				"description": "Jinah channels her power into her lance and throws it toward the ground. Deals Wind elemental damage. Triggers via Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind. Knocks Down the target. When used while [Sudden Showers] is active, reduces Stormwind Serenade cooldown by 60% and reactivates [Sudden Showers] on Sung Jinah.",
-				"damage": "916–1374% DEF",
-				"cooldown": 20,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Sung_Jinah/Sung_Jinah_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Stormwind Serenade",
-				"description": "Jinah swings her umbrella to clear the gloomy weather, unleashing a fierce typhoon around her. Deals Wind elemental damage. Inflicts Airborne. Grants [Sudden Showers] (team HP recovery 2.2% of Jinah's DEF/s, +10% damage dealt, -10% damage taken, 25s) and 1 instance of [Aero] (+2% Wind damage, 60s, stacks up to 5) to all team members.",
-				"damage": "3053–6869.25% DEF",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne", "Sudden Showers", "Aero"],
-				"icon": "/assets/hunters/Sung_Jinah/Sung_Jinah_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Wind",
 		"description": "Using Reverse Tempest Cleave, Converging Wind, Torrent, or their Umbrella variants activates the [Wind] effect (Reverse Tempest Cleave, Converging Wind, related skills, and Stormwind Serenade damage +50%; at 3 stacks grants maximum [Gale Wings] instances to entire team except Jinah; removed on tag-out; in Team Fight mode removed every 15s; 60s, stacks up to 3). [Gale Wings]: using Basic or Ultimate Skill removes 1 instance and activates [Wings of Freedom] (+10% Basic and Ultimate Skill damage, 5s, stacks up to 1).",

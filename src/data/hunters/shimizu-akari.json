@@ -12,6 +12,7 @@
 	"mainAbility": "Greataxe Skills / Power of the Sun",
 	"exclusiveWeapon": "The Price of a Promise",
 	"releaseDate": "2024-12-19",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Blade Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Axe of Punishment",
-				"description": "Akari swings her axe to attack, dealing Light elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "116–174% Max HP"
-					},
-					{
-						"stage": 2,
-						"damage": "120–180% Max HP"
-					},
-					{
-						"stage": 3,
-						"damage": "124–186% Max HP"
-					}
-				],
-				"icon": "/assets/hunters/Shimizu_Akari/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Judgement Strike",
-				"description": "Akari charges, penetrates the enemy, and strikes down powerfully. Inflicts Airborne on final hit.",
-				"damage": "465–697.5% Max HP",
-				"element": "Light",
-				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Devastate",
-				"description": "Akari swings her axe twice, does a follow-up attack, then finally does a diagonal slash. Knock Down on final hit, Airborne from bursting flame.",
-				"damage": "624–936% Max HP",
-				"cooldown": 20,
-				"mpCost": "250–330",
-				"effects": ["Knock Down", "Airborne"],
-				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Skill_1.png"
-			},
-			{
-				"name": "Light of Dawn",
-				"description": "Akari uses the power of the sun to light her axe on fire, then attacks. Activates Holy Fire on Light team members (charges Power Gauge 0.6%/s, 24s). Holy Fire grants Echo of Light: 2% Max HP Shield (stacks 15x).",
-				"damage": "1156–1734% Max HP",
-				"cooldown": 20,
-				"mpCost": "250–300",
-				"effects": ["Holy Fire", "Echo of Light"],
-				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Guiding Light",
-				"description": "After gathering enemies, Akari releases a powerful attack with her fiery axe. Applies Halo of Light: +10% damage, +10% Critical Rate (Basic/Ultimate), restores 10% Max HP (24s).",
-				"damage": "270–555% Max HP",
-				"cooldown": 25,
-				"effects": ["Halo of Light"],
-				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Heart Strike of Blazing Fire",
-				"description": "Akari rushes forward and releases a powerful upward diagonal strike. Triggers on Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Activates Divine Flame: +1% Light damage taken (stacks 10x, 24s).",
-				"damage": "952–1428% Max HP",
-				"cooldown": 20,
-				"effects": ["Divine Flame"],
-				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Ring of Fire",
-				"description": "Akari gathers sun power, creates annular eclipse, splits the world. Knock Down on hit. Grants Brilliance to Light members (+8% damage, +8% Crit Rate, 8% Max HP restore, 24s). Applies Ring of Fire: +12% Light damage taken (24s).",
-				"damage": "1523–2284.5% Max HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Knock Down", "Brilliance", "Ring of Fire"],
-				"icon": "/assets/hunters/Shimizu_Akari/Shimizu_Akari_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Truth-seeker of Divine Flame",
 		"description": "Activates at battle start. When using Light of Dawn, Devastate becomes Heavy Attack: Devastate (+100% damage). Dash hit activates Extreme Evasion, deals damage, and inflicts Stun.",

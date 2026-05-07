@@ -1,25 +1,25 @@
 {
-	"name": "Sugimoto Reiji",
+	"name": "Antoine Martinez",
 	"category": "Elemental Stacker",
 	"alias": null,
-	"title": "Sugimoto Reiji",
+	"title": "Antoine Martinez",
 	"rarity": "SSR",
-	"rank": "S-Rank",
-	"element": "Wind",
+	"rank": "National Level",
+	"element": "Light",
 	"class": "Elemental Stacker",
-	"country": "Japan",
-	"guild": "Blade Guild",
-	"mainAbility": "Swift Swordsmanship / Iaido",
-	"exclusiveWeapon": "Etched to the Bone",
-	"releaseDate": "2026-03-12",
-	"newHunter": false,
+	"country": "France",
+	"guild": "The Federal Bureau of Hunters",
+	"mainAbility": "Superhuman Strength / Body Enhancement / Healing Spells",
+	"exclusiveWeapon": "Saint's Benediction",
+	"releaseDate": "2026-05-07",
+	"newHunter": true,
 	"occupation": ["Hunter"],
-	"affiliation": ["Blade Guild"],
+	"affiliation": ["The Federal Bureau of Hunters"],
 	"gender": "Male",
-	"age": 28,
+	"age": 48,
 	"species": "Human",
-	"image": "/assets/hunters/Sugimoto_Reiji.png",
-	"icon": "/assets/hunters/_icons/Sugimoto_Reiji_Icon.png",
+	"image": "/assets/hunters/Antoine_Martinez.png",
+	"icon": "/assets/hunters/_icons/Antoine_Martinez_Icon.png",
 	"stats": [
 		{
 			"key": "strength",
@@ -60,25 +60,25 @@
 			"defense": 6357,
 			"totalPower": 55669
 		},
-		"primaryStat": "Attack"
+		"primaryStat": "HP"
 	},
 	"elements": [
 		{
-			"name": "Wind",
+			"name": "Light",
 			"primary": true
 		}
 	],
 	"passive": {
-		"name": "Sword-fighting",
-		"description": "[Sword-fighting] remains active and is divided into three states: [Initiation], [Acceleration], [Finale]. [Initiation] activates on stage entry. Using Flash of Steel, Returning Edge, or Revolving Edge activates [Flash Draw]. Using Unbroken Focus activates [Sword Dance]. When Punisher hits, it inflicts [Winter's Edge] on the target. Eclipse Slash or Extinction Blade inflict [Winter's Edge] 2 times.",
+		"name": "Holy Retribution",
+		"description": "The final hit of each skill restores 2% Max HP to Light teammates. Using [Light of Shattered Sorrow] triggers the [Mercy] effect (+10% shield and damage) and applies [Lightsunder] to the target (50% Max HP damage every 3s, stacks up to 10). Core Attack hits against [Lightsunder] targets restore 40% Power Gauge.",
 		"icon": null
 	},
 	"advancements": [
-		"Using Unbroken Focus or Quickblade - Oblivion activates the [Flash Draw] effect and the user's Core Attack. Consuming [Flash Draw] decreases the cooldown of Quickblade - Oblivion by 10s and restores 35% of the user's Power Gauge.",
-		"Wind Elemental Accumulation effectiveness increases by 20%.",
-		"When Sugimoto Reiji or an ally successfully inflicts the Wind Overload effect, it grants Sung Jinwoo and Wind team members the [Tempest Blade] effect.",
-		"The Critical Hit damage of Wind team members increases by 10% for every Wind ally.",
-		"Using Quickblade - Oblivion activates the [Stormflash] effect. The [Sword Dance] effect is enhanced."
+		"Starts battle with 50% Power Gauge. [Light of Shattered Sorrow] restores the Core Gauge. [Unforgiving Blessed Light] grants [Exalted Manifestation], transforming [Light of Shattered Sorrow] into [Devourer of Sorrow] with a 140% damage boost.",
+		"Light Elemental Accumulation effectiveness increases by 20%.",
+		"[Light of Shattered Sorrow] applies the [Blessed Light] debuff to the target (+20% Light damage taken). [Judgement of Severed Fate] applies the [Karma] buff to all Light team members. The [Mercy] effect is enhanced.",
+		"Light Overload damage for all Light team members increases by 10%.",
+		"[Lightsunder] application increases to 5 instances. Activating [Devourer of Sorrow] triggers the [Harmony] buff (+30% Basic Skill and Light Overload damage). The cooldown of [The Angel's Stay] is reduced by 8s per skill hit."
 	],
 	"builds": [
 		{
@@ -109,7 +109,7 @@
 		},
 		"chest": {
 			"main": "Additional Defense",
-			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Defense Penetration"]
+			"secondary": ["HP (%)", "Additional HP", "Critical Hit Rate", "Damage Increase"]
 		},
 		"gloves": {
 			"main": "Additional Attack",
@@ -128,7 +128,7 @@
 			"secondary": ["HP (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
 		},
 		"bracelet": {
-			"main": "Wind Damage (%)",
+			"main": "Light Damage (%)",
 			"secondary": ["HP (%)", "Additional HP", "Critical Hit Damage", "Defense Penetration"]
 		},
 		"earrings": {
@@ -142,8 +142,8 @@
 		"spirit": ["Additional HP", "Defense Penetration"]
 	},
 	"weapon": {
-		"name": "Etched to the Bone",
-		"icon": "/assets/weapons/sugimoto-reiji/Etched_to_the_Bone_Icon.png"
+		"name": "Saint's Benediction",
+		"icon": "/assets/weapons/antoine-martinez/Saints_Benediction_Icon.png"
 	},
-	"recommendedStats": []
+	"recommendedStats": ["HP (%)", "Critical Hit Rate", "Critical Hit Damage"]
 }

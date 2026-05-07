@@ -12,6 +12,7 @@
 	"mainAbility": "Fire Magic Swordsmanship",
 	"exclusiveWeapon": "Night-Thoughts",
 	"releaseDate": "2024-03-18",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["The Justitia Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Sword of Revenge",
-				"description": "Emma thrusts at the enemy with her flaming sword.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "96–144% HP"
-					},
-					{
-						"stage": 2,
-						"damage": "99–148.5% HP"
-					},
-					{
-						"stage": 3,
-						"damage": "106–159% HP"
-					}
-				],
-				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Basic.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Flare Strike",
-				"description": "Emma attacks with a flaming strike. Applies [Burn] (damage equal to 17.77% of Max HP every 3 seconds for 30 seconds) and inflicts [Airborne] on hit.",
-				"damage": "777–1165.5% HP",
-				"element": "Fire",
-				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Burn Up",
-				"description": "Emma attacks with a fiery swing. Deals medium Break damage. Bonus 10% damage against [Burned] targets.",
-				"damage": "777–1165.5% HP",
-				"cooldown": 8,
-				"mpCost": "150–198",
-				"effects": ["Burn bonus damage"],
-				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Skill_1.png"
-			},
-			{
-				"name": "Flame Cleave",
-				"description": "Emma slashes with a powerful condensed flame. Deals heavy Break damage with [Airborne] effect. Bonus 10% damage against [Burned] targets.",
-				"damage": "777–1165.5% ATK",
-				"cooldown": 12,
-				"mpCost": "150–198",
-				"effects": ["Airborne", "Burn bonus damage"],
-				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Roaring Flames",
-				"description": "Emma unleashes roaring flames. Applies [Flame's Blessing] and [Flame's Wrath] effects.",
-				"damage": "555–1140.83% HP",
-				"cooldown": 25,
-				"effects": ["Flame's Blessing", "Flame's Wrath"],
-				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Flame Judgment",
-				"description": "Emma executes a flame-infused judgment strike.",
-				"damage": "777–1165.5% HP",
-				"cooldown": 20,
-				"effects": [],
-				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Burning Pride",
-				"description": "Emma releases her full burning pride in a devastating flaming attack.",
-				"damage": "1777–2665.5% HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": [],
-				"icon": "/assets/hunters/Emma_Laurent/Emma_Laurent_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Heat Absorption / Heat Emission",
 		"description": "Emma builds [Heat Absorption] stacks from combat actions (Basic Attacks or taking damage: 2 instances; Core Attack, Burn Up, Flame Judgment, or Extreme Evasion: 5 instances; Burning Pride: 10 instances). At 5 stacks: Defense +7.77%. At 10 stacks: recovers HP equal to 7.77% of damage taken. At 15 stacks: gains a Shield equal to 7.77% of Max HP (duration 15 seconds). When Heat Emission activates, Heat Absorption instances are removed. [Heat Emission] at 5 stacks: Defense Penetration +7.77%. At 10 stacks: Fire damage +7.77%. At 15 stacks: Fire damage +7.77% applied to team members (duration 20 seconds).",

@@ -7,6 +7,7 @@
 	"class": "Fighter",
 	"country": "South Korea",
 	"releaseDate": "2024-05-08",
+	"newHunter": false,
 	"occupation": ["Hunter", "Guild Master", "Shadow Monarch"],
 	"affiliation": ["Ahjin Guild", "Hunters Association"],
 	"gender": "Male",
@@ -63,14 +64,6 @@
 			"primary": false
 		}
 	],
-	"skills": {
-		"basic": [],
-		"core": [],
-		"skill": [],
-		"support": [],
-		"qte": [],
-		"ultimate": []
-	},
 	"builds": [
 		{
 			"name": "Build Niv. 120 (A)",

@@ -12,6 +12,7 @@
 	"mainAbility": "Power of the Wolf / Melee Combat",
 	"exclusiveWeapon": "The Place Bathed in Moonlight",
 	"releaseDate": "2025-07-03",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Forever", "i-dle"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Do-Re-Mi Glitch",
-				"description": "SHUHUA controls her mana orbs to attack. Deals Water elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "153–229.5% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "160–240% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "165–247.5% ATK"
-					}
-				],
-				"icon": ""
-			}
-		],
-		"core": [
-			{
-				"name": "Rhythmic Beatdown",
-				"description": "SHUHUA controls her mana orbs to attack in two directions at once. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect. Enhanced version: High-energy Beat (damage +50% base, +100% at A1).",
-				"damage": "800–1200% ATK",
-				"element": "Water",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Pop Star Landing",
-				"description": "SHUHUA performs an arching high jump and then strikes down into the ground to create a special effect zone. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect.",
-				"damage": "1060–1590% ATK",
-				"cooldown": 20,
-				"mpCost": "134",
-				"effects": ["Airborne", "On the Stage"],
-				"icon": ""
-			},
-			{
-				"name": "Starlight Bark",
-				"description": "SHUHUA controls her mana orbs to unleash violent, chaotic slashes of mana. Deals Water elemental damage. When the final hit lands it inflicts the [Airborne] effect. Changes to Starlight Howl at A2 (damage +100%).",
-				"damage": "895–1342.5% ATK",
-				"cooldown": 20,
-				"mpCost": "235",
-				"effects": ["Airborne", "High-energy"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Showtime",
-				"description": "SHUHUA jumps and lands with a theatrical flair, creating a special effect zone upon landing. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect. Using this skill grants [Start the Music]: Shield equal to 12% of ATK, Duration: 8s.",
-				"damage": "1195–2456.39% ATK",
-				"cooldown": 25,
-				"effects": ["Airborne", "Start the Music (Shield 12% ATK, 8s)"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Twinkling Arpeggio",
-				"description": "SHUHUA appears above the battlefield and creates an \"X\" with her mana orbs while pointing them ahead and towards the ground, performing a slashing attack. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Blind] effects, or a Shadow Skill.",
-				"damage": "910–1365% ATK",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Catharsis in the Harmony",
-				"description": "SHUHUA is magically imbued with the power of a wolf and unleashes a fierce claw attack. Deals Water elemental damage. When this skill hits it inflicts the [Airborne] effect.",
-				"damage": "3048–4572% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "On the Stage / High-energy / Performance",
 		"description": "The entire team gains [FOREVER] (+5% damage dealt, stacks up to 3 times, Infinite) when entering the Encore Mission and Instance Dungeon. Using Pop Star Landing activates [On the Stage]: activates [Performance] effect every 3s, Duration: 15s. [Performance]: Core Attack damage +50%, grants Shield (10% ATK), Duration: 3s. Using Starlight Bark/Howl activates [High-energy]: Rhythmic Beatdown → High-energy Beat (+50% damage); when Core Attack activates and High-energy Beat is used it doesn't consume Core Gauge; when Core Attack hits, cooldowns of Pop Star Landing, Starlight Bark/Howl reduced by 3s (Cooldown: 1s); can only apply to up to 6 consecutive Core Attacks; Duration: 3.5s.",

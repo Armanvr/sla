@@ -114,6 +114,7 @@ export interface HunterData {
 	mainAbility?: string
 	exclusiveWeapon?: string
 	releaseDate?: string
+	newHunter?: boolean
 	relatives?: Relative[]
 	weapon?: { name: string; icon: string }
 	stats: Stat[]
@@ -123,14 +124,6 @@ export interface HunterData {
 		primaryStat?: string
 	}
 	elements: Element[]
-	skills: {
-		basic?: BasicSkill[]
-		core?: BasicSkill[]
-		skill?: BasicSkill[]
-		support?: BasicSkill[]
-		qte?: BasicSkill[]
-		ultimate?: BasicSkill[]
-	}
 	passive?: Passive
 	advancements?: string[]
 	builds?: Build[]

@@ -12,6 +12,7 @@
 	"mainAbility": "Unknown",
 	"exclusiveWeapon": "Stark's Axe",
 	"releaseDate": "2025-10-23",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Journey Companions"],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Chain Attack",
-				"description": "Stark swings his axe to attack. Deals Fire elemental damage. Deals weak Break damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "184–276% Max HP"
-					},
-					{
-						"stage": 2,
-						"damage": "205–307.5% Max HP"
-					},
-					{
-						"stage": 3,
-						"damage": "253–379.5% Max HP"
-					}
-				],
-				"icon": ""
-			}
-		],
-		"core": [
-			{
-				"name": "Whirlwind Strike",
-				"description": "Stark swings his axe while spinning. Deals Fire elemental damage. Deals weak Break damage. When this skill hits it inflicts the [Airborne] effect.",
-				"damage": "555–832.5% Max HP",
-				"element": "Fire",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Spiral Strike",
-				"description": "Stark spins swiftly and swings his axe. Deals Fire elemental damage. Deals medium Break damage. When the final hit lands it inflicts the [Airborne] effect.",
-				"damage": "850–1275% Max HP",
-				"cooldown": 16,
-				"mpCost": "150",
-				"effects": ["Airborne"],
-				"icon": ""
-			},
-			{
-				"name": "Lightning Strike",
-				"description": "Stark strikes forward with his axe in a powerful downward swing. Deals Fire elemental damage. Deals medium Break damage. When this skill hits, it [Knocks Down] the target. Using this skill grants the user a [Shield]. Enhanced versions: Lightning Strike: Heavy Attack and Lightning Strike: Extreme Attack.",
-				"damage": "786–1179% Max HP",
-				"cooldown": 16,
-				"mpCost": "150",
-				"effects": ["Knock Down", "Shield"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Warrior's Strike",
-				"description": "After jumping towards the front, Stark performs a powerful downward swing using his axe. Deals Fire elemental damage. Deals medium Break damage. When the final hit lands, it [Knocks Down] the target.",
-				"damage": "988–2030.89% Max HP",
-				"cooldown": 25,
-				"effects": ["Knock Down"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Pulverize",
-				"description": "Stark charges forward rapidly, jumps, and delivers a powerful downward axe strike. Deals Fire elemental damage. Deals weak Break damage. When this skill hits, it inflicts the [Airborne] effect. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Bind] effects, or a Shadow Skill.",
-				"damage": "954–1431% DEF",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Lightning Strike - Annihilation",
-				"description": "Stark descends from the air and strikes the ground powerfully with his axe. Deals Fire elemental damage. Deals almighty Break damage. When this skill hits, it inflicts the [Airborne] effect.",
-				"damage": "2226–3339% Max HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Reserved / Confidence / Courage",
 		"description": "The user gains the [Reserved] effect when entering any stage. When Stark or an ally successfully puts an enemy into the [Break] state, the [Break] state duration increases by 3 seconds. The user's Power Gauge cannot be charged normally, but if the [Courage] effect is active, their Power Gauge gains 100% charge. [Reserved]: Using Spiral Strike, Lightning Strike, Lightning Strike: Heavy Attack, or Lightning Strike: Extreme Attack activates the [Confidence] effect and triggers Whirling Strike. [Determination] effect activates when Whirling Strike is used. When [Courage] is activated, [Reserved] is removed. Duration: Infinite. [Confidence]: Increases Fire damage by 3%, Defense Penetration by 3%. At max stacks (4), removed and [Courage] activates. Duration: Infinite. [Determination]: Increases Lightning Strike variants damage by 10%, Critical Hit Rate by 10%. Duration: 3s. [Courage]: Fire damage +20%, Defense Penetration +20%. [Confidence] cannot activate while active. When removed, [Reserved] reactivates. Duration: 5s.",

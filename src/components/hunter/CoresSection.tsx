@@ -81,7 +81,7 @@ export function CoresSection({
 
 			{openPicker && <button type='button' class='fixed inset-0 z-40' onClick={() => setOpenPicker(null)} />}
 
-			<div class={`grid gap-3 ${compact ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-3'}`}>
+			<div class={`grid gap-3 ${compact ? 'grid-cols-1' : 'grid-cols-1'}`}>
 				{CORE_SLOTS.map(({ key, label, emoji }) => {
 					const selectedId = slots[key]
 					const selected = selectedId ? coreById.get(selectedId) : null

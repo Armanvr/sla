@@ -12,6 +12,7 @@
 	"mainAbility": "Fire Magic",
 	"exclusiveWeapon": "Equivalent Exchange",
 	"releaseDate": "2024-03-18",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Hunters Guild"],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Spark",
-				"description": "Jong-In attacks the enemy with flame bullets and flame spears.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "140–210% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "166–249% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "176–264% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Basic.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Blast",
-				"description": "Jong-In attacks the enemy by detonating the ground in front of him. Inflicts [Airborne] and [Burn] (100% ATK every 3s, 15s).",
-				"damage": "682–1023% ATK",
-				"element": "Fire",
-				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Rain of Flames",
-				"description": "Jong-In attacks the enemy by firing multiple summoned flame bullets forward.",
-				"damage": "1550–2325% ATK",
-				"cooldown": 15,
-				"mpCost": "150–198",
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Skill_1.png"
-			},
-			{
-				"name": "Flame Spear",
-				"description": "Jong-In attacks the enemy by continuously summoning flame spears in front of him.",
-				"damage": "1550–2325% ATK",
-				"cooldown": 15,
-				"mpCost": "150–198",
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Fire Barrage",
-				"description": "Jong-In attacks the enemy by summoning multiple flame spears at once. Knocks Down, inflicts [Burn] (100% ATK every 3s, 15s) and [Defense Decrease] (-15% Defense, 15s).",
-				"damage": "802–1648.56% ATK",
-				"cooldown": 25,
-				"effects": ["Knock Down", "Burn", "Defense Decrease -15%"],
-				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Celestial Fire Dragon",
-				"description": "Jong-In attacks the enemy by summoning a burning dragon. Knocks Down, inflicts [Burn] and [Defense Decrease] (-15% Defense, 15s).",
-				"damage": "936–1404% ATK",
-				"cooldown": 20,
-				"effects": ["Knock Down", "Burn", "Defense Decrease -15%"],
-				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "End of Days",
-				"description": "Jong-In attacks the enemy by summoning a large burning spear from the sky. Inflicts [Airborne].",
-				"damage": "2370–3555% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Choi_Jong-In/Choi_Jong-In_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "The Ultimate Hunter",
 		"description": "Choi Jong-In cannot deal Critical Hits, but his Attack increases by 50%. When End of Days is used, applies [The Ultimate Hunter] (resets cooldown of Rain of Flames and Flame Spear, Attack and Defense Penetration +20%, 15s).",

@@ -12,6 +12,7 @@
 	"mainAbility": "Illusion Magic (Petal and Butterfly-focused)",
 	"exclusiveWeapon": "Purple Butterfly's Dream",
 	"releaseDate": "2025-08-28",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Forever", "i-dle"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Anemone",
-				"description": "MINNIE performs a stylish slash, cutting down enemies with her scythe. Deals Dark elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "160–240% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "180–270% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "195–292.5% DEF"
-					}
-				],
-				"icon": ""
-			}
-		],
-		"core": [
-			{
-				"name": "Iris",
-				"description": "MINNIE leaps forward and slashes downward with her scythe. Deals Dark elemental damage. When this skill hits it [Knocks Down] the target. Enhanced version: Enhanced Iris.",
-				"damage": "1250–1875% DEF",
-				"element": "Dark",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Acacia",
-				"description": "After taking a stance, MINNIE charges in and performs a wide spinning slash. Deals Dark elemental damage. Increases damage dealt to Boss and Elite monsters by 30%. Taking a Counterattack stance grants a [Shield] equal to 10% of MINNIE's Defense when hit; activates Counterattack. When Counterattack is activated it also activates [Critical Hit Rate Increase]: Critical Hit Rate +30% for 20 seconds. Enhanced version: Enhanced Acacia.",
-				"damage": "1691–2536.5% DEF",
-				"cooldown": 20,
-				"mpCost": "135",
-				"effects": ["Shield", "Counterattack", "Critical Hit Rate Increase (+30%, 20s)"],
-				"icon": ""
-			},
-			{
-				"name": "Allium",
-				"description": "MINNIE unleashes a fan-shaped blast of energy in front of herself. Deals Dark elemental damage. When this skill hits, it inflicts the [Airborne] effect. Increases damage dealt to Normal monsters by 30%. When defeating an enemy, it activates [Critical Hit Damage Increase]: Critical Hit Damage +5%, stacking up to 5 times, Duration: Infinite. Enhanced version: Enhanced Allium.",
-				"damage": "1700–2550% DEF",
-				"cooldown": 20,
-				"mpCost": "180",
-				"effects": ["Airborne", "Critical Hit Damage Increase (+5%, up to 5 stacks)"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Lavender",
-				"description": "MINNIE raises her scythe in a wide upward slash, releasing a blade of energy towards the front. Deals Dark elemental damage. When this skill hits it inflicts the [Airborne] effect.",
-				"damage": "688–1414.22% DEF",
-				"cooldown": 25,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Lobelia",
-				"description": "MINNIE slices forward with the grace and beauty of a butterfly. Deals Dark elemental damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Blind] effects, or a Shadow Skill.",
-				"damage": "1908–2862% DEF",
-				"cooldown": 20,
-				"effects": [],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Edelweiss",
-				"description": "MINNIE prepares to strike in a garden of falling petals. Deals Dark elemental damage. When a total of 3 [Falling Petals] are removed the [Bloom] effect activates. When a total of 5 [Falling Petals] are removed it activates the [Full Bloom] effect. [Bloom]: Charges Power Gauge to 100%, Edelweiss changes to Bloom: Oblivia, Critical Hit Rate +30%, Duration: Infinite. [Full Bloom]: Removes [Bloom], Bloom: Oblivia becomes Full Bloom: Oblivia (damage +100%), Critical Hit Rate +50% during Full Bloom: Oblivia, Duration: Infinite.",
-				"damage": "3116–4674% DEF",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Bloom", "Full Bloom"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Violet Butterfly / Falling Petals",
 		"description": "The entire team gains [FOREVER] (+5% damage dealt, stacks up to 3 times, Infinite) when entering the Encore Mission and Instance Dungeon modes. Using Iris decreases the cooldown of Edelweiss by 25s and adds 100% Power Gauge charge (Cooldown: 20s). When Iris hits it applies [Red Spider Lily]: Dark damage taken from MINNIE +30%, 20s. Using Edelweiss activates [Violet Butterfly] and grants 3 [Falling Petals]. When the user tags out, [Violet Butterfly] is removed. [Violet Butterfly]: Activates Core Attack 1 time; Iris, Acacia, or Allium deal +50% additional damage; using them removes 1 [Falling Petal]; [Super Armor] granted while using them; Duration: 20s. [Falling Petals]: When removed, cooldowns of Acacia and Allium are reset; Duration: Infinite (stacks up to 5 times).",

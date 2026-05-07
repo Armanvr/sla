@@ -3,23 +3,47 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ember: #6b9ac4;
-  --color-ember-dim: #4059ad;
-  --color-ember-glow: #d9fff5;
-  --color-crimson: #c0192a;
-  --color-amber-sla: #4c2c72;
-  --color-bg-deep: #070508;
-  --color-bg-mid: #0e0b10;
-  --color-bg-panel: #120d15;
-  --color-text-sla: #f0e8dc;
-  --color-text-sla-secondary: #9a8a78;
-  --color-text-sla-dim: #4a3f35;
-  --color-border-sla: #2a1f18;
-  --color-border-sla-bright: #77b6ea;
+  /* Mana (primary) */
+  --color-mana: #6137ff;
+  --color-mana-bright: #c9bfff;
+  --color-mana-dim: #4400d9;
+  --color-mana-deep: #2e009c;
+  --color-mana-soft: #e3dcff;
+  /* Ember aliases */
+  --color-ember: #6137ff;
+  --color-ember-dim: #4400d9;
+  --color-ember-glow: #c9bfff;
+
+  /* Spectral */
+  --color-spectral: #c3c3ee;
+  --color-spectral-dim: #928ea3;
+
+  /* Danger */
+  --color-crimson: #ffb4ab;
+  --color-danger-bg: #93000a;
+
+  /* Surfaces */
+  --color-bg-deep: #000000;
+  --color-bg-base: #131313;
+  --color-bg-surface: #161616;
+  --color-bg-container: #1c1b1b;
+  --color-bg-elevated: #353534;
+  --color-bg-mid: #131313;
+  --color-bg-panel: #161616;
+
+  /* Text */
+  --color-text-sla: #ffffff;
+  --color-text-sla-secondary: #c9c3da;
+  --color-text-sla-muted: #928ea3;
+  --color-text-sla-dim: #484456;
+
+  /* Borders */
+  --color-border-sla: #353534;
+  --color-border-sla-bright: #484456;
 
   --font-hud: "Orbitron", monospace;
-  --font-mono-sla: "Share Tech Mono", monospace;
-  --font-body-sla: "Rajdhani", sans-serif;
+  --font-mono-sla: "Orbitron", monospace;
+  --font-body-sla: "Inter", sans-serif;
 }
 
 html,
@@ -41,8 +65,8 @@ body::before {
 		0deg,
 		transparent,
 		transparent 2px,
-		rgba(255, 74, 28, 0.025) 2px,
-		rgba(255, 74, 28, 0.025) 4px
+		rgba(97, 55, 255, 0.025) 2px,
+		rgba(97, 55, 255, 0.025) 4px
 	);
 	pointer-events: none;
 	z-index: var(--sla-z-scanline);

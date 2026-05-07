@@ -12,6 +12,7 @@
 	"mainAbility": "Black Lightning",
 	"exclusiveWeapon": "Night-cleaving Flash",
 	"releaseDate": "2025-11-20",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Scavenger Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Workflow",
-				"description": "Laura swings her whip and uses the end of it to deliver a powerful stab. Deals Light elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "146–219% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "210–315% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "216–324% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Deadline",
-				"description": "Laura delivers a powerful downward whip strike. Deals Light elemental damage. When this skill hits it Knocks Down the target.",
-				"damage": "874–1311% ATK",
-				"element": "Light",
-				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Checkpoint",
-				"description": "Laura strikes down with her whip to summon lightning. Deals Light elemental damage. When this skill hits it Knocks Down the target.",
-				"damage": "940–1410% ATK",
-				"cooldown": 8,
-				"mpCost": "150–198",
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Skill_1.png"
-			},
-			{
-				"name": "Task Loop",
-				"description": "Laura swings her whip repeatedly while the Skill Button is held down. Deals Light elemental damage. When the last attack in the combo hits it Knocks Down the target.",
-				"damage": "2028–3042% ATK",
-				"cooldown": 12,
-				"mpCost": "200–264",
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Corporate Escort",
-				"description": "After a short jump, Laura swings her whip repeatedly in midair. Deals Light elemental damage. When this skill hits it inflicts Airborne and Paralyze (3s interrupt) on the target. Using this skill grants the [Develop] effect (+15% damage dealt, removes debuffs, 30s) to the entire team.",
-				"damage": "615–1264.17% ATK",
-				"cooldown": 25,
-				"effects": ["Airborne", "Paralyze", "Develop"],
-				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Conference Call",
-				"description": "Laura swings her whip repeatedly while in midair. Deals Light elemental damage. Triggers via Extreme Evasion, Core Attack, Ultimate Skill, Stun, Blind, or Shadow Skill. When the final hit lands it Knocks Down the target.",
-				"damage": "930–1395% ATK",
-				"cooldown": 20,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Apex Administrator",
-				"description": "Laura manifests a giant leopard enveloped in lightning. Deals Light elemental damage. When this skill hits it inflicts Airborne on the target.",
-				"damage": "3022–4533% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Laura_Walker/Laura_Walker_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Black Lightning Protocol",
 		"description": "Using Checkpoint activates the [Deadline] effect 1 time. Using Corporate Escort or Apex Administrator when the entire team is comprised of Light members grants [Momentum] (+10% Defense Penetration, -10% damage taken, 60s) to the entire team. Using Task Loop grants the [Scout] effect on Light team members (restores HP equal to 2% of Laura's ATK every 3s, grants Shield equal to 3% of Laura's ATK every 3s; when Shield is active activates [Assistant]: ATK and DEF +1% per stack up to 10 stacks, 10s).",

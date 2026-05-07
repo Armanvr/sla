@@ -18,41 +18,54 @@ interface Swatch {
 
 const COLOR_GROUPS: Array<{ title: string; swatches: Swatch[] }> = [
 	{
-		title: 'Backgrounds',
+		title: 'Surfaces',
 		swatches: [
-			{ name: 'Deep', token: '--sla-bg-deep', value: '#070508' },
-			{ name: 'Mid', token: '--sla-bg-mid', value: '#0e0b10' },
-			{ name: 'Panel', token: '--sla-bg-panel', value: '#120d15' },
+			{ name: 'Deep', token: '--sla-bg-deep', value: '#000000' },
+			{ name: 'Base', token: '--sla-bg-base', value: '#131313' },
+			{ name: 'Surface', token: '--sla-bg-surface', value: '#161616' },
+			{ name: 'Container', token: '--sla-bg-container', value: '#1c1b1b' },
+			{ name: 'Elevated', token: '--sla-bg-elevated', value: '#353534' },
 		],
 	},
 	{
-		title: 'Ember (Accent)',
+		title: 'Mana (Accent Principal)',
 		swatches: [
-			{ name: 'Ember', token: '--sla-ember', value: '#ff4a1c' },
-			{ name: 'Ember Dim', token: '--sla-ember-dim', value: '#b83210' },
-			{ name: 'Ember Glow', token: '--sla-ember-glow', value: '#ff6b3d' },
+			{ name: 'Mana', token: '--sla-mana', value: '#6137ff' },
+			{ name: 'Mana Dim', token: '--sla-mana-dim', value: '#4400d9' },
+			{ name: 'Mana Bright', token: '--sla-mana-bright', value: '#c9bfff', dark: true },
+			{ name: 'Mana Deep', token: '--sla-mana-deep', value: '#2e009c' },
+			{ name: 'Mana Soft', token: '--sla-mana-soft', value: '#e3dcff', dark: true },
 		],
 	},
 	{
-		title: 'Signals',
+		title: 'Spectral (Secondaire)',
 		swatches: [
-			{ name: 'Crimson', token: '--sla-crimson', value: '#c0192a' },
-			{ name: 'Amber', token: '--sla-amber', value: '#ffaa44' },
+			{ name: 'Spectral', token: '--sla-spectral', value: '#c3c3ee', dark: true },
+			{ name: 'Spectral Dim', token: '--sla-spectral-dim', value: '#928ea3', dark: true },
+		],
+	},
+	{
+		title: 'Danger',
+		swatches: [
+			{ name: 'Danger', token: '--sla-danger', value: '#ffb4ab', dark: true },
+			{ name: 'Danger BG', token: '--sla-danger-bg', value: '#93000a' },
 		],
 	},
 	{
 		title: 'Text',
 		swatches: [
-			{ name: 'Primary', token: '--sla-text-primary', value: '#f0e8dc' },
-			{ name: 'Secondary', token: '--sla-text-secondary', value: '#9a8a78' },
-			{ name: 'Dim', token: '--sla-text-dim', value: '#4a3f35' },
+			{ name: 'Primary', token: '--sla-text-primary', value: '#ffffff', dark: true },
+			{ name: 'On Surface', token: '--sla-text-on-surface', value: '#e5e2e1', dark: true },
+			{ name: 'Secondary', token: '--sla-text-secondary', value: '#c9c3da', dark: true },
+			{ name: 'Muted', token: '--sla-text-muted', value: '#928ea3', dark: true },
+			{ name: 'Dim', token: '--sla-text-dim', value: '#484456' },
 		],
 	},
 	{
 		title: 'Borders',
 		swatches: [
-			{ name: 'Border', token: '--sla-border', value: '#2a1f18' },
-			{ name: 'Border Bright', token: '--sla-border-bright', value: '#4a2a1a' },
+			{ name: 'Border', token: '--sla-border', value: '#353534' },
+			{ name: 'Border Bright', token: '--sla-border-bright', value: '#484456' },
 		],
 	},
 	{
@@ -187,7 +200,7 @@ export function DesignSystemPage() {
 			<SectionHeader
 				tag='// 02'
 				title='Typographie'
-				description='Trois polices : Orbitron HUD, Share Tech Mono data, Rajdhani body.'
+				description='Deux polices : Orbitron HUD/labels, Inter body.'
 			/>
 			<Panel style={{ padding: 32, marginBottom: 64 }}>
 				<div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -216,13 +229,13 @@ export function DesignSystemPage() {
 						</div>
 					</div>
 					<div>
-						<Label>--sla-font-body (Rajdhani)</Label>
+						<Label>--sla-font-body (Inter)</Label>
 						<p style={{ margin: 0, color: 'var(--sla-text-primary)', fontSize: 'var(--sla-text-md)' }}>
 							The hunters move through the dungeon, weapons drawn, ready for the next encounter.
 						</p>
 					</div>
 					<div>
-						<Label>--sla-font-mono (Share Tech Mono)</Label>
+						<Label>--sla-font-mono (Orbitron)</Label>
 						<p
 							style={{
 								margin: 0,

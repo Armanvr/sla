@@ -363,7 +363,7 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 
 	return (
 		<div class='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
-			<BackLink />
+			<BackLink href='/workshops' />
 			<div style={{ marginTop: 24, display: 'flex', alignItems: 'center', gap: 16, marginBottom: 32 }}>
 				<img
 					src={`/assets/workshop/${raid.name}/${raid.icon}.png`}

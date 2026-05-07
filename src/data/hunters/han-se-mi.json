@@ -12,6 +12,7 @@
 	"mainAbility": "Healing, Buff, & Support Magic",
 	"exclusiveWeapon": "Coming of Age",
 	"releaseDate": "2024-08-22",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Hunters Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Leaf Blast",
-				"description": "Se-Mi swings her hands and fires a forward-facing bolt of magical energy.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "58–87% HP"
-					},
-					{
-						"stage": 2,
-						"damage": "60–90% HP"
-					},
-					{
-						"stage": 3,
-						"damage": "60–90% HP"
-					}
-				],
-				"icon": "/assets/hunters/Han_Se-Mi/Han_Se-Mi_Basic.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Refuse",
-				"description": "Se-Mi shoves away enemies with a massive bolt of magical energy. Inflicts [Airborne] on hit.",
-				"damage": "335–502.5% HP",
-				"element": "Wind",
-				"icon": "/assets/hunters/Han_Se-Mi/Han_Se-Mi_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Sharp Spouts",
-				"description": "Thorny sprouts burst upward at the enemy's feet in response to Se-Mi's lowered hand. Inflicts [Airborne] on hit. Grants [HP Recovery] to the team (restores 2.25% of Han Se-Mi's Max HP per second to the entire team for 3 seconds).",
-				"damage": "500–750% HP",
-				"cooldown": 15,
-				"mpCost": "300–396",
-				"effects": ["Airborne", "HP Recovery"],
-				"icon": "/assets/hunters/Han_Se-Mi/Han_Se-Mi_Skill_1.png"
-			},
-			{
-				"name": "Golden Meadow",
-				"description": "Se-Mi spreads her hands and a circular Protection Zone is created around her. Inflicts [Airborne] on hit. Restores 250 MP to Wind team members. Allies within [Protection Zone] continuously receive [Zone Effect] (MP recovery 15–22 per 3 seconds; Shield equal to 4% of Han Se-Mi's Max HP per 3 seconds).",
-				"damage": "930–1395% HP",
-				"cooldown": 30,
-				"mpCost": "500–660",
-				"effects": ["Airborne", "Protection Zone", "Zone Effect"],
-				"icon": "/assets/hunters/Han_Se-Mi/Han_Se-Mi_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Divine Field",
-				"description": "Se-Mi spreads her hands and a circular Protection Zone is created around her. Inflicts [Airborne] on hit and removes the target's Shield. Removes [Debuff Zone] in areas the skill lands. Protection Zone Duration: 15 seconds. Within [Protection Zone] the user and team receive [Fountain of Protective Mana] (MP recovery 40 per 3 seconds; Shield equal to 3% of Han Se-Mi's Max HP per 3 seconds).",
-				"damage": "224–460.44% HP",
-				"cooldown": 25,
-				"effects": ["Airborne", "Shield Removal", "Debuff Zone Removal", "Fountain of Protective Mana"],
-				"icon": "/assets/hunters/Han_Se-Mi/Han_Se-Mi_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Leaf Wind",
-				"description": "Se-Mi jumps into the air and lands hard, knocking back nearby enemies and churning up the ground nearby. Inflicts [Airborne] on final hit. Removes [Debuff Zone] in zones this skill lands.",
-				"damage": "235–352.5% HP",
-				"cooldown": 20,
-				"effects": ["Airborne", "Debuff Zone Removal"],
-				"icon": "/assets/hunters/Han_Se-Mi/Han_Se-Mi_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Vines of Vitality",
-				"description": "Se-Mi raises one hand and blesses her team members with vital life energy. Inflicts [Airborne] on hit. The entire team recovers HP equal to 20% of Han Se-Mi's Max HP. Applies [Lifeline] (Damage Taken -20%, HP recovery 1% of Han Se-Mi's Max HP per second to the entire team for 15 seconds).",
-				"damage": "1091–1636.5% HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne", "HP Recovery", "Lifeline"],
-				"icon": "/assets/hunters/Han_Se-Mi/Han_Se-Mi_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Breathe",
 		"description": "When the user uses Sharp Sprouts, Golden Meadow, or Vines of Vitality it grants [Breathe] buff to team members (cooldown: 15 seconds). [Breathe]: Increases the user's Basic Skill damage by 10% and Wind team members' Basic Skill Damage by 5% (25 seconds, max 2 stacks).",

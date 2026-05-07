@@ -2,18 +2,10 @@ import { useState } from 'preact/hooks'
 import { MiniLoadout } from './MiniLoadout'
 import type { Hunter } from './types'
 
-const elementAccent: Record<string, string> = {
-	Dark: 'border-purple-500/50',
-	Water: 'border-blue-500/50',
-	Fire: 'border-red-500/50',
-	Light: 'border-yellow-500/50',
-	Wind: 'border-emerald-500/50',
-}
-
-const rarityColors: Record<string, string> = {
-	SSR: 'text-amber-400',
-	SR: 'text-purple-400',
-	R: 'text-blue-400',
+const rarityClass: Record<string, string> = {
+	SSR: 'sla-rarity sla-rarity-ssr',
+	SR: 'sla-rarity sla-rarity-sr',
+	R: 'sla-rarity sla-rarity-r',
 }
 
 export function HunterSlot({
@@ -33,7 +25,6 @@ export function HunterSlot({
 }) {
 	const [open, setOpen] = useState(false)
 	const primaryEl = selected?.data.elements.find((e) => e.primary) ?? selected?.data.elements[0]
-	const accentClass = primaryEl ? (elementAccent[primaryEl.name] ?? 'border-zinc-600/50') : 'border-zinc-600/50'
 
 	return (
 		<div class='relative'>
@@ -42,7 +33,11 @@ export function HunterSlot({
 			)}
 
 			<div
-				class={`bg-zinc-800/50 border rounded-2xl p-4 transition-colors ${open ? 'border-purple-500/60' : accentClass}`}
+				class='sla-panel'
+				style={{
+					padding: 16,
+					...(open ? { outline: '1px solid var(--sla-mana)' } : {}),
+				}}
 			>
 				<button
 					type='button'
@@ -60,13 +55,25 @@ export function HunterSlot({
 								}}
 							/>
 							<div>
-								<p
-									class={`text-xs font-bold ${rarityColors[selected.data.rarity ?? ''] ?? 'text-zinc-400'}`}
-								>
+								<p class={rarityClass[selected.data.rarity ?? ''] ?? 'sla-label'}>
 									{selected.data.rarity}
 								</p>
-								<p class='text-sm font-semibold text-zinc-100 leading-tight'>{selected.data.name}</p>
-								{primaryEl && <p class='text-[10px] text-zinc-500 mt-0.5'>{primaryEl.name}</p>}
+								<p
+									style={{
+										fontFamily: 'var(--sla-font-hud)',
+										fontSize: 'var(--sla-text-xs)',
+										color: 'var(--sla-text-primary)',
+										fontWeight: 700,
+										lineHeight: 1.25,
+									}}
+								>
+									{selected.data.name}
+								</p>
+								{primaryEl && (
+									<p class='sla-label' style={{ marginTop: 2 }}>
+										{primaryEl.name}
+									</p>
+								)}
 							</div>
 							<button
 								type='button'
@@ -85,30 +92,33 @@ export function HunterSlot({
 							<div class='w-20 h-20 rounded-xl bg-zinc-700/20 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-3xl'>
 								+
 							</div>
-							<p class='text-xs text-zinc-500'>Chasseur {slot}</p>
+							<p class='sla-label'>Chasseur {slot}</p>
 						</>
 					)}
 				</button>
 
-				{selected?.data.weapon && (
-					<div class='mt-2 pt-2 border-t border-zinc-700/40 flex items-center gap-2'>
+				{selected && (
+					<div class='mt-2 pt-2 flex items-center gap-2' style={{ borderTop: '1px solid var(--sla-border)' }}>
 						<img
-							src={selected.data.weapon.icon}
-							alt={selected.data.weapon.name}
+							src={selected.data.weapon?.icon ?? '/assets/utils/Placeholder_Weapon_Icon.png'}
+							alt={selected.data.weapon?.name ?? 'Weapon'}
 							class='w-6 h-6 object-contain rounded flex-shrink-0'
 							onError={(e) => {
-								;(e.target as HTMLImageElement).style.display = 'none'
+								;(e.target as HTMLImageElement).src = '/assets/utils/Placeholder_Weapon_Icon.png'
 							}}
 						/>
-						<span class='text-[10px] text-zinc-500 truncate leading-tight'>
-							{selected.data.weapon.name}
+						<span
+							class='truncate leading-tight'
+							style={{ fontSize: 'var(--sla-text-xs)', color: 'var(--sla-text-muted)' }}
+						>
+							{selected.data.weapon?.name ?? '—'}
 						</span>
 					</div>
 				)}
 
 				{role && (
-					<div class={`${selected?.data.weapon ? '' : 'mt-2 pt-2 border-t border-zinc-700/40 '}text-center`}>
-						<span class='text-[10px] text-zinc-600 uppercase tracking-wider font-medium'>{role}</span>
+					<div class='text-center'>
+						<span class='sla-label'>{role}</span>
 					</div>
 				)}
 
@@ -122,7 +132,13 @@ export function HunterSlot({
 			</div>
 
 			{open && (
-				<div class='absolute z-50 top-full mt-1 left-0 w-64 max-h-72 overflow-y-auto bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl'>
+				<div
+					class='absolute z-50 top-full mt-1 left-0 w-64 max-h-72 overflow-y-auto shadow-2xl rounded-xl'
+					style={{
+						background: 'var(--sla-bg-elevated)',
+						border: '1px solid var(--sla-border)',
+					}}
+				>
 					<button
 						type='button'
 						onClick={() => {
@@ -134,9 +150,9 @@ export function HunterSlot({
 						<div class='w-8 h-8 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 flex-shrink-0'>
 							–
 						</div>
-						<span class='text-sm text-zinc-500'>— Vide —</span>
+						<span style={{ fontSize: 'var(--sla-text-sm)', color: 'var(--sla-text-muted)' }}>— Vide —</span>
 					</button>
-					<div class='border-t border-zinc-700/50' />
+					<div style={{ borderTop: '1px solid var(--sla-border)' }} />
 					{hunters.map((h) => (
 						<button
 							key={h.id}
@@ -156,11 +172,14 @@ export function HunterSlot({
 								}}
 							/>
 							<div class='text-left min-w-0'>
-								<p class='text-sm text-zinc-200 truncate'>{h.data.name}</p>
+								<p
+									class='truncate'
+									style={{ fontSize: 'var(--sla-text-sm)', color: 'var(--sla-text-secondary)' }}
+								>
+									{h.data.name}
+								</p>
 								{h.data.rarity && (
-									<p class={`text-[10px] ${rarityColors[h.data.rarity] ?? 'text-zinc-500'}`}>
-										{h.data.rarity}
-									</p>
+									<p class={rarityClass[h.data.rarity] ?? 'sla-label'}>{h.data.rarity}</p>
 								)}
 							</div>
 						</button>

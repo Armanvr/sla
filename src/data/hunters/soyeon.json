@@ -12,6 +12,7 @@
 	"mainAbility": "High-speed Dual-wielding Pistols",
 	"exclusiveWeapon": "Blazing Flash",
 	"releaseDate": "2025-08-28",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Forever", "i-dle"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Rapid Verse",
-				"description": "SOYEON effortlessly draws her weapon and fires. Deals Wind elemental damage. Deals weak Break damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "167–250.5% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "210–315% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "262–393% DEF"
-					}
-				],
-				"icon": ""
-			}
-		],
-		"core": [
-			{
-				"name": "Remix Shot",
-				"description": "SOYEON blasts enemies with her firearms crossed. Deals Wind elemental damage. Deals weak Break damage. When this skill hits it [Knocks Down] the target. Enhanced version: Remix Shot Ver. 2 (damage +50%).",
-				"damage": "635–952.5% DEF",
-				"element": "Wind",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Kill the Mic",
-				"description": "SOYEON leaps into a curved arc and fires toward the ground from the apex. Deals Wind elemental damage. Deals medium Break damage. When this skill hits it inflicts the [Airborne] effect. The user gains [Super Armor] while using this skill. Enhanced version: Kill the Mic Ver. 2 (damage +100%).",
-				"damage": "1584–2376% DEF",
-				"cooldown": 20,
-				"mpCost": "80",
-				"effects": ["Airborne", "Super Armor"],
-				"icon": ""
-			},
-			{
-				"name": "Hook and Chain",
-				"description": "SOYEON fires a special homing bullet that tracks the enemy. Deals Wind elemental damage. Deals medium Break damage. Enhanced version: Hook and Chain Ver. 2 (damage +50%).",
-				"damage": "2020–3030% DEF",
-				"cooldown": 20,
-				"mpCost": "110",
-				"effects": [],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Trigger Flow",
-				"description": "SOYEON rapidly appears and moves around the battlefield while firing bullets. Deals Wind elemental damage. Deals medium Break damage. When this skill hits it inflicts the [Airborne] effect. Using this skill activates the [Lockdown] effect (Break duration +3s when putting a target in Break state, Duration: Infinite). When this skill hits it triggers [Underdog] on the target: Wind damage taken +8%, damage taken +8%, Duration: 20s.",
-				"damage": "890–1829.44% DEF",
-				"cooldown": 25,
-				"effects": ["Airborne", "Lockdown", "Underdog"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Cypher Flow",
-				"description": "SOYEON moves quickly through her enemies while unleashing a barrage of bullets. Deals Wind elemental damage. Deals medium Break damage. When this skill hits it inflicts the [Airborne] effect. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Blind] effects, or a Shadow Skill.",
-				"damage": "1100–1650% DEF",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Killing Verse",
-				"description": "SOYEON unleashes a rapid barrage of bullets, almost invisible to the eye. Deals Wind elemental damage. Deals heavy Break damage. When this skill hits it inflicts the [Airborne] effect.",
-				"damage": "5312–7968% DEF",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Beat Maker / Drop the Beat / Magnum",
 		"description": "The entire team gains [FOREVER] (+5% damage dealt, stacks up to 3 times, Infinite) when entering the Encore Mission and Instance Dungeon modes. Using Kill the Mic, Hook and Chain, Kill the Mic Ver. 2, or Hook and Chain Ver. 2 loads the [Magnum] with 1 round. Using Hook and Chain triggers [Beat Maker] (Kill the Mic → Ver. 2 +100% dmg; Hook and Chain → Ver. 2 +50% dmg; Super Armor while using them; Duration: 10s). Using Kill the Mic within 20s after Beat Maker is removed triggers [Drop the Beat]: activates Core Attack and changes Remix Shot to Remix Shot Ver. 2 (+50% damage); every fire after using Remix Shot Ver. 2 consumes 1 Magnum round and triggers [Magnum Chain] (Core Attack damage +15%, Power Gauge +1.2%, Duration: 3s, stacks up to 6 times); Duration: 20s.",

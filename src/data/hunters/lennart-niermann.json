@@ -12,6 +12,7 @@
 	"mainAbility": "Wind-magic projectiles",
 	"exclusiveWeapon": "The Weight of Responsibility",
 	"releaseDate": "2025-06-05",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Richter Guild"],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Eisensturm",
-				"description": "Lennart hurls mana at his enemies, alternating which hand he uses as he blasts, then finishes them off with a brief rapid-fire attack. Deals Wind elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "160–240% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "165–247.5% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "173–259.5% DEF"
-					}
-				],
-				"icon": "/assets/hunters/Lennart_Niermann/Lennart_Niermann_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Wolfsjäger",
-				"description": "Lennart charges up briefly before dashing forward and striking upward. Deals Wind elemental damage. When the final hit lands it inflicts Airborne. If enemies are within 5m, the user immediately attacks.",
-				"damage": "1133–1699.5% DEF",
-				"element": "Wind",
-				"icon": "/assets/hunters/Lennart_Niermann/Lennart_Niermann_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Fenriszahn",
-				"description": "Lennart slashes through enemies with a spinning ring of mana power. Deals Wind elemental damage. Inflicts Airborne. A powerful mana-imbued zone remains for 5s dealing continuous damage to enemies within.",
-				"damage": "5613–8419.5% DEF",
-				"cooldown": 20,
-				"mpCost": "450–594",
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Lennart_Niermann/Lennart_Niermann_Skill_1.png"
-			},
-			{
-				"name": "Kaisers Rache",
-				"description": "From the air, Lennart unleashes a shower of mana towards the ground like hard-light rain. Deals Wind elemental damage. Knocks Down on final hit. For 7s calls down a rain of mana power that deals AoE damage.",
-				"damage": "4913–7369.5% DEF",
-				"cooldown": 20,
-				"mpCost": "450–594",
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Lennart_Niermann/Lennart_Niermann_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Wolfspranke",
-				"description": "Lennart slashes through enemies with a spinning ring of mana. Deals Wind elemental damage. Inflicts Airborne. A powerful mana-imbued zone remains for 5s dealing continuous damage.",
-				"damage": "2070–4255% DEF",
-				"cooldown": 25,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Lennart_Niermann/Lennart_Niermann_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Nachtwolf",
-				"description": "Lennart twirls in a sliding motion and performs a mana-based punch. Deals Wind elemental damage. Triggers via Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind. Inflicts Airborne.",
-				"damage": "2106–3159% DEF",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Lennart_Niermann/Lennart_Niermann_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Todes-Symphonie",
-				"description": "Lennart creates mana duplicates of himself that charge at a central point from all sides over a certain period of time. Deals Wind elemental damage. Knocks Down on final hit. For 7s continuous damage is dealt by the trail of strikes along the path traveled.",
-				"damage": "5687–8530.5% DEF",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Lennart_Niermann/Lennart_Niermann_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Analysis",
 		"description": "When Todes-Symphonie hits, activates [Hunter's Mark] on the target (if target has active HP Recovery or Unrecoverable, becomes [Hunter's Cage]: +30% damage taken from Lennart, 20s). When the user uses Fenriszahn or Kaisers Rache they gain 6 instances of [Analysis]; Todes-Symphonie grants 12 instances. User's Defense increases by 20% while [Analysis] is active ([Analysis]: grants Super Armor, loses 1 instance when hit by an enemy attack, infinite, stacks up to 20).",

@@ -12,6 +12,7 @@
 	"mainAbility": "Beast Transformation",
 	"exclusiveWeapon": "Howling White Tiger's Soul",
 	"releaseDate": "2024-04-17",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["White Tiger Guild"],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Magic Beast's Claws",
-				"description": "Yoonho tears the enemies apart with sharp steel claws.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "457–685.5% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "465–697.5% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "475–712.5% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Basic.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Slaughter",
-				"description": "Yoonho tears the enemy apart using the steel claws on his hands.",
-				"damage": "847–1270.5% ATK",
-				"element": "Dark",
-				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Violent Approach",
-				"description": "Yoonho cuts enemies into pieces by quickly swinging the steel claws on his hands.",
-				"damage": "1907–2860.5% ATK",
-				"cooldown": 8,
-				"mpCost": "150–198",
-				"effects": [],
-				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Skill_1.png"
-			},
-			{
-				"name": "Extreme Attack: Beast Form",
-				"description": "Yoonho strengthens himself with a White Tiger roar. Activates [Extreme Attack: Beast Form] (Super Armor; Attack +100%; Attack Speed +30%; damage taken +15% for 12 seconds).",
-				"damage": "390–585% ATK",
-				"cooldown": 15,
-				"mpCost": "250–330",
-				"effects": ["Super Armor", "Extreme Attack: Beast Form"],
-				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Magic Beast's Instinct",
-				"description": "Yoonho awakens his magic beast instincts and roars. Applies [Quick Attack: Beast Form] (Attack +30%, damage taken +10%, 15 seconds).",
-				"damage": "1486–3054.56% ATK",
-				"cooldown": 25,
-				"effects": ["Quick Attack: Beast Form"],
-				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Magic Beast's Ambush",
-				"description": "Yoonho lunges at the enemy in midair and tears them apart.",
-				"damage": "1420–2130% ATK",
-				"cooldown": 20,
-				"effects": [],
-				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Divinity",
-				"description": "Yoonho scrapes the ground and makes a powerful upward slash, tearing the enemy apart. Silver Mane Baek Yoonho's damage increases by 30% for every 10% of his HP lost.",
-				"damage": "4345–6517.5% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": [],
-				"icon": "/assets/hunters/Silver_Mane_Baek_Yoonho/Silver_Mane_Baek_Yoonho_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Magic Beast's Rage",
 		"description": "The user's skills deal additional damage equal to 100% of their HP lost. When Slaughter or Violent Approach hits, inflicts [Bleed] on the target (damage equal to 1% of current HP every 3 seconds for 30 seconds). Inflicts [Curse of the Magic Beast] to targets immune to [Bleed] (damage equal to 1000% of Silver Mane Baek Yoonho's Max HP every 3 seconds for 30 seconds). Increases the damage of Magic Beast's Claws and Slaughter by 60% when dealing damage to targets with [Bleed or Curse of the Magic Beast] applied.",

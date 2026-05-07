@@ -12,6 +12,7 @@
 	"mainAbility": "Orb-based Telekinesis & Gravity Magic",
 	"exclusiveWeapon": "The Glamour of Self-worth",
 	"releaseDate": "2024-10-10",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Hunters Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Firestorm",
-				"description": "Gina fires discs and mana spikes dealing Fire elemental damage. Final hit inflicts Airborne.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "180–270% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "190–285% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "200–300% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Gina/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Forced Descent",
-				"description": "Gina uses gravity manipulation to slam down enemies. Knock Down on final hit.",
-				"damage": "818–1227% ATK",
-				"element": "Fire",
-				"icon": "/assets/hunters/Gina/Gina_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Gravitational Mass",
-				"description": "Gina launches an explosive orb using gravity. Airborne effect on landing.",
-				"damage": "1415–2122.5% ATK",
-				"cooldown": 15,
-				"mpCost": "300–396",
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Gina/Gina_Skill_1.png"
-			},
-			{
-				"name": "Path of Extinction",
-				"description": "Gina fires a continuous beam while held, stacking Concurrent effect up to 4 times.",
-				"damage": "2251–3376.5% ATK",
-				"cooldown": 15,
-				"mpCost": "300–396",
-				"effects": ["Concurrent (max 4 stacks)"],
-				"icon": "/assets/hunters/Gina/Gina_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Concentrated Gravity",
-				"description": "Creates a Gravitational Field dealing 20% support skill damage. Applies Body Retrograde: 2% HP restoration every 3s, 2% Power Gauge charge every 3s (15s).",
-				"damage": "500–1027.8% ATK",
-				"cooldown": 25,
-				"effects": ["Gravitational Field", "Body Retrograde"],
-				"icon": "/assets/hunters/Gina/Gina_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Piercing Firestorm",
-				"description": "Triggers after Extreme Evasion, Core Attack, Ultimate, Stun, or Blind.",
-				"damage": "765–1148.5% ATK",
-				"cooldown": 20,
-				"effects": [],
-				"icon": "/assets/hunters/Gina/Gina_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Liberation",
-				"description": "Gina unleashes a massive mana blast, creating a Gravitational Field and inflicting Airborne.",
-				"damage": "3190–4785% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Gravitational Field", "Airborne"],
-				"icon": "/assets/hunters/Gina/Gina_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Mana Circulation",
 		"description": "Builds Countercurrent stacks (max 5) from Core/Skill usage. At max stacks, grants Mana Circulation: +15% Attack, +15% Fire damage (15s). Gravitational Field creates Body Retrograde for all members.",

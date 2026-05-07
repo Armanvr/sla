@@ -12,6 +12,7 @@
 	"mainAbility": "Mana-powered sword wielding",
 	"exclusiveWeapon": "The Path a Hero Must Take",
 	"releaseDate": "2025-02-13",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Blade Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Kitsune",
-				"description": "Three-stage slash attack dealing Fire elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "186–279% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "193–289.5% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "203–304.5% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Tawata_Kanae/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Uzumaki",
-				"description": "Kanae connects a wire to both her swords, throws them, and then reels them back in. Inflicts Knock Down.",
-				"damage": "1142–1713% ATK",
-				"element": "Fire",
-				"icon": "/assets/hunters/Tawata_Kanae/Tawata_Kanae_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Munechika",
-				"description": "Kanae uses her wires to pull herself forward, adding momentum as she dices up her enemies with quick, consecutive slashes. Final hit causes Airborne. Auto-triggers Extreme Evasion if hit midair.",
-				"damage": "1921–2881.5% ATK",
-				"cooldown": 15,
-				"mpCost": "300–396",
-				"effects": ["Airborne", "Extreme Evasion (if hit midair)"],
-				"icon": "/assets/hunters/Tawata_Kanae/Tawata_Kanae_Skill_1.png"
-			},
-			{
-				"name": "Kamaitachi",
-				"description": "Kanae duel-wields two swords to quickly cut through her enemies with incredible speed. Inflicts Knock Down.",
-				"damage": "1618–2427% ATK",
-				"cooldown": 10,
-				"mpCost": "200–264",
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Tawata_Kanae/Tawata_Kanae_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Aragoto",
-				"description": "Kanae pummels her enemies with two high-energy, consecutive cross-slashes. Final hit causes Knock Down.",
-				"damage": "2415–4964.17% ATK",
-				"cooldown": 25,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Tawata_Kanae/Tawata_Kanae_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Noragami",
-				"description": "Kanae slices up her enemies with two consecutive cross-slashes while moving forward. Activatable after Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind. Inflicts Knock Down.",
-				"damage": "1106–1659% ATK",
-				"cooldown": 20,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Tawata_Kanae/Tawata_Kanae_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Tsuchigumo",
-				"description": "Kanae fires off multiple wires to bind the enemy and then executes a sword technique that cuts the enemy's very lifeline. Final hit causes Knock Down.",
-				"damage": "3335–5002.5% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Tawata_Kanae/Tawata_Kanae_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Instinct",
 		"description": "Gaining Crimson/Scarlet/Fire effects transforms Kamaitachi into ultimate-level damage. Damage to Break-state targets increases 24%. Three cascading effect types with increasing bonuses.",

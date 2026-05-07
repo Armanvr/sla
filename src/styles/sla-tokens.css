@@ -1,45 +1,65 @@
 /*
  * ═══════════════════════════════════════════════════════════════
- *  SLA EMBERFALL — DESIGN TOKENS v1.0
+ *  SLA EMBERFALL — SHADOW MONARCH — DESIGN TOKENS v2.0
  *  À importer en premier dans votre projet :
  *  @import url('./sla-tokens.css');
  * ═══════════════════════════════════════════════════════════════
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap");
 
 /* ── COULEURS ────────────────────────────────────────────────── */
 :root {
-	/* Fonds */
-	--sla-bg-deep: #070508; /* fond principal, le plus sombre */
-	--sla-bg-mid: #0e0b10; /* fond secondaire */
-	--sla-bg-panel: #120d15; /* fond des panneaux/cartes */
+	/* Surfaces */
+	--sla-bg-deep: #000000;
+	--sla-bg-base: #131313;
+	--sla-bg-surface: #161616;
+	--sla-bg-container: #1c1b1b;
+	--sla-bg-container-2: #201f1f;
+	--sla-bg-container-3: #2a2a2a;
+	--sla-bg-elevated: #353534;
+	/* Aliases pour compatibilité */
+	--sla-bg-mid: #131313;
+	--sla-bg-panel: #161616;
 
-	/* Ember (accent principal) */
-	--sla-ember: #6b9ac4; /* couleur principale */
-	--sla-ember-dim: #4059ad; /* variante sombre */
-	--sla-ember-glow: #d9fff5; /* variante lumineuse / hover */
+	/* Mana (accent principal — electric purple) */
+	--sla-mana: #6137ff;
+	--sla-mana-bright: #c9bfff;
+	--sla-mana-dim: #4400d9;
+	--sla-mana-deep: #2e009c;
+	--sla-mana-soft: #e3dcff;
+	/* Aliases ember → mana pour compatibilité */
+	--sla-ember: #6137ff;
+	--sla-ember-dim: #4400d9;
+	--sla-ember-glow: #c9bfff;
+
+	/* Spectral (secondaire — lavande) */
+	--sla-spectral: #c3c3ee;
+	--sla-spectral-dim: #928ea3;
+	--sla-amber: #928ea3;
 
 	/* Danger */
-	--sla-crimson: #c0192a; /* rouge critique / alerte */
-
-	/* Ambre */
-	--sla-amber: #4c2c72; /* highlight secondaire */
+	--sla-crimson: #ffb4ab;
+	--sla-danger: #ffb4ab;
+	--sla-danger-bg: #93000a;
 
 	/* Texte */
-	--sla-text-primary: #f0e8dc; /* texte principal */
-	--sla-text-secondary: #9a8a78; /* texte secondaire / labels */
-	--sla-text-dim: #4a3f35; /* texte très atténué */
+	--sla-text-primary: #ffffff;
+	--sla-text-on-surface: #e5e2e1;
+	--sla-text-secondary: #c9c3da;
+	--sla-text-muted: #928ea3;
+	--sla-text-dim: #484456;
 
 	/* Bordures */
-	--sla-border: #2a1f18; /* bordure par défaut */
-	--sla-border-bright: #77b6ea; /* bordure active / hover */
+	--sla-border: #353534;
+	--sla-border-bright: #484456;
+	--sla-border-mana: rgba(97, 55, 255, 0.2);
 
 	/* ── TYPOGRAPHIE ─────────────────────────────────────────── */
 
-	--sla-font-hud: "Orbitron", monospace; /* titres, labels HUD */
-	--sla-font-mono: "Share Tech Mono", monospace; /* codes, données, identifiants */
-	--sla-font-body: "Rajdhani", sans-serif; /* texte courant */
+	--sla-font-hud: "Orbitron", monospace;
+	--sla-font-mono: "Orbitron", monospace;
+	--sla-font-body: "Inter", sans-serif;
 
 	/* Tailles */
 	--sla-text-xs: 9px;
@@ -86,12 +106,12 @@
 
 	/* ── OMBRES / GLOW ───────────────────────────────────────── */
 
-	--sla-glow-sm: 0 0 10px rgba(107, 154, 196, 0.3);
-	--sla-glow-md: 0 0 20px rgba(107, 154, 196, 0.4), 0 0 40px rgba(107, 154, 196, 0.15);
-	--sla-glow-lg: 0 0 30px rgba(107, 154, 196, 0.5), 0 0 60px rgba(107, 154, 196, 0.2);
+	--sla-glow-sm: 0 0 10px rgba(97, 55, 255, 0.35);
+	--sla-glow-md: 0 0 15px rgba(97, 55, 255, 0.4), 0 0 30px rgba(97, 55, 255, 0.2);
+	--sla-glow-lg: 0 0 25px rgba(97, 55, 255, 0.5), 0 0 60px rgba(97, 55, 255, 0.25);
 
-	--sla-glow-text-sm: 0 0 10px rgba(107, 154, 196, 0.5);
-	--sla-glow-text-md: 0 0 20px rgba(107, 154, 196, 0.6), 0 0 40px rgba(107, 154, 196, 0.3);
+	--sla-glow-text-sm: 0 0 10px rgba(97, 55, 255, 0.5);
+	--sla-glow-text-md: 0 0 18px rgba(97, 55, 255, 0.6), 0 0 40px rgba(97, 55, 255, 0.3);
 
 	/* ── ANIMATIONS ──────────────────────────────────────────── */
 
@@ -147,8 +167,8 @@
 		0deg,
 		transparent,
 		transparent 2px,
-		rgba(107, 154, 196, 0.025) 2px,
-		rgba(107, 154, 196, 0.025) 4px
+		rgba(97, 55, 255, 0.025) 2px,
+		rgba(97, 55, 255, 0.025) 4px
 	);
 	pointer-events: none;
 	z-index: var(--sla-z-scanline);
@@ -160,7 +180,7 @@
 	left: 0;
 	right: 0;
 	height: 2px;
-	background: linear-gradient(90deg, transparent, rgba(107, 154, 196, 0.4), transparent);
+	background: linear-gradient(90deg, transparent, rgba(97, 55, 255, 0.4), transparent);
 	pointer-events: none;
 	z-index: calc(var(--sla-z-scanline) - 2);
 	animation: sla-scan-sweep 8s ease-in-out infinite;
@@ -169,15 +189,15 @@
 /* ── GRID BACKGROUND ─────────────────────────────────────────── */
 .sla-grid-bg {
 	background-image:
-		linear-gradient(rgba(107, 154, 196, 0.04) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(107, 154, 196, 0.04) 1px, transparent 1px);
+		linear-gradient(rgba(97, 55, 255, 0.04) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(97, 55, 255, 0.04) 1px, transparent 1px);
 	background-size: 60px 60px;
 }
 
 /* ── PANEL ───────────────────────────────────────────────────── */
 .sla-panel {
 	position: relative;
-	background: linear-gradient(135deg, rgba(18, 13, 21, 0.95) 0%, rgba(14, 11, 16, 0.95) 100%);
+	background: linear-gradient(135deg, rgba(22, 22, 22, 0.95) 0%, rgba(19, 19, 19, 0.95) 100%);
 	border: var(--sla-border-width) solid var(--sla-border-bright);
 	clip-path: polygon(
 		0 0,
@@ -193,7 +213,7 @@
 	position: absolute;
 	inset: 0;
 	clip-path: inherit;
-	background: linear-gradient(135deg, rgba(107, 154, 196, 0.04) 0%, transparent 50%);
+	background: linear-gradient(135deg, rgba(97, 55, 255, 0.04) 0%, transparent 50%);
 	pointer-events: none;
 }
 
@@ -252,7 +272,7 @@
 }
 .sla-btn-primary {
 	background: var(--sla-ember);
-	color: #0a0000;
+	color: #ffffff;
 }
 .sla-btn-primary:hover {
 	background: var(--sla-ember-glow);
@@ -265,7 +285,7 @@
 	border: var(--sla-border-width) solid var(--sla-ember-dim);
 }
 .sla-btn-ghost:hover {
-	background: rgba(107, 154, 196, 0.08);
+	background: rgba(97, 55, 255, 0.08);
 	border-color: var(--sla-ember);
 	box-shadow: var(--sla-glow-md);
 	transform: translateY(-1px);
@@ -367,7 +387,7 @@
 /* ── DATA READOUT ────────────────────────────────────────────── */
 .sla-readout {
 	padding: var(--sla-space-3) var(--sla-space-5);
-	background: rgba(18, 13, 21, 0.8);
+	background: rgba(0, 0, 0, 0.7);
 	border: var(--sla-border-width) solid var(--sla-border-bright);
 	border-left: var(--sla-border-accent-width) solid var(--sla-ember-dim);
 }
@@ -402,9 +422,9 @@
 	position: relative;
 	overflow: hidden;
 	height: 36px;
-	background: rgba(107, 154, 196, 0.05);
-	border-top: var(--sla-border-width) solid rgba(107, 154, 196, 0.15);
-	border-bottom: var(--sla-border-width) solid rgba(107, 154, 196, 0.15);
+	background: rgba(97, 55, 255, 0.05);
+	border-top: var(--sla-border-width) solid rgba(97, 55, 255, 0.15);
+	border-bottom: var(--sla-border-width) solid rgba(97, 55, 255, 0.15);
 	display: flex;
 	align-items: center;
 }
@@ -450,18 +470,31 @@
 	0%,
 	100% {
 		text-shadow:
-			0 0 20px rgba(107, 154, 196, 0.5),
-			0 0 40px rgba(107, 154, 196, 0.25);
+			0 0 20px rgba(97, 55, 255, 0.5),
+			0 0 40px rgba(97, 55, 255, 0.25);
 	}
 	33% {
 		text-shadow:
-			0 0 30px rgba(107, 154, 196, 0.7),
-			0 0 60px rgba(107, 154, 196, 0.4);
+			0 0 30px rgba(97, 55, 255, 0.7),
+			0 0 60px rgba(97, 55, 255, 0.4);
 	}
 	66% {
 		text-shadow:
-			0 0 15px rgba(107, 154, 196, 0.4),
-			0 0 30px rgba(107, 154, 196, 0.2);
+			0 0 15px rgba(97, 55, 255, 0.4),
+			0 0 30px rgba(97, 55, 255, 0.2);
+	}
+}
+@keyframes sla-mana-pulse {
+	0%,
+	100% {
+		box-shadow:
+			0 0 15px rgba(97, 55, 255, 0.4),
+			0 0 30px rgba(97, 55, 255, 0.2);
+	}
+	50% {
+		box-shadow:
+			0 0 25px rgba(97, 55, 255, 0.6),
+			0 0 50px rgba(97, 55, 255, 0.35);
 	}
 }
 @keyframes sla-scan-sweep {

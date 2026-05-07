@@ -10,13 +10,13 @@
 			"weakness": ["Wind", "Fire", "Water"],
 			"name": "Manticore, the Eager Engager",
 			"icon": "assets/guild-boss/Boss_Manticore__the_Eager_Engager_Icon.png",
-			"active": true
+			"active": false
 		},
 		{
-			"weakness": [],
+			"weakness": ["Wind", "Light"],
 			"name": "Queen Ant",
 			"icon": "assets/guild-boss/Boss_Queen_Ant_Icon.png",
-			"active": false
+			"active": true
 		}
 	],
 	"teams": [
@@ -69,7 +69,7 @@
 				{ "id": "thomas-andre", "role": "Striker", "build": "Build Niv. 120" },
 				{ "id": "min-byung-gu", "role": "Supporter", "build": "Build Niv. 120 (B)" },
 				{ "id": "miyeon", "role": "Striker", "build": "Build Niv. 120" },
-				{ "id": "cha-hae-in", "role": "Striker", "build": "Build Niv. 120" }
+				{ "id": "antoine-martinez", "role": "Elemental Stacker", "build": "Build Niv. 120" }
 			]
 		},
 		{

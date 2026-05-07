@@ -12,6 +12,7 @@
 	"mainAbility": "Ice Magic",
 	"exclusiveWeapon": "Ice Witch",
 	"releaseDate": "2024-05-29",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["The Justitia Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Touch of Winter",
-				"description": "Summons ice crystals that deal Water elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "190–285% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "195–292.5% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "200–300% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Alicia_Blanche/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Frost Arrow",
-				"description": "Fires an ice arrow that pierces through enemies with ice fragments.",
-				"damage": "1050–1575% ATK",
-				"element": "Water",
-				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Winter Storm",
-				"description": "Unleashes a storm of ice that has a 30% chance to Freeze. Grants Ice Body Armor (6% ATK as shield, 8s).",
-				"damage": "1040–1560% ATK",
-				"cooldown": 5,
-				"mpCost": "200–264",
-				"effects": ["Freeze (30%)", "Ice Body Armor"],
-				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Skill_1.png"
-			},
-			{
-				"name": "Ice Needle",
-				"description": "Launches a barrage of ice needles that launch enemies into the air.",
-				"damage": "1850–2775% ATK",
-				"cooldown": 12,
-				"mpCost": "250–330",
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Ice Detonation",
-				"description": "Detonates ice to deal damage and send enemies airborne. Grants Ice Body Armor.",
-				"damage": "600–1233.33% ATK",
-				"cooldown": 25,
-				"effects": ["Airborne", "Freeze", "Ice Body Armor"],
-				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Eternal Frost",
-				"description": "Triggers on Extreme Evasion, Core, Ultimate, Stun, or Blind. Sends enemies airborne and grants Ice Body Armor.",
-				"damage": "1000–1500% ATK",
-				"cooldown": 20,
-				"effects": ["Airborne", "Ice Body Armor"],
-				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Absolute Zero",
-				"description": "Drops the temperature to absolute zero, dealing massive damage. Inflicts Airborne, Freeze, and applies 5 Frost stacks.",
-				"damage": "3100–4650% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne", "Freeze", "5× Frost"],
-				"icon": "/assets/hunters/Alicia_Blanche/Alicia_Blanche_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Frost Accumulation",
 		"description": "Eternal Frost, Winter Storm, and Ice Needle apply Frost stacks. Each stack boosts Core Attack (Bitter Cold Spear) damage by 60% (max 180% at 5 stacks).",

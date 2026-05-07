@@ -12,6 +12,7 @@
 	"mainAbility": "Beast Transformation",
 	"exclusiveWeapon": "Suppressed White Tiger's Soul",
 	"releaseDate": "2024-03-18",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["White Tiger Guild"],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "White Flame Strike",
-				"description": "Yoonho attacks the enemy by combining his fists and feet.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "184–276% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "193–289.5% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "205–307.5% DEF"
-					}
-				],
-				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Basic.png"
-			}
-		],
-		"core": [
-			{
-				"name": "White Flame Pummel",
-				"description": "Yoonho strikes quickly with his fists and feet and then performs a powerful upward strike.",
-				"damage": "820–1230% DEF",
-				"element": "Light",
-				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Ferocious Spirit",
-				"description": "After charging towards the front, Yoonho leaps and punches upward with his fist enveloped in white flames. Yoonho then gathers his strength and strikes down.",
-				"damage": "926–1389% DEF",
-				"cooldown": 8,
-				"mpCost": "150–198",
-				"effects": [],
-				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Skill_1.png"
-			},
-			{
-				"name": "White Flame Gale Kick",
-				"description": "After wrapping white flames around his feet, Yoonho leaps to attack. After leaping, he strikes with a powerfully condensed white flame.",
-				"damage": "1730–2595% DEF",
-				"cooldown": 12,
-				"mpCost": "200–264",
-				"effects": [],
-				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "White Flame Storm Kick",
-				"description": "Yoonho spins once and performs a powerful downward strike with a foot enveloped in white flames. Deals Violent Explosion damage equal to 400% of Defense and applies [Defense Decrease] (Defense -20%, 12 seconds) to the target.",
-				"damage": "654–1344.33% DEF",
-				"cooldown": 25,
-				"effects": ["Violent Explosion", "Defense Decrease"],
-				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Damnation",
-				"description": "Yoonho moves forward quickly, performs a spinning kick, spins once, and strikes down powerfully.",
-				"damage": "1052–1578% DEF",
-				"cooldown": 20,
-				"effects": [],
-				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Truth: White Flame Strike",
-				"description": "Yoonho releases a barely-controlled torrent of power and unleashes a concentrated white flame strike towards the front. Deals Violent Explosion damage equal to 400% of Defense and applies [Defense Decrease] (Defense -20%, 12 seconds) to the target.",
-				"damage": "3456–5184% DEF",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Violent Explosion", "Defense Decrease"],
-				"icon": "/assets/hunters/Baek_Yoonho/Baek_Yoonho_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "White Flames",
 		"description": "The [White Flames] effect is applied to the last hit of all skills, excluding Basic Attacks. When [White Flames] reaches 3 stacks, it activates [Violent Explosion] (damage equal to 400% of Defense, inflicts [Defense Decrease] -20% for 12 seconds). While [White Flames] is active the target's Defense decreases by an additional 2.5% (stacks up to 2 times, infinite duration).",

@@ -12,6 +12,7 @@
 	"mainAbility": "Tarot card-based buffs/debuffs/healing",
 	"exclusiveWeapon": "Unexpected Luck",
 	"releaseDate": "2024-10-31",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Helpers Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Arcana",
-				"description": "Isla attacks with tarot card magic dealing Dark elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "138–207% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "144–216% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "153–229.5% DEF"
-					}
-				],
-				"icon": "/assets/hunters/Isla_Wright/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Horoscope",
-				"description": "Isla attacks and grants one random buff to the entire team: Strength (+12% damage, 12s), The Magician (Shield equal to 12% DEF, 12s), or Wheel of Fortune (+12% Critical Hit Rate and Damage, 12s).",
-				"damage": "600–900% DEF",
-				"element": "Dark",
-				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Cosmic Emergence",
-				"description": "Inflicts Airborne. Activates The Star: instantly restores HP equal to 8% of Isla Wright's DEF to the entire team and removes all debuffs.",
-				"damage": "800–1200% DEF",
-				"cooldown": 15,
-				"mpCost": "200–264",
-				"effects": ["Airborne", "The Star (team heal + debuff removal)"],
-				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Skill_1.png"
-			},
-			{
-				"name": "Death Nova",
-				"description": "Knocks down target. Activates The Tower: increases Dark damage of Dark members by 5% (10s).",
-				"damage": "800–1200% DEF",
-				"cooldown": 15,
-				"mpCost": "200–264",
-				"effects": ["Knock Down", "The Tower"],
-				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Crossing Stars",
-				"description": "Inflicts Airborne. Removes Debuff Zones. Activates The Star (team heal + debuff removal) and grants one random buff (Strength, The Magician, or Wheel of Fortune).",
-				"damage": "600–1233.33% DEF",
-				"cooldown": 25,
-				"effects": ["Airborne", "The Star", "Random Buff"],
-				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Celestial Discord",
-				"description": "Triggers via Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Knocks down target. Grants one random buff.",
-				"damage": "600–900% DEF",
-				"cooldown": 20,
-				"effects": ["Knock Down", "Random Buff"],
-				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Arcana: The World / Arcana: Death",
-				"description": "Alternates between The World and Death based on last skill used. Inflicts Airborne. The World: restores HP equal to 15% DEF and grants Shield equal to 15% DEF (8s). Death: increases team Damage Increase by 6% of Isla's Damage Increase stat; Dark hunters gain +12% Ultimate Skill damage (16s).",
-				"damage": "1300–1950% DEF",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne", "The World / Death"],
-				"icon": "/assets/hunters/Isla_Wright/Isla_Wright_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Tarot Mastery",
 		"description": "Determines ultimate variant (The World or Death) based on the last skill used. Stage 3 basic attack charges Power Gauge fully.",

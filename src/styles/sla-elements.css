@@ -127,7 +127,7 @@
 	align-items: center;
 	gap: var(--sla-space-6);
 	padding: var(--sla-space-3) var(--sla-space-6);
-	background: rgba(7, 5, 8, 0.85);
+	background: rgba(0, 0, 0, 0.7);
 	backdrop-filter: blur(8px);
 	border-bottom: 1px solid var(--sla-border-bright);
 }
@@ -160,7 +160,7 @@
 .sla-nav-link.active {
 	color: var(--sla-ember);
 	border-left: 3px solid var(--sla-ember);
-	background: rgba(255, 74, 28, 0.06);
+	background: rgba(97, 55, 255, 0.08);
 }
 .sla-nav-clock {
 	font-family: var(--sla-font-mono);

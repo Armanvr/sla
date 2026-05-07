@@ -12,6 +12,7 @@
 	"mainAbility": "Body Enhancement / Superhuman Strength / Hand-to-hand Combat / Telekinesis",
 	"exclusiveWeapon": "The True King",
 	"releaseDate": "2024-11-28",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Scavenger Guild"],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Cold-blooded Pummel",
-				"description": "Thomas attacks the enemies in front of himself mercilessly, dealing Light elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "150–225% DEF"
-					},
-					{
-						"stage": 2,
-						"damage": "154–231% DEF"
-					},
-					{
-						"stage": 3,
-						"damage": "160–240% DEF"
-					}
-				],
-				"icon": "/assets/hunters/Thomas_Andre/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Gigantic Hammer Slam",
-				"description": "Thomas strikes downward with his fist like it's a hammer. Knocks down target. Grants 2% Defense Shield during use.",
-				"damage": "1090–1635% DEF",
-				"element": "Light",
-				"icon": "/assets/hunters/Thomas_Andre/Thomas_Andre_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Absolute Demolition",
-				"description": "Thomas swings his fists quickly and strikes mercilessly. Final hit inflicts Airborne. Grants 2% Defense Shield.",
-				"damage": "1300–1950% DEF",
-				"cooldown": 12,
-				"mpCost": "150–198",
-				"effects": ["Airborne", "Shield (2% DEF)"],
-				"icon": "/assets/hunters/Thomas_Andre/Thomas_Andre_Skill_1.png"
-			},
-			{
-				"name": "Colossal Crush",
-				"description": "Thomas leaps and strikes downward at enemies with wolf-shaped energy blast. Knocks down target. Grants 2% Defense Shield.",
-				"damage": "1300–1950% DEF",
-				"cooldown": 12,
-				"mpCost": "150–198",
-				"effects": ["Knock Down", "Shield (2% DEF)"],
-				"icon": "/assets/hunters/Thomas_Andre/Thomas_Andre_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Return of the King",
-				"description": "Thomas leaps into the air and strikes downward with wolf-shaped energy blast. Grants entire team Steel Armor (25s): +10% Critical Rate/Damage when shield active, +10% Defense Shield.",
-				"damage": "691–1420.39% DEF",
-				"cooldown": 25,
-				"effects": ["Steel Armor"],
-				"icon": "/assets/hunters/Thomas_Andre/Thomas_Andre_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Volley Crash",
-				"description": "After barrage of forward punches, Thomas powerfully slams the ground. Triggers via Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Knocks down target.",
-				"damage": "1053–1579.5% DEF",
-				"cooldown": 20,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Thomas_Andre/Thomas_Andre_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Ruler's Judgement",
-				"description": "Thomas reaches peak destructive power and transforms into embodiment of destruction. Activates Steel Tyrant (30s): Absolute Demolition/Colossal Crush +100% damage, Shield persists 10s, +20% damage reduction, +10% Defense Shield. Changes ultimate to Black Hole Crash (3510–5265% DEF, damage +2% per 1000 Shield, max +20%).",
-				"damage": "3510–5265% DEF",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Steel Tyrant", "Black Hole Crash", "Knock Down"],
-				"icon": "/assets/hunters/Thomas_Andre/Thomas_Andre_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Overwhelming Power",
 		"description": "When activating Absolute Demolition, Colossal Crush, Gigantic Hammer Slam, or Volley Crash, triggers Overwhelming Power (stacks to 5, 25s each): Defense +30%, Shield Acquisition Chance +2%. Ultimate available after 5 stacks (36s cooldown). Team Fight mode: +24% damage.",

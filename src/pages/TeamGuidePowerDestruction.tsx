@@ -64,12 +64,11 @@ const ELEMENT_RESISTANCE_ICON: Record<string, string> = {
 interface RotationEntry {
 	weakness: string[]
 	resistance: string[]
-	activeWeeks: number[]
+	active: boolean
 }
 
 function getCurrentRotation(): RotationEntry | null {
-	const week = getGameWeek(new Date())
-	return (teamsConfig.weaknessRotation as RotationEntry[]).find((r) => r.activeWeeks.includes(week)) ?? null
+	return (teamsConfig.weaknessRotation as RotationEntry[]).find((r) => r.active) ?? null
 }
 
 function getDefaultElement(rotation: RotationEntry | null): string {
@@ -289,25 +288,40 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 				/>
 			</div>
 
-			<main style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-				<WeekRotationBanner rotation={rotation} />
-
-				<ElementTabs
-					teams={teamsConfig.teams}
-					activeElement={activeElement}
-					onSwitch={switchElement}
-					weekWeaknesses={rotation?.weakness ?? []}
-					weekResistances={rotation?.resistance ?? []}
-				/>
-
-				<JinwooPanel selectedWeapons={selectedWeapons} onWeaponSelect={setWeaponSlot} />
-
-				<hr class='sla-divider' />
+			<main style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+				<section>
+					<SectionHeader
+						tag='// SECTION 01'
+						title='Rotation hebdomadaire'
+						description='Faiblesses et résistances élémentaires de la semaine en cours.'
+					/>
+					<WeekRotationBanner rotation={rotation} />
+					<div style={{ marginTop: 16 }}>
+						<ElementTabs
+							teams={teamsConfig.teams}
+							activeElement={activeElement}
+							onSwitch={switchElement}
+							weekWeaknesses={rotation?.weakness ?? []}
+							weekResistances={rotation?.resistance ?? []}
+						/>
+					</div>
+				</section>
 
 				<section>
-					<p class='sla-label' style='margin-bottom: 16px'>
-						Chasseurs
-					</p>
+					<SectionHeader
+						tag='// SECTION 02'
+						title='Armes de Jinwoo'
+						description='Sélectionne les armes optimales pour le contenu actif.'
+					/>
+					<JinwooPanel selectedWeapons={selectedWeapons} onWeaponSelect={setWeaponSlot} />
+				</section>
+
+				<section>
+					<SectionHeader
+						tag='// SECTION 03'
+						title='Chasseurs'
+						description='Trois chasseurs recommandés pour cet élément actif.'
+					/>
 					<div class='grid grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<HunterSlot
@@ -322,12 +336,12 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 					</div>
 				</section>
 
-				<hr class='sla-divider' />
-
 				<section>
-					<p class='sla-label' style='margin-bottom: 16px'>
-						Ombres
-					</p>
+					<SectionHeader
+						tag='// SECTION 04'
+						title='Ombres'
+						description="Ombres recommandées pour renforcer l'équipe."
+					/>
 					<div class='grid grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<ShadowSlot

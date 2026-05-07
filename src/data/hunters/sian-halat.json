@@ -12,6 +12,7 @@
 	"mainAbility": "Body Enhancement / Swordsmanship",
 	"exclusiveWeapon": "Crimson Shadow",
 	"releaseDate": "2026-01-15",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Ahjin Guild"],
 	"gender": "Male",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Royal Swordsmanship: Chain Attack",
-				"description": "Sian swings his broadsword quickly to attack enemies.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "196-294% of Attack"
-					},
-					{
-						"stage": 2,
-						"damage": "214-321% of Attack"
-					},
-					{
-						"stage": 3,
-						"damage": "177-265.5% of Attack"
-					}
-				],
-				"icon": "/assets/hunters/Sian_Halat/Sian_Halat_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Royal Swordsmanship: Judgment",
-				"description": "Sian spins to slash enemies, then leaps and slams his broadsword downward towards the front.",
-				"damage": "1020-1530% of Attack",
-				"element": "Dark",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Royal Swordsmanship: Black Flash",
-				"description": "Sian attacks by unleashing a razor-sharp strike of concentrated mana from his sword.",
-				"damage": "2290-3435% of Attack",
-				"cooldown": 10,
-				"mpCost": "75-99",
-				"effects": ["Medium Elemental Accumulation", "Airborne", "Super Armor"],
-				"icon": ""
-			},
-			{
-				"name": "Royal Swordsmanship: Rush",
-				"description": "Sian swiftly slashes across a wide area and delivers a powerful strike, destroying the enemy's formation.",
-				"damage": "3132-4698% of Attack",
-				"cooldown": 22,
-				"mpCost": "100-132",
-				"effects": ["Medium Elemental Accumulation", "Airborne", "Super Armor"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Royal Swordsmanship: Scarlet Moon",
-				"description": "Sian unleashes sword energy shaped like a giant crescent moon to attack enemies.",
-				"damage": "1815-3730.83% of Attack",
-				"cooldown": 25,
-				"effects": ["Heavy Elemental Accumulation", "Airborne"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Royal Swordsmanship: Judgment Strike",
-				"description": "Sian rushes into the battlefield and strikes at the enemy's weak point.",
-				"damage": "1902-2853% of Attack",
-				"cooldown": 20,
-				"effects": ["Medium Elemental Accumulation", "Airborne"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Knight's Pride",
-				"description": "Sian channels his inner strength into his broadsword and performs a powerful strike towards the front, leading the battlefield to victory.",
-				"damage": "5190-7785% of Attack",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Heavy Elemental Accumulation", "Airborne"],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Flawless Swordsmanship",
 		"description": "Each time Royal Swordsmanship: Judgment, Black Flash, or Rush hit, they charge the [Flawless Swordsmanship] Gauge. When the gauge reaches 50% or more, it activates [Crimson Sword Dance]. When Black Flash or Rush hit, they activate the [Crimson Fury] effect.",

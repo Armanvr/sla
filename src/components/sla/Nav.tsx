@@ -8,7 +8,6 @@ interface NavLink {
 
 const LINKS: NavLink[] = [
 	{ href: '/', label: 'Home' },
-	{ href: '/compare', label: 'Compare' },
 	{ href: '/design-system', label: 'Design' },
 ]
 
@@ -26,12 +25,12 @@ export function Nav() {
 	const time = useClock()
 
 	return (
-		<header class='sla-nav'>
+		<header class='sla-nav' style={{ justifyContent: 'center' }}>
 			<a href='/' class='sla-nav-logo'>
 				SLA <span class='sla-nav-logo-accent'>{'// ARISE'}</span>
 			</a>
 			<span class='sla-tag' style={{ marginLeft: 4 }}>
-				v3.0.0
+				v4.0.0
 			</span>
 			<nav style={{ display: 'flex', gap: 4, marginLeft: 16 }}>
 				{LINKS.map((l) => {
@@ -43,7 +42,7 @@ export function Nav() {
 					)
 				})}
 			</nav>
-			<div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 }}>
+			<div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
 				<span class='sla-status-dot' />
 				<span class='sla-label'>Online</span>
 				<span class='sla-nav-clock'>{time}</span>

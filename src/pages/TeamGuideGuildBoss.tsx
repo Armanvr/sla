@@ -166,24 +166,39 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 				/>
 			</div>
 
-			<main style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-				{activeBoss && <ActiveBossBanner boss={activeBoss} />}
-
-				<ElementTabs
-					teams={teamsConfig.teams}
-					activeElement={activeElement}
-					onSwitch={switchElement}
-					weekWeaknesses={bossWeaknesses}
-				/>
-
-				<JinwooPanel selectedWeapons={selectedWeapons} onWeaponSelect={setWeaponSlot} />
-
-				<hr class='sla-divider' />
+			<main style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+				<section>
+					<SectionHeader
+						tag='// SECTION 01'
+						title='Boss actif'
+						description='Faiblesses et éléments recommandés pour le boss en rotation.'
+					/>
+					{activeBoss && <ActiveBossBanner boss={activeBoss} />}
+					<div style={{ marginTop: 16 }}>
+						<ElementTabs
+							teams={teamsConfig.teams}
+							activeElement={activeElement}
+							onSwitch={switchElement}
+							weekWeaknesses={bossWeaknesses}
+						/>
+					</div>
+				</section>
 
 				<section>
-					<p class='sla-label' style='margin-bottom: 16px'>
-						Chasseurs
-					</p>
+					<SectionHeader
+						tag='// SECTION 02'
+						title='Armes de Jinwoo'
+						description='Sélectionne les armes optimales pour le contenu actif.'
+					/>
+					<JinwooPanel selectedWeapons={selectedWeapons} onWeaponSelect={setWeaponSlot} />
+				</section>
+
+				<section>
+					<SectionHeader
+						tag='// SECTION 03'
+						title='Composition'
+						description='Six chasseurs recommandés pour ce boss.'
+					/>
 					<div class='grid grid-cols-3 gap-4'>
 						{slots.map((s, i) => (
 							<HunterSlot

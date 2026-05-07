@@ -12,6 +12,7 @@
 	"mainAbility": "Healing & Enchantment Magic / Disguise",
 	"exclusiveWeapon": "Eternal Slumber",
 	"releaseDate": "2024-03-18",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Hunters Association"],
 	"gender": "Male",
@@ -67,92 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Judgment of Light",
-				"description": "Byung-Gu attacks the enemy by swinging his mace powerfully. Deals Light elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "53–79.5% Max HP"
-					},
-					{
-						"stage": 2,
-						"damage": "55–82.5% Max HP"
-					},
-					{
-						"stage": 3,
-						"damage": "57–85.5% Max HP"
-					}
-				],
-				"icon": ""
-			}
-		],
-		"core": [
-			{
-				"name": "Holy Mace",
-				"description": "Byung-Gu attacks the enemy by powerfully striking down with his mace. Deals Light elemental damage. Knocks Down the target. When Disguised, the user's damage is increased by 50%.",
-				"damage": "172–258% Max HP",
-				"element": "Light",
-				"icon": ""
-			}
-		],
-		"skill": [
-			{
-				"name": "Light's Glimmer",
-				"description": "Byung-Gu attacks the enemy and recovers allies' HP by unlocking the power of light. Deals Light elemental damage. Knocks Down the target. Applies [Light's Glimmer]: entire team recovers HP equal to 0.5% of Min Byung-Gu's Max HP every second (10 seconds). When Disguised, Recovery Rate increases by 100%.",
-				"damage": "203–304.5% Max HP",
-				"cooldown": 8,
-				"mpCost": "150–198",
-				"effects": ["Knock Down", "Light's Glimmer (HP Recovery 0.5% per sec, 10s)"],
-				"icon": ""
-			},
-			{
-				"name": "Conviction of Light",
-				"description": "The summoned divination circle of light moves forward slowly and attacks the enemy. Deals Light elemental damage. Applies [Punishment] effect: enemy's damage taken increases by 5% (20 seconds). When Disguised, the Punishment effect increases to 15%.",
-				"damage": "333–499.5% Max HP",
-				"cooldown": 12,
-				"mpCost": "200–264",
-				"effects": ["Punishment (Damage Taken +5%, 20s)"],
-				"icon": ""
-			}
-		],
-		"support": [
-			{
-				"name": "Judgment of Righteousness",
-				"description": "Byung-Gu attacks the enemy by creating a divination circle with his mace, and grants additional effects to allies. Deals Light elemental damage. Knocks Down the target. Applies [Light's Glimmer] and [Punishment] effects. [Heavenly Voice]: entire team recovers HP equal to 1.2% of Min Byung-Gu's Max HP every second (10 seconds). [Song of the Battlefield]: increases damage taken by 18% (20 seconds).",
-				"damage": "76–156.22% Max HP",
-				"cooldown": 25,
-				"effects": ["Knock Down", "Light's Glimmer", "Punishment", "Heavenly Voice", "Song of the Battlefield"],
-				"icon": ""
-			}
-		],
-		"qte": [
-			{
-				"name": "Divine Punishment",
-				"description": "Byung-Gu attacks the enemy with multiple flashes and divination circles. Deals Light elemental damage. Usage Conditions: Extreme Evasion, Core Attack, Ultimate Skill, Stun, or Blind. Recharges Power Gauge by 50%.",
-				"damage": "220–330% Max HP",
-				"cooldown": 20,
-				"effects": ["Power Gauge +50%"],
-				"icon": ""
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Heavenly Blessing",
-				"description": "Byung-Gu attacks the enemy by creating a large divination circle of light, and grants additional effects to allies. Deals Light elemental damage. Applies [Heavenly Blessing] to entire team: damage dealt and Critical Hit Rate increase by 12% (12 seconds). When Disguised, applies [Critical Hit Damage Increase]: team's Critical Hit damage increases equal to 40% of the amount exceeding Min Byung-Gu's basic Critical Hit damage (12 seconds).",
-				"damage": "284–426% Max HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": [
-					"Heavenly Blessing (Damage +12%, Crit Rate +12%, 12s)",
-					"Critical Hit Damage Increase (when Disguised)"
-				],
-				"icon": ""
-			}
-		]
-	},
 	"passive": {
 		"name": "Disguise",
 		"description": "When tagging in or using Divine Punishment, applies the [Disguise] effect. [Disguise]: Decreases damage taken by 50%; Enhances specific skills' effects; When hit, removes [Disguise]. Duration: 10 seconds.",

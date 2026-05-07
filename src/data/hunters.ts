@@ -1,6 +1,7 @@
 import type { HunterData } from '../components/hunter/types'
 import aliciaData from './hunters/alicia-blanche.json'
 import amamiyaData from './hunters/amamiya-mirei.json'
+import antoineData from './hunters/antoine-martinez.json'
 import baekYoonhoData from './hunters/baek-yoonho.json'
 import chaHaeInData from './hunters/cha-hae-in.json'
 import chaHaeInPspData from './hunters/cha-hae-in-pure-sword-princess.json'
@@ -62,6 +63,7 @@ export const hunters: HunterEntry[] = [
 	{ id: 'charlotte', data: charlotteData },
 	{ id: 'choi-jong-in', data: choiData },
 	{ id: 'christopher-reed', data: christopherData },
+	{ id: 'antoine-martinez', data: antoineData },
 	{ id: 'elena-renault', data: elenaData },
 	{ id: 'emma-laurent', data: emmaData },
 	{ id: 'esil-radiru', data: esilData },

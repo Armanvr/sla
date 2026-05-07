@@ -12,6 +12,7 @@
 	"mainAbility": "Mana-propelled Ice-magic Bullets",
 	"exclusiveWeapon": "Melody of Iron and Blood",
 	"releaseDate": "2025-04-10",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Korean Hunters Association"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Ice Blitz",
-				"description": "Fires high-speed ice bullets dealing Water elemental damage.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "148–222% Max HP"
-					},
-					{
-						"stage": 2,
-						"damage": "150–225% Max HP"
-					},
-					{
-						"stage": 3,
-						"damage": "152–228% Max HP"
-					}
-				],
-				"icon": "/assets/hunters/Seorin/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Ice Shard Magnum",
-				"description": "Uses bike to fire ice bullets with Airborne effect. User gains Super Armor.",
-				"damage": "550–825% Max HP",
-				"element": "Water",
-				"icon": "/assets/hunters/Seorin/Seorin_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Frozen Spin",
-				"description": "Spinning attack with evasion mechanic. Inflicts Airborne. Triggers Extreme Evasion if hit during rotation. User gains Super Armor.",
-				"damage": "963–1444.5% Max HP",
-				"cooldown": 15,
-				"mpCost": "300–396",
-				"effects": ["Airborne", "Super Armor", "Extreme Evasion (if hit)"],
-				"icon": "/assets/hunters/Seorin/Seorin_Skill_1.png"
-			},
-			{
-				"name": "Polar Surge",
-				"description": "Vertical ascent with ground bombardment. Inflicts Airborne. User gains Super Armor.",
-				"damage": "957–1435.5% Max HP",
-				"cooldown": 10,
-				"mpCost": "400–528",
-				"effects": ["Airborne", "Super Armor"],
-				"icon": "/assets/hunters/Seorin/Seorin_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Frozen Drift",
-				"description": "Circular motion attack triggering Elegant Charisma: extends Break duration +3s and activates Limited Break (+33% damage, 20s).",
-				"damage": "570–1171.67% Max HP",
-				"cooldown": 25,
-				"effects": ["Elegant Charisma", "Limited Break"],
-				"icon": "/assets/hunters/Seorin/Seorin_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Glacier Spin",
-				"description": "Braking maneuver with barrage. Triggers via Extreme Evasion, Core Attack, Ultimate, Stun, or Blind. Inflicts Airborne.",
-				"damage": "715–1072.5% Max HP",
-				"cooldown": 20,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Seorin/Seorin_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Frost Chaser",
-				"description": "Full missile barrage with icy shockwave. Inflicts Airborne.",
-				"damage": "1634–2451% Max HP",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne"],
-				"icon": "/assets/hunters/Seorin/Seorin_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Pinpoint Missiles",
 		"description": "Extends Break state duration +3s. Activates Pinpoint Missiles via Frozen Spin, Polar Surge, Ice Shard Magnum, or Frozen Drift. Frozen Spin/Ice Shard Magnum/Glacier Spin fire 2 missiles; Polar Surge fires 4. Each missile deals 150% Max HP Water damage and inflicts Subzero (+1% Water damage taken, max 10 stacks, 30s).",

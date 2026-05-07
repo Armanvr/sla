@@ -4,6 +4,52 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [4.0.0] — 2026-05-07
+
+### Added
+- **Sidebar de navigation globale** (`SideNav`) — panneau latéral fixe sur toutes les pages avec icônes HUD : Hunters, Compare, Dungeons, Power of Destruction, Guild Boss, Shadows
+  - Fond `#0d0d1a` (teinture mana), bordure droite `--sla-mana`, lien actif highlighté
+  - Sticky (`position: sticky; top: 52px`) pour ne pas masquer le header
+- **Page Hunters** (`/hunters`) — liste complète des chasseurs par élément avec filtre par catégorie
+  - Cards horizontales inspirées de `NewHunterSpotlight` : image à gauche, info à droite
+  - Tri automatique : `newHunter: true` en premier dans chaque groupe
+  - Badge **NEW** + glow mana pour les chasseurs récents
+- **Page Shadows** (`/shadows`) — guide des ombres invocables (anciennement section de la HomePage)
+- **Page Workshops** (`/workshops`) — guide des raids Workshop (anciennement section de la HomePage)
+- **Composant `NewHunterSpotlight`** — zone mise en avant sous le LiveFeed pour les chasseurs avec `newHunter: true`
+  - Layout horizontal en row, fond dégradé violet/ember, bordure et glow mana
+- **Footer** global — copyright "© 2026 Arise Emberfall" sur toutes les pages
+- **Antoine Martinez** — config chasseur complète (`src/data/hunters/antoine-martinez.json`)
+  - Light / Elemental Stacker — National Level SSR, sorti le 2026-05-07
+  - Arme exclusive : Saint's Benediction
+  - Passive Holy Retribution, 5 advancements, kit complet (Shattered Equilibrium, Unforgiving Blessed Light, Light of Shattered Sorrow, Judgement of Severed Fate, Calamity's Retribution, Tragedy Cleaver, The Angel's Stay)
+- **Champ `newHunter`** — clé booléenne optionnelle dans `HunterData` pour identifier les chasseurs récents
+
+### Changed
+- **Homepage** — refonte complète
+  - Hero centré, 3 sections initiales supprimées au profit d'une section **Fonctionnalités du système** : 4 feature cards en grille alternée rectangle/carré (Hunters, Power & Destruction, Guild Boss, Workshop)
+  - `NewHunterSpotlight` intégré sous le LiveFeed
+  - Ticker mis à jour avec Antoine Martinez
+- **Fiche chasseur** (`HunterProfile`) — redesign complet en grille 3 colonnes
+  - **Section 01 — Détails** : Image (col 1 × 2 rows) | Base Stats max level (col 2) | Profil compact + passive (col 2) | Advancements (col 3 × 2 rows)
+  - **Section 02 — Recommandations** : Équipements (cols 1-2) | Cores (col 3)
+  - Toutes les sections auto-dépliées (suppression des `CollapsibleSection`)
+  - Base Stats : niveau max uniquement (niveau 1 retiré)
+  - Section Skills entièrement supprimée
+  - BackLink pointe vers `/hunters`
+- **EquipmentSection** — ordre colonne réorganisé : Bonus de sets → Armure → Bijoux
+- **CoresSection** — affichage en colonne unique (plus de grille 3-col)
+- **Données chasseurs** — clé `skills` supprimée de l'ensemble des 48+ fichiers JSON
+- **Guild Boss + P&D** — sections redécoupées avec titres `SectionHeader` (Boss actif / Rotation → Armes de Jinwoo → Composition / Chasseurs → Ombres)
+- **HunterSlot** — style migré de Tailwind zinc vers design system SLA (`sla-panel`, vars CSS)
+- **Power & Destruction** — `weaknessRotation` unifié avec le format Guild Boss : `activeWeeks[]` → `active: boolean`
+- **Icônes** — emoji (`🧠 🛡️ ✨ ⚔️ 💨 👁️`) remplacés par symboles HUD (`◇ ◈ ✦ ⚔ ◃ ◎`) dans `constants.ts`
+- **Nav** — éléments centrés, lien Compare retiré (présent dans SideNav), version `v4.0.0`
+
+### Removed
+- **Section Skills** de la fiche chasseur — composants `SkillsSection` et `SkillCard` supprimés
+- **Clé `skills`** retirée de `HunterData` (interface TypeScript) et de tous les fichiers JSON chasseurs
+
 ## [3.0.0] — 2026-04-30
 
 ### Added
@@ -55,7 +101,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - Full skill set: Danse d'Argent, Trahison d'Argent, Piège d'Argent, Furie d'Argent, Triple Estoc, Éclat de Folie, Prison d'Argent
   - Passive: Mercury Arts (Winter Chill, Tide of Silver, Obsession's Grasp)
   - 5 advancements, equipment stats, core build, and recommended builds
-
 
 ## [1.0.0] — 2026-03-17
 

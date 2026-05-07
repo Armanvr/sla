@@ -12,6 +12,7 @@
 	"mainAbility": "Otherworldly Magic",
 	"exclusiveWeapon": "Overdrive",
 	"releaseDate": "2024-07-10",
+	"newHunter": false,
 	"occupation": ["Hunter", "Model"],
 	"affiliation": ["Ahjin Guild"],
 	"gender": "Female",
@@ -67,89 +68,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Model Markswoman",
-				"description": "Soohyun gathers magical energy and releases a beam to the front.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "148–222% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "158–237% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "172–258% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Basic.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Perfect Shot",
-				"description": "Soohyun rotates her firearm, gathers magical energy, and fires a powerful shot.",
-				"damage": "800–1200% ATK",
-				"element": "Fire",
-				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Trick Shot",
-				"description": "Soohyun somersaults backwards and fires bullets at targets in front of her.",
-				"damage": "800–1200% ATK",
-				"cooldown": 10,
-				"mpCost": "150–198",
-				"effects": [],
-				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Skill_1.png"
-			},
-			{
-				"name": "Kill Shot",
-				"description": "Soohyun gathers magical energy to fire multiple high-powered beams. Always deals Fire elemental damage as if it is the target's weakness.",
-				"damage": "1450–2175% ATK",
-				"cooldown": 15,
-				"mpCost": "150–198",
-				"effects": ["Airborne", "Fire Weakness Override"],
-				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Pulse Fire",
-				"description": "Soohyun gathers magical energy to fire multiple high-powered beams at enemies. Grants [Spotlight] (Defense Penetration +18%, Damage +18% of Defense Penetration, 18s) to Sung Jinwoo.",
-				"damage": "800–1200% ATK",
-				"cooldown": 25,
-				"effects": ["Spotlight (Sung Jinwoo)"],
-				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Firing Swarm",
-				"description": "Soohyun creates four drones nearby, uses the drones to gather energy in the air, and unleashes a beam.",
-				"damage": "800–1200% ATK",
-				"cooldown": 20,
-				"effects": ["Knock Down"],
-				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Zeroed-in Blast",
-				"description": "Soohyun deploys magic firearms simultaneously around her, gathers magical energy, and releases it all at once.",
-				"damage": "2750–4125% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": [],
-				"icon": "/assets/hunters/Yoo_Soohyun/Yoo_Soohyun_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Spotlight / Magic Firearm",
 		"description": "Using Trick Shot or Firing Swarm grants [Spotlight] (Defense Penetration +24%, Damage +24% of Defense Penetration, 24s). Using Firing Swarm or Zeroed-in Blast grants [Magic Firearm] (magic firearms deal 160% ATK; inflicts [Magic Reaction]: Fire damage taken +1%, Recovery Rate -4%, 60s, stacks x20).",

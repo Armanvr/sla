@@ -12,6 +12,7 @@
 	"mainAbility": "Body Enhancement, Telekinesis, Golden Flames",
 	"exclusiveWeapon": "Strategy for Victory",
 	"releaseDate": "2025-12-18",
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["Federal Bureau of Hunters"],
 	"gender": "Male",
@@ -41,89 +42,6 @@
 			"primary": true
 		}
 	],
-	"skills": {
-		"basic": [
-			{
-				"name": "Rising Star",
-				"description": "Multiple punches finished with a kick. Applies Fire Elemental Accumulation and inflicts Airborne.",
-				"stages": [
-					{
-						"stage": 1,
-						"damage": "187–280.5% ATK"
-					},
-					{
-						"stage": 2,
-						"damage": "240–360% ATK"
-					},
-					{
-						"stage": 3,
-						"damage": "300–450% ATK"
-					}
-				],
-				"icon": "/assets/hunters/Christopher_Reed/Hunter_Basic_Skill.png"
-			}
-		],
-		"core": [
-			{
-				"name": "Offensive Pass",
-				"description": "Gathers mana and fires a magic bullet. Applies Fire Elemental Accumulation and grants Super Armor.",
-				"damage": "1047–1570.5% ATK",
-				"element": "Fire",
-				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Core.png"
-			}
-		],
-		"skill": [
-			{
-				"name": "Nitro Kick",
-				"description": "Knee kick into spinning aerial slam kick. Applies medium Fire Elemental Accumulation. First hit inflicts Airborne, final hit inflicts Knockdown. Grants Super Armor.",
-				"damage": "2720–4080% ATK",
-				"cooldown": 15,
-				"mpCost": "75–99",
-				"effects": ["Airborne", "Knockdown", "Super Armor", "Elemental Accumulation"],
-				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Skill_1.png"
-			},
-			{
-				"name": "Foul Play",
-				"description": "Hurls a large magic sphere. Applies medium Fire Elemental Accumulation. Final hit inflicts Airborne. Grants Super Armor.",
-				"damage": "3364–5046% ATK",
-				"cooldown": 18,
-				"mpCost": "100–132",
-				"effects": ["Airborne", "Super Armor", "Elemental Accumulation"],
-				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Skill_2.png"
-			}
-		],
-		"support": [
-			{
-				"name": "Rapid Kick",
-				"description": "Spinning aerial slam kick. Applies heavy Fire Elemental Accumulation. First hit inflicts Airborne, final hit inflicts Knockdown.",
-				"damage": "630–1295% ATK",
-				"cooldown": 25,
-				"effects": ["Airborne", "Knockdown", "Elemental Accumulation"],
-				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Support.png"
-			}
-		],
-		"qte": [
-			{
-				"name": "Rising Performance",
-				"description": "Leaps into the air and strikes downward with elbow. Applies weak Fire Elemental Accumulation and inflicts Airborne. Triggers on Extreme Evasion, Core Attack, Ultimate, Stun/Blind, or Shadow Skill.",
-				"damage": "2290–3435% ATK",
-				"cooldown": 20,
-				"effects": ["Airborne", "Elemental Accumulation"],
-				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_QTE.png"
-			}
-		],
-		"ultimate": [
-			{
-				"name": "Zero to a Hundred",
-				"description": "Hurls a massive meteor-like concentrated ball of magic. Applies heavy Fire Elemental Accumulation. First hit inflicts Airborne, final hit inflicts Knockdown.",
-				"damage": "4610–6915% ATK",
-				"cooldown": 45,
-				"powerGaugeCost": 100,
-				"effects": ["Airborne", "Knockdown", "Elemental Accumulation"],
-				"icon": "/assets/hunters/Christopher_Reed/Christopher_Reed_Ultimate.png"
-			}
-		]
-	},
 	"passive": {
 		"name": "Spiritual Body Manifestation",
 		"description": "Charged by Rising Star, Offensive Pass, Nitro Kick, Foul Play. At 100%, Special Core Attack activates automatically: Enhanced Basic Attack, Core Attack and Basic Skill. All cooldowns reset, Fire Elemental Accumulation +25%, Damage increase +150%. Duration: 30s (removed upon using Zero to a Hundred). Also inflicts Burn (200% DEF damage every 3s, 10s) via Rising Performance, Rapid Kick, and Zero to a Hundred.",

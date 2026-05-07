@@ -4,14 +4,18 @@ import { HunterProfile } from './components/HunterProfile'
 import { BackLink } from './components/sla/BackLink'
 import { Nav } from './components/sla/Nav'
 import { Panel } from './components/sla/Panel'
+import { SideNav } from './components/sla/SideNav'
 import { findHunter, hunters } from './data/hunters'
 import { ComparePage } from './pages/ComparePage'
 import { DesignSystemPage } from './pages/DesignSystemPage'
 import { HomePage } from './pages/HomePage'
+import { HuntersPage } from './pages/HuntersPage'
+import { ShadowsPage } from './pages/ShadowsPage'
 import { TeamGuideDungeons } from './pages/TeamGuideDungeons'
 import { TeamGuideGuildBoss } from './pages/TeamGuideGuildBoss'
 import { TeamGuidePowerDestruction } from './pages/TeamGuidePowerDestruction'
 import { TeamGuideWorkshop } from './pages/TeamGuideWorkshop'
+import { WorkshopsPage } from './pages/WorkshopsPage'
 
 function ScrollToTop() {
 	const { url } = useLocation()
@@ -47,6 +51,15 @@ function WorkshopRoute({ raid }: { raid?: string }) {
 function CompareRoute() {
 	return <ComparePage hunters={hunters} />
 }
+function HuntersRoute() {
+	return <HuntersPage hunters={hunters} />
+}
+function ShadowsRoute() {
+	return <ShadowsPage />
+}
+function WorkshopsRoute() {
+	return <WorkshopsPage />
+}
 
 function NotFound() {
 	return (
@@ -70,24 +83,59 @@ function NotFound() {
 	)
 }
 
+function Footer() {
+	return (
+		<footer
+			style={{
+				borderTop: '1px solid var(--sla-border)',
+				padding: '20px 32px',
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+			}}
+		>
+			<span
+				style={{
+					fontFamily: 'var(--sla-font-mono)',
+					fontSize: 'var(--sla-text-xs)',
+					letterSpacing: 'var(--sla-ls-wider)',
+					color: 'var(--sla-text-dim)',
+					textTransform: 'uppercase',
+				}}
+			>
+				© 2026 Arise Emberfall. All rights reserved.
+			</span>
+		</footer>
+	)
+}
+
 export function AppRouter() {
 	return (
 		<LocationProvider>
 			<ScrollToTop />
 			<Nav />
-			<main>
-				<Router>
-					<Route path='/' component={HomeRoute} />
-					<Route path='/hunter/:id' component={HunterRoute} />
-					<Route path='/team/dungeons' component={DungeonsRoute} />
-					<Route path='/team/power-destruction' component={PowerRoute} />
-					<Route path='/team/guild-boss' component={GuildBossRoute} />
-					<Route path='/team/workshop/:raid' component={WorkshopRoute} />
-					<Route path='/compare' component={CompareRoute} />
-					<Route path='/design-system' component={DesignSystemPage} />
-					<Route default component={NotFound} />
-				</Router>
-			</main>
+			<div style={{ display: 'flex', minHeight: '100vh' }}>
+				<SideNav />
+				<div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+					<main style={{ flex: 1 }}>
+						<Router>
+							<Route path='/' component={HomeRoute} />
+							<Route path='/hunters' component={HuntersRoute} />
+							<Route path='/shadows' component={ShadowsRoute} />
+							<Route path='/workshops' component={WorkshopsRoute} />
+							<Route path='/hunter/:id' component={HunterRoute} />
+							<Route path='/team/dungeons' component={DungeonsRoute} />
+							<Route path='/team/power-destruction' component={PowerRoute} />
+							<Route path='/team/guild-boss' component={GuildBossRoute} />
+							<Route path='/team/workshop/:raid' component={WorkshopRoute} />
+							<Route path='/compare' component={CompareRoute} />
+							<Route path='/design-system' component={DesignSystemPage} />
+							<Route default component={NotFound} />
+						</Router>
+					</main>
+					<Footer />
+				</div>
+			</div>
 		</LocationProvider>
 	)
 }
