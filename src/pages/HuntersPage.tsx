@@ -45,10 +45,8 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 		>
 			{/* Left: Hunter image */}
 			<div
-				class={`sla-elem-tint-${slug}`}
+				class={`sla-elem-tint-${slug} sla-hunter-card-img`}
 				style={{
-					width: 140,
-					minWidth: 140,
 					position: 'relative',
 					display: 'flex',
 					alignItems: 'center',
