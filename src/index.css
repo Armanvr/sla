@@ -1,6 +1,7 @@
 @import "./styles/sla-tokens.css";
 @import "./styles/sla-elements.css";
 @import "tailwindcss";
+@import "./styles/sla-mobile.css";
 
 @theme {
   /* Mana (primary) */

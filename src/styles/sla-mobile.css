@@ -1,0 +1,173 @@
+/* ============================================================
+   SLA Mobile-First Responsive Overrides
+   Base = mobile (0px+). Desktop via @media (min-width: 768px).
+   Imported last in index.css — intentionally overrides sla-elements.css.
+   ============================================================ */
+
+/* ----- Navigation ----- */
+
+.sla-nav {
+  gap: 8px;
+  padding: var(--sla-space-3) var(--sla-space-4);
+}
+
+.sla-nav-status {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sla-nav {
+    gap: var(--sla-space-6);
+    padding: var(--sla-space-3) var(--sla-space-6);
+  }
+
+  .sla-nav-status {
+    display: flex;
+  }
+}
+
+/* ----- SideNav ----- */
+
+.sla-sidenav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sla-sidenav {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    min-width: 160px;
+    align-self: flex-start;
+    position: sticky;
+    top: 52px;
+    height: calc(100vh - 52px);
+    overflow-y: auto;
+    background: #0d0d1a;
+    border-right: 1px solid var(--sla-mana);
+    padding: 24px 0;
+    gap: 2px;
+  }
+}
+
+/* ----- BottomTabBar ----- */
+
+.sla-bottom-tab {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--sla-z-nav);
+  height: 56px;
+  padding-bottom: env(safe-area-inset-bottom);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--sla-border-bright);
+}
+
+.sla-bottom-tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 8px;
+  text-decoration: none;
+  color: var(--sla-text-muted);
+  font-family: var(--sla-font-hud);
+  font-size: var(--sla-text-xs);
+  letter-spacing: var(--sla-ls-wide);
+  text-transform: uppercase;
+  transition: color var(--sla-duration-base);
+  flex: 1;
+  justify-content: center;
+}
+
+.sla-bottom-tab-item.active {
+  color: var(--sla-ember);
+  text-shadow: var(--sla-glow-text-sm);
+}
+
+.sla-bottom-tab-icon {
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.sla-bottom-tab-item.active .sla-bottom-tab-icon {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .sla-bottom-tab {
+    display: none;
+  }
+}
+
+/* ----- Layout ----- */
+
+.sla-main-content {
+  padding-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .sla-main-content {
+    padding-bottom: 0;
+  }
+}
+
+/* ----- Container ----- */
+
+.sla-container {
+  padding: 0 var(--sla-space-4);
+}
+
+@media (min-width: 768px) {
+  .sla-container {
+    padding: 0 var(--sla-space-6);
+  }
+}
+
+/* ----- HomePage grid ----- */
+
+.sla-home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .sla-home-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----- Hunter card image area ----- */
+
+.sla-hunter-card-img {
+  width: 100px;
+  min-width: 100px;
+}
+
+@media (min-width: 768px) {
+  .sla-hunter-card-img {
+    width: 140px;
+    min-width: 140px;
+  }
+}
+
+/* ----- Section spacing ----- */
+
+.sla-section-mobile {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .sla-section-mobile {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
