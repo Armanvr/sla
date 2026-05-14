@@ -42,7 +42,7 @@ export function Nav() {
 					)
 				})}
 			</nav>
-			<div class="sla-nav-status" style={{ alignItems: 'center', gap: 12 }}>
+			<div class="sla-nav-status">
 				<span class='sla-status-dot' />
 				<span class='sla-label'>Online</span>
 				<span class='sla-nav-clock'>{time}</span>
