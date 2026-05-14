@@ -2,6 +2,7 @@ import { useEffect } from 'preact/hooks'
 import { LocationProvider, Route, Router, useLocation } from 'preact-iso'
 import { HunterProfile } from './components/HunterProfile'
 import { BackLink } from './components/sla/BackLink'
+import { BottomTabBar } from './components/sla/BottomTabBar'
 import { Nav } from './components/sla/Nav'
 import { Panel } from './components/sla/Panel'
 import { SideNav } from './components/sla/SideNav'
@@ -116,7 +117,7 @@ export function AppRouter() {
 			<Nav />
 			<div style={{ display: 'flex', minHeight: '100vh' }}>
 				<SideNav />
-				<div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+				<div class="sla-main-content" style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
 					<main style={{ flex: 1 }}>
 						<Router>
 							<Route path='/' component={HomeRoute} />
@@ -136,6 +137,7 @@ export function AppRouter() {
 					<Footer />
 				</div>
 			</div>
+			<BottomTabBar />
 		</LocationProvider>
 	)
 }
