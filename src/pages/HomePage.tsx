@@ -11,7 +11,7 @@ interface HunterCard {
 
 function Hero() {
 	return (
-		<section class='sla-anim-in' style={{ padding: '64px 0 48px', textAlign: 'center' }}>
+		<section class='sla-anim-in sla-section-mobile' style={{ textAlign: 'center' }}>
 			<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 16 }}>
 				<span class='sla-tag'>{'SLA // Network'}</span>
 				<span class='sla-label'>{'// Solo Leveling: ARISE Codex'}</span>
@@ -170,7 +170,7 @@ export function HomePage({ hunters }: { hunters: HunterCard[] }) {
 
 			<NewHunterSpotlight hunters={hunters} />
 
-			<div class='sla-container' style={{ padding: '64px 0' }}>
+			<div class='sla-container sla-section-mobile'>
 				{/* Section — Fonctionnalités du système */}
 				<section>
 					<div style={{ marginBottom: 40 }}>
@@ -189,13 +189,7 @@ export function HomePage({ hunters }: { hunters: HunterCard[] }) {
 						</h2>
 					</div>
 
-					<div
-						style={{
-							display: 'grid',
-							gridTemplateColumns: 'repeat(3, 1fr)',
-							gap: 16,
-						}}
-					>
+					<div class="sla-home-grid">
 						<div style={{ gridColumn: 'span 2' }}>
 							<FeatureCard
 								tag='// SYSTÈME 01'
