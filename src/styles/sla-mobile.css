@@ -45,7 +45,7 @@
     overflow-y: auto;
     background: #0d0d1a;
     border-right: 1px solid var(--sla-mana);
-    padding: 24px 0;
+    padding: var(--sla-space-6) 0;
     gap: 2px;
   }
 }
@@ -91,7 +91,7 @@
 }
 
 .sla-bottom-tab-icon {
-  font-size: 14px;
+  font-size: var(--sla-text-base);
   line-height: 1;
   opacity: 0.6;
 }
@@ -109,7 +109,7 @@
 /* ----- Layout ----- */
 
 .sla-main-content {
-  padding-bottom: 64px;
+  padding-bottom: var(--sla-space-16);
 }
 
 @media (min-width: 768px) {
@@ -135,7 +135,7 @@
 .sla-home-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: var(--sla-space-4);
 }
 
 @media (min-width: 768px) {
@@ -161,13 +161,13 @@
 /* ----- Section spacing ----- */
 
 .sla-section-mobile {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: var(--sla-space-8);
+  padding-bottom: var(--sla-space-8);
 }
 
 @media (min-width: 768px) {
   .sla-section-mobile {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: var(--sla-space-16);
+    padding-bottom: var(--sla-space-16);
   }
 }
