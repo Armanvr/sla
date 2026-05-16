@@ -111,7 +111,7 @@
 /* ----- Layout ----- */
 
 .sla-main-content {
-  padding-bottom: var(--sla-space-16);
+  padding-bottom: calc(56px + env(safe-area-inset-bottom));
 }
 
 @media (min-width: 768px) {
