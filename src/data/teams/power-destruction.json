@@ -10,57 +10,147 @@
 		{
 			"element": "Wind",
 			"status": "active",
-			"jinwooWeapons": ["Stormbringer", "Demon King's Daggers"],
-			"hunters": [
-				{ "id": "lennart-niermann", "build": "Build Niv. 120" },
-				{ "id": "sung-jinah", "build": "Build Niv. 120 (A)" },
-				{ "id": "sugimoto-reiji", "build": "Build Niv. 120" }
-			],
-			"shadows": ["beste", "cerbie", "skull"]
+			"monarch": "monarch-of-steel",
+			"configs": [
+				{
+					"label": "Équipe 1",
+					"jinwooWeapons": ["Stormbringer", "Demon King's Daggers"],
+					"hunters": [
+						{ "id": "lennart-niermann", "build": "Build Niv. 120" },
+						{ "id": "sung-jinah", "build": "Build Niv. 120 (A)" },
+						{ "id": "sugimoto-reiji", "build": "Build Niv. 120" }
+					],
+					"shadows": ["beste", "cerbie", "skull"]
+				},
+				{
+					"label": "Équipe 2",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				},
+				{
+					"label": "Équipe 3",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				}
+			]
 		},
 		{
 			"element": "Water",
 			"status": "active",
-			"jinwooWeapons": ["Allon's Orb", "Thetis' Grimoire"],
-			"hunters": [
-				{ "id": "frieren", "build": "Build Niv. 120 (A)" },
-				{ "id": "meri-laine", "build": "Build Niv. 120" },
-				{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
-			],
-			"shadows": ["brute", "cerbie", "skull"]
+			"monarch": "monarch-of-steel",
+			"configs": [
+				{
+					"label": "Équipe 1",
+					"jinwooWeapons": ["Allon's Orb", "Thetis' Grimoire"],
+					"hunters": [
+						{ "id": "frieren", "build": "Build Niv. 120 (A)" },
+						{ "id": "meri-laine", "build": "Build Niv. 120" },
+						{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+					],
+					"shadows": ["brute", "cerbie", "skull"]
+				},
+				{
+					"label": "Équipe 2",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				},
+				{
+					"label": "Équipe 3",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				}
+			]
 		},
 		{
 			"element": "Fire",
 			"status": "active",
-			"jinwooWeapons": ["Glorious Demise", "Ennio's Roar"],
-			"hunters": [
-				{ "id": "christopher-reed", "build": "Build Niv. 120" },
-				{ "id": "gina", "build": "Build Niv. 120 (A)" },
-				{ "id": "yuqi", "build": "Build Niv. 120" }
-			],
-			"shadows": ["beste", "cerbie", "skull"]
+			"monarch": "monarch-of-steel",
+			"configs": [
+				{
+					"label": "Équipe 1",
+					"jinwooWeapons": ["Glorious Demise", "Ennio's Roar"],
+					"hunters": [
+						{ "id": "christopher-reed", "build": "Build Niv. 120" },
+						{ "id": "gina", "build": "Build Niv. 120 (A)" },
+						{ "id": "yuqi", "build": "Build Niv. 120" }
+					],
+					"shadows": ["beste", "cerbie", "skull"]
+				},
+				{
+					"label": "Équipe 2",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				},
+				{
+					"label": "Équipe 3",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				}
+			]
 		},
 		{
 			"element": "Light",
 			"status": "active",
-			"jinwooWeapons": ["Phantomblade", "Hero's Sword"],
-			"hunters": [
-				{ "id": "go-gunhee", "build": "Build Niv. 120" },
-				{ "id": "laura-walker", "build": "Build Niv. 120 (A)" },
-				{ "id": "thomas-andre", "build": "Build Niv. 120" }
-			],
-			"shadows": ["beste", "cerbie", "skull"]
+			"monarch": "monarch-of-steel",
+			"configs": [
+				{
+					"label": "Équipe 1",
+					"jinwooWeapons": ["Phantomblade", "Hero's Sword"],
+					"hunters": [
+						{ "id": "go-gunhee", "build": "Build Niv. 120" },
+						{ "id": "laura-walker", "build": "Build Niv. 120 (A)" },
+						{ "id": "thomas-andre", "build": "Build Niv. 120" }
+					],
+					"shadows": ["beste", "cerbie", "skull"]
+				},
+				{
+					"label": "Équipe 2",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				},
+				{
+					"label": "Équipe 3",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				}
+			]
 		},
 		{
 			"element": "Dark",
 			"status": "active",
-			"jinwooWeapons": ["Moonshadow", "Transfiguration Key"],
-			"hunters": [
-				{ "id": "sian-halat", "build": "Build Niv. 120" },
-				{ "id": "isla-wright", "build": "Build Niv. 120 (A)" },
-				{ "id": "sung-il-hwan", "build": "Build Niv. 120" }
-			],
-			"shadows": ["uros", "cerbie", "skull"]
+			"monarch": "monarch-of-steel",
+			"configs": [
+				{
+					"label": "Équipe 1",
+					"jinwooWeapons": ["Moonshadow", "Transfiguration Key"],
+					"hunters": [
+						{ "id": "sian-halat", "build": "Build Niv. 120" },
+						{ "id": "isla-wright", "build": "Build Niv. 120 (A)" },
+						{ "id": "sung-il-hwan", "build": "Build Niv. 120" }
+					],
+					"shadows": ["uros", "cerbie", "skull"]
+				},
+				{
+					"label": "Équipe 2",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				},
+				{
+					"label": "Équipe 3",
+					"jinwooWeapons": [],
+					"hunters": [],
+					"shadows": []
+				}
+			]
 		}
 	]
 }
