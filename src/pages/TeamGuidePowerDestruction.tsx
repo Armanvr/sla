@@ -387,7 +387,7 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 						title='Chasseurs'
 						description='Trois chasseurs recommandés pour cet élément actif.'
 					/>
-					<div class='grid grid-cols-3 gap-4'>
+					<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<HunterSlot
 								key={i}
@@ -407,7 +407,7 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 						title='Ombres'
 						description="Ombres recommandées pour renforcer l'équipe."
 					/>
-					<div class='grid grid-cols-3 gap-4'>
+					<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<ShadowSlot
 								key={i}

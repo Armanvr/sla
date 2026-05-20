@@ -33,7 +33,7 @@ export function ElementTabs({
 	weekResistances?: string[]
 }) {
 	return (
-		<div class='flex flex-wrap gap-2'>
+		<div class='flex flex-wrap gap-2 overflow-x-auto pb-1'>
 			{teams.map((team) => {
 				const isActive = team.element === activeElement
 				const isRandom = team.status !== 'active'
