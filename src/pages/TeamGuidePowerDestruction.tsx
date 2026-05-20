@@ -4,11 +4,31 @@ import { SectionHeader } from '../components/sla/SectionHeader'
 import { ElementTabs } from '../components/team/ElementTabs'
 import { HunterSlot } from '../components/team/HunterSlot'
 import { JinwooPanel } from '../components/team/JinwooPanel'
+import { MonarchSelector } from '../components/team/MonarchSelector'
 import { ShadowSlot } from '../components/team/ShadowSlot'
+import { TeamConfigTabs } from '../components/team/TeamConfigTabs'
 import { SHADOWS, SHADOWS_BY_ID } from '../components/team/shadows'
+import { DEFAULT_MONARCH } from '../components/team/monarchs'
+import type { MonarchId } from '../components/team/monarchs'
 import type { Hunter, ShadowData, WeaponData } from '../components/team/types'
 import { JINWOO_WEAPONS_BY_NAME } from '../components/team/weapons'
 import teamsConfig from '../data/teams/power-destruction.json'
+
+// ── Team config types ─────────────────────────────────────────────────────────
+
+interface PdTeamConfig {
+	label: string
+	jinwooWeapons: string[]
+	hunters: { id: string; build?: string }[]
+	shadows: string[]
+}
+
+interface PdTeamEntry {
+	element: string
+	status: string
+	monarch?: string
+	configs: PdTeamConfig[]
+}
 
 // ── Week helpers ──────────────────────────────────────────────────────────────
 
@@ -156,39 +176,46 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 
 	// ── Init helpers ──────────────────────────────────────────────────────────
 
-	const initHunters = (el: string): [Hunter | null, Hunter | null, Hunter | null] => {
-		const team = teamsConfig.teams.find((t) => t.element === el && t.status === 'active')
+	const initHunters = (el: string, ci = 0): [Hunter | null, Hunter | null, Hunter | null] => {
+		const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === el && t.status === 'active')
 		if (!team) return [null, null, null]
-		return team.hunters.slice(0, 3).map((e) => hunterById.get(e.id) ?? null) as [
+		const cfg = team.configs[ci] ?? team.configs[0]
+		if (!cfg?.hunters?.length) return [null, null, null]
+		return cfg.hunters.slice(0, 3).map((e) => hunterById.get(e.id) ?? null) as [
 			Hunter | null,
 			Hunter | null,
 			Hunter | null,
 		]
 	}
 
-	const initBuilds = (el: string): [string | undefined, string | undefined, string | undefined] => {
-		const team = teamsConfig.teams.find((t) => t.element === el && t.status === 'active')
+	const initBuilds = (el: string, ci = 0): [string | undefined, string | undefined, string | undefined] => {
+		const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === el && t.status === 'active')
 		if (!team) return [undefined, undefined, undefined]
-		return team.hunters.slice(0, 3).map((e) => e.build ?? undefined) as [
+		const cfg = team.configs[ci] ?? team.configs[0]
+		if (!cfg?.hunters?.length) return [undefined, undefined, undefined]
+		return cfg.hunters.slice(0, 3).map((e) => e.build ?? undefined) as [
 			string | undefined,
 			string | undefined,
 			string | undefined,
 		]
 	}
 
-	const initShadows = (el: string): [ShadowData | null, ShadowData | null, ShadowData | null] => {
-		const team = teamsConfig.teams.find((t) => t.element === el && t.status === 'active')
+	const initShadows = (el: string, ci = 0): [ShadowData | null, ShadowData | null, ShadowData | null] => {
+		const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === el && t.status === 'active')
 		if (!team) return [null, null, null]
-		return team.shadows.slice(0, 3).map((id) => SHADOWS_BY_ID[id] ?? null) as [
+		const cfg = team.configs[ci] ?? team.configs[0]
+		if (!cfg?.shadows?.length) return [null, null, null]
+		return cfg.shadows.slice(0, 3).map((id) => SHADOWS_BY_ID[id] ?? null) as [
 			ShadowData | null,
 			ShadowData | null,
 			ShadowData | null,
 		]
 	}
 
-	const initWeapons = (el: string): [WeaponData | null, WeaponData | null] => {
-		const team = teamsConfig.teams.find((t) => t.element === el)
-		const names = team?.jinwooWeapons ?? []
+	const initWeapons = (el: string, ci = 0): [WeaponData | null, WeaponData | null] => {
+		const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === el)
+		const cfg = team?.configs[ci] ?? team?.configs[0]
+		const names = cfg?.jinwooWeapons ?? []
 		return [JINWOO_WEAPONS_BY_NAME.get(names[0]) ?? null, JINWOO_WEAPONS_BY_NAME.get(names[1]) ?? null]
 	}
 
@@ -217,6 +244,11 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 	const [selectedWeapons, setSelectedWeapons] = useState<[WeaponData | null, WeaponData | null]>(() =>
 		initWeapons(defaultElement),
 	)
+	const [activeConfigIndex, setActiveConfigIndex] = useState(0)
+	const [selectedMonarch, setSelectedMonarch] = useState<MonarchId>(() => {
+		const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === defaultElement)
+		return (team?.monarch as MonarchId | undefined) ?? DEFAULT_MONARCH
+	})
 
 	// ── Slot setters ──────────────────────────────────────────────────────────
 
@@ -251,16 +283,34 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 
 	const switchElement = (el: string) => {
 		setActiveElement(el)
-		setSelectedWeapons(initWeapons(el))
-		const team = teamsConfig.teams.find((t) => t.element === el)
+		setActiveConfigIndex(0)
+		const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === el)
+		setSelectedMonarch((team?.monarch as MonarchId | undefined) ?? DEFAULT_MONARCH)
+		setSelectedWeapons(initWeapons(el, 0))
 		if (team?.status === 'coming-soon') {
 			setSelectedHunters(randomHunters())
 			setPreferredBuilds([undefined, undefined, undefined])
 			setSelectedShadows(randomShadows())
 		} else {
-			setSelectedHunters(initHunters(el))
-			setPreferredBuilds(initBuilds(el))
-			setSelectedShadows(initShadows(el))
+			setSelectedHunters(initHunters(el, 0))
+			setPreferredBuilds(initBuilds(el, 0))
+			setSelectedShadows(initShadows(el, 0))
+		}
+	}
+
+	const switchConfig = (ci: number) => {
+		setActiveConfigIndex(ci)
+		setSelectedWeapons(initWeapons(activeElement, ci))
+		const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === activeElement)
+		const hasCfgData = (team?.configs[ci]?.hunters?.length ?? 0) > 0
+		if (!hasCfgData) {
+			setSelectedHunters(randomHunters())
+			setPreferredBuilds([undefined, undefined, undefined])
+			setSelectedShadows(randomShadows())
+		} else {
+			setSelectedHunters(initHunters(activeElement, ci))
+			setPreferredBuilds(initBuilds(activeElement, ci))
+			setSelectedShadows(initShadows(activeElement, ci))
 		}
 	}
 
@@ -305,6 +355,21 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 							weekResistances={rotation?.resistance ?? []}
 						/>
 					</div>
+					{(() => {
+						const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === activeElement)
+						const configs = team?.configs ?? []
+						if (configs.length <= 1) return null
+						return (
+							<div style={{ marginTop: 16 }}>
+								<TeamConfigTabs
+									labels={configs.map((c) => c.label)}
+									active={activeConfigIndex}
+									hasData={configs.map((c) => c.hunters.length > 0)}
+									onChange={switchConfig}
+								/>
+							</div>
+						)
+					})()}
 				</section>
 
 				<section>
@@ -353,6 +418,15 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 							/>
 						))}
 					</div>
+				</section>
+
+				<section>
+					<SectionHeader
+						tag='// SECTION 05'
+						title='Puissance rémanente / Successeur'
+						description='Monarque actif pour cette composition.'
+					/>
+					<MonarchSelector selected={selectedMonarch} onChange={setSelectedMonarch} />
 				</section>
 			</main>
 		</div>
