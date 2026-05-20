@@ -219,7 +219,13 @@
 .sla-container {
 	max-width: 1280px;
 	margin: 0 auto;
-	padding: 0 var(--sla-space-6);
+	padding: 0 var(--sla-space-4);
+}
+
+@media (min-width: 768px) {
+	.sla-container {
+		padding: 0 var(--sla-space-6);
+	}
 }
 
 /* Card grid utility */

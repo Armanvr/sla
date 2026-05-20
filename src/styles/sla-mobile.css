@@ -173,3 +173,14 @@
     padding-bottom: var(--sla-space-16);
   }
 }
+
+/* Content padding to clear fixed BottomTabBar */
+.sla-app {
+  padding-bottom: calc(56px + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 768px) {
+  .sla-app {
+    padding-bottom: 0;
+  }
+}
