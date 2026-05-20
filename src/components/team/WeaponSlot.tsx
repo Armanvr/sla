@@ -31,7 +31,7 @@ export function WeaponSlot({
 			<button
 				type='button'
 				onClick={() => setOpen((p) => !p)}
-				class={`w-full flex items-center gap-3 bg-zinc-800/50 border rounded-xl px-3 py-2 transition-colors ${open ? 'border-amber-500/60' : 'border-amber-900/40 hover:border-amber-600/50'}`}
+				class={`sla-weapon-slot w-full flex items-center gap-3 bg-zinc-800/50 border rounded-xl px-3 py-2 transition-colors ${open ? 'border-amber-500/60' : 'border-amber-900/40 hover:border-amber-600/50'}`}
 			>
 				{selected ? (
 					<>

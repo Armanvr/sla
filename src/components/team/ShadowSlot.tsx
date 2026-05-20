@@ -22,7 +22,7 @@ export function ShadowSlot({
 			)}
 
 			<div
-				class={`bg-zinc-800/50 border rounded-2xl p-4 transition-colors ${open ? 'border-purple-500/60' : 'border-purple-900/40 hover:border-purple-600/50'}`}
+				class={`sla-shadow-slot bg-zinc-800/50 border rounded-2xl p-4 transition-colors ${open ? 'border-purple-500/60' : 'border-purple-900/40 hover:border-purple-600/50'}`}
 			>
 				<button
 					type='button'

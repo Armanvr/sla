@@ -33,7 +33,7 @@ export function HunterSlot({
 			)}
 
 			<div
-				class='sla-panel'
+				class='sla-panel sla-hunter-slot'
 				style={{
 					padding: 16,
 					...(open ? { outline: '1px solid var(--sla-mana)' } : {}),

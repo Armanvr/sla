@@ -184,3 +184,12 @@
     padding-bottom: 0;
   }
 }
+
+/* Minimum touch target for interactive slot elements on mobile */
+@media (max-width: 767px) {
+	.sla-hunter-slot,
+	.sla-shadow-slot,
+	.sla-weapon-slot {
+		min-height: 44px;
+	}
+}
