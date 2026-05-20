@@ -4,6 +4,10 @@ import { SectionHeader } from '../components/sla/SectionHeader'
 import { ElementTabs } from '../components/team/ElementTabs'
 import { HunterSlot } from '../components/team/HunterSlot'
 import { JinwooPanel } from '../components/team/JinwooPanel'
+import { MonarchSelector } from '../components/team/MonarchSelector'
+import { TeamConfigTabs } from '../components/team/TeamConfigTabs'
+import { DEFAULT_MONARCH } from '../components/team/monarchs'
+import type { MonarchId } from '../components/team/monarchs'
 import type { Hunter, WeaponData } from '../components/team/types'
 import { JINWOO_WEAPONS_BY_NAME } from '../components/team/weapons'
 import teamsConfig from '../data/teams/guild-boss.json'
@@ -29,6 +33,19 @@ interface BossEntry {
 	icon: string
 	weakness: string[]
 	active: boolean
+}
+
+interface GbTeamConfig {
+	label: string
+	jinwooWeapons: string[]
+	hunters: { id: string; role: string; build?: string }[]
+}
+
+interface GbTeamEntry {
+	element: string
+	status: string
+	monarch?: string
+	configs: GbTeamConfig[]
 }
 
 // ── Sub-component: active boss banner ─────────────────────────────────────────
@@ -90,12 +107,12 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 
 	// ── Init helpers ──────────────────────────────────────────────────────────
 
-	const initSlots = (el: string): SlotState[] => {
-		const team = teamsConfig.teams.find((t) => t.element === el && t.status === 'active')
-		if (!team || team.hunters.length === 0) {
-			return RANDOM_ROLES.map((role) => ({ hunter: null, role }))
-		}
-		return team.hunters.map((entry) => ({
+	const initSlots = (el: string, ci = 0): SlotState[] => {
+		const team = (teamsConfig.teams as GbTeamEntry[]).find((t) => t.element === el && t.status === 'active')
+		if (!team) return RANDOM_ROLES.map((role) => ({ hunter: null, role }))
+		const cfg = team.configs[ci] ?? team.configs[0]
+		if (!cfg?.hunters?.length) return RANDOM_ROLES.map((role) => ({ hunter: null, role }))
+		return cfg.hunters.map((entry) => ({
 			hunter: hunterById.get(entry.id) ?? null,
 			role: entry.role,
 			preferredBuild: entry.build ?? undefined,
@@ -107,9 +124,10 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 		return RANDOM_ROLES.map((role, i) => ({ hunter: shuffled[i] ?? null, role }))
 	}
 
-	const initWeapons = (el: string): [WeaponData | null, WeaponData | null] => {
-		const team = teamsConfig.teams.find((t) => t.element === el)
-		const names = team?.jinwooWeapons ?? []
+	const initWeapons = (el: string, ci = 0): [WeaponData | null, WeaponData | null] => {
+		const team = (teamsConfig.teams as GbTeamEntry[]).find((t) => t.element === el)
+		const cfg = team?.configs[ci] ?? team?.configs[0]
+		const names = cfg?.jinwooWeapons ?? []
 		return [JINWOO_WEAPONS_BY_NAME.get(names[0]) ?? null, JINWOO_WEAPONS_BY_NAME.get(names[1]) ?? null]
 	}
 
@@ -120,6 +138,11 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 	const [selectedWeapons, setSelectedWeapons] = useState<[WeaponData | null, WeaponData | null]>(() =>
 		initWeapons(defaultElement),
 	)
+	const [activeConfigIndex, setActiveConfigIndex] = useState(0)
+	const [selectedMonarch, setSelectedMonarch] = useState<MonarchId>(() => {
+		const team = (teamsConfig.teams as GbTeamEntry[]).find((t) => t.element === defaultElement)
+		return (team?.monarch as MonarchId | undefined) ?? DEFAULT_MONARCH
+	})
 
 	// ── Slot setters ──────────────────────────────────────────────────────────
 
@@ -137,12 +160,26 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 
 	const switchElement = (el: string) => {
 		setActiveElement(el)
-		setSelectedWeapons(initWeapons(el))
-		const team = teamsConfig.teams.find((t) => t.element === el)
+		setActiveConfigIndex(0)
+		const team = (teamsConfig.teams as GbTeamEntry[]).find((t) => t.element === el)
+		setSelectedMonarch((team?.monarch as MonarchId | undefined) ?? DEFAULT_MONARCH)
+		setSelectedWeapons(initWeapons(el, 0))
 		if (team?.status === 'coming-soon') {
 			setSlots(randomSlots())
 		} else {
-			setSlots(initSlots(el))
+			setSlots(initSlots(el, 0))
+		}
+	}
+
+	const switchConfig = (ci: number) => {
+		setActiveConfigIndex(ci)
+		setSelectedWeapons(initWeapons(activeElement, ci))
+		const team = (teamsConfig.teams as GbTeamEntry[]).find((t) => t.element === activeElement)
+		const hasCfgData = (team?.configs[ci]?.hunters?.length ?? 0) > 0
+		if (!hasCfgData) {
+			setSlots(randomSlots())
+		} else {
+			setSlots(initSlots(activeElement, ci))
 		}
 	}
 
@@ -182,6 +219,21 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 							weekWeaknesses={bossWeaknesses}
 						/>
 					</div>
+					{(() => {
+						const team = (teamsConfig.teams as GbTeamEntry[]).find((t) => t.element === activeElement)
+						const configs = team?.configs ?? []
+						if (configs.length <= 1) return null
+						return (
+							<div style={{ marginTop: 16 }}>
+								<TeamConfigTabs
+									labels={configs.map((c) => c.label)}
+									active={activeConfigIndex}
+									hasData={configs.map((c) => c.hunters.length > 0)}
+									onChange={switchConfig}
+								/>
+							</div>
+						)
+					})()}
 				</section>
 
 				<section>
@@ -212,6 +264,15 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 							/>
 						))}
 					</div>
+				</section>
+
+				<section>
+					<SectionHeader
+						tag='// SECTION 04'
+						title='Puissance rémanente / Successeur'
+						description='Monarque actif pour cette composition.'
+					/>
+					<MonarchSelector selected={selectedMonarch} onChange={setSelectedMonarch} />
 				</section>
 			</main>
 		</div>
