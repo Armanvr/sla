@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [4.1.0] — 2026-05-20
+
+### Added
+- **Sélecteur de monarque "Puissance rémanente / Successeur"** — nouvelle section dans Power & Destruction (SECTION 05) et Guild Boss (SECTION 04)
+  - 3 monarques sélectionnables : Monarque d'Acier (défaut), Monarque des Flammes Blanches, Monarque de la Transfiguration
+  - Portraits tirés de `public/assets/workshop/`, sélection radio par clic, état par élément actif
+  - Composant `MonarchSelector` + données dans `monarchs.ts` (`MonarchId`, `DEFAULT_MONARCH`, `MONARCHS`)
+- **3 configurations d'équipe par élément** — Power & Destruction et Guild Boss
+  - Tabs "Équipe 1 / 2 / 3" entre les onglets élémentaires et le contenu
+  - Configs vides affichées à 40% d'opacité, données random si aucun hunter configuré
+  - Migration JSON : `jinwooWeapons` / `hunters` / `shadows` → `configs[]` + champ `monarch` par équipe
+  - Composant `TeamConfigTabs` (props : `labels`, `active`, `hasData`, `onChange`)
+- **PWA — Progressive Web App**
+  - `vite-plugin-pwa` + Workbox : service worker généré (`sw.js`), précache 350 entrées
+  - Manifest (`manifest.webmanifest`) : name, short_name "SLA", theme `#000000`, display standalone, orientation portrait
+  - Icônes générées via `@vite-pwa/assets-generator` : 64×64, 192×192, 512×512, maskable 512×512, apple-touch-icon 180×180, favicon.ico
+  - Stratégies Workbox : CacheFirst `/assets/` (30j), StaleWhileRevalidate `.json`
+  - `index.html` : `viewport-fit=cover`, `theme-color`, `apple-mobile-web-app-*`, apple touch icon
+
+### Changed
+- **Mobile-first layout**
+  - `.sla-container` padding : `--sla-space-4` (16px) mobile → `--sla-space-6` (24px) à 768px+
+  - Grilles chasseurs/ombres : `grid-cols-3` → `grid-cols-1 sm:grid-cols-2 md:grid-cols-3` (Power & Destruction, Guild Boss)
+  - `ElementTabs` : `overflow-x-auto pb-1` sur le conteneur pour scroll horizontal mobile
+  - `.sla-app` : `padding-bottom: calc(56px + env(safe-area-inset-bottom))` mobile pour libérer BottomTabBar
+  - `HunterSlot`, `ShadowSlot`, `WeaponSlot` : classe sémantique `sla-*-slot` + `min-height: 44px` mobile
+
 ## [4.0.0] — 2026-05-07
 
 ### Added
