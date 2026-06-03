@@ -9,16 +9,21 @@ export function CoresSection({
 	coreStats,
 	showDetails = true,
 	compact = false,
+	hunterClass,
 }: {
 	coreBuild?: CoreBuild
 	coreStats?: CoreStats
 	showDetails?: boolean
 	compact?: boolean
+	hunterClass?: string
 }) {
+	const isSupporterLocked = hunterClass === 'Supporter'
+	const SUPPORTER_SPIRIT = 'ferocious-protectors-claw'
+
 	const [slots, setSlots] = useState<Record<'mind' | 'body' | 'spirit', string | null>>({
 		mind: coreBuild?.mind ?? null,
 		body: coreBuild?.body ?? null,
-		spirit: coreBuild?.spirit ?? null,
+		spirit: isSupporterLocked ? SUPPORTER_SPIRIT : (coreBuild?.spirit ?? null),
 	})
 	const [isDefaultBuild, setIsDefaultBuild] = useState(!!coreBuild)
 	const [openPicker, setOpenPicker] = useState<'mind' | 'body' | 'spirit' | null>(null)
@@ -36,13 +41,17 @@ export function CoresSection({
 
 	const applyCoreBuild = () => {
 		if (!coreBuild) return
-		setSlots({ mind: coreBuild.mind, body: coreBuild.body, spirit: coreBuild.spirit })
+		setSlots({
+			mind: coreBuild.mind,
+			body: coreBuild.body,
+			spirit: isSupporterLocked ? SUPPORTER_SPIRIT : coreBuild.spirit,
+		})
 		setIsDefaultBuild(true)
 		setOpenPicker(null)
 	}
 
 	const clearCores = () => {
-		setSlots({ mind: null, body: null, spirit: null })
+		setSlots({ mind: null, body: null, spirit: isSupporterLocked ? SUPPORTER_SPIRIT : null })
 		setIsDefaultBuild(false)
 		setOpenPicker(null)
 	}
@@ -92,10 +101,13 @@ export function CoresSection({
 						<div key={key} class='relative'>
 							<button
 								type='button'
-								onClick={() => setOpenPicker((prev) => (prev === key ? null : key))}
+								onClick={() => {
+									if (isSupporterLocked && key === 'spirit') return
+									setOpenPicker((prev) => (prev === key ? null : key))
+								}}
 								class={`w-full flex items-center gap-3 bg-zinc-800/60 border rounded-xl px-3 py-3 text-left transition-colors ${
 									isOpen ? 'border-purple-500/60' : 'border-zinc-700/60 hover:border-zinc-500/60'
-								}`}
+								} ${isSupporterLocked && key === 'spirit' ? 'cursor-default opacity-80' : ''}`}
 							>
 								{selected ? (
 									<img
@@ -129,6 +141,11 @@ export function CoresSection({
 									>
 										{selected ? selected.name : isFreeChoice ? 'Au choix' : '—'}
 									</p>
+									{isSupporterLocked && key === 'spirit' && (
+										<span class='text-[9px] text-emerald-400 font-semibold uppercase tracking-wider mt-0.5'>
+											Obligatoire
+										</span>
+									)}
 								</div>
 								{selected && (
 									<button

@@ -434,7 +434,7 @@ export function HunterProfile({ data }: { data: HunterData }) {
 						>
 							{'// Cores'}
 						</div>
-						<CoresSection coreBuild={data.coreBuild} coreStats={data.coreStats} />
+						<CoresSection coreBuild={data.coreBuild} coreStats={data.coreStats} hunterClass={data.class} />
 					</div>
 				</div>
 			</div>
