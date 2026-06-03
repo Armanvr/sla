@@ -12,7 +12,6 @@ import { DesignSystemPage } from './pages/DesignSystemPage'
 import { HomePage } from './pages/HomePage'
 import { HuntersPage } from './pages/HuntersPage'
 import { ShadowsPage } from './pages/ShadowsPage'
-import { TeamGuideDungeons } from './pages/TeamGuideDungeons'
 import { TeamGuideGuildBoss } from './pages/TeamGuideGuildBoss'
 import { TeamGuidePowerDestruction } from './pages/TeamGuidePowerDestruction'
 import { TeamGuideWorkshop } from './pages/TeamGuideWorkshop'
@@ -36,9 +35,6 @@ function HunterRoute({ id }: { id?: string }) {
 	return <HunterProfile data={entry.data} />
 }
 
-function DungeonsRoute() {
-	return <TeamGuideDungeons hunters={hunters} />
-}
 function PowerRoute() {
 	return <TeamGuidePowerDestruction hunters={hunters} />
 }
@@ -125,7 +121,6 @@ export function AppRouter() {
 							<Route path='/shadows' component={ShadowsRoute} />
 							<Route path='/workshops' component={WorkshopsRoute} />
 							<Route path='/hunter/:id' component={HunterRoute} />
-							<Route path='/team/dungeons' component={DungeonsRoute} />
 							<Route path='/team/power-destruction' component={PowerRoute} />
 							<Route path='/team/guild-boss' component={GuildBossRoute} />
 							<Route path='/team/workshop/:raid' component={WorkshopRoute} />
