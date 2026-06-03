@@ -4,6 +4,7 @@ import { SectionHeader } from '../components/sla/SectionHeader'
 import { ElementTabs } from '../components/team/ElementTabs'
 import { HunterSlot } from '../components/team/HunterSlot'
 import { JinwooPanel } from '../components/team/JinwooPanel'
+import { RunesSection } from '../components/hunter/RunesSection'
 import { PuissanceRemanente, type PuissanceMode } from '../components/team/PuissanceRemanente'
 import { TeamConfigTabs } from '../components/team/TeamConfigTabs'
 import { DEFAULT_MONARCH } from '../components/team/monarchs'
@@ -251,6 +252,9 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 						description='Sélectionne les armes optimales pour le contenu actif.'
 					/>
 					<JinwooPanel selectedWeapons={selectedWeapons} onWeaponSelect={setWeaponSlot} />
+					<div style={{ marginTop: 24 }}>
+						<RunesSection />
+					</div>
 				</section>
 
 				<section>
