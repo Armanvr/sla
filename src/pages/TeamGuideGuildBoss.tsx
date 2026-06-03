@@ -4,8 +4,7 @@ import { SectionHeader } from '../components/sla/SectionHeader'
 import { ElementTabs } from '../components/team/ElementTabs'
 import { HunterSlot } from '../components/team/HunterSlot'
 import { JinwooPanel } from '../components/team/JinwooPanel'
-import { PuissanceRemanente } from '../components/team/PuissanceRemanente'
-import type { PuissanceMode } from '../components/team/PuissanceRemanente'
+import { PuissanceRemanente, type PuissanceMode } from '../components/team/PuissanceRemanente'
 import { TeamConfigTabs } from '../components/team/TeamConfigTabs'
 import { DEFAULT_MONARCH } from '../components/team/monarchs'
 import type { MonarchId } from '../components/team/monarchs'
@@ -16,6 +15,8 @@ import { JINWOO_WEAPONS_BY_NAME } from '../components/team/weapons'
 import teamsConfig from '../data/teams/guild-boss.json'
 
 const RANDOM_ROLES = ['Striker', 'Striker', 'Breaker', 'Elemental Stacker', 'Supporter', 'Supporter']
+
+const modeForElement = (el: string): PuissanceMode => (el === 'Wind' ? 'successor' : 'monarch')
 
 const ELEMENT_ICON: Record<string, string> = {
 	Dark: '/assets/utils/Dark_Element.png',
@@ -147,9 +148,7 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 		return (team?.monarch as MonarchId | undefined) ?? DEFAULT_MONARCH
 	})
 	const [selectedSuccessor, setSelectedSuccessor] = useState<SuccessorId>(DEFAULT_SUCCESSOR)
-	const [puissanceMode, setPuissanceMode] = useState<PuissanceMode>(() =>
-		defaultElement === 'Wind' ? 'successor' : 'monarch',
-	)
+	const [puissanceMode, setPuissanceMode] = useState<PuissanceMode>(() => modeForElement(defaultElement))
 
 	// ── Slot setters ──────────────────────────────────────────────────────────
 
@@ -170,7 +169,8 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 		setActiveConfigIndex(0)
 		const team = (teamsConfig.teams as GbTeamEntry[]).find((t) => t.element === el)
 		setSelectedMonarch((team?.monarch as MonarchId | undefined) ?? DEFAULT_MONARCH)
-		setPuissanceMode(el === 'Wind' ? 'successor' : 'monarch')
+		setSelectedSuccessor(DEFAULT_SUCCESSOR)
+		setPuissanceMode(modeForElement(el))
 		setSelectedWeapons(initWeapons(el, 0))
 		if (team?.status === 'coming-soon') {
 			setSlots(randomSlots())
