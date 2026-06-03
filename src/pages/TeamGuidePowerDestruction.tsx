@@ -4,12 +4,14 @@ import { SectionHeader } from '../components/sla/SectionHeader'
 import { ElementTabs } from '../components/team/ElementTabs'
 import { HunterSlot } from '../components/team/HunterSlot'
 import { JinwooPanel } from '../components/team/JinwooPanel'
-import { MonarchSelector } from '../components/team/MonarchSelector'
+import { PuissanceRemanente, type PuissanceMode } from '../components/team/PuissanceRemanente'
 import { ShadowSlot } from '../components/team/ShadowSlot'
 import { TeamConfigTabs } from '../components/team/TeamConfigTabs'
 import { SHADOWS, SHADOWS_BY_ID } from '../components/team/shadows'
 import { DEFAULT_MONARCH } from '../components/team/monarchs'
 import type { MonarchId } from '../components/team/monarchs'
+import { DEFAULT_SUCCESSOR } from '../components/team/successors'
+import type { SuccessorId } from '../components/team/successors'
 import type { Hunter, ShadowData, WeaponData } from '../components/team/types'
 import { JINWOO_WEAPONS_BY_NAME } from '../components/team/weapons'
 import teamsConfig from '../data/teams/power-destruction.json'
@@ -100,6 +102,8 @@ function getDefaultElement(rotation: RotationEntry | null): string {
 	}
 	return teamsConfig.teams.find((t) => t.status === 'active')?.element ?? 'Wind'
 }
+
+const modeForElement = (el: string): PuissanceMode => (el === 'Wind' ? 'successor' : 'monarch')
 
 // ── Sub-component: rotation banner ───────────────────────────────────────────
 
@@ -249,6 +253,8 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 		const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === defaultElement)
 		return (team?.monarch as MonarchId | undefined) ?? DEFAULT_MONARCH
 	})
+	const [selectedSuccessor, setSelectedSuccessor] = useState<SuccessorId>(DEFAULT_SUCCESSOR)
+	const [puissanceMode, setPuissanceMode] = useState<PuissanceMode>(() => modeForElement(defaultElement))
 
 	// ── Slot setters ──────────────────────────────────────────────────────────
 
@@ -286,6 +292,8 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 		setActiveConfigIndex(0)
 		const team = (teamsConfig.teams as PdTeamEntry[]).find((t) => t.element === el)
 		setSelectedMonarch((team?.monarch as MonarchId | undefined) ?? DEFAULT_MONARCH)
+		setSelectedSuccessor(DEFAULT_SUCCESSOR)
+		setPuissanceMode(modeForElement(el))
 		setSelectedWeapons(initWeapons(el, 0))
 		if (team?.status === 'coming-soon') {
 			setSelectedHunters(randomHunters())
@@ -424,9 +432,16 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 					<SectionHeader
 						tag='// SECTION 05'
 						title='Puissance rémanente / Successeur'
-						description='Monarque actif pour cette composition.'
+						description='Monarque ou Successeur actif pour cette composition.'
 					/>
-					<MonarchSelector selected={selectedMonarch} onChange={setSelectedMonarch} />
+					<PuissanceRemanente
+						mode={puissanceMode}
+						onModeChange={setPuissanceMode}
+						monarchSelected={selectedMonarch}
+						onMonarchChange={setSelectedMonarch}
+						successorSelected={selectedSuccessor}
+						onSuccessorChange={setSelectedSuccessor}
+					/>
 				</section>
 			</main>
 		</div>
