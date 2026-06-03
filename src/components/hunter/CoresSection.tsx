@@ -106,7 +106,7 @@ export function CoresSection({
 									setOpenPicker((prev) => (prev === key ? null : key))
 								}}
 								class={`w-full flex items-center gap-3 bg-zinc-800/60 border rounded-xl px-3 py-3 text-left transition-colors ${
-									isOpen ? 'border-purple-500/60' : 'border-zinc-700/60 hover:border-zinc-500/60'
+									isOpen ? 'border-purple-500/60' : `border-zinc-700/60 ${!(isSupporterLocked && key === 'spirit') ? 'hover:border-zinc-500/60' : ''}`
 								} ${isSupporterLocked && key === 'spirit' ? 'cursor-default opacity-80' : ''}`}
 							>
 								{selected ? (
@@ -147,7 +147,7 @@ export function CoresSection({
 										</span>
 									)}
 								</div>
-								{selected && (
+								{selected && !(isSupporterLocked && key === 'spirit') && (
 									<button
 										type='button'
 										tabIndex={0}
