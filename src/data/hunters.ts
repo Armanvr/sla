@@ -24,6 +24,7 @@ import lauraData from './hunters/laura-walker.json'
 import leeBoraData from './hunters/lee-bora.json'
 import lennartData from './hunters/lennart-niermann.json'
 import limData from './hunters/lim-tae-gyu.json'
+import liuData from './hunters/liu-zhigang.json'
 import meilinData from './hunters/meilin-fisher.json'
 import meriData from './hunters/meri-laine.json'
 import minData from './hunters/min-byung-gu.json'
@@ -80,6 +81,7 @@ export const hunters: HunterEntry[] = [
 	{ id: 'lee-bora', data: leeBoraData },
 	{ id: 'lennart-niermann', data: lennartData },
 	{ id: 'lim-tae-gyu', data: limData },
+	{ id: 'liu-zhigang', data: liuData as unknown as HunterData },
 	{ id: 'meilin-fisher', data: meilinData },
 	{ id: 'meri-laine', data: meriData },
 	{ id: 'min-byung-gu', data: minData },

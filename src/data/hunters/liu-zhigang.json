@@ -1,0 +1,26 @@
+{
+	"name": "Liu Zhigang",
+	"alias": null,
+	"title": null,
+	"rarity": "SSR",
+	"rank": null,
+	"element": "Fire",
+	"class": "Elemental Buster",
+	"category": "Elemental Buster",
+	"country": "China",
+	"releaseDate": null,
+	"newHunter": true,
+	"occupation": ["Hunter"],
+	"affiliation": [],
+	"gender": "Male",
+	"age": null,
+	"species": "Human",
+	"image": null,
+	"icon": null,
+	"stats": [],
+	"elements": [
+		{ "name": "Fire", "primary": true }
+	],
+	"builds": [],
+	"coreBuild": null
+}
