@@ -115,6 +115,7 @@ export interface HunterData {
 	exclusiveWeapon?: string
 	releaseDate?: string
 	newHunter?: boolean
+	showRunes?: boolean
 	relatives?: Relative[]
 	weapon?: { name: string; icon: string }
 	stats: Stat[]

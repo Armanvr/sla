@@ -1,4 +1,5 @@
 import { CoresSection } from './hunter/CoresSection'
+import { RunesSection } from './hunter/RunesSection'
 import { EquipmentSection } from './hunter/EquipmentSection'
 import { StatBar } from './hunter/HeroSection'
 import type { HunterData } from './hunter/types'
@@ -395,8 +396,18 @@ export function HunterProfile({ data }: { data: HunterData }) {
 				</div>
 			</div>
 
-			{/* ── Section 2: Recommandations ── */}
-			<SectionHeader tag='// SECTION 02' title='Recommandations pour le build' />
+			{/* ── Section 2: Runes et bénédiction ── */}
+			{data.showRunes && (
+				<>
+					<SectionHeader tag='// SECTION 02' title='Runes et bénédiction' />
+					<div style={{ marginBottom: 48 }}>
+						<RunesSection />
+					</div>
+				</>
+			)}
+
+			{/* ── Section 3: Recommandations ── */}
+			<SectionHeader tag={data.showRunes ? '// SECTION 03' : '// SECTION 02'} title='Recommandations pour le build' />
 			<div
 				style={{
 					display: 'grid',
