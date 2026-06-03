@@ -5,7 +5,7 @@ import { SuccessorSelector } from './SuccessorSelector'
 
 export type PuissanceMode = 'monarch' | 'successor'
 
-interface PuissanceRemanteProps {
+interface PuissanceRemanenteProps {
 	mode: PuissanceMode
 	onModeChange: (mode: PuissanceMode) => void
 	monarchSelected: MonarchId
@@ -21,7 +21,7 @@ export function PuissanceRemanente({
 	onMonarchChange,
 	successorSelected,
 	onSuccessorChange,
-}: PuissanceRemanteProps) {
+}: PuissanceRemanenteProps) {
 	return (
 		<div>
 			<div class='flex gap-2 mb-4'>
