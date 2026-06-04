@@ -8,13 +8,13 @@ interface MonarchSelectorProps {
 
 export function MonarchSelector({ selected, onChange }: MonarchSelectorProps) {
 	return (
-		<div class='flex gap-3 flex-wrap'>
+		<div className='flex gap-3 flex-wrap'>
 			{MONARCHS.map((m) => (
 				<button
 					key={m.id}
 					type='button'
 					onClick={() => onChange(m.id)}
-					class={[
+					className={[
 						'flex flex-col items-center gap-2 p-3 rounded-xl border transition-all cursor-pointer flex-1 min-w-[100px]',
 						selected === m.id
 							? 'border-zinc-400 bg-zinc-700/60 shadow-[0_0_12px_rgba(255,255,255,0.06)]'
@@ -24,12 +24,12 @@ export function MonarchSelector({ selected, onChange }: MonarchSelectorProps) {
 					<img
 						src={m.image}
 						alt={m.name}
-						class='w-20 h-20 object-cover rounded-lg'
+						className='w-20 h-20 object-cover rounded-lg'
 						onError={(e) => {
 							;(e.target as HTMLImageElement).style.opacity = '0.3'
 						}}
 					/>
-					<span class='text-xs text-zinc-300 font-medium text-center leading-tight'>
+					<span className='text-xs text-zinc-300 font-medium text-center leading-tight'>
 						{m.name}
 					</span>
 				</button>

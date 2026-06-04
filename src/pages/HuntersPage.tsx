@@ -1,3 +1,4 @@
+import type { JSX } from 'preact'
 import { useState } from 'preact/hooks'
 import type { HunterData } from '../components/HunterProfile'
 import { Badge } from '../components/sla/Badge'
@@ -26,6 +27,17 @@ const rarityClass: Record<string, string> = {
 	R: 'sla-rarity sla-rarity-r',
 }
 
+const hunterCardTitleStyle: JSX.CSSProperties = {
+	fontFamily: 'var(--sla-font-hud)',
+	fontSize: 'var(--sla-text-sm)',
+	fontWeight: 700,
+	letterSpacing: 'var(--sla-ls-normal)',
+	textTransform: 'uppercase',
+	color: 'var(--sla-text-primary)',
+	margin: 0,
+	lineHeight: 1.2,
+}
+
 function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 	const primary = hunter.data.elements.find((e) => e.primary) ?? hunter.data.elements[0]
 	const slug = primary ? (elementMeta[primary.name]?.slug ?? 'ember') : 'ember'
@@ -34,7 +46,7 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 	return (
 		<a
 			href={`/hunter/${hunter.id}`}
-			class='sla-panel sla-clickable'
+			className='sla-panel sla-clickable'
 			style={{
 				display: 'flex',
 				textDecoration: 'none',
@@ -45,7 +57,7 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 		>
 			{/* Left: Hunter image */}
 			<div
-				class={`sla-elem-tint-${slug} sla-hunter-card-img`}
+				className={`sla-elem-tint-${slug} sla-hunter-card-img`}
 				style={{
 					position: 'relative',
 					display: 'flex',
@@ -96,21 +108,12 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 				>
 					<div style={{ minWidth: 0 }}>
 						{hunter.data.title && (
-							<div class='sla-label' style={{ marginBottom: 2 }}>
+							<div className='sla-label' style={{ marginBottom: 2 }}>
 								{hunter.data.title}
 							</div>
 						)}
 						<h3
-							style={{
-								fontFamily: 'var(--sla-font-hud)',
-								fontSize: 'var(--sla-text-sm)',
-								fontWeight: 700,
-								letterSpacing: 'var(--sla-ls-normal)',
-								textTransform: 'uppercase',
-								color: 'var(--sla-text-primary)',
-								margin: 0,
-								lineHeight: 1.2,
-							}}
+							style={hunterCardTitleStyle}
 						>
 							{hunter.data.name}
 						</h3>
@@ -140,7 +143,7 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 							</span>
 						)}
 						{hunter.data.rarity && rarityClass[hunter.data.rarity] && (
-							<span class={rarityClass[hunter.data.rarity]}>{hunter.data.rarity}</span>
+							<span className={rarityClass[hunter.data.rarity]}>{hunter.data.rarity}</span>
 						)}
 					</div>
 				</div>
@@ -151,7 +154,7 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 						return (
 							<span
 								key={el.name}
-								class={`sla-elem-badge sla-elem-badge-${s}`}
+								className={`sla-elem-badge sla-elem-badge-${s}`}
 								style={{ fontSize: 'var(--sla-text-xs)' }}
 							>
 								{el.name}
@@ -159,7 +162,7 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 						)
 					})}
 					{hunter.data.class && (
-						<span class='sla-label' style={{ alignSelf: 'center' }}>
+						<span className='sla-label' style={{ alignSelf: 'center' }}>
 							{hunter.data.class}
 						</span>
 					)}
@@ -185,7 +188,7 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 	const [activeCategory, setActiveCategory] = useState<Category | null>(null)
 
 	return (
-		<div class='sla-container' style={{ padding: '64px 0', display: 'flex', flexDirection: 'column', gap: 48 }}>
+		<div className='sla-container' style={{ padding: '64px 0', display: 'flex', flexDirection: 'column', gap: 48 }}>
 			<SectionHeader
 				tag='// SECTION // HUNTERS'
 				title='Hunter Guides'
@@ -201,7 +204,7 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 							key={cat}
 							type='button'
 							onClick={() => setActiveCategory((prev) => (prev === cat ? null : cat))}
-							class={`sla-btn ${active ? 'sla-btn-primary' : 'sla-btn-ghost'}`}
+							className={`sla-btn ${active ? 'sla-btn-primary' : 'sla-btn-ghost'}`}
 							style={{ padding: '8px 18px', fontSize: 'var(--sla-text-xs)' }}
 						>
 							{cat}
@@ -217,7 +220,7 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 					return (
 						<div>
 							<div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-								<span class='sla-elem-bar sla-elem-bar-ember' style={{ height: 24 }} />
+								<span className='sla-elem-bar sla-elem-bar-ember' style={{ height: 24 }} />
 								<img
 									src='/assets/utils/Player_Icon.png'
 									alt='Joueur'
@@ -233,7 +236,7 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 								>
 									Joueur
 								</h3>
-								<span class='sla-elem-badge sla-elem-badge-ember'>Unique</span>
+								<span className='sla-elem-badge sla-elem-badge-ember'>Unique</span>
 							</div>
 							<div
 								style={{
@@ -278,7 +281,7 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 								>
 									{meta.label}
 								</h3>
-								<span class={`sla-elem-badge sla-elem-badge-${meta.slug}`}>
+								<span className={`sla-elem-badge sla-elem-badge-${meta.slug}`}>
 									{group.length} chasseur{group.length > 1 ? 's' : ''}
 								</span>
 							</div>

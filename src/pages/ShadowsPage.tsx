@@ -1,3 +1,4 @@
+import type { JSX } from 'preact'
 import { Panel } from '../components/sla/Panel'
 import { SectionHeader } from '../components/sla/SectionHeader'
 import beruData from '../data/shadows/beru.json'
@@ -32,6 +33,17 @@ interface ShadowData {
 	skills?: { icon: string; name: string | null; description: string | null }[]
 }
 
+const shadowAuthorityStyle: JSX.CSSProperties = {
+	fontSize: 'var(--sla-text-sm)',
+	color: 'var(--sla-text-secondary)',
+	margin: 0,
+	lineHeight: 1.5,
+	display: '-webkit-box',
+	WebkitLineClamp: 2,
+	WebkitBoxOrient: 'vertical',
+	overflow: 'hidden',
+}
+
 const SHADOWS: ShadowData[] = [
 	beruData,
 	besteData,
@@ -52,7 +64,7 @@ const SHADOWS: ShadowData[] = [
 function ShadowCard({ shadow }: { shadow: ShadowData }) {
 	const img = shadow.render ?? shadow.image ?? shadow.ranks?.general
 	return (
-		<Panel class='sla-elem-tint-dark' style={{ overflow: 'hidden' }}>
+		<Panel className='sla-elem-tint-dark' style={{ overflow: 'hidden' }}>
 			<div
 				style={{
 					position: 'relative',
@@ -85,7 +97,7 @@ function ShadowCard({ shadow }: { shadow: ShadowData }) {
 				)}
 			</div>
 			<div style={{ padding: 16 }}>
-				<div class='sla-label' style={{ color: 'var(--sla-elem-dark)' }}>
+				<div className='sla-label' style={{ color: 'var(--sla-elem-dark)' }}>
 					{shadow.title}
 				</div>
 				<h3
@@ -100,18 +112,7 @@ function ShadowCard({ shadow }: { shadow: ShadowData }) {
 				>
 					{shadow.name}
 				</h3>
-				<p
-					style={{
-						fontSize: 'var(--sla-text-sm)',
-						color: 'var(--sla-text-secondary)',
-						margin: 0,
-						lineHeight: 1.5,
-						display: '-webkit-box',
-						WebkitLineClamp: 2,
-						WebkitBoxOrient: 'vertical',
-						overflow: 'hidden',
-					}}
-				>
+				<p style={shadowAuthorityStyle}>
 					{shadow.shadowAuthority}
 				</p>
 				{shadow.weapon && (
@@ -124,7 +125,7 @@ function ShadowCard({ shadow }: { shadow: ShadowData }) {
 								;(e.target as HTMLImageElement).style.display = 'none'
 							}}
 						/>
-						<span class='sla-label'>{shadow.weapon.name}</span>
+						<span className='sla-label'>{shadow.weapon.name}</span>
 					</div>
 				)}
 			</div>
@@ -134,7 +135,7 @@ function ShadowCard({ shadow }: { shadow: ShadowData }) {
 
 export function ShadowsPage() {
 	return (
-		<div class='sla-container' style={{ padding: '64px 0', display: 'flex', flexDirection: 'column', gap: 48 }}>
+		<div className='sla-container' style={{ padding: '64px 0', display: 'flex', flexDirection: 'column', gap: 48 }}>
 			<SectionHeader
 				tag='// SECTION // SHADOWS'
 				title='Shadow Guides'

@@ -5,7 +5,7 @@ interface BackLinkProps {
 
 export function BackLink({ href = '/', label = '◄ Retour' }: BackLinkProps) {
 	return (
-		<a href={href} class='sla-back-link'>
+		<a href={href} className='sla-back-link'>
 			{label}
 		</a>
 	)

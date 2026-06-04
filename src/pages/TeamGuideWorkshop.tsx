@@ -108,13 +108,13 @@ function Tabs({
 				? 'bg-amber-500 text-zinc-900'
 				: 'bg-zinc-600 text-white'
 	return (
-		<div class='flex flex-wrap gap-2'>
+		<div className='flex flex-wrap gap-2'>
 			{labels.map((label, i) => (
 				<button
 					key={`${label}-${i}`}
 					type='button'
 					onClick={() => onSwitch(i)}
-					class={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
+					className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
 						i === active
 							? activeClass
 							: 'bg-zinc-800 border border-zinc-700/60 text-zinc-300 hover:border-zinc-500/60 hover:text-zinc-100'
@@ -132,41 +132,41 @@ function BossCard({ boss }: { boss: BossConfig }) {
 	const hasResistances = boss.resistances.length > 0
 
 	return (
-		<div class='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
-			<div class='flex items-center gap-4 px-4 py-3'>
+		<div className='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
+			<div className='flex items-center gap-4 px-4 py-3'>
 				<img
 					src={`/assets/workshop/${boss.icon}`}
 					alt={boss.name}
-					class='w-12 h-12 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
+					className='w-12 h-12 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
 					onError={(e) => {
 						;(e.target as HTMLImageElement).style.display = 'none'
 					}}
 				/>
-				<div class='flex-1 min-w-0'>
-					<p class='text-[10px] text-zinc-500 uppercase tracking-wider'>Boss</p>
-					<p class='text-sm font-semibold text-zinc-100 truncate'>{boss.name}</p>
+				<div className='flex-1 min-w-0'>
+					<p className='text-[10px] text-zinc-500 uppercase tracking-wider'>Boss</p>
+					<p className='text-sm font-semibold text-zinc-100 truncate'>{boss.name}</p>
 				</div>
 			</div>
 
 			{(hasWeaknesses || hasResistances) && (
-				<div class='flex border-t border-zinc-700/40'>
+				<div className='flex border-t border-zinc-700/40'>
 					{hasWeaknesses && (
 						<div
-							class={`flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40 ${hasResistances ? 'border-r border-zinc-700/40' : ''}`}
+							className={`flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40 ${hasResistances ? 'border-r border-zinc-700/40' : ''}`}
 						>
-							<span class='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>
+							<span className='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>
 								Faiblesses
 							</span>
-							<div class='flex gap-2 flex-wrap justify-center'>
+							<div className='flex gap-2 flex-wrap justify-center'>
 								{boss.weaknesses.map((el) =>
 									ELEMENT_ICON[el] ? (
-										<div key={el} class='flex flex-col items-center gap-1'>
+										<div key={el} className='flex flex-col items-center gap-1'>
 											<img
 												src={ELEMENT_ICON[el]}
 												alt={el}
-												class='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
+												className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
 											/>
-											<span class='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
+											<span className='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
 										</div>
 									) : null,
 								)}
@@ -174,20 +174,20 @@ function BossCard({ boss }: { boss: BossConfig }) {
 						</div>
 					)}
 					{hasResistances && (
-						<div class='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-red-950/40'>
-							<span class='text-[11px] font-bold text-red-400 uppercase tracking-widest'>
+						<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-red-950/40'>
+							<span className='text-[11px] font-bold text-red-400 uppercase tracking-widest'>
 								Résistances
 							</span>
-							<div class='flex gap-2 flex-wrap justify-center'>
+							<div className='flex gap-2 flex-wrap justify-center'>
 								{boss.resistances.map((el) =>
 									ELEMENT_RESISTANCE_ICON[el] ? (
-										<div key={el} class='flex flex-col items-center gap-1'>
+										<div key={el} className='flex flex-col items-center gap-1'>
 											<img
 												src={ELEMENT_RESISTANCE_ICON[el]}
 												alt={el}
-												class='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(248,113,113,0.5)]'
+												className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(248,113,113,0.5)]'
 											/>
-											<span class='text-[9px] text-red-300/80 font-medium'>{el}</span>
+											<span className='text-[9px] text-red-300/80 font-medium'>{el}</span>
 										</div>
 									) : null,
 								)}
@@ -362,7 +362,7 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 	// ── Render ────────────────────────────────────────────────────────────────
 
 	return (
-		<div class='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
+		<div className='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
 			<BackLink href='/workshops' />
 			<div style={{ marginTop: 24, display: 'flex', alignItems: 'center', gap: 16, marginBottom: 32 }}>
 				<img
@@ -374,8 +374,8 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 					}}
 				/>
 				<div>
-					<div class='sla-tag'>{'// WORKSHOP'}</div>
-					<h1 class='sla-title-section sla-text-glow' style={{ marginTop: 4 }}>
+					<div className='sla-tag'>{'// WORKSHOP'}</div>
+					<h1 className='sla-title-section sla-text-glow' style={{ marginTop: 4 }}>
 						{raidLabel}
 					</h1>
 				</div>
@@ -386,13 +386,13 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 				<Tabs labels={sectionLabels} active={activeSectionIdx} onSwitch={switchSection} color='orange' />
 
 				{isComingSoon ? (
-					<div class='flex flex-col items-center gap-5 py-8'>
+					<div className='flex flex-col items-center gap-5 py-8'>
 						<img
 							src='/assets/sections/coming-soon.jpg'
 							alt='Coming soon'
-							class='w-full max-w-xl rounded-2xl shadow-lg'
+							className='w-full max-w-xl rounded-2xl shadow-lg'
 						/>
-						<p class='text-zinc-400 text-sm font-medium tracking-wide'>
+						<p className='text-zinc-400 text-sm font-medium tracking-wide'>
 							Ce contenu sera disponible prochainement.
 						</p>
 					</div>
@@ -410,8 +410,8 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 
 						{/* Blessing tabs */}
 						{blessingLabels.length > 0 && (
-							<div class='space-y-2'>
-								<p class='text-[11px] font-bold text-amber-400/80 uppercase tracking-widest'>
+							<div className='space-y-2'>
+								<p className='text-[11px] font-bold text-amber-400/80 uppercase tracking-widest'>
 									Bénédictions
 								</p>
 								<Tabs
@@ -435,15 +435,15 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 						{isWithJinwoo && (
 							<>
 								<JinwooPanel selectedWeapons={selectedWeapons} onWeaponSelect={setWeaponSlot} />
-								<hr class='border-zinc-800' />
+								<hr className='border-zinc-800' />
 							</>
 						)}
 
 						{/* Hunters */}
 						{floor && (
 							<section>
-								<p class='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>Chasseurs</p>
-								<div class='grid grid-cols-3 gap-4'>
+								<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>Chasseurs</p>
+								<div className='grid grid-cols-3 gap-4'>
 									{(floor.hunters[activeTeamIdx] ?? floor.hunters[0]).hunters.map((_, i) => (
 										<HunterSlot
 											key={`${activeSectionIdx}-${activeFloorIdx}-${activeBlessingIdx}-${viewType}-${activeTeamIdx}-${i}`}
@@ -461,10 +461,10 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 						{/* Shadows */}
 						{hasShadows && (
 							<>
-								<hr class='border-zinc-800' />
+								<hr className='border-zinc-800' />
 								<section>
-									<p class='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>Ombres</p>
-									<div class='grid grid-cols-3 gap-4'>
+									<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>Ombres</p>
+									<div className='grid grid-cols-3 gap-4'>
 										{selectedShadows.map((_, i) => (
 											<ShadowSlot
 												key={`${activeSectionIdx}-${activeFloorIdx}-${activeBlessingIdx}-${viewType}-${activeTeamIdx}-${i}`}

@@ -8,6 +8,7 @@ import { RunesSection } from '../components/hunter/RunesSection'
 import { PuissanceRemanente, type PuissanceMode } from '../components/team/PuissanceRemanente'
 import { ShadowSlot } from '../components/team/ShadowSlot'
 import { TeamConfigTabs } from '../components/team/TeamConfigTabs'
+import { AdvancementEffectsTable } from '../components/team/AdvancementEffectsTable'
 import { SHADOWS, SHADOWS_BY_ID } from '../components/team/shadows'
 import { DEFAULT_MONARCH } from '../components/team/monarchs'
 import type { MonarchId } from '../components/team/monarchs'
@@ -112,13 +113,13 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 	const { start, end } = getWeekDateRange(new Date())
 
 	return (
-		<div class='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
-			<div class='flex items-center justify-between px-4 py-3 border-b border-zinc-700/40'>
+		<div className='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
+			<div className='flex items-center justify-between px-4 py-3 border-b border-zinc-700/40'>
 				<div>
-					<p class='text-[10px] text-zinc-500 uppercase tracking-wider'>Rotation hebdomadaire</p>
-					<p class='text-sm font-semibold text-zinc-100'>
+					<p className='text-[10px] text-zinc-500 uppercase tracking-wider'>Rotation hebdomadaire</p>
+					<p className='text-sm font-semibold text-zinc-100'>
 						Semaine {week}
-						<span class='ml-2 text-xs font-normal text-zinc-400'>
+						<span className='ml-2 text-xs font-normal text-zinc-400'>
 							{fmtDate(start)} – {fmtDate(end)}
 						</span>
 					</p>
@@ -126,36 +127,36 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 			</div>
 
 			{rotation ? (
-				<div class='flex'>
-					<div class='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40 border-r border-zinc-700/40'>
-						<span class='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>Faiblesses</span>
-						<div class='flex gap-3 flex-wrap justify-center'>
+				<div className='flex'>
+					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40 border-r border-zinc-700/40'>
+						<span className='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>Faiblesses</span>
+						<div className='flex gap-3 flex-wrap justify-center'>
 							{rotation.weakness.map((el) =>
 								ELEMENT_ICON[el] ? (
-									<div key={el} class='flex flex-col items-center gap-1'>
+									<div key={el} className='flex flex-col items-center gap-1'>
 										<img
 											src={ELEMENT_ICON[el]}
 											alt={el}
-											class='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
+											className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
 										/>
-										<span class='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
+										<span className='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
 									</div>
 								) : null,
 							)}
 						</div>
 					</div>
-					<div class='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-red-950/40'>
-						<span class='text-[11px] font-bold text-red-400 uppercase tracking-widest'>Résistances</span>
-						<div class='flex gap-3 flex-wrap justify-center'>
+					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-red-950/40'>
+						<span className='text-[11px] font-bold text-red-400 uppercase tracking-widest'>Résistances</span>
+						<div className='flex gap-3 flex-wrap justify-center'>
 							{rotation.resistance.map((el) =>
 								ELEMENT_RESISTANCE_ICON[el] ? (
-									<div key={el} class='flex flex-col items-center gap-1'>
+									<div key={el} className='flex flex-col items-center gap-1'>
 										<img
 											src={ELEMENT_RESISTANCE_ICON[el]}
 											alt={el}
-											class='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(248,113,113,0.5)]'
+											className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(248,113,113,0.5)]'
 										/>
-										<span class='text-[9px] text-red-300/80 font-medium'>{el}</span>
+										<span className='text-[9px] text-red-300/80 font-medium'>{el}</span>
 									</div>
 								) : null,
 							)}
@@ -163,7 +164,7 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 					</div>
 				</div>
 			) : (
-				<p class='px-4 py-3 text-sm text-zinc-500'>Rotation inconnue pour cette semaine.</p>
+				<p className='px-4 py-3 text-sm text-zinc-500'>Rotation inconnue pour cette semaine.</p>
 			)}
 		</div>
 	)
@@ -336,7 +337,7 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 	// ── Render ────────────────────────────────────────────────────────────────
 
 	return (
-		<div class='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
+		<div className='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
 			<BackLink />
 			<div style={{ marginTop: 24 }}>
 				<SectionHeader
@@ -398,7 +399,7 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 						title='Chasseurs'
 						description='Trois chasseurs recommandés pour cet élément actif.'
 					/>
-					<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+					<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<HunterSlot
 								key={i}
@@ -410,6 +411,7 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 							/>
 						))}
 					</div>
+					<AdvancementEffectsTable hunters={selectedHunters} />
 				</section>
 
 				<section>
@@ -418,7 +420,7 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 						title='Ombres'
 						description="Ombres recommandées pour renforcer l'équipe."
 					/>
-					<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+					<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<ShadowSlot
 								key={i}

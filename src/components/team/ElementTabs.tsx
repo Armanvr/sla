@@ -33,7 +33,7 @@ export function ElementTabs({
 	weekResistances?: string[]
 }) {
 	return (
-		<div class='flex flex-wrap gap-2 overflow-x-auto pb-1'>
+		<div className='flex flex-wrap gap-2 overflow-x-auto pb-1'>
 			{teams.map((team) => {
 				const isActive = team.element === activeElement
 				const isRandom = team.status !== 'active'
@@ -44,7 +44,7 @@ export function ElementTabs({
 						key={team.element}
 						type='button'
 						onClick={() => onSwitch(team.element)}
-						class={`relative flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
+						className={`relative flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
 							isActive
 								? (elementTabActive[team.element] ?? 'bg-zinc-600 text-white')
 								: isWeak
@@ -55,24 +55,24 @@ export function ElementTabs({
 						}`}
 					>
 						{isWeak && !isActive && (
-							<span class='absolute -top-1.5 -right-1.5 w-3 h-3 rounded-full bg-emerald-500 border border-zinc-900' />
+							<span className='absolute -top-1.5 -right-1.5 w-3 h-3 rounded-full bg-emerald-500 border border-zinc-900' />
 						)}
 						{isResistant && !isActive && (
-							<span class='absolute -top-1.5 -right-1.5 w-3 h-3 rounded-full bg-red-500 border border-zinc-900' />
+							<span className='absolute -top-1.5 -right-1.5 w-3 h-3 rounded-full bg-red-500 border border-zinc-900' />
 						)}
 						{elementIcon[team.element] ? (
 							<img
 								src={elementIcon[team.element]}
 								alt={team.element}
-								class='w-4 h-4 object-contain flex-shrink-0'
+								className='w-4 h-4 object-contain flex-shrink-0'
 							/>
 						) : (
-							<span class='w-2 h-2 rounded-full flex-shrink-0 bg-zinc-400' />
+							<span className='w-2 h-2 rounded-full flex-shrink-0 bg-zinc-400' />
 						)}
 						{team.element}
-						{isRandom && <span class='text-[10px] text-zinc-500 font-normal ml-1'>★ aléatoire</span>}
-						{isWeak && <span class='text-[10px] text-emerald-400 font-normal ml-1'>★ recommandé</span>}
-						{isResistant && <span class='text-[10px] text-red-400/80 font-normal ml-1'>✗ résistance</span>}
+						{isRandom && <span className='text-[10px] text-zinc-500 font-normal ml-1'>★ aléatoire</span>}
+						{isWeak && <span className='text-[10px] text-emerald-400 font-normal ml-1'>★ recommandé</span>}
+						{isResistant && <span className='text-[10px] text-red-400/80 font-normal ml-1'>✗ résistance</span>}
 					</button>
 				)
 			})}

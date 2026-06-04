@@ -12,10 +12,10 @@ export function SectionHeader({
 	right?: ComponentChildren
 }) {
 	return (
-		<div class='sla-section-head sla-anim-in'>
-			<div class='sla-section-head-row'>
-				{tag && <span class='sla-tag'>{tag}</span>}
-				<h2 class='sla-title-section'>{title}</h2>
+		<div className='sla-section-head sla-anim-in'>
+			<div className='sla-section-head-row'>
+				{tag && <span className='sla-tag'>{tag}</span>}
+				<h2 className='sla-title-section'>{title}</h2>
 				{right && <div style={{ marginLeft: 'auto' }}>{right}</div>}
 			</div>
 			{description && (
@@ -31,7 +31,7 @@ export function SectionHeader({
 					{description}
 				</p>
 			)}
-			<hr class='sla-divider' />
+			<hr className='sla-divider' />
 		</div>
 	)
 }

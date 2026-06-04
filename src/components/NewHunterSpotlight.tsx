@@ -1,4 +1,18 @@
+import type { JSX } from 'preact'
 import type { HunterData } from './HunterProfile'
+
+const spotlightCardStyle: JSX.CSSProperties = {
+	display: 'flex',
+	flex: '1 1 340px',
+	minWidth: 280,
+	maxWidth: 520,
+	textDecoration: 'none',
+	background: 'linear-gradient(135deg, #1a0f3a 0%, #0d0d1a 40%, #1a0a00 100%)',
+	border: '1px solid var(--sla-mana)',
+	boxShadow: '0 0 40px rgba(97, 55, 255, 0.5), 0 0 80px rgba(194, 94, 28, 0.15)',
+	overflow: 'hidden',
+	cursor: 'pointer',
+}
 
 interface HunterEntry {
 	id: string
@@ -24,7 +38,7 @@ export function NewHunterSpotlight({ hunters }: { hunters: HunterEntry[] }) {
 	if (newHunters.length === 0) return null
 
 	return (
-		<div class='sla-container' style={{ padding: '32px 0 0' }}>
+		<div className='sla-container' style={{ padding: '32px 0 0' }}>
 			<div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
 				{newHunters.map((entry) => {
 					const primary = entry.data.elements.find((e) => e.primary) ?? entry.data.elements[0]
@@ -33,23 +47,12 @@ export function NewHunterSpotlight({ hunters }: { hunters: HunterEntry[] }) {
 						<a
 							key={entry.id}
 							href={`/hunter/${entry.id}`}
-							class='sla-anim-in'
-							style={{
-								display: 'flex',
-								flex: '1 1 340px',
-								minWidth: 280,
-								maxWidth: 520,
-								textDecoration: 'none',
-								background: 'linear-gradient(135deg, #1a0f3a 0%, #0d0d1a 40%, #1a0a00 100%)',
-								border: '1px solid var(--sla-mana)',
-								boxShadow: '0 0 40px rgba(97, 55, 255, 0.5), 0 0 80px rgba(194, 94, 28, 0.15)',
-								overflow: 'hidden',
-								cursor: 'pointer',
-							}}
+							className='sla-anim-in'
+							style={spotlightCardStyle}
 						>
 							{/* Hunter image */}
 							<div
-								class={`sla-elem-tint-${slug}`}
+								className={`sla-elem-tint-${slug}`}
 								style={{
 									width: 200,
 									minWidth: 200,
@@ -104,13 +107,13 @@ export function NewHunterSpotlight({ hunters }: { hunters: HunterEntry[] }) {
 									>
 										New Hunter
 									</span>
-									<span class='sla-tag'>Limited Event</span>
+									<span className='sla-tag'>Limited Event</span>
 								</div>
 
 								<div>
 									{entry.data.title && (
 										<div
-											class='sla-label'
+											className='sla-label'
 											style={{ marginBottom: 4, color: 'var(--sla-mana-bright)' }}
 										>
 											{entry.data.title}
@@ -137,7 +140,7 @@ export function NewHunterSpotlight({ hunters }: { hunters: HunterEntry[] }) {
 										return (
 											<span
 												key={el.name}
-												class={`sla-elem-badge sla-elem-badge-${s}`}
+												className={`sla-elem-badge sla-elem-badge-${s}`}
 												style={{ fontSize: 'var(--sla-text-xs)' }}
 											>
 												{el.name}
@@ -145,9 +148,9 @@ export function NewHunterSpotlight({ hunters }: { hunters: HunterEntry[] }) {
 										)
 									})}
 									{entry.data.rarity && rarityClass[entry.data.rarity] && (
-										<span class={rarityClass[entry.data.rarity]}>{entry.data.rarity}</span>
+										<span className={rarityClass[entry.data.rarity]}>{entry.data.rarity}</span>
 									)}
-									{entry.data.class && <span class='sla-label'>{entry.data.class}</span>}
+									{entry.data.class && <span className='sla-label'>{entry.data.class}</span>}
 								</div>
 
 								<div

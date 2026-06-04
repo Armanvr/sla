@@ -12,7 +12,7 @@
 	"mainAbility": "Superhuman Strength / Body Enhancement / Healing Spells",
 	"exclusiveWeapon": "Saint's Benediction",
 	"releaseDate": "2026-05-07",
-	"newHunter": true,
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["The Federal Bureau of Hunters"],
 	"gender": "Male",

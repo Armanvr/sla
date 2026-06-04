@@ -12,7 +12,7 @@
 	"mainAbility": "Body Enhancement / Mercury Magic",
 	"exclusiveWeapon": "The Embodiment of Obsession",
 	"releaseDate": "2026-04-09",
-	"newHunter": true,
+	"newHunter": false,
 	"occupation": ["Hunter"],
 	"affiliation": ["The Justitia Guild"],
 	"gender": "Female",

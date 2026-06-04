@@ -60,19 +60,19 @@ function WorkshopsRoute() {
 
 function NotFound() {
 	return (
-		<div class='sla-container' style={{ paddingTop: 64, paddingBottom: 64 }}>
+		<div className='sla-container' style={{ paddingTop: 64, paddingBottom: 64 }}>
 			<BackLink />
-			<Panel corners class='sla-anim-in' style={{ marginTop: 32, padding: 48, textAlign: 'center' }}>
-				<div class='sla-tag' style={{ display: 'inline-block', marginBottom: 16 }}>
+			<Panel corners className='sla-anim-in' style={{ marginTop: 32, padding: 48, textAlign: 'center' }}>
+				<div className='sla-tag' style={{ display: 'inline-block', marginBottom: 16 }}>
 					{'ERROR // 404'}
 				</div>
-				<h1 class='sla-title-section sla-text-glow' style={{ marginTop: 0 }}>
+				<h1 className='sla-title-section sla-text-glow' style={{ marginTop: 0 }}>
 					Signal lost
 				</h1>
 				<p style={{ color: 'var(--sla-text-secondary)', marginTop: 16 }}>
 					Cette route n'existe pas dans le réseau SLA.
 				</p>
-				<a href='/' class='sla-btn sla-btn-primary' style={{ marginTop: 24 }}>
+				<a href='/' className='sla-btn sla-btn-primary' style={{ marginTop: 24 }}>
 					◄ Retour au QG
 				</a>
 			</Panel>
@@ -113,7 +113,7 @@ export function AppRouter() {
 			<Nav />
 			<div style={{ display: 'flex', minHeight: '100vh' }}>
 				<SideNav />
-				<div class="sla-main-content" style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+				<div className="sla-main-content" style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
 					<main style={{ flex: 1 }}>
 						<Router>
 							<Route path='/' component={HomeRoute} />

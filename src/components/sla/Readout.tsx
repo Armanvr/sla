@@ -10,9 +10,9 @@ export function Readout({
 	class?: string
 }) {
 	return (
-		<div class={`sla-readout ${className}`}>
-			<div class='sla-readout-label'>{label}</div>
-			<div class='sla-readout-value'>{value}</div>
+		<div className={`sla-readout ${className}`}>
+			<div className='sla-readout-label'>{label}</div>
+			<div className='sla-readout-value'>{value}</div>
 		</div>
 	)
 }

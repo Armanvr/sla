@@ -11,11 +11,11 @@ interface PanelProps {
 export function Panel({ children, corners = false, class: className = '', style, as = 'div' }: PanelProps) {
 	const Tag = as as keyof JSX.IntrinsicElements
 	return (
-		<Tag class={`sla-panel ${corners ? 'sla-corners' : ''} ${className}`} style={style}>
+		<Tag className={`sla-panel ${corners ? 'sla-corners' : ''} ${className}`} style={style}>
 			{corners && (
 				<>
-					<span class='sla-corner-bl' />
-					<span class='sla-corner-br' />
+					<span className='sla-corner-bl' />
+					<span className='sla-corner-br' />
 				</>
 			)}
 			<div style={{ position: 'relative', zIndex: 1 }}>{children}</div>

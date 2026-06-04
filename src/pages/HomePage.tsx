@@ -11,15 +11,15 @@ interface HunterCard {
 
 function Hero() {
 	return (
-		<section class='sla-anim-in sla-section-mobile' style={{ textAlign: 'center' }}>
+		<section className='sla-anim-in sla-section-mobile' style={{ textAlign: 'center' }}>
 			<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 16 }}>
-				<span class='sla-tag'>{'SLA // Network'}</span>
-				<span class='sla-label'>{'// Solo Leveling: ARISE Codex'}</span>
+				<span className='sla-tag'>{'SLA // Network'}</span>
+				<span className='sla-label'>{'// Solo Leveling: ARISE Codex'}</span>
 			</div>
-			<h1 class='sla-title-hero sla-text-glow'>
+			<h1 className='sla-title-hero sla-text-glow'>
 				ARISE
 				<br />
-				<span class='sla-text-ember'>EMBERFALL</span>
+				<span className='sla-text-ember'>EMBERFALL</span>
 			</h1>
 			<p
 				style={{
@@ -31,7 +31,7 @@ function Hero() {
 				}}
 			>
 				Codex tactique des chasseurs, ombres, builds et compositions d'équipe. Mis à jour le{' '}
-				<span class='sla-text-ember'>7 mai 2026</span>.
+				<span className='sla-text-ember'>7 mai 2026</span>.
 			</p>
 		</section>
 	)
@@ -57,7 +57,7 @@ function FeatureCard({
 	return (
 		<a
 			href={href}
-			class='sla-clickable'
+			className='sla-clickable'
 			style={{
 				display: 'block',
 				position: 'relative',
@@ -104,7 +104,7 @@ function FeatureCard({
 					justifyContent: 'flex-end',
 				}}
 			>
-				<div class='sla-tag' style={{ marginBottom: 10, display: 'inline-block', width: 'fit-content' }}>
+				<div className='sla-tag' style={{ marginBottom: 10, display: 'inline-block', width: 'fit-content' }}>
 					{tag}
 				</div>
 				<h3
@@ -152,7 +152,7 @@ function FeatureCard({
 export function HomePage({ hunters }: { hunters: HunterCard[] }) {
 	return (
 		<>
-			<div class='sla-container'>
+			<div className='sla-container'>
 				<Hero />
 			</div>
 
@@ -170,12 +170,12 @@ export function HomePage({ hunters }: { hunters: HunterCard[] }) {
 
 			<NewHunterSpotlight hunters={hunters} />
 
-			<div class='sla-container sla-section-mobile'>
+			<div className='sla-container sla-section-mobile'>
 				{/* Section — Fonctionnalités du système */}
 				<section>
 					<div style={{ marginBottom: 40 }}>
 						<div
-							class='sla-label'
+							className='sla-label'
 							style={{
 								marginBottom: 8,
 								letterSpacing: 'var(--sla-ls-widest)',
@@ -184,12 +184,12 @@ export function HomePage({ hunters }: { hunters: HunterCard[] }) {
 						>
 							{'// FONCTIONNALITÉS'}
 						</div>
-						<h2 class='sla-title-section sla-text-glow' style={{ margin: 0 }}>
+						<h2 className='sla-title-section sla-text-glow' style={{ margin: 0 }}>
 							Fonctionnalités du système
 						</h2>
 					</div>
 
-					<div class="sla-home-grid">
+					<div className="sla-home-grid">
 						<div style={{ gridColumn: 'span 2' }}>
 							<FeatureCard
 								tag='// SYSTÈME 01'

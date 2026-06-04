@@ -3,7 +3,7 @@ import workshopConfig from '../data/teams/workshop.json'
 
 function WorkshopCard({ title, href, imgSrc }: { title: string; href: string; imgSrc: string }) {
 	return (
-		<a href={href} class='sla-panel sla-clickable' style={{ display: 'block', textDecoration: 'none' }}>
+		<a href={href} className='sla-panel sla-clickable' style={{ display: 'block', textDecoration: 'none' }}>
 			<div
 				style={{
 					height: 144,
@@ -56,7 +56,7 @@ function WorkshopCard({ title, href, imgSrc }: { title: string; href: string; im
 
 export function WorkshopsPage() {
 	return (
-		<div class='sla-container' style={{ padding: '64px 0', display: 'flex', flexDirection: 'column', gap: 48 }}>
+		<div className='sla-container' style={{ padding: '64px 0', display: 'flex', flexDirection: 'column', gap: 48 }}>
 			<SectionHeader
 				tag='// SECTION // WORKSHOP'
 				title='Workshop Guides'

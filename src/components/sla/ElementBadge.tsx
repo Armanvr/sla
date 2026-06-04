@@ -20,12 +20,12 @@ const labelFr: Record<Element, string> = {
 
 export function ElementBadge({ element, label }: { element: Element; label?: string }) {
 	const s = slug[element]
-	return <span class={`sla-elem-badge sla-elem-badge-${s}`}>{label ?? labelFr[element]}</span>
+	return <span className={`sla-elem-badge sla-elem-badge-${s}`}>{label ?? labelFr[element]}</span>
 }
 
 export function ElementBar({ element }: { element: Element }) {
 	const s = slug[element]
-	return <span class={`sla-elem-bar sla-elem-bar-${s}`} />
+	return <span className={`sla-elem-bar sla-elem-bar-${s}`} />
 }
 
 export const ELEMENTS: Element[] = ['Dark', 'Fire', 'Water', 'Light', 'Wind']

@@ -11,5 +11,5 @@ export function Badge({
 	variant?: Variant
 	class?: string
 }) {
-	return <span class={`sla-badge sla-badge-${variant} ${className}`}>{children}</span>
+	return <span className={`sla-badge sla-badge-${variant} ${className}`}>{children}</span>
 }

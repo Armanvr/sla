@@ -39,13 +39,27 @@
 				},
 				{
 					"label": "Équipe 2",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Stormbringer", "Thetis' Grimoire"],
+					"hunters": [
+						{ "id": "sugimoto-reiji", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "han-se-mi", "role": "Supporter", "build": "Build Niv. 120 (B)" },
+						{ "id": "lennart-niermann", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "soyeon", "role": "Breaker", "build": "Build Niv. 120" },
+						{ "id": "hwang-dongsoo", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "goto-ryuji", "role": "Breaker", "build": "Build Niv. 120" }
+					]
 				},
 				{
 					"label": "Équipe 3",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Stormbringer"],
+					"hunters": [
+						{ "id": "sugimoto-reiji", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "sung-jinah", "role": "Supporter", "build": "Build Niv. 120 (A)" },
+						{ "id": "amamiya-mirei", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "woo-jinchul", "role": "Breaker", "build": "Build Niv. 120" },
+						{ "id": "hwang-dongsoo", "role": "Striker", "build": "Build Niv. 100" },
+						{ "id": "goto-ryuji", "role": "Breaker", "build": "Build Niv. 100" }
+					]
 				}
 			]
 		},
@@ -68,13 +82,27 @@
 				},
 				{
 					"label": "Équipe 2",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Allon's Orb", "Thetis' Grimoire"],
+					"hunters": [
+						{ "id": "meri-laine", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "elena-renault", "role": "Supporter", "build": "Build Niv. 120 (A)" },
+						{ "id": "cha-hae-in-pure-sword-princess", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "seorin", "role": "Breaker", "build": "Build Niv. 120" },
+						{ "id": "shuhua", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "meilin-fisher", "role": "Supporter", "build": "Build Niv. 120" }
+					]
 				},
 				{
 					"label": "Équipe 3",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Allon's Orb"],
+					"hunters": [
+						{ "id": "meri-laine", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "frieren", "role": "Supporter", "build": "Build Niv. 120 (B)" },
+						{ "id": "shuhua", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "seo-jiwoo", "role": "Breaker", "build": "Build Niv. 120" },
+						{ "id": "alicia-blanche", "role": "Striker", "build": "Build Niv. 100" },
+						{ "id": "meilin-fisher", "role": "Supporter", "build": "Build Niv. 100" }
+					]
 				}
 			]
 		},
@@ -97,13 +125,27 @@
 				},
 				{
 					"label": "Équipe 2",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Glorious Demise", "Ennio's Roar"],
+					"hunters": [
+						{ "id": "christopher-reed", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "gina", "role": "Supporter", "build": "Build Niv. 120 (A)" },
+						{ "id": "fern", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "yuqi", "role": "Breaker", "build": "Build Niv. 120" },
+						{ "id": "choi-jong-in", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "emma-laurent", "role": "Breaker", "build": "Build Niv. 120" }
+					]
 				},
 				{
 					"label": "Équipe 3",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Glorious Demise"],
+					"hunters": [
+						{ "id": "christopher-reed", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "gina", "role": "Supporter", "build": "Build Niv. 120 (A)" },
+						{ "id": "yoo-soohyun", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "esil-radiru", "role": "Breaker", "build": "Build Niv. 120" },
+						{ "id": "tawata-kanae", "role": "Striker", "build": "Build Niv. 100" },
+						{ "id": "emma-laurent", "role": "Breaker", "build": "Build Niv. 100" }
+					]
 				}
 			]
 		},
@@ -126,13 +168,27 @@
 				},
 				{
 					"label": "Équipe 2",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Phantomblade", "Hero's Sword"],
+					"hunters": [
+						{ "id": "antoine-martinez", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "min-byung-gu", "role": "Supporter", "build": "Build Niv. 120 (B)" },
+						{ "id": "miyeon", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "baek-yoonho", "role": "Breaker", "build": "Build Niv. 120" },
+						{ "id": "cha-hae-in", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "shimizu-akari", "role": "Supporter", "build": "Build Niv. 120" }
+					]
 				},
 				{
 					"label": "Équipe 3",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Phantomblade"],
+					"hunters": [
+						{ "id": "antoine-martinez", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "shimizu-akari", "role": "Supporter", "build": "Build Niv. 120" },
+						{ "id": "cha-hae-in", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "baek-yoonho", "role": "Breaker", "build": "Build Niv. 100" },
+						{ "id": "thomas-andre", "role": "Striker", "build": "Build Niv. 100" },
+						{ "id": "laura-walker", "role": "Supporter", "build": "Build Niv. 100" }
+					]
 				}
 			]
 		},
@@ -155,13 +211,27 @@
 				},
 				{
 					"label": "Équipe 2",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Moonshadow", "Transfiguration Key"],
+					"hunters": [
+						{ "id": "sian-halat", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "isla-wright", "role": "Supporter", "build": "Build Niv. 120 (A)" },
+						{ "id": "sung-il-hwan", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "harper", "role": "Breaker", "build": "Build Niv. 120" },
+						{ "id": "charlotte", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "lee-bora", "role": "Supporter", "build": "Build Niv. 120 (B)" }
+					]
 				},
 				{
 					"label": "Équipe 3",
-					"jinwooWeapons": [],
-					"hunters": []
+					"jinwooWeapons": ["Moonshadow"],
+					"hunters": [
+						{ "id": "sian-halat", "role": "Elemental Stacker", "build": "Build Niv. 120" },
+						{ "id": "lee-bora", "role": "Supporter", "build": "Build Niv. 120 (B)" },
+						{ "id": "silver-mane-baek-yoonho", "role": "Striker", "build": "Build Niv. 120" },
+						{ "id": "lim-tae-gyu", "role": "Breaker", "build": "Build Niv. 120" },
+						{ "id": "charlotte", "role": "Striker", "build": "Build Niv. 100" },
+						{ "id": "harper", "role": "Breaker", "build": "Build Niv. 100" }
+					]
 				}
 			]
 		}

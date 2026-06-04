@@ -5,19 +5,19 @@ function ElementBadge({ element }: { element: { name: string; primary: boolean }
 	const color = elementColors[element.name] ?? 'bg-zinc-600'
 	return (
 		<span
-			class={`${color} px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider ${element.primary ? 'ring-2 ring-white/30' : ''}`}
+			className={`${color} px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider ${element.primary ? 'ring-2 ring-white/30' : ''}`}
 		>
 			{element.name}
-			{element.primary && <span class='ml-1 text-[10px] opacity-70'>★</span>}
+			{element.primary && <span className='ml-1 text-[10px] opacity-70'>★</span>}
 		</span>
 	)
 }
 
 function InfoRow({ label, value }: { label: string; value: string }) {
 	return (
-		<div class='flex justify-between items-center py-2 border-b border-zinc-800 last:border-0'>
-			<span class='text-sm text-zinc-400'>{label}</span>
-			<span class='text-sm text-zinc-200'>{value}</span>
+		<div className='flex justify-between items-center py-2 border-b border-zinc-800 last:border-0'>
+			<span className='text-sm text-zinc-400'>{label}</span>
+			<span className='text-sm text-zinc-200'>{value}</span>
 		</div>
 	)
 }
@@ -36,12 +36,12 @@ export function StatBar({
 	const pct = Math.round((value / max) * 100)
 	return (
 		<div>
-			<div class='flex justify-between text-sm mb-1'>
-				<span class={`${primary ? 'text-amber-400' : 'text-zinc-400'}`}>{label}</span>
-				<span class='text-zinc-200 font-mono'>{value.toLocaleString()}</span>
+			<div className='flex justify-between text-sm mb-1'>
+				<span className={`${primary ? 'text-amber-400' : 'text-zinc-400'}`}>{label}</span>
+				<span className='text-zinc-200 font-mono'>{value.toLocaleString()}</span>
 			</div>
-			<div class='h-1.5 bg-zinc-700 rounded-full overflow-hidden'>
-				<div class='h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full' style={`width:${pct}%`} />
+			<div className='h-1.5 bg-zinc-700 rounded-full overflow-hidden'>
+				<div className='h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full' style={`width:${pct}%`} />
 			</div>
 		</div>
 	)
@@ -49,59 +49,59 @@ export function StatBar({
 
 export function HeroSection({ data }: { data: HunterData }) {
 	return (
-		<div class='flex flex-col lg:flex-row gap-8'>
-			<div class='lg:w-1/3 flex flex-col items-center gap-4'>
-				<div class='relative'>
-					<div class='absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl blur-3xl' />
+		<div className='flex flex-col lg:flex-row gap-8'>
+			<div className='lg:w-1/3 flex flex-col items-center gap-4'>
+				<div className='relative'>
+					<div className='absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl blur-3xl' />
 					<img
 						src={data.image}
 						alt={data.name}
-						class='relative w-72 lg:w-full max-w-sm rounded-2xl border border-zinc-700/50 object-cover'
+						className='relative w-72 lg:w-full max-w-sm rounded-2xl border border-zinc-700/50 object-cover'
 					/>
 				</div>
 				{data.weapon && (
-					<div class='flex items-center gap-3 bg-zinc-800/50 border border-zinc-700/50 rounded-xl px-4 py-3 w-full max-w-sm'>
+					<div className='flex items-center gap-3 bg-zinc-800/50 border border-zinc-700/50 rounded-xl px-4 py-3 w-full max-w-sm'>
 						<img
 							src={data.weapon.icon}
 							alt={data.weapon.name}
-							class='w-12 h-12 rounded-lg border border-zinc-700/50 object-contain flex-shrink-0'
+							className='w-12 h-12 rounded-lg border border-zinc-700/50 object-contain flex-shrink-0'
 						/>
 						<div>
-							<p class='text-[10px] text-zinc-500 uppercase tracking-widest mb-0.5'>Weapon</p>
-							<p class='text-sm text-zinc-200 font-medium leading-tight'>{data.weapon.name}</p>
+							<p className='text-[10px] text-zinc-500 uppercase tracking-widest mb-0.5'>Weapon</p>
+							<p className='text-sm text-zinc-200 font-medium leading-tight'>{data.weapon.name}</p>
 						</div>
 					</div>
 				)}
 			</div>
 
-			<div class='lg:w-2/3 space-y-6'>
+			<div className='lg:w-2/3 space-y-6'>
 				<div>
 					{data.title && (
-						<p class='text-sm text-purple-400 font-medium uppercase tracking-widest mb-1'>{data.title}</p>
+						<p className='text-sm text-purple-400 font-medium uppercase tracking-widest mb-1'>{data.title}</p>
 					)}
-					<h2 class='text-4xl font-bold mb-2'>{data.name}</h2>
-					{data.alias && <p class='text-zinc-400 italic'>"{data.alias}"</p>}
+					<h2 className='text-4xl font-bold mb-2'>{data.name}</h2>
+					{data.alias && <p className='text-zinc-400 italic'>"{data.alias}"</p>}
 				</div>
 
-				<div class='flex flex-wrap gap-2'>
+				<div className='flex flex-wrap gap-2'>
 					{data.elements.map((el) => (
 						<ElementBadge key={el.name} element={el} />
 					))}
 					{data.class && (
 						<span
-							class={`${classColors[data.class] ?? 'bg-zinc-700'} px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider`}
+							className={`${classColors[data.class] ?? 'bg-zinc-700'} px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider`}
 						>
 							{data.class}
 						</span>
 					)}
 					{data.rank && (
-						<span class='bg-zinc-800 border border-zinc-600 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-zinc-300'>
+						<span className='bg-zinc-800 border border-zinc-600 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-zinc-300'>
 							{data.rank}
 						</span>
 					)}
 				</div>
 
-				<div class='bg-zinc-800/30 border border-zinc-700/50 rounded-lg p-4 max-w-md'>
+				<div className='bg-zinc-800/30 border border-zinc-700/50 rounded-lg p-4 max-w-md'>
 					<InfoRow label='Age' value={String(data.age)} />
 					<InfoRow label='Gender' value={data.gender} />
 					<InfoRow label='Species' value={data.species} />

@@ -33,13 +33,13 @@ function BonusText({ text }: { text: string }) {
 			{parts.map((part, i) => {
 				if (/^\[/.test(part))
 					return (
-						<span key={i} class='text-blue-400'>
+						<span key={i} className='text-blue-400'>
 							{part}
 						</span>
 					)
 				if (part === 'Attack' || part === 'Defense')
 					return (
-						<span key={i} class='text-orange-400 font-semibold'>
+						<span key={i} className='text-orange-400 font-semibold'>
 							{part}
 						</span>
 					)
@@ -52,20 +52,20 @@ function BonusText({ text }: { text: string }) {
 export function StatsPanel({ main, secondary }: { main?: string | null; secondary: string[] }) {
 	const [open, setOpen] = useState(true)
 	return (
-		<div class='mt-1.5'>
+		<div className='mt-1.5'>
 			<button
 				type='button'
 				onClick={() => setOpen((o) => !o)}
-				class='flex items-center gap-1 text-[10px] text-zinc-500 uppercase tracking-wider hover:text-zinc-300 transition-colors px-1 select-none'
+				className='flex items-center gap-1 text-[10px] text-zinc-500 uppercase tracking-wider hover:text-zinc-300 transition-colors px-1 select-none'
 			>
 				<span>Stats</span>
-				<span class='font-mono'>{open ? '▲' : '▼'}</span>
+				<span className='font-mono'>{open ? '▲' : '▼'}</span>
 			</button>
 			{open && (
-				<div class='mt-1 bg-zinc-800/20 border border-zinc-700/30 rounded-lg px-3 py-2 space-y-0.5'>
-					{main && <p class='text-xs font-bold text-zinc-200'>{main}</p>}
+				<div className='mt-1 bg-zinc-800/20 border border-zinc-700/30 rounded-lg px-3 py-2 space-y-0.5'>
+					{main && <p className='text-xs font-bold text-zinc-200'>{main}</p>}
 					{secondary.map((s) => (
-						<p key={s} class='text-xs text-zinc-400'>
+						<p key={s} className='text-xs text-zinc-400'>
 							{s}
 						</p>
 					))}
@@ -89,7 +89,7 @@ function ArtifactIcon({
 			<img
 				src={src}
 				alt={name}
-				class={`${sizeClass} rounded-lg object-cover flex-shrink-0 bg-zinc-700/40`}
+				className={`${sizeClass} rounded-lg object-cover flex-shrink-0 bg-zinc-700/40`}
 				onError={(e) => {
 					;(e.target as HTMLImageElement).style.display = 'none'
 				}}
@@ -98,7 +98,7 @@ function ArtifactIcon({
 	}
 	return (
 		<div
-			class={`${sizeClass} rounded-lg bg-zinc-700/40 flex items-center justify-center text-zinc-500 text-xs flex-shrink-0`}
+			className={`${sizeClass} rounded-lg bg-zinc-700/40 flex items-center justify-center text-zinc-500 text-xs flex-shrink-0`}
 		>
 			?
 		</div>
@@ -131,24 +131,24 @@ function EquipmentSlot({
 	const selected = value ? allSets.find((s) => s.id === value) : null
 	const selectedIcon = selected?.icons[iconKey] ?? null
 	return (
-		<div class='relative'>
+		<div className='relative'>
 			<button
 				type='button'
 				onClick={onToggle}
-				class={`w-full flex items-center gap-3 bg-zinc-800/60 border rounded-xl px-3 py-2.5 text-left transition-colors ${
+				className={`w-full flex items-center gap-3 bg-zinc-800/60 border rounded-xl px-3 py-2.5 text-left transition-colors ${
 					isOpen ? 'border-purple-500/60' : 'border-zinc-700/60 hover:border-zinc-500/60'
 				}`}
 			>
 				{selected ? (
 					<ArtifactIcon src={selectedIcon} name={selected.name} />
 				) : (
-					<div class='w-10 h-10 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-lg flex-shrink-0'>
+					<div className='w-10 h-10 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-lg flex-shrink-0'>
 						+
 					</div>
 				)}
-				<div class='flex-1 min-w-0'>
-					<p class='text-[10px] text-zinc-500 uppercase tracking-wider leading-none mb-0.5'>{slotLabel}</p>
-					<p class={`text-sm truncate ${selected ? 'text-zinc-100 font-medium' : 'text-zinc-500'}`}>
+				<div className='flex-1 min-w-0'>
+					<p className='text-[10px] text-zinc-500 uppercase tracking-wider leading-none mb-0.5'>{slotLabel}</p>
+					<p className={`text-sm truncate ${selected ? 'text-zinc-100 font-medium' : 'text-zinc-500'}`}>
 						{selected ? selected.name : '—'}
 					</p>
 				</div>
@@ -162,7 +162,7 @@ function EquipmentSlot({
 						}}
 						// biome-ignore lint/complexity/noCommaOperator: Quick fix
 						onKeyDown={(e) => e.key === 'Enter' && (e.stopPropagation(), onClear())}
-						class='text-zinc-500 hover:text-red-400 transition-colors text-lg leading-none flex-shrink-0 cursor-pointer'
+						className='text-zinc-500 hover:text-red-400 transition-colors text-lg leading-none flex-shrink-0 cursor-pointer'
 						aria-label='Vider le slot'
 					>
 						×
@@ -171,27 +171,27 @@ function EquipmentSlot({
 			</button>
 
 			{isOpen && (
-				<div class='absolute z-50 top-full mt-1 left-0 w-64 max-h-64 overflow-y-auto bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl'>
+				<div className='absolute z-50 top-full mt-1 left-0 w-64 max-h-64 overflow-y-auto bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl'>
 					<button
 						type='button'
 						onClick={() => onSelect(null)}
-						class='w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors'
+						className='w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors'
 					>
-						<div class='w-8 h-8 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 flex-shrink-0'>
+						<div className='w-8 h-8 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 flex-shrink-0'>
 							–
 						</div>
-						<span class='text-sm text-zinc-500'>— Vide —</span>
+						<span className='text-sm text-zinc-500'>— Vide —</span>
 					</button>
-					<div class='border-t border-zinc-700/50' />
+					<div className='border-t border-zinc-700/50' />
 					{availableSets.map((s) => (
 						<button
 							key={s.id}
 							type='button'
 							onClick={() => onSelect(s.id)}
-							class={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${s.id === value ? 'bg-purple-900/20' : ''}`}
+							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${s.id === value ? 'bg-purple-900/20' : ''}`}
 						>
 							<ArtifactIcon src={s.icons[iconKey]} name={s.name} sizeClass='w-8 h-8' />
-							<span class='text-sm text-zinc-200 text-left'>{s.name}</span>
+							<span className='text-sm text-zinc-200 text-left'>{s.name}</span>
 						</button>
 					))}
 				</div>
@@ -273,14 +273,14 @@ export function EquipmentSection({
 	return (
 		<div>
 			{builds && builds.length > 0 && (
-				<div class='flex flex-wrap items-center gap-2 mb-5'>
-					<span class='text-xs font-semibold text-zinc-400 uppercase tracking-wider'>Builds :</span>
+				<div className='flex flex-wrap items-center gap-2 mb-5'>
+					<span className='text-xs font-semibold text-zinc-400 uppercase tracking-wider'>Builds :</span>
 					{builds.map((build) => (
 						<button
 							key={build.name}
 							type='button'
 							onClick={() => applyBuild(build)}
-							class={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+							className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
 								activeBuildName === build.name
 									? 'bg-purple-600 text-white'
 									: 'bg-zinc-800 border border-zinc-700/60 text-zinc-300 hover:border-purple-500/40 hover:text-zinc-100'
@@ -292,44 +292,44 @@ export function EquipmentSection({
 					<button
 						type='button'
 						onClick={clearAll}
-						class='px-3 py-1.5 rounded-lg text-sm font-medium bg-zinc-800 border border-zinc-700/60 text-zinc-500 hover:text-red-400 hover:border-red-500/30 transition-colors'
+						className='px-3 py-1.5 rounded-lg text-sm font-medium bg-zinc-800 border border-zinc-700/60 text-zinc-500 hover:text-red-400 hover:border-red-500/30 transition-colors'
 					>
 						Réinitialiser
 					</button>
 				</div>
 			)}
 
-			{openPicker && <button type='button' class='fixed inset-0 z-40' onClick={() => setOpenPicker(null)} />}
+			{openPicker && <button type='button' className='fixed inset-0 z-40' onClick={() => setOpenPicker(null)} />}
 
-			<div class='flex flex-col gap-6'>
+			<div className='flex flex-col gap-6'>
 				{showDetails && (
 					<div>
-						<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3'>
+						<p className='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3'>
 							Bonus de sets actifs
 						</p>
 						{activeBonuses.length === 0 ? (
-							<div class='bg-zinc-800/30 border border-zinc-700/40 rounded-xl p-4 text-sm text-zinc-500 italic'>
+							<div className='bg-zinc-800/30 border border-zinc-700/40 rounded-xl p-4 text-sm text-zinc-500 italic'>
 								Équipez 2 pièces du même set pour activer un bonus.
 							</div>
 						) : (
-							<div class='space-y-3'>
+							<div className='space-y-3'>
 								{activeBonuses.map((active) => (
 									<div
 										key={active.name}
-										class='bg-zinc-800/40 border border-purple-500/20 rounded-xl p-4 space-y-2'
+										className='bg-zinc-800/40 border border-purple-500/20 rounded-xl p-4 space-y-2'
 									>
-										<div class='flex items-center justify-between gap-2'>
-											<span class='font-semibold text-sm text-zinc-100'>{active.name}</span>
-											<span class='text-[10px] bg-purple-700/40 text-purple-300 border border-purple-600/30 rounded-full px-2 py-0.5 font-medium'>
+										<div className='flex items-center justify-between gap-2'>
+											<span className='font-semibold text-sm text-zinc-100'>{active.name}</span>
+											<span className='text-[10px] bg-purple-700/40 text-purple-300 border border-purple-600/30 rounded-full px-2 py-0.5 font-medium'>
 												{active.count} pcs
 											</span>
 										</div>
 										{active.bonuses.map((b) => (
-											<div key={b.pieces} class='flex gap-2'>
-												<span class='flex-shrink-0 text-[10px] bg-zinc-700/60 text-zinc-300 border border-zinc-600/40 rounded px-1.5 py-0.5 font-mono font-bold mt-0.5'>
+											<div key={b.pieces} className='flex gap-2'>
+												<span className='flex-shrink-0 text-[10px] bg-zinc-700/60 text-zinc-300 border border-zinc-600/40 rounded px-1.5 py-0.5 font-mono font-bold mt-0.5'>
 													{b.pieces}
 												</span>
-												<p class='text-xs text-zinc-300 leading-relaxed'>
+												<p className='text-xs text-zinc-300 leading-relaxed'>
 													<BonusText text={b.effect} />
 												</p>
 											</div>
@@ -342,10 +342,10 @@ export function EquipmentSection({
 				)}
 
 				<div>
-					<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
+					<p className='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
 						<span>◈</span> Armure
 					</p>
-					<div class='grid grid-cols-2 gap-3'>
+					<div className='grid grid-cols-2 gap-3'>
 						{ARMOR_SLOTS.map(({ label, iconKey }, i) => (
 							<EquipmentSlot
 								key={iconKey}
@@ -365,10 +365,10 @@ export function EquipmentSection({
 				</div>
 
 				<div>
-					<p class='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
+					<p className='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
 						<span>◇</span> Bijoux
 					</p>
-					<div class='grid grid-cols-2 gap-3'>
+					<div className='grid grid-cols-2 gap-3'>
 						{JEWELRY_SLOTS.map(({ label, iconKey }, i) => (
 							<EquipmentSlot
 								key={iconKey}

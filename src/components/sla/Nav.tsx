@@ -25,27 +25,27 @@ export function Nav() {
 	const time = useClock()
 
 	return (
-		<header class='sla-nav' style={{ justifyContent: 'center' }}>
-			<a href='/' class='sla-nav-logo'>
-				SLA <span class='sla-nav-logo-accent'>{'// ARISE'}</span>
+		<header className='sla-nav' style={{ justifyContent: 'center' }}>
+			<a href='/' className='sla-nav-logo'>
+				SLA <span className='sla-nav-logo-accent'>{'// ARISE'}</span>
 			</a>
-			<span class='sla-tag' style={{ marginLeft: 4 }}>
+			<span className='sla-tag' style={{ marginLeft: 4 }}>
 				v4.0.0
 			</span>
 			<nav style={{ display: 'flex', gap: 4, marginLeft: 16 }}>
 				{LINKS.map((l) => {
 					const active = url === l.href || (l.href !== '/' && url.startsWith(l.href))
 					return (
-						<a key={l.href} href={l.href} class={`sla-nav-link ${active ? 'active' : ''}`}>
+						<a key={l.href} href={l.href} className={`sla-nav-link ${active ? 'active' : ''}`}>
 							{l.label}
 						</a>
 					)
 				})}
 			</nav>
-			<div class="sla-nav-status">
-				<span class='sla-status-dot' />
-				<span class='sla-label'>Online</span>
-				<span class='sla-nav-clock'>{time}</span>
+			<div className="sla-nav-status">
+				<span className='sla-status-dot' />
+				<span className='sla-label'>Online</span>
+				<span className='sla-nav-clock'>{time}</span>
 			</div>
 		</header>
 	)

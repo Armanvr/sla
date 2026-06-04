@@ -13,7 +13,7 @@ export function Button({ children, variant = 'primary', class: className = '', .
 	return (
 		<button
 			type='button'
-			class={`sla-btn sla-btn-${variant} ${className}`}
+			className={`sla-btn sla-btn-${variant} ${className}`}
 			{...(rest as JSX.HTMLAttributes<HTMLButtonElement>)}
 		>
 			{children}
@@ -25,7 +25,7 @@ export function ButtonLink({ children, variant = 'primary', class: className = '
 	return (
 		<a
 			href={href}
-			class={`sla-btn sla-btn-${variant} ${className}`}
+			className={`sla-btn sla-btn-${variant} ${className}`}
 			{...(rest as JSX.HTMLAttributes<HTMLAnchorElement>)}
 		>
 			{children}

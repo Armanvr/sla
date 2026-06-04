@@ -7,6 +7,7 @@ import { JinwooPanel } from '../components/team/JinwooPanel'
 import { RunesSection } from '../components/hunter/RunesSection'
 import { PuissanceRemanente, type PuissanceMode } from '../components/team/PuissanceRemanente'
 import { TeamConfigTabs } from '../components/team/TeamConfigTabs'
+import { AdvancementEffectsTable } from '../components/team/AdvancementEffectsTable'
 import { DEFAULT_MONARCH } from '../components/team/monarchs'
 import type { MonarchId } from '../components/team/monarchs'
 import { DEFAULT_SUCCESSOR } from '../components/team/successors'
@@ -57,35 +58,35 @@ interface GbTeamEntry {
 
 function ActiveBossBanner({ boss }: { boss: BossEntry }) {
 	return (
-		<div class='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
-			<div class='flex items-center gap-4 px-4 py-3 border-b border-zinc-700/40'>
+		<div className='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
+			<div className='flex items-center gap-4 px-4 py-3 border-b border-zinc-700/40'>
 				<img
 					src={`/${boss.icon}`}
 					alt={boss.name}
-					class='w-14 h-14 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
+					className='w-14 h-14 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
 					onError={(e) => {
 						;(e.target as HTMLImageElement).style.display = 'none'
 					}}
 				/>
 				<div>
-					<p class='text-[10px] text-zinc-500 uppercase tracking-wider'>Boss actif</p>
-					<p class='text-sm font-semibold text-zinc-100'>{boss.name}</p>
+					<p className='text-[10px] text-zinc-500 uppercase tracking-wider'>Boss actif</p>
+					<p className='text-sm font-semibold text-zinc-100'>{boss.name}</p>
 				</div>
 			</div>
 
 			{boss.weakness.length > 0 && (
-				<div class='flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40'>
-					<span class='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>Faiblesses</span>
-					<div class='flex gap-3 flex-wrap justify-center'>
+				<div className='flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40'>
+					<span className='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>Faiblesses</span>
+					<div className='flex gap-3 flex-wrap justify-center'>
 						{boss.weakness.map((el) =>
 							ELEMENT_ICON[el] ? (
-								<div key={el} class='flex flex-col items-center gap-1'>
+								<div key={el} className='flex flex-col items-center gap-1'>
 									<img
 										src={ELEMENT_ICON[el]}
 										alt={el}
-										class='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
+										className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
 									/>
-									<span class='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
+									<span className='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
 								</div>
 							) : null,
 						)}
@@ -202,7 +203,7 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 	// ── Render ────────────────────────────────────────────────────────────────
 
 	return (
-		<div class='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
+		<div className='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
 			<BackLink />
 			<div style={{ marginTop: 24 }}>
 				<SectionHeader
@@ -263,7 +264,7 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 						title='Composition'
 						description='Six chasseurs recommandés pour ce boss.'
 					/>
-					<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+					<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
 						{slots.map((s, i) => (
 							<HunterSlot
 								key={i}
@@ -276,6 +277,7 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 							/>
 						))}
 					</div>
+					<AdvancementEffectsTable hunters={slots.map((s) => s.hunter ?? null)} />
 				</section>
 
 				<section>

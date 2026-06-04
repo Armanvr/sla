@@ -25,25 +25,25 @@ export function WeaponSlot({
 		: weapons
 
 	return (
-		<div class='relative'>
-			{open && <button type='button' class='fixed inset-0 z-40' onClick={close} aria-label='Fermer' />}
+		<div className='relative'>
+			{open && <button type='button' className='fixed inset-0 z-40' onClick={close} aria-label='Fermer' />}
 
 			<button
 				type='button'
 				onClick={() => setOpen((p) => !p)}
-				class={`sla-weapon-slot w-full flex items-center gap-3 bg-zinc-800/50 border rounded-xl px-3 py-2 transition-colors ${open ? 'border-amber-500/60' : 'border-amber-900/40 hover:border-amber-600/50'}`}
+				className={`sla-weapon-slot w-full flex items-center gap-3 bg-zinc-800/50 border rounded-xl px-3 py-2 transition-colors ${open ? 'border-amber-500/60' : 'border-amber-900/40 hover:border-amber-600/50'}`}
 			>
 				{selected ? (
 					<>
 						<img
 							src={selected.icon}
 							alt={selected.name}
-							class='w-10 h-10 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
+							className='w-10 h-10 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
 							onError={(e) => {
 								;(e.target as HTMLImageElement).style.display = 'none'
 							}}
 						/>
-						<p class='flex-1 text-sm font-medium text-zinc-100 text-left truncate leading-tight'>
+						<p className='flex-1 text-sm font-medium text-zinc-100 text-left truncate leading-tight'>
 							{selected.name}
 						</p>
 						<button
@@ -52,7 +52,7 @@ export function WeaponSlot({
 								e.stopPropagation()
 								onSelect(null)
 							}}
-							class='text-zinc-600 hover:text-red-400 transition-colors text-lg leading-none flex-shrink-0'
+							className='text-zinc-600 hover:text-red-400 transition-colors text-lg leading-none flex-shrink-0'
 							aria-label='Retirer cette arme'
 						>
 							×
@@ -60,39 +60,39 @@ export function WeaponSlot({
 					</>
 				) : (
 					<>
-						<div class='w-10 h-10 rounded-lg bg-amber-900/10 border border-dashed border-amber-800/40 flex-shrink-0' />
-						<p class='text-xs text-zinc-500'>Arme {slot}</p>
+						<div className='w-10 h-10 rounded-lg bg-amber-900/10 border border-dashed border-amber-800/40 flex-shrink-0' />
+						<p className='text-xs text-zinc-500'>Arme {slot}</p>
 					</>
 				)}
 			</button>
 
 			{open && (
-				<div class='absolute z-50 top-full mt-1 left-0 w-64 bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl flex flex-col'>
-					<div class='p-2 border-b border-zinc-700/50'>
+				<div className='absolute z-50 top-full mt-1 left-0 w-64 bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl flex flex-col'>
+					<div className='p-2 border-b border-zinc-700/50'>
 						<input
 							type='text'
 							placeholder='Rechercher...'
 							value={search}
 							onInput={(e) => setSearch((e.target as HTMLInputElement).value)}
-							class='w-full bg-zinc-700/50 border border-zinc-600/50 rounded-lg px-2 py-1 text-xs text-zinc-200 placeholder-zinc-500 outline-none focus:border-amber-500/50'
+							className='w-full bg-zinc-700/50 border border-zinc-600/50 rounded-lg px-2 py-1 text-xs text-zinc-200 placeholder-zinc-500 outline-none focus:border-amber-500/50'
 							onClick={(e) => e.stopPropagation()}
 						/>
 					</div>
-					<div class='max-h-64 overflow-y-auto'>
+					<div className='max-h-64 overflow-y-auto'>
 						<button
 							type='button'
 							onClick={() => {
 								onSelect(null)
 								close()
 							}}
-							class='w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors'
+							className='w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors'
 						>
-							<div class='w-8 h-8 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 flex-shrink-0'>
+							<div className='w-8 h-8 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 flex-shrink-0'>
 								–
 							</div>
-							<span class='text-sm text-zinc-500'>— Vide —</span>
+							<span className='text-sm text-zinc-500'>— Vide —</span>
 						</button>
-						<div class='border-t border-zinc-700/50' />
+						<div className='border-t border-zinc-700/50' />
 						{filtered.map((w) => (
 							<button
 								key={w.name}
@@ -101,17 +101,17 @@ export function WeaponSlot({
 									onSelect(w)
 									close()
 								}}
-								class={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${selected?.name === w.name ? 'bg-amber-900/20' : ''}`}
+								className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${selected?.name === w.name ? 'bg-amber-900/20' : ''}`}
 							>
 								<img
 									src={w.icon}
 									alt={w.name}
-									class='w-8 h-8 rounded-lg object-contain flex-shrink-0 bg-zinc-700/40'
+									className='w-8 h-8 rounded-lg object-contain flex-shrink-0 bg-zinc-700/40'
 									onError={(e) => {
 										;(e.target as HTMLImageElement).style.display = 'none'
 									}}
 								/>
-								<span class='text-sm text-zinc-200 truncate text-left'>{w.name}</span>
+								<span className='text-sm text-zinc-200 truncate text-left'>{w.name}</span>
 							</button>
 						))}
 					</div>

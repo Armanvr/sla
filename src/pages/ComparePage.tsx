@@ -135,8 +135,8 @@ function HunterSearchSelect({
 	}
 
 	return (
-		<div class='relative'>
-			<div class='relative'>
+		<div className='relative'>
+			<div className='relative'>
 				<input
 					ref={inputRef}
 					type='text'
@@ -145,26 +145,26 @@ function HunterSearchSelect({
 					onBlur={handleBlur}
 					onInput={(e) => setQuery((e.target as HTMLInputElement).value)}
 					placeholder='Rechercher un chasseur…'
-					class='w-full bg-zinc-800 border border-zinc-700/60 rounded-xl pl-9 pr-4 py-3 text-zinc-100 placeholder-zinc-500 focus:border-purple-500/60 focus:outline-none transition-colors text-sm'
+					className='w-full bg-zinc-800 border border-zinc-700/60 rounded-xl pl-9 pr-4 py-3 text-zinc-100 placeholder-zinc-500 focus:border-purple-500/60 focus:outline-none transition-colors text-sm'
 				/>
 			</div>
 
 			{open && (
-				<div class='absolute z-30 w-full bg-zinc-800 border border-zinc-700/70 rounded-xl mt-1.5 max-h-64 overflow-y-auto shadow-2xl'>
+				<div className='absolute z-30 w-full bg-zinc-800 border border-zinc-700/70 rounded-xl mt-1.5 max-h-64 overflow-y-auto shadow-2xl'>
 					{filtered.length === 0 ? (
-						<p class='px-4 py-3 text-sm text-zinc-500 italic'>Aucun résultat</p>
+						<p className='px-4 py-3 text-sm text-zinc-500 italic'>Aucun résultat</p>
 					) : (
 						filtered.map((h) => (
 							<button
 								key={h.id}
 								type='button'
 								onMouseDown={() => handleSelect(h.id)}
-								class={`w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-zinc-700/60 flex items-center justify-between ${
+								className={`w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-zinc-700/60 flex items-center justify-between ${
 									selectedId === h.id ? 'text-purple-400 bg-purple-900/20' : 'text-zinc-200'
 								}`}
 							>
 								<span>{h.data.name}</span>
-								{selectedId === h.id && <span class='text-purple-400 text-xs'>✓</span>}
+								{selectedId === h.id && <span className='text-purple-400 text-xs'>✓</span>}
 							</button>
 						))
 					)}
@@ -184,41 +184,41 @@ function ScoreRing({ percent }: { percent: number }) {
 	const strokeColor = percent >= 80 ? '#10b981' : percent >= 50 ? '#f59e0b' : '#ef4444'
 
 	return (
-		<svg width='130' height='130' viewBox='0 0 130 130' class='flex-shrink-0' role='img' aria-label='Score ring'>
-			<circle cx='65' cy='65' r={r} fill='none' stroke='#3f3f46' stroke-width='10' />
+		<svg width='130' height='130' viewBox='0 0 130 130' className='flex-shrink-0' role='img' aria-label='Score ring'>
+			<circle cx='65' cy='65' r={r} fill='none' stroke='#3f3f46' strokeWidth='10' />
 			<circle
 				cx='65'
 				cy='65'
 				r={r}
 				fill='none'
 				stroke={strokeColor}
-				stroke-width='10'
-				stroke-dasharray={circ}
-				stroke-dashoffset={offset}
-				stroke-linecap='round'
+				strokeWidth='10'
+				strokeDasharray={circ}
+				strokeDashoffset={offset}
+				strokeLinecap='round'
 				transform='rotate(-90 65 65)'
-				style='transition: stroke-dashoffset 0.6s ease'
+				style={{ transition: 'stroke-dashoffset 0.6s ease' }}
 			/>
 			<text
 				x='65'
 				y='60'
-				text-anchor='middle'
-				dominant-baseline='middle'
+				textAnchor='middle'
+				dominantBaseline='middle'
 				fill={strokeColor}
-				font-size='24'
-				font-weight='900'
-				font-family='inherit'
+				fontSize='24'
+				fontWeight='900'
+				fontFamily='inherit'
 			>
 				{percent}%
 			</text>
 			<text
 				x='65'
 				y='80'
-				text-anchor='middle'
-				dominant-baseline='middle'
+				textAnchor='middle'
+				dominantBaseline='middle'
 				fill='#71717a'
-				font-size='9'
-				font-family='inherit'
+				fontSize='9'
+				fontFamily='inherit'
 			>
 				SCORE
 			</text>
@@ -234,7 +234,7 @@ function SlotBadge({ matched, total }: { matched: number; total: number }) {
 	const partial = matched > 0
 	return (
 		<span
-			class={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${
+			className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${
 				ok
 					? 'bg-emerald-900/40 text-emerald-400'
 					: partial
@@ -251,10 +251,10 @@ function SlotBadge({ matched, total }: { matched: number; total: number }) {
 
 function SectionTitle({ children }: { children: string }) {
 	return (
-		<p class='text-xs font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-2'>
-			<span class='h-px flex-1 bg-zinc-800' />
+		<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-2'>
+			<span className='h-px flex-1 bg-zinc-800' />
 			{children}
-			<span class='h-px flex-1 bg-zinc-800' />
+			<span className='h-px flex-1 bg-zinc-800' />
 		</p>
 	)
 }
@@ -264,7 +264,7 @@ function SectionTitle({ children }: { children: string }) {
 function ColHeader({ children, accent }: { children: string; accent?: boolean }) {
 	return (
 		<div
-			class={`rounded-xl px-4 py-2 text-xs font-bold uppercase tracking-wider text-center mb-4 ${
+			className={`rounded-xl px-4 py-2 text-xs font-bold uppercase tracking-wider text-center mb-4 ${
 				accent
 					? 'bg-purple-900/30 border border-purple-700/40 text-purple-300'
 					: 'bg-zinc-800/60 border border-zinc-700/40 text-zinc-400'
@@ -290,19 +290,19 @@ function CollapsibleGroup({
 }) {
 	const [open, setOpen] = useState(false)
 	return (
-		<div class='border border-zinc-800 rounded-xl overflow-hidden'>
+		<div className='border border-zinc-800 rounded-xl overflow-hidden'>
 			<button
 				type='button'
 				onClick={() => setOpen((v) => !v)}
-				class='w-full flex items-center justify-between px-4 py-3 bg-zinc-800/50 hover:bg-zinc-800/80 transition-colors'
+				className='w-full flex items-center justify-between px-4 py-3 bg-zinc-800/50 hover:bg-zinc-800/80 transition-colors'
 			>
-				<span class='text-xs font-bold uppercase tracking-wider text-zinc-300'>{label}</span>
-				<div class='flex items-center gap-2'>
+				<span className='text-xs font-bold uppercase tracking-wider text-zinc-300'>{label}</span>
+				<div className='flex items-center gap-2'>
 					<SlotBadge matched={matched} total={total} />
-					<span class='text-zinc-500 text-xs'>{open ? '▲' : '▼'}</span>
+					<span className='text-zinc-500 text-xs'>{open ? '▲' : '▼'}</span>
 				</div>
 			</button>
-			{open && <div class='divide-y divide-zinc-800'>{children}</div>}
+			{open && <div className='divide-y divide-zinc-800'>{children}</div>}
 		</div>
 	)
 }
@@ -328,37 +328,37 @@ function EquipSlotRow({
 	const atMax = userSlot.secondary.length >= 4
 
 	return (
-		<div class='bg-zinc-800/20'>
-			<div class='flex items-center justify-between px-4 py-2 border-b border-zinc-800/60'>
-				<p class='text-[10px] font-semibold uppercase tracking-wider text-zinc-500'>{label}</p>
+		<div className='bg-zinc-800/20'>
+			<div className='flex items-center justify-between px-4 py-2 border-b border-zinc-800/60'>
+				<p className='text-[10px] font-semibold uppercase tracking-wider text-zinc-500'>{label}</p>
 				<SlotBadge matched={score.matched} total={score.total} />
 			</div>
-			<div class='grid grid-cols-[1fr_1fr] divide-x divide-zinc-800'>
+			<div className='grid grid-cols-[1fr_1fr] divide-x divide-zinc-800'>
 				{/* Recommended */}
-				<div class='px-4 py-3 space-y-1.5'>
+				<div className='px-4 py-3 space-y-1.5'>
 					{rec ? (
 						<>
-							{rec.main && <p class='text-xs font-semibold text-purple-300'>{rec.main}</p>}
-							<ul class='space-y-0.5'>
+							{rec.main && <p className='text-xs font-semibold text-purple-300'>{rec.main}</p>}
+							<ul className='space-y-0.5'>
 								{rec.secondary.map((s) => (
-									<li key={s} class='text-[11px] text-zinc-400 flex items-center gap-1'>
-										<span class='text-purple-500 text-[8px]'>●</span> {s}
+									<li key={s} className='text-[11px] text-zinc-400 flex items-center gap-1'>
+										<span className='text-purple-500 text-[8px]'>●</span> {s}
 									</li>
 								))}
 							</ul>
 						</>
 					) : (
-						<p class='text-xs text-zinc-600 italic'>—</p>
+						<p className='text-xs text-zinc-600 italic'>—</p>
 					)}
 				</div>
 
 				{/* User input */}
-				<div class='px-4 py-3 space-y-2'>
+				<div className='px-4 py-3 space-y-2'>
 					{rec?.main !== undefined && (
 						<select
 							value={userSlot.main}
 							onChange={(e) => onMainChange(iconKey, (e.target as HTMLSelectElement).value)}
-							class='w-full bg-zinc-800 border border-zinc-700/50 rounded-lg px-2 py-1 text-xs text-zinc-200 focus:border-purple-500/60 focus:outline-none transition-colors'
+							className='w-full bg-zinc-800 border border-zinc-700/50 rounded-lg px-2 py-1 text-xs text-zinc-200 focus:border-purple-500/60 focus:outline-none transition-colors'
 						>
 							<option value=''>— Principale —</option>
 							{MAIN_STATS.map((s) => (
@@ -368,23 +368,23 @@ function EquipSlotRow({
 							))}
 						</select>
 					)}
-					<div class='grid grid-cols-2 gap-x-2 gap-y-0.5'>
+					<div className='grid grid-cols-2 gap-x-2 gap-y-0.5'>
 						{SECONDARY_STATS.map((stat) => {
 							const checked = userSlot.secondary.includes(stat)
 							const disabled = !checked && atMax
 							return (
 								<label
 									key={stat}
-									class={`flex items-center gap-1 cursor-pointer ${disabled ? 'opacity-30 cursor-not-allowed' : ''}`}
+									className={`flex items-center gap-1 cursor-pointer ${disabled ? 'opacity-30 cursor-not-allowed' : ''}`}
 								>
 									<input
 										type='checkbox'
 										checked={checked}
 										disabled={disabled}
 										onChange={() => !disabled && onSecondaryToggle(iconKey, stat)}
-										class='accent-purple-500 w-2.5 h-2.5 flex-shrink-0'
+										className='accent-purple-500 w-2.5 h-2.5 flex-shrink-0'
 									/>
-									<span class='text-[10px] text-zinc-300 leading-tight'>{stat}</span>
+									<span className='text-[10px] text-zinc-300 leading-tight'>{stat}</span>
 								</label>
 							)
 						})}
@@ -430,9 +430,9 @@ function EquipCompare({
 	)
 
 	return (
-		<div class='space-y-3'>
+		<div className='space-y-3'>
 			{/* Column headers */}
-			<div class='grid grid-cols-[1fr_1fr] gap-3'>
+			<div className='grid grid-cols-[1fr_1fr] gap-3'>
 				<ColHeader accent>Build recommandé</ColHeader>
 				<ColHeader>Votre build</ColHeader>
 			</div>
@@ -480,9 +480,9 @@ function CoreCompare({
 	onCoreStatToggle: (coreKey: string, stat: string) => void
 }) {
 	return (
-		<div class='space-y-3'>
+		<div className='space-y-3'>
 			{/* Column headers */}
-			<div class='grid grid-cols-[1fr_1fr] gap-3'>
+			<div className='grid grid-cols-[1fr_1fr] gap-3'>
 				<ColHeader accent>Build recommandé</ColHeader>
 				<ColHeader>Votre build</ColHeader>
 			</div>
@@ -494,36 +494,36 @@ function CoreCompare({
 
 				return (
 					<CollapsibleGroup key={key} label={`${emoji} ${label}`} matched={score.matched} total={score.total}>
-						<div class='grid grid-cols-[1fr_1fr] divide-x divide-zinc-800 bg-zinc-800/20'>
+						<div className='grid grid-cols-[1fr_1fr] divide-x divide-zinc-800 bg-zinc-800/20'>
 							{/* Recommended */}
-							<div class='px-4 py-3'>
+							<div className='px-4 py-3'>
 								{recStats && recStats.length > 0 ? (
-									<ul class='space-y-0.5'>
+									<ul className='space-y-0.5'>
 										{recStats.map((s) => (
-											<li key={s} class='text-[11px] text-zinc-400 flex items-center gap-1'>
-												<span class='text-purple-500 text-[8px]'>●</span> {s}
+											<li key={s} className='text-[11px] text-zinc-400 flex items-center gap-1'>
+												<span className='text-purple-500 text-[8px]'>●</span> {s}
 											</li>
 										))}
 									</ul>
 								) : (
-									<p class='text-xs text-zinc-600 italic'>—</p>
+									<p className='text-xs text-zinc-600 italic'>—</p>
 								)}
 							</div>
 
 							{/* User input */}
-							<div class='px-4 py-3'>
-								<div class='space-y-0.5'>
+							<div className='px-4 py-3'>
+								<div className='space-y-0.5'>
 									{CORE_STATS_LIST.map((stat) => {
 										const checked = userSlot.stats.includes(stat)
 										return (
-											<label key={stat} class='flex items-center gap-1 cursor-pointer'>
+											<label key={stat} className='flex items-center gap-1 cursor-pointer'>
 												<input
 													type='checkbox'
 													checked={checked}
 													onChange={() => onCoreStatToggle(key, stat)}
-													class='accent-purple-500 w-2.5 h-2.5 flex-shrink-0'
+													className='accent-purple-500 w-2.5 h-2.5 flex-shrink-0'
 												/>
-												<span class='text-[10px] text-zinc-300 leading-tight'>{stat}</span>
+												<span className='text-[10px] text-zinc-300 leading-tight'>{stat}</span>
 											</label>
 										)
 									})}
@@ -627,7 +627,7 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 					: 'Build à améliorer'
 
 	return (
-		<div class='sla-container' style={{ paddingTop: 32, paddingBottom: 64, maxWidth: 1024 }}>
+		<div className='sla-container' style={{ paddingTop: 32, paddingBottom: 64, maxWidth: 1024 }}>
 			<BackLink />
 			<div style={{ marginTop: 24 }}>
 				<SectionHeader
@@ -639,47 +639,47 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 
 			<main style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
 				{/* ── Selector ── */}
-				<div class='relative z-20'>
+				<div className='relative z-20'>
 					<HunterSearchSelect hunters={sortedHunters} selectedId={selectedId} onSelect={handleHunterSelect} />
 				</div>
 
 				{/* ── Hunter hero + score ── */}
 				{selectedHunter && (
-					<div class='bg-zinc-800/30 border border-zinc-700/50 rounded-2xl p-5'>
-						<div class='flex items-center gap-5'>
+					<div className='bg-zinc-800/30 border border-zinc-700/50 rounded-2xl p-5'>
+						<div className='flex items-center gap-5'>
 							{/* Portrait */}
-							<div class='relative flex-shrink-0'>
+							<div className='relative flex-shrink-0'>
 								<img
 									src={selectedHunter.data.image}
 									alt={selectedHunter.data.name}
-									class='w-20 h-20 rounded-xl object-cover border-2 border-zinc-700/60 shadow-xl'
+									className='w-20 h-20 rounded-xl object-cover border-2 border-zinc-700/60 shadow-xl'
 									onError={(e) => {
 										;(e.target as HTMLImageElement).style.display = 'none'
 									}}
 								/>
 								{selectedHunter.data.rarity && (
-									<span class='absolute -top-1.5 -right-1.5 text-[9px] font-bold bg-zinc-900 border border-amber-400/40 text-amber-400 px-1.5 py-0.5 rounded-md'>
+									<span className='absolute -top-1.5 -right-1.5 text-[9px] font-bold bg-zinc-900 border border-amber-400/40 text-amber-400 px-1.5 py-0.5 rounded-md'>
 										{selectedHunter.data.rarity}
 									</span>
 								)}
 							</div>
 
 							{/* Info + progress bar */}
-							<div class='flex-1 min-w-0'>
-								<h2 class='text-lg font-bold text-zinc-100 truncate'>{selectedHunter.data.name}</h2>
+							<div className='flex-1 min-w-0'>
+								<h2 className='text-lg font-bold text-zinc-100 truncate'>{selectedHunter.data.name}</h2>
 								{selectedHunter.data.element && (
-									<p class='text-xs text-zinc-500 mb-3'>
+									<p className='text-xs text-zinc-500 mb-3'>
 										{selectedHunter.data.element} · {selectedHunter.data.class}
 									</p>
 								)}
 								{hasRecommendedBuild ? (
 									<>
-										<p class='text-xs text-zinc-500 mb-1.5'>
+										<p className='text-xs text-zinc-500 mb-1.5'>
 											{scoreLabel} — {matched} / {total} stats
 										</p>
-										<div class='h-2 bg-zinc-700/60 rounded-full overflow-hidden'>
+										<div className='h-2 bg-zinc-700/60 rounded-full overflow-hidden'>
 											<div
-												class={`h-full rounded-full transition-all duration-700 ${
+												className={`h-full rounded-full transition-all duration-700 ${
 													percent >= 80
 														? 'bg-emerald-500'
 														: percent >= 50
@@ -691,7 +691,7 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 										</div>
 									</>
 								) : (
-									<p class='text-xs text-zinc-500 italic'>Aucun build recommandé disponible</p>
+									<p className='text-xs text-zinc-500 italic'>Aucun build recommandé disponible</p>
 								)}
 							</div>
 
@@ -703,18 +703,18 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 
 				{/* ── No build state ── */}
 				{selectedHunter && !hasRecommendedBuild && (
-					<div class='bg-zinc-800/30 border border-zinc-700/50 rounded-2xl px-6 py-10 text-center'>
-						<p class='text-4xl mb-3'>🔍</p>
-						<p class='text-zinc-400'>
+					<div className='bg-zinc-800/30 border border-zinc-700/50 rounded-2xl px-6 py-10 text-center'>
+						<p className='text-4xl mb-3'>🔍</p>
+						<p className='text-zinc-400'>
 							Aucun build recommandé disponible pour{' '}
-							<span class='text-zinc-200 font-semibold'>{selectedHunter.data.name}</span>.
+							<span className='text-zinc-200 font-semibold'>{selectedHunter.data.name}</span>.
 						</p>
 					</div>
 				)}
 
 				{/* ── Equipment ── */}
 				{selectedHunter && equipmentStats && (
-					<section class='space-y-3'>
+					<section className='space-y-3'>
 						<SectionTitle>Équipements</SectionTitle>
 						<EquipCompare
 							equipmentStats={equipmentStats}
@@ -727,7 +727,7 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 
 				{/* ── Cores ── */}
 				{selectedHunter && coreStats && (
-					<section class='space-y-3'>
+					<section className='space-y-3'>
 						<SectionTitle>Cores</SectionTitle>
 						<CoreCompare
 							coreStats={coreStats}

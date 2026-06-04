@@ -24,13 +24,13 @@ export function PuissanceRemanente({
 }: PuissanceRemanenteProps) {
 	return (
 		<div>
-			<div class='flex gap-2 mb-4'>
+			<div className='flex gap-2 mb-4'>
 				{(['monarch', 'successor'] as PuissanceMode[]).map((m) => (
 					<button
 						key={m}
 						type='button'
 						onClick={() => onModeChange(m)}
-						class={[
+						className={[
 							'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
 							mode === m
 								? 'bg-zinc-700 text-zinc-100 border border-zinc-500'
