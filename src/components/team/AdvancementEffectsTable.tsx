@@ -1,5 +1,5 @@
-import type { Hunter } from './types'
 import { aggregateTeamEffects } from './advancementEffects'
+import type { Hunter } from './types'
 
 interface Props {
 	hunters: (Hunter | null)[]
@@ -33,7 +33,7 @@ export function AdvancementEffectsTable({ hunters }: Props) {
 	return (
 		<div className='mt-6'>
 			<p className='text-xs font-mono text-zinc-400 uppercase tracking-widest mb-2'>
-				// Cumul des effets d'advancements
+				Cumul des effets d'advancements
 			</p>
 			<div className='overflow-x-auto rounded-lg border border-zinc-700/50'>
 				<table className='w-full text-sm border-collapse'>
@@ -46,14 +46,13 @@ export function AdvancementEffectsTable({ hunters }: Props) {
 					</thead>
 					<tbody>
 						{effects.map((e, i) => (
-							<tr
-								key={i}
-								className={`border-t border-zinc-700/30 ${ROW_CLASSES[e.direction]}`}
-							>
+							<tr key={i} className={`border-t border-zinc-700/30 ${ROW_CLASSES[e.direction]}`}>
 								<td className='px-4 py-2 font-medium'>{e.label}</td>
 								<td className='px-4 py-2 text-right'>
 									{e.total !== null && e.rawValues.length > 0 ? (
-										<span className={`inline-block px-2 py-0.5 rounded text-xs font-mono ${BADGE_CLASSES[e.direction]}`}>
+										<span
+											className={`inline-block px-2 py-0.5 rounded text-xs font-mono ${BADGE_CLASSES[e.direction]}`}
+										>
 											{e.rawValues[0]?.includes('%')
 												? `${e.total.toFixed(1)}%`
 												: e.total.toFixed(1)}
@@ -62,9 +61,7 @@ export function AdvancementEffectsTable({ hunters }: Props) {
 										<span className='text-zinc-500 text-xs'>—</span>
 									)}
 								</td>
-								<td className='px-4 py-2 text-center text-base font-bold'>
-									{ARROW[e.direction]}
-								</td>
+								<td className='px-4 py-2 text-center text-base font-bold'>{ARROW[e.direction]}</td>
 							</tr>
 						))}
 					</tbody>

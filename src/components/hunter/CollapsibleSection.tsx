@@ -37,9 +37,7 @@ export function CollapsibleSection({
 			>
 				<span className='sla-elem-bar sla-elem-bar-ember' style={{ height: 24 }} />
 				<span className='sla-tag'>{'// SECTION'}</span>
-				<h3 style={sectionTitleStyle}>
-					{title}
-				</h3>
+				<h3 style={sectionTitleStyle}>{title}</h3>
 				<span style={{ fontFamily: 'var(--sla-font-mono)', color: 'var(--sla-ember)' }}>
 					{open ? '▲' : '▼'}
 				</span>

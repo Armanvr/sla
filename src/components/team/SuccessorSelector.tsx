@@ -29,9 +29,7 @@ export function SuccessorSelector({ selected, onChange }: SuccessorSelectorProps
 							;(e.target as HTMLImageElement).style.opacity = '0.3'
 						}}
 					/>
-					<span className='text-xs text-zinc-300 font-medium text-center leading-tight'>
-						{s.name}
-					</span>
+					<span className='text-xs text-zinc-300 font-medium text-center leading-tight'>{s.name}</span>
 				</button>
 			))}
 		</div>

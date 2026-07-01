@@ -106,7 +106,9 @@ export function CoresSection({
 									setOpenPicker((prev) => (prev === key ? null : key))
 								}}
 								className={`w-full flex items-center gap-3 bg-zinc-800/60 border rounded-xl px-3 py-3 text-left transition-colors ${
-									isOpen ? 'border-purple-500/60' : `border-zinc-700/60 ${!(isSupporterLocked && key === 'spirit') ? 'hover:border-zinc-500/60' : ''}`
+									isOpen
+										? 'border-purple-500/60'
+										: `border-zinc-700/60 ${!(isSupporterLocked && key === 'spirit') ? 'hover:border-zinc-500/60' : ''}`
 								} ${isSupporterLocked && key === 'spirit' ? 'cursor-default opacity-80' : ''}`}
 							>
 								{selected ? (
@@ -199,7 +201,9 @@ export function CoresSection({
 
 							{showDetails && selected && (
 								<div className='mt-2 bg-zinc-800/30 border border-zinc-700/40 rounded-lg px-3 py-2'>
-									<p className='text-xs text-zinc-400 leading-relaxed'>{selected.effects.legendary}</p>
+									<p className='text-xs text-zinc-400 leading-relaxed'>
+										{selected.effects.legendary}
+									</p>
 								</div>
 							)}
 

@@ -1,26 +1,149 @@
 {
 	"name": "Liu Zhigang",
+	"category": "Elemental Buster",
 	"alias": null,
-	"title": null,
+	"title": "7-Star Hunter",
 	"rarity": "SSR",
-	"rank": null,
+	"rank": "National Level",
 	"element": "Fire",
 	"class": "Elemental Buster",
-	"category": "Elemental Buster",
 	"country": "China",
-	"releaseDate": null,
+	"guild": "Daybreak Guild",
+	"mainAbility": "Body enhancement / Sword energy made of flame",
+	"exclusiveWeapon": "Nightcleaver",
+	"releaseDate": "2026-06-04",
 	"newHunter": true,
 	"occupation": ["Hunter"],
-	"affiliation": [],
+	"affiliation": ["Daybreak Guild"],
 	"gender": "Male",
-	"age": null,
+	"age": 35,
 	"species": "Human",
-	"image": null,
-	"icon": null,
-	"stats": [],
-	"elements": [
-		{ "name": "Fire", "primary": true }
+	"image": "/assets/hunters/Liu_Zhigang.png",
+	"icon": "/assets/hunters/_icons/Liu_Zhigang_Icon.png",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
 	],
-	"builds": [],
-	"coreBuild": null
+	"baseStats": {
+		"level1": {
+			"hp": 1675,
+			"attack": 784,
+			"defense": 774,
+			"totalPower": 3980
+		},
+		"maxLevel": {
+			"hp": 14947,
+			"attack": 6436,
+			"defense": 6357,
+			"totalPower": 55669
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Fire",
+			"primary": true
+		}
+	],
+	"passive": {
+		"name": "Dragon Soul",
+		"description": "The Power Gauge cannot be restored. Using The Dragon Concealed from the World or Dragon's Path Across the Heavens activates [Insight]. Using The Enlightened One Takes Dragon Form activates [Unrivaled]. When the Fire Overload state ends, activates [Hidden Until Called Forth] for 5s. Removing [Dragon Soul] removes [Insight] and [Unrivaled]. [Insight] grants Super Armor and activates The Enlightened One Takes Dragon Form at 2 stacks. [Unrivaled] increases Attack by 30%, Defense Penetration by 20%, and grants Super Armor.",
+		"icon": null
+	},
+	"advancements": [
+		"Using Hidden Until Called Forth activates [The Enlightened One Takes Dragon Form]. Using The Heavens Bear Two Dragons activates Deflector of a Thousand Arrows, Awakening of the Hidden Dragon, and The Tiger Commands the Wind 1 time each. When The Heavens Bear Two Dragons hits, activates [Wildfire] on the target. Removing [Dragon Soul] removes [Inferno Sovereign]. Increases damage dealt by 10%.",
+		"For every Fire ally in the party, Liu Zhigang's Attack increases by 10%.",
+		"Using Fire Dragon Ascension activates [Draconic Armor]. Removing [Dragon Soul] removes [Draconic Armor]. Attacking targets affected by [Wildfire] increases Critical Hit damage by 5% per Wildfire stack. [Draconic Armor]: continuously recovers HP equal to 2% of Attack every 3s, recovers 5% MP every 3s, decreases damage taken by 20%. Duration: 20s.",
+		"For every Fire ally in the party, Liu Zhigang's Fire damage increases by 20%.",
+		"Enhances [Unrivaled] and [Inferno Sovereign] effects. Attacking targets affected by [Wildfire] increases Fire Overload damage by 5% per Wildfire stack. Using The Heavens Bear Two Dragons activates [Void Mind]. Enhanced [Unrivaled]: increases Attack by 60%, Defense Penetration by 40%, grants Super Armor."
+	],
+	"builds": [
+		{
+			"name": "Build Attack",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "nameless-demons-magisphere"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Fire Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "Nightcleaver",
+		"icon": "/assets/weapons/liu-zhigang/Nightcleaver_Icon.png"
+	},
+	"recommendedStats": []
 }

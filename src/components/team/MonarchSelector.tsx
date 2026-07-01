@@ -29,9 +29,7 @@ export function MonarchSelector({ selected, onChange }: MonarchSelectorProps) {
 							;(e.target as HTMLImageElement).style.opacity = '0.3'
 						}}
 					/>
-					<span className='text-xs text-zinc-300 font-medium text-center leading-tight'>
-						{m.name}
-					</span>
+					<span className='text-xs text-zinc-300 font-medium text-center leading-tight'>{m.name}</span>
 				</button>
 			))}
 		</div>

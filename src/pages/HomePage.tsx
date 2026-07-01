@@ -189,7 +189,7 @@ export function HomePage({ hunters }: { hunters: HunterCard[] }) {
 						</h2>
 					</div>
 
-					<div className="sla-home-grid">
+					<div className='sla-home-grid'>
 						<div style={{ gridColumn: 'span 2' }}>
 							<FeatureCard
 								tag='// SYSTÈME 01'

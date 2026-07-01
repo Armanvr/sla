@@ -330,8 +330,8 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 
 	// ── Available lists ───────────────────────────────────────────────────────
 
-	const takenHunterIds = new Set(selectedHunters.filter(Boolean).map((h) => h!.id))
-	const takenShadowNames = new Set(selectedShadows.filter(Boolean).map((s) => s!.name))
+	const takenHunterIds = new Set(selectedHunters.filter(Boolean).map((h) => h?.id))
+	const takenShadowNames = new Set(selectedShadows.filter(Boolean).map((s) => s?.name))
 
 	const availableHunters = (i: number) =>
 		otherHunters.filter((h) => h.id !== selectedHunters[i]?.id && !takenHunterIds.has(h.id))
@@ -442,7 +442,9 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 						{/* Hunters */}
 						{floor && (
 							<section>
-								<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>Chasseurs</p>
+								<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>
+									Chasseurs
+								</p>
 								<div className='grid grid-cols-3 gap-4'>
 									{(floor.hunters[activeTeamIdx] ?? floor.hunters[0]).hunters.map((_, i) => (
 										<HunterSlot
@@ -463,7 +465,9 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 							<>
 								<hr className='border-zinc-800' />
 								<section>
-									<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>Ombres</p>
+									<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>
+										Ombres
+									</p>
 									<div className='grid grid-cols-3 gap-4'>
 										{selectedShadows.map((_, i) => (
 											<ShadowSlot

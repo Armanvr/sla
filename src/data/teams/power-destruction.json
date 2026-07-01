@@ -1,11 +1,55 @@
 {
 	"weaknessRotation": [
-		{ "weakness": ["Water", "Dark"], "resistance": [], "active": false },
-		{ "weakness": ["Fire", "Water"], "resistance": [], "active": false },
-		{ "weakness": ["Dark", "Wind"], "resistance": [], "active": false },
-		{ "weakness": ["Wind", "Light"], "resistance": [], "active": true },
-		{ "weakness": ["Light", "Fire"], "resistance": [], "active": false }
+		{
+			"weakness": ["Water", "Dark"],
+			"resistance": [],
+			"active": false
+		},
+		{
+			"weakness": ["Fire", "Water"],
+			"resistance": [],
+			"active": false
+		},
+		{
+			"weakness": ["Dark", "Wind"],
+			"resistance": [],
+			"active": false
+		},
+		{
+			"weakness": ["Wind", "Light"],
+			"resistance": [],
+			"active": true
+		},
+		{
+			"weakness": ["Light", "Fire"],
+			"resistance": [],
+			"active": false
+		}
 	],
+	"runesConfig": {
+		"techniques": [
+			"Transcendent_Rune_Detonation.png",
+			"Transcendent_Rune_Sunder.png",
+			"Transcendent_Rune_Eruption.png",
+			"",
+			"",
+			""
+		],
+		"blessings": {
+			"offensive": [
+				"Irresistible_Force_Blessing_Stone.png",
+				"Mana_Rampage_Blessing_Stone.png",
+				"Natural_Disaster_Blessing_Stone.png",
+				"Weakness_Detection_Blessing_Stone.png"
+			],
+			"defensive": [
+				"HP_Extraction_Blessing_Stone.png",
+				"Sharp_Perception_Blessing_Stone.png",
+				"Swiftness_Blessing_Stone.png",
+				"Solidfy_Blessing_Stone.png"
+			]
+		}
+	},
 	"teams": [
 		{
 			"element": "Wind",
@@ -16,9 +60,18 @@
 					"label": "Équipe 1",
 					"jinwooWeapons": ["Stormbringer", "Demon King's Daggers"],
 					"hunters": [
-						{ "id": "lennart-niermann", "build": "Build Niv. 120" },
-						{ "id": "sung-jinah", "build": "Build Niv. 120 (A)" },
-						{ "id": "sugimoto-reiji", "build": "Build Niv. 120" }
+						{
+							"id": "lennart-niermann",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "sung-jinah",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "sugimoto-reiji",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["beste", "cerbie", "skull"]
 				},
@@ -26,9 +79,18 @@
 					"label": "Équipe 2",
 					"jinwooWeapons": ["Stormbringer", "Thetis' Grimoire"],
 					"hunters": [
-						{ "id": "sugimoto-reiji", "build": "Build Niv. 120" },
-						{ "id": "han-se-mi", "build": "Build Niv. 120 (B)" },
-						{ "id": "hwang-dongsoo", "build": "Build Niv. 120" }
+						{
+							"id": "sugimoto-reiji",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "han-se-mi",
+							"build": "Build Niv. 120 (B)"
+						},
+						{
+							"id": "hwang-dongsoo",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["beste", "cerbie", "skull"]
 				},
@@ -36,9 +98,18 @@
 					"label": "Équipe 3",
 					"jinwooWeapons": ["Stormbringer"],
 					"hunters": [
-						{ "id": "sugimoto-reiji", "build": "Build Niv. 120" },
-						{ "id": "sung-jinah", "build": "Build Niv. 120 (A)" },
-						{ "id": "amamiya-mirei", "build": "Build Niv. 120" }
+						{
+							"id": "sugimoto-reiji",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "sung-jinah",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "amamiya-mirei",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["cerbie", "skull"]
 				}
@@ -53,9 +124,18 @@
 					"label": "Équipe 1",
 					"jinwooWeapons": ["Allon's Orb", "Thetis' Grimoire"],
 					"hunters": [
-						{ "id": "frieren", "build": "Build Niv. 120 (A)" },
-						{ "id": "meri-laine", "build": "Build Niv. 120" },
-						{ "id": "cha-hae-in-pure-sword-princess", "build": "Build Niv. 120" }
+						{
+							"id": "frieren",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "meri-laine",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "cha-hae-in-pure-sword-princess",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["brute", "cerbie", "skull"]
 				},
@@ -63,9 +143,18 @@
 					"label": "Équipe 2",
 					"jinwooWeapons": ["Allon's Orb", "Thetis' Grimoire"],
 					"hunters": [
-						{ "id": "meri-laine", "build": "Build Niv. 120" },
-						{ "id": "meilin-fisher", "build": "Build Niv. 120" },
-						{ "id": "shuhua", "build": "Build Niv. 120" }
+						{
+							"id": "meri-laine",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "meilin-fisher",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "shuhua",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["brute", "cerbie", "skull"]
 				},
@@ -73,9 +162,18 @@
 					"label": "Équipe 3",
 					"jinwooWeapons": ["Allon's Orb"],
 					"hunters": [
-						{ "id": "meri-laine", "build": "Build Niv. 120" },
-						{ "id": "elena-renault", "build": "Build Niv. 120 (A)" },
-						{ "id": "alicia-blanche", "build": "Build Niv. 120" }
+						{
+							"id": "meri-laine",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "elena-renault",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "alicia-blanche",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["cerbie", "skull"]
 				}
@@ -90,9 +188,18 @@
 					"label": "Équipe 1",
 					"jinwooWeapons": ["Glorious Demise", "Ennio's Roar"],
 					"hunters": [
-						{ "id": "christopher-reed", "build": "Build Niv. 120" },
-						{ "id": "gina", "build": "Build Niv. 120 (A)" },
-						{ "id": "yuqi", "build": "Build Niv. 120" }
+						{
+							"id": "christopher-reed",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "gina",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "yuqi",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["beste", "cerbie", "skull"]
 				},
@@ -100,9 +207,18 @@
 					"label": "Équipe 2",
 					"jinwooWeapons": ["Glorious Demise", "Ennio's Roar"],
 					"hunters": [
-						{ "id": "christopher-reed", "build": "Build Niv. 120" },
-						{ "id": "gina", "build": "Build Niv. 120 (A)" },
-						{ "id": "choi-jong-in", "build": "Build Niv. 120" }
+						{
+							"id": "christopher-reed",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "gina",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "choi-jong-in",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["beste", "cerbie", "skull"]
 				},
@@ -110,9 +226,18 @@
 					"label": "Équipe 3",
 					"jinwooWeapons": ["Glorious Demise"],
 					"hunters": [
-						{ "id": "christopher-reed", "build": "Build Niv. 120" },
-						{ "id": "gina", "build": "Build Niv. 120 (A)" },
-						{ "id": "yoo-soohyun", "build": "Build Niv. 120" }
+						{
+							"id": "christopher-reed",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "gina",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "yoo-soohyun",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["cerbie", "skull"]
 				}
@@ -127,9 +252,18 @@
 					"label": "Équipe 1",
 					"jinwooWeapons": ["Phantomblade", "Hero's Sword"],
 					"hunters": [
-						{ "id": "go-gunhee", "build": "Build Niv. 120" },
-						{ "id": "laura-walker", "build": "Build Niv. 120 (A)" },
-						{ "id": "thomas-andre", "build": "Build Niv. 120" }
+						{
+							"id": "go-gunhee",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "laura-walker",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "thomas-andre",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["beste", "cerbie", "skull"]
 				},
@@ -137,9 +271,18 @@
 					"label": "Équipe 2",
 					"jinwooWeapons": ["Phantomblade", "Hero's Sword"],
 					"hunters": [
-						{ "id": "antoine-martinez", "build": "Build Niv. 120" },
-						{ "id": "shimizu-akari", "build": "Build Niv. 120" },
-						{ "id": "cha-hae-in", "build": "Build Niv. 120" }
+						{
+							"id": "antoine-martinez",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "shimizu-akari",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "cha-hae-in",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["beste", "cerbie", "skull"]
 				},
@@ -147,9 +290,18 @@
 					"label": "Équipe 3",
 					"jinwooWeapons": ["Phantomblade"],
 					"hunters": [
-						{ "id": "antoine-martinez", "build": "Build Niv. 120" },
-						{ "id": "min-byung-gu", "build": "Build Niv. 120 (B)" },
-						{ "id": "miyeon", "build": "Build Niv. 120" }
+						{
+							"id": "antoine-martinez",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "min-byung-gu",
+							"build": "Build Niv. 120 (B)"
+						},
+						{
+							"id": "miyeon",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["cerbie", "skull"]
 				}
@@ -164,9 +316,18 @@
 					"label": "Équipe 1",
 					"jinwooWeapons": ["Moonshadow", "Transfiguration Key"],
 					"hunters": [
-						{ "id": "sian-halat", "build": "Build Niv. 120" },
-						{ "id": "isla-wright", "build": "Build Niv. 120 (A)" },
-						{ "id": "sung-il-hwan", "build": "Build Niv. 120" }
+						{
+							"id": "sian-halat",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "isla-wright",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "sung-il-hwan",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["uros", "cerbie", "skull"]
 				},
@@ -174,9 +335,18 @@
 					"label": "Équipe 2",
 					"jinwooWeapons": ["Moonshadow", "Transfiguration Key"],
 					"hunters": [
-						{ "id": "sian-halat", "build": "Build Niv. 120" },
-						{ "id": "isla-wright", "build": "Build Niv. 120 (A)" },
-						{ "id": "charlotte", "build": "Build Niv. 120" }
+						{
+							"id": "sian-halat",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "isla-wright",
+							"build": "Build Niv. 120 (A)"
+						},
+						{
+							"id": "charlotte",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["uros", "cerbie", "skull"]
 				},
@@ -184,9 +354,18 @@
 					"label": "Équipe 3",
 					"jinwooWeapons": ["Moonshadow"],
 					"hunters": [
-						{ "id": "sian-halat", "build": "Build Niv. 120" },
-						{ "id": "lee-bora", "build": "Build Niv. 120 (B)" },
-						{ "id": "silver-mane-baek-yoonho", "build": "Build Niv. 120" }
+						{
+							"id": "sian-halat",
+							"build": "Build Niv. 120"
+						},
+						{
+							"id": "lee-bora",
+							"build": "Build Niv. 120 (B)"
+						},
+						{
+							"id": "silver-mane-baek-yoonho",
+							"build": "Build Niv. 120"
+						}
 					],
 					"shadows": ["cerbie", "skull"]
 				}

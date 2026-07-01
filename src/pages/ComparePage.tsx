@@ -184,7 +184,14 @@ function ScoreRing({ percent }: { percent: number }) {
 	const strokeColor = percent >= 80 ? '#10b981' : percent >= 50 ? '#f59e0b' : '#ef4444'
 
 	return (
-		<svg width='130' height='130' viewBox='0 0 130 130' className='flex-shrink-0' role='img' aria-label='Score ring'>
+		<svg
+			width='130'
+			height='130'
+			viewBox='0 0 130 130'
+			className='flex-shrink-0'
+			role='img'
+			aria-label='Score ring'
+		>
 			<circle cx='65' cy='65' r={r} fill='none' stroke='#3f3f46' strokeWidth='10' />
 			<circle
 				cx='65'

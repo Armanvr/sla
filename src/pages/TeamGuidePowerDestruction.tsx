@@ -1,18 +1,18 @@
 import { useState } from 'preact/hooks'
+import { RunesSection } from '../components/hunter/RunesSection'
 import { BackLink } from '../components/sla/BackLink'
 import { SectionHeader } from '../components/sla/SectionHeader'
+import { AdvancementEffectsTable } from '../components/team/AdvancementEffectsTable'
 import { ElementTabs } from '../components/team/ElementTabs'
 import { HunterSlot } from '../components/team/HunterSlot'
 import { JinwooPanel } from '../components/team/JinwooPanel'
-import { RunesSection } from '../components/hunter/RunesSection'
-import { PuissanceRemanente, type PuissanceMode } from '../components/team/PuissanceRemanente'
-import { ShadowSlot } from '../components/team/ShadowSlot'
-import { TeamConfigTabs } from '../components/team/TeamConfigTabs'
-import { AdvancementEffectsTable } from '../components/team/AdvancementEffectsTable'
-import { SHADOWS, SHADOWS_BY_ID } from '../components/team/shadows'
-import { DEFAULT_MONARCH } from '../components/team/monarchs'
 import type { MonarchId } from '../components/team/monarchs'
+import { DEFAULT_MONARCH } from '../components/team/monarchs'
+import { type PuissanceMode, PuissanceRemanente } from '../components/team/PuissanceRemanente'
+import { ShadowSlot } from '../components/team/ShadowSlot'
+import { SHADOWS, SHADOWS_BY_ID } from '../components/team/shadows'
 import { DEFAULT_SUCCESSOR, type SuccessorId } from '../components/team/successors'
+import { TeamConfigTabs } from '../components/team/TeamConfigTabs'
 import type { Hunter, ShadowData, WeaponData } from '../components/team/types'
 import { JINWOO_WEAPONS_BY_NAME } from '../components/team/weapons'
 import teamsConfig from '../data/teams/power-destruction.json'
@@ -129,7 +129,9 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 			{rotation ? (
 				<div className='flex'>
 					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40 border-r border-zinc-700/40'>
-						<span className='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>Faiblesses</span>
+						<span className='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>
+							Faiblesses
+						</span>
 						<div className='flex gap-3 flex-wrap justify-center'>
 							{rotation.weakness.map((el) =>
 								ELEMENT_ICON[el] ? (
@@ -146,7 +148,9 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 						</div>
 					</div>
 					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-red-950/40'>
-						<span className='text-[11px] font-bold text-red-400 uppercase tracking-widest'>Résistances</span>
+						<span className='text-[11px] font-bold text-red-400 uppercase tracking-widest'>
+							Résistances
+						</span>
 						<div className='flex gap-3 flex-wrap justify-center'>
 							{rotation.resistance.map((el) =>
 								ELEMENT_RESISTANCE_ICON[el] ? (
@@ -325,8 +329,8 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 
 	// ── Available lists ───────────────────────────────────────────────────────
 
-	const takenHunterIds = new Set(selectedHunters.filter(Boolean).map((h) => h!.id))
-	const takenShadowNames = new Set(selectedShadows.filter(Boolean).map((s) => s!.name))
+	const takenHunterIds = new Set(selectedHunters.filter(Boolean).map((h) => h?.id))
+	const takenShadowNames = new Set(selectedShadows.filter(Boolean).map((s) => s?.name))
 
 	const availableHunters = (i: 0 | 1 | 2) =>
 		otherHunters.filter((h) => h.id !== selectedHunters[i]?.id && !takenHunterIds.has(h.id))

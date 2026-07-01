@@ -41,7 +41,10 @@ export function StatBar({
 				<span className='text-zinc-200 font-mono'>{value.toLocaleString()}</span>
 			</div>
 			<div className='h-1.5 bg-zinc-700 rounded-full overflow-hidden'>
-				<div className='h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full' style={`width:${pct}%`} />
+				<div
+					className='h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full'
+					style={`width:${pct}%`}
+				/>
 			</div>
 		</div>
 	)
@@ -77,7 +80,9 @@ export function HeroSection({ data }: { data: HunterData }) {
 			<div className='lg:w-2/3 space-y-6'>
 				<div>
 					{data.title && (
-						<p className='text-sm text-purple-400 font-medium uppercase tracking-widest mb-1'>{data.title}</p>
+						<p className='text-sm text-purple-400 font-medium uppercase tracking-widest mb-1'>
+							{data.title}
+						</p>
 					)}
 					<h2 className='text-4xl font-bold mb-2'>{data.name}</h2>
 					{data.alias && <p className='text-zinc-400 italic'>"{data.alias}"</p>}

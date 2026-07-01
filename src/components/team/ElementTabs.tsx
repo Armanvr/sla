@@ -72,7 +72,9 @@ export function ElementTabs({
 						{team.element}
 						{isRandom && <span className='text-[10px] text-zinc-500 font-normal ml-1'>★ aléatoire</span>}
 						{isWeak && <span className='text-[10px] text-emerald-400 font-normal ml-1'>★ recommandé</span>}
-						{isResistant && <span className='text-[10px] text-red-400/80 font-normal ml-1'>✗ résistance</span>}
+						{isResistant && (
+							<span className='text-[10px] text-red-400/80 font-normal ml-1'>✗ résistance</span>
+						)}
 					</button>
 				)
 			})}

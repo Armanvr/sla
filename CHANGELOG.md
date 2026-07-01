@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+
+## [4.2.0] — 2026-07-01
+
+### Added
+- **Sélecteur de monarque "Puissance rémanente / Successeur"** — nouvelle section dans Power & Destruction (SECTION 05) et Guild Boss (SECTION 04)
+  - 3 monarques sélectionnables : Monarque d'Acier (défaut), Monarque des Flammes Blanches, Monarque de la Transfiguration
+  - Portraits tirés de `public/assets/workshop/`, sélection radio par clic, état par élément actif
+  - Composant `PuissanceRemanente` + données dans `puissance.ts` (`PuissanceMode`, `DEFAULT_PUISSANCE`, `PUISSANCE`)
+
+### Changed
+- **Power & Destruction** — `weaknessRotation` unifié avec le format Guild Boss : `activeWeeks[]` → `active: boolean`
+- **Guild Boss** — `weaknessRotation` unifié avec le format Power & Destruction : `activeWeeks[]` → `active: boolean`
+- **HunterSlot**, `ShadowSlot`, `WeaponSlot` : classe sémantique `sla-*-slot` + `min-height: 44px` mobile
+
+### Removed
+- **Clé `weaknessRotation`** retirée de `HunterData` (interface TypeScript) et de tous les fichiers JSON chasseurs
+
 ## [4.1.0] — 2026-05-20
 
 ### Added

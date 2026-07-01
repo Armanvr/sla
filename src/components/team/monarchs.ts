@@ -1,7 +1,4 @@
-export type MonarchId =
-	| 'monarch-of-steel'
-	| 'monarch-of-white-flames'
-	| 'monarch-of-transfiguration'
+export type MonarchId = 'monarch-of-steel' | 'monarch-of-white-flames' | 'monarch-of-transfiguration'
 
 export interface MonarchData {
 	id: MonarchId

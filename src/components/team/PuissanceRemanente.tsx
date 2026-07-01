@@ -1,7 +1,7 @@
-import type { MonarchId } from './monarchs'
 import { MonarchSelector } from './MonarchSelector'
-import type { SuccessorId } from './successors'
+import type { MonarchId } from './monarchs'
 import { SuccessorSelector } from './SuccessorSelector'
+import type { SuccessorId } from './successors'
 
 export type PuissanceMode = 'monarch' | 'successor'
 

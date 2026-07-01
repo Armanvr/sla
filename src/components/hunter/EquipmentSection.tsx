@@ -147,7 +147,9 @@ function EquipmentSlot({
 					</div>
 				)}
 				<div className='flex-1 min-w-0'>
-					<p className='text-[10px] text-zinc-500 uppercase tracking-wider leading-none mb-0.5'>{slotLabel}</p>
+					<p className='text-[10px] text-zinc-500 uppercase tracking-wider leading-none mb-0.5'>
+						{slotLabel}
+					</p>
 					<p className={`text-sm truncate ${selected ? 'text-zinc-100 font-medium' : 'text-zinc-500'}`}>
 						{selected ? selected.name : '—'}
 					</p>

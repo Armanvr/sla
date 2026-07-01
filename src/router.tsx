@@ -11,7 +11,6 @@ import { ComparePage } from './pages/ComparePage'
 import { DesignSystemPage } from './pages/DesignSystemPage'
 import { HomePage } from './pages/HomePage'
 import { HuntersPage } from './pages/HuntersPage'
-import { ShadowsPage } from './pages/ShadowsPage'
 import { TeamGuideGuildBoss } from './pages/TeamGuideGuildBoss'
 import { TeamGuidePowerDestruction } from './pages/TeamGuidePowerDestruction'
 import { TeamGuideWorkshop } from './pages/TeamGuideWorkshop'
@@ -51,9 +50,6 @@ function CompareRoute() {
 function HuntersRoute() {
 	return <HuntersPage hunters={hunters} />
 }
-function ShadowsRoute() {
-	return <ShadowsPage />
-}
 function WorkshopsRoute() {
 	return <WorkshopsPage />
 }
@@ -62,7 +58,7 @@ function NotFound() {
 	return (
 		<div className='sla-container' style={{ paddingTop: 64, paddingBottom: 64 }}>
 			<BackLink />
-			<Panel corners className='sla-anim-in' style={{ marginTop: 32, padding: 48, textAlign: 'center' }}>
+			<Panel corners class='sla-anim-in' style={{ marginTop: 32, padding: 48, textAlign: 'center' }}>
 				<div className='sla-tag' style={{ display: 'inline-block', marginBottom: 16 }}>
 					{'ERROR // 404'}
 				</div>
@@ -113,12 +109,14 @@ export function AppRouter() {
 			<Nav />
 			<div style={{ display: 'flex', minHeight: '100vh' }}>
 				<SideNav />
-				<div className="sla-main-content" style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
+				<div
+					className='sla-main-content'
+					style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}
+				>
 					<main style={{ flex: 1 }}>
 						<Router>
 							<Route path='/' component={HomeRoute} />
 							<Route path='/hunters' component={HuntersRoute} />
-							<Route path='/shadows' component={ShadowsRoute} />
 							<Route path='/workshops' component={WorkshopsRoute} />
 							<Route path='/hunter/:id' component={HunterRoute} />
 							<Route path='/team/power-destruction' component={PowerRoute} />

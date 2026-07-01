@@ -112,11 +112,7 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 								{hunter.data.title}
 							</div>
 						)}
-						<h3
-							style={hunterCardTitleStyle}
-						>
-							{hunter.data.name}
-						</h3>
+						<h3 style={hunterCardTitleStyle}>{hunter.data.name}</h3>
 					</div>
 					<div
 						style={{

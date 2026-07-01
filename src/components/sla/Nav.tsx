@@ -42,7 +42,7 @@ export function Nav() {
 					)
 				})}
 			</nav>
-			<div className="sla-nav-status">
+			<div className='sla-nav-status'>
 				<span className='sla-status-dot' />
 				<span className='sla-label'>Online</span>
 				<span className='sla-nav-clock'>{time}</span>

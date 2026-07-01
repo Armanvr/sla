@@ -18,7 +18,12 @@ export function ShadowSlot({
 	return (
 		<div className='relative'>
 			{open && (
-				<button type='button' className='fixed inset-0 z-40' onClick={() => setOpen(false)} aria-label='Fermer' />
+				<button
+					type='button'
+					className='fixed inset-0 z-40'
+					onClick={() => setOpen(false)}
+					aria-label='Fermer'
+				/>
 			)}
 
 			<div

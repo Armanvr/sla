@@ -29,7 +29,12 @@ export function HunterSlot({
 	return (
 		<div className='relative'>
 			{open && (
-				<button type='button' className='fixed inset-0 z-40' onClick={() => setOpen(false)} aria-label='Fermer' />
+				<button
+					type='button'
+					className='fixed inset-0 z-40'
+					onClick={() => setOpen(false)}
+					aria-label='Fermer'
+				/>
 			)}
 
 			<div
@@ -98,7 +103,10 @@ export function HunterSlot({
 				</button>
 
 				{selected && (
-					<div className='mt-2 pt-2 flex items-center gap-2' style={{ borderTop: '1px solid var(--sla-border)' }}>
+					<div
+						className='mt-2 pt-2 flex items-center gap-2'
+						style={{ borderTop: '1px solid var(--sla-border)' }}
+					>
 						<img
 							src={selected.data.weapon?.icon ?? '/assets/utils/Placeholder_Weapon_Icon.png'}
 							alt={selected.data.weapon?.name ?? 'Weapon'}

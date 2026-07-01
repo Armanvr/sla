@@ -13,15 +13,9 @@ export interface AggregatedEffect {
 	direction: 'increase' | 'decrease' | 'other'
 }
 
-const INCREASE_RE = [
-	/(.+?)\s+increases?\s+by\s+([\d.]+%?)/i,
-	/increases?\s+(?:the\s+)?(.+?)\s+by\s+([\d.]+%?)/i,
-]
+const INCREASE_RE = [/(.+?)\s+increases?\s+by\s+([\d.]+%?)/i, /increases?\s+(?:the\s+)?(.+?)\s+by\s+([\d.]+%?)/i]
 
-const DECREASE_RE = [
-	/(.+?)\s+decreases?\s+by\s+([\d.]+%?)/i,
-	/decreases?\s+(?:the\s+)?(.+?)\s+by\s+([\d.]+%?)/i,
-]
+const DECREASE_RE = [/(.+?)\s+decreases?\s+by\s+([\d.]+%?)/i, /decreases?\s+(?:the\s+)?(.+?)\s+by\s+([\d.]+%?)/i]
 
 function normalizeLabel(raw: string): string {
 	return raw
@@ -34,7 +28,7 @@ function normalizeLabel(raw: string): string {
 
 function parseNumber(val: string): number | null {
 	const n = parseFloat(val.replace('%', ''))
-	return isNaN(n) ? null : n
+	return Number.isNaN(n) ? null : n
 }
 
 export function extractEffects(advancements: string[]): ParsedEffect[] {
@@ -75,10 +69,13 @@ export function extractEffects(advancements: string[]): ParsedEffect[] {
 			if (matched) continue
 
 			// other — only emit if sentence mentions a % or a stat keyword
-			if (/[\d.]+%/.test(sentence) || /\b(damage|defense|attack|hp|critical|cooldown|power gauge|mp)\b/i.test(sentence)) {
+			if (
+				/[\d.]+%/.test(sentence) ||
+				/\b(damage|defense|attack|hp|critical|cooldown|power gauge|mp)\b/i.test(sentence)
+			) {
 				const pctMatch = sentence.match(/([\d.]+%)/)
 				effects.push({
-					label: normalizeLabel(sentence.replace(/[\[\]()]/g, '').slice(0, 60)),
+					label: normalizeLabel(sentence.replace(/[[\]()]/g, '').slice(0, 60)),
 					value: pctMatch ? pctMatch[1] : null,
 					direction: 'other',
 				})
@@ -118,7 +115,7 @@ export function aggregateTeamEffects(hunters: (Hunter | null)[]): AggregatedEffe
 
 	const result: AggregatedEffect[] = []
 	for (const [key, v] of map.entries()) {
-		const [direction, ...labelParts] = key.split('::')
+		const [_direction, ...labelParts] = key.split('::')
 		result.push({
 			label: labelParts.join('::'),
 			total: v.rawValues.length > 0 ? v.total : null,
