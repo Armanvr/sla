@@ -76,12 +76,16 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 				/>
 				<img
 					src={hunter.data.icon ?? hunter.data.image}
+					loading='lazy'
+					decoding='async'
+					width={160}
+					height={160}
 					alt={hunter.data.name}
 					style={{
 						width: 160,
 						height: 160,
 						objectFit: 'contain',
-						filter: 'drop-shadow(0 0 12px rgba(255,74,28,0.15))',
+						filter: 'drop-shadow(0 0 12px rgba(97, 55, 255, 0.18))',
 					}}
 				/>
 			</div>
@@ -169,7 +173,7 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 						fontFamily: 'var(--sla-font-mono)',
 						fontSize: 'var(--sla-text-xs)',
 						letterSpacing: 'var(--sla-ls-wider)',
-						color: 'var(--sla-ember)',
+						color: 'var(--sla-mana-bright)',
 						textTransform: 'uppercase',
 					}}
 				>
@@ -188,6 +192,7 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 			<SectionHeader
 				tag='// SECTION // HUNTERS'
 				title='Hunter Guides'
+				as='h1'
 				description='Stats, compétences et builds recommandés pour chaque chasseur.'
 				right={<Badge variant='active'>{hunters.length} indexés</Badge>}
 			/>
@@ -200,7 +205,7 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 							key={cat}
 							type='button'
 							onClick={() => setActiveCategory((prev) => (prev === cat ? null : cat))}
-							className={`sla-btn ${active ? 'sla-btn-primary' : 'sla-btn-ghost'}`}
+							className={`sla-btn sla-tap ${active ? 'sla-btn-primary' : 'sla-btn-ghost'}`}
 							style={{ padding: '8px 18px', fontSize: 'var(--sla-text-xs)' }}
 						>
 							{cat}
@@ -237,7 +242,7 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 							<div
 								style={{
 									display: 'grid',
-									gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
+									gridTemplateColumns: 'repeat(auto-fill, minmax(min(360px, 100%), 1fr))',
 									gap: 12,
 								}}
 							>
@@ -284,7 +289,7 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 							<div
 								style={{
 									display: 'grid',
-									gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
+									gridTemplateColumns: 'repeat(auto-fill, minmax(min(360px, 100%), 1fr))',
 									gap: 12,
 								}}
 							>

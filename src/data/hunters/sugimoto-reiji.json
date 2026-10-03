@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 28,
 	"species": "Human",
-	"image": "/assets/hunters/Sugimoto_Reiji.png",
-	"icon": "/assets/hunters/_icons/Sugimoto_Reiji_Icon.png",
+	"image": "/assets/hunters/Sugimoto_Reiji.webp",
+	"icon": "/assets/hunters/_icons/Sugimoto_Reiji_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

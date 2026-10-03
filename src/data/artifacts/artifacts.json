@@ -511,6 +511,24 @@
 				"4": "Applies the [Poison] effect. [Poison]: Increases Basic Skill damage by 20%. Increases Attack and Defense by 1% every 1s (stacking up to 30 times). Duration: Permanent.",
 				"8": "Enhances [Poison] to [Blue Poison]. [Blue Poison]: Increases Defense Penetration by 20%. Increases Basic Skill damage by 30%. Increases Attack and Defense by 2.5% every 1s (stacks up to 30 times). Duration: Permanent. When [Sung Jinwoo] or a [Striker] equips this, damage dealt increases by 50%. [Poison] cannot be activated."
 			}
+		},
+		{
+			"id": "surturs-flame",
+			"name": "Surtur's Flame",
+			"icons": {
+				"head": "/assets/artifacts/Helmet_of_Surtur's_Flame.png",
+				"chest": "/assets/artifacts/Body_Armor_of_Surtur's_Flame.png",
+				"gloves": "/assets/artifacts/Gloves_of_Surtur's_Flame.png",
+				"boots": "/assets/artifacts/Boots_of_Surtur's_Flame.png",
+				"necklace": "/assets/artifacts/Necklace_of_Surtur's_Flame.png",
+				"ring": "/assets/artifacts/Ring_of_Surtur's_Flame.png",
+				"bracelet": "/assets/artifacts/Bracelet_of_Surtur's_Flame.png",
+				"earrings": "/assets/artifacts/Earrings_of_Surtur's_Flame.png"
+			},
+			"bonuses": {
+				"4": "The [Blazing Annihilation] effect is applied. [Blazing Annihilation]: Increases the user's Attack and Defense by 20%. A successful Overload increases the user's Burst damage by 20% (stacking up to 3 times). Duration: Permanent.",
+				"8": "The [Blazing Annihilation] effect is enhanced to the [Cataclysmic Blaze] effect. [Cataclysmic Blaze]: Increases the user's Attack and Defense by 50%. A successful Overload increases the user's Burst damage by 20% (stacking up to 5 times). Duration: Permanent. When an Elemental Buster class hunter equips this, it increases their Overload damage dealt by 50%. [Blazing Annihilation] cannot be activated. Increases allies' Elemental Weakness damage by 30% in [Team Fight] Mode (stacks up to 2 times)."
+			}
 		}
 	]
 }

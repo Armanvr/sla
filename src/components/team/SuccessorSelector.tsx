@@ -14,12 +14,8 @@ export function SuccessorSelector({ selected, onChange }: SuccessorSelectorProps
 					key={s.id}
 					type='button'
 					onClick={() => onChange(s.id)}
-					className={[
-						'flex flex-col items-center gap-2 p-3 rounded-xl border transition-all cursor-pointer flex-1 min-w-[100px]',
-						selected === s.id
-							? 'border-zinc-400 bg-zinc-700/60 shadow-[0_0_12px_rgba(255,255,255,0.06)]'
-							: 'border-zinc-700/40 bg-zinc-800/40 hover:border-zinc-600 hover:bg-zinc-800/60',
-					].join(' ')}
+					aria-pressed={selected === s.id}
+					className='sla-select-card flex flex-col items-center gap-2 p-3 border border-zinc-700/40 bg-zinc-800/40 hover:bg-zinc-800/60 transition-all cursor-pointer flex-1 min-w-[100px]'
 				>
 					<img
 						src={s.image}

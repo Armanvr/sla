@@ -9,16 +9,18 @@ export default defineConfig({
 		tailwindcss(),
 		VitePWA({
 			registerType: 'autoUpdate',
+			// Manifest + its icons are precached by the plugin itself; these are the extra <head> icons.
+			includeAssets: ['icons/favicon.ico', 'icons/apple-touch-icon-180x180.png'],
 			workbox: {
-				globPatterns: ['**/*.{js,css,html,png,svg,webp,woff2}'],
-				globIgnores: ['**/assets/hunters/**'],
+				// Precache the app shell + small UI imagery only; other /assets/ are cached on first view (rule below).
+				globPatterns: ['**/*.{js,css,html,svg,woff2}', 'assets/utils/**'],
 				runtimeCaching: [
 					{
 						urlPattern: /\/assets\//,
 						handler: 'CacheFirst',
 						options: {
 							cacheName: 'assets-cache',
-							expiration: { maxAgeSeconds: 60 * 60 * 24 * 30 },
+							expiration: { maxEntries: 1000, maxAgeSeconds: 60 * 60 * 24 * 30 },
 						},
 					},
 					{

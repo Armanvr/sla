@@ -30,12 +30,8 @@ export function PuissanceRemanente({
 						key={m}
 						type='button'
 						onClick={() => onModeChange(m)}
-						className={[
-							'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
-							mode === m
-								? 'bg-zinc-700 text-zinc-100 border border-zinc-500'
-								: 'bg-zinc-800/40 text-zinc-400 border border-zinc-700/40 hover:border-zinc-600 hover:text-zinc-300',
-						].join(' ')}
+						aria-pressed={mode === m}
+						className='sla-tap sla-tab px-4 py-2 text-sm font-medium'
 					>
 						{m === 'monarch' ? 'Monarque' : 'Successeur'}
 					</button>

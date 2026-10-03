@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 32,
 	"species": "Human",
-	"image": "/assets/hunters/Hwang_Dongsoo.png",
-	"icon": "/assets/hunters/_icons/Hwang_Dongsoo_Icon.png",
+	"image": "/assets/hunters/Hwang_Dongsoo.webp",
+	"icon": "/assets/hunters/_icons/Hwang_Dongsoo_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

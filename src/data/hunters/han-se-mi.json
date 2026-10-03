@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 21,
 	"species": "Human",
-	"image": "/assets/hunters/Han_Se-Mi.png",
-	"icon": "/assets/hunters/_icons/Han_Se-Mi_Icon.png",
+	"image": "/assets/hunters/Han_Se-Mi.webp",
+	"icon": "/assets/hunters/_icons/Han_Se-Mi_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

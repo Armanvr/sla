@@ -9,16 +9,12 @@ import { SectionHeader } from './sla/SectionHeader'
 
 export type { HunterData }
 
-const passiveDescStyle: JSX.CSSProperties = {
-	fontSize: 'var(--sla-text-xs)',
+const bodyTextStyle: JSX.CSSProperties = {
+	fontSize: 'var(--sla-text-base)',
 	color: 'var(--sla-text-secondary)',
 	margin: 0,
 	lineHeight: 1.6,
 	fontFamily: 'var(--sla-font-body)',
-	display: '-webkit-box',
-	WebkitLineClamp: 5,
-	WebkitBoxOrient: 'vertical',
-	overflow: 'hidden',
 }
 
 const elementSlug: Record<string, string> = {
@@ -61,14 +57,19 @@ function InfoRow({ label, value }: { label: string; value: string }) {
 	)
 }
 
+const WEAPON_PLACEHOLDER = '/assets/utils/Placeholder_Weapon_Icon.png'
+
 function HunterImageCard({ data }: { data: HunterData }) {
 	return (
-		<div style={{ gridColumn: '1', gridRow: '1 / span 2' }}>
+		<div className='sla-dossier-image'>
 			<div
 				className='sla-panel'
 				style={{ overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}
 			>
-				<div style={{ position: 'relative', flex: 1, minHeight: 280, overflow: 'hidden' }}>
+				<div
+					className='sla-dossier-img'
+					style={{ position: 'relative', flex: 1, minHeight: 280, overflow: 'hidden' }}
+				>
 					<div
 						style={{
 							position: 'absolute',
@@ -80,7 +81,12 @@ function HunterImageCard({ data }: { data: HunterData }) {
 					<img
 						src={data.image}
 						alt={data.name}
+						fetchpriority='high'
+						decoding='async'
 						style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
+						onError={(e) => {
+							;(e.target as HTMLImageElement).style.display = 'none'
+						}}
 					/>
 				</div>
 				<div style={{ padding: '16px 20px' }}>
@@ -89,7 +95,7 @@ function HunterImageCard({ data }: { data: HunterData }) {
 							{data.title}
 						</div>
 					)}
-					<h2
+					<h1
 						style={{
 							fontFamily: 'var(--sla-font-hud)',
 							fontSize: 'var(--sla-text-xl)',
@@ -101,7 +107,7 @@ function HunterImageCard({ data }: { data: HunterData }) {
 						}}
 					>
 						{data.name}
-					</h2>
+					</h1>
 					{data.alias && (
 						<p
 							style={{
@@ -138,11 +144,11 @@ function HunterImageCard({ data }: { data: HunterData }) {
 							}}
 						>
 							<img
-								src={data.weapon.icon}
+								src={data.weapon.icon || WEAPON_PLACEHOLDER}
 								alt={data.weapon.name}
 								style={{ width: 32, height: 32, objectFit: 'contain', flexShrink: 0 }}
 								onError={(e) => {
-									;(e.target as HTMLImageElement).src = '/assets/utils/Placeholder_Weapon_Icon.png'
+									;(e.target as HTMLImageElement).src = WEAPON_PLACEHOLDER
 								}}
 							/>
 							<div>
@@ -169,7 +175,7 @@ function HunterImageCard({ data }: { data: HunterData }) {
 
 function HunterStatsCard({ data, hasStats, maxStat }: { data: HunterData; hasStats: boolean; maxStat: number }) {
 	return (
-		<div style={{ gridColumn: '2', gridRow: '1' }}>
+		<div className='sla-dossier-stats'>
 			<div className='sla-panel' style={{ padding: 20 }}>
 				<div
 					className='sla-label'
@@ -179,10 +185,7 @@ function HunterStatsCard({ data, hasStats, maxStat }: { data: HunterData; hasSta
 				</div>
 				{hasStats ? (
 					<>
-						<div
-							className='sla-label'
-							style={{ marginBottom: 12, color: 'var(--sla-ember)', fontSize: 'var(--sla-text-xs)' }}
-						>
+						<div className='sla-label' style={{ marginBottom: 12, color: 'var(--sla-mana-bright)' }}>
 							Max Level (5★ + 5D)
 						</div>
 						<div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -221,7 +224,8 @@ function HunterStatsCard({ data, hasStats, maxStat }: { data: HunterData; hasSta
 									fontFamily: 'var(--sla-font-hud)',
 									fontSize: 'var(--sla-text-base)',
 									fontWeight: 700,
-									color: 'var(--sla-ember)',
+									fontVariantNumeric: 'tabular-nums',
+									color: 'var(--sla-mana-bright)',
 								}}
 							>
 								{data.baseStats?.maxLevel.totalPower.toLocaleString()}
@@ -240,7 +244,7 @@ function HunterStatsCard({ data, hasStats, maxStat }: { data: HunterData; hasSta
 
 function HunterAdvancementsCard({ advancements }: { advancements?: string[] }) {
 	return (
-		<div style={{ gridColumn: '3', gridRow: '1 / span 2' }}>
+		<div className='sla-dossier-adv'>
 			<div
 				className='sla-panel'
 				style={{ padding: 20, height: '100%', display: 'flex', flexDirection: 'column' }}
@@ -267,7 +271,7 @@ function HunterAdvancementsCard({ advancements }: { advancements?: string[] }) {
 								<span
 									style={{
 										fontFamily: 'var(--sla-font-hud)',
-										color: 'var(--sla-ember)',
+										color: 'var(--sla-mana-bright)',
 										fontSize: 'var(--sla-text-xs)',
 										fontWeight: 700,
 										flexShrink: 0,
@@ -277,17 +281,7 @@ function HunterAdvancementsCard({ advancements }: { advancements?: string[] }) {
 								>
 									{i + 1}★
 								</span>
-								<p
-									style={{
-										color: 'var(--sla-text-secondary)',
-										fontSize: 'var(--sla-text-sm)',
-										margin: 0,
-										lineHeight: 1.6,
-										fontFamily: 'var(--sla-font-body)',
-									}}
-								>
-									{adv}
-								</p>
+								<p style={bodyTextStyle}>{adv}</p>
 							</div>
 						))}
 					</div>
@@ -303,7 +297,7 @@ function HunterAdvancementsCard({ advancements }: { advancements?: string[] }) {
 
 function HunterProfileCard({ data }: { data: HunterData }) {
 	return (
-		<div style={{ gridColumn: '2', gridRow: '2' }}>
+		<div className='sla-dossier-profile'>
 			<div className='sla-panel' style={{ padding: 20, height: '100%' }}>
 				<div
 					className='sla-label'
@@ -322,7 +316,7 @@ function HunterProfileCard({ data }: { data: HunterData }) {
 						<div className='sla-label' style={{ marginBottom: 6, color: 'var(--sla-mana-bright)' }}>
 							{data.passive.name}
 						</div>
-						<p style={passiveDescStyle}>{data.passive.description}</p>
+						<p style={bodyTextStyle}>{data.passive.description}</p>
 					</div>
 				)}
 			</div>
@@ -332,20 +326,20 @@ function HunterProfileCard({ data }: { data: HunterData }) {
 
 function HunterDetailsSection({ data, hasStats, maxStat }: { data: HunterData; hasStats: boolean; maxStat: number }) {
 	return (
-		<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 48 }}>
+		<div className='sla-dossier-grid'>
 			<HunterImageCard data={data} />
 			<HunterStatsCard data={data} hasStats={hasStats} maxStat={maxStat} />
-			<HunterAdvancementsCard advancements={data.advancements} />
 			<HunterProfileCard data={data} />
+			<HunterAdvancementsCard advancements={data.advancements} />
 		</div>
 	)
 }
 
 function BuildRecommendationsSection({ data }: { data: HunterData }) {
 	return (
-		<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+		<div className='sla-build-grid'>
 			{/* ── Cols 1-2: Equipment ── */}
-			<div style={{ gridColumn: '1 / span 2' }}>
+			<div className='sla-build-equip'>
 				<div className='sla-panel' style={{ padding: 20 }}>
 					<div
 						className='sla-label'
@@ -358,7 +352,7 @@ function BuildRecommendationsSection({ data }: { data: HunterData }) {
 			</div>
 
 			{/* ── Col 3: Cores ── */}
-			<div style={{ gridColumn: '3' }}>
+			<div className='sla-build-cores'>
 				<div className='sla-panel' style={{ padding: 20 }}>
 					<div
 						className='sla-label'

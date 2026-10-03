@@ -18,7 +18,7 @@ export function RunesSection() {
 							<div className='w-12 h-12 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-lg'>
 								–
 							</div>
-							<span className='text-[10px] text-zinc-500 text-center'>— Vide —</span>
+							<span className='text-label text-zinc-500 text-center'>— Vide —</span>
 						</div>
 					))}
 				</div>
@@ -34,7 +34,7 @@ export function RunesSection() {
 				</div>
 				<div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
 					<div>
-						<div className='text-[10px] text-emerald-400 font-semibold uppercase tracking-widest mb-2'>
+						<div className='text-label text-emerald-400 font-semibold uppercase tracking-widest mb-2'>
 							Offensives
 						</div>
 						<div className='flex gap-2'>
@@ -46,13 +46,13 @@ export function RunesSection() {
 									<div className='w-10 h-10 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-sm'>
 										–
 									</div>
-									<span className='text-[9px] text-zinc-500'>Vide</span>
+									<span className='text-label text-zinc-500'>Vide</span>
 								</div>
 							))}
 						</div>
 					</div>
 					<div>
-						<div className='text-[10px] text-blue-400 font-semibold uppercase tracking-widest mb-2'>
+						<div className='text-label text-blue-400 font-semibold uppercase tracking-widest mb-2'>
 							Défensives
 						</div>
 						<div className='flex gap-2'>
@@ -64,7 +64,7 @@ export function RunesSection() {
 									<div className='w-10 h-10 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-sm'>
 										–
 									</div>
-									<span className='text-[9px] text-zinc-500'>Vide</span>
+									<span className='text-label text-zinc-500'>Vide</span>
 								</div>
 							))}
 						</div>

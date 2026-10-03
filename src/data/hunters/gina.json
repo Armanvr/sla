@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 28,
 	"species": "Human",
-	"image": "/assets/hunters/Gina.png",
-	"icon": "/assets/hunters/_icons/Gina_Icon.png",
+	"image": "/assets/hunters/Gina.webp",
+	"icon": "/assets/hunters/_icons/Gina_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

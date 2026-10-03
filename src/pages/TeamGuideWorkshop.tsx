@@ -94,19 +94,13 @@ function Tabs({
 	labels,
 	active,
 	onSwitch,
-	color = 'orange',
+	level = 'secondary',
 }: {
 	labels: string[]
 	active: number
 	onSwitch: (i: number) => void
-	color?: 'orange' | 'zinc' | 'amber'
+	level?: 'primary' | 'secondary'
 }) {
-	const activeClass =
-		color === 'orange'
-			? 'bg-orange-600 text-white'
-			: color === 'amber'
-				? 'bg-amber-500 text-zinc-900'
-				: 'bg-zinc-600 text-white'
 	return (
 		<div className='flex flex-wrap gap-2'>
 			{labels.map((label, i) => (
@@ -114,11 +108,8 @@ function Tabs({
 					key={`${label}-${i}`}
 					type='button'
 					onClick={() => onSwitch(i)}
-					className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-						i === active
-							? activeClass
-							: 'bg-zinc-800 border border-zinc-700/60 text-zinc-300 hover:border-zinc-500/60 hover:text-zinc-100'
-					}`}
+					aria-pressed={i === active}
+					className={`sla-tap sla-tab ${level === 'primary' ? 'sla-tab-primary' : ''} px-4 py-2 text-sm font-semibold`}
 				>
 					{label}
 				</button>
@@ -143,7 +134,7 @@ function BossCard({ boss }: { boss: BossConfig }) {
 					}}
 				/>
 				<div className='flex-1 min-w-0'>
-					<p className='text-[10px] text-zinc-500 uppercase tracking-wider'>Boss</p>
+					<p className='text-label text-zinc-500 uppercase tracking-wider'>Boss</p>
 					<p className='text-sm font-semibold text-zinc-100 truncate'>{boss.name}</p>
 				</div>
 			</div>
@@ -152,11 +143,9 @@ function BossCard({ boss }: { boss: BossConfig }) {
 				<div className='flex border-t border-zinc-700/40'>
 					{hasWeaknesses && (
 						<div
-							className={`flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40 ${hasResistances ? 'border-r border-zinc-700/40' : ''}`}
+							className={`flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-weak-bg ${hasResistances ? 'border-r border-zinc-700/40' : ''}`}
 						>
-							<span className='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>
-								Faiblesses
-							</span>
+							<span className='text-meta font-bold text-weak uppercase tracking-widest'>Faiblesses</span>
 							<div className='flex gap-2 flex-wrap justify-center'>
 								{boss.weaknesses.map((el) =>
 									ELEMENT_ICON[el] ? (
@@ -166,7 +155,7 @@ function BossCard({ boss }: { boss: BossConfig }) {
 												alt={el}
 												className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
 											/>
-											<span className='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
+											<span className='text-label text-weak font-medium'>{el}</span>
 										</div>
 									) : null,
 								)}
@@ -174,8 +163,8 @@ function BossCard({ boss }: { boss: BossConfig }) {
 						</div>
 					)}
 					{hasResistances && (
-						<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-red-950/40'>
-							<span className='text-[11px] font-bold text-red-400 uppercase tracking-widest'>
+						<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-resist-bg'>
+							<span className='text-meta font-bold text-resist uppercase tracking-widest'>
 								Résistances
 							</span>
 							<div className='flex gap-2 flex-wrap justify-center'>
@@ -187,7 +176,7 @@ function BossCard({ boss }: { boss: BossConfig }) {
 												alt={el}
 												className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(248,113,113,0.5)]'
 											/>
-											<span className='text-[9px] text-red-300/80 font-medium'>{el}</span>
+											<span className='text-label text-resist font-medium'>{el}</span>
 										</div>
 									) : null,
 								)}
@@ -359,6 +348,8 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 
 	const teamLabels = teamGroups.map((g) => g.team)
 
+	const teamKey = `${raidName}-${activeSectionIdx}-${activeFloorIdx}-${activeBlessingIdx}-${viewType}-${activeTeamIdx}`
+
 	// ── Render ────────────────────────────────────────────────────────────────
 
 	return (
@@ -381,9 +372,9 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 				</div>
 			</div>
 
-			<main style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+			<div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
 				{/* Section tabs */}
-				<Tabs labels={sectionLabels} active={activeSectionIdx} onSwitch={switchSection} color='orange' />
+				<Tabs labels={sectionLabels} active={activeSectionIdx} onSwitch={switchSection} level='primary' />
 
 				{isComingSoon ? (
 					<div className='flex flex-col items-center gap-5 py-8'>
@@ -404,21 +395,19 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 								labels={floorLabels}
 								active={viewType === 'floor' ? activeFloorIdx : -1}
 								onSwitch={switchFloor}
-								color='zinc'
 							/>
 						)}
 
 						{/* Blessing tabs */}
 						{blessingLabels.length > 0 && (
 							<div className='space-y-2'>
-								<p className='text-[11px] font-bold text-amber-400/80 uppercase tracking-widest'>
+								<p className='text-meta font-bold text-amber-400/80 uppercase tracking-widest'>
 									Bénédictions
 								</p>
 								<Tabs
 									labels={blessingLabels}
 									active={viewType === 'blessing' ? activeBlessingIdx : -1}
 									onSwitch={switchBlessing}
-									color='amber'
 								/>
 							</div>
 						)}
@@ -427,9 +416,7 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 						{floor?.bosses && <BossCard boss={floor.bosses} />}
 
 						{/* Team selector (Primaire / Secondaire) */}
-						{hasMultipleTeams && (
-							<Tabs labels={teamLabels} active={activeTeamIdx} onSwitch={switchTeam} color='amber' />
-						)}
+						{hasMultipleTeams && <Tabs labels={teamLabels} active={activeTeamIdx} onSwitch={switchTeam} />}
 
 						{/* Jinwoo */}
 						{isWithJinwoo && (
@@ -445,10 +432,13 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 								<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>
 									Chasseurs
 								</p>
-								<div className='grid grid-cols-3 gap-4'>
+								<div
+									key={teamKey}
+									className='sla-team-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'
+								>
 									{(floor.hunters[activeTeamIdx] ?? floor.hunters[0]).hunters.map((_, i) => (
 										<HunterSlot
-											key={`${activeSectionIdx}-${activeFloorIdx}-${activeBlessingIdx}-${viewType}-${activeTeamIdx}-${i}`}
+											key={i}
 											slot={i + 1}
 											selected={selectedHunters[i] ?? null}
 											hunters={availableHunters(i)}
@@ -468,10 +458,13 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 									<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>
 										Ombres
 									</p>
-									<div className='grid grid-cols-3 gap-4'>
+									<div
+										key={teamKey}
+										className='sla-team-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'
+									>
 										{selectedShadows.map((_, i) => (
 											<ShadowSlot
-												key={`${activeSectionIdx}-${activeFloorIdx}-${activeBlessingIdx}-${viewType}-${activeTeamIdx}-${i}`}
+												key={i}
 												slot={i + 1}
 												selected={selectedShadows[i] ?? null}
 												shadows={availableShadows(i)}
@@ -484,7 +477,7 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 						)}
 					</>
 				)}
-			</main>
+			</div>
 		</div>
 	)
 }

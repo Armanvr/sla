@@ -12,6 +12,12 @@
 	--sla-elem-light: #facc15; /* amber-yellow */
 	--sla-elem-wind: #10b981; /* emerald */
 
+	/* Weakness / resistance (game meaning: green = weak/recommended, red = resists) */
+	--sla-weak: #34d399;
+	--sla-weak-bg: rgba(52, 211, 153, 0.08);
+	--sla-resist: #f87171;
+	--sla-resist-bg: rgba(248, 113, 113, 0.08);
+
 	--sla-rarity-ssr: #f59e0b;
 	--sla-rarity-sr: #a855f7;
 	--sla-rarity-r: #3b82f6;
@@ -71,7 +77,7 @@
 	color: var(--sla-elem-wind);
 }
 .sla-elem-badge-ember {
-	color: var(--sla-ember);
+	color: var(--sla-mana-bright);
 }
 
 /* Element panel tint (subtle gradient overlay on cards) */
@@ -140,7 +146,7 @@
 	text-transform: uppercase;
 }
 .sla-nav-logo-accent {
-	color: var(--sla-ember);
+	color: var(--sla-mana-bright);
 }
 .sla-nav-link {
 	font-family: var(--sla-font-hud);
@@ -150,16 +156,20 @@
 	color: var(--sla-text-secondary);
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 6px 12px;
+	padding: 6px 12px 6px 10px;
 	border: 1px solid transparent;
-	transition: all var(--sla-duration-base);
+	border-left-width: 3px;
+	transition:
+		color var(--sla-duration-base) var(--sla-ease-out),
+		background-color var(--sla-duration-base) var(--sla-ease-out),
+		border-color var(--sla-duration-base) var(--sla-ease-out);
 }
 .sla-nav-link:hover {
-	color: var(--sla-ember);
+	color: var(--sla-mana-bright);
 }
 .sla-nav-link.active {
-	color: var(--sla-ember);
-	border-left: 3px solid var(--sla-ember);
+	color: var(--sla-mana-bright);
+	border-left-color: var(--sla-ember);
 	background: rgba(97, 55, 255, 0.08);
 }
 .sla-nav-clock {
@@ -167,6 +177,7 @@
 	font-size: var(--sla-text-xs);
 	color: var(--sla-text-secondary);
 	letter-spacing: var(--sla-ls-wider);
+	font-variant-numeric: tabular-nums;
 }
 .sla-status-dot {
 	width: 8px;
@@ -186,7 +197,7 @@
 	font-size: var(--sla-text-sm);
 	font-weight: 700;
 	letter-spacing: var(--sla-ls-wider);
-	color: var(--sla-ember);
+	color: var(--sla-mana-bright);
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 6px 0;
@@ -196,7 +207,7 @@
 	transition: color var(--sla-duration-base);
 }
 .sla-back-link:hover {
-	color: var(--sla-ember-glow);
+	color: var(--sla-mana-soft);
 }
 
 /* Section title block (combo .sla-tag + .sla-title-section + divider) */
@@ -237,9 +248,95 @@
 /* Glow on hover for clickable panels */
 .sla-clickable {
 	cursor: pointer;
-	transition: all var(--sla-duration-base);
+	transition:
+		box-shadow var(--sla-duration-base) var(--sla-ease-out),
+		transform var(--sla-duration-fast) var(--sla-ease-out);
 }
-.sla-clickable:hover {
-	transform: translateY(-2px);
-	box-shadow: var(--sla-glow-md);
+@media (hover: hover) {
+	.sla-clickable:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--sla-glow-md);
+	}
+}
+
+/* Skip link: first focusable element, visible only on keyboard focus */
+.sla-skip-link {
+	position: fixed;
+	top: var(--sla-space-2);
+	left: var(--sla-space-2);
+	z-index: calc(var(--sla-z-nav) + 1);
+	padding: var(--sla-space-2) var(--sla-space-4);
+	background: var(--sla-mana);
+	color: var(--sla-text-primary);
+	font-family: var(--sla-font-hud);
+	font-size: var(--sla-text-sm);
+	font-weight: 700;
+	letter-spacing: var(--sla-ls-wider);
+	text-transform: uppercase;
+	transform: translateY(-200%);
+}
+.sla-skip-link:focus {
+	transform: none;
+}
+
+/*
+ * Tabs & toggles — one shared selection role.
+ * Selected state is [aria-pressed='true'] (also the a11y cue).
+ * Primary = mana fill (main choice on a page); default = mana outline + wash (sub-choice).
+ * Plain CSS (unlayered) beats Tailwind utilities: don't set color/border/bg utilities on these.
+ */
+.sla-tab {
+	background: var(--sla-bg-container);
+	border: var(--sla-border-width) solid var(--sla-border-bright);
+	color: var(--sla-text-secondary);
+	font-family: var(--sla-font-hud);
+	letter-spacing: var(--sla-ls-normal);
+	cursor: pointer;
+	clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
+	transition:
+		color var(--sla-duration-fast) var(--sla-ease-out),
+		background-color var(--sla-duration-fast) var(--sla-ease-out),
+		border-color var(--sla-duration-fast) var(--sla-ease-out);
+}
+.sla-tab:hover {
+	border-color: var(--sla-mana-dim);
+	color: var(--sla-text-primary);
+}
+/* Weekly element signals (unselected only) */
+.sla-tab-weak {
+	border-color: color-mix(in srgb, var(--sla-weak) 50%, transparent);
+	color: var(--sla-text-primary);
+}
+.sla-tab-weak:hover {
+	border-color: var(--sla-weak);
+}
+.sla-tab-resist {
+	border-color: color-mix(in srgb, var(--sla-resist) 40%, transparent);
+}
+.sla-tab-resist:hover {
+	border-color: var(--sla-resist);
+}
+.sla-tab-danger:hover {
+	border-color: color-mix(in srgb, var(--sla-danger) 50%, transparent);
+	color: var(--sla-danger);
+}
+/* Selected, secondary (must stay after the hover rules) */
+.sla-tab[aria-pressed='true'] {
+	background-image: linear-gradient(rgba(97, 55, 255, 0.12), rgba(97, 55, 255, 0.12));
+	border-color: var(--sla-mana);
+	color: var(--sla-mana-bright);
+}
+/* Selected, primary (border comes from the rule above) */
+.sla-tab-primary[aria-pressed='true'] {
+	background: var(--sla-mana);
+	color: #ffffff;
+}
+
+/* Selectable card (Monarch / Successor pickers) */
+.sla-select-card:hover {
+	border-color: var(--sla-mana-dim);
+}
+.sla-select-card[aria-pressed='true'] {
+	border-color: var(--sla-mana);
+	box-shadow: var(--sla-glow-sm);
 }

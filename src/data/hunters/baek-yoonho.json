@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 37,
 	"species": "Human",
-	"image": "/assets/hunters/Baek_Yoonho.png",
-	"icon": "/assets/hunters/_icons/Baek_Yoonho_Icon.png",
+	"image": "/assets/hunters/Baek_Yoonho.webp",
+	"icon": "/assets/hunters/_icons/Baek_Yoonho_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

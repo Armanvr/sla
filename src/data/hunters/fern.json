@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": null,
 	"species": "Human",
-	"image": "/assets/hunters/Fern.png",
-	"icon": "/assets/hunters/_icons/Fern_Icon.png",
+	"image": "/assets/hunters/Fern.webp",
+	"icon": "/assets/hunters/_icons/Fern_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

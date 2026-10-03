@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 19,
 	"species": "Human",
-	"image": "/assets/hunters/Sung_Jinah.png",
-	"icon": "/assets/hunters/_icons/Sung_Jinah_Icon.png",
+	"image": "/assets/hunters/Sung_Jinah.webp",
+	"icon": "/assets/hunters/_icons/Sung_Jinah_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

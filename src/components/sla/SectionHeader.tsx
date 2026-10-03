@@ -5,17 +5,19 @@ export function SectionHeader({
 	title,
 	description,
 	right,
+	as: Heading = 'h2',
 }: {
 	tag?: string
 	title: string
 	description?: string
 	right?: ComponentChildren
+	as?: 'h1' | 'h2'
 }) {
 	return (
-		<div className='sla-section-head sla-anim-in'>
+		<div className={`sla-section-head${Heading === 'h1' ? ' sla-anim-in' : ''}`}>
 			<div className='sla-section-head-row'>
 				{tag && <span className='sla-tag'>{tag}</span>}
-				<h2 className='sla-title-section'>{title}</h2>
+				<Heading className='sla-title-section'>{title}</Heading>
 				{right && <div style={{ marginLeft: 'auto' }}>{right}</div>}
 			</div>
 			{description && (
@@ -24,6 +26,7 @@ export function SectionHeader({
 						color: 'var(--sla-text-secondary)',
 						fontFamily: 'var(--sla-font-body)',
 						fontSize: 'var(--sla-text-base)',
+						maxWidth: '70ch',
 						margin: 0,
 						letterSpacing: 'var(--sla-ls-tight)',
 					}}

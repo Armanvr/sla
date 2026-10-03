@@ -8,7 +8,7 @@ function ElementBadge({ element }: { element: { name: string; primary: boolean }
 			className={`${color} px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider ${element.primary ? 'ring-2 ring-white/30' : ''}`}
 		>
 			{element.name}
-			{element.primary && <span className='ml-1 text-[10px] opacity-70'>★</span>}
+			{element.primary && <span className='ml-1 text-label opacity-70'>★</span>}
 		</span>
 	)
 }
@@ -38,7 +38,7 @@ export function StatBar({
 		<div>
 			<div className='flex justify-between text-sm mb-1'>
 				<span className={`${primary ? 'text-amber-400' : 'text-zinc-400'}`}>{label}</span>
-				<span className='text-zinc-200 font-mono'>{value.toLocaleString()}</span>
+				<span className='text-zinc-200 font-hud tabular-nums'>{value.toLocaleString()}</span>
 			</div>
 			<div className='h-1.5 bg-zinc-700 rounded-full overflow-hidden'>
 				<div
@@ -70,7 +70,7 @@ export function HeroSection({ data }: { data: HunterData }) {
 							className='w-12 h-12 rounded-lg border border-zinc-700/50 object-contain flex-shrink-0'
 						/>
 						<div>
-							<p className='text-[10px] text-zinc-500 uppercase tracking-widest mb-0.5'>Weapon</p>
+							<p className='text-label text-zinc-500 uppercase tracking-widest mb-0.5'>Weapon</p>
 							<p className='text-sm text-zinc-200 font-medium leading-tight'>{data.weapon.name}</p>
 						</div>
 					</div>

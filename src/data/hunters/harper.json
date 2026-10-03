@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 16,
 	"species": "Human",
-	"image": "/assets/hunters/Harper.png",
-	"icon": "/assets/hunters/_icons/Harper_Icon.png",
+	"image": "/assets/hunters/Harper.webp",
+	"icon": "/assets/hunters/_icons/Harper_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

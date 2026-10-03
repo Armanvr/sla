@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 205,
 	"species": "Demon",
-	"image": "/assets/hunters/Esil_Radiru.png",
-	"icon": "/assets/hunters/_icons/Esil_Radiru_Icon.png",
+	"image": "/assets/hunters/Esil_Radiru.webp",
+	"icon": "/assets/hunters/_icons/Esil_Radiru_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

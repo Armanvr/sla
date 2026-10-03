@@ -1,11 +1,3 @@
-export const elementTabActive: Record<string, string> = {
-	Dark: 'bg-mist-600 text-white',
-	Water: 'bg-mist-600 text-white',
-	Fire: 'bg-mist-600 text-white',
-	Light: 'bg-mist-600 text-white',
-	Wind: 'bg-mist-600 text-white',
-}
-
 const elementIcon: Record<string, string> = {
 	Dark: '/assets/utils/Dark_Element.png',
 	Water: '/assets/utils/Water_Element.png',
@@ -44,21 +36,16 @@ export function ElementTabs({
 						key={team.element}
 						type='button'
 						onClick={() => onSwitch(team.element)}
-						className={`relative flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
-							isActive
-								? (elementTabActive[team.element] ?? 'bg-zinc-600 text-white')
-								: isWeak
-									? 'bg-zinc-800 border border-emerald-500/50 text-zinc-200 hover:border-emerald-400/70 hover:text-zinc-100'
-									: isResistant
-										? 'bg-zinc-800 border border-red-500/40 text-zinc-400 hover:border-red-400/60 hover:text-zinc-300'
-										: 'bg-zinc-800 border border-zinc-700/60 text-zinc-300 hover:border-zinc-500/60 hover:text-zinc-100'
+						aria-pressed={isActive}
+						className={`sla-tap sla-tab sla-tab-primary relative flex items-center gap-2 px-4 py-2 text-sm font-semibold ${
+							isActive ? '' : isWeak ? 'sla-tab-weak' : isResistant ? 'sla-tab-resist' : ''
 						}`}
 					>
 						{isWeak && !isActive && (
-							<span className='absolute -top-1.5 -right-1.5 w-3 h-3 rounded-full bg-emerald-500 border border-zinc-900' />
+							<span className='absolute top-0.5 left-0.5 w-3 h-3 rounded-full bg-weak border border-zinc-900' />
 						)}
 						{isResistant && !isActive && (
-							<span className='absolute -top-1.5 -right-1.5 w-3 h-3 rounded-full bg-red-500 border border-zinc-900' />
+							<span className='absolute top-0.5 left-0.5 w-3 h-3 rounded-full bg-resist border border-zinc-900' />
 						)}
 						{elementIcon[team.element] ? (
 							<img
@@ -70,10 +57,20 @@ export function ElementTabs({
 							<span className='w-2 h-2 rounded-full flex-shrink-0 bg-zinc-400' />
 						)}
 						{team.element}
-						{isRandom && <span className='text-[10px] text-zinc-500 font-normal ml-1'>★ aléatoire</span>}
-						{isWeak && <span className='text-[10px] text-emerald-400 font-normal ml-1'>★ recommandé</span>}
+						{isRandom && (
+							<span className={`text-label font-normal ml-1 ${isActive ? '' : 'text-zinc-500'}`}>
+								★ aléatoire
+							</span>
+						)}
+						{isWeak && (
+							<span className={`text-label font-normal ml-1 ${isActive ? '' : 'text-weak'}`}>
+								★ recommandé
+							</span>
+						)}
 						{isResistant && (
-							<span className='text-[10px] text-red-400/80 font-normal ml-1'>✗ résistance</span>
+							<span className={`text-label font-normal ml-1 ${isActive ? '' : 'text-resist'}`}>
+								✗ résistance
+							</span>
 						)}
 					</button>
 				)

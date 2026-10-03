@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 28,
 	"species": "Human",
-	"image": "/assets/hunters/MIYEON.png",
-	"icon": "/assets/hunters/_icons/MIYEON_Icon.png",
+	"image": "/assets/hunters/MIYEON.webp",
+	"icon": "/assets/hunters/_icons/MIYEON_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

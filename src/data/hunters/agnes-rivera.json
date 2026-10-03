@@ -1,0 +1,154 @@
+{
+	"name": "Agnes Rivera",
+	"category": "Elemental Buster",
+	"alias": null,
+	"title": "Agnes Rivera",
+	"rarity": "SSR",
+	"rank": "S-Rank",
+	"element": "Dark",
+	"class": "Elemental Buster",
+	"country": "Italy",
+	"guild": "Rivera Guild",
+	"mainAbility": "Body Enchantment / Black Mist",
+	"exclusiveWeapon": "La Famiglia",
+	"releaseDate": "2026-07-02",
+	"newHunter": true,
+	"occupation": ["Hunter"],
+	"affiliation": ["Rivera Guild"],
+	"gender": "Female",
+	"age": 30,
+	"species": "Human",
+	"image": "/assets/hunters/Agnes_Rivera.webp",
+	"icon": "/assets/hunters/_icons/Agnes_Rivera_Icon.webp",
+	"stats": [
+		{
+			"key": "strength",
+			"label": "Strength",
+			"description": "Attack"
+		},
+		{
+			"key": "vitality",
+			"label": "Vitality",
+			"description": "Defense and HP"
+		},
+		{
+			"key": "agility",
+			"label": "Agility",
+			"description": "Critical Hit Rate and Critical Hit Damage"
+		},
+		{
+			"key": "intelligence",
+			"label": "Intelligence",
+			"description": "Additional MP and Cooldown Reduction"
+		},
+		{
+			"key": "perception",
+			"label": "Perception",
+			"description": "Precision"
+		}
+	],
+	"baseStats": {
+		"level1": {
+			"hp": 1675,
+			"attack": 784,
+			"defense": 774,
+			"totalPower": 3980
+		},
+		"maxLevel": {
+			"hp": 14947,
+			"attack": 6436,
+			"defense": 6357,
+			"totalPower": 55669
+		},
+		"primaryStat": "Attack"
+	},
+	"elements": [
+		{
+			"name": "Dark",
+			"primary": true
+		}
+	],
+	"passive": {
+		"name": "Overheat",
+		"description": "Each time Furia or Furia Ancora hits, they activate 1 [Overheat] stack (stacks up to 100 times). When [Overheat] stacks 50 times or more, Furia transforms into Furia Ancora, increasing its damage by 100%. When [Overheat] stacks 100 times, Furia transforms into Furia Troppo, increasing its damage by 200%; using this skill removes [Overheat] and resets the cooldown of Furia. When Comunione or Commissione hits, they activate [Bersaglio]. When Furia or Furia Ancora remain active for a certain period after being used, or when using a Basic Attack while they are active, they activate [Finishing Shot]. [Finishing Shot] deals Dark elemental damage equal to 20% of Furia and Furia Ancora's damage and resets the cooldown of Furia and Furia Ancora when it hits; counts as a Basic Skill. [Bersaglio] increases Dark damage taken from Agnes Rivera by 20% and decreases Attack by 10%, for 15s.",
+		"icon": null
+	},
+	"advancements": [
+		"Each time Furia hits, it now activates 2 [Overheat] stacks instead of 1. When Vendetta hits, it inflicts 1 [Infestation] stack on the target. When a Basic Attack hits, reduces the cooldown of Furia and Furia Ancora by 2s. Core Attack activates after using Furia Troppo. Each time Furia, Furia Ancora, Furia Troppo, or Finishing Shot hits a target affected by [Bersaglio], Agnes gains the [Caligine] effect. [Caligine] increases Furia/Furia Ancora/Furia Troppo/Finishing Shot damage by 0.5% and Dark Overload damage by 0.5%, for 60s (stacks up to 50 times). [Infestation] deals damage equal to 100% of Attack every 3s, for 30s (stacks up to 10 times).",
+		"Increases Attack by 20%. Using Furia Troppo activates the [Estasi] effect. [Estasi] increases Comunione damage by 100% and Burst damage by 5%, for 10s.",
+		"Enhances the [Caligine] effect. Attacking a target affected by [Infestation] increases damage dealt by 10% per [Infestation] instance. When [Bersaglio] activates on a target affected by [Infestation], [Bersaglio Intensivo] activates instead. Each time Furia, Furia Ancora, Furia Troppo, or Finishing Shot hits a target affected by [Bersaglio Intensivo], Agnes gains the [Caligine] effect and recovers HP equal to 0.2% of her Attack. [Bersaglio Intensivo] increases Dark damage taken from Agnes Rivera by 60% and decreases Attack by 20%; removes and replaces [Bersaglio], for 25s. [Caligine] now also increases Critical Hit Rate by 0.3%, in addition to increasing Furia/Furia Ancora/Furia Troppo/Finishing Shot damage by 0.75% and Dark Overload damage by 0.75%, for 60s (stacks up to 50 times).",
+		"For every Dark ally in the party, Agnes Rivera's Dark damage increases by 20%.",
+		"The [Caligine] and [Estasi] effects are enhanced. Each time Furia Ancora hits, it now activates 2 [Overheat] stacks. Using Furia Troppo reduces the cooldown of Vendetta by 10s. Using Commissione activates 50 [Overheat] stacks. [Caligine] now increases Furia/Furia Ancora/Furia Troppo/Finishing Shot damage by 2%, Dark Overload damage by 1%, Critical Hit Rate by 0.6%, and Defense Penetration by 0.8%, for 60s (stacks up to 50 times). [Estasi] now increases Comunione damage by 200%, Vendetta damage by 50%, and Burst damage by 7.5%, for 10s (stacks up to 2 times)."
+	],
+	"builds": [
+		{
+			"name": "Build Guild / Calamity",
+			"armor": ["surturs-flame", "surturs-flame", "surturs-flame", "surturs-flame"],
+			"jewelry": ["surturs-flame", "surturs-flame", "surturs-flame", "surturs-flame"]
+		},
+		{
+			"name": "Build Hunter / Sung",
+			"armor": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			],
+			"jewelry": [
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison",
+				"architects-blue-poison"
+			]
+		}
+	],
+	"coreBuild": {
+		"mind": "ancient-wraiths-obession",
+		"body": "arrogant-rulers-will",
+		"spirit": "nameless-demons-magisphere"
+	},
+	"equipmentStats": {
+		"head": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"chest": {
+			"main": "Additional Defense",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Rate", "Defense Penetration"]
+		},
+		"gloves": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Defense Penetration"]
+		},
+		"boots": {
+			"main": "Critical Hit Damage",
+			"secondary": ["Attack (%)", "Critical Hit Rate", "Damage Increase", "Additional Attack"]
+		},
+		"necklace": {
+			"main": "Additional HP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		},
+		"ring": {
+			"main": "Additional Attack",
+			"secondary": ["Attack (%)", "Critical Hit Damage", "Damage Increase", "Defense Penetration"]
+		},
+		"bracelet": {
+			"main": "Dark Damage (%)",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Defense Penetration"]
+		},
+		"earrings": {
+			"main": "Additional MP",
+			"secondary": ["Attack (%)", "Additional Attack", "Critical Hit Damage", "Damage Increase"]
+		}
+	},
+	"coreStats": {
+		"mind": ["Additional Attack", "Critical Hit Damage"],
+		"body": ["Additional Defense", "Critical Hit Damage"],
+		"spirit": ["Additional HP", "Defense Penetration"]
+	},
+	"weapon": {
+		"name": "La Famiglia",
+		"icon": null
+	},
+	"recommendedStats": []
+}

@@ -69,14 +69,14 @@ function ActiveBossBanner({ boss }: { boss: BossEntry }) {
 					}}
 				/>
 				<div>
-					<p className='text-[10px] text-zinc-500 uppercase tracking-wider'>Boss actif</p>
+					<p className='text-label text-zinc-500 uppercase tracking-wider'>Boss actif</p>
 					<p className='text-sm font-semibold text-zinc-100'>{boss.name}</p>
 				</div>
 			</div>
 
 			{boss.weakness.length > 0 && (
-				<div className='flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40'>
-					<span className='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>Faiblesses</span>
+				<div className='flex flex-col items-center gap-2 px-4 py-3 bg-weak-bg'>
+					<span className='text-meta font-bold text-weak uppercase tracking-widest'>Faiblesses</span>
 					<div className='flex gap-3 flex-wrap justify-center'>
 						{boss.weakness.map((el) =>
 							ELEMENT_ICON[el] ? (
@@ -86,7 +86,7 @@ function ActiveBossBanner({ boss }: { boss: BossEntry }) {
 										alt={el}
 										className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
 									/>
-									<span className='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
+									<span className='text-label text-weak font-medium'>{el}</span>
 								</div>
 							) : null,
 						)}
@@ -200,6 +200,8 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 	const availableHunters = (i: number) =>
 		otherHunters.filter((h) => h.id !== slots[i]?.hunter?.id && !takenIds.has(h.id))
 
+	const teamKey = `${activeElement}-${activeConfigIndex}`
+
 	// ── Render ────────────────────────────────────────────────────────────────
 
 	return (
@@ -209,11 +211,12 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 				<SectionHeader
 					tag='// TEAM GUIDE'
 					title='Guild Boss'
+					as='h1'
 					description='Composition optimale pour le boss actif.'
 				/>
 			</div>
 
-			<main style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+			<div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
 				<section>
 					<SectionHeader
 						tag='// SECTION 01'
@@ -264,7 +267,7 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 						title='Composition'
 						description='Six chasseurs recommandés pour ce boss.'
 					/>
-					<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+					<div key={teamKey} className='sla-team-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
 						{slots.map((s, i) => (
 							<HunterSlot
 								key={i}
@@ -295,7 +298,7 @@ export function TeamGuideGuildBoss({ hunters }: { hunters: Hunter[] }) {
 						onSuccessorChange={setSelectedSuccessor}
 					/>
 				</section>
-			</main>
+			</div>
 		</div>
 	)
 }

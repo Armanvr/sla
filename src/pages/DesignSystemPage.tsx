@@ -117,7 +117,7 @@ function SwatchCard({ s }: { s: Swatch }) {
 					style={{
 						fontFamily: 'var(--sla-font-mono)',
 						fontSize: 'var(--sla-text-xs)',
-						color: 'var(--sla-ember)',
+						color: 'var(--sla-mana-bright)',
 						marginTop: 2,
 					}}
 				>
@@ -139,7 +139,7 @@ function Code({ children }: { children: string }) {
 function Block({ title, children, code }: { title: string; children: preact.ComponentChildren; code: string }) {
 	return (
 		<div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-			<div className='sla-label' style={{ color: 'var(--sla-ember)' }}>{`// ${title}`}</div>
+			<div className='sla-label' style={{ color: 'var(--sla-mana-bright)' }}>{`// ${title}`}</div>
 			<Panel style={{ padding: 24 }}>
 				<div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center' }}>{children}</div>
 			</Panel>
@@ -220,7 +220,7 @@ function TypographySection() {
 							style={{
 								margin: 0,
 								fontFamily: 'var(--sla-font-mono)',
-								color: 'var(--sla-ember)',
+								color: 'var(--sla-mana-bright)',
 								fontSize: 'var(--sla-text-base)',
 								letterSpacing: 'var(--sla-ls-wide)',
 							}}
@@ -241,7 +241,7 @@ function ButtonsSection() {
 			<div
 				style={{
 					display: 'grid',
-					gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+					gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
 					gap: 24,
 					marginBottom: 64,
 				}}
@@ -272,7 +272,7 @@ function TagsSection() {
 			<div
 				style={{
 					display: 'grid',
-					gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+					gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
 					gap: 24,
 					marginBottom: 64,
 				}}
@@ -324,7 +324,7 @@ function PanelsSection() {
 			<div
 				style={{
 					display: 'grid',
-					gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+					gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
 					gap: 24,
 					marginBottom: 64,
 				}}
@@ -362,6 +362,8 @@ function PanelsSection() {
 	)
 }
 
+const pctStyle: JSX.CSSProperties = { fontFamily: 'var(--sla-font-mono)', color: 'var(--sla-mana-bright)' }
+
 function ReadoutsSection() {
 	return (
 		<>
@@ -371,7 +373,7 @@ function ReadoutsSection() {
 			<div
 				style={{
 					display: 'grid',
-					gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+					gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
 					gap: 16,
 					marginBottom: 24,
 				}}
@@ -385,21 +387,21 @@ function ReadoutsSection() {
 					<div>
 						<div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
 							<Label>HP</Label>
-							<span style={{ fontFamily: 'var(--sla-font-mono)', color: 'var(--sla-ember)' }}>72%</span>
+							<span style={pctStyle}>72%</span>
 						</div>
 						<Progress value={72} />
 					</div>
 					<div>
 						<div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
 							<Label>Power Gauge</Label>
-							<span style={{ fontFamily: 'var(--sla-font-mono)', color: 'var(--sla-ember)' }}>45%</span>
+							<span style={pctStyle}>45%</span>
 						</div>
 						<Progress value={45} />
 					</div>
 					<div>
 						<div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
 							<Label>Skill Cooldown</Label>
-							<span style={{ fontFamily: 'var(--sla-font-mono)', color: 'var(--sla-ember)' }}>92%</span>
+							<span style={pctStyle}>92%</span>
 						</div>
 						<Progress value={92} />
 					</div>
@@ -456,7 +458,7 @@ function AnimationsSection() {
 			<div
 				style={{
 					display: 'grid',
-					gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+					gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))',
 					gap: 16,
 					marginBottom: 32,
 				}}
@@ -479,7 +481,7 @@ function AnimationsSection() {
 					<div className='sla-label' style={{ marginBottom: 8 }}>
 						sla-anim-in
 					</div>
-					<div className='sla-anim-in' style={{ color: 'var(--sla-ember)' }}>
+					<div className='sla-anim-in' style={{ color: 'var(--sla-mana-bright)' }}>
 						fade in
 					</div>
 				</Panel>
@@ -580,7 +582,7 @@ export function DesignSystemPage() {
 			<p
 				style={{
 					textAlign: 'center',
-					color: 'var(--sla-text-dim)',
+					color: 'var(--sla-text-muted)',
 					fontFamily: 'var(--sla-font-mono)',
 					fontSize: 'var(--sla-text-xs)',
 					letterSpacing: 'var(--sla-ls-wider)',

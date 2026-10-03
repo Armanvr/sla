@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 38,
 	"species": "Human",
-	"image": "/assets/hunters/Choi_Jong-In.png",
-	"icon": "/assets/hunters/_icons/Choi_Jong-In_Icon.png",
+	"image": "/assets/hunters/Choi_Jong-In.webp",
+	"icon": "/assets/hunters/_icons/Choi_Jong-In_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

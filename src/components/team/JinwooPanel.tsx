@@ -20,15 +20,19 @@ export function JinwooPanel({
 			<div className='flex items-center gap-3'>
 				<img
 					src={jinwooData.image}
+					loading='lazy'
+					decoding='async'
+					width={40}
+					height={40}
 					alt={jinwooData.name}
 					className='w-10 h-10 rounded-lg object-cover bg-zinc-700/40'
 				/>
 				<div className='flex items-center gap-2'>
 					<span className='text-sm font-bold text-zinc-100'>{jinwooData.name}</span>
-					<span className='text-[10px] font-bold text-amber-400 bg-amber-400/10 border border-amber-400/20 rounded px-1.5 py-0.5'>
+					<span className='text-label font-bold text-amber-400 bg-amber-400/10 border border-amber-400/20 rounded px-1.5 py-0.5'>
 						{jinwooData.rarity}
 					</span>
-					<span className='text-[10px] text-zinc-500'>{(jinwooData as HunterData).title}</span>
+					<span className='text-label text-zinc-500'>{(jinwooData as HunterData).title}</span>
 				</div>
 			</div>
 
@@ -49,7 +53,7 @@ export function JinwooPanel({
 			</div>
 
 			{/* ── Équipements + Cores ── */}
-			<div className='grid grid-cols-2 gap-6'>
+			<div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
 				<div>
 					<RowLabel>Équipements</RowLabel>
 					<EquipmentSection

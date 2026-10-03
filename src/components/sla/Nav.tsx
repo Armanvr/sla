@@ -4,11 +4,13 @@ import { useLocation } from 'preact-iso'
 interface NavLink {
 	href: string
 	label: string
+	/** Hidden below 768px (bottom tab bar covers the player routes). */
+	desktopOnly?: boolean
 }
 
 const LINKS: NavLink[] = [
 	{ href: '/', label: 'Home' },
-	{ href: '/design-system', label: 'Design' },
+	{ href: '/design-system', label: 'Design', desktopOnly: true },
 ]
 
 function useClock() {
@@ -30,13 +32,17 @@ export function Nav() {
 				SLA <span className='sla-nav-logo-accent'>{'// ARISE'}</span>
 			</a>
 			<span className='sla-tag' style={{ marginLeft: 4 }}>
-				v4.0.0
+				v5.0.0
 			</span>
 			<nav style={{ display: 'flex', gap: 4, marginLeft: 16 }}>
 				{LINKS.map((l) => {
 					const active = url === l.href || (l.href !== '/' && url.startsWith(l.href))
 					return (
-						<a key={l.href} href={l.href} className={`sla-nav-link ${active ? 'active' : ''}`}>
+						<a
+							key={l.href}
+							href={l.href}
+							className={`sla-nav-link ${l.desktopOnly ? 'sla-nav-link-desktop' : ''} ${active ? 'active' : ''}`}
+						>
 							{l.label}
 						</a>
 					)
@@ -45,7 +51,9 @@ export function Nav() {
 			<div className='sla-nav-status'>
 				<span className='sla-status-dot' />
 				<span className='sla-label'>Online</span>
-				<span className='sla-nav-clock'>{time}</span>
+				<span className='sla-nav-clock' aria-hidden='true'>
+					{time}
+				</span>
 			</div>
 		</header>
 	)

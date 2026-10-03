@@ -24,14 +24,14 @@ function Hero() {
 			<p
 				style={{
 					color: 'var(--sla-text-secondary)',
-					maxWidth: 720,
+					maxWidth: '65ch',
 					margin: '20px auto 0',
 					fontFamily: 'var(--sla-font-body)',
 					fontSize: 'var(--sla-text-md)',
 				}}
 			>
 				Codex tactique des chasseurs, ombres, builds et compositions d'équipe. Mis à jour le{' '}
-				<span className='sla-text-ember'>7 mai 2026</span>.
+				<span className='sla-text-ember'>2 juillet 2026</span>.
 			</p>
 		</section>
 	)
@@ -72,6 +72,8 @@ function FeatureCard({
 				<img
 					src={imgSrc}
 					alt={title}
+					loading='lazy'
+					decoding='async'
 					style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
 					onError={(e) => {
 						;(e.target as HTMLImageElement).style.display = 'none'
@@ -136,7 +138,7 @@ function FeatureCard({
 						fontFamily: 'var(--sla-font-mono)',
 						fontSize: 'var(--sla-text-xs)',
 						letterSpacing: 'var(--sla-ls-wider)',
-						color: 'var(--sla-ember)',
+						color: 'var(--sla-mana-bright)',
 						textTransform: 'uppercase',
 					}}
 				>
@@ -159,10 +161,10 @@ export function HomePage({ hunters }: { hunters: HunterCard[] }) {
 			<Ticker
 				label='// LIVE FEED"'
 				items={[
-					'PATCH 2.0.0 // Refonte design Emberfall',
+					'PATCH 5.0.0 // Agnes Rivera rejoint le codex',
 					`HUNTERS INDEXED // ${hunters.length}`,
-					'NEW HUNTER // Antoine Martinez',
-					'NEW HUNTER // Elena Renault',
+					'NEW HUNTER // Agnes Rivera',
+					'NEW HUNTER // Liu Zhigang',
 					'STATUS // Online',
 					'WORKSHOP // 6 raids actifs',
 				]}
@@ -190,42 +192,42 @@ export function HomePage({ hunters }: { hunters: HunterCard[] }) {
 					</div>
 
 					<div className='sla-home-grid'>
-						<div style={{ gridColumn: 'span 2' }}>
+						<div className='sla-span-2'>
 							<FeatureCard
 								tag='// SYSTÈME 01'
 								title='Hunter Guides'
 								description='Stats, compétences et builds recommandés pour chaque chasseur indexé dans le réseau.'
 								href='/hunters'
 								fallbackGradient='linear-gradient(135deg, #0d0d1a 0%, #1a0f3a 50%, #2e009c 100%)'
-								imgSrc='/assets/sections/hunters.png'
+								imgSrc='/assets/sections/hunters.webp'
 							/>
 						</div>
-						<div style={{ gridColumn: 'span 1' }}>
+						<div>
 							<FeatureCard
 								tag='// SYSTÈME 02'
 								title='Power & Destruction'
 								description="Compositions d'équipe optimisées pour le contenu Power & Destruction."
 								href='/team/power-destruction'
-								imgSrc='/assets/sections/power-of-destruction.png'
+								imgSrc='/assets/sections/power-of-destruction.webp'
 							/>
 						</div>
-						<div style={{ gridColumn: 'span 1' }}>
+						<div>
 							<FeatureCard
 								tag='// SYSTÈME 03'
 								title='Guild Boss'
 								description='Stratégies et rotations pour éliminer les boss de guilde efficacement.'
 								href='/team/guild-boss'
-								imgSrc='/assets/sections/guild-boss.png'
+								imgSrc='/assets/sections/guild-boss.webp'
 							/>
 						</div>
-						<div style={{ gridColumn: 'span 2' }}>
+						<div className='sla-span-2'>
 							<FeatureCard
 								tag='// SYSTÈME 04'
 								title='Workshop Guides'
 								description="Guides de raid pour chaque donjon de l'atelier, floors et compositions."
 								href='/workshops'
-								fallbackGradient='linear-gradient(135deg, #1a0800 0%, #3d1400 50%, #6b2200 100%)'
-								imgSrc='/assets/sections/workshop.png'
+								fallbackGradient='linear-gradient(135deg, #0d0d1a 0%, #1a0f3a 50%, #24104d 100%)'
+								imgSrc='/assets/sections/workshop.webp'
 							/>
 						</div>
 					</div>

@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 25,
 	"species": "Human",
-	"image": "/assets/hunters/Yoo_Soohyun.png",
-	"icon": "/assets/hunters/_icons/Yoo_Soohyun_Icon.png",
+	"image": "/assets/hunters/Yoo_Soohyun.webp",
+	"icon": "/assets/hunters/_icons/Yoo_Soohyun_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

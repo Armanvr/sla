@@ -6,8 +6,6 @@
  * ═══════════════════════════════════════════════════════════════
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap");
-
 /* ── COULEURS ────────────────────────────────────────────────── */
 :root {
 	/* Surfaces */
@@ -62,14 +60,14 @@
 	--sla-font-body: "Inter", sans-serif;
 
 	/* Tailles */
-	--sla-text-xs: 9px;
-	--sla-text-sm: 11px;
+	--sla-text-xs: 10px;
+	--sla-text-sm: 12px;
 	--sla-text-base: 14px;
 	--sla-text-md: 16px;
 	--sla-text-lg: 20px;
 	--sla-text-xl: 28px;
 	--sla-text-2xl: 40px;
-	--sla-text-hero: clamp(52px, 8vw, 110px);
+	--sla-text-hero: clamp(52px, 8vw, 96px);
 
 	/* Espacements lettres courants */
 	--sla-ls-tight: 0.02em;
@@ -119,6 +117,7 @@
 	--sla-duration-base: 200ms;
 	--sla-duration-slow: 400ms;
 	--sla-ease-default: ease;
+	--sla-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
 	/* ── Z-INDEX ─────────────────────────────────────────────── */
 
@@ -267,7 +266,12 @@
 	text-decoration: none;
 	cursor: pointer;
 	border: none;
-	transition: all var(--sla-duration-base);
+	transition:
+		background-color var(--sla-duration-base) var(--sla-ease-out),
+		color var(--sla-duration-base) var(--sla-ease-out),
+		border-color var(--sla-duration-base) var(--sla-ease-out),
+		box-shadow var(--sla-duration-base) var(--sla-ease-out),
+		transform var(--sla-duration-fast) var(--sla-ease-out);
 	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
 }
 .sla-btn-primary {
@@ -276,19 +280,28 @@
 }
 .sla-btn-primary:hover {
 	background: var(--sla-ember-glow);
-	box-shadow: var(--sla-glow-lg);
-	transform: translateY(-1px);
+	color: #000000;
+}
+@media (hover: hover) {
+	.sla-btn-primary:hover {
+		box-shadow: var(--sla-glow-lg);
+		transform: translateY(-1px);
+	}
 }
 .sla-btn-ghost {
 	background: transparent;
-	color: var(--sla-ember);
+	color: var(--sla-mana-bright);
 	border: var(--sla-border-width) solid var(--sla-ember-dim);
 }
 .sla-btn-ghost:hover {
 	background: rgba(97, 55, 255, 0.08);
 	border-color: var(--sla-ember);
-	box-shadow: var(--sla-glow-md);
-	transform: translateY(-1px);
+}
+@media (hover: hover) {
+	.sla-btn-ghost:hover {
+		box-shadow: var(--sla-glow-md);
+		transform: translateY(-1px);
+	}
 }
 
 /* ── TYPOGRAPHY ──────────────────────────────────────────────── */
@@ -299,6 +312,7 @@
 	line-height: 0.9;
 	letter-spacing: -0.02em;
 	text-transform: uppercase;
+	text-wrap: balance;
 	color: var(--sla-text-primary);
 }
 .sla-title-section {
@@ -307,20 +321,21 @@
 	font-weight: 700;
 	letter-spacing: var(--sla-ls-normal);
 	text-transform: uppercase;
+	text-wrap: balance;
 	color: var(--sla-text-primary);
 }
 .sla-label {
 	font-family: var(--sla-font-mono);
 	font-size: var(--sla-text-xs);
 	letter-spacing: var(--sla-ls-wider);
-	color: var(--sla-text-dim);
+	color: var(--sla-text-muted);
 	text-transform: uppercase;
 }
 .sla-tag {
 	font-family: var(--sla-font-mono);
 	font-size: var(--sla-text-xs);
 	letter-spacing: var(--sla-ls-wide);
-	color: var(--sla-ember);
+	color: var(--sla-mana-bright);
 	text-transform: uppercase;
 	border: var(--sla-border-width) solid var(--sla-ember-dim);
 	padding: 4px 12px;
@@ -346,10 +361,10 @@
 	clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%);
 }
 .sla-badge-active {
-	color: var(--sla-ember);
+	color: var(--sla-mana-bright);
 }
 .sla-badge-pending {
-	color: var(--sla-text-dim);
+	color: var(--sla-text-muted);
 }
 .sla-badge-critical {
 	color: var(--sla-crimson);
@@ -367,12 +382,21 @@
 	overflow: hidden;
 }
 .sla-progress-fill {
+	width: 100%;
 	height: 100%;
 	background: linear-gradient(90deg, var(--sla-ember-dim), var(--sla-ember));
 	position: relative;
-	transition: width 0.6s ease;
+	transform-origin: left;
+	transition: transform 0.6s ease;
 }
-.sla-progress-fill::after {
+/* Translate a full-track sibling so the tip keeps its width and blur as the fill scales. */
+.sla-progress-tip {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	transition: transform 0.6s ease;
+}
+.sla-progress-tip::after {
 	content: "";
 	position: absolute;
 	right: 0;
@@ -395,7 +419,7 @@
 	font-family: var(--sla-font-mono);
 	font-size: var(--sla-text-xs);
 	letter-spacing: var(--sla-ls-wider);
-	color: var(--sla-text-dim);
+	color: var(--sla-text-muted);
 	text-transform: uppercase;
 	margin-bottom: 4px;
 }
@@ -405,6 +429,7 @@
 	font-weight: 700;
 	color: var(--sla-text-primary);
 	letter-spacing: var(--sla-ls-normal);
+	font-variant-numeric: tabular-nums;
 }
 
 /* ── DIVIDER ─────────────────────────────────────────────────── */
@@ -523,6 +548,14 @@
 		transform: translateY(0);
 	}
 }
+@keyframes sla-fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 @keyframes sla-ticker-scroll {
 	from {
 		transform: translateX(0);
@@ -560,4 +593,169 @@
 }
 .sla-anim-in-4 {
 	animation: sla-hud-in 0.6s 0.4s ease both;
+}
+
+/* Slot motion stays on the frame, a sibling of the popup: a transformed
+   ancestor would trap the mobile fixed sheet and its scrim. */
+.sla-team-grid > .sla-team-slot > :first-child {
+	--sla-slot-enter: sla-slot-in;
+	--sla-slot-delay: calc(min(var(--i, 0), 5) * 40ms);
+	animation: var(--sla-slot-enter) calc(var(--sla-duration-base) + 20ms) var(--sla-ease-out) var(--sla-slot-delay)
+		both;
+}
+
+.sla-pick-flash {
+	--sla-flash-animation: sla-pick-flash;
+	animation: var(--sla-flash-animation) var(--sla-duration-slow) var(--sla-ease-out);
+}
+
+.sla-hunter-slot.sla-pick-flash {
+	--sla-flash-animation: sla-pick-flash-inset;
+}
+
+/* Keep the entrance in the list so picking never restarts it. */
+.sla-team-grid > .sla-team-slot > .sla-pick-flash {
+	animation:
+		var(--sla-slot-enter) calc(var(--sla-duration-base) + 20ms) var(--sla-ease-out) var(--sla-slot-delay) both,
+		var(--sla-flash-animation) var(--sla-duration-slow) var(--sla-ease-out);
+}
+
+@media (min-width: 768px) {
+	.sla-listbox {
+		animation: sla-picker-open calc(var(--sla-duration-fast) + 10ms) var(--sla-ease-out) both;
+	}
+}
+
+@keyframes sla-picker-open {
+	from {
+		clip-path: inset(0 0 100% 0);
+		opacity: 0;
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+		opacity: 1;
+	}
+}
+
+@keyframes sla-slot-in {
+	from {
+		opacity: 0;
+		transform: translateY(6px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes sla-picker-sheet-in {
+	from {
+		opacity: 0;
+		transform: translateY(16px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes sla-motion-fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes sla-pick-flash {
+	from {
+		box-shadow:
+			0 0 0 1px var(--sla-mana),
+			0 0 18px rgba(97, 55, 255, 0.45);
+	}
+	to {
+		box-shadow: none;
+	}
+}
+
+@keyframes sla-pick-flash-inset {
+	from {
+		box-shadow:
+			inset 0 0 0 1px var(--sla-mana),
+			inset 0 0 18px rgba(97, 55, 255, 0.45);
+	}
+	to {
+		box-shadow: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sla-listbox {
+		animation-name: sla-motion-fade-in;
+	}
+	.sla-team-grid > .sla-team-slot > :first-child {
+		--sla-slot-enter: sla-motion-fade-in;
+		--sla-slot-delay: 0ms;
+	}
+	/* Pick flashes only animate box-shadow, so their glow stays unchanged. */
+
+	.sla-sweep-line {
+		animation: none;
+		display: none;
+	}
+	.sla-text-ember {
+		animation: none;
+		text-shadow:
+			0 0 20px rgba(97, 55, 255, 0.5),
+			0 0 40px rgba(97, 55, 255, 0.25);
+	}
+	.sla-ticker {
+		height: auto;
+		min-height: 36px;
+		padding: 6px 0;
+	}
+	.sla-ticker-content {
+		animation: none;
+		transform: none;
+		flex-wrap: wrap;
+		white-space: normal;
+		row-gap: 4px;
+		column-gap: 32px;
+		/* Clear the longer home-page label, including its tracking and 40px padding. */
+		padding-left: 160px;
+		min-width: 0;
+	}
+	.sla-ticker-dup {
+		display: none;
+	}
+	/* :root keeps these overrides ahead of sla-elements.css in the cascade. */
+	:root .sla-status-dot,
+	.sla-badge-critical,
+	.sla-progress-tip::after {
+		animation: none;
+	}
+	.sla-anim-in,
+	.sla-anim-in-1,
+	.sla-anim-in-2,
+	.sla-anim-in-3,
+	.sla-anim-in-4 {
+		animation-name: sla-fade-in;
+	}
+	.sla-progress-fill,
+	.sla-progress-tip {
+		transition: none;
+	}
+	.sla-btn {
+		transition-property: background-color, color, border-color, box-shadow;
+	}
+	:root .sla-clickable {
+		transition-property: box-shadow;
+	}
+	:root .sla-btn:hover,
+	:root .sla-clickable:hover,
+	:root .sla-nav-link:hover,
+	:root .sla-back-link:hover {
+		transform: none;
+	}
 }

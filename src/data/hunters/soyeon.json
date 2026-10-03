@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 27,
 	"species": "Human",
-	"image": "/assets/hunters/SOYEON.png",
-	"icon": "/assets/hunters/_icons/SOYEON_Icon.png",
+	"image": "/assets/hunters/SOYEON.webp",
+	"icon": "/assets/hunters/_icons/SOYEON_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

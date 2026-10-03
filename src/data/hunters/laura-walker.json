@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 28,
 	"species": "Human",
-	"image": "/assets/hunters/Laura_Walker.png",
-	"icon": "/assets/hunters/_icons/Laura_Walker_Icon.png",
+	"image": "/assets/hunters/Laura_Walker.webp",
+	"icon": "/assets/hunters/_icons/Laura_Walker_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

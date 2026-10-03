@@ -32,7 +32,7 @@ export function AdvancementEffectsTable({ hunters }: Props) {
 
 	return (
 		<div className='mt-6'>
-			<p className='text-xs font-mono text-zinc-400 uppercase tracking-widest mb-2'>
+			<p className='text-xs font-hud text-zinc-400 uppercase tracking-widest mb-2'>
 				Cumul des effets d'advancements
 			</p>
 			<div className='overflow-x-auto rounded-lg border border-zinc-700/50'>
@@ -51,7 +51,7 @@ export function AdvancementEffectsTable({ hunters }: Props) {
 								<td className='px-4 py-2 text-right'>
 									{e.total !== null && e.rawValues.length > 0 ? (
 										<span
-											className={`inline-block px-2 py-0.5 rounded text-xs font-mono ${BADGE_CLASSES[e.direction]}`}
+											className={`inline-block px-2 py-0.5 rounded text-xs font-hud tabular-nums ${BADGE_CLASSES[e.direction]}`}
 										>
 											{e.rawValues[0]?.includes('%')
 												? `${e.total.toFixed(1)}%`

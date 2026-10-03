@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 87,
 	"species": "Human",
-	"image": "/assets/hunters/Go_Gunhee.png",
-	"icon": "/assets/hunters/_icons/Go_Gunhee_Icon.png",
+	"image": "/assets/hunters/Go_Gunhee.webp",
+	"icon": "/assets/hunters/_icons/Go_Gunhee_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

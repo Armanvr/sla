@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 35,
 	"species": "Human",
-	"image": "/assets/hunters/Liu_Zhigang.png",
-	"icon": "/assets/hunters/_icons/Liu_Zhigang_Icon.png",
+	"image": "/assets/hunters/Liu_Zhigang.webp",
+	"icon": "/assets/hunters/_icons/Liu_Zhigang_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",
@@ -82,7 +82,12 @@
 	],
 	"builds": [
 		{
-			"name": "Build Attack",
+			"name": "Build Guild / Calamity",
+			"armor": ["surturs-flame", "surturs-flame", "surturs-flame", "surturs-flame"],
+			"jewelry": ["surturs-flame", "surturs-flame", "surturs-flame", "surturs-flame"]
+		},
+		{
+			"name": "Build  Hunter / Sung",
 			"armor": [
 				"architects-blue-poison",
 				"architects-blue-poison",

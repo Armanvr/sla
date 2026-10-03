@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 37,
 	"species": "Human",
-	"image": "/assets/hunters/Silver_Mane_Baek_Yoonho.png",
-	"icon": "/assets/hunters/_icons/Silver_Mane_Baek_Yoonho_Icon.png",
+	"image": "/assets/hunters/Silver_Mane_Baek_Yoonho.webp",
+	"icon": "/assets/hunters/_icons/Silver_Mane_Baek_Yoonho_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

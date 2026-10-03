@@ -4,12 +4,12 @@ import type { HunterData } from './HunterProfile'
 const spotlightCardStyle: JSX.CSSProperties = {
 	display: 'flex',
 	flex: '1 1 340px',
-	minWidth: 280,
+	minWidth: 'min(280px, 100%)',
 	maxWidth: 520,
 	textDecoration: 'none',
-	background: 'linear-gradient(135deg, #1a0f3a 0%, #0d0d1a 40%, #1a0a00 100%)',
+	background: 'linear-gradient(135deg, #1a0f3a 0%, #0d0d1a 40%, #120a26 100%)',
 	border: '1px solid var(--sla-mana)',
-	boxShadow: '0 0 40px rgba(97, 55, 255, 0.5), 0 0 80px rgba(194, 94, 28, 0.15)',
+	boxShadow: '0 0 40px rgba(97, 55, 255, 0.5)',
 	overflow: 'hidden',
 	cursor: 'pointer',
 }
@@ -52,10 +52,8 @@ export function NewHunterSpotlight({ hunters }: { hunters: HunterEntry[] }) {
 						>
 							{/* Hunter image */}
 							<div
-								className={`sla-elem-tint-${slug}`}
+								className={`sla-spotlight-img sla-elem-tint-${slug}`}
 								style={{
-									width: 200,
-									minWidth: 200,
 									position: 'relative',
 									display: 'flex',
 									alignItems: 'center',
@@ -72,10 +70,12 @@ export function NewHunterSpotlight({ hunters }: { hunters: HunterEntry[] }) {
 								/>
 								<img
 									src={entry.data.icon ?? entry.data.image}
+									fetchpriority='high'
+									decoding='async'
+									width={220}
+									height={220}
 									alt={entry.data.name}
 									style={{
-										width: 220,
-										height: 220,
 										objectFit: 'contain',
 										filter: 'drop-shadow(0 0 20px rgba(97, 55, 255, 0.4))',
 									}}
@@ -84,9 +84,9 @@ export function NewHunterSpotlight({ hunters }: { hunters: HunterEntry[] }) {
 
 							{/* Info */}
 							<div
+								className='sla-spotlight-info'
 								style={{
 									flex: 1,
-									padding: '24px 32px',
 									display: 'flex',
 									flexDirection: 'column',
 									justifyContent: 'center',

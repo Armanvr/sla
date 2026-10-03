@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 28,
 	"species": "Human",
-	"image": "/assets/hunters/Son_Kihoon.png",
-	"icon": "/assets/hunters/_icons/Son_Kihoon_Icon.png",
+	"image": "/assets/hunters/Son_Kihoon.webp",
+	"icon": "/assets/hunters/_icons/Son_Kihoon_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

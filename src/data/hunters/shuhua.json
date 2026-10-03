@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 25,
 	"species": "Human",
-	"image": "/assets/hunters/SHUHUA.png",
-	"icon": "/assets/hunters/_icons/SHUHUA_Icon.png",
+	"image": "/assets/hunters/SHUHUA.webp",
+	"icon": "/assets/hunters/_icons/SHUHUA_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

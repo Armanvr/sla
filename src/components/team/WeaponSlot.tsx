@@ -1,4 +1,6 @@
 import { useState } from 'preact/hooks'
+import { EmptyOption, Listbox, optionProps, useListbox } from '../sla/Listbox'
+import { useFlashOnChange } from '../sla/useFlashOnChange'
 import type { WeaponData } from './types'
 import { WEAPONS } from './weapons'
 
@@ -13,6 +15,11 @@ export function WeaponSlot({
 	onSelect: (w: WeaponData | null) => void
 	weapons?: WeaponData[]
 }) {
+	const flash = useFlashOnChange(selected?.name ?? null)
+	const select = (next: WeaponData | null) => {
+		flash.markChange(next?.name ?? null)
+		onSelect(next)
+	}
 	const [open, setOpen] = useState(false)
 	const [search, setSearch] = useState('')
 
@@ -24,98 +31,123 @@ export function WeaponSlot({
 		? weapons.filter((w) => w.name.toLowerCase().includes(search.toLowerCase()))
 		: weapons
 
+	// Touch: autofocusing the search raises the keyboard over the bottom sheet. Evaluated on each render while open.
+	const autofocusSearch = !matchMedia('(pointer: coarse)').matches
+	const toggle = () => (open ? close() : setOpen(true))
+	const lb = useListbox({
+		open,
+		onToggle: toggle,
+		onClose: close,
+		label: `Arme ${slot}`,
+		value: selected?.name ?? 'vide',
+	})
+
 	return (
 		<div className='relative'>
-			{open && <button type='button' className='fixed inset-0 z-40' onClick={close} aria-label='Fermer' />}
-
-			<button
-				type='button'
-				onClick={() => setOpen((p) => !p)}
-				className={`sla-weapon-slot w-full flex items-center gap-3 bg-zinc-800/50 border rounded-xl px-3 py-2 transition-colors ${open ? 'border-amber-500/60' : 'border-amber-900/40 hover:border-amber-600/50'}`}
-			>
-				{selected ? (
-					<>
-						<img
-							src={selected.icon}
-							alt={selected.name}
-							className='w-10 h-10 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
-							onError={(e) => {
-								;(e.target as HTMLImageElement).style.display = 'none'
-							}}
-						/>
-						<p className='flex-1 text-sm font-medium text-zinc-100 text-left truncate leading-tight'>
-							{selected.name}
-						</p>
-						<button
-							type='button'
-							onClick={(e) => {
-								e.stopPropagation()
-								onSelect(null)
-							}}
-							className='text-zinc-600 hover:text-red-400 transition-colors text-lg leading-none flex-shrink-0'
-							aria-label='Retirer cette arme'
-						>
-							×
-						</button>
-					</>
-				) : (
-					<>
-						<div className='w-10 h-10 rounded-lg bg-amber-900/10 border border-dashed border-amber-800/40 flex-shrink-0' />
-						<p className='text-xs text-zinc-500'>Arme {slot}</p>
-					</>
+			<div ref={flash.ref} className='relative'>
+				<button
+					type='button'
+					{...lb.triggerProps}
+					className={`sla-weapon-slot w-full flex items-center gap-3 bg-zinc-800/50 border rounded-xl py-2 transition-colors ${selected ? 'pl-3 pr-9' : 'px-3'} ${open ? 'border-amber-500/60' : 'border-amber-900/40 hover:border-amber-600/50'}`}
+				>
+					{selected ? (
+						<>
+							<img
+								src={selected.icon}
+								loading='lazy'
+								decoding='async'
+								width={40}
+								height={40}
+								alt={selected.name}
+								className='w-10 h-10 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
+								onError={(e) => {
+									;(e.target as HTMLImageElement).style.display = 'none'
+								}}
+							/>
+							<p className='flex-1 min-w-0 text-sm font-medium text-zinc-100 text-left truncate leading-tight'>
+								{selected.name}
+							</p>
+						</>
+					) : (
+						<>
+							<div className='w-10 h-10 rounded-lg bg-amber-900/10 border border-dashed border-amber-800/40 flex-shrink-0' />
+							<p className='text-xs text-zinc-500'>Arme {slot}</p>
+						</>
+					)}
+				</button>
+				{selected && (
+					<button
+						type='button'
+						onClick={() => {
+							select(null)
+							lb.focusTrigger()
+						}}
+						className='absolute right-[5px] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-zinc-600 hover:text-red-400 transition-colors text-lg leading-none'
+						aria-label='Retirer cette arme'
+					>
+						×
+					</button>
 				)}
-			</button>
+			</div>
 
 			{open && (
-				<div className='absolute z-50 top-full mt-1 left-0 w-64 bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl flex flex-col'>
-					<div className='p-2 border-b border-zinc-700/50'>
-						<input
-							type='text'
-							placeholder='Rechercher...'
-							value={search}
-							onInput={(e) => setSearch((e.target as HTMLInputElement).value)}
-							className='w-full bg-zinc-700/50 border border-zinc-600/50 rounded-lg px-2 py-1 text-xs text-zinc-200 placeholder-zinc-500 outline-none focus:border-amber-500/50'
-							onClick={(e) => e.stopPropagation()}
-						/>
-					</div>
-					<div className='max-h-64 overflow-y-auto'>
+				<Listbox
+					{...lb.popupProps}
+					className='absolute z-50 top-full mt-1 left-0 w-64 bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl flex flex-col'
+					listClassName='max-h-64 overflow-y-auto'
+					header={
+						<div className='p-2 border-b border-zinc-700/50'>
+							<input
+								type='text'
+								data-autofocus={autofocusSearch || undefined}
+								aria-label='Rechercher une arme'
+								placeholder='Rechercher...'
+								value={search}
+								onInput={(e) => setSearch((e.target as HTMLInputElement).value)}
+								className='w-full bg-zinc-700/50 border border-zinc-600/50 rounded-lg px-2 py-1 text-xs text-zinc-200 placeholder-zinc-500 focus:border-amber-500/50'
+							/>
+						</div>
+					}
+				>
+					<EmptyOption
+						selected={!selected}
+						onClick={() => {
+							select(null)
+							close()
+						}}
+					/>
+					{filtered.map((w) => (
 						<button
+							key={w.name}
 							type='button'
+							{...optionProps(selected?.name === w.name)}
 							onClick={() => {
-								onSelect(null)
+								select(w)
 								close()
 							}}
-							className='w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors'
+							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${selected?.name === w.name ? 'bg-amber-900/20' : ''}`}
 						>
-							<div className='w-8 h-8 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 flex-shrink-0'>
-								–
-							</div>
-							<span className='text-sm text-zinc-500'>— Vide —</span>
-						</button>
-						<div className='border-t border-zinc-700/50' />
-						{filtered.map((w) => (
-							<button
-								key={w.name}
-								type='button'
-								onClick={() => {
-									onSelect(w)
-									close()
+							<img
+								src={w.icon}
+								loading='lazy'
+								decoding='async'
+								width={32}
+								height={32}
+								alt=''
+								className='w-8 h-8 rounded-lg object-contain flex-shrink-0 bg-zinc-700/40'
+								onError={(e) => {
+									;(e.target as HTMLImageElement).style.display = 'none'
 								}}
-								className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${selected?.name === w.name ? 'bg-amber-900/20' : ''}`}
-							>
-								<img
-									src={w.icon}
-									alt={w.name}
-									className='w-8 h-8 rounded-lg object-contain flex-shrink-0 bg-zinc-700/40'
-									onError={(e) => {
-										;(e.target as HTMLImageElement).style.display = 'none'
-									}}
-								/>
-								<span className='text-sm text-zinc-200 truncate text-left'>{w.name}</span>
-							</button>
-						))}
-					</div>
-				</div>
+							/>
+							<span className='min-w-0 text-sm text-zinc-200 truncate text-left'>{w.name}</span>
+						</button>
+					))}
+					{filtered.length === 0 && (
+						<p role='none' className='px-3 py-2 text-xs text-zinc-500 italic'>
+							Aucune arme trouvée
+						</p>
+					)}
+				</Listbox>
 			)}
 		</div>
 	)

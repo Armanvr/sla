@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 38,
 	"species": "Human",
-	"image": "/assets/hunters/Christopher_Reed.png",
-	"icon": "/assets/hunters/_icons/Christopher_Reed_Icon.png",
+	"image": "/assets/hunters/Christopher_Reed.webp",
+	"icon": "/assets/hunters/_icons/Christopher_Reed_Icon.webp",
 	"stats": [],
 	"baseStats": {
 		"level1": {

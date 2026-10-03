@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 21,
 	"species": "Human",
-	"image": "/assets/hunters/Alicia_Blanche.png",
-	"icon": "/assets/hunters/_icons/Alicia_Blanche_Icon.png",
+	"image": "/assets/hunters/Alicia_Blanche.webp",
+	"icon": "/assets/hunters/_icons/Alicia_Blanche_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

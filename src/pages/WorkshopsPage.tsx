@@ -16,6 +16,10 @@ function WorkshopCard({ title, href, imgSrc }: { title: string; href: string; im
 			>
 				<img
 					src={imgSrc}
+					loading='lazy'
+					decoding='async'
+					width={168}
+					height={168}
 					alt={title}
 					style={{ width: 168, height: 168, objectFit: 'contain' }}
 					onError={(e) => {
@@ -43,7 +47,7 @@ function WorkshopCard({ title, href, imgSrc }: { title: string; href: string; im
 						fontFamily: 'var(--sla-font-mono)',
 						fontSize: 'var(--sla-text-xs)',
 						letterSpacing: 'var(--sla-ls-wider)',
-						color: 'var(--sla-ember)',
+						color: 'var(--sla-mana-bright)',
 						textTransform: 'uppercase',
 					}}
 				>
@@ -60,12 +64,13 @@ export function WorkshopsPage() {
 			<SectionHeader
 				tag='// SECTION // WORKSHOP'
 				title='Workshop Guides'
+				as='h1'
 				description="Compositions et stratégies optimisées pour chaque raid de l'atelier."
 			/>
 			<div
 				style={{
 					display: 'grid',
-					gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+					gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))',
 					gap: 16,
 				}}
 			>

@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 18,
 	"species": "Human",
-	"image": "/assets/hunters/Emma_Laurent.png",
-	"icon": "/assets/hunters/_icons/Emma_Laurent_Icon.png",
+	"image": "/assets/hunters/Emma_Laurent.webp",
+	"icon": "/assets/hunters/_icons/Emma_Laurent_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

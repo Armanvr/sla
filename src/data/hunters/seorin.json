@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 27,
 	"species": "Human",
-	"image": "/assets/hunters/Seorin.png",
-	"icon": "/assets/hunters/_icons/Seorin_Icon.png",
+	"image": "/assets/hunters/Seorin.webp",
+	"icon": "/assets/hunters/_icons/Seorin_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

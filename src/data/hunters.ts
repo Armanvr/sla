@@ -1,4 +1,5 @@
 import type { HunterData } from '../components/hunter/types'
+import agnesData from './hunters/agnes-rivera.json'
 import aliciaData from './hunters/alicia-blanche.json'
 import amamiyaData from './hunters/amamiya-mirei.json'
 import antoineData from './hunters/antoine-martinez.json'
@@ -56,6 +57,7 @@ export interface HunterEntry {
 
 export const hunters: HunterEntry[] = [
 	{ id: 'sung-jinwoo', data: jinwooData },
+	{ id: 'agnes-rivera', data: agnesData },
 	{ id: 'alicia-blanche', data: aliciaData },
 	{ id: 'amamiya-mirei', data: amamiyaData },
 	{ id: 'baek-yoonho', data: baekYoonhoData },

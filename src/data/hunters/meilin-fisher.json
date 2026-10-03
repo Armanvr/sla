@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 22,
 	"species": "Human",
-	"image": "/assets/hunters/Meilin_Fisher.png",
-	"icon": "/assets/hunters/_icons/Meilin_Fisher_Icon.png",
+	"image": "/assets/hunters/Meilin_Fisher.webp",
+	"icon": "/assets/hunters/_icons/Meilin_Fisher_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

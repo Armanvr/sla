@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 26,
 	"species": "Human",
-	"image": "/assets/hunters/YUQI.png",
-	"icon": "/assets/hunters/_icons/YUQI_Icon.png",
+	"image": "/assets/hunters/YUQI.webp",
+	"icon": "/assets/hunters/_icons/YUQI_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

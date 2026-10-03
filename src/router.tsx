@@ -7,6 +7,7 @@ import { Nav } from './components/sla/Nav'
 import { Panel } from './components/sla/Panel'
 import { SideNav } from './components/sla/SideNav'
 import { findHunter, hunters } from './data/hunters'
+import workshopConfig from './data/teams/workshop.json'
 import { ComparePage } from './pages/ComparePage'
 import { DesignSystemPage } from './pages/DesignSystemPage'
 import { HomePage } from './pages/HomePage'
@@ -41,7 +42,7 @@ function GuildBossRoute() {
 	return <TeamGuideGuildBoss hunters={hunters} />
 }
 function WorkshopRoute({ raid }: { raid?: string }) {
-	if (!raid) return <NotFound />
+	if (!raid || !workshopConfig.raids.some((r) => r.name === raid)) return <NotFound />
 	return <TeamGuideWorkshop hunters={hunters} raidName={raid} />
 }
 function CompareRoute() {
@@ -92,7 +93,7 @@ function Footer() {
 					fontFamily: 'var(--sla-font-mono)',
 					fontSize: 'var(--sla-text-xs)',
 					letterSpacing: 'var(--sla-ls-wider)',
-					color: 'var(--sla-text-dim)',
+					color: 'var(--sla-text-muted)',
 					textTransform: 'uppercase',
 				}}
 			>
@@ -106,6 +107,9 @@ export function AppRouter() {
 	return (
 		<LocationProvider>
 			<ScrollToTop />
+			<a href='#main' class='sla-skip-link'>
+				Aller au contenu
+			</a>
 			<Nav />
 			<div style={{ display: 'flex', minHeight: '100vh' }}>
 				<SideNav />
@@ -113,7 +117,7 @@ export function AppRouter() {
 					className='sla-main-content'
 					style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}
 				>
-					<main style={{ flex: 1 }}>
+					<main id='main' tabIndex={-1} style={{ flex: 1 }}>
 						<Router>
 							<Route path='/' component={HomeRoute} />
 							<Route path='/hunters' component={HuntersRoute} />

@@ -116,7 +116,7 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 		<div className='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
 			<div className='flex items-center justify-between px-4 py-3 border-b border-zinc-700/40'>
 				<div>
-					<p className='text-[10px] text-zinc-500 uppercase tracking-wider'>Rotation hebdomadaire</p>
+					<p className='text-label text-zinc-500 uppercase tracking-wider'>Rotation hebdomadaire</p>
 					<p className='text-sm font-semibold text-zinc-100'>
 						Semaine {week}
 						<span className='ml-2 text-xs font-normal text-zinc-400'>
@@ -128,10 +128,8 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 
 			{rotation ? (
 				<div className='flex'>
-					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-emerald-950/40 border-r border-zinc-700/40'>
-						<span className='text-[11px] font-bold text-emerald-400 uppercase tracking-widest'>
-							Faiblesses
-						</span>
+					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-weak-bg border-r border-zinc-700/40'>
+						<span className='text-meta font-bold text-weak uppercase tracking-widest'>Faiblesses</span>
 						<div className='flex gap-3 flex-wrap justify-center'>
 							{rotation.weakness.map((el) =>
 								ELEMENT_ICON[el] ? (
@@ -141,16 +139,14 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 											alt={el}
 											className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(52,211,153,0.5)]'
 										/>
-										<span className='text-[9px] text-emerald-300/80 font-medium'>{el}</span>
+										<span className='text-label text-weak font-medium'>{el}</span>
 									</div>
 								) : null,
 							)}
 						</div>
 					</div>
-					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-red-950/40'>
-						<span className='text-[11px] font-bold text-red-400 uppercase tracking-widest'>
-							Résistances
-						</span>
+					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-resist-bg'>
+						<span className='text-meta font-bold text-resist uppercase tracking-widest'>Résistances</span>
 						<div className='flex gap-3 flex-wrap justify-center'>
 							{rotation.resistance.map((el) =>
 								ELEMENT_RESISTANCE_ICON[el] ? (
@@ -160,7 +156,7 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 											alt={el}
 											className='w-9 h-9 object-contain drop-shadow-[0_0_6px_rgba(248,113,113,0.5)]'
 										/>
-										<span className='text-[9px] text-red-300/80 font-medium'>{el}</span>
+										<span className='text-label text-resist font-medium'>{el}</span>
 									</div>
 								) : null,
 							)}
@@ -338,6 +334,8 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 	const availableShadows = (i: 0 | 1 | 2) =>
 		SHADOWS.filter((s) => s.name !== selectedShadows[i]?.name && !takenShadowNames.has(s.name))
 
+	const teamKey = `${activeElement}-${activeConfigIndex}`
+
 	// ── Render ────────────────────────────────────────────────────────────────
 
 	return (
@@ -347,11 +345,12 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 				<SectionHeader
 					tag='// TEAM GUIDE'
 					title='Power & Destruction'
+					as='h1'
 					description='Composition par élément actif.'
 				/>
 			</div>
 
-			<main style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+			<div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
 				<section>
 					<SectionHeader
 						tag='// SECTION 01'
@@ -403,7 +402,7 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 						title='Chasseurs'
 						description='Trois chasseurs recommandés pour cet élément actif.'
 					/>
-					<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+					<div key={teamKey} className='sla-team-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<HunterSlot
 								key={i}
@@ -424,7 +423,7 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 						title='Ombres'
 						description="Ombres recommandées pour renforcer l'équipe."
 					/>
-					<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+					<div key={teamKey} className='sla-team-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
 						{([0, 1, 2] as const).map((i) => (
 							<ShadowSlot
 								key={i}
@@ -452,7 +451,7 @@ export function TeamGuidePowerDestruction({ hunters }: { hunters: Hunter[] }) {
 						onSuccessorChange={setSelectedSuccessor}
 					/>
 				</section>
-			</main>
+			</div>
 		</div>
 	)
 }

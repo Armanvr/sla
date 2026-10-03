@@ -19,6 +19,12 @@
   --color-spectral: #c3c3ee;
   --color-spectral-dim: #928ea3;
 
+  /* Weakness / resistance (game-coded) */
+  --color-weak: var(--sla-weak);
+  --color-resist: var(--sla-resist);
+  --color-weak-bg: var(--sla-weak-bg);
+  --color-resist-bg: var(--sla-resist-bg);
+
   /* Danger */
   --color-crimson: #ffb4ab;
   --color-danger-bg: #93000a;
@@ -45,6 +51,10 @@
   --font-hud: "Orbitron", monospace;
   --font-mono-sla: "Orbitron", monospace;
   --font-body-sla: "Inter", sans-serif;
+
+  /* Type ramp utilities: text-label (10px), text-meta (12px) */
+  --text-label: var(--sla-text-xs);
+  --text-meta: var(--sla-text-sm);
 }
 
 html,
@@ -87,18 +97,38 @@ body::before {
 	background: var(--sla-ember);
 }
 
+::selection {
+	background: var(--sla-mana);
+	color: var(--sla-text-primary);
+}
+
 #app {
 	min-height: 100vh;
 }
 
 a {
-	color: var(--sla-ember);
+	color: var(--sla-mana-bright);
 	text-decoration: none;
 }
 a:hover {
-	color: var(--sla-ember-glow);
+	color: var(--sla-mana-soft);
 }
 
 button {
 	font-family: inherit;
+}
+
+/* Keyboard focus ring (global). Cut-corner elements clip outside outlines, so draw theirs inside. */
+:focus-visible {
+	outline: 2px solid var(--sla-mana-bright);
+	outline-offset: 2px;
+}
+.sla-panel:focus-visible,
+.sla-btn:focus-visible,
+.sla-tag:focus-visible,
+.sla-tab:focus-visible,
+.sla-clickable:focus-visible,
+.sla-elem-badge:focus-visible,
+.sla-badge:focus-visible {
+	outline-offset: -3px;
 }

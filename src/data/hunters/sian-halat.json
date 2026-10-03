@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": null,
 	"species": "Human",
-	"image": "/assets/hunters/Sian_Halat.png",
-	"icon": "/assets/hunters/_icons/Sian_Halat_Icon.png",
+	"image": "/assets/hunters/Sian_Halat.webp",
+	"icon": "/assets/hunters/_icons/Sian_Halat_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

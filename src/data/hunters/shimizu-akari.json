@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 20,
 	"species": "Human",
-	"image": "/assets/hunters/Shimizu_Akari.png",
-	"icon": "/assets/hunters/_icons/Shimizu_Akari_Icon.png",
+	"image": "/assets/hunters/Shimizu_Akari.webp",
+	"icon": "/assets/hunters/_icons/Shimizu_Akari_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

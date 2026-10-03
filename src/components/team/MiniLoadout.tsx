@@ -7,6 +7,10 @@ function SlotRow({ icon, label, name }: { icon: string | null; label: string; na
 			{icon ? (
 				<img
 					src={icon}
+					loading='lazy'
+					decoding='async'
+					width={16}
+					height={16}
 					alt=''
 					className='w-4 h-4 rounded flex-shrink-0 bg-zinc-700/40 object-cover'
 					onError={(e) => {
@@ -16,8 +20,8 @@ function SlotRow({ icon, label, name }: { icon: string | null; label: string; na
 			) : (
 				<div className='w-4 h-4 rounded bg-zinc-700/30 flex-shrink-0' />
 			)}
-			<span className='text-[9px] text-zinc-600 flex-shrink-0 w-10 leading-none'>{label}</span>
-			<span className='text-[10px] text-zinc-400 truncate leading-none'>{name ?? '—'}</span>
+			<span className='text-label text-zinc-600 flex-shrink-0 w-10 leading-none'>{label}</span>
+			<span className='text-label text-zinc-400 truncate leading-none'>{name ?? '—'}</span>
 		</div>
 	)
 }
@@ -45,7 +49,7 @@ export function MiniLoadout({
 			{build && (
 				<>
 					<div className='space-y-0.5'>
-						<p className='text-[9px] text-zinc-600 uppercase tracking-widest mb-0.5'>Armure</p>
+						<p className='text-label text-zinc-600 uppercase tracking-widest mb-0.5'>Armure</p>
 						{armorSlots.map((s) => {
 							const set = build.armor[s.idx] ? SET_BY_ID.get(build.armor[s.idx]!) : null
 							return (
@@ -59,7 +63,7 @@ export function MiniLoadout({
 						})}
 					</div>
 					<div className='space-y-0.5'>
-						<p className='text-[9px] text-zinc-600 uppercase tracking-widest mb-0.5'>Bijoux</p>
+						<p className='text-label text-zinc-600 uppercase tracking-widest mb-0.5'>Bijoux</p>
 						{jewelrySlots.map((s) => {
 							const set = build.jewelry[s.idx] ? SET_BY_ID.get(build.jewelry[s.idx]!) : null
 							return (
@@ -76,7 +80,7 @@ export function MiniLoadout({
 			)}
 			{coreBuild && (
 				<div className='space-y-0.5'>
-					<p className='text-[9px] text-zinc-600 uppercase tracking-widest mb-0.5'>Cores</p>
+					<p className='text-label text-zinc-600 uppercase tracking-widest mb-0.5'>Cores</p>
 					{CORE_SLOTS_CONFIG.map(({ key, label }) => {
 						const core = coreBuild[key] ? CORE_BY_ID.get(coreBuild[key]!) : null
 						return <SlotRow key={key} icon={core?.icon ?? null} label={label} name={core?.name ?? null} />

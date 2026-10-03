@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 17,
 	"species": "Human",
-	"image": "/assets/hunters/Amamiya_Mirei.png",
-	"icon": "/assets/hunters/_icons/Amamiya_Mirei_Icon.png",
+	"image": "/assets/hunters/Amamiya_Mirei.webp",
+	"icon": "/assets/hunters/_icons/Amamiya_Mirei_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

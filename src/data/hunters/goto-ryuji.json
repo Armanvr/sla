@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 32,
 	"species": "Human",
-	"image": "/assets/hunters/Goto_Ryuji.png",
-	"icon": "/assets/hunters/_icons/Goto_Ryuji_Icon.png",
+	"image": "/assets/hunters/Goto_Ryuji.webp",
+	"icon": "/assets/hunters/_icons/Goto_Ryuji_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

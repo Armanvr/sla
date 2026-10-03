@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 48,
 	"species": "Human",
-	"image": "/assets/hunters/Antoine_Martinez.png",
-	"icon": "/assets/hunters/_icons/Antoine_Martinez_Icon.png",
+	"image": "/assets/hunters/Antoine_Martinez.webp",
+	"icon": "/assets/hunters/_icons/Antoine_Martinez_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

@@ -22,3 +22,6 @@ docs/
 TODO.md
 *.txt
 .DS_Store
+
+# ── IA tools ──────────────────────────────────────────────────────────────────
+graphify-out/cache/

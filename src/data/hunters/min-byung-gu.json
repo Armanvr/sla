@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 28,
 	"species": "Human",
-	"image": "/assets/hunters/Min_Byung-Gu.png",
-	"icon": "/assets/hunters/_icons/Min_Byung-Gu_Icon.png",
+	"image": "/assets/hunters/Min_Byung-Gu.webp",
+	"icon": "/assets/hunters/_icons/Min_Byung-Gu_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

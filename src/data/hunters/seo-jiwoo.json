@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 23,
 	"species": "Human",
-	"image": "/assets/hunters/Seo_Jiwoo.png",
-	"icon": "/assets/hunters/_icons/Seo_Jiwoo_Icon.png",
+	"image": "/assets/hunters/Seo_Jiwoo.webp",
+	"icon": "/assets/hunters/_icons/Seo_Jiwoo_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 23,
 	"species": "Human",
-	"image": "/assets/hunters/Cha_Hae-In_the_Pure_Sword_Princess.png",
-	"icon": "/assets/hunters/_icons/Cha_Hae-In,_the_Pure_Sword_Princess_Icon.png",
+	"image": "/assets/hunters/Cha_Hae-In_the_Pure_Sword_Princess.webp",
+	"icon": "/assets/hunters/_icons/Cha_Hae-In,_the_Pure_Sword_Princess_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

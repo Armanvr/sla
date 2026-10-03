@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
+## [5.0.0] — 2026-07-05
+
+### Added
+- **Agnes Rivera** — nouvelle fiche hunter complète (SSR, S-Rank, Dark, Elemental Buster, arme exclusive « La Famiglia », release 2026-07-02), données issues du wiki officiel ; configs équipements & cores basées sur celles de Liu Zhigang ; visible dans le listing, le spotlight « New Hunter » et sur `/hunter/agnes-rivera`
+
+### Changed
+- **Live Feed** — bandeau mis à jour : patch 5.0.0, nouveaux hunters Agnes Rivera et Liu Zhigang
+- **HomePage** — date de mise à jour alignée sur la release d'Agnes Rivera (2 juillet 2026)
+- **Version** — passage en 5.0.0 (header + package.json)
+
 ## [4.2.0] — 2026-07-01
 
 ### Added

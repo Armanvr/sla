@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 28,
 	"species": "Human",
-	"image": "/assets/hunters/MINNIE.png",
-	"icon": "/assets/hunters/_icons/MINNIE_Icon.png",
+	"image": "/assets/hunters/MINNIE.webp",
+	"icon": "/assets/hunters/_icons/MINNIE_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

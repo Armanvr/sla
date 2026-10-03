@@ -1,0 +1,486 @@
+{
+	"schemaVersion": 2,
+	"generatedAt": "2026-10-03T13:30:00Z",
+	"title": "Design System: SLA — Arise Emberfall",
+	"extensions": {
+		"colorMeta": {
+			"mana": {
+				"role": "primary",
+				"displayName": "Mana Violet",
+				"canonical": "#6137ff",
+				"tonalRamp": [
+					"#2e009c",
+					"#4400d9",
+					"#6137ff",
+					"#7d5cff",
+					"#9b84ff",
+					"#c9bfff",
+					"#e3dcff",
+					"#f3f0ff"
+				]
+			},
+			"mana-dim": {
+				"role": "primary",
+				"displayName": "Mana Dim",
+				"canonical": "#4400d9"
+			},
+			"mana-bright": {
+				"role": "primary",
+				"displayName": "Mana Bright",
+				"canonical": "#c9bfff"
+			},
+			"mana-deep": {
+				"role": "primary",
+				"displayName": "Mana Deep",
+				"canonical": "#2e009c"
+			},
+			"mana-soft": {
+				"role": "primary",
+				"displayName": "Mana Soft",
+				"canonical": "#e3dcff"
+			},
+			"spectral": {
+				"role": "secondary",
+				"displayName": "Spectral Lavender",
+				"canonical": "#c3c3ee",
+				"tonalRamp": [
+					"oklch(18% 0.04 285)",
+					"oklch(28% 0.05 285)",
+					"oklch(40% 0.06 285)",
+					"oklch(52% 0.06 285)",
+					"oklch(64% 0.06 285)",
+					"oklch(76% 0.06 285)",
+					"oklch(84% 0.06 285)",
+					"oklch(94% 0.03 285)"
+				]
+			},
+			"spectral-dim": {
+				"role": "secondary",
+				"displayName": "Spectral Dim",
+				"canonical": "#928ea3"
+			},
+			"danger": {
+				"role": "tertiary",
+				"displayName": "Critical Coral",
+				"canonical": "#ffb4ab"
+			},
+			"danger-bg": {
+				"role": "tertiary",
+				"displayName": "Critical Blood",
+				"canonical": "#93000a"
+			},
+			"success": {
+				"role": "tertiary",
+				"displayName": "System Green",
+				"canonical": "#3a8a4a"
+			},
+			"void": {
+				"role": "neutral",
+				"displayName": "Void",
+				"canonical": "#000000",
+				"tonalRamp": [
+					"#000000",
+					"#131313",
+					"#161616",
+					"#1c1b1b",
+					"#201f1f",
+					"#2a2a2a",
+					"#353534",
+					"#484456"
+				]
+			},
+			"base": {
+				"role": "neutral",
+				"displayName": "Base",
+				"canonical": "#131313"
+			},
+			"surface": {
+				"role": "neutral",
+				"displayName": "Surface",
+				"canonical": "#161616"
+			},
+			"container": {
+				"role": "neutral",
+				"displayName": "Container",
+				"canonical": "#1c1b1b"
+			},
+			"container-2": {
+				"role": "neutral",
+				"displayName": "Container 2",
+				"canonical": "#201f1f"
+			},
+			"container-3": {
+				"role": "neutral",
+				"displayName": "Container 3",
+				"canonical": "#2a2a2a"
+			},
+			"elevated": {
+				"role": "neutral",
+				"displayName": "Elevated",
+				"canonical": "#353534"
+			},
+			"sidenav-ink": {
+				"role": "neutral",
+				"displayName": "Sidenav Ink",
+				"canonical": "#0d0d1a"
+			},
+			"text-primary": {
+				"role": "neutral",
+				"displayName": "Text Primary",
+				"canonical": "#ffffff",
+				"tonalRamp": [
+					"#484456",
+					"#5f5a70",
+					"#787389",
+					"#928ea3",
+					"#aea8c1",
+					"#c9c3da",
+					"#e5e2e1",
+					"#ffffff"
+				]
+			},
+			"text-on-surface": {
+				"role": "neutral",
+				"displayName": "Text On Surface",
+				"canonical": "#e5e2e1"
+			},
+			"text-secondary": {
+				"role": "neutral",
+				"displayName": "Text Secondary",
+				"canonical": "#c9c3da"
+			},
+			"text-muted": {
+				"role": "neutral",
+				"displayName": "Text Muted",
+				"canonical": "#928ea3"
+			},
+			"text-dim": {
+				"role": "neutral",
+				"displayName": "Text Dim",
+				"canonical": "#484456"
+			},
+			"border": {
+				"role": "neutral",
+				"displayName": "Border",
+				"canonical": "#353534"
+			},
+			"border-bright": {
+				"role": "neutral",
+				"displayName": "Border Bright",
+				"canonical": "#484456"
+			},
+			"elem-dark": {
+				"role": "data",
+				"displayName": "Element Dark",
+				"canonical": "#8b5cf6"
+			},
+			"elem-fire": {
+				"role": "data",
+				"displayName": "Element Fire",
+				"canonical": "#ef4444"
+			},
+			"elem-water": {
+				"role": "data",
+				"displayName": "Element Water",
+				"canonical": "#3b82f6"
+			},
+			"elem-light": {
+				"role": "data",
+				"displayName": "Element Light",
+				"canonical": "#facc15"
+			},
+			"elem-wind": {
+				"role": "data",
+				"displayName": "Element Wind",
+				"canonical": "#10b981"
+			},
+			"rarity-ssr": {
+				"role": "data",
+				"displayName": "Rarity SSR",
+				"canonical": "#f59e0b"
+			},
+			"rarity-sr": {
+				"role": "data",
+				"displayName": "Rarity SR",
+				"canonical": "#a855f7"
+			},
+			"rarity-r": {
+				"role": "data",
+				"displayName": "Rarity R",
+				"canonical": "#3b82f6"
+			}
+		},
+		"typographyMeta": {
+			"display": {
+				"displayName": "Display",
+				"purpose": "Hero titles only, usually with violet text glow and a flickering mana span."
+			},
+			"headline": {
+				"displayName": "Headline",
+				"purpose": "Section titles inside a SectionHeader."
+			},
+			"title": {
+				"displayName": "Title",
+				"purpose": "Hunter names, feature card titles, dossier headings."
+			},
+			"readout": {
+				"displayName": "Readout",
+				"purpose": "Data values: total power, stat numbers, readout values."
+			},
+			"button": {
+				"displayName": "Button",
+				"purpose": "Button and nav-link text."
+			},
+			"body": {
+				"displayName": "Body",
+				"purpose": "Descriptions and hero subcopy."
+			},
+			"body-sm": {
+				"displayName": "Body Small",
+				"purpose": "Passives, advancements, compact descriptions (never line-clamped)."
+			},
+			"label": {
+				"displayName": "Label",
+				"purpose": "Every // tag, field label, badge and nav caption. 10px floor, text-muted or mana-bright."
+			}
+		},
+		"shadows": [
+			{
+				"name": "glow-sm",
+				"value": "0 0 10px rgba(97, 55, 255, 0.35)",
+				"purpose": "Small accents."
+			},
+			{
+				"name": "glow-md",
+				"value": "0 0 15px rgba(97, 55, 255, 0.4), 0 0 30px rgba(97, 55, 255, 0.2)",
+				"purpose": "Hover on clickable panels and ghost buttons."
+			},
+			{
+				"name": "glow-lg",
+				"value": "0 0 25px rgba(97, 55, 255, 0.5), 0 0 60px rgba(97, 55, 255, 0.25)",
+				"purpose": "Hover on primary buttons; new-hunter emphasis."
+			},
+			{
+				"name": "glow-text-sm",
+				"value": "0 0 10px rgba(97, 55, 255, 0.5)",
+				"purpose": "Active bottom-tab label."
+			},
+			{
+				"name": "glow-text-md",
+				"value": "0 0 18px rgba(97, 55, 255, 0.6), 0 0 40px rgba(97, 55, 255, 0.3)",
+				"purpose": "Hero and section titles marked sla-text-glow."
+			}
+		],
+		"motion": [
+			{
+				"name": "duration-fast",
+				"value": "150ms",
+				"purpose": "Nav link color shifts."
+			},
+			{
+				"name": "duration-base",
+				"value": "200ms",
+				"purpose": "Default state transitions (buttons, clickable panels)."
+			},
+			{
+				"name": "duration-slow",
+				"value": "400ms",
+				"purpose": "Larger state changes."
+			},
+			{
+				"name": "hud-in",
+				"value": "sla-hud-in 0.6s ease both",
+				"purpose": "Entrance: fade in and rise 12px. Staggered variants at 0.1s steps."
+			},
+			{
+				"name": "ember-flicker",
+				"value": "sla-ember-flicker 4s ease-in-out infinite",
+				"purpose": "Violet text-glow breathing on hero accent words."
+			},
+			{
+				"name": "pulse",
+				"value": "sla-pulse 1.5s ease-in-out infinite",
+				"purpose": "Status dot, critical badge, progress tip."
+			},
+			{
+				"name": "scan-sweep",
+				"value": "sla-scan-sweep 8s ease-in-out infinite",
+				"purpose": "Ambient violet sweep line down the viewport."
+			},
+			{
+				"name": "ticker-scroll",
+				"value": "sla-ticker-scroll 40s linear infinite",
+				"purpose": "Live feed ticker loop."
+			},
+			{
+				"name": "ease-out",
+				"value": "cubic-bezier(0.16, 1, 0.3, 1)",
+				"purpose": "--sla-ease-out. Default deceleration for every System motion; no bounce or elastic."
+			},
+			{
+				"name": "picker-open",
+				"value": "clip-path reveal + opacity, ~160ms (desktop); translateY(16px) + opacity with scrim fade, ~240ms (mobile sheet)",
+				"purpose": "Focal moment: a System window materializing. Close stays instant."
+			},
+			{
+				"name": "team-switch",
+				"value": "opacity + translateY(6px), ~220ms, 40ms stagger per slot",
+				"purpose": "Slot grids replay when element/config/floor/team changes, so the swap is legible."
+			},
+			{
+				"name": "pick-flash",
+				"value": "mana box-shadow glow fading over 400ms (inset on clipped .sla-panel slots)",
+				"purpose": "Confirms a user pick; never on mount, remount or programmatic change (useFlashOnChange)."
+			},
+			{
+				"name": "reduced-motion",
+				"value": "prefers-reduced-motion: reduce",
+				"purpose": "Sweep line hidden, flicker/pulses/ticker scroll stopped (ticker becomes a static row), entrances opacity-only, no hover translate; pick glow kept as feedback."
+			}
+		],
+		"breakpoints": [
+			{
+				"name": "desktop",
+				"value": "768px"
+			}
+		]
+	},
+	"components": [
+		{
+			"name": "Primary Button",
+			"kind": "button",
+			"refersTo": "button-primary",
+			"description": "Main action. Mana fill, cut corners, glows and lifts on hover.",
+			"html": "<button class=\"ds-btn ds-btn-primary\">Engage</button>",
+			"css": ".ds-btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; font-family: var(--sla-font-hud, Orbitron, monospace); font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; border: none; border-radius: 0; transition: all 200ms; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); } .ds-btn-primary { background: var(--sla-mana, #6137ff); color: #ffffff; } .ds-btn-primary:hover { background: var(--sla-mana-bright, #c9bfff); color: #000000; box-shadow: 0 0 25px rgba(97, 55, 255, 0.5), 0 0 60px rgba(97, 55, 255, 0.25); transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--sla-mana-bright, #c9bfff); outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(0); }"
+		},
+		{
+			"name": "Ghost Button",
+			"kind": "button",
+			"refersTo": "button-ghost",
+			"description": "Secondary action. Mana-dim outline, violet wash on hover.",
+			"html": "<button class=\"ds-btn ds-btn-ghost\">Standby</button>",
+			"css": ".ds-btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; font-family: var(--sla-font-hud, Orbitron, monospace); font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; border-radius: 0; transition: all 200ms; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); } .ds-btn-ghost { background: transparent; color: var(--sla-mana-bright, #c9bfff); border: 1px solid var(--sla-mana-dim, #4400d9); } .ds-btn-ghost:hover { background: rgba(97, 55, 255, 0.08); border-color: var(--sla-mana-bright, #c9bfff); box-shadow: 0 0 15px rgba(97, 55, 255, 0.4), 0 0 30px rgba(97, 55, 255, 0.2); transform: translateY(-1px); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--sla-mana-bright, #c9bfff); outline-offset: 2px; }"
+		},
+		{
+			"name": "System Window (Panel)",
+			"kind": "card",
+			"refersTo": "panel",
+			"description": "The core container. Cut corners, tonal gradient, optional HUD corner brackets; glows when clickable.",
+			"html": "<div class=\"ds-panel ds-panel-corners ds-panel-clickable\"><span class=\"ds-corner ds-corner-tl\"></span><span class=\"ds-corner ds-corner-tr\"></span><span class=\"ds-corner ds-corner-bl\"></span><span class=\"ds-corner ds-corner-br\"></span><div class=\"ds-panel-label\">// Base Stats</div><div class=\"ds-panel-title\">Tactical Readout</div><p class=\"ds-panel-body\">Default angular window with clip-path corners.</p></div>",
+			"css": ".ds-panel { position: relative; padding: 20px; background: linear-gradient(135deg, rgba(22, 22, 22, 0.95) 0%, rgba(19, 19, 19, 0.95) 100%); border: 1px solid var(--sla-border-bright, #484456); border-radius: 0; color: var(--sla-text-primary, #ffffff); clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100% , 0 calc(100% - 16px)); transition: all 200ms; } .ds-panel-clickable { cursor: pointer; } .ds-panel-clickable:hover { transform: translateY(-2px); box-shadow: 0 0 15px rgba(97, 55, 255, 0.4), 0 0 30px rgba(97, 55, 255, 0.2); } .ds-panel-clickable:focus-visible { outline: 2px solid var(--sla-mana-bright, #c9bfff); outline-offset: 2px; } .ds-corner { position: absolute; width: 12px; height: 12px; border-color: var(--sla-mana-bright, #c9bfff); border-style: solid; } .ds-corner-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; } .ds-corner-tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; } .ds-corner-bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; } .ds-corner-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; } .ds-panel-label { font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sla-text-muted, #928ea3); margin-bottom: 12px; } .ds-panel-title { font-family: var(--sla-font-hud, Orbitron, monospace); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 20px; } .ds-panel-body { font-family: var(--sla-font-body, Inter, sans-serif); font-size: 14px; color: var(--sla-text-secondary, #c9c3da); margin: 8px 0 0; line-height: 1.6; }"
+		},
+		{
+			"name": "Section Header",
+			"kind": "custom",
+			"refersTo": "tag",
+			"description": "Opens every System window: // tag, glowing uppercase headline, description, fading divider.",
+			"html": "<div class=\"ds-section-head\"><div class=\"ds-section-row\"><span class=\"ds-tag\">// SECTION 01</span><h2 class=\"ds-section-title\">Rotation hebdomadaire</h2></div><p class=\"ds-section-desc\">Faiblesses et résistances élémentaires de la semaine en cours.</p><hr class=\"ds-divider\" /></div>",
+			"css": ".ds-section-head { display: flex; flex-direction: column; gap: 8px; } .ds-section-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; } .ds-tag { font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sla-mana-bright, #c9bfff); border: 1px solid var(--sla-mana-dim, #4400d9); padding: 4px 12px; clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%); } .ds-section-title { margin: 0; font-family: var(--sla-font-hud, Orbitron, monospace); font-size: clamp(24px, 3vw, 36px); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--sla-text-primary, #ffffff); text-shadow: 0 0 18px rgba(97, 55, 255, 0.6), 0 0 40px rgba(97, 55, 255, 0.3); } .ds-section-desc { margin: 0; font-family: var(--sla-font-body, Inter, sans-serif); font-size: 14px; letter-spacing: 0.02em; color: var(--sla-text-secondary, #c9c3da); } .ds-divider { height: 1px; margin: 8px 0 0; border: none; background: linear-gradient(90deg, var(--sla-border-bright, #484456), transparent); }"
+		},
+		{
+			"name": "Tag & Status Badges",
+			"kind": "chip",
+			"refersTo": "tag",
+			"description": "Filing-tab chips: mana tag, plus active / pending / critical / success status badges.",
+			"html": "<div class=\"ds-chip-row\"><span class=\"ds-tag\">// SECTION</span><span class=\"ds-badge ds-badge-active\">Active</span><span class=\"ds-badge ds-badge-pending\">Pending</span><span class=\"ds-badge ds-badge-critical\">Critical</span><span class=\"ds-badge ds-badge-success\">Success</span></div>",
+			"css": ".ds-chip-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; } .ds-tag { font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sla-mana-bright, #c9bfff); border: 1px solid var(--sla-mana-dim, #4400d9); padding: 4px 12px; clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%); } .ds-badge { display: inline-block; font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; padding: 3px 10px; border: 1px solid currentColor; clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%); } .ds-badge-active { color: var(--sla-mana-bright, #c9bfff); } .ds-badge-pending { color: var(--sla-text-muted, #928ea3); } .ds-badge-critical { color: var(--sla-crimson, #ffb4ab); animation: ds-pulse 1.5s ease-in-out infinite; } .ds-badge-success { color: #3a8a4a; } @keyframes ds-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } @media (prefers-reduced-motion: reduce) { .ds-badge-critical { animation: none; } }"
+		},
+		{
+			"name": "Element & Rarity Badges",
+			"kind": "chip",
+			"refersTo": "element-badge",
+			"description": "Game-coded data chips: element hue or rarity hue as text and border.",
+			"html": "<div class=\"ds-chip-row\"><span class=\"ds-elem ds-elem-dark\">Ténèbres</span><span class=\"ds-elem ds-elem-fire\">Feu</span><span class=\"ds-elem ds-elem-water\">Eau</span><span class=\"ds-elem ds-elem-light\">Lumière</span><span class=\"ds-elem ds-elem-wind\">Vent</span><span class=\"ds-rarity ds-rarity-ssr\">SSR</span><span class=\"ds-rarity ds-rarity-sr\">SR</span><span class=\"ds-rarity ds-rarity-r\">R</span></div>",
+			"css": ".ds-chip-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ds-elem { display: inline-flex; align-items: center; font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; padding: 3px 10px; border: 1px solid currentColor; background: rgba(0, 0, 0, 0.3); clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%); } .ds-elem-dark { color: var(--sla-elem-dark, #8b5cf6); } .ds-elem-fire { color: var(--sla-elem-fire, #ef4444); } .ds-elem-water { color: var(--sla-elem-water, #3b82f6); } .ds-elem-light { color: var(--sla-elem-light, #facc15); } .ds-elem-wind { color: var(--sla-elem-wind, #10b981); } .ds-rarity { display: inline-block; font-family: var(--sla-font-hud, Orbitron, monospace); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; padding: 2px 8px; border: 1px solid currentColor; clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%); } .ds-rarity-ssr { color: var(--sla-rarity-ssr, #f59e0b); } .ds-rarity-sr { color: var(--sla-rarity-sr, #a855f7); } .ds-rarity-r { color: var(--sla-rarity-r, #3b82f6); }"
+		},
+		{
+			"name": "Readout & Progress",
+			"kind": "custom",
+			"refersTo": "readout",
+			"description": "Data readout with mana-dim accent edge, and the HUD progress bar with pulsing tip.",
+			"html": "<div class=\"ds-readout\"><div class=\"ds-readout-label\">Total Power</div><div class=\"ds-readout-value\">142,884</div></div><div class=\"ds-progress\"><div class=\"ds-progress-fill\" style=\"width:72%\"></div></div>",
+			"css": ".ds-readout { padding: 12px 20px; background: rgba(0, 0, 0, 0.7); border: 1px solid var(--sla-border-bright, #484456); border-left: 3px solid var(--sla-mana-dim, #4400d9); margin-bottom: 16px; } .ds-readout-label { font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sla-text-muted, #928ea3); margin-bottom: 4px; } .ds-readout-value { font-family: var(--sla-font-hud, Orbitron, monospace); font-size: 14px; font-weight: 700; letter-spacing: 0.05em; color: var(--sla-text-primary, #ffffff); } .ds-progress { height: 3px; background: var(--sla-border, #353534); position: relative; overflow: hidden; } .ds-progress-fill { height: 100%; background: linear-gradient(90deg, var(--sla-mana-dim, #4400d9), var(--sla-mana, #6137ff)); position: relative; transition: width 0.6s ease; } .ds-progress-fill::after { content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 10px; background: var(--sla-mana-bright, #c9bfff); filter: blur(3px); animation: ds-pulse 2s ease-in-out infinite; } @keyframes ds-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } @media (prefers-reduced-motion: reduce) { .ds-progress-fill::after { animation: none; } }"
+		},
+		{
+			"name": "Top Navigation",
+			"kind": "nav",
+			"refersTo": "nav",
+			"description": "Sticky blurred System bar: logo, version tag, links with mana active state, live status cluster.",
+			"html": "<header class=\"ds-nav\"><a class=\"ds-nav-logo\" href=\"#\">SLA <span class=\"ds-nav-accent\">// ARISE</span></a><span class=\"ds-tag\">v5.0.0</span><nav class=\"ds-nav-links\"><a class=\"ds-nav-link ds-active\" href=\"#\">Home</a><a class=\"ds-nav-link\" href=\"#\">Design</a></nav><div class=\"ds-nav-status\"><span class=\"ds-dot\"></span><span class=\"ds-nav-label\">Online</span><span class=\"ds-nav-clock\">23:41:07</span></div></header>",
+			"css": ".ds-nav { display: flex; align-items: center; gap: 24px; padding: 12px 24px; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); border-bottom: 1px solid var(--sla-border-bright, #484456); } .ds-nav-logo { font-family: var(--sla-font-hud, Orbitron, monospace); font-weight: 900; font-size: 16px; letter-spacing: 0.2em; color: var(--sla-text-primary, #ffffff); text-transform: uppercase; text-decoration: none; } .ds-nav-accent { color: var(--sla-mana-bright, #c9bfff); } .ds-tag { font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sla-mana-bright, #c9bfff); border: 1px solid var(--sla-mana-dim, #4400d9); padding: 4px 12px; clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%); } .ds-nav-links { display: flex; gap: 4px; } .ds-nav-link { font-family: var(--sla-font-hud, Orbitron, monospace); font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: var(--sla-text-secondary, #c9c3da); text-transform: uppercase; text-decoration: none; padding: 6px 12px; border: 1px solid transparent; transition: all 200ms; } .ds-nav-link:hover { color: var(--sla-mana-bright, #c9bfff); } .ds-nav-link:focus-visible { outline: 2px solid var(--sla-mana-bright, #c9bfff); outline-offset: 2px; } .ds-nav-link.ds-active { color: var(--sla-mana-bright, #c9bfff); border-left: 3px solid var(--sla-mana, #6137ff); background: rgba(97, 55, 255, 0.08); } .ds-nav-status { display: flex; align-items: center; gap: 12px; margin-left: auto; } .ds-dot { width: 8px; height: 8px; background: var(--sla-mana, #6137ff); box-shadow: 0 0 8px var(--sla-mana, #6137ff); display: inline-block; } .ds-nav-label, .ds-nav-clock { font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sla-text-secondary, #c9c3da); }"
+		},
+		{
+			"name": "Live Feed Ticker",
+			"kind": "custom",
+			"refersTo": "tag",
+			"description": "Mana-labelled band with chevron, scrolling uppercase mono items.",
+			"html": "<div class=\"ds-ticker\"><span class=\"ds-ticker-label\">// LIVE FEED</span><div class=\"ds-ticker-content\"><span>PATCH 5.0.0 // Agnes Rivera rejoint le codex</span><span>HUNTERS INDEXED // 50</span><span>STATUS // Online</span><span>PATCH 5.0.0 // Agnes Rivera rejoint le codex</span><span>HUNTERS INDEXED // 50</span><span>STATUS // Online</span></div></div>",
+			"css": ".ds-ticker { position: relative; overflow: hidden; height: 36px; background: rgba(97, 55, 255, 0.05); border-top: 1px solid rgba(97, 55, 255, 0.15); border-bottom: 1px solid rgba(97, 55, 255, 0.15); display: flex; align-items: center; } .ds-ticker-label { position: absolute; left: 0; height: 100%; display: flex; align-items: center; padding: 0 24px 0 16px; background: var(--sla-mana, #6137ff); color: #000; font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; z-index: 2; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%); } .ds-ticker-content { display: flex; gap: 80px; padding-left: 160px; white-space: nowrap; font-family: var(--sla-font-mono, Orbitron, monospace); font-size: 10px; letter-spacing: 0.1em; color: var(--sla-text-secondary, #c9c3da); animation: ds-ticker 40s linear infinite; } @keyframes ds-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } } @media (prefers-reduced-motion: reduce) { .ds-ticker-content { animation: none; } }"
+		}
+	],
+	"narrative": {
+		"northStar": "The System Window",
+		"overview": "SLA is the System interface a hunter sees in-world: floating panels of cold violet light hung over absolute black. Each screen is a System window, with an angular frame, a tagged header (`// SECTION 01`), mono readouts, and a single violet energy that lights up whatever is live, selected or new. The site does not decorate around the game's art. It frames that art the way the System frames a quest.\n\nDensity is high and disciplined. Hunter grids, team slots, stat bars and set bonuses sit close together. Orbitron in uppercase with wide tracking carries every label, tag and number, so the UI reads as instrumentation. Inter carries only the prose players actually read: passives, advancements, descriptions. The surfaces are flat. Depth comes from light, not lift.\n\nThe palette moved from ember orange to violet (v3.0.0). Violet is now the only accent. The `--sla-ember-*` token names survive as aliases for mana, and any warm orange left in the code is drift, not intent.",
+		"keyCharacteristics": [
+			"Absolute-black canvas (`void`) with near-black tonal panels; no light theme.",
+			"One accent: mana violet. Element and rarity hues are game-coded data colors, not brand accents.",
+			"Zero radius everywhere; angularity comes from clip-path corner cuts and HUD corner brackets.",
+			"Orbitron, uppercase and widely tracked, for all chrome; Inter for reading.",
+			"Flat surfaces, violet glow as the only depth signal; scanlines and a sweep line as ambient System texture."
+		],
+		"rules": [
+			{
+				"name": "The One Light Rule",
+				"body": "Mana violet is the only accent. Warm orange (`rgba(194, 94, 28, …)`, `rgba(255, 74, 28, …)`) is legacy ember drift. Replace it with mana when touched, and never introduce it in new work.",
+				"section": "colors"
+			},
+			{
+				"name": "The Data Not Decor Rule",
+				"body": "Element and rarity hues appear only where they encode game data: an element, a rarity, a weakness. Never use them as decorative color.",
+				"section": "colors"
+			},
+			{
+				"name": "The Bright Text Rule",
+				"body": "Violet text is always `mana-bright` (12:1 on void); `mana` itself (3.5:1) is reserved for fills, borders and glows. The only exception is the large flickering display word (`sla-text-ember`). Readable text never goes below `text-muted` (5.7:1 on surface).",
+				"section": "colors"
+			},
+			{
+				"name": "The Instrument Voice Rule",
+				"body": "Chrome (labels, tags, badges, buttons, nav, numbers) is always Orbitron, uppercase and tracked. Text a player reads for meaning (passives, advancements, descriptions) is always Inter in sentence case. Never mix the two roles.",
+				"section": "typography"
+			},
+			{
+				"name": "The Double-Slash Rule",
+				"body": "Section and panel captions are prefixed with `//` (`// SECTION 02`, `// Base Stats`, `// LIVE FEED`). It is the System's comment syntax and marks the start of every window.",
+				"section": "typography"
+			},
+			{
+				"name": "The Light Not Lift Rule",
+				"body": "Surfaces are flat at rest. Interaction is shown by glow plus a 1–2px upward nudge, never by a gray drop shadow.",
+				"section": "elevation"
+			},
+			{
+				"name": "The Cut Corner Rule",
+				"body": "Never round a corner. If a shape needs softening or distinction, cut it with a clip-path diagonal instead.",
+				"section": "shapes"
+			}
+		],
+		"dos": [
+			"**Do** use mana violet as the only accent, and for every live, selected or new signal.",
+			"**Do** build new UI from the `--sla-*` tokens and SLA primitives (Panel, SectionHeader, Tag, Badge, Button, ElementBadge, Readout).",
+			"**Do** cut corners with clip-path (16px panels, 10px buttons, 4–6px tags) and keep `border-radius: 0`.",
+			"**Do** caption windows with `//` tags and set all chrome in uppercase, tracked Orbitron.",
+			"**Do** keep element and rarity hues exactly game-coded and limited to data.",
+			"**Do** show interactivity with violet glow and a 1–2px lift."
+		],
+		"donts": [
+			"**Don't** introduce warm orange or reuse the legacy ember RGB values; `ember` means mana.",
+			"**Don't** round corners or rely on Tailwind `rounded-*` to shape anything.",
+			"**Don't** add drop shadows for elevation; depth is glow and tonal layering only.",
+			"**Don't** add new Tailwind `zinc-*` / `purple-*` styling; that dialect is legacy pending migration to SLA tokens.",
+			"**Don't** use element or rarity colors decoratively, or as a second brand accent.",
+			"**Don't** add a light theme; the System window is always lit violet on black."
+		]
+	}
+}

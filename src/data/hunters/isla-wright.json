@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 18,
 	"species": "Human",
-	"image": "/assets/hunters/Isla_Wright.png",
-	"icon": "/assets/hunters/_icons/Isla_Wright_Icon.png",
+	"image": "/assets/hunters/Isla_Wright.webp",
+	"icon": "/assets/hunters/_icons/Isla_Wright_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

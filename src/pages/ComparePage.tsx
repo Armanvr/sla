@@ -1,5 +1,5 @@
 import type { ComponentChildren } from 'preact'
-import { useMemo, useRef, useState } from 'preact/hooks'
+import { useEffect, useId, useMemo, useRef, useState } from 'preact/hooks'
 import { ARMOR_SLOTS, CORE_SLOTS, JEWELRY_SLOTS } from '../components/hunter/constants'
 import type { CoreStats, EquipmentStats } from '../components/hunter/types'
 import { BackLink } from '../components/sla/BackLink'
@@ -108,7 +108,11 @@ function HunterSearchSelect({
 }) {
 	const [query, setQuery] = useState('')
 	const [open, setOpen] = useState(false)
+	const [active, setActive] = useState(0)
 	const inputRef = useRef<HTMLInputElement>(null)
+	const blurTimer = useRef<ReturnType<typeof setTimeout>>()
+	const listId = useId()
+	const optId = (i: number) => `${listId}-opt-${i}`
 
 	const selected = selectedId ? hunters.find((h) => h.id === selectedId) : null
 
@@ -119,19 +123,39 @@ function HunterSearchSelect({
 	}, [hunters, query])
 
 	const handleFocus = () => {
+		clearTimeout(blurTimer.current)
 		setQuery('')
+		setActive(0)
 		setOpen(true)
 	}
 
-	const handleBlur = () => {
-		setTimeout(() => setOpen(false), 150)
+	useEffect(() => {
+		if (open) document.getElementById(optId(active))?.scrollIntoView({ block: 'nearest' })
+	}, [open, active])
+
+	const handleKeyDown = (e: KeyboardEvent) => {
+		if (e.key === 'Escape') {
+			setOpen(false)
+		} else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+			e.preventDefault()
+			if (!open) setOpen(true)
+			else if (filtered.length > 0)
+				setActive((i) => (i + (e.key === 'ArrowDown' ? 1 : filtered.length - 1)) % filtered.length)
+		} else if (e.key === 'Enter' && open && filtered[active]) {
+			e.preventDefault()
+			handleSelect(filtered[active].id, true)
+		}
 	}
 
-	const handleSelect = (id: string) => {
+	const handleBlur = () => {
+		blurTimer.current = setTimeout(() => setOpen(false), 150)
+	}
+
+	const handleSelect = (id: string, keepFocus = false) => {
 		onSelect(id)
 		setQuery('')
 		setOpen(false)
-		inputRef.current?.blur()
+		if (!keepFocus) inputRef.current?.blur()
 	}
 
 	return (
@@ -141,31 +165,56 @@ function HunterSearchSelect({
 					ref={inputRef}
 					type='text'
 					value={open ? query : (selected?.data.name ?? '')}
+					role='combobox'
+					aria-label='Rechercher un chasseur'
+					aria-expanded={open}
+					aria-controls={open ? listId : undefined}
+					aria-autocomplete='list'
+					aria-activedescendant={open && filtered[active] ? optId(active) : undefined}
 					onFocus={handleFocus}
+					onClick={() => {
+						clearTimeout(blurTimer.current)
+						if (!open) handleFocus()
+					}}
 					onBlur={handleBlur}
-					onInput={(e) => setQuery((e.target as HTMLInputElement).value)}
+					onKeyDown={handleKeyDown}
+					onInput={(e) => {
+						setQuery((e.target as HTMLInputElement).value)
+						setActive(0)
+						setOpen(true)
+					}}
 					placeholder='Rechercher un chasseur…'
-					className='w-full bg-zinc-800 border border-zinc-700/60 rounded-xl pl-9 pr-4 py-3 text-zinc-100 placeholder-zinc-500 focus:border-purple-500/60 focus:outline-none transition-colors text-sm'
+					className='w-full bg-zinc-800 border border-zinc-700/60 rounded-xl pl-9 pr-4 py-3 text-zinc-100 placeholder-zinc-500 focus:border-purple-500/60 transition-colors text-sm'
 				/>
 			</div>
 
 			{open && (
-				<div className='absolute z-30 w-full bg-zinc-800 border border-zinc-700/70 rounded-xl mt-1.5 max-h-64 overflow-y-auto shadow-2xl'>
+				<div
+					id={listId}
+					role='listbox'
+					aria-label='Chasseurs'
+					className='absolute z-30 w-full bg-zinc-800 border border-zinc-700/70 rounded-xl mt-1.5 max-h-64 overflow-y-auto shadow-2xl'
+				>
 					{filtered.length === 0 ? (
-						<p className='px-4 py-3 text-sm text-zinc-500 italic'>Aucun résultat</p>
+						<p role='none' className='px-4 py-3 text-sm text-zinc-500 italic'>
+							Aucun résultat
+						</p>
 					) : (
-						filtered.map((h) => (
-							<button
+						filtered.map((h, i) => (
+							<div
 								key={h.id}
-								type='button'
+								id={optId(i)}
+								role='option'
+								aria-selected={selectedId === h.id}
+								tabIndex={-1}
 								onMouseDown={() => handleSelect(h.id)}
 								className={`w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-zinc-700/60 flex items-center justify-between ${
 									selectedId === h.id ? 'text-purple-400 bg-purple-900/20' : 'text-zinc-200'
-								}`}
+								} ${i === active ? 'bg-zinc-700/60' : ''}`}
 							>
 								<span>{h.data.name}</span>
 								{selectedId === h.id && <span className='text-purple-400 text-xs'>✓</span>}
-							</button>
+							</div>
 						))
 					)}
 				</div>
@@ -224,7 +273,7 @@ function ScoreRing({ percent }: { percent: number }) {
 				textAnchor='middle'
 				dominantBaseline='middle'
 				fill='#71717a'
-				fontSize='9'
+				fontSize='10'
 				fontFamily='inherit'
 			>
 				SCORE
@@ -241,7 +290,7 @@ function SlotBadge({ matched, total }: { matched: number; total: number }) {
 	const partial = matched > 0
 	return (
 		<span
-			className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${
+			className={`text-label font-bold px-1.5 py-0.5 rounded-md ${
 				ok
 					? 'bg-emerald-900/40 text-emerald-400'
 					: partial
@@ -337,19 +386,20 @@ function EquipSlotRow({
 	return (
 		<div className='bg-zinc-800/20'>
 			<div className='flex items-center justify-between px-4 py-2 border-b border-zinc-800/60'>
-				<p className='text-[10px] font-semibold uppercase tracking-wider text-zinc-500'>{label}</p>
+				<p className='text-label font-semibold uppercase tracking-wider text-zinc-500'>{label}</p>
 				<SlotBadge matched={score.matched} total={score.total} />
 			</div>
-			<div className='grid grid-cols-[1fr_1fr] divide-x divide-zinc-800'>
+			<div className='grid grid-cols-1 sm:grid-cols-[1fr_1fr] divide-y sm:divide-y-0 sm:divide-x divide-zinc-800'>
 				{/* Recommended */}
 				<div className='px-4 py-3 space-y-1.5'>
+					<p className='sm:hidden text-label uppercase tracking-wider text-zinc-500 mb-1'>Recommandé</p>
 					{rec ? (
 						<>
 							{rec.main && <p className='text-xs font-semibold text-purple-300'>{rec.main}</p>}
 							<ul className='space-y-0.5'>
 								{rec.secondary.map((s) => (
-									<li key={s} className='text-[11px] text-zinc-400 flex items-center gap-1'>
-										<span className='text-purple-500 text-[8px]'>●</span> {s}
+									<li key={s} className='text-meta text-zinc-400 flex items-center gap-1'>
+										<span className='text-purple-500 text-label'>●</span> {s}
 									</li>
 								))}
 							</ul>
@@ -361,11 +411,13 @@ function EquipSlotRow({
 
 				{/* User input */}
 				<div className='px-4 py-3 space-y-2'>
+					<p className='sm:hidden text-label uppercase tracking-wider text-zinc-500 mb-1'>Votre build</p>
 					{rec?.main !== undefined && (
 						<select
 							value={userSlot.main}
+							aria-label={`Stat principale — ${label}`}
 							onChange={(e) => onMainChange(iconKey, (e.target as HTMLSelectElement).value)}
-							className='w-full bg-zinc-800 border border-zinc-700/50 rounded-lg px-2 py-1 text-xs text-zinc-200 focus:border-purple-500/60 focus:outline-none transition-colors'
+							className='w-full bg-zinc-800 border border-zinc-700/50 rounded-lg px-2 py-1 text-xs text-zinc-200 focus:border-purple-500/60 transition-colors'
 						>
 							<option value=''>— Principale —</option>
 							{MAIN_STATS.map((s) => (
@@ -382,7 +434,7 @@ function EquipSlotRow({
 							return (
 								<label
 									key={stat}
-									className={`flex items-center gap-1 cursor-pointer ${disabled ? 'opacity-30 cursor-not-allowed' : ''}`}
+									className={`sla-tap-sm flex items-center gap-1 cursor-pointer ${disabled ? 'opacity-30 cursor-not-allowed' : ''}`}
 								>
 									<input
 										type='checkbox'
@@ -391,7 +443,7 @@ function EquipSlotRow({
 										onChange={() => !disabled && onSecondaryToggle(iconKey, stat)}
 										className='accent-purple-500 w-2.5 h-2.5 flex-shrink-0'
 									/>
-									<span className='text-[10px] text-zinc-300 leading-tight'>{stat}</span>
+									<span className='text-label text-zinc-300 leading-tight'>{stat}</span>
 								</label>
 							)
 						})}
@@ -439,7 +491,7 @@ function EquipCompare({
 	return (
 		<div className='space-y-3'>
 			{/* Column headers */}
-			<div className='grid grid-cols-[1fr_1fr] gap-3'>
+			<div className='hidden sm:grid grid-cols-[1fr_1fr] gap-3'>
 				<ColHeader accent>Build recommandé</ColHeader>
 				<ColHeader>Votre build</ColHeader>
 			</div>
@@ -489,7 +541,7 @@ function CoreCompare({
 	return (
 		<div className='space-y-3'>
 			{/* Column headers */}
-			<div className='grid grid-cols-[1fr_1fr] gap-3'>
+			<div className='hidden sm:grid grid-cols-[1fr_1fr] gap-3'>
 				<ColHeader accent>Build recommandé</ColHeader>
 				<ColHeader>Votre build</ColHeader>
 			</div>
@@ -501,14 +553,17 @@ function CoreCompare({
 
 				return (
 					<CollapsibleGroup key={key} label={`${emoji} ${label}`} matched={score.matched} total={score.total}>
-						<div className='grid grid-cols-[1fr_1fr] divide-x divide-zinc-800 bg-zinc-800/20'>
+						<div className='grid grid-cols-1 sm:grid-cols-[1fr_1fr] divide-y sm:divide-y-0 sm:divide-x divide-zinc-800 bg-zinc-800/20'>
 							{/* Recommended */}
 							<div className='px-4 py-3'>
+								<p className='sm:hidden text-label uppercase tracking-wider text-zinc-500 mb-1'>
+									Recommandé
+								</p>
 								{recStats && recStats.length > 0 ? (
 									<ul className='space-y-0.5'>
 										{recStats.map((s) => (
-											<li key={s} className='text-[11px] text-zinc-400 flex items-center gap-1'>
-												<span className='text-purple-500 text-[8px]'>●</span> {s}
+											<li key={s} className='text-meta text-zinc-400 flex items-center gap-1'>
+												<span className='text-purple-500 text-label'>●</span> {s}
 											</li>
 										))}
 									</ul>
@@ -519,18 +574,24 @@ function CoreCompare({
 
 							{/* User input */}
 							<div className='px-4 py-3'>
+								<p className='sm:hidden text-label uppercase tracking-wider text-zinc-500 mb-1'>
+									Votre build
+								</p>
 								<div className='space-y-0.5'>
 									{CORE_STATS_LIST.map((stat) => {
 										const checked = userSlot.stats.includes(stat)
 										return (
-											<label key={stat} className='flex items-center gap-1 cursor-pointer'>
+											<label
+												key={stat}
+												className='sla-tap-sm flex items-center gap-1 cursor-pointer'
+											>
 												<input
 													type='checkbox'
 													checked={checked}
 													onChange={() => onCoreStatToggle(key, stat)}
 													className='accent-purple-500 w-2.5 h-2.5 flex-shrink-0'
 												/>
-												<span className='text-[10px] text-zinc-300 leading-tight'>{stat}</span>
+												<span className='text-label text-zinc-300 leading-tight'>{stat}</span>
 											</label>
 										)
 									})}
@@ -641,10 +702,11 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 					tag='// COMPARE'
 					title='Optimiseur de build'
 					description='Compare ton équipement à la build recommandée.'
+					as='h1'
 				/>
 			</div>
 
-			<main style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+			<div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
 				{/* ── Selector ── */}
 				<div className='relative z-20'>
 					<HunterSearchSelect hunters={sortedHunters} selectedId={selectedId} onSelect={handleHunterSelect} />
@@ -658,6 +720,9 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 							<div className='relative flex-shrink-0'>
 								<img
 									src={selectedHunter.data.image}
+									decoding='async'
+									width={80}
+									height={80}
 									alt={selectedHunter.data.name}
 									className='w-20 h-20 rounded-xl object-cover border-2 border-zinc-700/60 shadow-xl'
 									onError={(e) => {
@@ -665,7 +730,7 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 									}}
 								/>
 								{selectedHunter.data.rarity && (
-									<span className='absolute -top-1.5 -right-1.5 text-[9px] font-bold bg-zinc-900 border border-amber-400/40 text-amber-400 px-1.5 py-0.5 rounded-md'>
+									<span className='absolute -top-1.5 -right-1.5 text-label font-bold bg-zinc-900 border border-amber-400/40 text-amber-400 px-1.5 py-0.5 rounded-md'>
 										{selectedHunter.data.rarity}
 									</span>
 								)}
@@ -743,7 +808,7 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 						/>
 					</section>
 				)}
-			</main>
+			</div>
 		</div>
 	)
 }

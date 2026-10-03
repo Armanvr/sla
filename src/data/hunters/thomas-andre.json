@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 39,
 	"species": "Human",
-	"image": "/assets/hunters/Thomas_Andre.png",
-	"icon": "/assets/hunters/_icons/Thomas_Andre_Icon.png",
+	"image": "/assets/hunters/Thomas_Andre.webp",
+	"icon": "/assets/hunters/_icons/Thomas_Andre_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

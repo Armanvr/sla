@@ -18,8 +18,8 @@
 	"gender": "Female",
 	"age": 18,
 	"species": "Human",
-	"image": "/assets/hunters/Meri_Laine.png",
-	"icon": "/assets/hunters/_icons/Meri_Laine_Icon.png",
+	"image": "/assets/hunters/Meri_Laine.webp",
+	"icon": "/assets/hunters/_icons/Meri_Laine_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",

@@ -28,9 +28,9 @@ export function SideNav() {
 						href={item.href}
 						style={{
 							...sideNavLinkBase,
-							color: active ? 'var(--sla-ember)' : 'var(--sla-text-muted)',
+							color: active ? 'var(--sla-mana-bright)' : 'var(--sla-text-muted)',
 							borderLeft: active ? '2px solid var(--sla-ember)' : '2px solid transparent',
-							background: active ? 'rgba(194, 94, 28, 0.06)' : 'transparent',
+							background: active ? 'rgba(97, 55, 255, 0.08)' : 'transparent',
 						}}
 					>
 						<span style={{ fontSize: 14, lineHeight: 1, opacity: active ? 1 : 0.5 }}>{item.icon}</span>

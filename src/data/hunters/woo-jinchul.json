@@ -18,8 +18,8 @@
 	"gender": "Male",
 	"age": 30,
 	"species": "Human",
-	"image": "/assets/hunters/Woo_Jinchul.png",
-	"icon": "/assets/hunters/_icons/Woo_Jinchul_Icon.png",
+	"image": "/assets/hunters/Woo_Jinchul.webp",
+	"icon": "/assets/hunters/_icons/Woo_Jinchul_Icon.webp",
 	"stats": [
 		{
 			"key": "strength",
