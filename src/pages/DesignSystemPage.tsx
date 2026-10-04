@@ -96,7 +96,7 @@ const COLOR_GROUPS: Array<{ title: string; swatches: Swatch[] }> = [
 
 function SwatchCard({ s }: { s: Swatch }) {
 	return (
-		<Panel className='sla-anim-in' style={{ padding: 0, overflow: 'hidden' }}>
+		<Panel class='sla-anim-in' style={{ padding: 0, overflow: 'hidden' }}>
 			<div style={{ height: 80, background: s.value }} />
 			<div style={{ padding: 12 }}>
 				<div
@@ -515,7 +515,7 @@ function ElementsSection() {
 				}}
 			>
 				{ELEMENTS.map((el) => (
-					<Panel key={el} style={{ padding: 16 }} className={`sla-elem-tint-${el.toLowerCase()}`}>
+					<Panel key={el} style={{ padding: 16 }} class={`sla-elem-tint-${el.toLowerCase()}`}>
 						<div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
 							<span className={`sla-elem-bar sla-elem-bar-${el.toLowerCase()}`} style={{ height: 32 }} />
 							<div>

@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks'
 import { BackLink } from '../components/sla/BackLink'
+import { ELEMENT_ICON, ELEMENT_RESISTANCE_ICON } from '../components/sla/elements'
 import { HunterSlot } from '../components/team/HunterSlot'
 import { JinwooPanel } from '../components/team/JinwooPanel'
 import { ShadowSlot } from '../components/team/ShadowSlot'
@@ -60,22 +61,6 @@ const SECTION_LABELS: Record<string, string> = {
 	'the-distorted-sanctuary': 'Le Sanctuaire Distordu',
 }
 
-const ELEMENT_ICON: Record<string, string> = {
-	Dark: '/assets/utils/Dark_Element.png',
-	Water: '/assets/utils/Water_Element.png',
-	Fire: '/assets/utils/Fire_Element.png',
-	Light: '/assets/utils/Light_Element.png',
-	Wind: '/assets/utils/Wind_Element.png',
-}
-
-const ELEMENT_RESISTANCE_ICON: Record<string, string> = {
-	Dark: '/assets/utils/Dark_Element_Resistance.png',
-	Water: '/assets/utils/Water_Element_Resistance.png',
-	Fire: '/assets/utils/Fire_Element_Resistance.png',
-	Light: '/assets/utils/Light_Element_Resistance.png',
-	Wind: '/assets/utils/Wind_Element_Resistance.png',
-}
-
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function formatLabel(name: string): string {
@@ -123,27 +108,27 @@ function BossCard({ boss }: { boss: BossConfig }) {
 	const hasResistances = boss.resistances.length > 0
 
 	return (
-		<div className='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
+		<div className='bg-bg-surface border border-border-sla overflow-hidden'>
 			<div className='flex items-center gap-4 px-4 py-3'>
 				<img
 					src={`/assets/workshop/${boss.icon}`}
 					alt={boss.name}
-					className='w-12 h-12 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
+					className='w-12 h-12 object-contain bg-bg-container flex-shrink-0'
 					onError={(e) => {
 						;(e.target as HTMLImageElement).style.display = 'none'
 					}}
 				/>
 				<div className='flex-1 min-w-0'>
-					<p className='text-label text-zinc-500 uppercase tracking-wider'>Boss</p>
-					<p className='text-sm font-semibold text-zinc-100 truncate'>{boss.name}</p>
+					<p className='text-label text-text-sla-muted uppercase tracking-wider'>Boss</p>
+					<p className='text-sm font-semibold text-text-sla truncate'>{boss.name}</p>
 				</div>
 			</div>
 
 			{(hasWeaknesses || hasResistances) && (
-				<div className='flex border-t border-zinc-700/40'>
+				<div className='flex border-t border-border-sla'>
 					{hasWeaknesses && (
 						<div
-							className={`flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-weak-bg ${hasResistances ? 'border-r border-zinc-700/40' : ''}`}
+							className={`flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-weak-bg ${hasResistances ? 'border-r border-border-sla' : ''}`}
 						>
 							<span className='text-meta font-bold text-weak uppercase tracking-widest'>Faiblesses</span>
 							<div className='flex gap-2 flex-wrap justify-center'>
@@ -381,9 +366,9 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 						<img
 							src='/assets/sections/coming-soon.jpg'
 							alt='Coming soon'
-							className='w-full max-w-xl rounded-2xl shadow-lg'
+							className='w-full max-w-xl'
 						/>
-						<p className='text-zinc-400 text-sm font-medium tracking-wide'>
+						<p className='text-text-sla-secondary text-sm font-medium tracking-wide'>
 							Ce contenu sera disponible prochainement.
 						</p>
 					</div>
@@ -401,7 +386,7 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 						{/* Blessing tabs */}
 						{blessingLabels.length > 0 && (
 							<div className='space-y-2'>
-								<p className='text-meta font-bold text-amber-400/80 uppercase tracking-widest'>
+								<p className='text-meta font-bold text-mana-bright uppercase tracking-widest'>
 									Bénédictions
 								</p>
 								<Tabs
@@ -422,14 +407,14 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 						{isWithJinwoo && (
 							<>
 								<JinwooPanel selectedWeapons={selectedWeapons} onWeaponSelect={setWeaponSlot} />
-								<hr className='border-zinc-800' />
+								<hr className='border-border-sla' />
 							</>
 						)}
 
 						{/* Hunters */}
 						{floor && (
 							<section>
-								<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>
+								<p className='text-xs font-bold text-text-sla-secondary uppercase tracking-widest mb-4'>
 									Chasseurs
 								</p>
 								<div
@@ -453,9 +438,9 @@ export function TeamGuideWorkshop({ hunters, raidName }: { hunters: Hunter[]; ra
 						{/* Shadows */}
 						{hasShadows && (
 							<>
-								<hr className='border-zinc-800' />
+								<hr className='border-border-sla' />
 								<section>
-									<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4'>
+									<p className='text-xs font-bold text-text-sla-secondary uppercase tracking-widest mb-4'>
 										Ombres
 									</p>
 									<div

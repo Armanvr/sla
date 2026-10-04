@@ -25,14 +25,14 @@ export function JinwooPanel({
 					width={40}
 					height={40}
 					alt={jinwooData.name}
-					className='w-10 h-10 rounded-lg object-cover bg-zinc-700/40'
+					className='w-10 h-10 object-cover bg-bg-container'
 				/>
 				<div className='flex items-center gap-2'>
-					<span className='text-sm font-bold text-zinc-100'>{jinwooData.name}</span>
-					<span className='text-label font-bold text-amber-400 bg-amber-400/10 border border-amber-400/20 rounded px-1.5 py-0.5'>
+					<span className='text-sm font-bold text-text-sla'>{jinwooData.name}</span>
+					<span className={`sla-rarity sla-rarity-${jinwooData.rarity.toLowerCase()}`}>
 						{jinwooData.rarity}
 					</span>
-					<span className='text-label text-zinc-500'>{(jinwooData as HunterData).title}</span>
+					<span className='text-label text-text-sla-muted'>{(jinwooData as HunterData).title}</span>
 				</div>
 			</div>
 
@@ -68,7 +68,6 @@ export function JinwooPanel({
 						coreBuild={(jinwooData as HunterData).coreBuild}
 						coreStats={(jinwooData as HunterData).coreStats}
 						showDetails={false}
-						compact={true}
 					/>
 				</div>
 			</div>

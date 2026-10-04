@@ -1,10 +1,4 @@
-const elementIcon: Record<string, string> = {
-	Dark: '/assets/utils/Dark_Element.png',
-	Water: '/assets/utils/Water_Element.png',
-	Fire: '/assets/utils/Fire_Element.png',
-	Light: '/assets/utils/Light_Element.png',
-	Wind: '/assets/utils/Wind_Element.png',
-}
+import { ELEMENT_ICON } from '../sla/elements'
 
 interface TeamEntry {
 	element: string
@@ -42,23 +36,23 @@ export function ElementTabs({
 						}`}
 					>
 						{isWeak && !isActive && (
-							<span className='absolute top-0.5 left-0.5 w-3 h-3 rounded-full bg-weak border border-zinc-900' />
+							<span className='absolute top-0.5 left-0.5 w-3 h-3 bg-weak border border-bg-deep' />
 						)}
 						{isResistant && !isActive && (
-							<span className='absolute top-0.5 left-0.5 w-3 h-3 rounded-full bg-resist border border-zinc-900' />
+							<span className='absolute top-0.5 left-0.5 w-3 h-3 bg-resist border border-bg-deep' />
 						)}
-						{elementIcon[team.element] ? (
+						{ELEMENT_ICON[team.element] ? (
 							<img
-								src={elementIcon[team.element]}
+								src={ELEMENT_ICON[team.element]}
 								alt={team.element}
 								className='w-4 h-4 object-contain flex-shrink-0'
 							/>
 						) : (
-							<span className='w-2 h-2 rounded-full flex-shrink-0 bg-zinc-400' />
+							<span className='w-2 h-2 flex-shrink-0 bg-text-sla-muted' />
 						)}
 						{team.element}
 						{isRandom && (
-							<span className={`text-label font-normal ml-1 ${isActive ? '' : 'text-zinc-500'}`}>
+							<span className={`text-label font-normal ml-1 ${isActive ? '' : 'text-text-sla-muted'}`}>
 								★ aléatoire
 							</span>
 						)}

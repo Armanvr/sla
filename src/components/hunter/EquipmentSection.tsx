@@ -58,16 +58,16 @@ export function StatsPanel({ main, secondary }: { main?: string | null; secondar
 			<button
 				type='button'
 				onClick={() => setOpen((o) => !o)}
-				className='flex items-center gap-1 text-label text-zinc-500 uppercase tracking-wider hover:text-zinc-300 transition-colors px-1 select-none'
+				className='flex items-center gap-1 text-label text-text-sla-muted uppercase tracking-wider hover:text-text-sla transition-colors px-1 select-none'
 			>
 				<span>Stats</span>
 				<span className='font-mono'>{open ? '▲' : '▼'}</span>
 			</button>
 			{open && (
-				<div className='mt-1 bg-zinc-800/20 border border-zinc-700/30 rounded-lg px-3 py-2 space-y-0.5'>
-					{main && <p className='text-xs font-bold text-zinc-200'>{main}</p>}
+				<div className='mt-1 bg-bg-surface border border-border-sla px-3 py-2 space-y-0.5'>
+					{main && <p className='text-xs font-bold text-text-sla'>{main}</p>}
 					{secondary.map((s) => (
-						<p key={s} className='text-xs text-zinc-400'>
+						<p key={s} className='text-xs text-text-sla-secondary'>
 							{s}
 						</p>
 					))}
@@ -93,7 +93,7 @@ function ArtifactIcon({
 				loading='lazy'
 				decoding='async'
 				alt={name}
-				className={`${sizeClass} rounded-lg object-cover flex-shrink-0 bg-zinc-700/40`}
+				className={`${sizeClass} object-cover flex-shrink-0 bg-bg-container`}
 				onError={(e) => {
 					;(e.target as HTMLImageElement).style.display = 'none'
 				}}
@@ -102,7 +102,7 @@ function ArtifactIcon({
 	}
 	return (
 		<div
-			className={`${sizeClass} rounded-lg bg-zinc-700/40 flex items-center justify-center text-zinc-500 text-xs flex-shrink-0`}
+			className={`${sizeClass} bg-bg-container flex items-center justify-center text-text-sla-muted text-xs flex-shrink-0`}
 		>
 			?
 		</div>
@@ -146,22 +146,24 @@ function EquipmentSlot({
 				<button
 					type='button'
 					{...lb.triggerProps}
-					className={`w-full flex items-center gap-3 bg-zinc-800/60 border rounded-xl py-2.5 text-left transition-colors ${
+					className={`w-full flex items-center gap-3 bg-bg-surface border py-2.5 text-left transition-colors ${
 						selected ? 'pl-3 pr-9' : 'px-3'
-					} ${isOpen ? 'border-purple-500/60' : 'border-zinc-700/60 hover:border-zinc-500/60'}`}
+					} ${isOpen ? 'border-mana' : 'border-border-sla hover:border-border-sla-bright'}`}
 				>
 					{selected ? (
 						<ArtifactIcon src={selectedIcon} name={selected.name} />
 					) : (
-						<div className='w-10 h-10 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-lg flex-shrink-0'>
+						<div className='w-10 h-10 bg-bg-container border border-dashed border-border-sla-bright flex items-center justify-center text-text-sla-muted text-lg flex-shrink-0'>
 							+
 						</div>
 					)}
 					<div className='flex-1 min-w-0'>
-						<p className='text-label text-zinc-500 uppercase tracking-wider leading-none mb-0.5'>
+						<p className='text-label text-text-sla-muted uppercase tracking-wider leading-none mb-0.5'>
 							{slotLabel}
 						</p>
-						<p className={`text-sm truncate ${selected ? 'text-zinc-100 font-medium' : 'text-zinc-500'}`}>
+						<p
+							className={`text-sm truncate ${selected ? 'text-text-sla font-medium' : 'text-text-sla-muted'}`}
+						>
 							{selected ? selected.name : '—'}
 						</p>
 					</div>
@@ -173,7 +175,7 @@ function EquipmentSlot({
 							select(null)
 							lb.focusTrigger()
 						}}
-						className='absolute right-[5px] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-zinc-500 hover:text-red-400 transition-colors text-lg leading-none cursor-pointer'
+						className='absolute right-[5px] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-text-sla-muted hover:text-danger transition-colors text-lg leading-none cursor-pointer'
 						aria-label='Vider le slot'
 					>
 						×
@@ -184,7 +186,7 @@ function EquipmentSlot({
 			{isOpen && (
 				<Listbox
 					{...lb.popupProps}
-					className='absolute z-50 top-full mt-1 left-0 w-64 max-h-64 overflow-y-auto bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl'
+					className='absolute z-50 top-full mt-1 left-0 w-64 max-h-64 overflow-y-auto bg-bg-elevated border border-border-sla-bright'
 				>
 					<EmptyOption selected={!selected} onClick={() => select(null)} />
 					{availableSets.map((s) => (
@@ -193,10 +195,10 @@ function EquipmentSlot({
 							type='button'
 							{...optionProps(s.id === value)}
 							onClick={() => select(s.id)}
-							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${s.id === value ? 'bg-purple-900/20' : ''}`}
+							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-bg-container transition-colors ${s.id === value ? 'bg-bg-wash' : ''}`}
 						>
 							<ArtifactIcon src={s.icons[iconKey]} name={s.name} sizeClass='w-8 h-8' />
-							<span className='text-sm text-zinc-200 text-left'>{s.name}</span>
+							<span className='text-sm text-text-sla text-left'>{s.name}</span>
 						</button>
 					))}
 				</Listbox>
@@ -279,7 +281,9 @@ export function EquipmentSection({
 		<div>
 			{builds && builds.length > 0 && (
 				<div className='flex flex-wrap items-center gap-2 mb-5'>
-					<span className='text-xs font-semibold text-zinc-400 uppercase tracking-wider'>Builds :</span>
+					<span className='text-xs font-semibold text-text-sla-secondary uppercase tracking-wider'>
+						Builds :
+					</span>
 					{builds.map((build) => (
 						<button
 							key={build.name}
@@ -304,11 +308,11 @@ export function EquipmentSection({
 			<div className='flex flex-col gap-6'>
 				{showDetails && (
 					<div>
-						<p className='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3'>
+						<p className='text-xs font-semibold text-text-sla-secondary uppercase tracking-wider mb-3'>
 							Bonus de sets actifs
 						</p>
 						{activeBonuses.length === 0 ? (
-							<div className='bg-zinc-800/30 border border-zinc-700/40 rounded-xl p-4 text-sm text-zinc-500 italic'>
+							<div className='bg-bg-surface border border-border-sla p-4 text-sm text-text-sla-muted italic'>
 								Équipez 2 pièces du même set pour activer un bonus.
 							</div>
 						) : (
@@ -316,20 +320,20 @@ export function EquipmentSection({
 								{activeBonuses.map((active) => (
 									<div
 										key={active.name}
-										className='bg-zinc-800/40 border border-purple-500/20 rounded-xl p-4 space-y-2'
+										className='bg-bg-surface border border-mana-dim p-4 space-y-2'
 									>
 										<div className='flex items-center justify-between gap-2'>
-											<span className='font-semibold text-sm text-zinc-100'>{active.name}</span>
-											<span className='text-label bg-purple-700/40 text-purple-300 border border-purple-600/30 rounded-full px-2 py-0.5 font-medium'>
+											<span className='font-semibold text-sm text-text-sla'>{active.name}</span>
+											<span className='text-label bg-bg-wash text-mana-bright border border-mana-dim px-2 py-0.5 font-medium'>
 												{active.count} pcs
 											</span>
 										</div>
 										{active.bonuses.map((b) => (
 											<div key={b.pieces} className='flex gap-2'>
-												<span className='flex-shrink-0 text-label bg-zinc-700/60 text-zinc-300 border border-zinc-600/40 rounded px-1.5 py-0.5 font-mono font-bold mt-0.5'>
+												<span className='flex-shrink-0 text-label bg-bg-container text-text-sla-secondary border border-border-sla px-1.5 py-0.5 font-mono font-bold mt-0.5'>
 													{b.pieces}
 												</span>
-												<p className='text-xs text-zinc-300 leading-relaxed'>
+												<p className='text-xs text-text-sla-secondary leading-relaxed'>
 													<BonusText text={b.effect} />
 												</p>
 											</div>
@@ -342,7 +346,7 @@ export function EquipmentSection({
 				)}
 
 				<div>
-					<p className='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
+					<p className='text-xs font-semibold text-text-sla-secondary uppercase tracking-wider mb-3 flex items-center gap-2'>
 						<span>◈</span> Armure
 					</p>
 					<div className='grid grid-cols-2 gap-3'>
@@ -365,7 +369,7 @@ export function EquipmentSection({
 				</div>
 
 				<div>
-					<p className='text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2'>
+					<p className='text-xs font-semibold text-text-sla-secondary uppercase tracking-wider mb-3 flex items-center gap-2'>
 						<span>◇</span> Bijoux
 					</p>
 					<div className='grid grid-cols-2 gap-3'>

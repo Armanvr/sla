@@ -2,7 +2,8 @@ import type { JSX } from 'preact'
 import { useState } from 'preact/hooks'
 import type { HunterData } from '../components/HunterProfile'
 import { Badge } from '../components/sla/Badge'
-import { ELEMENTS, ElementBar } from '../components/sla/ElementBadge'
+import { ELEMENT_LABEL_FR, ELEMENT_SLUG, ELEMENTS, ElementBar } from '../components/sla/ElementBadge'
+import { ELEMENT_ICON } from '../components/sla/elements'
 import { SectionHeader } from '../components/sla/SectionHeader'
 
 interface HunterCard {
@@ -10,16 +11,8 @@ interface HunterCard {
 	data: HunterData
 }
 
-const CATEGORIES = ['Elemental Stacker', 'Breaker', 'Supporter', 'Striker'] as const
+const CATEGORIES = ['Elemental Stacker', 'Elemental Buster', 'Breaker', 'Supporter', 'Striker'] as const
 type Category = (typeof CATEGORIES)[number]
-
-const elementMeta: Record<string, { label: string; icon: string; slug: string }> = {
-	Dark: { label: 'Ténèbres', icon: '/assets/utils/Dark_Element.png', slug: 'dark' },
-	Fire: { label: 'Feu', icon: '/assets/utils/Fire_Element.png', slug: 'fire' },
-	Water: { label: 'Eau', icon: '/assets/utils/Water_Element.png', slug: 'water' },
-	Light: { label: 'Lumière', icon: '/assets/utils/Light_Element.png', slug: 'light' },
-	Wind: { label: 'Vent', icon: '/assets/utils/Wind_Element.png', slug: 'wind' },
-}
 
 const rarityClass: Record<string, string> = {
 	SSR: 'sla-rarity sla-rarity-ssr',
@@ -40,7 +33,7 @@ const hunterCardTitleStyle: JSX.CSSProperties = {
 
 function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 	const primary = hunter.data.elements.find((e) => e.primary) ?? hunter.data.elements[0]
-	const slug = primary ? (elementMeta[primary.name]?.slug ?? 'ember') : 'ember'
+	const slug = primary ? (ELEMENT_SLUG[primary.name] ?? 'ember') : 'ember'
 	const isNew = hunter.data.newHunter === true
 
 	return (
@@ -150,7 +143,7 @@ function HunterCardItem({ hunter }: { hunter: HunterCard }) {
 
 				<div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
 					{hunter.data.elements.map((el) => {
-						const s = elementMeta[el.name]?.slug ?? 'ember'
+						const s = ELEMENT_SLUG[el.name] ?? 'ember'
 						return (
 							<span
 								key={el.name}
@@ -266,12 +259,11 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 							return 0
 						})
 					if (group.length === 0) return null
-					const meta = elementMeta[el]
 					return (
 						<div key={el}>
 							<div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
 								<ElementBar element={el} />
-								<img src={meta.icon} alt={el} style={{ width: 20, height: 20 }} />
+								<img src={ELEMENT_ICON[el]} alt={el} style={{ width: 20, height: 20 }} />
 								<h3
 									style={{
 										fontFamily: 'var(--sla-font-hud)',
@@ -280,9 +272,9 @@ export function HuntersPage({ hunters }: { hunters: HunterCard[] }) {
 										color: 'var(--sla-text-primary)',
 									}}
 								>
-									{meta.label}
+									{ELEMENT_LABEL_FR[el]}
 								</h3>
-								<span className={`sla-elem-badge sla-elem-badge-${meta.slug}`}>
+								<span className={`sla-elem-badge sla-elem-badge-${ELEMENT_SLUG[el]}`}>
 									{group.length} chasseur{group.length > 1 ? 's' : ''}
 								</span>
 							</div>

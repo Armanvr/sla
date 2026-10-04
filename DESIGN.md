@@ -11,6 +11,7 @@ colors:
   spectral-dim: "#928ea3"
   danger: "#ffb4ab"
   danger-bg: "#93000a"
+  mana-wash: "rgba(97, 55, 255, 0.12)"
   success: "#3a8a4a"
   void: "#000000"
   base: "#131313"
@@ -194,7 +195,8 @@ A void-black interface lit by one electric violet, with game-coded element and r
 - **Elements:** `elem-dark`, `elem-fire`, `elem-water`, `elem-light`, `elem-wind`. Used for element badges, element accent bars and 10% top-gradient tints on hunter cards. They mirror the game's color code and must stay recognizable.
 - **Rarity:** `rarity-ssr` (amber), `rarity-sr` (purple), `rarity-r` (blue) for rarity badges only.
 - **States:** `danger` / `danger-bg` for critical, `success` for success badges. Weakness and resistance banners use green and red tints to match in-game meaning.
-- **Weakness / resistance:** `weak` (#34d399) and `resist` (#f87171) as text, borders, dots and icon glows, with 8% tints `weak-bg` / `resist-bg` for banner fills. Always paired with a text label ("Faiblesses", "Résistances", "★ recommandé", "✗ résistance"). Exposed to Tailwind as `text-weak`, `border-resist/50`, etc.
+- **Weakness / resistance:** `weak` (#34d399) and `resist` (#f87171) as text, borders, dots and icon glows, with 8% tints `weak-bg` / `resist-bg` for banner fills. Always paired with a text label ("Faiblesses", "Résistances", "★ recommandé", "✗ résistance"). Exposed to Tailwind as `text-weak`, `border-resist/50`, etc. The same pair encodes direction elsewhere (build score good / poor, advancement effect increase / decrease), always with a glyph or a number beside it (↑ ↓ ~, 12/12), never color alone.
+- **Mana wash:** `mana-wash` (12% mana, `bg-bg-wash`) fills selected options, active chips and "other" effect rows; text on it is `mana-bright`. Open or active slot borders use `mana`; resting slot borders use `border` and hover `mana-dim`.
 
 ### Named Rules
 **The One Light Rule.** Mana violet is the only accent. Warm orange (`rgba(194, 94, 28, …)`, `rgba(255, 74, 28, …)`) is legacy ember drift. Replace it with mana when touched, and never introduce it in new work.
@@ -315,7 +317,7 @@ New pickers reuse it; don't hand-roll another backdrop dropdown.
 A global `:focus-visible` ring: 2px mana-bright outline, 2px offset. Cut-corner elements (panels, buttons, tags, badges) use a -3px inset offset so the clip-path doesn't hide the ring. A "Aller au contenu" skip link (mana fill, white text) appears top-left on first Tab.
 
 ### Inputs / Fields
-No SLA-native input style exists yet. Search and select fields are still in the legacy Tailwind zinc dialect. Design them from the tokens (border-bright stroke, container fill, mana focus) when they are next touched; don't copy the zinc styling.
+Search fields and selects share `.sla-input` (`sla-elements.css`): container fill, 1px border-bright stroke, text-primary value, text-muted placeholder, and a mana border on focus (the global `:focus-visible` ring stays on top). It is unlayered CSS, so don't set bg, border-color or text-color utilities on the same element; size, padding and font-size utilities are fine. Checkboxes keep the native control tinted with `accent-mana`. Pickers' search inputs inside a Slot Picker use the same class.
 
 ## Do's and Don'ts
 
@@ -332,6 +334,6 @@ No SLA-native input style exists yet. Search and select fields are still in the 
 - **Don't** introduce warm orange or reuse the legacy ember RGB values; `ember` means mana.
 - **Don't** round corners or rely on Tailwind `rounded-*` to shape anything.
 - **Don't** add drop shadows for elevation; depth is glow and tonal layering only.
-- **Don't** add new Tailwind `zinc-*` / `purple-*` styling; that dialect is legacy pending migration to SLA tokens.
+- **Don't** use raw Tailwind palette classes (zinc, purple, amber…); use SLA tokens or their theme utilities.
 - **Don't** use element or rarity colors decoratively, or as a second brand accent.
 - **Don't** add a light theme; the System window is always lit violet on black.

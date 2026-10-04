@@ -27,7 +27,11 @@
 
   /* Danger */
   --color-crimson: #ffb4ab;
+  --color-danger: var(--sla-danger);
   --color-danger-bg: #93000a;
+
+  /* Mana wash: selected / active fill (same 12% as .sla-tab[aria-pressed]) */
+  --color-bg-wash: rgba(97, 55, 255, 0.12);
 
   /* Surfaces */
   --color-bg-deep: #000000;

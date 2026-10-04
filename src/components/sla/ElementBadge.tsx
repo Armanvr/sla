@@ -1,6 +1,6 @@
 type Element = 'Dark' | 'Fire' | 'Water' | 'Light' | 'Wind' | 'Ember'
 
-const slug: Record<Element, string> = {
+export const ELEMENT_SLUG: Record<string, string> = {
 	Dark: 'dark',
 	Fire: 'fire',
 	Water: 'water',
@@ -9,7 +9,7 @@ const slug: Record<Element, string> = {
 	Ember: 'ember',
 }
 
-const labelFr: Record<Element, string> = {
+export const ELEMENT_LABEL_FR: Record<string, string> = {
 	Dark: 'Ténèbres',
 	Fire: 'Feu',
 	Water: 'Eau',
@@ -19,12 +19,12 @@ const labelFr: Record<Element, string> = {
 }
 
 export function ElementBadge({ element, label }: { element: Element; label?: string }) {
-	const s = slug[element]
-	return <span className={`sla-elem-badge sla-elem-badge-${s}`}>{label ?? labelFr[element]}</span>
+	const s = ELEMENT_SLUG[element]
+	return <span className={`sla-elem-badge sla-elem-badge-${s}`}>{label ?? ELEMENT_LABEL_FR[element]}</span>
 }
 
 export function ElementBar({ element }: { element: Element }) {
-	const s = slug[element]
+	const s = ELEMENT_SLUG[element]
 	return <span className={`sla-elem-bar sla-elem-bar-${s}`} />
 }
 

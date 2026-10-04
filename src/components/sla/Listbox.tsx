@@ -31,14 +31,14 @@ export const EmptyOption = ({ selected, onClick }: { selected: boolean; onClick:
 			type='button'
 			{...optionProps(selected)}
 			onClick={onClick}
-			className='w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors'
+			className='w-full flex items-center gap-3 px-3 py-2 hover:bg-bg-container transition-colors'
 		>
-			<div className='w-8 h-8 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 flex-shrink-0'>
+			<div className='w-8 h-8 bg-bg-container border border-dashed border-border-sla-bright flex items-center justify-center text-text-sla-muted flex-shrink-0'>
 				–
 			</div>
-			<span className='text-sm text-zinc-500'>— Vide —</span>
+			<span className='text-sm text-text-sla-secondary'>— Vide —</span>
 		</button>
-		<div role='none' className='border-t border-zinc-700/50' />
+		<div role='none' className='border-t border-border-sla-bright' />
 	</>
 )
 

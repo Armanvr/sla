@@ -13,12 +13,12 @@ export function RunesSection() {
 					{[0, 1, 2].map((i) => (
 						<div
 							key={i}
-							className='flex-1 flex flex-col items-center gap-2 p-3 rounded-xl border border-dashed border-zinc-700/60 bg-zinc-800/40'
+							className='flex-1 flex flex-col items-center gap-2 p-3 border border-dashed border-border-sla-bright bg-bg-surface'
 						>
-							<div className='w-12 h-12 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-lg'>
+							<div className='w-12 h-12 bg-bg-container border border-dashed border-border-sla-bright flex items-center justify-center text-text-sla-muted text-lg'>
 								–
 							</div>
-							<span className='text-label text-zinc-500 text-center'>— Vide —</span>
+							<span className='text-label text-text-sla-muted text-center'>— Vide —</span>
 						</div>
 					))}
 				</div>
@@ -34,37 +34,37 @@ export function RunesSection() {
 				</div>
 				<div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
 					<div>
-						<div className='text-label text-emerald-400 font-semibold uppercase tracking-widest mb-2'>
+						<div className='text-label text-mana-bright font-semibold uppercase tracking-widest mb-2'>
 							Offensives
 						</div>
 						<div className='flex gap-2'>
 							{[0, 1, 2, 3].map((i) => (
 								<div
 									key={i}
-									className='flex-1 flex flex-col items-center gap-1 p-2 rounded-xl border border-dashed border-zinc-700/60 bg-zinc-800/40'
+									className='flex-1 flex flex-col items-center gap-1 p-2 border border-dashed border-border-sla-bright bg-bg-surface'
 								>
-									<div className='w-10 h-10 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-sm'>
+									<div className='w-10 h-10 bg-bg-container border border-dashed border-border-sla-bright flex items-center justify-center text-text-sla-muted text-sm'>
 										–
 									</div>
-									<span className='text-label text-zinc-500'>Vide</span>
+									<span className='text-label text-text-sla-muted'>Vide</span>
 								</div>
 							))}
 						</div>
 					</div>
 					<div>
-						<div className='text-label text-blue-400 font-semibold uppercase tracking-widest mb-2'>
+						<div className='text-label text-mana-bright font-semibold uppercase tracking-widest mb-2'>
 							Défensives
 						</div>
 						<div className='flex gap-2'>
 							{[0, 1, 2, 3].map((i) => (
 								<div
 									key={i}
-									className='flex-1 flex flex-col items-center gap-1 p-2 rounded-xl border border-dashed border-zinc-700/60 bg-zinc-800/40'
+									className='flex-1 flex flex-col items-center gap-1 p-2 border border-dashed border-border-sla-bright bg-bg-surface'
 								>
-									<div className='w-10 h-10 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-sm'>
+									<div className='w-10 h-10 bg-bg-container border border-dashed border-border-sla-bright flex items-center justify-center text-text-sla-muted text-sm'>
 										–
 									</div>
-									<span className='text-label text-zinc-500'>Vide</span>
+									<span className='text-label text-text-sla-muted'>Vide</span>
 								</div>
 							))}
 						</div>

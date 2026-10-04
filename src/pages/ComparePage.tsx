@@ -184,7 +184,7 @@ function HunterSearchSelect({
 						setOpen(true)
 					}}
 					placeholder='Rechercher un chasseur…'
-					className='w-full bg-zinc-800 border border-zinc-700/60 rounded-xl pl-9 pr-4 py-3 text-zinc-100 placeholder-zinc-500 focus:border-purple-500/60 transition-colors text-sm'
+					className='sla-input w-full pl-9 pr-4 py-3 text-sm'
 				/>
 			</div>
 
@@ -193,10 +193,10 @@ function HunterSearchSelect({
 					id={listId}
 					role='listbox'
 					aria-label='Chasseurs'
-					className='absolute z-30 w-full bg-zinc-800 border border-zinc-700/70 rounded-xl mt-1.5 max-h-64 overflow-y-auto shadow-2xl'
+					className='absolute z-30 w-full bg-bg-elevated border border-border-sla-bright mt-1.5 max-h-64 overflow-y-auto'
 				>
 					{filtered.length === 0 ? (
-						<p role='none' className='px-4 py-3 text-sm text-zinc-500 italic'>
+						<p role='none' className='px-4 py-3 text-sm text-text-sla-secondary italic'>
 							Aucun résultat
 						</p>
 					) : (
@@ -208,12 +208,12 @@ function HunterSearchSelect({
 								aria-selected={selectedId === h.id}
 								tabIndex={-1}
 								onMouseDown={() => handleSelect(h.id)}
-								className={`w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-zinc-700/60 flex items-center justify-between ${
-									selectedId === h.id ? 'text-purple-400 bg-purple-900/20' : 'text-zinc-200'
-								} ${i === active ? 'bg-zinc-700/60' : ''}`}
+								className={`w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-bg-container flex items-center justify-between ${
+									selectedId === h.id ? 'text-mana-bright bg-bg-wash' : 'text-text-sla'
+								} ${i === active ? 'bg-bg-container' : ''}`}
 							>
 								<span>{h.data.name}</span>
-								{selectedId === h.id && <span className='text-purple-400 text-xs'>✓</span>}
+								{selectedId === h.id && <span className='text-mana-bright text-xs'>✓</span>}
 							</div>
 						))
 					)}
@@ -230,7 +230,8 @@ function ScoreRing({ percent }: { percent: number }) {
 	const circ = 2 * Math.PI * r
 	const offset = circ - (percent / 100) * circ
 
-	const strokeColor = percent >= 80 ? '#10b981' : percent >= 50 ? '#f59e0b' : '#ef4444'
+	const strokeColor =
+		percent >= 80 ? 'var(--sla-weak)' : percent >= 50 ? 'var(--sla-mana-bright)' : 'var(--sla-resist)'
 
 	return (
 		<svg
@@ -241,26 +242,25 @@ function ScoreRing({ percent }: { percent: number }) {
 			role='img'
 			aria-label='Score ring'
 		>
-			<circle cx='65' cy='65' r={r} fill='none' stroke='#3f3f46' strokeWidth='10' />
+			<circle cx='65' cy='65' r={r} fill='none' style={{ stroke: 'var(--sla-border)' }} strokeWidth='10' />
 			<circle
 				cx='65'
 				cy='65'
 				r={r}
 				fill='none'
-				stroke={strokeColor}
 				strokeWidth='10'
 				strokeDasharray={circ}
 				strokeDashoffset={offset}
 				strokeLinecap='round'
 				transform='rotate(-90 65 65)'
-				style={{ transition: 'stroke-dashoffset 0.6s ease' }}
+				style={{ stroke: strokeColor, transition: 'stroke-dashoffset 0.6s ease' }}
 			/>
 			<text
 				x='65'
 				y='60'
 				textAnchor='middle'
 				dominantBaseline='middle'
-				fill={strokeColor}
+				style={{ fill: strokeColor }}
 				fontSize='24'
 				fontWeight='900'
 				fontFamily='inherit'
@@ -272,7 +272,7 @@ function ScoreRing({ percent }: { percent: number }) {
 				y='80'
 				textAnchor='middle'
 				dominantBaseline='middle'
-				fill='#71717a'
+				style={{ fill: 'var(--sla-text-muted)' }}
 				fontSize='10'
 				fontFamily='inherit'
 			>
@@ -290,12 +290,12 @@ function SlotBadge({ matched, total }: { matched: number; total: number }) {
 	const partial = matched > 0
 	return (
 		<span
-			className={`text-label font-bold px-1.5 py-0.5 rounded-md ${
+			className={`text-label font-bold px-1.5 py-0.5 ${
 				ok
-					? 'bg-emerald-900/40 text-emerald-400'
+					? 'bg-weak-bg text-weak'
 					: partial
-						? 'bg-amber-900/40 text-amber-400'
-						: 'bg-zinc-800 text-zinc-500'
+						? 'bg-bg-wash text-mana-bright'
+						: 'bg-bg-container text-text-sla-muted'
 			}`}
 		>
 			{matched}/{total}
@@ -307,10 +307,10 @@ function SlotBadge({ matched, total }: { matched: number; total: number }) {
 
 function SectionTitle({ children }: { children: string }) {
 	return (
-		<p className='text-xs font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-2'>
-			<span className='h-px flex-1 bg-zinc-800' />
+		<p className='text-xs font-bold text-text-sla-secondary uppercase tracking-widest flex items-center gap-2'>
+			<span className='h-px flex-1 bg-border-sla' />
 			{children}
-			<span className='h-px flex-1 bg-zinc-800' />
+			<span className='h-px flex-1 bg-border-sla' />
 		</p>
 	)
 }
@@ -320,10 +320,10 @@ function SectionTitle({ children }: { children: string }) {
 function ColHeader({ children, accent }: { children: string; accent?: boolean }) {
 	return (
 		<div
-			className={`rounded-xl px-4 py-2 text-xs font-bold uppercase tracking-wider text-center mb-4 ${
+			className={`px-4 py-2 text-xs font-bold uppercase tracking-wider text-center mb-4 ${
 				accent
-					? 'bg-purple-900/30 border border-purple-700/40 text-purple-300'
-					: 'bg-zinc-800/60 border border-zinc-700/40 text-zinc-400'
+					? 'bg-bg-wash border border-mana-dim text-mana-bright'
+					: 'bg-bg-surface border border-border-sla text-text-sla-secondary'
 			}`}
 		>
 			{children}
@@ -346,19 +346,19 @@ function CollapsibleGroup({
 }) {
 	const [open, setOpen] = useState(false)
 	return (
-		<div className='border border-zinc-800 rounded-xl overflow-hidden'>
+		<div className='border border-border-sla overflow-hidden'>
 			<button
 				type='button'
 				onClick={() => setOpen((v) => !v)}
-				className='w-full flex items-center justify-between px-4 py-3 bg-zinc-800/50 hover:bg-zinc-800/80 transition-colors'
+				className='w-full flex items-center justify-between px-4 py-3 bg-bg-surface hover:bg-bg-container transition-colors'
 			>
-				<span className='text-xs font-bold uppercase tracking-wider text-zinc-300'>{label}</span>
+				<span className='text-xs font-bold uppercase tracking-wider text-text-sla-secondary'>{label}</span>
 				<div className='flex items-center gap-2'>
 					<SlotBadge matched={matched} total={total} />
-					<span className='text-zinc-500 text-xs'>{open ? '▲' : '▼'}</span>
+					<span className='text-text-sla-muted text-xs'>{open ? '▲' : '▼'}</span>
 				</div>
 			</button>
-			{open && <div className='divide-y divide-zinc-800'>{children}</div>}
+			{open && <div className='divide-y divide-border-sla'>{children}</div>}
 		</div>
 	)
 }
@@ -384,40 +384,42 @@ function EquipSlotRow({
 	const atMax = userSlot.secondary.length >= 4
 
 	return (
-		<div className='bg-zinc-800/20'>
-			<div className='flex items-center justify-between px-4 py-2 border-b border-zinc-800/60'>
-				<p className='text-label font-semibold uppercase tracking-wider text-zinc-500'>{label}</p>
+		<div className='bg-bg-surface'>
+			<div className='flex items-center justify-between px-4 py-2 border-b border-border-sla'>
+				<p className='text-label font-semibold uppercase tracking-wider text-text-sla-muted'>{label}</p>
 				<SlotBadge matched={score.matched} total={score.total} />
 			</div>
-			<div className='grid grid-cols-1 sm:grid-cols-[1fr_1fr] divide-y sm:divide-y-0 sm:divide-x divide-zinc-800'>
+			<div className='grid grid-cols-1 sm:grid-cols-[1fr_1fr] divide-y sm:divide-y-0 sm:divide-x divide-border-sla'>
 				{/* Recommended */}
 				<div className='px-4 py-3 space-y-1.5'>
-					<p className='sm:hidden text-label uppercase tracking-wider text-zinc-500 mb-1'>Recommandé</p>
+					<p className='sm:hidden text-label uppercase tracking-wider text-text-sla-muted mb-1'>Recommandé</p>
 					{rec ? (
 						<>
-							{rec.main && <p className='text-xs font-semibold text-purple-300'>{rec.main}</p>}
+							{rec.main && <p className='text-xs font-semibold text-mana-bright'>{rec.main}</p>}
 							<ul className='space-y-0.5'>
 								{rec.secondary.map((s) => (
-									<li key={s} className='text-meta text-zinc-400 flex items-center gap-1'>
-										<span className='text-purple-500 text-label'>●</span> {s}
+									<li key={s} className='text-meta text-text-sla-secondary flex items-center gap-1'>
+										<span className='text-mana-bright text-label'>●</span> {s}
 									</li>
 								))}
 							</ul>
 						</>
 					) : (
-						<p className='text-xs text-zinc-600 italic'>—</p>
+						<p className='text-xs text-text-sla-muted italic'>—</p>
 					)}
 				</div>
 
 				{/* User input */}
 				<div className='px-4 py-3 space-y-2'>
-					<p className='sm:hidden text-label uppercase tracking-wider text-zinc-500 mb-1'>Votre build</p>
+					<p className='sm:hidden text-label uppercase tracking-wider text-text-sla-muted mb-1'>
+						Votre build
+					</p>
 					{rec?.main !== undefined && (
 						<select
 							value={userSlot.main}
 							aria-label={`Stat principale — ${label}`}
 							onChange={(e) => onMainChange(iconKey, (e.target as HTMLSelectElement).value)}
-							className='w-full bg-zinc-800 border border-zinc-700/50 rounded-lg px-2 py-1 text-xs text-zinc-200 focus:border-purple-500/60 transition-colors'
+							className='sla-input w-full px-2 py-1 text-xs'
 						>
 							<option value=''>— Principale —</option>
 							{MAIN_STATS.map((s) => (
@@ -441,9 +443,9 @@ function EquipSlotRow({
 										checked={checked}
 										disabled={disabled}
 										onChange={() => !disabled && onSecondaryToggle(iconKey, stat)}
-										className='accent-purple-500 w-2.5 h-2.5 flex-shrink-0'
+										className='accent-mana w-2.5 h-2.5 flex-shrink-0'
 									/>
-									<span className='text-label text-zinc-300 leading-tight'>{stat}</span>
+									<span className='text-label text-text-sla-secondary leading-tight'>{stat}</span>
 								</label>
 							)
 						})}
@@ -553,28 +555,31 @@ function CoreCompare({
 
 				return (
 					<CollapsibleGroup key={key} label={`${emoji} ${label}`} matched={score.matched} total={score.total}>
-						<div className='grid grid-cols-1 sm:grid-cols-[1fr_1fr] divide-y sm:divide-y-0 sm:divide-x divide-zinc-800 bg-zinc-800/20'>
+						<div className='grid grid-cols-1 sm:grid-cols-[1fr_1fr] divide-y sm:divide-y-0 sm:divide-x divide-border-sla bg-bg-surface'>
 							{/* Recommended */}
 							<div className='px-4 py-3'>
-								<p className='sm:hidden text-label uppercase tracking-wider text-zinc-500 mb-1'>
+								<p className='sm:hidden text-label uppercase tracking-wider text-text-sla-muted mb-1'>
 									Recommandé
 								</p>
 								{recStats && recStats.length > 0 ? (
 									<ul className='space-y-0.5'>
 										{recStats.map((s) => (
-											<li key={s} className='text-meta text-zinc-400 flex items-center gap-1'>
-												<span className='text-purple-500 text-label'>●</span> {s}
+											<li
+												key={s}
+												className='text-meta text-text-sla-secondary flex items-center gap-1'
+											>
+												<span className='text-mana-bright text-label'>●</span> {s}
 											</li>
 										))}
 									</ul>
 								) : (
-									<p className='text-xs text-zinc-600 italic'>—</p>
+									<p className='text-xs text-text-sla-muted italic'>—</p>
 								)}
 							</div>
 
 							{/* User input */}
 							<div className='px-4 py-3'>
-								<p className='sm:hidden text-label uppercase tracking-wider text-zinc-500 mb-1'>
+								<p className='sm:hidden text-label uppercase tracking-wider text-text-sla-muted mb-1'>
 									Votre build
 								</p>
 								<div className='space-y-0.5'>
@@ -589,9 +594,11 @@ function CoreCompare({
 													type='checkbox'
 													checked={checked}
 													onChange={() => onCoreStatToggle(key, stat)}
-													className='accent-purple-500 w-2.5 h-2.5 flex-shrink-0'
+													className='accent-mana w-2.5 h-2.5 flex-shrink-0'
 												/>
-												<span className='text-label text-zinc-300 leading-tight'>{stat}</span>
+												<span className='text-label text-text-sla-secondary leading-tight'>
+													{stat}
+												</span>
 											</label>
 										)
 									})}
@@ -714,7 +721,7 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 
 				{/* ── Hunter hero + score ── */}
 				{selectedHunter && (
-					<div className='bg-zinc-800/30 border border-zinc-700/50 rounded-2xl p-5'>
+					<div className='bg-bg-surface border border-border-sla p-5'>
 						<div className='flex items-center gap-5'>
 							{/* Portrait */}
 							<div className='relative flex-shrink-0'>
@@ -724,13 +731,15 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 									width={80}
 									height={80}
 									alt={selectedHunter.data.name}
-									className='w-20 h-20 rounded-xl object-cover border-2 border-zinc-700/60 shadow-xl'
+									className='w-20 h-20 object-cover border-2 border-border-sla'
 									onError={(e) => {
 										;(e.target as HTMLImageElement).style.display = 'none'
 									}}
 								/>
 								{selectedHunter.data.rarity && (
-									<span className='absolute -top-1.5 -right-1.5 text-label font-bold bg-zinc-900 border border-amber-400/40 text-amber-400 px-1.5 py-0.5 rounded-md'>
+									<span
+										className={`absolute -top-1.5 -right-1.5 bg-bg-surface sla-rarity sla-rarity-${selectedHunter.data.rarity.toLowerCase()}`}
+									>
 										{selectedHunter.data.rarity}
 									</span>
 								)}
@@ -738,32 +747,34 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 
 							{/* Info + progress bar */}
 							<div className='flex-1 min-w-0'>
-								<h2 className='text-lg font-bold text-zinc-100 truncate'>{selectedHunter.data.name}</h2>
+								<h2 className='text-lg font-bold text-text-sla truncate'>{selectedHunter.data.name}</h2>
 								{selectedHunter.data.element && (
-									<p className='text-xs text-zinc-500 mb-3'>
+									<p className='text-xs text-text-sla-muted mb-3'>
 										{selectedHunter.data.element} · {selectedHunter.data.class}
 									</p>
 								)}
 								{hasRecommendedBuild ? (
 									<>
-										<p className='text-xs text-zinc-500 mb-1.5'>
+										<p className='text-xs text-text-sla-muted mb-1.5'>
 											{scoreLabel} — {matched} / {total} stats
 										</p>
-										<div className='h-2 bg-zinc-700/60 rounded-full overflow-hidden'>
+										<div className='h-2 bg-border-sla overflow-hidden'>
 											<div
-												className={`h-full rounded-full transition-all duration-700 ${
+												className={`h-full transition-all duration-700 ${
 													percent >= 80
-														? 'bg-emerald-500'
+														? 'bg-weak'
 														: percent >= 50
-															? 'bg-amber-500'
-															: 'bg-red-500'
+															? 'bg-mana-bright'
+															: 'bg-resist'
 												}`}
 												style={`width:${percent}%`}
 											/>
 										</div>
 									</>
 								) : (
-									<p className='text-xs text-zinc-500 italic'>Aucun build recommandé disponible</p>
+									<p className='text-xs text-text-sla-muted italic'>
+										Aucun build recommandé disponible
+									</p>
 								)}
 							</div>
 
@@ -775,11 +786,11 @@ export function ComparePage({ hunters }: { hunters: Hunter[] }) {
 
 				{/* ── No build state ── */}
 				{selectedHunter && !hasRecommendedBuild && (
-					<div className='bg-zinc-800/30 border border-zinc-700/50 rounded-2xl px-6 py-10 text-center'>
+					<div className='bg-bg-surface border border-border-sla px-6 py-10 text-center'>
 						<p className='text-4xl mb-3'>🔍</p>
-						<p className='text-zinc-400'>
+						<p className='text-text-sla-secondary'>
 							Aucun build recommandé disponible pour{' '}
-							<span className='text-zinc-200 font-semibold'>{selectedHunter.data.name}</span>.
+							<span className='text-text-sla font-semibold'>{selectedHunter.data.name}</span>.
 						</p>
 					</div>
 				)}

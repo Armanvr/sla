@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks'
 import { RunesSection } from '../components/hunter/RunesSection'
 import { BackLink } from '../components/sla/BackLink'
+import { ELEMENT_ICON, ELEMENT_RESISTANCE_ICON } from '../components/sla/elements'
 import { SectionHeader } from '../components/sla/SectionHeader'
 import { AdvancementEffectsTable } from '../components/team/AdvancementEffectsTable'
 import { ElementTabs } from '../components/team/ElementTabs'
@@ -64,24 +65,6 @@ function fmtDate(d: Date): string {
 	return `${d.getUTCDate()} ${MONTHS_FR[d.getUTCMonth()]}`
 }
 
-// ── Element icons (for the rotation banner) ───────────────────────────────────
-
-const ELEMENT_ICON: Record<string, string> = {
-	Dark: '/assets/utils/Dark_Element.png',
-	Water: '/assets/utils/Water_Element.png',
-	Fire: '/assets/utils/Fire_Element.png',
-	Light: '/assets/utils/Light_Element.png',
-	Wind: '/assets/utils/Wind_Element.png',
-}
-
-const ELEMENT_RESISTANCE_ICON: Record<string, string> = {
-	Dark: '/assets/utils/Dark_Element_Resistance.png',
-	Water: '/assets/utils/Water_Element_Resistance.png',
-	Fire: '/assets/utils/Fire_Element_Resistance.png',
-	Light: '/assets/utils/Light_Element_Resistance.png',
-	Wind: '/assets/utils/Wind_Element_Resistance.png',
-}
-
 // ── Rotation lookup ───────────────────────────────────────────────────────────
 
 interface RotationEntry {
@@ -113,13 +96,13 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 	const { start, end } = getWeekDateRange(new Date())
 
 	return (
-		<div className='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
-			<div className='flex items-center justify-between px-4 py-3 border-b border-zinc-700/40'>
+		<div className='bg-bg-surface border border-border-sla overflow-hidden'>
+			<div className='flex items-center justify-between px-4 py-3 border-b border-border-sla'>
 				<div>
-					<p className='text-label text-zinc-500 uppercase tracking-wider'>Rotation hebdomadaire</p>
-					<p className='text-sm font-semibold text-zinc-100'>
+					<p className='text-label text-text-sla-muted uppercase tracking-wider'>Rotation hebdomadaire</p>
+					<p className='text-sm font-semibold text-text-sla'>
 						Semaine {week}
-						<span className='ml-2 text-xs font-normal text-zinc-400'>
+						<span className='ml-2 text-xs font-normal text-text-sla-secondary'>
 							{fmtDate(start)} – {fmtDate(end)}
 						</span>
 					</p>
@@ -128,7 +111,7 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 
 			{rotation ? (
 				<div className='flex'>
-					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-weak-bg border-r border-zinc-700/40'>
+					<div className='flex-1 flex flex-col items-center gap-2 px-4 py-3 bg-weak-bg border-r border-border-sla'>
 						<span className='text-meta font-bold text-weak uppercase tracking-widest'>Faiblesses</span>
 						<div className='flex gap-3 flex-wrap justify-center'>
 							{rotation.weakness.map((el) =>
@@ -164,7 +147,7 @@ function WeekRotationBanner({ rotation }: { rotation: RotationEntry | null }) {
 					</div>
 				</div>
 			) : (
-				<p className='px-4 py-3 text-sm text-zinc-500'>Rotation inconnue pour cette semaine.</p>
+				<p className='px-4 py-3 text-sm text-text-sla-muted'>Rotation inconnue pour cette semaine.</p>
 			)}
 		</div>
 	)

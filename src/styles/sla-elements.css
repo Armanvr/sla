@@ -321,22 +321,38 @@
 	color: var(--sla-danger);
 }
 /* Selected, secondary (must stay after the hover rules) */
-.sla-tab[aria-pressed='true'] {
+.sla-tab[aria-pressed="true"] {
 	background-image: linear-gradient(rgba(97, 55, 255, 0.12), rgba(97, 55, 255, 0.12));
 	border-color: var(--sla-mana);
 	color: var(--sla-mana-bright);
 }
 /* Selected, primary (border comes from the rule above) */
-.sla-tab-primary[aria-pressed='true'] {
+.sla-tab-primary[aria-pressed="true"] {
 	background: var(--sla-mana);
 	color: #ffffff;
+}
+
+/* Inputs: search fields and selects. Container fill, border-bright stroke, mana border on focus
+   (the global :focus-visible ring stays). Checkboxes use Tailwind's accent-mana. */
+.sla-input {
+	background: var(--sla-bg-container);
+	border: var(--sla-border-width) solid var(--sla-border-bright);
+	color: var(--sla-text-primary);
+	color-scheme: dark;
+	transition: border-color var(--sla-duration-fast) var(--sla-ease-out);
+}
+.sla-input::placeholder {
+	color: var(--sla-text-muted);
+}
+.sla-input:focus {
+	border-color: var(--sla-mana);
 }
 
 /* Selectable card (Monarch / Successor pickers) */
 .sla-select-card:hover {
 	border-color: var(--sla-mana-dim);
 }
-.sla-select-card[aria-pressed='true'] {
+.sla-select-card[aria-pressed="true"] {
 	border-color: var(--sla-mana);
 	box-shadow: var(--sla-glow-sm);
 }

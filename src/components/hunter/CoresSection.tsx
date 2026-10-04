@@ -56,12 +56,10 @@ function CoreSlot({
 				<button
 					type='button'
 					{...popupAttrs}
-					className={`w-full flex items-center gap-3 bg-zinc-800/60 border rounded-xl py-3 text-left transition-colors ${
+					className={`w-full flex items-center gap-3 bg-bg-surface border py-3 text-left transition-colors ${
 						selected && !isLocked ? 'pl-3 pr-9' : 'px-3'
 					} ${
-						isOpen
-							? 'border-purple-500/60'
-							: `border-zinc-700/60 ${isLocked ? '' : 'hover:border-zinc-500/60'}`
+						isOpen ? 'border-mana' : `border-border-sla ${isLocked ? '' : 'hover:border-border-sla-bright'}`
 					} ${isLocked ? 'cursor-default opacity-80' : ''}`}
 				>
 					{selected ? (
@@ -72,7 +70,7 @@ function CoreSlot({
 							width={48}
 							height={48}
 							alt={selected.name}
-							className='w-12 h-12 rounded-lg object-cover flex-shrink-0 bg-zinc-700/40'
+							className='w-12 h-12 object-cover flex-shrink-0 bg-bg-container'
 							onError={(e) => {
 								;(e.target as HTMLImageElement).style.display = 'none'
 							}}
@@ -85,27 +83,27 @@ function CoreSlot({
 							width={48}
 							height={48}
 							alt='Au choix'
-							className='w-12 h-12 rounded-lg object-cover flex-shrink-0 bg-zinc-700/40'
+							className='w-12 h-12 object-cover flex-shrink-0 bg-bg-container'
 							onError={(e) => {
 								;(e.target as HTMLImageElement).style.display = 'none'
 							}}
 						/>
 					) : (
-						<div className='w-12 h-12 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-lg flex-shrink-0'>
+						<div className='w-12 h-12 bg-bg-container border border-dashed border-border-sla-bright flex items-center justify-center text-text-sla-muted text-lg flex-shrink-0'>
 							+
 						</div>
 					)}
 					<div className='flex-1 min-w-0'>
-						<p className='text-label text-zinc-500 uppercase tracking-wider leading-none mb-0.5'>
+						<p className='text-label text-text-sla-muted uppercase tracking-wider leading-none mb-0.5'>
 							{emoji} {label}
 						</p>
 						<p
-							className={`text-sm truncate ${selected ? 'text-zinc-100 font-medium' : isFreeChoice ? 'text-zinc-400 italic' : 'text-zinc-500'}`}
+							className={`text-sm truncate ${selected ? 'text-text-sla font-medium' : isFreeChoice ? 'text-text-sla-secondary italic' : 'text-text-sla-muted'}`}
 						>
 							{selected ? selected.name : isFreeChoice ? 'Au choix' : '—'}
 						</p>
 						{isLocked && (
-							<span className='text-label text-emerald-400 font-semibold uppercase tracking-wider mt-0.5'>
+							<span className='text-label text-mana-bright font-semibold uppercase tracking-wider mt-0.5'>
 								Obligatoire
 							</span>
 						)}
@@ -118,7 +116,7 @@ function CoreSlot({
 							select(null)
 							lb.focusTrigger()
 						}}
-						className='absolute right-[5px] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-zinc-500 hover:text-red-400 transition-colors text-lg leading-none cursor-pointer'
+						className='absolute right-[5px] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-text-sla-muted hover:text-danger transition-colors text-lg leading-none cursor-pointer'
 						aria-label='Vider le slot'
 					>
 						×
@@ -129,7 +127,7 @@ function CoreSlot({
 			{isOpen && (
 				<Listbox
 					{...lb.popupProps}
-					className='absolute z-50 top-full mt-1 left-0 w-64 max-h-64 overflow-y-auto bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl'
+					className='absolute z-50 top-full mt-1 left-0 w-64 max-h-64 overflow-y-auto bg-bg-elevated border border-border-sla-bright'
 				>
 					<EmptyOption selected={!selectedId} onClick={() => select(null)} />
 					{cores.map((core) => (
@@ -138,7 +136,7 @@ function CoreSlot({
 							type='button'
 							{...optionProps(core.id === selectedId)}
 							onClick={() => select(core.id)}
-							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${core.id === selectedId ? 'bg-purple-900/20' : ''}`}
+							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-bg-container transition-colors ${core.id === selectedId ? 'bg-bg-wash' : ''}`}
 						>
 							<img
 								src={core.icon}
@@ -147,12 +145,12 @@ function CoreSlot({
 								width={32}
 								height={32}
 								alt=''
-								className='w-8 h-8 rounded-lg object-cover flex-shrink-0 bg-zinc-700/40'
+								className='w-8 h-8 object-cover flex-shrink-0 bg-bg-container'
 								onError={(e) => {
 									;(e.target as HTMLImageElement).style.display = 'none'
 								}}
 							/>
-							<span className='text-sm text-zinc-200 text-left'>{core.name}</span>
+							<span className='text-sm text-text-sla text-left'>{core.name}</span>
 						</button>
 					))}
 				</Listbox>
@@ -167,16 +165,14 @@ export function CoresSection({
 	coreBuild,
 	coreStats,
 	showDetails = true,
-	compact = false,
-	hunterClass,
+	hunterCategory,
 }: {
 	coreBuild?: CoreBuild
 	coreStats?: CoreStats
 	showDetails?: boolean
-	compact?: boolean
-	hunterClass?: string
+	hunterCategory?: string
 }) {
-	const isSupporterLocked = hunterClass === 'Supporter'
+	const isSupporterLocked = hunterCategory === 'Supporter'
 	const SUPPORTER_SPIRIT = 'ferocious-protectors-claw'
 
 	const [slots, setSlots] = useState<Record<'mind' | 'body' | 'spirit', string | null>>({
@@ -225,7 +221,9 @@ export function CoresSection({
 		<div>
 			{coreBuild && (
 				<div className='flex flex-wrap items-center gap-2 mb-5'>
-					<span className='text-xs font-semibold text-zinc-400 uppercase tracking-wider'>Build :</span>
+					<span className='text-xs font-semibold text-text-sla-secondary uppercase tracking-wider'>
+						Build :
+					</span>
 					<button
 						type='button'
 						onClick={applyCoreBuild}
@@ -244,7 +242,7 @@ export function CoresSection({
 				</div>
 			)}
 
-			<div className={`grid gap-3 ${compact ? 'grid-cols-1' : 'grid-cols-1'}`}>
+			<div className={'grid gap-3 grid-cols-1'}>
 				{CORE_SLOTS.map(({ key, label, emoji }) => {
 					const selectedId = slots[key]
 					const selected = selectedId ? coreById.get(selectedId) : null
@@ -264,8 +262,8 @@ export function CoresSection({
 							onSelect={(id) => selectCore(key, id)}
 						>
 							{showDetails && selected && (
-								<div className='mt-2 bg-zinc-800/30 border border-zinc-700/40 rounded-lg px-3 py-2'>
-									<p className='text-xs text-zinc-400 leading-relaxed'>
+								<div className='mt-2 bg-bg-surface border border-border-sla px-3 py-2'>
+									<p className='text-xs text-text-sla-secondary leading-relaxed'>
 										{selected.effects.legendary}
 									</p>
 								</div>

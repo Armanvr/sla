@@ -6,15 +6,15 @@ interface Props {
 }
 
 const ROW_CLASSES: Record<'increase' | 'decrease' | 'other', string> = {
-	increase: 'bg-emerald-950/40 text-emerald-300',
-	decrease: 'bg-amber-900/30 text-amber-300',
-	other: 'bg-teal-900/30 text-teal-300',
+	increase: 'bg-weak-bg text-weak',
+	decrease: 'bg-resist-bg text-resist',
+	other: 'bg-bg-wash text-mana-bright',
 }
 
 const BADGE_CLASSES: Record<'increase' | 'decrease' | 'other', string> = {
-	increase: 'bg-emerald-800/60 text-emerald-200',
-	decrease: 'bg-amber-800/50 text-amber-200',
-	other: 'bg-teal-800/50 text-teal-200',
+	increase: 'bg-weak-bg text-weak border border-weak/40',
+	decrease: 'bg-resist-bg text-resist border border-resist/40',
+	other: 'bg-bg-wash text-mana-bright border border-mana-dim',
 }
 
 const ARROW: Record<'increase' | 'decrease' | 'other', string> = {
@@ -32,13 +32,13 @@ export function AdvancementEffectsTable({ hunters }: Props) {
 
 	return (
 		<div className='mt-6'>
-			<p className='text-xs font-hud text-zinc-400 uppercase tracking-widest mb-2'>
+			<p className='text-xs font-hud text-text-sla-secondary uppercase tracking-widest mb-2'>
 				Cumul des effets d'advancements
 			</p>
-			<div className='overflow-x-auto rounded-lg border border-zinc-700/50'>
+			<div className='overflow-x-auto border border-border-sla'>
 				<table className='w-full text-sm border-collapse'>
 					<thead>
-						<tr className='bg-zinc-800/80 text-zinc-400 text-xs uppercase tracking-wider'>
+						<tr className='bg-bg-surface text-text-sla-secondary text-xs uppercase tracking-wider'>
 							<th className='px-4 py-2 text-left font-medium'>Effect</th>
 							<th className='px-4 py-2 text-right font-medium w-28'>Total</th>
 							<th className='px-4 py-2 text-center font-medium w-12'>Dir.</th>
@@ -46,19 +46,19 @@ export function AdvancementEffectsTable({ hunters }: Props) {
 					</thead>
 					<tbody>
 						{effects.map((e, i) => (
-							<tr key={i} className={`border-t border-zinc-700/30 ${ROW_CLASSES[e.direction]}`}>
+							<tr key={i} className={`border-t border-border-sla ${ROW_CLASSES[e.direction]}`}>
 								<td className='px-4 py-2 font-medium'>{e.label}</td>
 								<td className='px-4 py-2 text-right'>
 									{e.total !== null && e.rawValues.length > 0 ? (
 										<span
-											className={`inline-block px-2 py-0.5 rounded text-xs font-hud tabular-nums ${BADGE_CLASSES[e.direction]}`}
+											className={`inline-block px-2 py-0.5 text-xs font-hud tabular-nums ${BADGE_CLASSES[e.direction]}`}
 										>
 											{e.rawValues[0]?.includes('%')
 												? `${e.total.toFixed(1)}%`
 												: e.total.toFixed(1)}
 										</span>
 									) : (
-										<span className='text-zinc-500 text-xs'>—</span>
+										<span className='text-text-sla-muted text-xs'>—</span>
 									)}
 								</td>
 								<td className='px-4 py-2 text-center text-base font-bold'>{ARROW[e.direction]}</td>

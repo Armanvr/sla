@@ -48,7 +48,7 @@ export function WeaponSlot({
 				<button
 					type='button'
 					{...lb.triggerProps}
-					className={`sla-weapon-slot w-full flex items-center gap-3 bg-zinc-800/50 border rounded-xl py-2 transition-colors ${selected ? 'pl-3 pr-9' : 'px-3'} ${open ? 'border-amber-500/60' : 'border-amber-900/40 hover:border-amber-600/50'}`}
+					className={`sla-weapon-slot w-full flex items-center gap-3 bg-bg-surface border py-2 transition-colors ${selected ? 'pl-3 pr-9' : 'px-3'} ${open ? 'border-mana' : 'border-border-sla hover:border-mana-dim'}`}
 				>
 					{selected ? (
 						<>
@@ -59,19 +59,19 @@ export function WeaponSlot({
 								width={40}
 								height={40}
 								alt={selected.name}
-								className='w-10 h-10 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
+								className='w-10 h-10 object-contain bg-bg-container flex-shrink-0'
 								onError={(e) => {
 									;(e.target as HTMLImageElement).style.display = 'none'
 								}}
 							/>
-							<p className='flex-1 min-w-0 text-sm font-medium text-zinc-100 text-left truncate leading-tight'>
+							<p className='flex-1 min-w-0 text-sm font-medium text-text-sla text-left truncate leading-tight'>
 								{selected.name}
 							</p>
 						</>
 					) : (
 						<>
-							<div className='w-10 h-10 rounded-lg bg-amber-900/10 border border-dashed border-amber-800/40 flex-shrink-0' />
-							<p className='text-xs text-zinc-500'>Arme {slot}</p>
+							<div className='w-10 h-10 bg-bg-container border border-dashed border-border-sla-bright flex-shrink-0' />
+							<p className='text-xs text-text-sla-muted'>Arme {slot}</p>
 						</>
 					)}
 				</button>
@@ -82,7 +82,7 @@ export function WeaponSlot({
 							select(null)
 							lb.focusTrigger()
 						}}
-						className='absolute right-[5px] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-zinc-600 hover:text-red-400 transition-colors text-lg leading-none'
+						className='absolute right-[5px] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-text-sla-muted hover:text-danger transition-colors text-lg leading-none'
 						aria-label='Retirer cette arme'
 					>
 						×
@@ -93,10 +93,10 @@ export function WeaponSlot({
 			{open && (
 				<Listbox
 					{...lb.popupProps}
-					className='absolute z-50 top-full mt-1 left-0 w-64 bg-zinc-800 border border-zinc-700 rounded-xl shadow-2xl flex flex-col'
+					className='absolute z-50 top-full mt-1 left-0 w-64 bg-bg-elevated border border-border-sla-bright flex flex-col'
 					listClassName='max-h-64 overflow-y-auto'
 					header={
-						<div className='p-2 border-b border-zinc-700/50'>
+						<div className='p-2 border-b border-border-sla'>
 							<input
 								type='text'
 								data-autofocus={autofocusSearch || undefined}
@@ -104,7 +104,7 @@ export function WeaponSlot({
 								placeholder='Rechercher...'
 								value={search}
 								onInput={(e) => setSearch((e.target as HTMLInputElement).value)}
-								className='w-full bg-zinc-700/50 border border-zinc-600/50 rounded-lg px-2 py-1 text-xs text-zinc-200 placeholder-zinc-500 focus:border-amber-500/50'
+								className='sla-input w-full px-2 py-1 text-xs'
 							/>
 						</div>
 					}
@@ -125,7 +125,7 @@ export function WeaponSlot({
 								select(w)
 								close()
 							}}
-							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${selected?.name === w.name ? 'bg-amber-900/20' : ''}`}
+							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-bg-container transition-colors ${selected?.name === w.name ? 'bg-bg-wash' : ''}`}
 						>
 							<img
 								src={w.icon}
@@ -134,16 +134,16 @@ export function WeaponSlot({
 								width={32}
 								height={32}
 								alt=''
-								className='w-8 h-8 rounded-lg object-contain flex-shrink-0 bg-zinc-700/40'
+								className='w-8 h-8 object-contain flex-shrink-0 bg-bg-container'
 								onError={(e) => {
 									;(e.target as HTMLImageElement).style.display = 'none'
 								}}
 							/>
-							<span className='min-w-0 text-sm text-zinc-200 truncate text-left'>{w.name}</span>
+							<span className='min-w-0 text-sm text-text-sla truncate text-left'>{w.name}</span>
 						</button>
 					))}
 					{filtered.length === 0 && (
-						<p role='none' className='px-3 py-2 text-xs text-zinc-500 italic'>
+						<p role='none' className='px-3 py-2 text-xs text-text-sla-secondary italic'>
 							Aucune arme trouvée
 						</p>
 					)}

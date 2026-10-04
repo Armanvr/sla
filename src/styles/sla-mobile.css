@@ -197,6 +197,7 @@
 		width: auto;
 		margin: 0;
 		max-height: 60vh;
+		/* biome-ignore lint/suspicious/noDuplicateProperties: vh fallback for browsers without dvh */
 		max-height: 60dvh;
 		overflow-y: auto;
 		overscroll-behavior: contain;

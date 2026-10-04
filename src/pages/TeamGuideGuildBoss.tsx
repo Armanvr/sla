@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks'
 import { RunesSection } from '../components/hunter/RunesSection'
 import { BackLink } from '../components/sla/BackLink'
+import { ELEMENT_ICON } from '../components/sla/elements'
 import { SectionHeader } from '../components/sla/SectionHeader'
 import { AdvancementEffectsTable } from '../components/team/AdvancementEffectsTable'
 import { ElementTabs } from '../components/team/ElementTabs'
@@ -19,14 +20,6 @@ import teamsConfig from '../data/teams/guild-boss.json'
 const RANDOM_ROLES = ['Striker', 'Striker', 'Breaker', 'Elemental Stacker', 'Supporter', 'Supporter']
 
 const modeForElement = (el: string): PuissanceMode => (el === 'Wind' ? 'successor' : 'monarch')
-
-const ELEMENT_ICON: Record<string, string> = {
-	Dark: '/assets/utils/Dark_Element.png',
-	Water: '/assets/utils/Water_Element.png',
-	Fire: '/assets/utils/Fire_Element.png',
-	Light: '/assets/utils/Light_Element.png',
-	Wind: '/assets/utils/Wind_Element.png',
-}
 
 interface SlotState {
 	hunter: Hunter | null
@@ -58,19 +51,19 @@ interface GbTeamEntry {
 
 function ActiveBossBanner({ boss }: { boss: BossEntry }) {
 	return (
-		<div className='bg-zinc-800/40 border border-zinc-700/40 rounded-xl overflow-hidden'>
-			<div className='flex items-center gap-4 px-4 py-3 border-b border-zinc-700/40'>
+		<div className='bg-bg-surface border border-border-sla overflow-hidden'>
+			<div className='flex items-center gap-4 px-4 py-3 border-b border-border-sla'>
 				<img
 					src={`/${boss.icon}`}
 					alt={boss.name}
-					className='w-14 h-14 object-contain rounded-lg bg-zinc-700/30 flex-shrink-0'
+					className='w-14 h-14 object-contain bg-bg-container flex-shrink-0'
 					onError={(e) => {
 						;(e.target as HTMLImageElement).style.display = 'none'
 					}}
 				/>
 				<div>
-					<p className='text-label text-zinc-500 uppercase tracking-wider'>Boss actif</p>
-					<p className='text-sm font-semibold text-zinc-100'>{boss.name}</p>
+					<p className='text-label text-text-sla-muted uppercase tracking-wider'>Boss actif</p>
+					<p className='text-sm font-semibold text-text-sla'>{boss.name}</p>
 				</div>
 			</div>
 

@@ -1,8 +1,8 @@
 import type { JSX } from 'preact'
 import { CoresSection } from './hunter/CoresSection'
 import { EquipmentSection } from './hunter/EquipmentSection'
-import { StatBar } from './hunter/HeroSection'
 import { RunesSection } from './hunter/RunesSection'
+import { StatBar } from './hunter/StatBar'
 import type { HunterData } from './hunter/types'
 import { BackLink } from './sla/BackLink'
 import { SectionHeader } from './sla/SectionHeader'
@@ -173,7 +173,8 @@ function HunterImageCard({ data }: { data: HunterData }) {
 	)
 }
 
-function HunterStatsCard({ data, hasStats, maxStat }: { data: HunterData; hasStats: boolean; maxStat: number }) {
+function HunterStatsCard({ data, maxStat }: { data: HunterData; maxStat: number }) {
+	const stats = data.baseStats?.maxLevel
 	return (
 		<div className='sla-dossier-stats'>
 			<div className='sla-panel' style={{ padding: 20 }}>
@@ -183,7 +184,7 @@ function HunterStatsCard({ data, hasStats, maxStat }: { data: HunterData; hasSta
 				>
 					{'// Base Stats'}
 				</div>
-				{hasStats ? (
+				{stats ? (
 					<>
 						<div className='sla-label' style={{ marginBottom: 12, color: 'var(--sla-mana-bright)' }}>
 							Max Level (5★ + 5D)
@@ -191,19 +192,19 @@ function HunterStatsCard({ data, hasStats, maxStat }: { data: HunterData; hasSta
 						<div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
 							<StatBar
 								label='HP'
-								value={data.baseStats?.maxLevel.hp}
-								max={data.baseStats?.maxLevel.hp}
+								value={stats.hp}
+								max={stats.hp}
 								primary={data.baseStats?.primaryStat === 'HP'}
 							/>
 							<StatBar
 								label='Attack'
-								value={data.baseStats?.maxLevel.attack}
+								value={stats.attack}
 								max={maxStat}
 								primary={data.baseStats?.primaryStat === 'Attack'}
 							/>
 							<StatBar
 								label='Defense'
-								value={data.baseStats?.maxLevel.defense}
+								value={stats.defense}
 								max={maxStat}
 								primary={data.baseStats?.primaryStat === 'Defense'}
 							/>
@@ -228,7 +229,7 @@ function HunterStatsCard({ data, hasStats, maxStat }: { data: HunterData; hasSta
 									color: 'var(--sla-mana-bright)',
 								}}
 							>
-								{data.baseStats?.maxLevel.totalPower.toLocaleString()}
+								{stats.totalPower.toLocaleString()}
 							</span>
 						</div>
 					</>
@@ -324,11 +325,11 @@ function HunterProfileCard({ data }: { data: HunterData }) {
 	)
 }
 
-function HunterDetailsSection({ data, hasStats, maxStat }: { data: HunterData; hasStats: boolean; maxStat: number }) {
+function HunterDetailsSection({ data, maxStat }: { data: HunterData; maxStat: number }) {
 	return (
 		<div className='sla-dossier-grid'>
 			<HunterImageCard data={data} />
-			<HunterStatsCard data={data} hasStats={hasStats} maxStat={maxStat} />
+			<HunterStatsCard data={data} maxStat={maxStat} />
 			<HunterProfileCard data={data} />
 			<HunterAdvancementsCard advancements={data.advancements} />
 		</div>
@@ -360,7 +361,11 @@ function BuildRecommendationsSection({ data }: { data: HunterData }) {
 					>
 						{'// Cores'}
 					</div>
-					<CoresSection coreBuild={data.coreBuild} coreStats={data.coreStats} hunterClass={data.class} />
+					<CoresSection
+						coreBuild={data.coreBuild}
+						coreStats={data.coreStats}
+						hunterCategory={data.category}
+					/>
 				</div>
 			</div>
 		</div>
@@ -368,14 +373,8 @@ function BuildRecommendationsSection({ data }: { data: HunterData }) {
 }
 
 export function HunterProfile({ data }: { data: HunterData }) {
-	const hasStats = !!data.baseStats
-	const maxStat = hasStats
-		? Math.max(
-				data.baseStats?.maxLevel.hp ?? 0,
-				data.baseStats?.maxLevel.attack ?? 0,
-				data.baseStats?.maxLevel.defense ?? 0,
-			)
-		: 0
+	const s = data.baseStats?.maxLevel
+	const maxStat = s ? Math.max(s.hp, s.attack, s.defense) : 0
 
 	return (
 		<div className='sla-container' style={{ paddingTop: 32, paddingBottom: 64 }}>
@@ -392,7 +391,7 @@ export function HunterProfile({ data }: { data: HunterData }) {
 
 			{/* ── Section 1: Détails sur le chasseur ── */}
 			<SectionHeader tag='// SECTION 01' title='Détails sur le chasseur' />
-			<HunterDetailsSection data={data} hasStats={hasStats} maxStat={maxStat} />
+			<HunterDetailsSection data={data} maxStat={maxStat} />
 
 			{/* ── Section 2: Runes et bénédiction ── */}
 			{data.showRunes && (

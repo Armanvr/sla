@@ -67,7 +67,7 @@ export function HunterSlot({
 									width={80}
 									height={80}
 									alt={selected.data.name}
-									className='w-20 h-20 object-contain rounded-xl bg-zinc-700/30 drop-shadow-lg'
+									className='w-20 h-20 object-contain bg-bg-container drop-shadow-lg'
 									onError={(e) => {
 										;(e.target as HTMLImageElement).style.display = 'none'
 									}}
@@ -97,7 +97,7 @@ export function HunterSlot({
 							</>
 						) : (
 							<>
-								<div className='w-20 h-20 rounded-xl bg-zinc-700/20 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 text-3xl'>
+								<div className='w-20 h-20 bg-bg-container border border-dashed border-border-sla-bright flex items-center justify-center text-text-sla-muted text-3xl'>
 									+
 								</div>
 								<p className='sla-label'>Chasseur {slot}</p>
@@ -111,7 +111,7 @@ export function HunterSlot({
 								select(null)
 								lb.focusTrigger()
 							}}
-							className='absolute -bottom-1 left-1/2 -translate-x-1/2 w-6 h-6 flex items-center justify-center text-zinc-600 hover:text-red-400 transition-colors text-base leading-none'
+							className='absolute -bottom-1 left-1/2 -translate-x-1/2 w-6 h-6 flex items-center justify-center text-text-sla-muted hover:text-danger transition-colors text-base leading-none'
 							aria-label='Retirer ce chasseur'
 						>
 							×
@@ -131,7 +131,7 @@ export function HunterSlot({
 							width={24}
 							height={24}
 							alt={selected.data.weapon?.name ?? 'Weapon'}
-							className='w-6 h-6 object-contain rounded flex-shrink-0'
+							className='w-6 h-6 object-contain flex-shrink-0'
 							onError={(e) => {
 								;(e.target as HTMLImageElement).src = WEAPON_PLACEHOLDER
 							}}
@@ -163,7 +163,7 @@ export function HunterSlot({
 			{open && (
 				<Listbox
 					{...lb.popupProps}
-					className='absolute z-50 top-full mt-1 left-0 w-64 max-h-72 overflow-y-auto shadow-2xl rounded-xl bg-bg-elevated border border-border-sla'
+					className='absolute z-50 top-full mt-1 left-0 w-64 max-h-72 overflow-y-auto bg-bg-elevated border border-border-sla-bright'
 				>
 					<button
 						type='button'
@@ -172,14 +172,16 @@ export function HunterSlot({
 							select(null)
 							setOpen(false)
 						}}
-						className='w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors'
+						className='w-full flex items-center gap-3 px-3 py-2 hover:bg-bg-container transition-colors'
 					>
-						<div className='w-8 h-8 rounded-lg bg-zinc-700/30 border border-dashed border-zinc-600/50 flex items-center justify-center text-zinc-500 flex-shrink-0'>
+						<div className='w-8 h-8 bg-bg-container border border-dashed border-border-sla-bright flex items-center justify-center text-text-sla-muted flex-shrink-0'>
 							–
 						</div>
-						<span style={{ fontSize: 'var(--sla-text-sm)', color: 'var(--sla-text-muted)' }}>— Vide —</span>
+						<span style={{ fontSize: 'var(--sla-text-sm)', color: 'var(--sla-text-secondary)' }}>
+							— Vide —
+						</span>
 					</button>
-					<div role='none' style={{ borderTop: '1px solid var(--sla-border)' }} />
+					<div role='none' style={{ borderTop: '1px solid var(--sla-border-bright)' }} />
 					{hunters.map((h) => (
 						<button
 							key={h.id}
@@ -189,7 +191,7 @@ export function HunterSlot({
 								select(h)
 								setOpen(false)
 							}}
-							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-zinc-700/50 transition-colors ${selected?.id === h.id ? 'bg-purple-900/20' : ''}`}
+							className={`w-full flex items-center gap-3 px-3 py-2 hover:bg-bg-container transition-colors ${selected?.id === h.id ? 'bg-bg-wash' : ''}`}
 						>
 							<img
 								src={h.data.icon ?? h.data.image}
@@ -198,7 +200,7 @@ export function HunterSlot({
 								width={32}
 								height={32}
 								alt=''
-								className='w-8 h-8 rounded-lg object-contain flex-shrink-0 bg-zinc-700/40'
+								className='w-8 h-8 object-contain flex-shrink-0 bg-bg-container'
 								onError={(e) => {
 									;(e.target as HTMLImageElement).style.display = 'none'
 								}}
