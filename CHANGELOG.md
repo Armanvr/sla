@@ -5,36 +5,78 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
-## [5.0.0] — 2026-07-05
+## [5.0.0] — 2026-10-04
 
 ### Added
 - **Agnes Rivera** — nouvelle fiche hunter complète (SSR, S-Rank, Dark, Elemental Buster, arme exclusive « La Famiglia », release 2026-07-02), données issues du wiki officiel ; configs équipements & cores basées sur celles de Liu Zhigang ; visible dans le listing, le spotlight « New Hunter » et sur `/hunter/agnes-rivera`
+- **Set d'artefacts Surtur's Flame** — 8 pièces + bonus 4/8 (Blazing Annihilation → Cataclysmic Blaze), icônes dans `public/assets/artifacts/`
+- **`Listbox`** (`src/components/sla/Listbox.tsx`) — sélecteur déroulant accessible (rôles ARIA `listbox` / `option`, navigation clavier ↑/↓, Home/End, Entrée/Espace, Échap/Tab pour fermer), utilisé par `HunterSlot`, `ShadowSlot`, `WeaponSlot`, `CoresSection` et `EquipmentSection`
+- **`useFlashOnChange`** — flash visuel (`sla-pick-flash`) à la sélection dans un slot
+- **Accessibilité**
+  - Lien d'évitement « Aller au contenu » vers `<main id="main">`
+  - Anneau de focus clavier global (`:focus-visible`), tracé à l'intérieur pour les éléments à coins coupés
+  - `Ticker` rendu en liste sémantique, copie de boucle masquée aux lecteurs d'écran ; horloge de la Nav en `aria-hidden`
+- **`src/components/sla/elements.ts`** — source unique des icônes d'élément (`ELEMENT_ICON`, `ELEMENT_RESISTANCE_ICON`)
+- **Documentation** — `DESIGN.md` (système de design, tokens, règles d'usage) et `PRODUCT.md`
 
 ### Changed
 - **Live Feed** — bandeau mis à jour : patch 5.0.0, nouveaux hunters Agnes Rivera et Liu Zhigang
 - **HomePage** — date de mise à jour alignée sur la release d'Agnes Rivera (2 juillet 2026)
 - **Version** — passage en 5.0.0 (header + package.json)
+- **Images** — portraits, icônes de chasseurs et visuels de sections convertis de PNG en WebP (chemins des JSON chasseurs mis à jour)
+- **PWA** — précache limité au shell applicatif (`js`, `css`, `html`, `svg`, `woff2` + `assets/utils/`) ; les autres images sont mises en cache au premier affichage (CacheFirst, 1000 entrées max, 30 j) ; favicon et apple-touch-icon en `includeAssets`
+- **Polices** — Orbitron et Inter chargées via Google Fonts (avec `preconnect`)
+- **Design system** — migration des classes Tailwind brutes (`zinc`, `purple`, `emerald`, `red`…) vers les tokens sémantiques (`bg-bg-surface`, `border-border-sla`, `text-text-sla-*`, `mana`…)
+  - Nouveaux tokens faiblesse / résistance (`weak`, `resist`, `weak-bg`, `resist-bg`) et rampe typo `text-label` (10px) / `text-meta` (12px)
+  - Coins arrondis et ombres `shadow-*` retirés ; contraste des états vides et des bordures de popups renforcé
+  - Liens et sélection de texte en mana (`--sla-mana-bright`) au lieu d'ember
+- **Nav** — lien « Design » masqué sous 768px (couvert par la barre d'onglets mobile)
+- **Workshop** — un nom de raid inconnu dans `/team/workshop/:raid` renvoie la page 404
+- **HunterProfile** — `StatBar` extrait dans `hunter/StatBar.tsx`, calcul de `maxStat` simplifié ; `CoresSection` reçoit `hunterCategory` au lieu de `hunterClass`
+
+### Fixed
+- **Équipes** — références de build Supporter des équipes Guild Boss / Power & Destruction alignées sur les noms de builds existants ; nom du build de Liu Zhigang corrigé
+
+### Removed
+- Composants inutilisés `HeroSection` et `CollapsibleSection`
+- Dossier `art-source/` retiré du suivi git (ajouté au `.gitignore`, conservé en local)
 
 ## [4.2.0] — 2026-07-01
 
 ### Added
-- **Sélecteur de monarque "Puissance rémanente / Successeur"** — nouvelle section dans Power & Destruction (SECTION 05) et Guild Boss (SECTION 04)
-  - 3 monarques sélectionnables : Monarque d'Acier (défaut), Monarque des Flammes Blanches, Monarque de la Transfiguration
-  - Portraits tirés de `public/assets/workshop/`, sélection radio par clic, état par élément actif
-  - Composant `PuissanceRemanente` + données dans `puissance.ts` (`PuissanceMode`, `DEFAULT_PUISSANCE`, `PUISSANCE`)
+- **Puissance rémanente : Monarque / Successeur** — la section monarque de Power & Destruction et Guild Boss devient un choix Monarque ou Successeur
+  - Composant `PuissanceRemanente` (`PuissanceMode` : `'monarch' | 'successor'`) qui englobe `MonarchSelector` et le nouveau `SuccessorSelector`
+  - Successeurs dans `successors.ts` (`SuccessorId`, `DEFAULT_SUCCESSOR`, `SUCCESSORS`) : Myro
+  - Power & Destruction : mode Successeur par défaut sur Wind, Monarque sur les autres éléments
+- **Liu Zhigang** — fiche hunter (Fire, SSR, Elemental Buster) avec builds complets et arme exclusive Nightcleaver
+- **Runes & Bénédiction** — composant `RunesSection` (techniques + bénédictions, placeholder)
+  - Nouvelle section sur la fiche Sung Jinwoo, activée par le flag `showRunes` de `HunterData`
+  - Affichée sous le `JinwooPanel` en Guild Boss et Power & Destruction
+- **Tableau des effets d'avancement** (`AdvancementEffectsTable` + `advancementEffects.ts`) — agrège les effets d'avancement de l'équipe (% cumulés), code couleur hausse / baisse / autre
+- **Équipes 2 & 3** remplies, mono-élément, classées de la plus forte (1) à la plus faible (3) par élément
+  - Guild Boss : 6 slots, un par rôle
+  - Power & Destruction : 3 slots (Elemental Stacker + Supporter + Striker)
+- **Verrou SPIRIT Supporter** — le noyau SPIRIT des Supporters est imposé à Ferocious Protector's Claw (badge « Obligatoire », picker désactivé)
+- **Assets** — 43 pierres de bénédiction, 44 runes transcendantes (avec `manifest.json`), armes de Jinwoo Moonlit Gale et Soma and Asura, icône du boss Giant Statue, portrait du successeur Myro
 
 ### Changed
-- **Power & Destruction** — `weaknessRotation` unifié avec le format Guild Boss : `activeWeeks[]` → `active: boolean`
-- **Guild Boss** — `weaknessRotation` unifié avec le format Power & Destruction : `activeWeeks[]` → `active: boolean`
-- **HunterSlot**, `ShadowSlot`, `WeaponSlot` : classe sémantique `sla-*-slot` + `min-height: 44px` mobile
+- **React Doctor pass 1** — `class` → `className` (~50 fichiers), attributs SVG en camelCase, styles inline extraits, découpage de `DesignSystemPage` et `HunterProfile`
+- **Outillage** — Biome 2.5.2, `npm run lint` applique désormais `--write` ; formatage Biome appliqué à tout le code
+- **Dépendances** — Preact 10.29.3, Vite 8.1.2, Tailwind 4.3.2, `@types/node` 26
+- **Version** — passage en 4.2.0
+
+### Fixed
+- **Cores** — le bouton « vider » ne contourne plus le verrou SPIRIT des Supporters
+- **Power & Destruction** — imports `successors` dupliqués fusionnés
 
 ### Removed
-- **Clé `weaknessRotation`** retirée de `HunterData` (interface TypeScript) et de tous les fichiers JSON chasseurs
+- **Page Shadows** (`/shadows`) et son entrée dans la navigation
+- Anciens plans et specs `docs/superpowers/` (PWA mobile, multi-config monarque, v4.2)
 
 ## [4.1.0] — 2026-05-20
 
 ### Added
-- **Sélecteur de monarque "Puissance rémanente / Successeur"** — nouvelle section dans Power & Destruction (SECTION 05) et Guild Boss (SECTION 04)
+- **Sélecteur de monarque** — nouvelle section dans Power & Destruction (SECTION 05) et Guild Boss (SECTION 04)
   - 3 monarques sélectionnables : Monarque d'Acier (défaut), Monarque des Flammes Blanches, Monarque de la Transfiguration
   - Portraits tirés de `public/assets/workshop/`, sélection radio par clic, état par élément actif
   - Composant `MonarchSelector` + données dans `monarchs.ts` (`MonarchId`, `DEFAULT_MONARCH`, `MONARCHS`)
